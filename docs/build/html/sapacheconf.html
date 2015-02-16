@@ -1,0 +1,240 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>ApacheConf &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="Cleopatra" href="scleopatra_main.html" />
+    <link rel="prev" title="Cleopatra" href="scleopatra_main.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="scleopatra_main.html" title="Cleopatra"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="scleopatra_main.html" accesskey="U">Cleopatra</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="apacheconf">
+<h1>ApacheConf<a class="headerlink" href="#apacheconf" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>Sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Este módulo ayuda en el manejo y la instalación de la configuración de Apache. En él se especifica la configuración de su entorno. Es-acomodada en ubuntu y así como en CentOS.</p>
+</div>
+<div class="section" id="comando-ayuda">
+<h2>comando Ayuda<a class="headerlink" href="#comando-ayuda" title="Permalink to this headline">¶</a></h2>
+<p>El comando de ayuda describe sobre el propósito y los comandos disponibles bajo estos módulos. También explica el comando para instalar el módulo en particular.</p>
+<p>En él se enumeran los parámetros alternativos que se pueden utilizar para la declaración. El comando utilizado para la declaración de ayuda se muestra a continuación:</p>
+<div class="highlight-bash"><div class="highlight"><pre>cleopatra apacheconf <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La captura de pantalla como se muestra a continuación, representar visualmente el uso del comando de ayuda en virtud de este módulo.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# cleopatra apacheconf <span class="nb">help</span>
+******************************
+
+
+ This module lets you install a configuration <span class="k">for</span> Apache HTTP Server. The only commands available are this <span class="nb">help</span>
+<span class="nb"> </span>and install.
+
+ ApacheConf, apache-configure, apache-configuration, apache-conf, apacheconf
+
+       - install
+       Installs a configuration <span class="k">for</span> Apache
+       example: cleopatra apacheconf install
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="instalacion">
+<h2>instalación<a class="headerlink" href="#instalacion" title="Permalink to this headline">¶</a></h2>
+<p>Es más fácil de instalar esta herramienta en particular en virtud de Cleopatra por el simple uso de la orden dada a continuación,</p>
+<div class="highlight-bash"><div class="highlight"><pre>cleopatra apacheconf install
+</pre></div>
+</div>
+<p>Después de dar el comando anterior, la herramienta le preguntará como</p>
+<div class="highlight-bash"><div class="highlight"><pre>Install Apache conf? <span class="o">(</span>Y/N<span class="o">)</span>
+</pre></div>
+</div>
+<p>si se le da una entrada como Y, el módulo se instalan correctamente.</p>
+<p>También lanzará algunos comandos para especificar los valores no predeterminados para LockFile, PidFile, tiempo de espera, KeepAlive, MaxKeepAliveRequest, KeepAliveTimeout. Si el usuario da entrada como Y (Sí) se fijará automáticamente el valor predeterminado. Si el usuario da entrada como N (No), entonces se indagará acerca de los valores de usuario.</p>
+<p>La captura de pantalla que figura a continuación explica visualmente sobre los pasos y comandos consiste en la instalación.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# cleopatra apacheconf install
+Install Apache Conf? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+*******************************
+*        Pharaoh Tools        *
+*         Apache Conf!        *
+*******************************
+Set non-default value <span class="k">for</span> LockFile? Default is <span class="si">${</span><span class="nv">APACHE_LOCK_DIR</span><span class="si">}</span>/accept.lock <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> PidFile? Default is <span class="si">${</span><span class="nv">APACHE_PID_FILE</span><span class="si">}</span> <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> Timeout? Default is <span class="m">300</span> <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> KeepAlive? Default is On <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> MaxKeepAliveRequests? Default is <span class="m">100</span> <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> KeepAliveTimeout? Default is <span class="m">5</span> <span class="o">(</span>Y/N<span class="o">)</span>
+
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+ApacheConf: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="opciones">
+<h2>Opciones<a class="headerlink" href="#opciones" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="23%" />
+<col width="32%" />
+<col width="11%" />
+<col width="34%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parámetros</th>
+<th class="head">parámetros alternativos</th>
+<th class="head">Necesario</th>
+<th class="head">Comentario</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Install Apache conf? (Y/N)</td>
+<td>En lugar de apachemodules, podemos
+utilizar ApacheModules, apachemods,
+apache-modules también</td>
+<td>Y(Yes)</td>
+<td>Si el usuario da entrada como sí, va a
+instalar el módulo. el módulo.</td>
+</tr>
+<tr class="row-odd"><td>Install Apache conf? (Y/N)</td>
+<td>En lugar de apachemodules, podemos
+utilizar ApacheModules, apachemods,
+apache-modules también|</td>
+<td>N(No)</td>
+<td>Si el usuario da entrada como No,
+obtendrá salida.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>El módulo de ayuda al usuario final en la instalación y gestión de la configuración de Apache.</li>
+<li>Durante la instalación de la herramienta de Apache, el usuario final puede diseñar y gestionar la configuración según sus necesidades usando
+este módulo.</li>
+<li>Si se funda la configuración ya existe sobrescribirá la existente.</li>
+<li>Es-acomodada en CentOS y así como en Ubuntu.</li>
+<li>Los parámetros utilizados en la declaración no se distingue entre mayúsculas y minúsculas, lo que es una ventaja añadida.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">ApacheConf</a><ul>
+<li><a class="reference internal" href="#sinopsis">Sinopsis</a></li>
+<li><a class="reference internal" href="#comando-ayuda">comando Ayuda</a></li>
+<li><a class="reference internal" href="#instalacion">instalación</a></li>
+<li><a class="reference internal" href="#opciones">Opciones</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="scleopatra_main.html"
+                        title="previous chapter">Cleopatra</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/sapacheconf.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="scleopatra_main.html" title="Cleopatra"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="scleopatra_main.html" >Cleopatra</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>
