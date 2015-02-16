@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>ApacheReverseProxyModules &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="Cleopatra" href="scleopatra_main.html" />
+    <link rel="prev" title="ApacheModules" href="sapachemodules.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="sapachemodules.html" title="ApacheModules"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="scleopatra_main.html" accesskey="U">Cleopatra</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="apachereverseproxymodules">
+<h1>ApacheReverseProxyModules<a class="headerlink" href="#apachereverseproxymodules" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>Sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Este módulo tiene como objetivo la instalación de las funciones de la biblioteca. Durante la instalación de las funciones de la biblioteca, se comprobará la disponibilidad de funciones de la biblioteca ya existentes. Le ayuda en la administración y configuración de los parámetros de la aplicación. El usuario puede especificar los valores predeterminados para los parámetros de aplicación.</p>
+</div>
+<div class="section" id="comando-ayuda">
+<h2>comando Ayuda<a class="headerlink" href="#comando-ayuda" title="Permalink to this headline">¶</a></h2>
+<p>Las guías de comandos ayuda al usuario obtener conocimiento de los usos, y también las opciones y acciones que se pueden realizar. En él se enumeran las salidas de parámetros alternativos
+La codificación para hacer uso de la ayuda de mandatos bajo Apache inversa módulo proxy, se da de la siguiente manera</p>
+<div class="highlight-bash"><div class="highlight"><pre>cleopatra ApacheReverseProxyModules <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La captura de pantalla muestra a continuación le da una representación pictórica de uso del comando ayuda.</p>
+<div class="highlight-bash"><div class="highlight"><pre>Kevell@corp/# cleopatra ApacheReverseProxyModules <span class="nb">help</span>
+******************************
+
+
+This <span class="nb">command </span>is part of Core and provides you  with a method by which you can configure Application Settings.
+You can configure default application settings, ie: mysql admin user, host, pass
+
+ApacheReverseProxyModules, apache-reverse-proxy-modules, apache-proxy-mods, apacheproxymodules, apache-lb-mods,
+apache-load-balancer-modules
+
+- install
+      Installs Load Balancer/Reverse Proxy Apache Modules
+      example: cleopatra apache-lb-mods install
+
+------------------------------
+End Help
+****************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="instalacion">
+<h2>instalación<a class="headerlink" href="#instalacion" title="Permalink to this headline">¶</a></h2>
+<p>Si el usuario desea instalar el módulo proxy de Apache inversa a su sistema que puede introducir el comando dado a continuación,</p>
+<div class="highlight-bash"><div class="highlight"><pre>cleopatra ApacheReverseProxyModules install
+</pre></div>
+</div>
+</div>
+<div class="section" id="opcion">
+<h2>opción<a class="headerlink" href="#opcion" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="20%" />
+<col width="36%" />
+<col width="14%" />
+<col width="31%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parámetros</th>
+<th class="head">parámetros alternativos</th>
+<th class="head">Necesario</th>
+<th class="head">Comentario</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Install ReverseProxy
+Modules? (Y/N)</td>
+<td>En lugar de &nbsp;ReverseProxy Apache Modules el
+usuario también puede especificar los
+siguientes parámetros:
+ApacheReverseProxyModules,
+apache-reverse-proxy-modules,
+apache- proxy-mods, apacheproxymodules,
+apache-lb-mods, apache-load-balancer- modules</td>
+<td>Y(Yes)</td>
+<td>Si, se instalarán el módulo proxy
+inverso apache las entradas del usuario
+como Y</td>
+</tr>
+<tr class="row-odd"><td>Install ReverseProxy
+Modules? (Y/N)</td>
+<td>En lugar de &nbsp;ReverseProxy Apache Modules el
+usuario también puede especificar los
+siguientes parámetros:
+ApacheReverseProxyModules,
+apache-reverse-proxy-modules,
+apache- proxy-mods, apacheproxymodules,
+apache-lb-mods, apache-load-balancer- modules|</td>
+<td>N(No)</td>
+<td>Si el usuario introduce como N, la
+voluntad proceso obtiene renuncias
+de instalación.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Se muestra la lista de paquetes disponibles, ya su vez instala los paquetes que faltan y los necesarios.</li>
+<li>Los delanteros de proxy inverso a un destino fijo por cuenta de clientes arbitrarias.</li>
+<li>Será incorpora el contenido que se aloja en un servidor en un sitio web más grande.</li>
+<li>Le ayuda en la configuración de los ajustes de las aplicaciones.</li>
+<li>Es-acomodada en CentOS y así como en ubuntu.</li>
+<li>Los parámetros utilizados en la declaración no se distingue entre mayúsculas y minúsculas, lo que es una ventaja añadida.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">ApacheReverseProxyModules</a><ul>
+<li><a class="reference internal" href="#sinopsis">Sinopsis</a></li>
+<li><a class="reference internal" href="#comando-ayuda">comando Ayuda</a></li>
+<li><a class="reference internal" href="#instalacion">instalación</a></li>
+<li><a class="reference internal" href="#opcion">opción</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="sapachemodules.html"
+                        title="previous chapter">ApacheModules</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/sapachereverseproxy.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="sapachemodules.html" title="ApacheModules"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="scleopatra_main.html" >Cleopatra</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>
