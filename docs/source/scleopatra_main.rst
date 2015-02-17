@@ -15,3 +15,4 @@ El jugar con los módulos de Cleopatra
    sapachemodules 
    sapachereverseproxy
    sapacheserver
+   sapachevhosteditor
