@@ -1,0 +1,289 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Behat &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="Cleopatra" href="scleopatra_main.html" />
+    <link rel="prev" title="Autopilot" href="sautopilot.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="sautopilot.html" title="Autopilot"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="scleopatra_main.html" accesskey="U">Cleopatra</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="behat">
+<h1>Behat<a class="headerlink" href="#behat" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Este módulo tiene como objetivo instalar Behat con la versión más reciente. Esto ayuda en la prueba de un script php. Facilita a los usuarios a identificar los errores en script php. En él se destacan las plantillas habilitadas y discapacitados. El git actúa como un software de soporte para Behat.</p>
+</div>
+<div class="section" id="ayuda-comando">
+<h2>Ayuda Comando<a class="headerlink" href="#ayuda-comando" title="Permalink to this headline">¶</a></h2>
+<p>Las guías de comandos ayuda al usuario obtener conocimiento de los usos, y también las opciones y acciones que se pueden realizar. En él se enumeran las salidas de parámetros alternativos que se pueden utilizar en la declaración. Especifica el comando para instalar la última versión de Behat.</p>
+<p>La codificación para hacer uso de la ayuda de mandatos bajo Behat, se da como sigue:</p>
+<div class="highlight-bash"><div class="highlight"><pre>cleopatra behat <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La captura de pantalla tal como se indica a continuación que explica gráficamente sobre el uso del comando de ayuda.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# cleopatra behat <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>allows you to install Behat.
+
+ Behat, behat
+
+       - install
+       Installs the latest version of behat
+       example: cleopatra behat install
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="instalacion">
+<h2>instalación<a class="headerlink" href="#instalacion" title="Permalink to this headline">¶</a></h2>
+<p>Si el usuario necesita para instalar la última versión de Behat, pueden lograr la instalación, mediante el comando siguiente,</p>
+<div class="highlight-bash"><div class="highlight"><pre>cleopatra behat install
+</pre></div>
+</div>
+<p>Después de introducir el comando anterior, el siguiente proceso están involucrados en la instalación como se muestra en el formato tabular,</p>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="23%" />
+<col width="29%" />
+<col width="13%" />
+<col width="35%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parámetros</th>
+<th class="head">parámetros alternativos</th>
+<th class="head">Necesario</th>
+<th class="head">Comentario</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Install Behat? (Y/N)</td>
+<td>En lugar de behat, podemos
+utilizar Behat también</td>
+<td>Y(Yes)</td>
+<td>Si el usuario da entrada como sí, se
+va a proceder la instalación.</td>
+</tr>
+<tr class="row-odd"><td>Install Behat? (Y/N)</td>
+<td>En lugar de behat, podemos
+utilizar Behat también</td>
+<td>N(No)</td>
+<td>Si el usuario da entrada como no, que se
+cerrará el proceso de instalación|</td>
+</tr>
+</tbody>
+</table>
+<p>Si el usuario continúa la instalación introduciendo como Y, los siguientes pasos son involucrados en la instalación de Behat,</p>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="21%" />
+<col width="27%" />
+<col width="10%" />
+<col width="42%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parámetros</th>
+<th class="head">camino</th>
+<th class="head">opción</th>
+<th class="head">comentario</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Program data
+directory (defecto)</td>
+<td>“/opt/behat”</td>
+<td>Yes</td>
+<td>Si el usuario de proceder con la instalación del
+directorio de datos de programa predeterminado
+que puede introducir como Sí</td>
+</tr>
+<tr class="row-odd"><td>Program data directory</td>
+<td>específico del usuario</td>
+<td>No (Fin de
+Slash)</td>
+<td>Si el usuario desea continuar con su propio
+directorio de datos del programa, pueden de
+entrada como N, y en la mano especificar que
+poseen ubicación</td>
+</tr>
+<tr class="row-even"><td>Program executor
+directory (defecto)</td>
+<td>“/usr/bin”</td>
+<td>Yes</td>
+<td>Si el usuario de proceder con la instalación del
+directorio ejecutor programa predeterminado que
+puede introducir como sí</td>
+</tr>
+<tr class="row-odd"><td>Program executor
+directory</td>
+<td>específico del usuario</td>
+<td>No (Fin de
+Slash)</td>
+<td>Si el usuario desea continuar con la instalación
+directorio ejecutor programa propio thir, se
+puede introducir como N, y en la mano
+especificar que poseen ubicación|</td>
+</tr>
+</tbody>
+</table>
+<p>La captura de pantalla muestra a continuación voluntad le da una representación gráfica de los pasos involucrados en la instalación.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# cleopatra behat install
+Install Behat ? <span class="o">(</span>Y/N<span class="o">)</span>
+Y
+*******************************
+*        Pharaoh Tools        *
+*          Behat         *
+*******************************
+What is the program data directory? Found <span class="s2">&quot;/opt/behat&quot;</span> - use this? <span class="o">(</span>Enter nothing <span class="k">for</span> yes, no end slash<span class="o">)</span>
+
+What is the program executor directory? Found <span class="s2">&quot;/usr/bin&quot;</span> - use this? <span class="o">(</span>Enter nothing <span class="k">for</span> yes, No Trailing Slash<span class="o">)</span>
+
+Creating /tmp/cleopatra-temp-script-69243074239.sh
+chmod <span class="m">755</span> /tmp/cleopatra-temp-script-69243074239.sh 2&gt;/dev/null
+Changing /tmp/cleopatra-temp-script-69243074239.sh Permissions
+Executing /tmp/cleopatra-temp-script-69243074239.sh
+--2015-01-27 15:31:39--  https://getcomposer.org/installer
+Resolving getcomposer.org <span class="o">(</span>getcomposer.org<span class="o">)</span>... 87.98.253.108
+Connecting to getcomposer.org <span class="o">(</span>getcomposer.org<span class="o">)</span><span class="p">|</span>87.98.253.108<span class="p">|</span>:443... connected.
+HTTP request sent, awaiting response... <span class="m">200</span> OK
+Length: unspecified <span class="o">[</span>text/plain<span class="o">]</span>
+Saving to: ‘installer’
+
+   <span class="o">[</span>              &lt;<span class="o">=</span>&gt;                                                                                     <span class="o">]</span> 2,74,634    48.9KB/s   in 5.5s
+
+2015-01-27 15:31:47 <span class="o">(</span>48.9 KB/s<span class="o">)</span> - ‘installer’ saved <span class="o">[</span>274634<span class="o">]</span>
+
+All settings correct <span class="k">for</span> using Composer
+Downloading...
+
+Composer successfully installed to: /opt/behat/behat/composer.phar
+</pre></div>
+</div>
+<p>Durante la instalación del Behat, el usuario puede especificar el directorio de datos del programa y el directorio ejecutor del programa.</p>
+<p>La imagen anterior explica la sintaxis en cuanto a la especificación del directorio de datos del programa y el directorio de albacea.</p>
+</div>
+<div class="section" id="version">
+<h2>versión<a class="headerlink" href="#version" title="Permalink to this headline">¶</a></h2>
+<p>Durante la instalación del Behat, la versión más reciente-será instalado en su máquina.</p>
+<p>Esto es una ventaja añadida de módulo de Behat bajo Cleopatra en comparación con otros.</p>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Se guía a los usuarios a identificar los errores en script php.</li>
+<li>No hay necesidad de buscar la versión más reciente, como la versión actualizada está disponible automáticamente para los usuarios durante la
+ejecución de la instalación pr oceso.</li>
+<li>El uso de las características de Behat los usuarios pueden enmarcar y especificar el comportamiento del desarrollo impulsado.</li>
+<li>Con la ayuda de comportamiento impulsado el desarrollo, los usuarios pueden asegurar las cualidades de su propio guión.</li>
+<li>Es-acomodada en CentOS y así como en ubuntu.</li>
+<li>Los parámetros utilizados en la declaración no se distingue entre mayúsculas y minúsculas, lo que es una ventaja añadida.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Behat</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#ayuda-comando">Ayuda Comando</a></li>
+<li><a class="reference internal" href="#instalacion">instalación</a></li>
+<li><a class="reference internal" href="#version">versión</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="sautopilot.html"
+                        title="previous chapter">Autopilot</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/sbehat.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="sautopilot.html" title="Autopilot"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="scleopatra_main.html" >Cleopatra</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

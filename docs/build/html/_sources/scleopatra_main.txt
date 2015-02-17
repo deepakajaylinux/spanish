@@ -16,3 +16,7 @@ El jugar con los módulos de Cleopatra
    sapachereverseproxy
    sapacheserver
    sapachevhosteditor
+   saptana
+   sautopilot
+   sbehat
+   scassandra
