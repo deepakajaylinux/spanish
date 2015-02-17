@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>ApacheServer &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="apacheserver">
+<h1>ApacheServer<a class="headerlink" href="#apacheserver" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>Sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Esta módulos pretende instalar el servidor Apache. Sin ningún tipo de solicitud, se instalará automáticamente la versión actual del servidor apache mientras instalación.</p>
+</div>
+<div class="section" id="comando-ayuda">
+<h2>comando Ayuda<a class="headerlink" href="#comando-ayuda" title="Permalink to this headline">¶</a></h2>
+<p>El comando de ayuda describe sobre el propósito y los comandos disponibles bajo estos módulos. También explica el comando para instalar el módulo en particular.</p>
+<div class="highlight-bash"><div class="highlight"><pre>cleopatra ApacheServer <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La captura de pantalla como se muestra a continuación, representar visualmente el uso del comando de ayuda en virtud de este módulo.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# cleopatra ApacheServer <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>is part of Core and provides you  with a method by which you can install Apache HTTP Server
+
+ ApacheServer, apache-server, apacheserver
+
+       - install
+       Installs Apache HTTP Server
+       example: cleopatra apacheserver install
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="instalacion">
+<h2>Instalación<a class="headerlink" href="#instalacion" title="Permalink to this headline">¶</a></h2>
+<p>Es más fácil de instalar esta herramienta en particular en virtud de Cleopatra por el simple uso de la orden dada a continuación,</p>
+<div class="highlight-bash"><div class="highlight"><pre>cleopatra ApacheServer install
+</pre></div>
+</div>
+<p>Después de dar el comando anterior, la herramienta le preguntará como</p>
+<p>Install Apache Server? (Y/N)</p>
+<p>si se le da una entrada como Y, el módulo se instalan correctamente.</p>
+<p>La captura de pantalla que figura a continuación explica visualmente sobre los pasos y comandos consiste en la instalación.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# cleopatra apacheserver install
+Install Apache Server? (Y/N)
+Y
+*******************************
+*        Pharaoh Tools        *
+*         Apache Server!        *
+*******************************
+[Pharaoh Logging] Package apache2 from the Packager Apt is already installed, so not installing
+[Pharaoh Logging] Restarting apache2 service
+AH00558: apache2: Could not reliably determine the server&#39;s fully qualified domain name, using 127.0.1.1. Set the &#39;ServerName&#39; directive globally to suppress this message
+* Restarting web server apache2
+  ...done.
+... All done!
+*******************************
+Thanks for installing , visit www.pharaohtools.com for more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+ApacheServer: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="opciones">
+<h2>Opciones<a class="headerlink" href="#opciones" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="23%" />
+<col width="29%" />
+<col width="13%" />
+<col width="35%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parámetros</th>
+<th class="head">parámetros alternativos</th>
+<th class="head">Necesario</th>
+<th class="head">Comentario</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Install Apache Server? (Y/N)</td>
+<td>en lugar de ApacheServer, podemos
+utilizar apache-server,
+apacheserver también.</td>
+<td>Y(Yes)</td>
+<td>Si el usuario da entrada como sí, se va
+a proceder la instalación</td>
+</tr>
+<tr class="row-odd"><td>Install Apache Server? (Y/N)</td>
+<td>en lugar de ApacheServer, podemos
+utilizar apache-server,
+apacheserver también.|</td>
+<td>N(No)</td>
+<td>Si el usuario da entrada como no, que
+se cerrará el proceso de instalación</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="version">
+<h2>versión<a class="headerlink" href="#version" title="Permalink to this headline">¶</a></h2>
+<p>Mientras que la herramienta está procesando lo hará agarra automáticamente la versión actualizada más reciente y lo hace para estar listo para la instalación.</p>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Esta módulos de ayuda a los usuarios a instalar el servidor apache. Simplifica el trabajo de los usuarios durante la instalación del servidor   como su&nbsp; comprobar automáticamente la versión actual del servidor apache.</li>
+<li>Es-acomodada en CentOS y así como en Ubuntu.</li>
+<li>Los parámetros utilizados en la declaración no se distingue entre mayúsculas y minúsculas, lo que es una ventaja añadida.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">ApacheServer</a><ul>
+<li><a class="reference internal" href="#sinopsis">Sinopsis</a></li>
+<li><a class="reference internal" href="#comando-ayuda">comando Ayuda</a></li>
+<li><a class="reference internal" href="#instalacion">Instalación</a></li>
+<li><a class="reference internal" href="#opciones">Opciones</a></li>
+<li><a class="reference internal" href="#version">versión</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/sapacheserver.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>
