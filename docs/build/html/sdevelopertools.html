@@ -1,0 +1,276 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>DeveloperTools &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="Cleopatra" href="scleopatra_main.html" />
+    <link rel="prev" title="Copy" href="scopy.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="scopy.html" title="Copy"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="scleopatra_main.html" accesskey="U">Cleopatra</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="developertools">
+<h1>DeveloperTools<a class="headerlink" href="#developertools" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>El módulo devtools hace la instalación mucho más fácil para crear un paquete siguiendo la estructura definida en los Devtools. También hace que sea más fácil para poner a prueba su paquete, a través del editor. Este módulo en un envase que tiene una excelente idea: no sólo hace que el paquete de usuario más fiable en el largo plazo, sino que también simplifica el proceso de desarrollo en forma sorprendente. Esto es conveniente en Ubuntu y CentOS.</p>
+</div>
+<div class="section" id="comando-ayuda">
+<h2>comando Ayuda<a class="headerlink" href="#comando-ayuda" title="Permalink to this headline">¶</a></h2>
+<p>Devtools hace que el desarrollo conjunto de una brisa: se trabaja con las convenciones existentes para la estructura del código, añadiendo herramientas eficaces para apoyar el ciclo de desarrollo de paquetes. Con devtools, el desarrollo de un paquete llega a ser tan fácil que será el diseño predeterminado de usuario cada vez que el usuario está escribiendo una cantidad significativa de código.</p>
+<div class="highlight-bash"><div class="highlight"><pre>cleopatra devtools <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La siguiente&nbsp;captura de pantalla y&nbsp;lo explica.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# cleopatra devtools <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>allows you to install a <span class="nb">set </span>of Developer Tools. These include
+ Geany IDE, Bluefish IDE, Kompozer IDE and Emma DB Manager.
+
+ DeveloperTools, devtools, dev-tools
+
+       - install
+       Installs the latest version of Developer Tools
+       example: cleopatra devtools install
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="instalacion">
+<h2>instalación<a class="headerlink" href="#instalacion" title="Permalink to this headline">¶</a></h2>
+<p>&nbsp;&nbsp;&nbsp; La instalación incluye la provisión de o conexión a los servicios necesarios para hacer que el equipo instalado listo para funcionar. Es un proceso de manifiesto para instalar módulo devtools bajo Cleopatra simplemente usando la orden dada a continuación,</p>
+<div class="highlight-bash"><div class="highlight"><pre>cleopatra devtools install
+</pre></div>
+</div>
+<p>Después de vitalizar el comando se catequizar entrada.
+Cuando la entrada de usuario como si automáticamente se istall devtools con la comprobación del sistema. Si no salir de la instalación. la siguiente captura de pantalla demuestra.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/<span class="nv">$ </span>cleopatra devtools install
+Install Developer Tools? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+*******************************
+*        Pharaoh Tools        *
+*         Devel Tools!        *
+*******************************
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+ geany-common
+Suggested packages:
+ libvte9
+The following NEW packages will be installed:
+ geany geany-common
+<span class="m">0</span> upgraded, <span class="m">2</span> newly installed, <span class="m">0</span> to remove and <span class="m">301</span> not upgraded.
+Need to get 3,808 kB of archives.
+After this operation, 9,872 kB of additional disk space will be used.
+Get:1 http://in.archive.ubuntu.com/ubuntu/ trusty/universe geany-common all 1.23.1+dfsg-1 <span class="o">[</span>2,709 kB<span class="o">]</span>
+Get:2 http://in.archive.ubuntu.com/ubuntu/ trusty/universe geany amd64 1.23.1+dfsg-1 <span class="o">[</span>1,100 kB<span class="o">]</span>
+Fetched 3,808 kB in 4min 54s <span class="o">(</span>12.9 kB/s<span class="o">)</span>
+Selecting previously unselected package geany-common.
+<span class="o">(</span>Reading database ... <span class="m">182047</span> files and directories currently installed.<span class="o">)</span>
+Preparing to unpack .../geany-common_1.23.1+dfsg-1_all.deb ...
+Unpacking geany-common <span class="o">(</span>1.23.1+dfsg-1<span class="o">)</span> ...
+Selecting previously unselected package geany.
+Preparing to unpack .../geany_1.23.1+dfsg-1_amd64.deb ...
+Unpacking geany <span class="o">(</span>1.23.1+dfsg-1<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> doc-base <span class="o">(</span>0.10.5<span class="o">)</span> ...
+Processing <span class="m">1</span> added doc-base file...
+Processing triggers <span class="k">for</span> hicolor-icon-theme <span class="o">(</span>0.13-1<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> gnome-menus <span class="o">(</span>3.10.1-0ubuntu2<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> desktop-file-utils <span class="o">(</span>0.22-1ubuntu1<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> bamfdaemon <span class="o">(</span>0.5.1+14.04.20140409-0ubuntu1<span class="o">)</span> ...
+Rebuilding /usr/share/applications/bamf-2.index...
+Processing triggers <span class="k">for</span> mime-support <span class="o">(</span>3.54ubuntu1<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> man-db <span class="o">(</span>2.6.7.1-1<span class="o">)</span> ...
+Setting up geany-common <span class="o">(</span>1.23.1+dfsg-1<span class="o">)</span> ...
+Setting up geany <span class="o">(</span>1.23.1+dfsg-1<span class="o">)</span> ...
+Preparing to unpack .../bluefish-data_2.2.5-1_all.deb ...
+Unpacking bluefish-data <span class="o">(</span>2.2.5-1<span class="o">)</span> ...
+Selecting previously unselected package bluefish-plugins.
+Preparing to unpack .../bluefish-plugins_2.2.5-1_amd64.deb ...
+Unpacking bluefish-plugins <span class="o">(</span>2.2.5-1<span class="o">)</span> ...
+Selecting previously unselected package bluefish.
+Preparing to unpack .../bluefish_2.2.5-1_amd64.deb ...
+Unpacking bluefish <span class="o">(</span>2.2.5-1<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> hicolor-icon-theme <span class="o">(</span>0.13-1<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> shared-mime-info <span class="o">(</span>1.2-0ubuntu3<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> man-db <span class="o">(</span>2.6.7.1-1<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> gnome-menus <span class="o">(</span>3.10.1-0ubuntu2<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> desktop-file-utils <span class="o">(</span>0.22-1ubuntu1<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> bamfdaemon <span class="o">(</span>0.5.1+14.04.20140409-0ubuntu1<span class="o">)</span> ...
+Rebuilding /usr/share/applications/bamf-2.index...
+Processing triggers <span class="k">for</span> mime-support <span class="o">(</span>3.54ubuntu1<span class="o">)</span> ...
+Setting up bluefish-data <span class="o">(</span>2.2.5-1<span class="o">)</span> ...
+Setting up bluefish-plugins <span class="o">(</span>2.2.5-1<span class="o">)</span> ...
+Setting up bluefish <span class="o">(</span>2.2.5-1<span class="o">)</span> ...
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package bluefish from the Packager Apt executed correctly
+PHP Warning:  file_put_contents<span class="o">(</span>/opt/cleopatra/cleopatra/src/Modules/CleopatraRequired/Model/../../../cleovars<span class="o">)</span>: failed to open stream: Permission denied in /opt/cleopatra/cleopatra/src/Modules/CleopatraRequired/Model/AppConfig.php on line 115
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+DeveloperTools: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="opciones">
+<h2>Opciones<a class="headerlink" href="#opciones" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="22%" />
+<col width="32%" />
+<col width="11%" />
+<col width="35%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parámetros</th>
+<th class="head">alternativos&nbsp;de parámetros</th>
+<th class="head">Opción</th>
+<th class="head">Comentarios</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Install devtools?(Y/N)</td>
+<td>En lugar de utilizar devtools
+podemos utilizar DeveloperTools,
+DevTools, dev-tools</td>
+<td>Y</td>
+<td>Se instalará editor de base de
+datos y devtools bajo cleopatra</td>
+</tr>
+<tr class="row-odd"><td>Install devtools?(Y/N)</td>
+<td>En lugar de utilizar devtools
+podemos utilizar DeveloperTools,
+DevTools, dev-tools|</td>
+<td>N</td>
+<td>La salida de sistema de la instalación</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Facilitar el proceso de desarrollo de paquetes</li>
+<li>Ayuda a liberar su paquete en el medio natural</li>
+<li>Que sea fácil de instalar y editor de base de datos.</li>
+<li>Depuración rápida</li>
+<li>On-the-Fly Estilo Cambios - para los cambios de estilo rápidas, el usuario ni siquiera necesita usar un editor de texto. El usuario puede
+inspeccionar el particular&nbsp; elemento de la página para determinar que se están aplicando estilos.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">DeveloperTools</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#comando-ayuda">comando Ayuda</a></li>
+<li><a class="reference internal" href="#instalacion">instalación</a></li>
+<li><a class="reference internal" href="#opciones">Opciones</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="scopy.html"
+                        title="previous chapter">Copy</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/sdevelopertools.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="scopy.html" title="Copy"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="scleopatra_main.html" >Cleopatra</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

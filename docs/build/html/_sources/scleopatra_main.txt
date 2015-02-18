@@ -33,6 +33,6 @@ El jugar con los módulos de Cleopatra
    scomposer
    scleofy
    scopy
-
+   sdevelopertools
 
 
