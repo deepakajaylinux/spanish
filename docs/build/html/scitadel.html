@@ -1,0 +1,372 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Citadel &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="Cleopatra" href="scleopatra_main.html" />
+    <link rel="prev" title="ChromeDriver" href="schromedriver.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="schromedriver.html" title="ChromeDriver"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="scleopatra_main.html" accesskey="U">Cleopatra</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="citadel">
+<h1>Citadel<a class="headerlink" href="#citadel" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Citadel es una plataforma completa y rica en características de groupware de código abierto. El sistema Citadel es extremadamente versátil. Proporciona numerosas extremos delanteros de presentar a los usuarios, tales como una interfaz basada en texto, una interfaz web de estilo AJAX, y muchos clientes PIM populares usando SMTP / POP / IMAP. Todos estos pueden ser utilizados simultáneamente.</p>
+<p>También es muy escalable. No sólo puede un soporte de servidor Citadel bien equipado a un gran número de usuarios simultáneos, pero también se puede construir una red distribuida de Ciudadela nodos que comparten habitaciones y su contenido.</p>
+</div>
+<div class="section" id="ayuda-comando">
+<h2>Ayuda Comando<a class="headerlink" href="#ayuda-comando" title="Permalink to this headline">¶</a></h2>
+<p>Este comando ayuda a determinar el uso del módulo de Ciudadela. El usuario se llega a saber acerca de las diferentes formas / formato para ejecutar este módulo. El parámetro alternativa que se utilizan en la declaración está claramente definido en la opción de ayuda. Este comando guía al usuario final saber el comando utilizado para la instalación. A continuación dado son el comando.</p>
+<div class="highlight-bash"><div class="highlight"><pre>cleopatra  Citadel <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La representación gráfica de la pantalla aparece a continuación,</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# cleopatra Citadel <span class="nb">help</span>
+******************************
+
+
+ This module installs Citadel Server and provides configuration
+
+ Citadel, citadel-server, citadel
+
+       - install
+       Installs Citadel Server
+       example: cleopatra citadel install
+
+       - configure
+       Configure E-Mail with Citadel Server
+       example: cleopatra citadel configure
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="instalacion">
+<h2>instalación<a class="headerlink" href="#instalacion" title="Permalink to this headline">¶</a></h2>
+<p>Cuando el usuario tiene que instalar el servidor Citadel en la máquina, puede introducir los siguientes comandos para instalar la ciudadela-suite. El sistema ejecutará el proceso de instalación. A continuación dado son el mando y la pantalla del mismo.</p>
+<div class="highlight-bash"><div class="highlight"><pre>cleopatra Citadel  install
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# cleopatra Citadel install
+Install Citadel Server? (Y/N)
+Y
+*******************************
+*        Pharaoh Tools        *
+*         Citadel Server!     *
+*******************************
+Creating /tmp/cleopatra-temp-script-11993825383.sh
+chmod 755 /tmp/cleopatra-temp-script-11993825383.sh 2&gt;/dev/null
+Changing /tmp/cleopatra-temp-script-11993825383.sh Permissions
+Executing /tmp/cleopatra-temp-script-11993825383.sh
+Temp File /tmp/cleopatra-temp-script-11993825383.sh Removed
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+ debconf-utils
+0 upgraded, 1 newly installed, 0 to remove and 228 not upgraded.
+Need to get 57.4 kB of archives.
+After this operation, 157 kB of additional disk space will be used.
+Get:1 http://in.archive.ubuntu.com/ubuntu/ trusty/main debconf-utils all 1.5.51ubuntu2 [57.4 kB]
+Fetched 57.4 kB in 2s (24.6 kB/s)
+Selecting previously unselected package debconf-utils.
+(Reading database ... 180308 files and directories currently installed.)
+Preparing to unpack .../debconf-utils_1.5.51ubuntu2_all.deb ...
+Unpacking debconf-utils (1.5.51ubuntu2) ...
+Processing triggers for man-db (2.6.7.1-1) ...
+Setting up debconf-utils (1.5.51ubuntu2) ...
+[Pharaoh Logging] Adding Package debconf-utils from the Packager Apt executed correctly
+[Pharaoh Logging] Stopping apache2 service
+* Stopping web server apache2
+*
+Creating /tmp/cleopatra-temp-script-74031405363.sh
+chmod 755 /tmp/cleopatra-temp-script-74031405363.sh 2&gt;/dev/null
+Changing /tmp/cleopatra-temp-script-74031405363.sh Permissions
+Executing /tmp/cleopatra-temp-script-74031405363.sh
+Temp File /tmp/cleopatra-temp-script-74031405363.sh Removed
+apache2_invoke: Enable configuration javascript-common
+invoke-rc.d: initscript apache2, action &quot;reload&quot; failed.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+  citadel-client citadel-mta citadel-server citadel-webcit javascript-common
+ libc-ares2 libcitadel4 libev4 libjs-prototype libjs-scriptaculous
+ libsieve2-1 tinymce
+Suggested packages:
+ localepurge
+Recommended packages:
+ db4.6-util
+The following NEW packages will be installed:
+ citadel-client citadel-mta citadel-server citadel-suite citadel-webcit
+ javascript-common libc-ares2 libcitadel4 libev4 libjs-prototype
+ libjs-scriptaculous libsieve2-1 tinymce
+0 upgraded, 13 newly installed, 0 to remove and 228 not upgraded.
+Need to get 1,993 kB of archives.
+After this operation, 8,897 kB of additional disk space will be used.
+Get:1 http://in.archive.ubuntu.com/ubuntu/ trusty/main libc-ares2 amd64 1.10.0-2 [38.5 kB]
+Get:2 http://in.archive.ubuntu.com/ubuntu/ trusty/main javascript-common all 11 [6,066 B]
+Get:3 http://in.archive.ubuntu.com/ubuntu/ trusty/universe libjs-prototype all 1.7.1-3 [44.2 kB]
+Get:4 http://in.archive.ubuntu.com/ubuntu/ trusty/universe libjs-scriptaculous all 1.9.0-2 [107 kB]
+Get:5 http://in.archive.ubuntu.com/ubuntu/ trusty/universe libsieve2-1 amd64 2.2.6-1.2 [73.1 kB]
+Get:6 http://in.archive.ubuntu.com/ubuntu/ trusty/universe tinymce all 3.4.8+dfsg0-1 [488 kB]
+Get:7 http://in.archive.ubuntu.com/ubuntu/ trusty/universe libcitadel4 amd64 8.24-1 [60.5 kB]
+Get:8 http://in.archive.ubuntu.com/ubuntu/ trusty/universe citadel-client amd64 8.24-1 [78.5 kB]
+Get:9 http://in.archive.ubuntu.com/ubuntu/ trusty/universe libev4 amd64 1:4.15-3 [29.6 kB]
+Get:10 http://in.archive.ubuntu.com/ubuntu/ trusty/universe citadel-server amd64 8.24-1 [348 kB]
+Get:11 http://in.archive.ubuntu.com/ubuntu/ trusty/universe citadel-mta amd64 8.24-1 [4,520 B]
+Get:12 http://in.archive.ubuntu.com/ubuntu/ trusty/universe citadel-webcit amd64 8.24-dfsg-1 [712 kB]
+Get:13 http://in.archive.ubuntu.com/ubuntu/ trusty/universe citadel-suite all 8.24-dfsg-1 [3,542 B]
+Preconfiguring packages ...
+Fetched 1,993 kB in 16s (122 kB/s)
+Selecting previously unselected package libc-ares2:amd64.
+(Reading database ... 180340 files and directories currently installed.)
+Preparing to unpack .../libc-ares2_1.10.0-2_amd64.deb ...
+Unpacking libc-ares2:amd64 (1.10.0-2) ...
+Selecting previously unselected package javascript-common.
+Preparing to unpack .../javascript-common_11_all.deb ...
+Unpacking javascript-common (11) ...
+Selecting previously unselected package libjs-prototype.
+Preparing to unpack .../libjs-prototype_1.7.1-3_all.deb ...
+Unpacking libjs-prototype (1.7.1-3) ...
+Selecting previously unselected package libjs-scriptaculous.
+Preparing to unpack .../libjs-scriptaculous_1.9.0-2_all.deb ...
+Unpacking libjs-scriptaculous (1.9.0-2) ...
+Selecting previously unselected package libsieve2-1.
+Preparing to unpack .../libsieve2-1_2.2.6-1.2_amd64.deb ...
+Unpacking libsieve2-1 (2.2.6-1.2) ...
+Selecting previously unselected package tinymce.
+Preparing to unpack .../tinymce_3.4.8+dfsg0-1_all.deb ...
+Unpacking tinymce (3.4.8+dfsg0-1) ...
+Selecting previously unselected package libcitadel4.
+Preparing to unpack .../libcitadel4_8.24-1_amd64.deb ...
+Unpacking libcitadel4 (8.24-1) ...
+Selecting previously unselected package citadel-client.
+Preparing to unpack .../citadel-client_8.24-1_amd64.deb ...
+Unpacking citadel-client (8.24-1) ...
+Selecting previously unselected package libev4.
+Preparing to unpack .../libev4_1%3a4.15-3_amd64.deb ...
+Unpacking libev4 (1:4.15-3) ...
+Selecting previously unselected package citadel-server.
+Preparing to unpack .../citadel-server_8.24-1_amd64.deb ...
+Unpacking citadel-server (8.24-1) ...
+Selecting previously unselected package citadel-mta.
+Preparing to unpack .../citadel-mta_8.24-1_amd64.deb ...
+Unpacking citadel-mta (8.24-1) ...
+Selecting previously unselected package citadel-webcit.
+Preparing to unpack .../citadel-webcit_8.24-dfsg-1_amd64.deb ...
+Unpacking citadel-webcit (8.24-dfsg-1) ...
+Selecting previously unselected package citadel-suite.
+Preparing to unpack .../citadel-suite_8.24-dfsg-1_all.deb ...
+Unpacking citadel-suite (8.24-dfsg-1) ...
+Processing triggers for man-db (2.6.7.1-1) ...
+Processing triggers for ureadahead (0.100.0-16) ...
+ureadahead will be reprofiled on next reboot
+Setting up libc-ares2:amd64 (1.10.0-2) ...
+Setting up javascript-common (11) ...
+* Reloading web server apache2
+*
+* Apache2 is not running
+Setting up libjs-prototype (1.7.1-3) ...
+Setting up libjs-scriptaculous (1.9.0-2) ...
+Setting up libsieve2-1 (2.2.6-1.2) ...
+Setting up tinymce (3.4.8+dfsg0-1) ...
+Setting up libcitadel4 (8.24-1) ...
+Setting up citadel-client (8.24-1) ...
+Adding group `citadel&#39; (GID 126) ...
+Done.
+Adding system user `citadel&#39; (UID 118) ...
+Adding new user `citadel&#39; (UID 118) with group `citadel&#39; ...
+Not creating home directory `/var/lib/citadel&#39;.
+Setting up libev4 (1:4.15-3) ...
+Setting up citadel-server (8.24-1) ...
+Setting up citadel-webcit (8.24-dfsg-1) ...
+Processing triggers for ureadahead (0.100.0-16) ...
+Setting up citadel-mta (8.24-1) ...
+Setting up citadel-suite (8.24-dfsg-1) ...
+Processing triggers for libc-bin (2.19-0ubuntu6) ...
+[Pharaoh Logging] Adding Package citadel-suite from the Packager Apt executed correctly
+[Pharaoh Logging] Restarting citadel service
+sendcommand: started (pid=4943) connecting to Citadel server at /var/run/citadel/citadel-admin.socket
+200 udayakumar Citadel server ADMIN CONNECTION ready.
+DOWN
+231 Shutting down server.  Goodbye.
+sendcommand: processing ended.
+....................... All done!
+*******************************
+Thanks for installing , visit www.pharaohtools.com for more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+Citadel: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="20%" />
+<col width="33%" />
+<col width="13%" />
+<col width="34%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parámetros</th>
+<th class="head">parámetros alternativos</th>
+<th class="head">Necesario</th>
+<th class="head">Comentario</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>cleopatra Citadel
+Install? (Y/N)</td>
+<td>Cualquiera de los tres parámetros
+alternativa se puede utilizar en el
+comando Citadel, citadel-server,
+citadel Por ejemplo:
+cleopatra citadel-server Install</td>
+<td>Y(Yes)</td>
+<td>Una vez que el usuario proporciona esta
+opción, sistema comienza proceso
+de instalación</td>
+</tr>
+<tr class="row-odd"><td>cleopatra Citadel
+Install? (Y/N)</td>
+<td>Cualquiera de los tres parámetros
+alternativa se puede utilizar en el
+comando Citadel, citadel-server,
+citadel Por ejemplo:
+cleopatra citadel-server Install|</td>
+<td>N(No)</td>
+<td>Una vez que el usuario proporciona esta
+opción, Sistema detiene proceso
+de instalación</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="configuracion">
+<h2>configuración<a class="headerlink" href="#configuracion" title="Permalink to this headline">¶</a></h2>
+<p>Este comando ayuda a la hora de configurar el servidor Citadel. Una vez que se ejecute el comando a continuación se indica el sistema le proporciona el valor predeterminado para cada sección, si hay algún cambio que hacer, el usuario puede proporcionar los datos. El comando que se utiliza para la configuración se muestra a continuación.</p>
+<div class="highlight-bash"><div class="highlight"><pre>cleopatra Citadel configure
+</pre></div>
+</div>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Correo electrónico, calendario / programación, libretas de direcciones</li>
+<li>Los tablones de anuncios, correo servidor de listas, la mensajería instantánea</li>
+<li>Soporte de dominio múltiple</li>
+<li>Una interfaz web atractivo estilo AJAX intuitiva</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Citadel</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#ayuda-comando">Ayuda Comando</a></li>
+<li><a class="reference internal" href="#instalacion">instalación</a></li>
+<li><a class="reference internal" href="#configuracion">configuración</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="schromedriver.html"
+                        title="previous chapter">ChromeDriver</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/scitadel.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="schromedriver.html" title="ChromeDriver"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="scleopatra_main.html" >Cleopatra</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

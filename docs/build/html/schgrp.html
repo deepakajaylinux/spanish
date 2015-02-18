@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Chgrp &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="Cleopatra" href="scleopatra_main.html" />
+    <link rel="prev" title="Cassandra" href="scassandra.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="scassandra.html" title="Cassandra"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="scleopatra_main.html" accesskey="U">Cleopatra</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="chgrp">
+<h1>Chgrp<a class="headerlink" href="#chgrp" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Los archivos y directorios pertenecen tanto a un propietario y un grupo. Un grupo normalmente consiste en una colección de usuarios, todos ellos pertenecientes al mismo grupo. El primer conjunto de tres es la lectura, escritura y ejecución para el propietario del archivo.</p>
+<p>Un grupo también puede constar de un usuario, normalmente el usuario que crea el archivo. Cada usuario del sistema, incluido el usuario root, se le asigna su propio grupo de que él o ella es el único miembro, garantizando el acceso sólo por ese usuario. El segundo grupo de tres es la lectura, escritura y ejecución permisos para cualquier persona que pertenece al grupo de usuarios para el archivo.</p>
+<p>El usuario root, el administrador del sistema, es dueño de la mayor parte de los archivos del sistema que también pertenecen al grupo de las raíces, de las cuales sólo el usuario root es miembro. La mayoría de los archivos de administración, como los archivos de configuración en el directorio / etc, son propiedad del usuario root y pertenecen al grupo de raíz. Sólo el usuario root tiene permiso para modificarlos, mientras que los usuarios normales pueden leer y, en el caso de los programas, también ejecutarlos</p>
+</div>
+<div class="section" id="ayuda-comando">
+<h2>Ayuda Comando<a class="headerlink" href="#ayuda-comando" title="Permalink to this headline">¶</a></h2>
+<p>Este comando ayuda a determinar el uso del módulo de grupo Cambio. El usuario se llega a saber acerca de la diferente forma / formato de ejecutar este módulo. Este comando guía al usuario final a conocer el propósito de este comando. A continuación dado son el mando y la pantalla del mismo.</p>
+<div class="highlight-bash"><div class="highlight"><pre>cleopatra Chgrp <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La representación gráfica de la pantalla se da a continuación,</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/#  cleopatra Chgrp <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>handles file group ownership changing functions.
+
+ Chgrp, chgrp
+
+       - path
+       Will change the file group ownership of a path
+       example: cleopatra chgrp path --yes --guess --recursive --path<span class="o">=</span>/a/file/path --group<span class="o">=</span>golden
+
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="camino">
+<h2>Camino<a class="headerlink" href="#camino" title="Permalink to this headline">¶</a></h2>
+<p>Cuando el usuario tiene que cambiar la propiedad del grupo de archivo de una ruta, el siguiente comando dado se ejecutará el proceso.</p>
+<div class="highlight-bash"><div class="highlight"><pre>cleopatra chgrp path –yes –guess –recursive –path<span class="o">=</span>/”File path” –group<span class="o">=</span>”group name”
+</pre></div>
+</div>
+</div>
+<div class="section" id="parametro-alternativa">
+<h2>Parámetro Alternativa<a class="headerlink" href="#parametro-alternativa" title="Permalink to this headline">¶</a></h2>
+<p>Hay dos parámetros alternativos que pueden ser utilizados en la línea de comandos.</p>
+<p>chgrp, Chgrp</p>
+<p>Por ejemplo: cleopatra Chgrp path/ cleopatra chgrp path</p>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Aunque otros usuarios pueden ser capaces de acceder a un archivo, sólo el propietario puede cambiar sus permisos. Si usted desea dar a otro
+usuario para controlar más de uno de los permisos de su archivo, puede cambiar el propietario del archivo de uno mismo al otro usuario.</li>
+<li>También puede cambiar el grupo de un archivo y directorios, utilizando el comando chgrp. chgrp toma como primer argumento el nombre del
+nuevo grupo por unos archivos o directorios.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Chgrp</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#ayuda-comando">Ayuda Comando</a></li>
+<li><a class="reference internal" href="#camino">Camino</a></li>
+<li><a class="reference internal" href="#parametro-alternativa">Parámetro Alternativa</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="scassandra.html"
+                        title="previous chapter">Cassandra</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/schgrp.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="scassandra.html" title="Cassandra"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="scleopatra_main.html" >Cleopatra</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

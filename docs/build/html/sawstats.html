@@ -1,0 +1,281 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Awstats &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="Cleopatra" href="scleopatra_main.html" />
+    <link rel="next" title="Behat" href="sbehat.html" />
+    <link rel="prev" title="Autopilot" href="sautopilot.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="sbehat.html" title="Behat"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="sautopilot.html" title="Autopilot"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="scleopatra_main.html" accesskey="U">Cleopatra</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="awstats">
+<h1>Awstats<a class="headerlink" href="#awstats" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>En este módulo se promueve la instalación de awstats, con la última versión. AWStats es un análisis web de código abierto herramienta de informes, adecuadas para el análisis de datos de los servicios de Internet como web, los servidores con los medios de comunicación, electrónico y FTP. AWStats analiza y analiza los archivos de registro del servidor, la elaboración de informes HTML.</p>
+<p>AWStats (Advanced Web Statistics) es un potente analizador de archivo de registro del servidor web, con todas las funciones que te muestra todas las estadísticas de su web incluyendo: visitantes, páginas, golpea, hora, motores de búsqueda, palabras clave utilizadas para encontrar su sitio, enlaces rotos, robots y muchos más.</p>
+<p>Veamos, los detalles de cómo instalar este awstats, las características y requisitos de awstats en los próximos temas.</p>
+</div>
+<div class="section" id="ayuda-comando">
+<h2>Ayuda Comando<a class="headerlink" href="#ayuda-comando" title="Permalink to this headline">¶</a></h2>
+<p>El comando help guía a los usuarios en cuanto a la finalidad y al igual que sobre las opciones que se incluyen en el módulo AWStats. En él se enumeran los parámetros alternativos de módulo AWStats. También describe la sintaxis para instalar el módulo AWStats. El comando de ayuda para el módulo AWStats se muestra a continuación.</p>
+<div class="highlight-bash"><div class="highlight"><pre>cleopatra AWStats <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La sintaxis para declarar el comando de ayuda no es sensible a mayúsculas, que es una ventaja añadida. La siguiente captura de pantalla a visualizar sobre el comando de ayuda bajo AWStats.</p>
+</div>
+<div class="section" id="instalacion">
+<h2>Instalación<a class="headerlink" href="#instalacion" title="Permalink to this headline">¶</a></h2>
+<p>El comando que se utiliza para la instalación de los AWStats a la máquina de los usuarios se muestra a continuación.</p>
+<div class="highlight-bash"><div class="highlight"><pre>cleopatra AWStats install
+</pre></div>
+</div>
+<p>Después de introducir el comando anterior, el siguiente proceso se produce como se muestra en el formato tabular.</p>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="21%" />
+<col width="33%" />
+<col width="12%" />
+<col width="34%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parámetros</th>
+<th class="head">parámetros alternativos</th>
+<th class="head">Necesario</th>
+<th class="head">Comentario</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Install AWStats? (Y/N)</td>
+<td>En lugar de AWStats, podemos
+utilizar Awstats, awstats también.</td>
+<td>Y(Yes)</td>
+<td>Si el usuario desea continuar el
+proceso de instalación se puede
+introducir como Y.</td>
+</tr>
+<tr class="row-odd"><td>Install AWStats? (Y/N)</td>
+<td>En lugar de AWStats, podemos
+utilizar Awstats, awstats también.</td>
+<td>N(No)</td>
+<td>Si el usuario desea abandonar el
+proceso de instalación se puede
+introducir como N.|</td>
+</tr>
+</tbody>
+</table>
+<p>Si el usuario continúa la instalación, el siguiente proceso están involucrados durante la instalación:</p>
+<ul class="simple">
+<li>Lee la lista de paquetes.</li>
+<li>Construye el árbol de dependencias.</li>
+<li>Instala los paquetes adicionales necesarios</li>
+<li>Instala los paquetes sugeridos.</li>
+<li>Instala los nuevos paquetes.</li>
+</ul>
+<p>Por último, la instalación de Awstats se completó con éxito como se muestra en las siguientes capturas de pantalla</p>
+</div>
+<div class="section" id="caracteristicas-del-awstats">
+<h2>Características del Awstats<a class="headerlink" href="#caracteristicas-del-awstats" title="Permalink to this headline">¶</a></h2>
+<p>Un análisis del registro completo permite AWStats para mostrarles la siguiente información:</p>
+<ul class="simple">
+<li>Número de visitas y de visitantes únicos</li>
+<li>Duración de las visitas y la última visita</li>
+<li>Los usuarios autenticados y últimas visitas autenticados</li>
+<li>Días de la semana y la hora punta (páginas, hits, KB por cada día y hora)</li>
+<li>Dominios / Países de anfitriones de los visitantes (páginas, hits, KB)</li>
+<li>Lista de los Ejércitos, últimas visitas y direcciones IP no resueltas lista</li>
+<li>Páginas más vistas, de entrada y salida</li>
+<li>Tipos de archivo</li>
+<li>Estadísticas de compresión Web (por mod_gzip o mod_deflate)</li>
+<li>Los navegadores utilizados (páginas, hits, kb para cada navegador)</li>
+<li>OS utilizado (páginas, hits, KB para cada sistema operativo)</li>
+<li>Visitas Robot</li>
+<li>Ataques de Gusanos</li>
+<li>Descargar y continuación de detección</li>
+<li>Los motores de búsqueda, frases y palabras clave utilizadas para encontrar su sitio</li>
+<li>Errores HTTP (Página no encontrada con el último árbitro, etc,)</li>
+<li>Informe de tamaño de pantalla</li>
+<li>Número de veces que su sitio está &#8220;añadido a favoritos marcadores&#8221;</li>
+<li>Relación de los navegadores que soporten: Java, Flash, lector RealG2,</li>
+</ul>
+<p>&nbsp; Lector Quicktime, lector WMA, lector de PDF
+* Informe de Cluster para carga relación servidores equilibrada
+* Otros informes personalizados ...</p>
+<p>Es compatible con las siguientes características, así:</p>
+<ul class="simple">
+<li>Puede analizar todos los formatos de registro</li>
+<li>Obras de línea de comandos y desde un navegador como CGI (con dinámica</li>
+</ul>
+<p>&nbsp; filtros capacidades para algunos gráficos)
+* Actualización de las estadísticas se puede hacer en la demanda de la interfaz web y
+&nbsp; no sólo de su planificador
+* Sin límite de tamaño de archivo de registro, archivos de registro de soporte de división (sistema de balanceo de carga)
+* Soporte &#8216;casi ordenados&#8217; los archivos de registro, incluso para las páginas de entrada y salida
+* Invertir búsqueda DNS antes o durante el análisis, soporta archivos de caché de DNS
+* Detección País de localización de IP o nombre de dominio
+* Enlaces Whois
+* Una gran cantidad de opciones / filtros y plugins se puede utilizar Sitios web
+* Multi-nombradas soportados (servidores virtuales)
+* Cross Site Scripting Ataques protección
+* Varios idiomas
+* No hay necesidad de bibliotecas Perl raras
+* Informes dinámicos como resultado del CGI Informes
+* Estática en una o enmarcado HTML o XHTML
+* Experimental de exportación a PDF
+* Ver y colores pueden coincidir con el diseño del sitio (CSS)
+* Ayuda y sugerencias en HTML informaron páginas
+* Fácil de usar (sólo un archivo de configuración para editar)
+* Análisis de la base de datos se puede almacenar en formato XML (para el procesamiento de XSLT, ...)
+* Un módulo Webmin
+* Libre (GNU GPL) con fuentes (los scripts de Perl)
+* Disponible en todas las plataformas</p>
+</div>
+<div class="section" id="requisitos-de-awstats">
+<h2>Requisitos de Awstats<a class="headerlink" href="#requisitos-de-awstats" title="Permalink to this headline">¶</a></h2>
+<p>Para usar AWStats script CGI, son necesarios los siguientes requisitos:</p>
+<ul class="simple">
+<li>El servidor debe registrar el acceso web en un archivo de registro se puede leer.</li>
+<li>Para ejecutar awstats, desde la línea de comandos, el sistema operativo debe ser capaz</li>
+</ul>
+<p>&nbsp; Para ejecutar scripts (archivos .pl) perl.
+* Perl módulo &#8220;Encode&#8221; debe estar disponible.</p>
+<p>Para ejecutar awstats como un CGI (por estadísticas en tiempo real), el servidor web también debe ser capaz de ejecutar dichos scripts.</p>
+<blockquote>
+<div><p>Si no, puede resolver este descargando la última versión de Perl en:</p>
+<p><a class="reference external" href="http://www.activestate.com/ActivePerl/">http://www.activestate.com/ActivePerl/</a> (Windows)</p>
+<p><a class="reference external" href="http://www.perl.com/pub/language/info/software.html">http://www.perl.com/pub/language/info/software.html</a> (All OS)</p>
+</div></blockquote>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Los parámetros utilizados en ayuda y de instalación y desinstalación operaciones no son sensibles, que es una ventaja añadida, mientras que
+en comparación con otros.</li>
+<li>Es-acomodados tanto en Ubuntu y así como Cent OS.</li>
+<li>Este módulo se instala los Awstats en versión actualizada.</li>
+<li>Si el módulo ya existe en la máquina del usuario, se mostrará un mensaje, ya que ya existe.</li>
+<li>AWStats soporta la mayoría de los principales formatos de archivos de registro del servidor web, incluyendo (/ XLF / formato de registro ELF
+NCSA combinado o Formato Común de Registro (CLF)) Apache,</li>
+</ul>
+<p>&nbsp;&nbsp;WebStar, IIS (formato de registro W3C), y muchos otros formatos de registro del servidor web común.
+* Los desarrolladores pueden contribuir al proyecto AWStats través de SourceForge.net.
+* Escrito en Perl, AWStats se pueden implementar en casi cualquier sistema operativo
+* Se trata de una herramienta de administración de servidores, con los paquetes disponibles para la mayoría de las distribuciones de Linux.
+* AWStats se pueden instalar en una estación de trabajo, tales como MS Windows, para uso local en situaciones en que los archivos de registro</p>
+<blockquote>
+<div>se puede descargar desde un servidor remoto.</div></blockquote>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Awstats</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#ayuda-comando">Ayuda Comando</a></li>
+<li><a class="reference internal" href="#instalacion">Instalación</a></li>
+<li><a class="reference internal" href="#caracteristicas-del-awstats">Características del Awstats</a></li>
+<li><a class="reference internal" href="#requisitos-de-awstats">Requisitos de Awstats</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="sautopilot.html"
+                        title="previous chapter">Autopilot</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sbehat.html"
+                        title="next chapter">Behat</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/sawstats.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="sbehat.html" title="Behat"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="sautopilot.html" title="Autopilot"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="scleopatra_main.html" >Cleopatra</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

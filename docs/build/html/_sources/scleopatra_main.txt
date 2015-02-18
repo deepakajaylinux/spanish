@@ -16,7 +16,23 @@ El jugar con los módulos de Cleopatra
    sapachereverseproxy
    sapacheserver
    sapachevhosteditor
+   sapt
    saptana
    sautopilot
+   sawstats
    sbehat
+   sboxify
    scassandra
+   schgrp
+   schmode
+   schown
+   schrome
+   schromedriver
+   scitadel
+   scleopatra
+   scomposer
+   scleofy
+   scopy
+
+
+

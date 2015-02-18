@@ -1,0 +1,119 @@
+========
+Composer
+========
+
+sinopsis
+----------
+
+Compositor es un administrador de la dependencia a nivel de aplicación para el lenguaje de programación PHP que ofrece un formato estándar para la gestión de dependencias de software PHP y bibliotecas necesarias.
+
+Se permite declarar las bibliotecas dependientes necesita su proyecto y los instalará en su proyecto para usted. Composer es multiplataforma y nos esforzamos para que funcione igual de bien en Windows, Linux y OSX.
+
+Ayuda Comando
+----------------------
+Este comando ayuda a determinar el uso del módulo de compositor. El usuario se llega a saber acerca de las diferentes formas / formato para ejecutar este módulo. Este comando guía al usuario final con respecto a los parámetros alternativos y comandos para la instalación. A continuación dado son el mando y la pantalla del mismo.
+
+.. code-block:: bash
+              
+		 cleopatra composer help
+
+.. code-block:: bash
+
+ kevell@corp:/# cleopatra composer help
+ ******************************
+
+
+  This command allows you to update Composer.
+
+  Composer, composer
+
+        - install
+        Installs the latest version of composer
+        example: cleopatra composer install
+
+ ------------------------------
+ End Help
+ ******************************
+
+instalación
+--------------
+
+Cuando el usuario tiene que instalar el módulo compositor en la máquina, el siguiente comando dado se ejecutará el proceso de instalación.
+
+.. code-block:: bash
+               
+		 cleopatra composer install
+
+Durante la instalación, el sistema pide el nombre del directorio, si usted quiere configurar su PATH, puede definir su camino. Defina su camino tiene que ser seguido por el símbolo "/". Pulse Intro para utilizar la ruta por defecto.
+
+"What is the program data directory? "/opt/composer" - use this?
+
+Durante la instalación, el sistema pide la ejecución de nombre de directorio, si usted quiere configurar su PATH, puede definir su camino. Defina su camino tiene que ser seguido por el símbolo "/". Pulse Intro para utilizar la ruta por defecto.
+
+"What is the program executer directory? Found "/usr/bin" - Use this? "
+                              
+
+.. cssclass:: table-bordered
+
+ +---------------------------+------------------------------+----------------+-----------------------------------------+
+ | Parámetros                | alternativos de parámetros   | Opción         | Comentarios                             |
+ +===========================+==============================+================+=========================================+
+ |cleopatra composer         | Composer, composer           | Y              | El sistema se inicia proceso de         | 
+ |Install? (Y/N)             |                              |                | instalación                             |
+ +---------------------------+------------------------------+----------------+-----------------------------------------+
+ |cleopatra composer         | Composer, composer           | N              | El sistema detiene proceso de           |
+ |Install? (Y/N)             |                              |                | instalación|                            |
+ +---------------------------+------------------------------+----------------+-----------------------------------------+
+ 
+
+La captura de pantalla para el comando de instalación se enumeran a continuación,
+
+.. code-block:: bash
+
+ kevell@corp:/$ cleopatra composer install
+ Install Composer - Update to latest version ? (Y/N)
+ y
+ *******************************
+ *        Pharaoh Tools        *
+ *          Composer!         *
+ *******************************
+ What is the program data directory? Found "/opt/composer" - use this? (Enter nothing for yes, no end slash)
+
+ What is the program executor directory? Found "/usr/bin" - use this? (Enter nothing for yes, No Trailing Slash)
+
+ git clone 'https://github.com/phpengine/composer-phar.git'  /tmp/composer/composerCloning into '/tmp/composer/composer'...
+ remote: Counting objects: 6, done.
+ remote: Total 6 (delta 0), reused 0 (delta 0)
+ Unpacking objects: 100% (6/6), done.
+ Checking connectivity... done.
+ PHP Warning:  mkdir(): Permission denied in /opt/cleopatra/cleopatra/src/Modules/CleopatraRequired/Model/BasePHPApp.php on line 192
+ cp: cannot create directory ‘/opt/composer’: Permission denied
+ Program Data folder populated
+ Program Executor Deleted if existed
+ PHP Warning:  scandir(/opt/composer): failed to open dir: No such file or directory in /opt/cleopatra/cleopatra/src/Modules/CleopatraRequired/Model/BasePHPApp.php on line 172
+ PHP Warning:  scandir(): (errno 2): No such file or directory in /opt/cleopatra/cleopatra/src/Modules/CleopatraRequired/Model/BasePHPApp.php on line 172
+ PHP Warning:  Invalid argument supplied for foreach() in /opt/cleopatra/cleopatra/src/Modules/CleopatraRequired/Model/BasePHPApp.php on line 174
+ PHP Warning:  scandir(/opt/composer): failed to open dir: No such file or directory in /opt/cleopatra/cleopatra/src/Modules/CleopatraRequired/Model/BasePHPApp.php on line 172
+ PHP Warning:  scandir(): (errno 2): No such file or directory in /opt/cleopatra/cleopatra/src/Modules/CleopatraRequired/Model/BasePHPApp.php on line 172
+ PHP Warning:  Invalid argument supplied for foreach() in /opt/cleopatra/cleopatra/src/Modules/CleopatraRequired/Model/BasePHPApp.php on line 174
+ PHP Warning:  file_put_contents(/usr/bin/composer): failed to open stream: Permission denied in /opt/cleopatra/cleopatra/src/Modules/CleopatraRequired/Model/BasePHPApp.php on line 214
+ chmod: cannot access ‘/opt/composer’: No such file or directory
+ chmod: cannot access ‘/usr/bin/composer’: No such file or directory
+ ... All done!
+ *******************************
+ Thanks for installing , visit www.pharaohtools.com for more
+ ******************************
+ 
+
+ Single App Installer:
+ --------------------------------------------
+ Composer: Success
+ ------------------------------
+ Installer Finished
+ ******************************
+
+Beneficios
+--------------
+
+* Se instala dependencias (por ejemplo, bibliotecas) para una aplicación.
+* También permite a los usuarios instalar

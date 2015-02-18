@@ -1,0 +1,281 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Cleofy &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="Cleopatra" href="scleopatra_main.html" />
+    <link rel="prev" title="Composer" href="scomposer.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="scomposer.html" title="Composer"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="scleopatra_main.html" accesskey="U">Cleopatra</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="cleofy">
+<h1>Cleofy<a class="headerlink" href="#cleofy" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Este módulo tiene por objeto facilitar a los usuarios en la creación de un conjunto estándar de archivos de piloto automático para su proyecto. Veamos cómo utilizar este módulo, y también acerca de las funciones de cleofy de los próximos temas.</p>
+</div>
+<div class="section" id="ayuda-comando">
+<h2>Ayuda Comando<a class="headerlink" href="#ayuda-comando" title="Permalink to this headline">¶</a></h2>
+<p>El comando de ayuda es un breve manual de usuario que facilita a los usuarios obtener conscientes en cuanto a la utilización de metodologías de manejo de este módulo para realizar diferentes funciones. También se enumeran las salidas de parámetros alternativos que se pueden utilizar en las declaraciones. Se destaca el ejemplo de sintaxis para el uso y acceso a diferentes funciones en virtud cleofy.</p>
+<p>El comando utilizado para la declaración de opción de ayuda bajo cleofy se muestra a continuación,</p>
+<div class="highlight-bash"><div class="highlight"><pre>cleopatra cleofy <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La&nbsp;sintaxis para declarar&nbsp;el comando de ayuda&nbsp;no&nbsp;es sensible a mayúsculas, que esuna ventaja añadida.&nbsp;La&nbsp;siguiente captura de pantalla&nbsp;a visualizar&nbsp;sobre&nbsp;el comando de ayuda&nbsp;bajo&nbsp;cleofy.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# cleopatra cleofy <span class="nb">help</span>
+
+******************************
+
+
+This <span class="nb">command </span>is part of a default Module Core and provides you with a method by which you can create a standard <span class="nb">set </span>of Autopilot files <span class="k">for</span> your project from the <span class="nb">command </span>line.
+
+
+Cleofy, cleofy
+
+- list
+       List all of the autopilot files in your build/config/cleopatra/autopilots
+       example: cleopatra cleofy list
+
+- standard
+       Create a default <span class="nb">set </span>of cleopatra autopilots in build/config/cleopatra/autopilots <span class="k">for</span> your project.
+       example: cleopatra cleofy standard
+
+- tiny
+       Create a default <span class="nb">set </span>of cleopatra autopilots in build/config/cleopatra/autopilots <span class="k">for</span> a project with a <span class="s2">&quot;tiny&quot;</span> style infrastructure.             example: cleopatra cleofy tiny
+
+- medium
+       Create a default <span class="nb">set </span>of cleopatra autopilots in build/config/cleopatra/autopilots <span class="k">for</span> a project with a <span class="s2">&quot;medium&quot;</span> style infrastructure.           example: cleopatra cleofy medium
+
+- medium-web
+       Create a default <span class="nb">set </span>of cleopatra autopilots in build/config/cleopatra/autopilots <span class="k">for</span> a project with a <span class="s2">&quot;medium&quot;</span> style infrastructure,
+       with web but not database.
+       example: cleopatra cleofy medium-web
+
+- db-cluster
+       Create a default <span class="nb">set </span>of cleopatra autopilots in build/config/cleopatra/autopilots <span class="k">for</span> your project.
+       example: cleopatra cleofy db-cluster
+--yes
+--guess
+--database-nodes-env<span class="o">=</span>*db-nodes-environment-name*
+
+- install-generic-autopilots
+       Install the generic Cleofy autopilot templates <span class="k">for</span> a Tiny or Medium <span class="o">(</span>Current Default<span class="o">)</span> <span class="nb">set </span>of Environments
+example: cleopatra cleofy install-generic-autopilots
+       example: cleopatra cleofy install-generic-autopilots
+--yes
+--guess <span class="c"># will set --destination-dir=*this dir +*build/config/cleopatra/cleofy/autopilots/</span>
+--template-group<span class="o">=</span>tiny <span class="c"># tiny, medium, dbcluster, phlagrant || db-cluster, workstation</span>
+--destination-dir<span class="o">=</span>*path-to-destination*
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="funciones-de-cleofy">
+<h2>Funciones de cleofy<a class="headerlink" href="#funciones-de-cleofy" title="Permalink to this headline">¶</a></h2>
+<p>En este tema se describe acerca de las diversas funciones de cleofy bajo este módulo se enumeran a continuación,</p>
+<ul class="simple">
+<li>Lista</li>
+<li>Standard</li>
+<li>Tiny</li>
+<li>Medio</li>
+<li>Medium-web</li>
+<li>DB-cluster</li>
+<li>Install_generic_autopilots</li>
+</ul>
+</div>
+<div class="section" id="lista">
+<h2>lista<a class="headerlink" href="#lista" title="Permalink to this headline">¶</a></h2>
+<p>Esta función tiene por objeto una lista de todos los archivos del piloto automático en su ubicación especificada (build / config / cleopatra / pilotos automáticos). La sintaxis para la aplicación de esta función se muestra a continuación,</p>
+<div class="highlight-bash"><div class="highlight"><pre>cleopatra cleofy list
+</pre></div>
+</div>
+</div>
+<div class="section" id="estandar">
+<h2>estándar<a class="headerlink" href="#estandar" title="Permalink to this headline">¶</a></h2>
+<p>Esta función ayuda a crear un conjunto predeterminado de pilotos automáticos cleopatra (en build / config / cleopatra / pilotos automáticos) para el proyecto de los usuarios. Esta función se puede aplicar simplemente usando el siguiente comando,</p>
+<div class="highlight-bash"><div class="highlight"><pre>cleopatra cleofy standard
+</pre></div>
+</div>
+</div>
+<div class="section" id="diminuto">
+<h2>diminuto<a class="headerlink" href="#diminuto" title="Permalink to this headline">¶</a></h2>
+<p>Esta función&nbsp;tiene como objetivo crear&nbsp;un conjunto predeterminado de&nbsp;pilotos automáticos&nbsp;cleopatra&nbsp;(en&nbsp;build /&nbsp;config /&nbsp;cleopatra&nbsp;/&nbsp;pilotos automáticos) para un proyecto&nbsp;de&nbsp;pequeña&nbsp;infraestructura.&nbsp;Para llevar a cabo&nbsp;estas funciones sigue&nbsp;el siguiente comando&nbsp;como abajo,</p>
+<div class="highlight-bash"><div class="highlight"><pre>cleopatra cleofy tiny
+</pre></div>
+</div>
+</div>
+<div class="section" id="medio">
+<h2>medio<a class="headerlink" href="#medio" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div>Esta función tiene como objetivo crear un conjunto predeterminado de pilotos automáticos cleopatra (en build / config / cleopatra / pilotos automáticos) para un proyecto de infraestructura de medio. Para llevar a cabo estas funciones sigue el siguiente comando como abajo,</div></blockquote>
+<div class="highlight-bash"><div class="highlight"><pre>cleopatra cleofy medium
+</pre></div>
+</div>
+</div>
+<div class="section" id="medium-web">
+<h2>Medium_Web<a class="headerlink" href="#medium-web" title="Permalink to this headline">¶</a></h2>
+<p>Esta función tiene como objetivo crear un conjunto predeterminado de pilotos automáticos cleopatra (en build / config / cleopatra / Pilotos automáticos) PARA UN proyecto de infraestructura de medio con la web, Pero No La Base de Datos. Para Llevar un cabo ESTAS Funciones Sigue el siguiente comando Como abajo,</p>
+<div class="highlight-bash"><div class="highlight"><pre>cleopatra cleofy medium-web
+</pre></div>
+</div>
+</div>
+<div class="section" id="db-cluster">
+<h2>DB_cluster<a class="headerlink" href="#db-cluster" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div>Esta función tiene como objetivo crear un conjunto predeterminado de pilotos automáticos cleopatra (en build / config / cleopatra / pilotos automáticos) para el proyecto de los usuarios.  Para llevar a cabo estas funciones sigue el siguiente comando como abajo,</div></blockquote>
+<div class="highlight-bash"><div class="highlight"><pre>       cleopatra cleofy db-cluster
+--yes
+--guess
+--database-nodes-env<span class="o">=</span>*db-nodes-environment-name*
+</pre></div>
+</div>
+</div>
+<div class="section" id="install-generic-autopilots">
+<h2>Install_generic_autopilots<a class="headerlink" href="#install-generic-autopilots" title="Permalink to this headline">¶</a></h2>
+<p>Esta función ayuda a la instalación de plantillas de piloto automático genéricos para pequeña o mediana conjunto de medio ambiente o simplemente usando el comando como se indica a continuación,</p>
+<div class="highlight-bash"><div class="highlight"><pre>cleopatra cleofy install-generic-autopilots
+</pre></div>
+</div>
+<p>or,</p>
+<div class="highlight-bash"><div class="highlight"><pre>       cleopatra cleofy install-generic-autopilots
+--yes
+--guess <span class="c"># will set --destination-dir=*this dir +*build/config/cleopatra/cleofy/autopilots/</span>
+--template-group<span class="o">=</span>tiny <span class="c"># tiny, medium, dbcluster, phlagrant || db-cluster, workstation</span>
+--destination-dir<span class="o">=</span>*path-to-destination*
+</pre></div>
+</div>
+<p>Para aplicar el comando como se indica más arriba, el usuario tiene que especificar los siguientes campos que se enumeran,</p>
+<ul class="simple">
+<li>Dir destino</li>
+<li>Grupo de plantillas</li>
+</ul>
+</div>
+<div class="section" id="parametros-alternativos">
+<h2>parámetros alternativos<a class="headerlink" href="#parametros-alternativos" title="Permalink to this headline">¶</a></h2>
+<p>Los parámetros alternativos para este módulo, cualquiera de los cuales se pueden utilizar en la declaración es,</p>
+<ul class="simple">
+<li>Cleofy,</li>
+<li>cleofy</li>
+</ul>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Los parámetros utilizados declarando ayuda y otras características diferentes de apt no distinguen entre mayúsculas y minúsculas.</li>
+<li>Es-acomodado tanto os Cent y así como en Ubuntu.</li>
+<li>Este módulo envuelve todas las necesidades de un proyecto en la creación de juego estándar de los pilotos automáticos.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Cleofy</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#ayuda-comando">Ayuda Comando</a></li>
+<li><a class="reference internal" href="#funciones-de-cleofy">Funciones de cleofy</a></li>
+<li><a class="reference internal" href="#lista">lista</a></li>
+<li><a class="reference internal" href="#estandar">estándar</a></li>
+<li><a class="reference internal" href="#diminuto">diminuto</a></li>
+<li><a class="reference internal" href="#medio">medio</a></li>
+<li><a class="reference internal" href="#medium-web">Medium_Web</a></li>
+<li><a class="reference internal" href="#db-cluster">DB_cluster</a></li>
+<li><a class="reference internal" href="#install-generic-autopilots">Install_generic_autopilots</a></li>
+<li><a class="reference internal" href="#parametros-alternativos">parámetros alternativos</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="scomposer.html"
+                        title="previous chapter">Composer</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/scleofy.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="scomposer.html" title="Composer"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="scleopatra_main.html" >Cleopatra</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

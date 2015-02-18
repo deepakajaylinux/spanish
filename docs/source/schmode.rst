@@ -1,0 +1,103 @@
+============
+Chmode
+============
+
+sinopsis
+----------
+
+Los archivos y directorios pertenecen tanto a un propietario y un grupo. Un grupo normalmente consiste en una colección de usuarios, todos ellos pertenecientes al mismo grupo. El primer conjunto de tres es la lectura, escritura y ejecución para el propietario del archivo.
+
+chmod se usa para cambiar los permisos de los archivos o directorios. En Linux y otros sistemas operativos tipo Unix, hay un conjunto de reglas para cada archivo que define quién puede acceder a ese archivo, y cómo se puede acceder a él. Estas reglas se llaman los permisos de archivos o los modos de archivo. El nombre del comando chmod significa "modo de cambio", y se utiliza para definir la forma en que un archivo se puede acceder.
+
+Existen tres clases generales de los usuarios:
+
+* El usuario propietario del archivo ("Usuario")
+* Los usuarios que pertenecen al grupo de la propiedad definida por el archivo ("Grupo")
+* Todos los demás ("Otros")
+
+A su vez, para cada una de estas clases de usuarios, hay tres tipos de acceso a los archivos:
+
+* La capacidad de mirar el contenido del archivo ("Leer")
+* La capacidad de cambiar el contenido del archivo ("Escribir")
+* La capacidad de ejecutar el contenido del archivo como un programa en el sistema ("Ejecutar")
+
+
+Para cada una de las tres clases de usuario, hay tres tipos de acceso.
+
+.. cssclass:: table-bordered
+
+ +---------------------+-------------------------------------------------------------------+
+ | Símbolos            | Significado                                                       |
+ +=====================+===================================================================+
+ |rwx                  | el propietario del archivo puede leer, escribir o ejecutar este   |
+ |                     | archivo como un proceso en el sistema.                            |
+ +---------------------+-------------------------------------------------------------------+
+ |r-x                  | nadie en el grupo del archivo puede leer o ejecutar este archivo, |
+ |                     | pero no escribir en él.                                           |
+ +---------------------+-------------------------------------------------------------------+
+ |r–                   | nadie en absoluto puede leer este archivo, pero no escribir en    |
+ |                     | él o ejecutar su contenido como un proceso|                       |
+ +---------------------+-------------------------------------------------------------------+
+
+
+Ayuda Comando
+----------------------
+
+Este comando ayuda a determinar el uso del módulo de modo Cambio. El usuario se llega a saber acerca de la diferente forma / formato de ejecutar este módulo. Este comando guía al usuario final a conocer el propósito de este comando. A continuación dado son el mando y la pantalla del 
+mismo.
+
+.. code-block:: bash
+        
+	        cleopatra Chmod help
+
+La representación gráfica de la orden anterior se enumeran a continuación,
+
+.. code-block:: bash
+
+ kevell@corp:/# cleopatra Chmod help
+ ******************************
+
+
+  This command handles file permission functions.
+
+  Chmod, chmod
+
+        - path
+        Will change the file permission mode of a path
+        example: cleopatra chmod path --yes --guess --recursive --path=/a/file/path --mode=0777
+
+
+ ------------------------------
+ End Help
+ ******************************
+
+Camino
+----------
+
+Camino Chmod es el comando que cambie los permisos de acceso para presentar los objetos del sistema (archivos y directorios).
+
+El número 1, 2 y 4 representa ejecutar, escribir y leer. Estos números se utilizan porque cualquier combinación de estos tres números ser único.
+
+Cuando el usuario necesita cambiar el modo de archivo, el siguiente comando dado se ejecutará el proceso.
+
+.. code-block:: bash
+        
+	        cleopatra chmod path –yes –guess –recursive –path=/”File path” –mode=0777
+
+Parámetro Alternativa
+--------------------------------
+
+Hay dos parámetros alternativos que pueden ser utilizados en la línea de comandos.
+
+chmod, Chmod
+
+Por ejemplo: cleopatra Chmode path/ cleopatra chmod path
+
+
+Beneficios
+--------------
+
+
+chmod modifica los permisos del fichero especificado por filename a los permisos especificados por permisos. Permisos define los permisos para el propietario del archivo (el "usuario"), los miembros del grupo propietario del archivo (el "grupo"), y cualquier otra persona ("otros"). Hay dos maneras de representar estos permisos: con símbolos (caracteres alfanuméricos), o con los números octales (los dígitos del 0 al 7).
+
+

@@ -1,0 +1,102 @@
+=======
+Chown
+=======
+
+sinopsis
+----------
+
+Este módulo permite cambiar el permiso del propietario. Se puede cambiar el permiso de archivo o directorio. Antes de que usted debe ser consciente del permiso predeterminado asignado a los archivos y directorios en el momento de crearlo.
+
+comando Ayuda
+----------------------
+
+Este comando ayuda explica acerca de la instalación de un módulo en particular. El comando de ayuda es fácil de manejar por el usuario final. También se enumeran los parámetros alternativos que se utilizan en la declaración. El comando siguiente guía al usuario sobre el manejo de este módulo.
+
+.. code-block:: bash
+	
+	cleopatra chown help
+
+Después de dar el comando, el comando listará las opciones de ayuda. Las siguientes capturas de pantalla darán efecto visual para el uso de este módulo.
+
+.. code-block:: bash
+
+	Kevell@corp:/# cleopatra chown help
+	******************************
+
+	 This command handles file user ownership changing functions.
+
+	  Chown, chown
+
+        - path
+        Will change the user ownership of a path
+        example: cleopatra chown path --yes --guess --recursive --path=/a/file/path --owner=golden
+
+	------------------------------
+	End Help
+	******************************
+
+
+camino
+------
+
+Es un excelente proceso para este módulo bajo Cleopatra ligeramente mediante el comando indicado a continuación,
+
+.. code-block:: bash
+
+	cleopatra chown path –yes—guess—recursive—path=/Cleopatra—owner=Kevells
+
+Entonces podemos entrar en la entrada.
+
+Introduzca Propiedad usuario
+
+Después de escribir el nombre del propietario
+
+Se mostrará Chown resultado el éxito.
+
+
+Esto se muestra visualmente por la siguiente captura de pantalla.
+
+.. code-block:: bash
+
+	kevell@corp:/# cleopatra chown path --yes --guess --recursive --path=/phj.php --owner=deepak
+
+	Enter ownership user:
+	deepak
+	[Pharaoh Logging] [Chown] Executing chown -R deepak /phj.php
+	******************************
+
+
+	Chown Result: Success
+	------------------------------
+	Chown Finished
+	******************************
+
+opción
+-------
+
+.. cssclass:: table-bordered
+
+
+
+        +------------------------------------------------+------------+----------------------------+-----------------------------+
+        |       parámetros                               | necesario  | opción                     | Comentarios                 |
+        +================================================+============+============================+=============================+
+        |Chown                                           | Yes        |                            |                             |
+        +------------------------------------------------+------------+----------------------------+-----------------------------+
+        |Path                                            | Yes        |                            |El usuario tiene que dar     |
+        |                                                |            |                            |la ruta                      |
+        +------------------------------------------------+------------+----------------------------+-----------------------------+
+        |Owner                                           | Yes        | Chown                      |                             |
+        +------------------------------------------------+------------+----------------------------+-----------------------------+
+        |Owner                                           | No         | Chown                      |El usuario da entrada como   |
+        |                                                |            |                            |no, se le preguntará el      |
+        |                                                |            |                            |nombre del propietario|      |
+        +------------------------------------------------+------------+----------------------------+-----------------------------+
+
+
+Beneficios
+----------
+
+* El módulo se puede cambiar el propietario en cualquier momento con Cleopatra.
+* Mientras que hace proceso recursivo si cambia solo archivo la carpeta entera también se puede cambiar.
+* Podemos verificar el estado actual de su propietario.

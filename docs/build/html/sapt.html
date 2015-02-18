@@ -1,0 +1,287 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Apt &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="Cleopatra" href="scleopatra_main.html" />
+    <link rel="next" title="Aptana" href="saptana.html" />
+    <link rel="prev" title="ApacheVHostEditor" href="sapachevhosteditor.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="saptana.html" title="Aptana"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="sapachevhosteditor.html" title="ApacheVHostEditor"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="scleopatra_main.html" accesskey="U">Cleopatra</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="apt">
+<h1>Apt<a class="headerlink" href="#apt" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>El principal objetivo de este módulo apto es crear nuevos apartamentos y así está destinada a modificar los apartamentos ya existentes. Este módulo tiene una colección de diversas características para acceder y modificar los apartamentos en función de los requerimientos de los usuarios.</p>
+<p>Los temas próximos ocupa de cómo utilizar este módulo y también sobre los diferentes aspectos de este módulo para acceder a apt.</p>
+</div>
+<div class="section" id="ayuda-comando">
+<h2>Ayuda Comando<a class="headerlink" href="#ayuda-comando" title="Permalink to this headline">¶</a></h2>
+<p>El comando de ayuda es un breve manual de usuario que facilita a los usuarios obtener conscientes en cuanto a la utilización de metodologías de manejo de este módulo para realizar diferentes funciones. También se enumeran las salidas de parámetros alternativos que se pueden utilizar en las declaraciones. Se destaca el ejemplo de sintaxis para el uso y acceso a diferentes funciones en virtud de Apt.</p>
+<p>El comando utilizado para la declaración de opción de ayuda en virtud de Apt se muestra a continuación,</p>
+<div class="highlight-bash"><div class="highlight"><pre>cleopatra Apt <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La sintaxis para declarar el comando de ayuda no es sensible a mayúsculas, que es una ventaja añadida. La siguiente captura de pantalla a visualizar sobre el comando de ayuda bajo apt.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# cleopatra apt <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>allows you to modify create or modify apts
+
+ Apt, apt
+
+       - create
+       Create a new system apt, overwriting <span class="k">if</span> it exists
+       example: cleopatra apt create --aptname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+
+       - remove
+       Remove a system apt
+       example: cleopatra apt remove --aptname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+
+       - <span class="nb">set</span>-password
+       Set the password of a system apt
+       example: cleopatra apt <span class="nb">set</span>-password --aptname<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --new-password<span class="o">=</span><span class="s2">&quot;somepassword&quot;</span>
+
+       - exists
+       Check the existence of a apt
+       example: cleopatra apt exists --aptname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+
+       - show-groups
+       Show groups to which a apt belongs
+       example: cleopatra apt show-groups --aptname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+
+       - add-to-group
+       Add apt to a group
+       example: cleopatra apt add-to-group --aptname<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --groupname<span class="o">=</span><span class="s2">&quot;somegroupname&quot;</span>
+
+       - remove-from-group
+       Remove apt from a group
+       example: cleopatra apt remove-from-group --aptname<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --groupname<span class="o">=</span><span class="s2">&quot;somegroupname&quot;</span>
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="diferentes-caracteristicas-de-apt">
+<h2>Diferentes características de Apt<a class="headerlink" href="#diferentes-caracteristicas-de-apt" title="Permalink to this headline">¶</a></h2>
+<p>En este tema se trata con diferentes características de apto en virtud de este módulo, así como las posibles formas de utilizar esas diversas características.</p>
+<p>Los diversos aspectos de este módulo bajo apt se enumeran a continuación,</p>
+<ul class="simple">
+<li>Crear</li>
+<li>Retire</li>
+<li>Configuración contraseña</li>
+<li>existe</li>
+<li>Show-grupos</li>
+<li>Add-to-grupo</li>
+<li>Quitar-de-grupo</li>
+</ul>
+</div>
+<div class="section" id="crear">
+<h2>CREAR<a class="headerlink" href="#crear" title="Permalink to this headline">¶</a></h2>
+<p>Esta función tiene como objetivo la creación de un nuevo sistema de apt, y al igual que sobrescribe en caso de que ya existe. Esta función de apt usando este módulo se puede lograr mediante la siguiente sintaxis,</p>
+<div class="highlight-bash"><div class="highlight"><pre>cleopatra apt create --aptname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+</pre></div>
+</div>
+<p>En el lugar de aptname el usuario puede especificar el nombre de la APT que se va a crear. Después de introducir el comando como se especifica anteriormente, el nuevo sistema apt se creará con el nombre especificado.</p>
+</div>
+<div class="section" id="retire">
+<h2>RETIRE<a class="headerlink" href="#retire" title="Permalink to this headline">¶</a></h2>
+<p>Esta función tiene como objetivo la eliminación de un apt existente. Esta función de apt usando este módulo se puede lograr mediante la siguiente sintaxis,</p>
+<div class="highlight-bash"><div class="highlight"><pre>cleopatra apt remove --aptname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+</pre></div>
+</div>
+<p>En el lugar de aptname el usuario puede especificar el nombre de los apartamentos que se va a eliminar. Después de introducir el comando como se especifica anteriormente, el apartamento especificado se eliminarán.</p>
+</div>
+<div class="section" id="contrasena-set">
+<h2>CONTRASEÑA SET<a class="headerlink" href="#contrasena-set" title="Permalink to this headline">¶</a></h2>
+<p>Esta función facilita el establecimiento de una nueva contraseña a un sistema apto según las necesidades. Esto se puede hacer mediante la aplicación del comando como se indica a continuación,</p>
+<div class="highlight-bash"><div class="highlight"><pre>cleopatra apt <span class="nb">set</span>-password --aptname<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --new-password<span class="o">=</span><span class="s2">&quot;somepassword&quot;</span>
+</pre></div>
+</div>
+<p>Para llevar a cabo estas funciones, el usuario tiene que especificar los dos campos,</p>
+<ul class="simple">
+<li>Nombre Apt</li>
+<li>Nueva contraseña</li>
+</ul>
+<p>Después de especificar los dos campos en el formato de comando antes mencionado, se creará la nueva contraseña para el apt especificado.</p>
+</div>
+<div class="section" id="existe">
+<h2>EXISTE<a class="headerlink" href="#existe" title="Permalink to this headline">¶</a></h2>
+<p>Esta función tiene por objeto la comprobación de la existencia de un apt. Esto se puede hacer simplemente, mediante el comando de abajo,</p>
+<div class="highlight-bash"><div class="highlight"><pre>cleopatra apt exists --aptname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+</pre></div>
+</div>
+<p>Después de aplicar el comando como el anterior, la existencia de un apt mencionados se garantizará con los resultados.</p>
+</div>
+<div class="section" id="grupos-ver">
+<h2>GRUPOS VER<a class="headerlink" href="#grupos-ver" title="Permalink to this headline">¶</a></h2>
+<p>Esta función ayuda a los usuarios a conocer a qué grupo pertenece a la APT. Esto se puede conseguir simplemente utilizando el siguiente comando,</p>
+<div class="highlight-bash"><div class="highlight"><pre>cleopatra apt show-groups --aptname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+</pre></div>
+</div>
+<p>El usuario tiene que especificar el nombre de los apartamentos en el campo de aptname, con el fin de conocer los detalles de su grupo.</p>
+</div>
+<div class="section" id="anadir-to-group">
+<h2>AÑADIR _TO_GROUP<a class="headerlink" href="#anadir-to-group" title="Permalink to this headline">¶</a></h2>
+<p>El principal objetivo de esta función es añadir la necesaria apto para el grupo requerido por la simple aplicación de la orden como se indica a continuación,</p>
+<div class="highlight-bash"><div class="highlight"><pre>cleopatra apt add-to-group --aptname<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --groupname<span class="o">=</span><span class="s2">&quot;somegroupname&quot;</span>
+</pre></div>
+</div>
+<p>Para implementar esta función, el usuario tiene que especificar los dos campos siguientes de acuerdo a sus necesidades en el formato de la mencionada orden,</p>
+<ul class="simple">
+<li>Aptname</li>
+<li>Nombre del grupo</li>
+</ul>
+</div>
+<div class="section" id="remove-from-group">
+<h2>REMOVE_FROM_GROUP<a class="headerlink" href="#remove-from-group" title="Permalink to this headline">¶</a></h2>
+<p>El objetivo principal de esta función es eliminar el apartamento de un grupo simplemente aplicando el comando como se indica a continuación,</p>
+<div class="highlight-bash"><div class="highlight"><pre>cleopatra apt remove-from-group --aptname<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --groupname<span class="o">=</span><span class="s2">&quot;somegroupname&quot;</span>
+</pre></div>
+</div>
+<p>Para implementar esta función, el usuario tiene que especificar los dos campos siguientes de acuerdo a sus necesidades en el formato de la mencionada orden,</p>
+<ul class="simple">
+<li>Aptname</li>
+<li>Nombre del grupo</li>
+</ul>
+</div>
+<div class="section" id="parametros-alternativos">
+<h2>parámetros alternativos<a class="headerlink" href="#parametros-alternativos" title="Permalink to this headline">¶</a></h2>
+<p>Los parámetros alternativos para este módulo, cualquiera de los cuales se pueden utilizar en la declaración es,</p>
+<ul class="simple">
+<li>Apt</li>
+<li>apt</li>
+</ul>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Los parámetros utilizados declarando ayuda y otras características diferentes de apt no distinguen entre mayúsculas y minúsculas.</li>
+<li>Es-acomodado tanto os Cent y así como en Ubuntu.</li>
+<li>El uso de este módulo, el usuario puede crear y, así como modificar el apartamento de acuerdo a sus necesidades.</li>
+<li>La existencia de un apartamento puede garantizarse en este módulo.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Apt</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#ayuda-comando">Ayuda Comando</a></li>
+<li><a class="reference internal" href="#diferentes-caracteristicas-de-apt">Diferentes características de Apt</a></li>
+<li><a class="reference internal" href="#crear">CREAR</a></li>
+<li><a class="reference internal" href="#retire">RETIRE</a></li>
+<li><a class="reference internal" href="#contrasena-set">CONTRASEÑA SET</a></li>
+<li><a class="reference internal" href="#existe">EXISTE</a></li>
+<li><a class="reference internal" href="#grupos-ver">GRUPOS VER</a></li>
+<li><a class="reference internal" href="#anadir-to-group">AÑADIR _TO_GROUP</a></li>
+<li><a class="reference internal" href="#remove-from-group">REMOVE_FROM_GROUP</a></li>
+<li><a class="reference internal" href="#parametros-alternativos">parámetros alternativos</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="sapachevhosteditor.html"
+                        title="previous chapter">ApacheVHostEditor</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="saptana.html"
+                        title="next chapter">Aptana</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/sapt.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="saptana.html" title="Aptana"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="sapachevhosteditor.html" title="ApacheVHostEditor"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="scleopatra_main.html" >Cleopatra</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

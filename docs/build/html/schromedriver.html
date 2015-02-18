@@ -1,0 +1,276 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>ChromeDriver &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="Cleopatra" href="scleopatra_main.html" />
+    <link rel="prev" title="Chrome" href="schrome.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="schrome.html" title="Chrome"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="scleopatra_main.html" accesskey="U">Cleopatra</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="chromedriver">
+<h1>ChromeDriver<a class="headerlink" href="#chromedriver" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Este módulo permite a los usuarios instalar algunos GC recomienda herramientas estándar que incluye rizo, vim, drush y zip. Para obtener el cromo instalado el usuario necesita java para conseguir instalado. Veamos acerca de cómo utilizar esto y cómo instalar el en los próximos temas.</p>
+</div>
+<div class="section" id="ayuda-comando">
+<h2>Ayuda Comando<a class="headerlink" href="#ayuda-comando" title="Permalink to this headline">¶</a></h2>
+<p>El comando de ayuda conduce a los usuarios en cuanto a la finalidad y al igual que sobre las opciones que se incluyen en el módulo del controlador Chrome. El comando help enumera los parámetros alternativos de módulo controlador Chrome. También describe la sintaxis para instalar el módulo controlador Chrome. El comando de ayuda para el módulo controlador Chrome se muestra a continuación.</p>
+<div class="highlight-bash"><div class="highlight"><pre>cleopatra ChromeDriver <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La sintaxis para declarar el comando de ayuda no es sensible a mayúsculas, que es una ventaja añadida. La siguiente captura de pantalla a visualizar sobre el comando de ayuda en virtud de conductor Chrome.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# cleopatra ChromeDriver help
+
+******************************
+
+
+ This command allows you to install a few GC recommended Standard Tools
+ for productivity in your system.  The kinds of tools we found ourselves
+ installing on every box we have, client or server. These include curl,
+ vim, drush and zip.
+
+ ChromeDriver, chromedriver-server, chromedriver, chromedriver-srv, chromedriverserver
+
+       - install
+       Installs ChromeDriver. Note, you&#39;ll also need Java installed
+       as it is a prerequisite for ChromeDriver
+       example: cleopatra chromedriver install
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="instalacion">
+<h2>instalación<a class="headerlink" href="#instalacion" title="Permalink to this headline">¶</a></h2>
+<p>Instalación del controlador de cromo a su máquina, se puede hacer simplemente usando el comando siguiente como se muestra:</p>
+<div class="highlight-bash"><div class="highlight"><pre>cleopatra chromedriver install
+</pre></div>
+</div>
+<p>Después de introducir el comando anterior, las siguientes operaciones se produce como se muestra en el formato tabular.</p>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="19%" />
+<col width="34%" />
+<col width="11%" />
+<col width="36%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parámetros</th>
+<th class="head">parámetros alternativos</th>
+<th class="head">Necesario</th>
+<th class="head">Comentario</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Install ChromeDriver
+Server? (Y/N)</td>
+<td>En lugar de chromedriver, podemos
+utilizar ChromeDriver,
+chromedriver-servidor, chromedriver-srv,
+chromedriverserver también</td>
+<td>Y(Yes)</td>
+<td>Si el usuario desea continuar el proceso de
+instalación se puede introducir como Y.</td>
+</tr>
+<tr class="row-odd"><td>Install ChromeDriver
+Server? (Y/N)</td>
+<td>En lugar de chromedriver, podemos
+utilizar ChromeDriver,
+chromedriver-servidor, chromedriver-srv,
+chromedriverserver también|</td>
+<td>N(No)</td>
+<td>Si el usuario desea abandonar el proceso de
+instalación se puede introducir como N.</td>
+</tr>
+</tbody>
+</table>
+<p>Si el usuario avanza el proceso de instalación, durante la ejecución de la instalación, el proceso pide al usuario que</p>
+<div class="highlight-bash"><div class="highlight"><pre>Enter Chrome Driver Version
+</pre></div>
+</div>
+<p>Se da la lista de versiones de los controladores de cromo que están disponibles a continuación:</p>
+<div class="highlight-bash"><div class="highlight"><pre>0. 2.0
+1. 2.10
+2. 2.1
+3. 2.11
+4. 2.2
+5. 2.3
+6. 2.4
+7. 2.5
+8. 2.6
+9. 2.7
+10. 2.8
+11. 2.9
+</pre></div>
+</div>
+<p>El usuario tiene que especificar los números del 0 al 11 en función de sus requisitos de la versión.</p>
+<p>Después de que el usuario especifica la versión, el proceso de instalación se inicia y se completó como se muestra gráficamente en la siguiente captura de pantalla.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# cleopatra chromedriver install
+
+Install ChromeDriver Server? <span class="o">(</span>Y/N<span class="o">)</span>
+Y
+*******************************
+*        Pharaoh Tools        *
+*         ChromeDriver        *
+*******************************
+Enter Chrome Driver Version
+<span class="o">(</span>0<span class="o">)</span> 2.0
+<span class="o">(</span>1<span class="o">)</span> 2.10
+<span class="o">(</span>2<span class="o">)</span> 2.1
+<span class="o">(</span>3<span class="o">)</span> 2.11
+<span class="o">(</span>4<span class="o">)</span> 2.2
+<span class="o">(</span>5<span class="o">)</span> 2.3
+<span class="o">(</span>6<span class="o">)</span> 2.4
+<span class="o">(</span>7<span class="o">)</span> 2.5
+<span class="o">(</span>8<span class="o">)</span> 2.6
+<span class="o">(</span>9<span class="o">)</span> 2.7
+<span class="o">(</span>10<span class="o">)</span> 2.8
+<span class="o">(</span>11<span class="o">)</span> 2.9
+11
+PHP Notice:  Undefined index: version in /opt/cleopatra/cleopatra/src/Modules/ChromeDriver/Model/ChromeDriverAllLinux.php on line 42
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Ensure module install is not checking versions
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Module Java reports itself as Installed
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Not installing as already installed
+Creating /tmp/cleopatra-temp-script-26804823734.sh
+chmod <span class="m">755</span> /tmp/cleopatra-temp-script-26804823734.sh 2&gt;/dev/null
+Changing /tmp/cleopatra-temp-script-26804823734.sh Permissions
+Executing /tmp/cleopatra-temp-script-26804823734.sh
+--2015-02-02 21:35:49--  http://chromedriver.storage.googleapis.com//chromedriver_linux64.zip
+Resolving chromedriver.storage.googleapis.com <span class="o">(</span>chromedriver.storage.googleapis.com<span class="o">)</span>... 74.125.236.44, 74.125.236.43, 74.125.236.42, ...
+Connecting to chromedriver.storage.googleapis.com <span class="o">(</span>chromedriver.storage.googleapis.com<span class="o">)</span><span class="p">|</span>74.125.236.44<span class="p">|</span>:80... connected.
+HTTP request sent, awaiting response... <span class="m">404</span> Not Found
+2015-02-02 21:35:52 ERROR 404: Not Found.
+
+mv: cannot stat <span class="s1">&#39;/tmp/chromedriver/*&#39;</span>: No such file or directory
+unzip:  cannot find or open chromedriver_linux64.zip, chromedriver_linux64.zip.zip or chromedriver_linux64.zip.ZIP.
+Temp File /tmp/cleopatra-temp-script-26804823734.sh Removed
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+ChromeDriver: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Los parámetros utilizados para la declaración de la ayuda de mandatos, la instalación no son sensibles, que es una ventaja añadida, mientras
+que en comparación con otros.</li>
+<li>Es-acomodados tanto en OS Cent y así como en Ubuntu.</li>
+<li>El usuario puede especificar la versión que desea instalar durante la instalación.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">ChromeDriver</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#ayuda-comando">Ayuda Comando</a></li>
+<li><a class="reference internal" href="#instalacion">instalación</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="schrome.html"
+                        title="previous chapter">Chrome</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/schromedriver.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="schrome.html" title="Chrome"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="scleopatra_main.html" >Cleopatra</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>
