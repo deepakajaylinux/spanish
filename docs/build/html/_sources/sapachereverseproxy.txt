@@ -15,14 +15,14 @@ La codificación para hacer uso de la ayuda de mandatos bajo Apache inversa mód
 
 .. code-block:: bash
 
-	cleopatra ApacheReverseProxyModules help
+	ptconfigure ApacheReverseProxyModules help
 
 La captura de pantalla muestra a continuación le da una representación pictórica de uso del comando ayuda.
 
 
 .. code-block:: bash
 
-          Kevell@corp/# cleopatra ApacheReverseProxyModules help
+          Kevell@corp/# ptconfigure ApacheReverseProxyModules help
 	  ******************************
 
 
@@ -34,7 +34,7 @@ La captura de pantalla muestra a continuación le da una representación pictór
 
           - install
 	        Installs Load Balancer/Reverse Proxy Apache Modules
-        	example: cleopatra apache-lb-mods install
+        	example: ptconfigure apache-lb-mods install
 
 	  ------------------------------
           End Help
@@ -48,7 +48,7 @@ Si el usuario desea instalar el módulo proxy de Apache inversa a su sistema que
 
 .. code-block:: bash
 
-		cleopatra ApacheReverseProxyModules install
+		ptconfigure ApacheReverseProxyModules install
 
 
 opción

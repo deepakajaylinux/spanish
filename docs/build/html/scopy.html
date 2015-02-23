@@ -24,7 +24,8 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
-    <link rel="up" title="Cleopatra" href="scleopatra_main.html" />
+    <link rel="up" title="PTConfigure" href="sptconfigure_main.html" />
+    <link rel="next" title="DeveloperTools" href="sdevelopertools.html" />
     <link rel="prev" title="Cleofy" href="scleofy.html" /> 
   </head>
   <body>
@@ -35,10 +36,13 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
+          <a href="sdevelopertools.html" title="DeveloperTools"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
           <a href="scleofy.html" title="Cleofy"
              accesskey="P">previous</a> |</li>
         <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
-          <li><a href="scleopatra_main.html" accesskey="U">Cleopatra</a> &raquo;</li> 
+          <li><a href="sptconfigure_main.html" accesskey="U">PTConfigure</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -59,11 +63,11 @@ Por ejemplo, digamos que usted tiene un archivo denominado imagen.jpg en su dire
 <div class="section" id="ayuda-comando">
 <h2>Ayuda Comando<a class="headerlink" href="#ayuda-comando" title="Permalink to this headline">¶</a></h2>
 <p>Este comando ayuda a determinar el uso del módulo de copia. El usuario se llega a saber acerca de la diferente forma / formato de ejecutar este módulo. Este comando guía al usuario final a conocer el propósito de este comando. A continuación dado son el mando y la pantalla del mismo.</p>
-<div class="highlight-bash"><div class="highlight"><pre>cleopatra copy <span class="nb">help</span>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure copy <span class="nb">help</span>
 </pre></div>
 </div>
 <p>La representación gráfica del comando de copia de pantalla aparece a continuación,</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# cleopatra copy <span class="nb">help</span>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure copy <span class="nb">help</span>
 ******************************
 
 
@@ -73,8 +77,8 @@ Por ejemplo, digamos que usted tiene un archivo denominado imagen.jpg en su dire
 
        - put
        Will ask you <span class="k">for</span> details <span class="k">for</span> servers, <span class="k">then</span> copy a file or directory from <span class="nb">local </span>to remote
-       example: cleopatra copy put
-       example: cleopatra copy put --yes --source<span class="o">=</span><span class="s2">&quot;/tmp/file&quot;</span> --target<span class="o">=</span><span class="s2">&quot;/home/user/file&quot;</span>
+       example: ptconfigure copy put
+       example: ptconfigure copy put --yes --source<span class="o">=</span><span class="s2">&quot;/tmp/file&quot;</span> --target<span class="o">=</span><span class="s2">&quot;/home/user/file&quot;</span>
 
 ------------------------------
 End Help
@@ -85,11 +89,11 @@ End Help
 <div class="section" id="poner">
 <h2>poner<a class="headerlink" href="#poner" title="Permalink to this headline">¶</a></h2>
 <p>Cuando el usuario necesita para copiar un archivo en nuestra fuente a otro destino, el comando a continuación se indica se ejecutará el proceso.</p>
-<div class="highlight-bash"><div class="highlight"><pre>cleopatra copy put
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure copy put
 </pre></div>
 </div>
 <p>El sistema pide la ruta del archivo de origen y la ruta del archivo de destino.</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# cleopatra copy put
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure copy put
 Copy files? <span class="o">(</span>Y/N<span class="o">)</span>
 Y
 Enter <span class="nb">source </span>file path
@@ -107,7 +111,7 @@ Copy Finished
 </pre></div>
 </div>
 <p>Hay otra opción, en la que se puede dar la ruta de origen y de destino en la línea de commandos.</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# cleopatra copy put --yes --source<span class="o">=</span><span class="s2">&quot;/kevell.html&quot;</span> --target<span class="o">=</span><span class="s2">&quot;/opt&quot;</span>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure copy put --yes --source<span class="o">=</span><span class="s2">&quot;/kevell.html&quot;</span> --target<span class="o">=</span><span class="s2">&quot;/opt&quot;</span>
 <span class="o">[</span>Pharaoh Logging<span class="o">]</span> <span class="o">[</span>Copy<span class="o">]</span> Executing cp -r /kevell.html /opt
 ******************************
 
@@ -123,7 +127,7 @@ Copy Finished
 <h2>Parámetro Alternativa<a class="headerlink" href="#parametro-alternativa" title="Permalink to this headline">¶</a></h2>
 <p>Hay dos parámetros alternativa que se puede utilizar en la línea de commandos.</p>
 <p>Copy , copy.</p>
-<p>Por ejemplo: cleopatra copy put/ cleopatra Copy help</p>
+<p>Por ejemplo: ptconfigure copy put/ ptconfigure Copy help</p>
 </div>
 <div class="section" id="beneficios">
 <h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
@@ -155,6 +159,9 @@ Copy Finished
   <h4>Previous topic</h4>
   <p class="topless"><a href="scleofy.html"
                         title="previous chapter">Cleofy</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sdevelopertools.html"
+                        title="next chapter">DeveloperTools</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
     <li><a href="_sources/scopy.txt"
@@ -184,10 +191,13 @@ Copy Finished
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
+          <a href="sdevelopertools.html" title="DeveloperTools"
+             >next</a> |</li>
+        <li class="right" >
           <a href="scleofy.html" title="Cleofy"
              >previous</a> |</li>
         <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
-          <li><a href="scleopatra_main.html" >Cleopatra</a> &raquo;</li> 
+          <li><a href="sptconfigure_main.html" >PTConfigure</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">

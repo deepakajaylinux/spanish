@@ -1,9 +1,9 @@
-Cleopatra
-===========
+PTConfigure
+=============
 
 
-El jugar con los módulos de Cleopatra
-**************************************
+Jugando con módulos PTConfigure              
+**********************************
 
 
 
@@ -29,10 +29,9 @@ El jugar con los módulos de Cleopatra
    schrome
    schromedriver
    scitadel
-   scleopatra
    scomposer
    scleofy
    scopy
    sdevelopertools
-
+   sptconfigure
 

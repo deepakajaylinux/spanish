@@ -16,13 +16,13 @@ Este comando ayuda a determinar el uso del módulo de Cassandra. El usuario se l
 
 .. code-block:: bash
         
-	        cleopatra cassandra help
+	        ptconfigure cassandra help
 
 La representación gráfica de la orden anterior se muestra a continuación,
 
 .. code-block:: bash
 
- kevell@corp:/# cleopatra cassandra help
+ kevell@corp:/# ptconfigure cassandra help
 
  ******************************
 
@@ -33,7 +33,7 @@ La representación gráfica de la orden anterior se muestra a continuación,
 
         - install
         Installs the latest version of Cassandra
-        example: cleopatra cassandra install
+        example: ptconfigure cassandra install
 
  ------------------------------
  End Help
@@ -46,13 +46,13 @@ Este comando ayuda en la instalación de Cassandra en el sistema. El siguiente c
 
 .. code-block:: bash
 
-                cleopatra cassandra install
+                ptconfigure cassandra install
 
 La representación gráfica de la orden anterior se muestra a continuación,
 
 .. code-block:: bash
 
- kevell@corp:/#  cleopatra cassandra install
+ kevell@corp:/#  ptconfigure cassandra install
 
  Install Cassandra? (Y/N) 
  Y
@@ -60,10 +60,10 @@ La representación gráfica de la orden anterior se muestra a continuación,
  *        Pharaoh Tools        *
  *         Cassandra!        *
  *******************************
- Creating /tmp/cleopatra-temp-script-10553509319.sh
- chmod 755 /tmp/cleopatra-temp-script-10553509319.sh 2>/dev/null
- Changing /tmp/cleopatra-temp-script-10553509319.sh Permissions
- Executing /tmp/cleopatra-temp-script-10553509319.sh
+ Creating /tmp/ptconfigure-temp-script-10553509319.sh
+ chmod 755 /tmp/ptconfigure-temp-script-10553509319.sh 2>/dev/null
+ Changing /tmp/ptconfigure-temp-script-10553509319.sh Permissions
+ Executing /tmp/ptconfigure-temp-script-10553509319.sh
  gpg: directory `/home/deepak/.gnupg' created
  gpg: new configuration file `/home/deepak/.gnupg/gpg.conf' created
  gpg: WARNING: options in `/home/deepak/.gnupg/gpg.conf' are not yet active during this run
@@ -267,7 +267,7 @@ La representación gráfica de la orden anterior se muestra a continuación,
  Get:41 http://us.archive.ubuntu.com precise/main Translation-en [726 kB]
  Get:42 http://us.archive.ubuntu.com precise/universe Translation-en [3341 kB]
  Fetched 10.2 MB in 4min 2s (42.1 kB/s)
- Temp File /tmp/cleopatra-temp-script-10553509319.sh Removed
+ Temp File /tmp/ptconfigure-temp-script-10553509319.sh Removed
  W: Duplicate sources.list entry http://repos.zend.com/zend-server/6.1/deb/ server/non-free amd64 Packages (/var/lib/apt/lists/repos.zend.com_zend-server_6.1_deb_dists_server_non-free_binary-amd64_Packages)
  W: Duplicate sources.list entry http://repos.zend.com/zend-server/6.1/deb/ server/non-free amd64 Packages (/var/lib/apt/lists/repos.zend.com_zend-server_6.1_deb_dists_server_non-free_binary-amd64_Packages)
  W: Duplicate sources.list entry http://repos.zend.com/zend-server/6.1/deb/ server/non-free amd64 Packages (/var/lib/apt/lists/repos.zend.com_zend-server_6.1_deb_dists_server_non-free_binary-amd64_Packages)
@@ -321,21 +321,21 @@ Opciones
 .. cssclass:: table-bordered
 
 
- +--------------------------+---------------------------------------+--------------+-------------------------------------------+
- | Parámetros               | parámetros alternativos               | Necesario    | Comentario                                |
- +==========================+=======================================+==============+===========================================+
- |cleopatra cassandra       | Hay dos parámetros alternativos que   | Y(Yes)       | El sistema se inicia proceso de           |
- |Install? (Y/N)            | pueden ser utilizados en la línea     |              | instalación                               |
- |                          | de comandos. Cassandra , cassandra    |              |                                           |
- |                          | Por ejemplo: cleopatra cassandra      |              |                                           |
- |                          | install, cleopatra Cassandra install  |              |                                           |
- +--------------------------+---------------------------------------+--------------+-------------------------------------------+
- |cleopatra cassandra       | Hay dos parámetros alternativos que   | N(No)        | El sistema detiene proceso de instalación |
- |Install? (Y/N)            | pueden ser utilizados en la línea     |              |                                           |
- |                          | de comandos. Cassandra , cassandra    |              |                                           |
- |                          | Por ejemplo: cleopatra cassandra      |              |                                           |
- |                          | install, cleopatra Cassandra install| |              |                                           |
- +--------------------------+---------------------------------------+--------------+-------------------------------------------+
+ +--------------------------+-----------------------------------------+--------------+-------------------------------------------+
+ | Parámetros               | parámetros alternativos                 | Necesario    | Comentario                                |
+ +==========================+=========================================+==============+===========================================+
+ |ptconfigure cassandra     | Hay dos parámetros alternativos que     | Y(Yes)       | El sistema se inicia proceso de           |
+ |Install? (Y/N)            | pueden ser utilizados en la línea       |              | instalación                               |
+ |                          | de comandos. Cassandra , cassandra      |              |                                           |
+ |                          | Por ejemplo: ptconfigure cassandra      |              |                                           |
+ |                          | install, ptconfigure Cassandra install  |              |                                           |
+ +--------------------------+-----------------------------------------+--------------+-------------------------------------------+
+ |ptconfigure cassandra     | Hay dos parámetros alternativos que     | N(No)        | El sistema detiene proceso de instalación |
+ |Install? (Y/N)            | pueden ser utilizados en la línea       |              |                                           |
+ |                          | de comandos. Cassandra , cassandra      |              |                                           |
+ |                          | Por ejemplo: ptconfigure cassandra      |              |                                           |
+ |                          | install, ptconfigure Cassandra install| |              |                                           |
+ +--------------------------+-----------------------------------------+--------------+-------------------------------------------+
 
 Beneficios
 ------------

@@ -24,7 +24,7 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
-    <link rel="up" title="Cleopatra" href="scleopatra_main.html" />
+    <link rel="up" title="PTConfigure" href="sptconfigure_main.html" />
     <link rel="next" title="Cassandra" href="scassandra.html" />
     <link rel="prev" title="Behat" href="sbehat.html" /> 
   </head>
@@ -42,7 +42,7 @@
           <a href="sbehat.html" title="Behat"
              accesskey="P">previous</a> |</li>
         <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
-          <li><a href="scleopatra_main.html" accesskey="U">Cleopatra</a> &raquo;</li> 
+          <li><a href="sptconfigure_main.html" accesskey="U">PTConfigure</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -60,11 +60,11 @@
 <div class="section" id="ayuda-comando">
 <h2>Ayuda Comando<a class="headerlink" href="#ayuda-comando" title="Permalink to this headline">¶</a></h2>
 <p>El comando de ayuda guía a los usuarios en el manejo de este módulo, con el fin de manejar y realizar diversas funciones de una caja. En él se enumeran las salidas de los parámetros alternativos, y resalta la sintaxis para las diversas funciones de uso y modificación de una caja. La sintaxis de opción de ayuda en el marco del módulo boxify se muestra a continuación,</p>
-<div class="highlight-bash"><div class="highlight"><pre>cleopatra Boxify <span class="nb">help</span>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure Boxify <span class="nb">help</span>
 </pre></div>
 </div>
 <p>La sintaxis para declarar el comando de ayuda no es sensible a mayúsculas, que es una ventaja añadida. La siguiente captura de pantalla a visualizar sobre el comando de ayuda bajo boxify.</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# cleopatra Boxify <span class="nb">help</span>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure Boxify <span class="nb">help</span>
 ******************************
 
 
@@ -75,16 +75,16 @@
 
        - install-generic-autopilots
        Install the generic Boxify autopilot templates <span class="k">for</span> a Tiny or Medium <span class="o">(</span>Current Default<span class="o">)</span> <span class="nb">set </span>of Environments
-       example: cleopatra boxify install-generic-autopilots
-       example: cleopatra boxify install-generic-autopilots
+       example: ptconfigure boxify install-generic-autopilots
+       example: ptconfigure boxify install-generic-autopilots
                    --yes
-                   --guess <span class="c"># will set --destination-dir=*this dir +*build/config/cleopatra/boxify/autopilots/</span>
+                   --guess <span class="c"># will set --destination-dir=*this dir +*build/config/ptconfigure/boxify/autopilots/</span>
                    --template-group<span class="o">=</span>tiny
                    --destination-dir<span class="o">=</span>*path-to-destination*
 
        - box-add
        Installs a Box through a cloud provider
-       example: cleopatra boxify box-add --environment-name<span class="o">=</span><span class="s2">&quot;*environment*&quot;</span>
+       example: ptconfigure boxify box-add --environment-name<span class="o">=</span><span class="s2">&quot;*environment*&quot;</span>
            --server-prefix<span class="o">=</span><span class="s2">&quot;my-app&quot;</span>
            --provider<span class="o">=</span><span class="s2">&quot;DigitalOcean&quot;</span> // DigitalOcean, Rackspace, VSphere
            --image-id<span class="o">=</span><span class="s2">&quot;3101045&quot;</span> // <span class="nv">DO</span><span class="o">=</span><span class="m">3101045</span> , <span class="nv">RAX</span><span class="o">=</span>ffd597d6-2cc4-4b43-b8f4-b1006715b84e
@@ -96,18 +96,18 @@
 
        - box-remove
        Removes a Box from the papyrus
-       example: cleopatra boxify box-remove --environment-name<span class="o">=</span><span class="s2">&quot;staging&quot;</span> --environment-version<span class="o">=</span><span class="s2">&quot;5.0&quot;</span> --provider<span class="o">=</span><span class="s2">&quot;apt-get&quot;</span>
+       example: ptconfigure boxify box-remove --environment-name<span class="o">=</span><span class="s2">&quot;staging&quot;</span> --environment-version<span class="o">=</span><span class="s2">&quot;5.0&quot;</span> --provider<span class="o">=</span><span class="s2">&quot;apt-get&quot;</span>
 
        - box-destroy
        Removes a Box from both papyrus and the cloud provider
-       example: cleopatra boxify box-destroy --environment-name<span class="o">=</span><span class="s2">&quot;staging&quot;</span>
+       example: ptconfigure boxify box-destroy --environment-name<span class="o">=</span><span class="s2">&quot;staging&quot;</span>
            --destroy-all-boxes
            --destroy
 
        - list-papyrus
        List all servers in papyrus, or those of a particular environment
-       example: cleopatra boxify list-papyrus --yes
-       example: cleopatra boxify list-papyrus --yes --environment-name<span class="o">=</span><span class="s2">&quot;staging&quot;</span>
+       example: ptconfigure boxify list-papyrus --yes
+       example: ptconfigure boxify list-papyrus --yes --environment-name<span class="o">=</span><span class="s2">&quot;staging&quot;</span>
 
 
 ------------------------------
@@ -130,9 +130,9 @@ End Help
 <div class="section" id="instale-pilotos-automaticos-genericos">
 <h2>Instale pilotos automáticos genéricos<a class="headerlink" href="#instale-pilotos-automaticos-genericos" title="Permalink to this headline">¶</a></h2>
 <p>Esta función tiene por objeto la instalación de los pilotos automáticos aplicables a una pequeña o mediana conjunto de ambientes. Esto se puede implementar mediante la aplicación del comando como se indica a continuación,</p>
-<div class="highlight-bash"><div class="highlight"><pre>cleopatra boxify install-generic-autopilots
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure boxify install-generic-autopilots
             --yes
-            --guess <span class="c"># will set --destination-dir=*this dir +*build/config/cleopatra/boxify/autopilots/</span>
+            --guess <span class="c"># will set --destination-dir=*this dir +*build/config/ptconfigure/boxify/autopilots/</span>
             --template-group<span class="o">=</span>tiny
             --destination-dir<span class="o">=</span>*path-to-destination*
 </pre></div>
@@ -146,7 +146,7 @@ End Help
 <div class="section" id="cuadro-adicion">
 <h2>cuadro Adición<a class="headerlink" href="#cuadro-adicion" title="Permalink to this headline">¶</a></h2>
 <p>Esta función tiene por objeto la adición de una caja a través de un proveedor de la nube, simplemente usando el siguiente comando,</p>
-<div class="highlight-bash"><div class="highlight"><pre>example: cleopatra boxify box-add --environment-name<span class="o">=</span><span class="s2">&quot;*environment*&quot;</span>
+<div class="highlight-bash"><div class="highlight"><pre>example: ptconfigure boxify box-add --environment-name<span class="o">=</span><span class="s2">&quot;*environment*&quot;</span>
     --server-prefix<span class="o">=</span><span class="s2">&quot;my-app&quot;</span>
     --provider<span class="o">=</span><span class="s2">&quot;DigitalOcean&quot;</span> // DigitalOcean, Rackspace, VSphere
     --image-id<span class="o">=</span><span class="s2">&quot;3101045&quot;</span> // <span class="nv">DO</span><span class="o">=</span><span class="m">3101045</span> , <span class="nv">RAX</span><span class="o">=</span>ffd597d6-2cc4-4b43-b8f4-b1006715b84e
@@ -171,7 +171,7 @@ End Help
 <div class="section" id="cuadro-de-extraccion">
 <h2>cuadro de Extracción<a class="headerlink" href="#cuadro-de-extraccion" title="Permalink to this headline">¶</a></h2>
 <p>Esta función tiene como objetivo la eliminación de una caja del papiro. Esto se puede implementar mediante el comando a continuación,</p>
-<div class="highlight-bash"><div class="highlight"><pre>cleopatra boxify box-remove --environment-name<span class="o">=</span><span class="s2">&quot;staging&quot;</span> --environment-version<span class="o">=</span><span class="s2">&quot;5.0&quot;</span> --provider<span class="o">=</span><span class="s2">&quot;apt-get&quot;</span>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure boxify box-remove --environment-name<span class="o">=</span><span class="s2">&quot;staging&quot;</span> --environment-version<span class="o">=</span><span class="s2">&quot;5.0&quot;</span> --provider<span class="o">=</span><span class="s2">&quot;apt-get&quot;</span>
 </pre></div>
 </div>
 <p>El usuario tiene que especificar los siguientes campos como se muestra en el comando anterior,</p>
@@ -184,7 +184,7 @@ End Help
 <div class="section" id="la-destruccion-de-una-caja">
 <h2>La destrucción de una caja<a class="headerlink" href="#la-destruccion-de-una-caja" title="Permalink to this headline">¶</a></h2>
 <p>Esta función tiene como objetivo la eliminación de una caja del papiro. Esta función se puede implementar simplemente usando el siguiente comando,</p>
-<div class="highlight-bash"><div class="highlight"><pre>cleopatra boxify box-destroy --environment-name<span class="o">=</span><span class="s2">&quot;staging&quot;</span>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure boxify box-destroy --environment-name<span class="o">=</span><span class="s2">&quot;staging&quot;</span>
     --destroy-all-boxes
     --destroy
 </pre></div>
@@ -194,7 +194,7 @@ End Help
 <div class="section" id="lista">
 <h2>Lista<a class="headerlink" href="#lista" title="Permalink to this headline">¶</a></h2>
 <p>El principal objetivo de esta función es hacer una lista de todos los servidores de un papiro en particular o en un entorno. La sintaxis para la inclusión de todos los servidores se muestra a continuación,</p>
-<div class="highlight-bash"><div class="highlight"><pre>cleopatra boxify list-papyrus --yes --environment-name<span class="o">=</span><span class="s2">&quot;staging&quot;</span>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure boxify list-papyrus --yes --environment-name<span class="o">=</span><span class="s2">&quot;staging&quot;</span>
 </pre></div>
 </div>
 <p>El comando anterior mencionado enumerará fuera papiro de un entorno determinado.</p>
@@ -281,7 +281,7 @@ End Help
           <a href="sbehat.html" title="Behat"
              >previous</a> |</li>
         <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
-          <li><a href="scleopatra_main.html" >Cleopatra</a> &raquo;</li> 
+          <li><a href="sptconfigure_main.html" >PTConfigure</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">

@@ -14,13 +14,13 @@ Este comando ayuda explica acerca de la instalación de un módulo en particular
 
 .. code-block:: bash
 	
-	cleopatra chown help
+	ptconfigure chown help
 
 Después de dar el comando, el comando listará las opciones de ayuda. Las siguientes capturas de pantalla darán efecto visual para el uso de este módulo.
 
 .. code-block:: bash
 
-	Kevell@corp:/# cleopatra chown help
+	Kevell@corp:/# ptconfigure chown help
 	******************************
 
 	 This command handles file user ownership changing functions.
@@ -29,7 +29,7 @@ Después de dar el comando, el comando listará las opciones de ayuda. Las sigui
 
         - path
         Will change the user ownership of a path
-        example: cleopatra chown path --yes --guess --recursive --path=/a/file/path --owner=golden
+        example: ptconfigure chown path --yes --guess --recursive --path=/a/file/path --owner=golden
 
 	------------------------------
 	End Help
@@ -39,11 +39,11 @@ Después de dar el comando, el comando listará las opciones de ayuda. Las sigui
 camino
 ------
 
-Es un excelente proceso para este módulo bajo Cleopatra ligeramente mediante el comando indicado a continuación,
+Es un excelente proceso para este módulo bajo ptconfigure ligeramente mediante el comando indicado a continuación,
 
 .. code-block:: bash
 
-	cleopatra chown path –yes—guess—recursive—path=/Cleopatra—owner=Kevells
+	ptconfigure chown path –yes—guess—recursive—path=/ptconfigure—owner=Kevells
 
 Entonces podemos entrar en la entrada.
 
@@ -58,7 +58,7 @@ Esto se muestra visualmente por la siguiente captura de pantalla.
 
 .. code-block:: bash
 
-	kevell@corp:/# cleopatra chown path --yes --guess --recursive --path=/phj.php --owner=deepak
+	kevell@corp:/# ptconfigure chown path --yes --guess --recursive --path=/phj.php --owner=deepak
 
 	Enter ownership user:
 	deepak
@@ -97,6 +97,6 @@ opción
 Beneficios
 ----------
 
-* El módulo se puede cambiar el propietario en cualquier momento con Cleopatra.
+* El módulo se puede cambiar el propietario en cualquier momento con ptconfigure.
 * Mientras que hace proceso recursivo si cambia solo archivo la carpeta entera también se puede cambiar.
 * Podemos verificar el estado actual de su propietario.

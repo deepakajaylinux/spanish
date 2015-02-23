@@ -48,13 +48,13 @@ mismo.
 
 .. code-block:: bash
         
-	        cleopatra Chmod help
+	        ptconfigure Chmod help
 
 La representación gráfica de la orden anterior se enumeran a continuación,
 
 .. code-block:: bash
 
- kevell@corp:/# cleopatra Chmod help
+ kevell@corp:/# ptconfigure Chmod help
  ******************************
 
 
@@ -64,7 +64,7 @@ La representación gráfica de la orden anterior se enumeran a continuación,
 
         - path
         Will change the file permission mode of a path
-        example: cleopatra chmod path --yes --guess --recursive --path=/a/file/path --mode=0777
+        example: ptconfigure chmod path --yes --guess --recursive --path=/a/file/path --mode=0777
 
 
  ------------------------------
@@ -82,7 +82,7 @@ Cuando el usuario necesita cambiar el modo de archivo, el siguiente comando dado
 
 .. code-block:: bash
         
-	        cleopatra chmod path –yes –guess –recursive –path=/”File path” –mode=0777
+	        ptconfigure chmod path –yes –guess –recursive –path=/”File path” –mode=0777
 
 Parámetro Alternativa
 --------------------------------
@@ -91,7 +91,7 @@ Hay dos parámetros alternativos que pueden ser utilizados en la línea de coman
 
 chmod, Chmod
 
-Por ejemplo: cleopatra Chmode path/ cleopatra chmod path
+Por ejemplo: ptconfigure Chmode path/ ptconfigure chmod path
 
 
 Beneficios

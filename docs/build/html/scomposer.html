@@ -24,8 +24,9 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
-    <link rel="up" title="Cleopatra" href="scleopatra_main.html" />
-    <link rel="prev" title="Cleopatra" href="scleopatra.html" /> 
+    <link rel="up" title="PTConfigure" href="sptconfigure_main.html" />
+    <link rel="next" title="Cleofy" href="scleofy.html" />
+    <link rel="prev" title="Citadel" href="scitadel.html" /> 
   </head>
   <body>
     <div class="related">
@@ -35,10 +36,13 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="scleopatra.html" title="Cleopatra"
+          <a href="scleofy.html" title="Cleofy"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="scitadel.html" title="Citadel"
              accesskey="P">previous</a> |</li>
         <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
-          <li><a href="scleopatra_main.html" accesskey="U">Cleopatra</a> &raquo;</li> 
+          <li><a href="sptconfigure_main.html" accesskey="U">PTConfigure</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -57,10 +61,10 @@
 <div class="section" id="ayuda-comando">
 <h2>Ayuda Comando<a class="headerlink" href="#ayuda-comando" title="Permalink to this headline">¶</a></h2>
 <p>Este comando ayuda a determinar el uso del módulo de compositor. El usuario se llega a saber acerca de las diferentes formas / formato para ejecutar este módulo. Este comando guía al usuario final con respecto a los parámetros alternativos y comandos para la instalación. A continuación dado son el mando y la pantalla del mismo.</p>
-<div class="highlight-bash"><div class="highlight"><pre>cleopatra composer <span class="nb">help</span>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure composer <span class="nb">help</span>
 </pre></div>
 </div>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# cleopatra composer <span class="nb">help</span>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure composer <span class="nb">help</span>
 ******************************
 
 
@@ -70,7 +74,7 @@
 
        - install
        Installs the latest version of composer
-       example: cleopatra composer install
+       example: ptconfigure composer install
 
 ------------------------------
 End Help
@@ -81,7 +85,7 @@ End Help
 <div class="section" id="instalacion">
 <h2>instalación<a class="headerlink" href="#instalacion" title="Permalink to this headline">¶</a></h2>
 <p>Cuando el usuario tiene que instalar el módulo compositor en la máquina, el siguiente comando dado se ejecutará el proceso de instalación.</p>
-<div class="highlight-bash"><div class="highlight"><pre>cleopatra composer install
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure composer install
 </pre></div>
 </div>
 <p>Durante la instalación, el sistema pide el nombre del directorio, si usted quiere configurar su PATH, puede definir su camino. Defina su camino tiene que ser seguido por el símbolo &#8220;/&#8221;. Pulse Intro para utilizar la ruta por defecto.</p>
@@ -103,14 +107,14 @@ End Help
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>cleopatra composer
+<tr class="row-even"><td>ptconfigure composer
 Install? (Y/N)</td>
 <td>Composer, composer</td>
 <td>Y</td>
 <td>El sistema se inicia proceso de
 instalación</td>
 </tr>
-<tr class="row-odd"><td>cleopatra composer
+<tr class="row-odd"><td>ptconfigure composer
 Install? (Y/N)</td>
 <td>Composer, composer</td>
 <td>N</td>
@@ -120,7 +124,7 @@ instalación|</td>
 </tbody>
 </table>
 <p>La captura de pantalla para el comando de instalación se enumeran a continuación,</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/<span class="nv">$ </span>cleopatra composer install
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/<span class="nv">$ </span>ptconfigure composer install
 Install Composer - Update to latest version ? <span class="o">(</span>Y/N<span class="o">)</span>
 y
 *******************************
@@ -136,17 +140,17 @@ remote: Counting objects: 6, <span class="k">done</span>.
 remote: Total <span class="m">6</span> <span class="o">(</span>delta 0<span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta 0<span class="o">)</span>
 Unpacking objects: 100% <span class="o">(</span>6/6<span class="o">)</span>, <span class="k">done</span>.
 Checking connectivity... <span class="k">done</span>.
-PHP Warning:  mkdir<span class="o">()</span>: Permission denied in /opt/cleopatra/cleopatra/src/Modules/CleopatraRequired/Model/BasePHPApp.php on line 192
+PHP Warning:  mkdir<span class="o">()</span>: Permission denied in /opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/BasePHPApp.php on line 192
 cp: cannot create directory ‘/opt/composer’: Permission denied
 Program Data folder populated
 Program Executor Deleted <span class="k">if</span> existed
-PHP Warning:  scandir<span class="o">(</span>/opt/composer<span class="o">)</span>: failed to open dir: No such file or directory in /opt/cleopatra/cleopatra/src/Modules/CleopatraRequired/Model/BasePHPApp.php on line 172
-PHP Warning:  scandir<span class="o">()</span>: <span class="o">(</span>errno 2<span class="o">)</span>: No such file or directory in /opt/cleopatra/cleopatra/src/Modules/CleopatraRequired/Model/BasePHPApp.php on line 172
-PHP Warning:  Invalid argument supplied <span class="k">for</span> foreach<span class="o">()</span> in /opt/cleopatra/cleopatra/src/Modules/CleopatraRequired/Model/BasePHPApp.php on line 174
-PHP Warning:  scandir<span class="o">(</span>/opt/composer<span class="o">)</span>: failed to open dir: No such file or directory in /opt/cleopatra/cleopatra/src/Modules/CleopatraRequired/Model/BasePHPApp.php on line 172
-PHP Warning:  scandir<span class="o">()</span>: <span class="o">(</span>errno 2<span class="o">)</span>: No such file or directory in /opt/cleopatra/cleopatra/src/Modules/CleopatraRequired/Model/BasePHPApp.php on line 172
-PHP Warning:  Invalid argument supplied <span class="k">for</span> foreach<span class="o">()</span> in /opt/cleopatra/cleopatra/src/Modules/CleopatraRequired/Model/BasePHPApp.php on line 174
-PHP Warning:  file_put_contents<span class="o">(</span>/usr/bin/composer<span class="o">)</span>: failed to open stream: Permission denied in /opt/cleopatra/cleopatra/src/Modules/CleopatraRequired/Model/BasePHPApp.php on line 214
+PHP Warning:  scandir<span class="o">(</span>/opt/composer<span class="o">)</span>: failed to open dir: No such file or directory in /opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/BasePHPApp.php on line 172
+PHP Warning:  scandir<span class="o">()</span>: <span class="o">(</span>errno 2<span class="o">)</span>: No such file or directory in /opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/BasePHPApp.php on line 172
+PHP Warning:  Invalid argument supplied <span class="k">for</span> foreach<span class="o">()</span> in /opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/BasePHPApp.php on line 174
+PHP Warning:  scandir<span class="o">(</span>/opt/composer<span class="o">)</span>: failed to open dir: No such file or directory in /opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/BasePHPApp.php on line 172
+PHP Warning:  scandir<span class="o">()</span>: <span class="o">(</span>errno 2<span class="o">)</span>: No such file or directory in /opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/BasePHPApp.php on line 172
+PHP Warning:  Invalid argument supplied <span class="k">for</span> foreach<span class="o">()</span> in /opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/BasePHPApp.php on line 174
+PHP Warning:  file_put_contents<span class="o">(</span>/usr/bin/composer<span class="o">)</span>: failed to open stream: Permission denied in /opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/BasePHPApp.php on line 214
 chmod: cannot access ‘/opt/composer’: No such file or directory
 chmod: cannot access ‘/usr/bin/composer’: No such file or directory
 ... All <span class="k">done</span>!
@@ -191,8 +195,11 @@ Installer Finished
 </ul>
 
   <h4>Previous topic</h4>
-  <p class="topless"><a href="scleopatra.html"
-                        title="previous chapter">Cleopatra</a></p>
+  <p class="topless"><a href="scitadel.html"
+                        title="previous chapter">Citadel</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="scleofy.html"
+                        title="next chapter">Cleofy</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
     <li><a href="_sources/scomposer.txt"
@@ -222,10 +229,13 @@ Installer Finished
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="scleopatra.html" title="Cleopatra"
+          <a href="scleofy.html" title="Cleofy"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="scitadel.html" title="Citadel"
              >previous</a> |</li>
         <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
-          <li><a href="scleopatra_main.html" >Cleopatra</a> &raquo;</li> 
+          <li><a href="sptconfigure_main.html" >PTConfigure</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">

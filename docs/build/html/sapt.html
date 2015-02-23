@@ -24,7 +24,7 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
-    <link rel="up" title="Cleopatra" href="scleopatra_main.html" />
+    <link rel="up" title="PTConfigure" href="sptconfigure_main.html" />
     <link rel="next" title="Aptana" href="saptana.html" />
     <link rel="prev" title="ApacheVHostEditor" href="sapachevhosteditor.html" /> 
   </head>
@@ -42,7 +42,7 @@
           <a href="sapachevhosteditor.html" title="ApacheVHostEditor"
              accesskey="P">previous</a> |</li>
         <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
-          <li><a href="scleopatra_main.html" accesskey="U">Cleopatra</a> &raquo;</li> 
+          <li><a href="sptconfigure_main.html" accesskey="U">PTConfigure</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -62,11 +62,11 @@
 <h2>Ayuda Comando<a class="headerlink" href="#ayuda-comando" title="Permalink to this headline">¶</a></h2>
 <p>El comando de ayuda es un breve manual de usuario que facilita a los usuarios obtener conscientes en cuanto a la utilización de metodologías de manejo de este módulo para realizar diferentes funciones. También se enumeran las salidas de parámetros alternativos que se pueden utilizar en las declaraciones. Se destaca el ejemplo de sintaxis para el uso y acceso a diferentes funciones en virtud de Apt.</p>
 <p>El comando utilizado para la declaración de opción de ayuda en virtud de Apt se muestra a continuación,</p>
-<div class="highlight-bash"><div class="highlight"><pre>cleopatra Apt <span class="nb">help</span>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure Apt <span class="nb">help</span>
 </pre></div>
 </div>
 <p>La sintaxis para declarar el comando de ayuda no es sensible a mayúsculas, que es una ventaja añadida. La siguiente captura de pantalla a visualizar sobre el comando de ayuda bajo apt.</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# cleopatra apt <span class="nb">help</span>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure apt <span class="nb">help</span>
 ******************************
 
 
@@ -76,31 +76,31 @@
 
        - create
        Create a new system apt, overwriting <span class="k">if</span> it exists
-       example: cleopatra apt create --aptname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+       example: ptconfigure apt create --aptname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
 
        - remove
        Remove a system apt
-       example: cleopatra apt remove --aptname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+       example: ptconfigure apt remove --aptname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
 
        - <span class="nb">set</span>-password
        Set the password of a system apt
-       example: cleopatra apt <span class="nb">set</span>-password --aptname<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --new-password<span class="o">=</span><span class="s2">&quot;somepassword&quot;</span>
+       example: ptconfigure apt <span class="nb">set</span>-password --aptname<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --new-password<span class="o">=</span><span class="s2">&quot;somepassword&quot;</span>
 
        - exists
        Check the existence of a apt
-       example: cleopatra apt exists --aptname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+       example: ptconfigure apt exists --aptname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
 
        - show-groups
        Show groups to which a apt belongs
-       example: cleopatra apt show-groups --aptname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+       example: ptconfigure apt show-groups --aptname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
 
        - add-to-group
        Add apt to a group
-       example: cleopatra apt add-to-group --aptname<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --groupname<span class="o">=</span><span class="s2">&quot;somegroupname&quot;</span>
+       example: ptconfigure apt add-to-group --aptname<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --groupname<span class="o">=</span><span class="s2">&quot;somegroupname&quot;</span>
 
        - remove-from-group
        Remove apt from a group
-       example: cleopatra apt remove-from-group --aptname<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --groupname<span class="o">=</span><span class="s2">&quot;somegroupname&quot;</span>
+       example: ptconfigure apt remove-from-group --aptname<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --groupname<span class="o">=</span><span class="s2">&quot;somegroupname&quot;</span>
 
 ------------------------------
 End Help
@@ -125,7 +125,7 @@ End Help
 <div class="section" id="crear">
 <h2>CREAR<a class="headerlink" href="#crear" title="Permalink to this headline">¶</a></h2>
 <p>Esta función tiene como objetivo la creación de un nuevo sistema de apt, y al igual que sobrescribe en caso de que ya existe. Esta función de apt usando este módulo se puede lograr mediante la siguiente sintaxis,</p>
-<div class="highlight-bash"><div class="highlight"><pre>cleopatra apt create --aptname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure apt create --aptname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
 </pre></div>
 </div>
 <p>En el lugar de aptname el usuario puede especificar el nombre de la APT que se va a crear. Después de introducir el comando como se especifica anteriormente, el nuevo sistema apt se creará con el nombre especificado.</p>
@@ -133,7 +133,7 @@ End Help
 <div class="section" id="retire">
 <h2>RETIRE<a class="headerlink" href="#retire" title="Permalink to this headline">¶</a></h2>
 <p>Esta función tiene como objetivo la eliminación de un apt existente. Esta función de apt usando este módulo se puede lograr mediante la siguiente sintaxis,</p>
-<div class="highlight-bash"><div class="highlight"><pre>cleopatra apt remove --aptname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure apt remove --aptname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
 </pre></div>
 </div>
 <p>En el lugar de aptname el usuario puede especificar el nombre de los apartamentos que se va a eliminar. Después de introducir el comando como se especifica anteriormente, el apartamento especificado se eliminarán.</p>
@@ -141,7 +141,7 @@ End Help
 <div class="section" id="contrasena-set">
 <h2>CONTRASEÑA SET<a class="headerlink" href="#contrasena-set" title="Permalink to this headline">¶</a></h2>
 <p>Esta función facilita el establecimiento de una nueva contraseña a un sistema apto según las necesidades. Esto se puede hacer mediante la aplicación del comando como se indica a continuación,</p>
-<div class="highlight-bash"><div class="highlight"><pre>cleopatra apt <span class="nb">set</span>-password --aptname<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --new-password<span class="o">=</span><span class="s2">&quot;somepassword&quot;</span>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure apt <span class="nb">set</span>-password --aptname<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --new-password<span class="o">=</span><span class="s2">&quot;somepassword&quot;</span>
 </pre></div>
 </div>
 <p>Para llevar a cabo estas funciones, el usuario tiene que especificar los dos campos,</p>
@@ -154,7 +154,7 @@ End Help
 <div class="section" id="existe">
 <h2>EXISTE<a class="headerlink" href="#existe" title="Permalink to this headline">¶</a></h2>
 <p>Esta función tiene por objeto la comprobación de la existencia de un apt. Esto se puede hacer simplemente, mediante el comando de abajo,</p>
-<div class="highlight-bash"><div class="highlight"><pre>cleopatra apt exists --aptname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure apt exists --aptname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
 </pre></div>
 </div>
 <p>Después de aplicar el comando como el anterior, la existencia de un apt mencionados se garantizará con los resultados.</p>
@@ -162,7 +162,7 @@ End Help
 <div class="section" id="grupos-ver">
 <h2>GRUPOS VER<a class="headerlink" href="#grupos-ver" title="Permalink to this headline">¶</a></h2>
 <p>Esta función ayuda a los usuarios a conocer a qué grupo pertenece a la APT. Esto se puede conseguir simplemente utilizando el siguiente comando,</p>
-<div class="highlight-bash"><div class="highlight"><pre>cleopatra apt show-groups --aptname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure apt show-groups --aptname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
 </pre></div>
 </div>
 <p>El usuario tiene que especificar el nombre de los apartamentos en el campo de aptname, con el fin de conocer los detalles de su grupo.</p>
@@ -170,7 +170,7 @@ End Help
 <div class="section" id="anadir-to-group">
 <h2>AÑADIR _TO_GROUP<a class="headerlink" href="#anadir-to-group" title="Permalink to this headline">¶</a></h2>
 <p>El principal objetivo de esta función es añadir la necesaria apto para el grupo requerido por la simple aplicación de la orden como se indica a continuación,</p>
-<div class="highlight-bash"><div class="highlight"><pre>cleopatra apt add-to-group --aptname<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --groupname<span class="o">=</span><span class="s2">&quot;somegroupname&quot;</span>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure apt add-to-group --aptname<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --groupname<span class="o">=</span><span class="s2">&quot;somegroupname&quot;</span>
 </pre></div>
 </div>
 <p>Para implementar esta función, el usuario tiene que especificar los dos campos siguientes de acuerdo a sus necesidades en el formato de la mencionada orden,</p>
@@ -182,7 +182,7 @@ End Help
 <div class="section" id="remove-from-group">
 <h2>REMOVE_FROM_GROUP<a class="headerlink" href="#remove-from-group" title="Permalink to this headline">¶</a></h2>
 <p>El objetivo principal de esta función es eliminar el apartamento de un grupo simplemente aplicando el comando como se indica a continuación,</p>
-<div class="highlight-bash"><div class="highlight"><pre>cleopatra apt remove-from-group --aptname<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --groupname<span class="o">=</span><span class="s2">&quot;somegroupname&quot;</span>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure apt remove-from-group --aptname<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --groupname<span class="o">=</span><span class="s2">&quot;somegroupname&quot;</span>
 </pre></div>
 </div>
 <p>Para implementar esta función, el usuario tiene que especificar los dos campos siguientes de acuerdo a sus necesidades en el formato de la mencionada orden,</p>
@@ -276,7 +276,7 @@ End Help
           <a href="sapachevhosteditor.html" title="ApacheVHostEditor"
              >previous</a> |</li>
         <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
-          <li><a href="scleopatra_main.html" >Cleopatra</a> &raquo;</li> 
+          <li><a href="sptconfigure_main.html" >PTConfigure</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">

@@ -24,7 +24,8 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
-    <link rel="up" title="Cleopatra" href="scleopatra_main.html" />
+    <link rel="up" title="PTConfigure" href="sptconfigure_main.html" />
+    <link rel="next" title="Composer" href="scomposer.html" />
     <link rel="prev" title="ChromeDriver" href="schromedriver.html" /> 
   </head>
   <body>
@@ -35,10 +36,13 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
+          <a href="scomposer.html" title="Composer"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
           <a href="schromedriver.html" title="ChromeDriver"
              accesskey="P">previous</a> |</li>
         <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
-          <li><a href="scleopatra_main.html" accesskey="U">Cleopatra</a> &raquo;</li> 
+          <li><a href="sptconfigure_main.html" accesskey="U">PTConfigure</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -57,11 +61,11 @@
 <div class="section" id="ayuda-comando">
 <h2>Ayuda Comando<a class="headerlink" href="#ayuda-comando" title="Permalink to this headline">¶</a></h2>
 <p>Este comando ayuda a determinar el uso del módulo de Ciudadela. El usuario se llega a saber acerca de las diferentes formas / formato para ejecutar este módulo. El parámetro alternativa que se utilizan en la declaración está claramente definido en la opción de ayuda. Este comando guía al usuario final saber el comando utilizado para la instalación. A continuación dado son el comando.</p>
-<div class="highlight-bash"><div class="highlight"><pre>cleopatra  Citadel <span class="nb">help</span>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure  Citadel <span class="nb">help</span>
 </pre></div>
 </div>
 <p>La representación gráfica de la pantalla aparece a continuación,</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# cleopatra Citadel <span class="nb">help</span>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure Citadel <span class="nb">help</span>
 ******************************
 
 
@@ -71,11 +75,11 @@
 
        - install
        Installs Citadel Server
-       example: cleopatra citadel install
+       example: ptconfigure citadel install
 
        - configure
        Configure E-Mail with Citadel Server
-       example: cleopatra citadel configure
+       example: ptconfigure citadel configure
 
 ------------------------------
 End Help
@@ -86,21 +90,21 @@ End Help
 <div class="section" id="instalacion">
 <h2>instalación<a class="headerlink" href="#instalacion" title="Permalink to this headline">¶</a></h2>
 <p>Cuando el usuario tiene que instalar el servidor Citadel en la máquina, puede introducir los siguientes comandos para instalar la ciudadela-suite. El sistema ejecutará el proceso de instalación. A continuación dado son el mando y la pantalla del mismo.</p>
-<div class="highlight-bash"><div class="highlight"><pre>cleopatra Citadel  install
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure Citadel  install
 </pre></div>
 </div>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# cleopatra Citadel install
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure Citadel install
 Install Citadel Server? (Y/N)
 Y
 *******************************
 *        Pharaoh Tools        *
 *         Citadel Server!     *
 *******************************
-Creating /tmp/cleopatra-temp-script-11993825383.sh
-chmod 755 /tmp/cleopatra-temp-script-11993825383.sh 2&gt;/dev/null
-Changing /tmp/cleopatra-temp-script-11993825383.sh Permissions
-Executing /tmp/cleopatra-temp-script-11993825383.sh
-Temp File /tmp/cleopatra-temp-script-11993825383.sh Removed
+Creating /tmp/ptconfigure-temp-script-11993825383.sh
+chmod 755 /tmp/ptconfigure-temp-script-11993825383.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-11993825383.sh Permissions
+Executing /tmp/ptconfigure-temp-script-11993825383.sh
+Temp File /tmp/ptconfigure-temp-script-11993825383.sh Removed
 Reading package lists...
 Building dependency tree...
 Reading state information...
@@ -121,11 +125,11 @@ Setting up debconf-utils (1.5.51ubuntu2) ...
 [Pharaoh Logging] Stopping apache2 service
 * Stopping web server apache2
 *
-Creating /tmp/cleopatra-temp-script-74031405363.sh
-chmod 755 /tmp/cleopatra-temp-script-74031405363.sh 2&gt;/dev/null
-Changing /tmp/cleopatra-temp-script-74031405363.sh Permissions
-Executing /tmp/cleopatra-temp-script-74031405363.sh
-Temp File /tmp/cleopatra-temp-script-74031405363.sh Removed
+Creating /tmp/ptconfigure-temp-script-74031405363.sh
+chmod 755 /tmp/ptconfigure-temp-script-74031405363.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-74031405363.sh Permissions
+Executing /tmp/ptconfigure-temp-script-74031405363.sh
+Temp File /tmp/ptconfigure-temp-script-74031405363.sh Removed
 apache2_invoke: Enable configuration javascript-common
 invoke-rc.d: initscript apache2, action &quot;reload&quot; failed.
 Reading package lists...
@@ -263,25 +267,25 @@ Installer Finished
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>cleopatra Citadel
+<tr class="row-even"><td>ptconfigure Citadel
 Install? (Y/N)</td>
 <td>Cualquiera de los tres parámetros
 alternativa se puede utilizar en el
 comando Citadel, citadel-server,
 citadel Por ejemplo:
-cleopatra citadel-server Install</td>
+ptconfigure citadel-server Install</td>
 <td>Y(Yes)</td>
 <td>Una vez que el usuario proporciona esta
 opción, sistema comienza proceso
 de instalación</td>
 </tr>
-<tr class="row-odd"><td>cleopatra Citadel
+<tr class="row-odd"><td>ptconfigure Citadel
 Install? (Y/N)</td>
 <td>Cualquiera de los tres parámetros
 alternativa se puede utilizar en el
 comando Citadel, citadel-server,
 citadel Por ejemplo:
-cleopatra citadel-server Install|</td>
+ptconfigure citadel-server Install|</td>
 <td>N(No)</td>
 <td>Una vez que el usuario proporciona esta
 opción, Sistema detiene proceso
@@ -293,7 +297,7 @@ de instalación</td>
 <div class="section" id="configuracion">
 <h2>configuración<a class="headerlink" href="#configuracion" title="Permalink to this headline">¶</a></h2>
 <p>Este comando ayuda a la hora de configurar el servidor Citadel. Una vez que se ejecute el comando a continuación se indica el sistema le proporciona el valor predeterminado para cada sección, si hay algún cambio que hacer, el usuario puede proporcionar los datos. El comando que se utiliza para la configuración se muestra a continuación.</p>
-<div class="highlight-bash"><div class="highlight"><pre>cleopatra Citadel configure
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure Citadel configure
 </pre></div>
 </div>
 </div>
@@ -329,6 +333,9 @@ de instalación</td>
   <h4>Previous topic</h4>
   <p class="topless"><a href="schromedriver.html"
                         title="previous chapter">ChromeDriver</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="scomposer.html"
+                        title="next chapter">Composer</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
     <li><a href="_sources/scitadel.txt"
@@ -358,10 +365,13 @@ de instalación</td>
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
+          <a href="scomposer.html" title="Composer"
+             >next</a> |</li>
+        <li class="right" >
           <a href="schromedriver.html" title="ChromeDriver"
              >previous</a> |</li>
         <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
-          <li><a href="scleopatra_main.html" >Cleopatra</a> &raquo;</li> 
+          <li><a href="sptconfigure_main.html" >PTConfigure</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">

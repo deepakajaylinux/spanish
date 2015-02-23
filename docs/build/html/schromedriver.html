@@ -24,7 +24,8 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
-    <link rel="up" title="Cleopatra" href="scleopatra_main.html" />
+    <link rel="up" title="PTConfigure" href="sptconfigure_main.html" />
+    <link rel="next" title="Citadel" href="scitadel.html" />
     <link rel="prev" title="Chrome" href="schrome.html" /> 
   </head>
   <body>
@@ -35,10 +36,13 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
+          <a href="scitadel.html" title="Citadel"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
           <a href="schrome.html" title="Chrome"
              accesskey="P">previous</a> |</li>
         <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
-          <li><a href="scleopatra_main.html" accesskey="U">Cleopatra</a> &raquo;</li> 
+          <li><a href="sptconfigure_main.html" accesskey="U">PTConfigure</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -56,11 +60,11 @@
 <div class="section" id="ayuda-comando">
 <h2>Ayuda Comando<a class="headerlink" href="#ayuda-comando" title="Permalink to this headline">¶</a></h2>
 <p>El comando de ayuda conduce a los usuarios en cuanto a la finalidad y al igual que sobre las opciones que se incluyen en el módulo del controlador Chrome. El comando help enumera los parámetros alternativos de módulo controlador Chrome. También describe la sintaxis para instalar el módulo controlador Chrome. El comando de ayuda para el módulo controlador Chrome se muestra a continuación.</p>
-<div class="highlight-bash"><div class="highlight"><pre>cleopatra ChromeDriver <span class="nb">help</span>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure ChromeDriver <span class="nb">help</span>
 </pre></div>
 </div>
 <p>La sintaxis para declarar el comando de ayuda no es sensible a mayúsculas, que es una ventaja añadida. La siguiente captura de pantalla a visualizar sobre el comando de ayuda en virtud de conductor Chrome.</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# cleopatra ChromeDriver help
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure ChromeDriver helpda
 
 ******************************
 
@@ -75,7 +79,7 @@
        - install
        Installs ChromeDriver. Note, you&#39;ll also need Java installed
        as it is a prerequisite for ChromeDriver
-       example: cleopatra chromedriver install
+       example: ptconfigure chromedriver install
 
 ------------------------------
 End Help
@@ -86,7 +90,7 @@ End Help
 <div class="section" id="instalacion">
 <h2>instalación<a class="headerlink" href="#instalacion" title="Permalink to this headline">¶</a></h2>
 <p>Instalación del controlador de cromo a su máquina, se puede hacer simplemente usando el comando siguiente como se muestra:</p>
-<div class="highlight-bash"><div class="highlight"><pre>cleopatra chromedriver install
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure chromedriver install
 </pre></div>
 </div>
 <p>Después de introducir el comando anterior, las siguientes operaciones se produce como se muestra en el formato tabular.</p>
@@ -148,7 +152,7 @@ instalación se puede introducir como N.</td>
 </div>
 <p>El usuario tiene que especificar los números del 0 al 11 en función de sus requisitos de la versión.</p>
 <p>Después de que el usuario especifica la versión, el proceso de instalación se inicia y se completó como se muestra gráficamente en la siguiente captura de pantalla.</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# cleopatra chromedriver install
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure chromedriver install
 
 Install ChromeDriver Server? <span class="o">(</span>Y/N<span class="o">)</span>
 Y
@@ -170,14 +174,14 @@ Enter Chrome Driver Version
 <span class="o">(</span>10<span class="o">)</span> 2.8
 <span class="o">(</span>11<span class="o">)</span> 2.9
 11
-PHP Notice:  Undefined index: version in /opt/cleopatra/cleopatra/src/Modules/ChromeDriver/Model/ChromeDriverAllLinux.php on line 42
+PHP Notice:  Undefined index: version in /opt/ptconfigure/ptconfigure/src/Modules/ChromeDriver/Model/ChromeDriverAllLinux.php on line 42
 <span class="o">[</span>Pharaoh Logging<span class="o">]</span> Ensure module install is not checking versions
 <span class="o">[</span>Pharaoh Logging<span class="o">]</span> Module Java reports itself as Installed
 <span class="o">[</span>Pharaoh Logging<span class="o">]</span> Not installing as already installed
-Creating /tmp/cleopatra-temp-script-26804823734.sh
-chmod <span class="m">755</span> /tmp/cleopatra-temp-script-26804823734.sh 2&gt;/dev/null
-Changing /tmp/cleopatra-temp-script-26804823734.sh Permissions
-Executing /tmp/cleopatra-temp-script-26804823734.sh
+Creating /tmp/ptconfigure-temp-script-26804823734.sh
+chmod <span class="m">755</span> /tmp/ptconfigure-temp-script-26804823734.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-26804823734.sh Permissions
+Executing /tmp/ptconfigure-temp-script-26804823734.sh
 --2015-02-02 21:35:49--  http://chromedriver.storage.googleapis.com//chromedriver_linux64.zip
 Resolving chromedriver.storage.googleapis.com <span class="o">(</span>chromedriver.storage.googleapis.com<span class="o">)</span>... 74.125.236.44, 74.125.236.43, 74.125.236.42, ...
 Connecting to chromedriver.storage.googleapis.com <span class="o">(</span>chromedriver.storage.googleapis.com<span class="o">)</span><span class="p">|</span>74.125.236.44<span class="p">|</span>:80... connected.
@@ -186,7 +190,7 @@ HTTP request sent, awaiting response... <span class="m">404</span> Not Found
 
 mv: cannot stat <span class="s1">&#39;/tmp/chromedriver/*&#39;</span>: No such file or directory
 unzip:  cannot find or open chromedriver_linux64.zip, chromedriver_linux64.zip.zip or chromedriver_linux64.zip.ZIP.
-Temp File /tmp/cleopatra-temp-script-26804823734.sh Removed
+Temp File /tmp/ptconfigure-temp-script-26804823734.sh Removed
 ... All <span class="k">done</span>!
 *******************************
 Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
@@ -233,6 +237,9 @@ que en comparación con otros.</li>
   <h4>Previous topic</h4>
   <p class="topless"><a href="schrome.html"
                         title="previous chapter">Chrome</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="scitadel.html"
+                        title="next chapter">Citadel</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
     <li><a href="_sources/schromedriver.txt"
@@ -262,10 +269,13 @@ que en comparación con otros.</li>
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
+          <a href="scitadel.html" title="Citadel"
+             >next</a> |</li>
+        <li class="right" >
           <a href="schrome.html" title="Chrome"
              >previous</a> |</li>
         <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
-          <li><a href="scleopatra_main.html" >Cleopatra</a> &raquo;</li> 
+          <li><a href="sptconfigure_main.html" >PTConfigure</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">

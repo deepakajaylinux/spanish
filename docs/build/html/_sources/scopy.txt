@@ -18,13 +18,13 @@ Este comando ayuda a determinar el uso del módulo de copia. El usuario se llega
 
 .. code-block:: bash
         
-	        cleopatra copy help
+	        ptconfigure copy help
 
 La representación gráfica del comando de copia de pantalla aparece a continuación,
 
 .. code-block:: bash
 
- kevell@corp:/# cleopatra copy help
+ kevell@corp:/# ptconfigure copy help
  ******************************
 
 
@@ -34,8 +34,8 @@ La representación gráfica del comando de copia de pantalla aparece a continuac
 
         - put
         Will ask you for details for servers, then copy a file or directory from local to remote
-        example: cleopatra copy put
-        example: cleopatra copy put --yes --source="/tmp/file" --target="/home/user/file"
+        example: ptconfigure copy put
+        example: ptconfigure copy put --yes --source="/tmp/file" --target="/home/user/file"
 
  ------------------------------
  End Help
@@ -48,14 +48,14 @@ Cuando el usuario necesita para copiar un archivo en nuestra fuente a otro desti
 
 .. code-block:: bash
         
-	        cleopatra copy put
+	        ptconfigure copy put
 
 El sistema pide la ruta del archivo de origen y la ruta del archivo de destino.
 
 .. code-block:: bash
 
 
- kevell@corp:/# cleopatra copy put
+ kevell@corp:/# ptconfigure copy put
  Copy files? (Y/N) 
  Y
  Enter source file path
@@ -75,7 +75,7 @@ Hay otra opción, en la que se puede dar la ruta de origen y de destino en la l�
 
 .. code-block:: bash
 
- kevell@corp:/# cleopatra copy put --yes --source="/kevell.html" --target="/opt"
+ kevell@corp:/# ptconfigure copy put --yes --source="/kevell.html" --target="/opt"
  [Pharaoh Logging] [Copy] Executing cp -r /kevell.html /opt
  ******************************
 
@@ -92,7 +92,7 @@ Hay dos parámetros alternativa que se puede utilizar en la línea de commandos.
 
 Copy , copy.
 
-Por ejemplo: cleopatra copy put/ cleopatra Copy help
+Por ejemplo: ptconfigure copy put/ ptconfigure Copy help
 
 
 Beneficios

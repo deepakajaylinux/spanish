@@ -14,13 +14,13 @@ El comando de ayuda conduce a los usuarios en cuanto a la finalidad y al igual q
 
 .. code-block:: bash
 
-		cleopatra ChromeDriver help
+		ptconfigure ChromeDriver help
 
 La sintaxis para declarar el comando de ayuda no es sensible a mayúsculas, que es una ventaja añadida. La siguiente captura de pantalla a visualizar sobre el comando de ayuda en virtud de conductor Chrome.
 
 .. code-block:: bash
 
- kevell@corp:/# cleopatra ChromeDriver help
+ kevell@corp:/# ptconfigure ChromeDriver helpda
 
  ******************************
 
@@ -35,7 +35,7 @@ La sintaxis para declarar el comando de ayuda no es sensible a mayúsculas, que 
         - install
         Installs ChromeDriver. Note, you'll also need Java installed
         as it is a prerequisite for ChromeDriver
-        example: cleopatra chromedriver install
+        example: ptconfigure chromedriver install
 
  ------------------------------
  End Help
@@ -48,7 +48,7 @@ Instalación del controlador de cromo a su máquina, se puede hacer simplemente 
 
 .. code-block:: bash
 
-		cleopatra chromedriver install
+		ptconfigure chromedriver install
 
 Después de introducir el comando anterior, las siguientes operaciones se produce como se muestra en el formato tabular.
 
@@ -98,7 +98,7 @@ Después de que el usuario especifica la versión, el proceso de instalación se
 
 .. code-block:: bash
 
- kevell@corp:/# cleopatra chromedriver install
+ kevell@corp:/# ptconfigure chromedriver install
 
  Install ChromeDriver Server? (Y/N) 
  Y
@@ -120,14 +120,14 @@ Después de que el usuario especifica la versión, el proceso de instalación se
  (10) 2.8 
  (11) 2.9 
  11
- PHP Notice:  Undefined index: version in /opt/cleopatra/cleopatra/src/Modules/ChromeDriver/Model/ChromeDriverAllLinux.php on line 42
+ PHP Notice:  Undefined index: version in /opt/ptconfigure/ptconfigure/src/Modules/ChromeDriver/Model/ChromeDriverAllLinux.php on line 42
  [Pharaoh Logging] Ensure module install is not checking versions
  [Pharaoh Logging] Module Java reports itself as Installed
  [Pharaoh Logging] Not installing as already installed
- Creating /tmp/cleopatra-temp-script-26804823734.sh
- chmod 755 /tmp/cleopatra-temp-script-26804823734.sh 2>/dev/null
- Changing /tmp/cleopatra-temp-script-26804823734.sh Permissions
- Executing /tmp/cleopatra-temp-script-26804823734.sh
+ Creating /tmp/ptconfigure-temp-script-26804823734.sh
+ chmod 755 /tmp/ptconfigure-temp-script-26804823734.sh 2>/dev/null
+ Changing /tmp/ptconfigure-temp-script-26804823734.sh Permissions
+ Executing /tmp/ptconfigure-temp-script-26804823734.sh
  --2015-02-02 21:35:49--  http://chromedriver.storage.googleapis.com//chromedriver_linux64.zip
  Resolving chromedriver.storage.googleapis.com (chromedriver.storage.googleapis.com)... 74.125.236.44, 74.125.236.43, 74.125.236.42, ...
  Connecting to chromedriver.storage.googleapis.com (chromedriver.storage.googleapis.com)|74.125.236.44|:80... connected.
@@ -136,7 +136,7 @@ Después de que el usuario especifica la versión, el proceso de instalación se
  
  mv: cannot stat '/tmp/chromedriver/*': No such file or directory
  unzip:  cannot find or open chromedriver_linux64.zip, chromedriver_linux64.zip.zip or chromedriver_linux64.zip.ZIP.
- Temp File /tmp/cleopatra-temp-script-26804823734.sh Removed
+ Temp File /tmp/ptconfigure-temp-script-26804823734.sh Removed
  ... All done!
  *******************************
  Thanks for installing , visit www.pharaohtools.com for more

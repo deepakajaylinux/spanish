@@ -15,11 +15,11 @@ Este comando ayuda a determinar el uso del módulo de compositor. El usuario se 
 
 .. code-block:: bash
               
-		 cleopatra composer help
+		 ptconfigure composer help
 
 .. code-block:: bash
 
- kevell@corp:/# cleopatra composer help
+ kevell@corp:/# ptconfigure composer help
  ******************************
 
 
@@ -29,7 +29,7 @@ Este comando ayuda a determinar el uso del módulo de compositor. El usuario se 
 
         - install
         Installs the latest version of composer
-        example: cleopatra composer install
+        example: ptconfigure composer install
 
  ------------------------------
  End Help
@@ -42,7 +42,7 @@ Cuando el usuario tiene que instalar el módulo compositor en la máquina, el si
 
 .. code-block:: bash
                
-		 cleopatra composer install
+		 ptconfigure composer install
 
 Durante la instalación, el sistema pide el nombre del directorio, si usted quiere configurar su PATH, puede definir su camino. Defina su camino tiene que ser seguido por el símbolo "/". Pulse Intro para utilizar la ruta por defecto.
 
@@ -58,10 +58,10 @@ Durante la instalación, el sistema pide la ejecución de nombre de directorio, 
  +---------------------------+------------------------------+----------------+-----------------------------------------+
  | Parámetros                | alternativos de parámetros   | Opción         | Comentarios                             |
  +===========================+==============================+================+=========================================+
- |cleopatra composer         | Composer, composer           | Y              | El sistema se inicia proceso de         | 
+ |ptconfigure composer       | Composer, composer           | Y              | El sistema se inicia proceso de         | 
  |Install? (Y/N)             |                              |                | instalación                             |
  +---------------------------+------------------------------+----------------+-----------------------------------------+
- |cleopatra composer         | Composer, composer           | N              | El sistema detiene proceso de           |
+ |ptconfigure composer       | Composer, composer           | N              | El sistema detiene proceso de           |
  |Install? (Y/N)             |                              |                | instalación|                            |
  +---------------------------+------------------------------+----------------+-----------------------------------------+
  
@@ -70,7 +70,7 @@ La captura de pantalla para el comando de instalación se enumeran a continuaci�
 
 .. code-block:: bash
 
- kevell@corp:/$ cleopatra composer install
+ kevell@corp:/$ ptconfigure composer install
  Install Composer - Update to latest version ? (Y/N)
  y
  *******************************
@@ -86,17 +86,17 @@ La captura de pantalla para el comando de instalación se enumeran a continuaci�
  remote: Total 6 (delta 0), reused 0 (delta 0)
  Unpacking objects: 100% (6/6), done.
  Checking connectivity... done.
- PHP Warning:  mkdir(): Permission denied in /opt/cleopatra/cleopatra/src/Modules/CleopatraRequired/Model/BasePHPApp.php on line 192
+ PHP Warning:  mkdir(): Permission denied in /opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/BasePHPApp.php on line 192
  cp: cannot create directory ‘/opt/composer’: Permission denied
  Program Data folder populated
  Program Executor Deleted if existed
- PHP Warning:  scandir(/opt/composer): failed to open dir: No such file or directory in /opt/cleopatra/cleopatra/src/Modules/CleopatraRequired/Model/BasePHPApp.php on line 172
- PHP Warning:  scandir(): (errno 2): No such file or directory in /opt/cleopatra/cleopatra/src/Modules/CleopatraRequired/Model/BasePHPApp.php on line 172
- PHP Warning:  Invalid argument supplied for foreach() in /opt/cleopatra/cleopatra/src/Modules/CleopatraRequired/Model/BasePHPApp.php on line 174
- PHP Warning:  scandir(/opt/composer): failed to open dir: No such file or directory in /opt/cleopatra/cleopatra/src/Modules/CleopatraRequired/Model/BasePHPApp.php on line 172
- PHP Warning:  scandir(): (errno 2): No such file or directory in /opt/cleopatra/cleopatra/src/Modules/CleopatraRequired/Model/BasePHPApp.php on line 172
- PHP Warning:  Invalid argument supplied for foreach() in /opt/cleopatra/cleopatra/src/Modules/CleopatraRequired/Model/BasePHPApp.php on line 174
- PHP Warning:  file_put_contents(/usr/bin/composer): failed to open stream: Permission denied in /opt/cleopatra/cleopatra/src/Modules/CleopatraRequired/Model/BasePHPApp.php on line 214
+ PHP Warning:  scandir(/opt/composer): failed to open dir: No such file or directory in /opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/BasePHPApp.php on line 172
+ PHP Warning:  scandir(): (errno 2): No such file or directory in /opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/BasePHPApp.php on line 172
+ PHP Warning:  Invalid argument supplied for foreach() in /opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/BasePHPApp.php on line 174
+ PHP Warning:  scandir(/opt/composer): failed to open dir: No such file or directory in /opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/BasePHPApp.php on line 172
+ PHP Warning:  scandir(): (errno 2): No such file or directory in /opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/BasePHPApp.php on line 172
+ PHP Warning:  Invalid argument supplied for foreach() in /opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/BasePHPApp.php on line 174
+ PHP Warning:  file_put_contents(/usr/bin/composer): failed to open stream: Permission denied in /opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/BasePHPApp.php on line 214
  chmod: cannot access ‘/opt/composer’: No such file or directory
  chmod: cannot access ‘/usr/bin/composer’: No such file or directory
  ... All done!

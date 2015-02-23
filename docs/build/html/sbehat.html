@@ -24,8 +24,9 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
-    <link rel="up" title="Cleopatra" href="scleopatra_main.html" />
-    <link rel="prev" title="Autopilot" href="sautopilot.html" /> 
+    <link rel="up" title="PTConfigure" href="sptconfigure_main.html" />
+    <link rel="next" title="Boxify" href="sboxify.html" />
+    <link rel="prev" title="Awstats" href="sawstats.html" /> 
   </head>
   <body>
     <div class="related">
@@ -35,10 +36,13 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="sautopilot.html" title="Autopilot"
+          <a href="sboxify.html" title="Boxify"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="sawstats.html" title="Awstats"
              accesskey="P">previous</a> |</li>
         <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
-          <li><a href="scleopatra_main.html" accesskey="U">Cleopatra</a> &raquo;</li> 
+          <li><a href="sptconfigure_main.html" accesskey="U">PTConfigure</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -57,11 +61,11 @@
 <h2>Ayuda Comando<a class="headerlink" href="#ayuda-comando" title="Permalink to this headline">¶</a></h2>
 <p>Las guías de comandos ayuda al usuario obtener conocimiento de los usos, y también las opciones y acciones que se pueden realizar. En él se enumeran las salidas de parámetros alternativos que se pueden utilizar en la declaración. Especifica el comando para instalar la última versión de Behat.</p>
 <p>La codificación para hacer uso de la ayuda de mandatos bajo Behat, se da como sigue:</p>
-<div class="highlight-bash"><div class="highlight"><pre>cleopatra behat <span class="nb">help</span>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure behat <span class="nb">help</span>
 </pre></div>
 </div>
 <p>La captura de pantalla tal como se indica a continuación que explica gráficamente sobre el uso del comando de ayuda.</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# cleopatra behat <span class="nb">help</span>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure behat <span class="nb">help</span>
 ******************************
 
 
@@ -71,7 +75,7 @@
 
        - install
        Installs the latest version of behat
-       example: cleopatra behat install
+       example: ptconfigure behat install
 
 ------------------------------
 End Help
@@ -82,7 +86,7 @@ End Help
 <div class="section" id="instalacion">
 <h2>instalación<a class="headerlink" href="#instalacion" title="Permalink to this headline">¶</a></h2>
 <p>Si el usuario necesita para instalar la última versión de Behat, pueden lograr la instalación, mediante el comando siguiente,</p>
-<div class="highlight-bash"><div class="highlight"><pre>cleopatra behat install
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure behat install
 </pre></div>
 </div>
 <p>Después de introducir el comando anterior, el siguiente proceso están involucrados en la instalación como se muestra en el formato tabular,</p>
@@ -171,7 +175,7 @@ especificar que poseen ubicación|</td>
 </tbody>
 </table>
 <p>La captura de pantalla muestra a continuación voluntad le da una representación gráfica de los pasos involucrados en la instalación.</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# cleopatra behat install
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure behat install
 Install Behat ? <span class="o">(</span>Y/N<span class="o">)</span>
 Y
 *******************************
@@ -182,10 +186,10 @@ What is the program data directory? Found <span class="s2">&quot;/opt/behat&quot
 
 What is the program executor directory? Found <span class="s2">&quot;/usr/bin&quot;</span> - use this? <span class="o">(</span>Enter nothing <span class="k">for</span> yes, No Trailing Slash<span class="o">)</span>
 
-Creating /tmp/cleopatra-temp-script-69243074239.sh
-chmod <span class="m">755</span> /tmp/cleopatra-temp-script-69243074239.sh 2&gt;/dev/null
-Changing /tmp/cleopatra-temp-script-69243074239.sh Permissions
-Executing /tmp/cleopatra-temp-script-69243074239.sh
+Creating /tmp/ptconfigure-temp-script-69243074239.sh
+chmod <span class="m">755</span> /tmp/ptconfigure-temp-script-69243074239.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-69243074239.sh Permissions
+Executing /tmp/ptconfigure-temp-script-69243074239.sh
 --2015-01-27 15:31:39--  https://getcomposer.org/installer
 Resolving getcomposer.org <span class="o">(</span>getcomposer.org<span class="o">)</span>... 87.98.253.108
 Connecting to getcomposer.org <span class="o">(</span>getcomposer.org<span class="o">)</span><span class="p">|</span>87.98.253.108<span class="p">|</span>:443... connected.
@@ -209,7 +213,7 @@ Composer successfully installed to: /opt/behat/behat/composer.phar
 <div class="section" id="version">
 <h2>versión<a class="headerlink" href="#version" title="Permalink to this headline">¶</a></h2>
 <p>Durante la instalación del Behat, la versión más reciente-será instalado en su máquina.</p>
-<p>Esto es una ventaja añadida de módulo de Behat bajo Cleopatra en comparación con otros.</p>
+<p>Esto es una ventaja añadida de módulo de Behat bajo ptconfigure en comparación con otros.</p>
 </div>
 <div class="section" id="beneficios">
 <h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
@@ -244,8 +248,11 @@ ejecución de la instalación pr oceso.</li>
 </ul>
 
   <h4>Previous topic</h4>
-  <p class="topless"><a href="sautopilot.html"
-                        title="previous chapter">Autopilot</a></p>
+  <p class="topless"><a href="sawstats.html"
+                        title="previous chapter">Awstats</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sboxify.html"
+                        title="next chapter">Boxify</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
     <li><a href="_sources/sbehat.txt"
@@ -275,10 +282,13 @@ ejecución de la instalación pr oceso.</li>
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="sautopilot.html" title="Autopilot"
+          <a href="sboxify.html" title="Boxify"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="sawstats.html" title="Awstats"
              >previous</a> |</li>
         <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
-          <li><a href="scleopatra_main.html" >Cleopatra</a> &raquo;</li> 
+          <li><a href="sptconfigure_main.html" >PTConfigure</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">

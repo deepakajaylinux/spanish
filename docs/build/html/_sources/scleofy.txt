@@ -16,7 +16,7 @@ El comando utilizado para la declaración de opción de ayuda bajo cleofy se mue
 
 .. code-block:: bash
 
-	cleopatra cleofy help
+	ptconfigure cleofy help
 
 
 La sintaxis para declarar el comando de ayuda no es sensible a mayúsculas, que esuna ventaja añadida. La siguiente captura de pantalla a visualizar sobre el comando de ayuda bajo cleofy.
@@ -24,7 +24,7 @@ La sintaxis para declarar el comando de ayuda no es sensible a mayúsculas, 
 .. code-block:: bash
 
 
- kevell@corp:/# cleopatra cleofy help
+ kevell@corp:/# ptconfigure cleofy help
 
  ******************************
 
@@ -35,37 +35,37 @@ La sintaxis para declarar el comando de ayuda no es sensible a mayúsculas, 
  Cleofy, cleofy  
 
  - list        
- 	List all of the autopilot files in your build/config/cleopatra/autopilots        
-	example: cleopatra cleofy list        
+ 	List all of the autopilot files in your build/config/ptconfigure/autopilots        
+	example: ptconfigure cleofy list        
 
  - standard        
-	Create a default set of cleopatra autopilots in build/config/cleopatra/autopilots for your project.        
-	example: cleopatra cleofy standard        
+	Create a default set of ptconfigure autopilots in build/config/ptconfigure/autopilots for your project.        
+	example: ptconfigure cleofy standard        
 
  - tiny        
-	Create a default set of cleopatra autopilots in build/config/cleopatra/autopilots for a project with a "tiny" style infrastructure.        	example: cleopatra cleofy tiny        
+	Create a default set of ptconfigure autopilots in build/config/ptconfigure/autopilots for a project with a "tiny" style infrastructure.        	example: ptconfigure cleofy tiny        
 
  - medium        
-	Create a default set of cleopatra autopilots in build/config/cleopatra/autopilots for a project with a "medium" style infrastructure.        	example: cleopatra cleofy medium        
+	Create a default set of ptconfigure autopilots in build/config/ptconfigure/autopilots for a project with a "medium" style infrastructure.        	example: ptconfigure cleofy medium        
 
  - medium-web        
-	Create a default set of cleopatra autopilots in build/config/cleopatra/autopilots for a project with a "medium" style infrastructure,
+	Create a default set of ptconfigure autopilots in build/config/ptconfigure/autopilots for a project with a "medium" style infrastructure,
         with web but not database.        
- 	example: cleopatra cleofy medium-web        
+ 	example: ptconfigure cleofy medium-web        
 
  - db-cluster        
-	Create a default set of cleopatra autopilots in build/config/cleopatra/autopilots for your project.        
- 	example: cleopatra cleofy db-cluster        
+	Create a default set of ptconfigure autopilots in build/config/ptconfigure/autopilots for your project.        
+ 	example: ptconfigure cleofy db-cluster        
  --yes                    
  --guess                    
  --database-nodes-env=*db-nodes-environment-name*                    
 
  - install-generic-autopilots        
 	Install the generic Cleofy autopilot templates for a Tiny or Medium (Current Default) set of Environments        
- example: cleopatra cleofy install-generic-autopilots        
-	example: cleopatra cleofy install-generic-autopilots        
+ example: ptconfigure cleofy install-generic-autopilots        
+	example: ptconfigure cleofy install-generic-autopilots        
  --yes                    
- --guess # will set --destination-dir=*this dir +*build/config/cleopatra/cleofy/autopilots/                    
+ --guess # will set --destination-dir=*this dir +*build/config/ptconfigure/cleofy/autopilots/                    
  --template-group=tiny # tiny, medium, dbcluster, phlagrant || db-cluster, workstation                    
  --destination-dir=*path-to-destination*                    
 
@@ -91,58 +91,58 @@ En este tema se describe acerca de las diversas funciones de cleofy bajo este m�
 lista
 -----
 
-Esta función tiene por objeto una lista de todos los archivos del piloto automático en su ubicación especificada (build / config / cleopatra / pilotos automáticos). La sintaxis para la aplicación de esta función se muestra a continuación,
+Esta función tiene por objeto una lista de todos los archivos del piloto automático en su ubicación especificada (build / config / ptconfigure / pilotos automáticos). La sintaxis para la aplicación de esta función se muestra a continuación,
 
 .. code-block:: bash
 
-	cleopatra cleofy list
+	ptconfigure cleofy list
 
 estándar
 ------------
 
-Esta función ayuda a crear un conjunto predeterminado de pilotos automáticos cleopatra (en build / config / cleopatra / pilotos automáticos) para el proyecto de los usuarios. Esta función se puede aplicar simplemente usando el siguiente comando,
+Esta función ayuda a crear un conjunto predeterminado de pilotos automáticos ptconfigure (en build / config / ptconfigure / pilotos automáticos) para el proyecto de los usuarios. Esta función se puede aplicar simplemente usando el siguiente comando,
 
 .. code-block:: bash
 
-	cleopatra cleofy standard
+	ptconfigure cleofy standard
 
 
 diminuto
 -------------
 
-Esta función tiene como objetivo crear un conjunto predeterminado de pilotos automáticos cleopatra (en build / config / cleopatra / pilotos automáticos) para un proyecto de pequeña infraestructura. Para llevar a cabo estas funciones sigue el siguiente comando como abajo,
+Esta función tiene como objetivo crear un conjunto predeterminado de pilotos automáticos ptconfigure (en build / config / ptconfigure / pilotos automáticos) para un proyecto de pequeña infraestructura. Para llevar a cabo estas funciones sigue el siguiente comando como abajo,
 
 .. code-block:: bash
 
-	cleopatra cleofy tiny
+	ptconfigure cleofy tiny
 
 medio
 -------
 
- Esta función tiene como objetivo crear un conjunto predeterminado de pilotos automáticos cleopatra (en build / config / cleopatra / pilotos automáticos) para un proyecto de infraestructura de medio. Para llevar a cabo estas funciones sigue el siguiente comando como abajo,
+ Esta función tiene como objetivo crear un conjunto predeterminado de pilotos automáticos ptconfigure (en build / config / ptconfigure / pilotos automáticos) para un proyecto de infraestructura de medio. Para llevar a cabo estas funciones sigue el siguiente comando como abajo,
 
 .. code-block:: bash
 
-	cleopatra cleofy medium
+	ptconfigure cleofy medium
 
 
 Medium_Web
 ----------
 
-Esta función tiene como objetivo crear un conjunto predeterminado de pilotos automáticos cleopatra (en build / config / cleopatra / Pilotos automáticos) PARA UN proyecto de infraestructura de medio con la web, Pero No La Base de Datos. Para Llevar un cabo ESTAS Funciones Sigue el siguiente comando Como abajo,
+Esta función tiene como objetivo crear un conjunto predeterminado de pilotos automáticos ptconfigure (en build / config / ptconfigure / Pilotos automáticos) PARA UN proyecto de infraestructura de medio con la web, Pero No La Base de Datos. Para Llevar un cabo ESTAS Funciones Sigue el siguiente comando Como abajo,
 
 .. code-block:: bash
 
-	cleopatra cleofy medium-web
+	ptconfigure cleofy medium-web
 
 DB_cluster
 ---------------
 
- Esta función tiene como objetivo crear un conjunto predeterminado de pilotos automáticos cleopatra (en build / config / cleopatra / pilotos automáticos) para el proyecto de los usuarios.  Para llevar a cabo estas funciones sigue el siguiente comando como abajo,
+ Esta función tiene como objetivo crear un conjunto predeterminado de pilotos automáticos ptconfigure (en build / config / ptconfigure / pilotos automáticos) para el proyecto de los usuarios.  Para llevar a cabo estas funciones sigue el siguiente comando como abajo,
 
 .. code-block:: bash
 
-	cleopatra cleofy db-cluster        
+	ptconfigure cleofy db-cluster        
  --yes                    
  --guess                    
  --database-nodes-env=*db-nodes-environment-name*  
@@ -154,14 +154,14 @@ Esta función ayuda a la instalación de plantillas de piloto automático genér
 
 .. code-block:: bash
 	
-	cleopatra cleofy install-generic-autopilots     
+	ptconfigure cleofy install-generic-autopilots     
 or,
 
 .. code-block:: bash
 
-	cleopatra cleofy install-generic-autopilots
+	ptconfigure cleofy install-generic-autopilots
  --yes                    
- --guess # will set --destination-dir=*this dir +*build/config/cleopatra/cleofy/autopilots/                    
+ --guess # will set --destination-dir=*this dir +*build/config/ptconfigure/cleofy/autopilots/                    
  --template-group=tiny # tiny, medium, dbcluster, phlagrant || db-cluster, workstation                    
  --destination-dir=*path-to-destination*    
 

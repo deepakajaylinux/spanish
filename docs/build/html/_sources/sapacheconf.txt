@@ -15,13 +15,13 @@ En él se enumeran los parámetros alternativos que se pueden utilizar para la d
 
 .. code-block:: bash
 
-	cleopatra apacheconf help
+	ptconfigure apacheconf help
 
 La captura de pantalla como se muestra a continuación, representar visualmente el uso del comando de ayuda en virtud de este módulo.
 
 .. code-block:: bash
 	
- kevell@corp:/# cleopatra apacheconf help
+ kevell@corp:/# ptconfigure apacheconf help
  ******************************
 
 
@@ -32,7 +32,7 @@ La captura de pantalla como se muestra a continuación, representar visualmente 
 
         - install
         Installs a configuration for Apache
-        example: cleopatra apacheconf install
+        example: ptconfigure apacheconf install
 
  ------------------------------
  End Help
@@ -41,11 +41,11 @@ La captura de pantalla como se muestra a continuación, representar visualmente 
 instalación
 --------------
 
-Es más fácil de instalar esta herramienta en particular en virtud de Cleopatra por el simple uso de la orden dada a continuación,
+Es más fácil de instalar esta herramienta en particular en virtud de ptconfigure por el simple uso de la orden dada a continuación,
 
 .. code-block:: bash
  
-	  cleopatra apacheconf install
+	  ptconfigure apacheconf install
 
 Después de dar el comando anterior, la herramienta le preguntará como
 
@@ -62,7 +62,7 @@ La captura de pantalla que figura a continuación explica visualmente sobre los 
 .. code-block:: bash
 
 
- kevell@corp:/# cleopatra apacheconf install
+ kevell@corp:/# ptconfigure apacheconf install
  Install Apache Conf? (Y/N) 
  y
  *******************************

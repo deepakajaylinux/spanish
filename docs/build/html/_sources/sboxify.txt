@@ -14,14 +14,14 @@ El comando de ayuda guía a los usuarios en el manejo de este módulo, con el fi
 
 .. code-block:: bash
 
-	cleopatra Boxify help
+	ptconfigure Boxify help
 
 La sintaxis para declarar el comando de ayuda no es sensible a mayúsculas, que es una ventaja añadida. La siguiente captura de pantalla a visualizar sobre el comando de ayuda bajo boxify.
 
 .. code-block:: bash
 
 
- kevell@corp:/# cleopatra Boxify help 
+ kevell@corp:/# ptconfigure Boxify help 
  ****************************** 
 
 
@@ -32,16 +32,16 @@ La sintaxis para declarar el comando de ayuda no es sensible a mayúsculas, que 
 
         - install-generic-autopilots 
         Install the generic Boxify autopilot templates for a Tiny or Medium (Current Default) set of Environments 
-        example: cleopatra boxify install-generic-autopilots 
-        example: cleopatra boxify install-generic-autopilots 
+        example: ptconfigure boxify install-generic-autopilots 
+        example: ptconfigure boxify install-generic-autopilots 
                     --yes 
-                    --guess # will set --destination-dir=*this dir +*build/config/cleopatra/boxify/autopilots/ 
+                    --guess # will set --destination-dir=*this dir +*build/config/ptconfigure/boxify/autopilots/ 
                     --template-group=tiny 
                     --destination-dir=*path-to-destination* 
 
         - box-add 
         Installs a Box through a cloud provider 
-        example: cleopatra boxify box-add --environment-name="*environment*" 
+        example: ptconfigure boxify box-add --environment-name="*environment*" 
             --server-prefix="my-app" 
             --provider="DigitalOcean" // DigitalOcean, Rackspace, VSphere 
             --image-id="3101045" // DO=3101045 , RAX=ffd597d6-2cc4-4b43-b8f4-b1006715b84e 
@@ -53,18 +53,18 @@ La sintaxis para declarar el comando de ayuda no es sensible a mayúsculas, que 
 
         - box-remove 
         Removes a Box from the papyrus 
-        example: cleopatra boxify box-remove --environment-name="staging" --environment-version="5.0" --provider="apt-get" 
+        example: ptconfigure boxify box-remove --environment-name="staging" --environment-version="5.0" --provider="apt-get" 
 
         - box-destroy 
         Removes a Box from both papyrus and the cloud provider 
-        example: cleopatra boxify box-destroy --environment-name="staging" 
+        example: ptconfigure boxify box-destroy --environment-name="staging" 
             --destroy-all-boxes 
             --destroy 
 
         - list-papyrus 
         List all servers in papyrus, or those of a particular environment 
-        example: cleopatra boxify list-papyrus --yes 
-        example: cleopatra boxify list-papyrus --yes --environment-name="staging" 
+        example: ptconfigure boxify list-papyrus --yes 
+        example: ptconfigure boxify list-papyrus --yes --environment-name="staging" 
 
 
  ------------------------------ 
@@ -89,9 +89,9 @@ Esta función tiene por objeto la instalación de los pilotos automáticos aplic
 
 .. code-block:: bash
 	
-	cleopatra boxify install-generic-autopilots 
+	ptconfigure boxify install-generic-autopilots 
                     --yes 
-                    --guess # will set --destination-dir=*this dir +*build/config/cleopatra/boxify/autopilots/ 
+                    --guess # will set --destination-dir=*this dir +*build/config/ptconfigure/boxify/autopilots/ 
                     --template-group=tiny 
                     --destination-dir=*path-to-destination* 
 
@@ -108,7 +108,7 @@ Esta función tiene por objeto la adición de una caja a través de un proveedor
 
 .. code-block:: bash
 
-	example: cleopatra boxify box-add --environment-name="*environment*" 
+	example: ptconfigure boxify box-add --environment-name="*environment*" 
             --server-prefix="my-app" 
             --provider="DigitalOcean" // DigitalOcean, Rackspace, VSphere 
             --image-id="3101045" // DO=3101045 , RAX=ffd597d6-2cc4-4b43-b8f4-b1006715b84e 
@@ -135,7 +135,7 @@ Esta función tiene como objetivo la eliminación de una caja del papiro. Esto s
 
 .. code-block:: bash
 
-	cleopatra boxify box-remove --environment-name="staging" --environment-version="5.0" --provider="apt-get" 
+	ptconfigure boxify box-remove --environment-name="staging" --environment-version="5.0" --provider="apt-get" 
 
 El usuario tiene que especificar los siguientes campos como se muestra en el comando anterior,
 
@@ -150,7 +150,7 @@ Esta función tiene como objetivo la eliminación de una caja del papiro. Esta f
 
 .. code-block:: bash
 
-	cleopatra boxify box-destroy --environment-name="staging" 
+	ptconfigure boxify box-destroy --environment-name="staging" 
             --destroy-all-boxes 
             --destroy
 
@@ -163,7 +163,7 @@ El principal objetivo de esta función es hacer una lista de todos los servidore
 
 .. code-block:: bash
 
-	cleopatra boxify list-papyrus --yes --environment-name="staging"
+	ptconfigure boxify list-papyrus --yes --environment-name="staging"
 
 El comando anterior mencionado enumerará fuera papiro de un entorno determinado.
 

@@ -13,14 +13,14 @@ El comando de ayuda describe sobre el propósito y los comandos disponibles bajo
 
 .. code-block:: bash
 
- 		cleopatra ApacheServer help
+ 		ptconfigure ApacheServer help
 
 La captura de pantalla como se muestra a continuación, representar visualmente el uso del comando de ayuda en virtud de este módulo.
 
 .. code-block:: bash
 
 
- kevell@corp:/# cleopatra ApacheServer help
+ kevell@corp:/# ptconfigure ApacheServer help
  ******************************
 
 
@@ -30,7 +30,7 @@ La captura de pantalla como se muestra a continuación, representar visualmente 
 
         - install
         Installs Apache HTTP Server
-        example: cleopatra apacheserver install
+        example: ptconfigure apacheserver install
 
  ------------------------------
  End Help
@@ -39,11 +39,11 @@ La captura de pantalla como se muestra a continuación, representar visualmente 
 Instalación
 -------------
 
-Es más fácil de instalar esta herramienta en particular en virtud de Cleopatra por el simple uso de la orden dada a continuación,
+Es más fácil de instalar esta herramienta en particular en virtud de ptconfigure por el simple uso de la orden dada a continuación,
 
 .. code-block:: bash
 
-		cleopatra ApacheServer install
+		ptconfigure ApacheServer install
 
 Después de dar el comando anterior, la herramienta le preguntará como
 
@@ -55,7 +55,7 @@ La captura de pantalla que figura a continuación explica visualmente sobre los 
 
 .. code-block:: bash
 
- kevell@corp:/# cleopatra apacheserver install
+ kevell@corp:/# ptconfigure apacheserver install
  Install Apache Server? (Y/N) 
  Y
  *******************************

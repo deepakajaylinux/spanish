@@ -24,8 +24,9 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
-    <link rel="up" title="Cleopatra" href="scleopatra_main.html" />
-    <link rel="prev" title="Behat" href="sbehat.html" /> 
+    <link rel="up" title="PTConfigure" href="sptconfigure_main.html" />
+    <link rel="next" title="Chgrp" href="schgrp.html" />
+    <link rel="prev" title="Boxify" href="sboxify.html" /> 
   </head>
   <body>
     <div class="related">
@@ -35,10 +36,13 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="sbehat.html" title="Behat"
+          <a href="schgrp.html" title="Chgrp"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="sboxify.html" title="Boxify"
              accesskey="P">previous</a> |</li>
         <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
-          <li><a href="scleopatra_main.html" accesskey="U">Cleopatra</a> &raquo;</li> 
+          <li><a href="sptconfigure_main.html" accesskey="U">PTConfigure</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -57,11 +61,11 @@
 <div class="section" id="ayuda-comando">
 <h2>Ayuda Comando<a class="headerlink" href="#ayuda-comando" title="Permalink to this headline">¶</a></h2>
 <p>Este comando ayuda a determinar el uso del módulo de Cassandra. El usuario se llega a saber acerca de la diferente forma / formato de ejecutar este módulo. Este comando guía al usuario final a conocer el propósito de este comando. A continuación dado son el mando y la pantalla del mismo.</p>
-<div class="highlight-bash"><div class="highlight"><pre>cleopatra cassandra <span class="nb">help</span>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure cassandra <span class="nb">help</span>
 </pre></div>
 </div>
 <p>La representación gráfica de la orden anterior se muestra a continuación,</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# cleopatra cassandra <span class="nb">help</span>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure cassandra <span class="nb">help</span>
 
 ******************************
 
@@ -72,7 +76,7 @@
 
        - install
        Installs the latest version of Cassandra
-       example: cleopatra cassandra install
+       example: ptconfigure cassandra install
 
 ------------------------------
 End Help
@@ -83,11 +87,11 @@ End Help
 <div class="section" id="instalacion">
 <h2>Instalación<a class="headerlink" href="#instalacion" title="Permalink to this headline">¶</a></h2>
 <p>Este comando ayuda en la instalación de Cassandra en el sistema. El siguiente comando dado se ejecutará el proceso de instalación.</p>
-<div class="highlight-bash"><div class="highlight"><pre>cleopatra cassandra install
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure cassandra install
 </pre></div>
 </div>
 <p>La representación gráfica de la orden anterior se muestra a continuación,</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/#  cleopatra cassandra install
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/#  ptconfigure cassandra install
 
 Install Cassandra? <span class="o">(</span>Y/N<span class="o">)</span>
 Y
@@ -95,10 +99,10 @@ Y
 *        Pharaoh Tools        *
 *         Cassandra!        *
 *******************************
-Creating /tmp/cleopatra-temp-script-10553509319.sh
-chmod <span class="m">755</span> /tmp/cleopatra-temp-script-10553509319.sh 2&gt;/dev/null
-Changing /tmp/cleopatra-temp-script-10553509319.sh Permissions
-Executing /tmp/cleopatra-temp-script-10553509319.sh
+Creating /tmp/ptconfigure-temp-script-10553509319.sh
+chmod <span class="m">755</span> /tmp/ptconfigure-temp-script-10553509319.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-10553509319.sh Permissions
+Executing /tmp/ptconfigure-temp-script-10553509319.sh
 gpg: directory <span class="sb">`</span>/home/deepak/.gnupg<span class="s1">&#39; created</span>
 <span class="s1">gpg: new configuration file `/home/deepak/.gnupg/gpg.conf&#39;</span> created
 gpg: WARNING: options in <span class="sb">`</span>/home/deepak/.gnupg/gpg.conf<span class="s1">&#39; are not yet active during this run</span>
@@ -302,7 +306,7 @@ Hit http://in.archive.ubuntu.com trusty-backports/universe Translation-en
 Get:41 http://us.archive.ubuntu.com precise/main Translation-en <span class="o">[</span><span class="m">726</span> kB<span class="o">]</span>
 Get:42 http://us.archive.ubuntu.com precise/universe Translation-en <span class="o">[</span><span class="m">3341</span> kB<span class="o">]</span>
 Fetched 10.2 MB in 4min 2s <span class="o">(</span>42.1 kB/s<span class="o">)</span>
-Temp File /tmp/cleopatra-temp-script-10553509319.sh Removed
+Temp File /tmp/ptconfigure-temp-script-10553509319.sh Removed
 W: Duplicate sources.list entry http://repos.zend.com/zend-server/6.1/deb/ server/non-free amd64 Packages <span class="o">(</span>/var/lib/apt/lists/repos.zend.com_zend-server_6.1_deb_dists_server_non-free_binary-amd64_Packages<span class="o">)</span>
 W: Duplicate sources.list entry http://repos.zend.com/zend-server/6.1/deb/ server/non-free amd64 Packages <span class="o">(</span>/var/lib/apt/lists/repos.zend.com_zend-server_6.1_deb_dists_server_non-free_binary-amd64_Packages<span class="o">)</span>
 W: Duplicate sources.list entry http://repos.zend.com/zend-server/6.1/deb/ server/non-free amd64 Packages <span class="o">(</span>/var/lib/apt/lists/repos.zend.com_zend-server_6.1_deb_dists_server_non-free_binary-amd64_Packages<span class="o">)</span>
@@ -358,7 +362,7 @@ Installer Finished
 <table border="1" class="table-bordered docutils">
 <colgroup>
 <col width="21%" />
-<col width="32%" />
+<col width="33%" />
 <col width="11%" />
 <col width="35%" />
 </colgroup>
@@ -370,24 +374,24 @@ Installer Finished
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>cleopatra cassandra
+<tr class="row-even"><td>ptconfigure cassandra
 Install? (Y/N)</td>
 <td>Hay dos parámetros alternativos que
 pueden ser utilizados en la línea
 de comandos. Cassandra , cassandra
-Por ejemplo: cleopatra cassandra
-install, cleopatra Cassandra install</td>
+Por ejemplo: ptconfigure cassandra
+install, ptconfigure Cassandra install</td>
 <td>Y(Yes)</td>
 <td>El sistema se inicia proceso de
 instalación</td>
 </tr>
-<tr class="row-odd"><td>cleopatra cassandra
+<tr class="row-odd"><td>ptconfigure cassandra
 Install? (Y/N)</td>
 <td>Hay dos parámetros alternativos que
 pueden ser utilizados en la línea
 de comandos. Cassandra , cassandra
-Por ejemplo: cleopatra cassandra
-install, cleopatra Cassandra install|</td>
+Por ejemplo: ptconfigure cassandra
+install, ptconfigure Cassandra install|</td>
 <td>N(No)</td>
 <td>El sistema detiene proceso de instalación</td>
 </tr>
@@ -432,8 +436,11 @@ todas las réplicas sea legible&#8221;, con el nivel de quórum en el medio.</li
 </ul>
 
   <h4>Previous topic</h4>
-  <p class="topless"><a href="sbehat.html"
-                        title="previous chapter">Behat</a></p>
+  <p class="topless"><a href="sboxify.html"
+                        title="previous chapter">Boxify</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="schgrp.html"
+                        title="next chapter">Chgrp</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
     <li><a href="_sources/scassandra.txt"
@@ -463,10 +470,13 @@ todas las réplicas sea legible&#8221;, con el nivel de quórum en el medio.</li
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="sbehat.html" title="Behat"
+          <a href="schgrp.html" title="Chgrp"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="sboxify.html" title="Boxify"
              >previous</a> |</li>
         <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
-          <li><a href="scleopatra_main.html" >Cleopatra</a> &raquo;</li> 
+          <li><a href="sptconfigure_main.html" >PTConfigure</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">

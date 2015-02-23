@@ -18,7 +18,7 @@ El comando help guía a los usuarios en cuanto a la finalidad y al igual que sob
 
 .. code-block:: bash
 	
-		cleopatra AWStats help
+		ptconfigure AWStats help
 
 La sintaxis para declarar el comando de ayuda no es sensible a mayúsculas, que es una ventaja añadida. La siguiente captura de pantalla a visualizar sobre el comando de ayuda bajo AWStats.
 
@@ -29,7 +29,7 @@ El comando que se utiliza para la instalación de los AWStats a la máquina de l
 
 .. code-block:: bash
 
-		cleopatra AWStats install
+		ptconfigure AWStats install
 
 Después de introducir el comando anterior, el siguiente proceso se produce como se muestra en el formato tabular.
 

@@ -84,7 +84,7 @@ Después de introducir el comando anterior, el siguiente proceso se produce como
  | Parámetros             | Necesario       | parámetros alternativos          | Comentario                                  |
  +========================+=================+==================================+=============================================+
  |UnInstall Aptana?(Y/N)  | Yes             | En lugar de utilizar Aptana el   | Se desinstalará módulo Aptana bajo          |
- |                        |                 | usuario puede utilizar aptana    | ptconfigure                                 |
+ |                        |                 | usuario puede utilizar aptana    | ptconfigure                                   |
  +------------------------+-----------------+----------------------------------+---------------------------------------------+
  |UnInstall Aptana?(Y/N)  | No              | En lugar de utilizar Aptana el   | Si el usuario desea dejar de desinstalación |
  |                        |                 | usuario puede utilizar aptana    | que puede introducir como N|                |
