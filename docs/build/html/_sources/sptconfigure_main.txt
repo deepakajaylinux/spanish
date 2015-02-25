@@ -35,6 +35,8 @@ Jugando con módulos PTConfigure
    sdevelopertools
    sdigitalocean
    sencryption
+   senvironmentconfig
+   sfile
    sgem
    sgenerator
    sgimp

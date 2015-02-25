@@ -1,0 +1,373 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>EnvironmentConfig &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="PTConfigure" href="sptconfigure_main.html" />
+    <link rel="next" title="File" href="sfile.html" />
+    <link rel="prev" title="Encryption" href="sencryption.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="sfile.html" title="File"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="sencryption.html" title="Encryption"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" accesskey="U">PTConfigure</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="environmentconfig">
+<h1>EnvironmentConfig<a class="headerlink" href="#environmentconfig" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Este módulo facilita a los usuarios en la configuración de su entorno necesario para su proyecto. Veamos cómo configurar el entorno, cómo eliminar el medio ambiente no deseado, cómo utilizar la opción de lista para mostrar los entornos disponibles en los próximos temas.</p>
+</div>
+<div class="section" id="comando-ayuda">
+<h2>comando Ayuda<a class="headerlink" href="#comando-ayuda" title="Permalink to this headline">¶</a></h2>
+<p>El comando de ayuda guía a los usuarios en cuanto a la finalidad del módulo, sus parámetros alternativos que se utilizan en la declaración. En él se destacan las tres funciones de configuración del entorno que son lista, configurar, borrar. También especifica la sintaxis para utilizar tres funciones principales. La sintaxis utilizada para declarar la ayuda se muestra a continuación:</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure envconfig <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La siguiente captura de pantalla muestra gráficamente sobre el funcionamiento de comando ayuda.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure envconfig <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>is part of a default Module and provides you with a method by which you can
+ configure environments <span class="k">for</span> your project from the <span class="nb">command </span>line. Currently compliant with
+ both ptdeploy and Ptconfigure.
+
+
+ EnvironmentConfig, environmentconfig, environment-config, envconfig, env-config
+
+       - list
+       List current environments
+       example: ptconfigure envconfig list --yes
+
+       - list-local
+       List current <span class="nb">local </span>environments
+       example: ptconfigure envconfig list-local --yes
+
+       - configure, config
+       Configure bespoke environments <span class="k">for</span> your project to use
+       example: ptconfigure envconfig config
+       <span class="c"># below to create an empty environment to add instances to</span>
+       example: ptconfigure envconfig config --yes
+                   --keep-current-environments <span class="c"># do not overwrite the current environments stored in papyrusfile</span>
+                   --no-manual-servers <span class="c"># so it will not ask you to interactively enter connection details of instances</span>
+                   --add-single-environment <span class="c"># otherwise it will loop for more until you specify not to</span>
+                   --environment-name<span class="o">=</span><span class="s2">&quot;some-name&quot;</span> <span class="c"># name of the environment to create</span>
+                   --tmp-dir<span class="o">=</span>/tmp/ <span class="c"># we&#39;re deprecating this soon</span>
+
+       - configure-default, config-default
+       Configure default environments <span class="k">for</span> your project to use
+       example: ptconfigure envconfig config-default
+       example: ptconfigure envconfig config-default --yes --environment-name<span class="o">=</span><span class="s2">&quot;local-80/local-8080&quot;</span>
+
+       - delete, del
+       Configure the environments <span class="k">for</span> your project to use
+       example: ptconfigure envconfig delete
+       example: ptconfigure envconfig del --environment-name<span class="o">=</span><span class="s2">&quot;staging&quot;</span>
+
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="como-configurar-el-entorno">
+<h2>Cómo configurar el entorno<a class="headerlink" href="#como-configurar-el-entorno" title="Permalink to this headline">¶</a></h2>
+<p>A los efectos de la configuración de los ambientes, el usuario puede utilizar el siguiente comando:</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure envconfig config
+</pre></div>
+</div>
+<p>Después de introducir el comando anterior las siguientes operaciones se lleva a cabo como se muestra:</p>
+<p>Paso 1: Configure Environments Here? (Y/N)</p>
+<p>El usuario tiene a la entrada de S o N.</p>
+<p>Paso 2: Use existing environment Settings? (Y/N)</p>
+<p>El usuario tiene a la entrada de S o N.</p>
+<p>Si la entrada del usuario como Y se procederá con ya existente.</p>
+<p>Si de entrada como N, lo hará pide información sobre el medio ambiente como</p>
+<p>Value for: Name of the environment</p>
+<p>Value for: Default temp dir(Location)</p>
+<p>Después de los pasos anteriores, el usuario tiene que introducir los siguientes detalles:</p>
+<p>Enter target?</p>
+<p>Enter user?</p>
+<p>Enter password?</p>
+<p>Add Another Server? (Y/N)</p>
+<p>El usuario tiene a la entrada de S o N.</p>
+<p>Por último, la configuración del entorno consigue el éxito como se muestra en la siguiente captura de pantalla</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure envconfig config
+Configure Environments Here? <span class="o">(</span>Y/N<span class="o">)</span>
+Y
+Environment <span class="m">1</span>  :
+Default Settings <span class="k">for</span> Any App not setup <span class="k">for</span> environment  enter them now.
+Value <span class="k">for</span>: Name of this Environment
+kevells
+Value <span class="k">for</span>: Default Temp Dir <span class="o">(</span>should usually be /tmp/<span class="o">)</span>
+
+Enter Servers - this is an array of entries
+Enter target ?
+/home/kevells
+Enter user ?
+kevells
+Enter password ?
+123456
+Add Another Server? <span class="o">(</span>Y/N<span class="o">)</span>
+N
+******************************
+
+
+Success
+In Environment Configuration
+******************************
+</pre></div>
+</div>
+<p>Al configurar un entorno, si el usuario desea configurar con el entorno actual, pueden utilizar el siguiente comando:</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure envconfig config --keep-current-environments
+</pre></div>
+</div>
+<p>Después de introducir el comando anterior, lo hará pide los siguientes datos como se muestra en el formato de tabla:</p>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="40%" />
+<col width="10%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parámetros</th>
+<th class="head">Opciones</th>
+<th class="head">Comentarios</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Configure Environments Here? (Y/N)</td>
+<td>Y</td>
+<td>Si el usuario desea configurar los entornos en el
+entorno actual se puede introducir como Y</td>
+</tr>
+<tr class="row-odd"><td>Configure Environments Here? (Y/N)</td>
+<td>N</td>
+<td>Si el usuario no desea configurar los entornos en el
+entorno actual se puede introducir como N</td>
+</tr>
+<tr class="row-even"><td>Use existing environment settings? (Y/N)</td>
+<td>Y</td>
+<td>Si el usuario desea utilizar la configuración del
+entorno existentes se puede introducir como Y.</td>
+</tr>
+<tr class="row-odd"><td>Use existing environment settings? (Y/N)</td>
+<td>N</td>
+<td>Si el usuario no desea utilizar los valores del
+entorno existentes se puede introducir como N.</td>
+</tr>
+<tr class="row-even"><td>Do you want to add another environment?
+(Y/N)</td>
+<td>Y</td>
+<td>Si el usuario desea agregar otro entorno, se
+puede introducir como Y.</td>
+</tr>
+<tr class="row-odd"><td>Do you want to add another environment?
+(Y/N)</td>
+<td>N</td>
+<td>Si el usuario no desea agregar otro entorno, se
+puede introducir como N.|</td>
+</tr>
+</tbody>
+</table>
+<p>La siguiente captura de pantalla representa gráficamente el proceso mencionado anteriormente:</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure envconfig config --keep-current-environments
+Configure Environments Here? <span class="o">(</span>Y/N<span class="o">)</span>
+Y
+Use existing environment settings? <span class="o">(</span>Y/N<span class="o">)</span>
+Y
+Do you want to add another environment? <span class="o">(</span>Y/N<span class="o">)</span>
+N
+******************************
+
+
+Success
+In Environment Configuration
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="como-eliminar-configuracion-del-entorno">
+<h2>Cómo eliminar configuración del entorno<a class="headerlink" href="#como-eliminar-configuracion-del-entorno" title="Permalink to this headline">¶</a></h2>
+<p>Si el usuario necesita para borrar la configuración del entorno, se puede introducir el siguiente comando:</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure envconfig del --environment-name<span class="o">=</span><span class="s2">&quot;kevells&quot;</span>
+</pre></div>
+</div>
+<p>El usuario puede especificar el nombre del entorno que desean eliminar como se muestra arriba.</p>
+<p>Después de introducir el comando anterior, se le preguntará</p>
+<p>Paso 1: Delete Environments Here?</p>
+<p>y muestra un mensaje de advertencia como</p>
+<div class="highlight-bash"><div class="highlight"><pre>WARNING: Deleting an environment from papyrus is final. You may be looking <span class="k">for</span> boxify box-destroy instead <span class="o">(</span>Y/N<span class="o">)</span>
+</pre></div>
+</div>
+<p>El usuario tiene que especificar Sí o No</p>
+<p>Paso 2: Environment Kevells(Name of the specified environment that is supposed to delete) found. Are you sure want to delete it? (Y/N)</p>
+<p>El usuario tiene que especificar Sí o No</p>
+<p>Por último, el entorno especificado se elimina como se muestra en la captura de pantalla.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure envconfig del --environment-name<span class="o">=</span><span class="s2">&quot;kevells&quot;</span>
+Delete Environments Here?
+WARNING: Deleting an environment from papyrus is final. You may be looking <span class="k">for</span> boxify box-destroy instead <span class="o">(</span>Y/N<span class="o">)</span>
+Y
+Environment kevells found. Are you sure you want to delete it? <span class="o">(</span>Y/N<span class="o">)</span>
+Y
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Removing environment kevells.
+******************************
+
+
+Success
+In Environment Configuration
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="como-listar-configuracion-del-entorno">
+<h2>Cómo listar configuración del entorno<a class="headerlink" href="#como-listar-configuracion-del-entorno" title="Permalink to this headline">¶</a></h2>
+<p>Si el usuario desea ver la lista de los detalles con respecto a la configuración del entorno, pueden de entrada como se muestra:</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure envconfig list --yes
+</pre></div>
+</div>
+<p>Después de introducir el comando anterior, se mostrará la salida como se muestra en la captura de pantalla:</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure envconfig list --yes
+******************************
+
+
+array<span class="o">(</span>0<span class="o">)</span> <span class="o">{</span>
+<span class="o">}</span>
+
+In Environment Configuration
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="parametros-alternativos">
+<h2>parámetros alternativos<a class="headerlink" href="#parametros-alternativos" title="Permalink to this headline">¶</a></h2>
+<p>En lugar de envconfig los siguientes parámetros se puede utilizar en la declaración:</p>
+<ul class="simple">
+<li>EnvironmentConfig</li>
+<li>environmentconfig</li>
+<li>Entorno-config</li>
+<li>Env-config</li>
+</ul>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Es-acomodados tanto en OS ciento y así como en ubuntu.</li>
+<li>Los parámetros utilizados en la declaración no son sensibles, que es una ventaja añadida, mientras que en comparación con otros.</li>
+<li>Este módulo conduce a los usuarios cómo configurar el entorno, cómo eliminar el medio ambiente no deseado, cómo utilizar la opción de lista
+para mostrar los entornos disponibles.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">EnvironmentConfig</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#comando-ayuda">comando Ayuda</a></li>
+<li><a class="reference internal" href="#como-configurar-el-entorno">Cómo configurar el entorno</a></li>
+<li><a class="reference internal" href="#como-eliminar-configuracion-del-entorno">Cómo eliminar configuración del entorno</a></li>
+<li><a class="reference internal" href="#como-listar-configuracion-del-entorno">Cómo listar configuración del entorno</a></li>
+<li><a class="reference internal" href="#parametros-alternativos">parámetros alternativos</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="sencryption.html"
+                        title="previous chapter">Encryption</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sfile.html"
+                        title="next chapter">File</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/senvironmentconfig.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="sfile.html" title="File"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="sencryption.html" title="Encryption"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" >PTConfigure</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

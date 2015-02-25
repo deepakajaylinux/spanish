@@ -1,0 +1,276 @@
+===================
+EnvironmentConfig
+===================
+
+sinopsis
+-------------
+
+Este módulo facilita a los usuarios en la configuración de su entorno necesario para su proyecto. Veamos cómo configurar el entorno, cómo eliminar el medio ambiente no deseado, cómo utilizar la opción de lista para mostrar los entornos disponibles en los próximos temas.
+
+comando Ayuda
+--------------------
+
+El comando de ayuda guía a los usuarios en cuanto a la finalidad del módulo, sus parámetros alternativos que se utilizan en la declaración. En él se destacan las tres funciones de configuración del entorno que son lista, configurar, borrar. También especifica la sintaxis para utilizar tres funciones principales. La sintaxis utilizada para declarar la ayuda se muestra a continuación:
+
+.. code-block:: bash
+
+		ptconfigure envconfig help
+
+La siguiente captura de pantalla muestra gráficamente sobre el funcionamiento de comando ayuda.
+
+.. code-block:: bash
+
+
+ kevell@corp:/# ptconfigure envconfig help
+ ******************************
+
+
+  This command is part of a default Module and provides you with a method by which you can
+  configure environments for your project from the command line. Currently compliant with
+  both ptdeploy and Ptconfigure.
+
+
+  EnvironmentConfig, environmentconfig, environment-config, envconfig, env-config
+
+        - list
+        List current environments
+        example: ptconfigure envconfig list --yes
+
+        - list-local
+        List current local environments
+        example: ptconfigure envconfig list-local --yes
+
+        - configure, config
+        Configure bespoke environments for your project to use
+        example: ptconfigure envconfig config
+        # below to create an empty environment to add instances to
+        example: ptconfigure envconfig config --yes
+                    --keep-current-environments # do not overwrite the current environments stored in papyrusfile
+                    --no-manual-servers # so it will not ask you to interactively enter connection details of instances
+                    --add-single-environment # otherwise it will loop for more until you specify not to
+                    --environment-name="some-name" # name of the environment to create
+                    --tmp-dir=/tmp/ # we're deprecating this soon
+
+        - configure-default, config-default
+        Configure default environments for your project to use
+        example: ptconfigure envconfig config-default
+        example: ptconfigure envconfig config-default --yes --environment-name="local-80/local-8080"
+
+        - delete, del
+        Configure the environments for your project to use
+        example: ptconfigure envconfig delete
+        example: ptconfigure envconfig del --environment-name="staging"
+
+
+ ------------------------------
+ End Help
+ ******************************
+
+Cómo configurar el entorno
+----------------------------------------------
+
+A los efectos de la configuración de los ambientes, el usuario puede utilizar el siguiente comando:
+
+.. code-block:: bash
+
+		ptconfigure envconfig config
+
+Después de introducir el comando anterior las siguientes operaciones se lleva a cabo como se muestra:
+
+Paso 1: Configure Environments Here? (Y/N)
+
+El usuario tiene a la entrada de S o N.
+
+Paso 2: Use existing environment Settings? (Y/N)
+
+El usuario tiene a la entrada de S o N.
+
+Si la entrada del usuario como Y se procederá con ya existente.
+
+Si de entrada como N, lo hará pide información sobre el medio ambiente como
+
+Value for: Name of the environment
+
+Value for: Default temp dir(Location)
+
+Después de los pasos anteriores, el usuario tiene que introducir los siguientes detalles:
+
+Enter target?
+
+Enter user?
+
+Enter password?
+
+Add Another Server? (Y/N)
+
+El usuario tiene a la entrada de S o N.
+
+Por último, la configuración del entorno consigue el éxito como se muestra en la siguiente captura de pantalla
+
+.. code-block:: bash
+
+ kevell@corp:/# ptconfigure envconfig config
+ Configure Environments Here? (Y/N) 
+ Y
+ Environment 1  : 
+ Default Settings for Any App not setup for environment  enter them now.
+ Value for: Name of this Environment
+ kevells
+ Value for: Default Temp Dir (should usually be /tmp/)
+
+ Enter Servers - this is an array of entries
+ Enter target ?
+ /home/kevells
+ Enter user ?
+ kevells
+ Enter password ?
+ 123456
+ Add Another Server? (Y/N)
+ N
+ ******************************
+
+
+ Success
+ In Environment Configuration
+ ******************************
+
+Al configurar un entorno, si el usuario desea configurar con el entorno actual, pueden utilizar el siguiente comando:
+
+.. code-block:: bash
+
+		ptconfigure envconfig config --keep-current-environments
+
+Después de introducir el comando anterior, lo hará pide los siguientes datos como se muestra en el formato de tabla:
+
+.. cssclass:: table-bordered
+
+ +-------------------------------------------+-----------+------------------------------------------------------+
+ | Parámetros                                | Opciones  | Comentarios                                          |
+ +===========================================+===========+======================================================+
+ |Configure Environments Here? (Y/N)         | Y         | Si el usuario desea configurar los entornos en el    |
+ |                                           |           | entorno actual se puede introducir como Y            |
+ +-------------------------------------------+-----------+------------------------------------------------------+
+ |Configure Environments Here? (Y/N)         | N         | Si el usuario no desea configurar los entornos en el |
+ |                                           |           | entorno actual se puede introducir como N            |
+ +-------------------------------------------+-----------+------------------------------------------------------+
+ |Use existing environment settings? (Y/N)   | Y         | Si el usuario desea utilizar la configuración del    |
+ |                                           |           | entorno existentes se puede introducir como Y.       |
+ +-------------------------------------------+-----------+------------------------------------------------------+
+ |Use existing environment settings? (Y/N)   | N         | Si el usuario no desea utilizar los valores del      |
+ |                                           |           | entorno existentes se puede introducir como N.       | 
+ +-------------------------------------------+-----------+------------------------------------------------------+
+ |Do you want to add another environment?    | Y         | Si el usuario desea agregar otro entorno, se         |
+ |(Y/N)                                      |           | puede introducir como Y.                             |
+ +-------------------------------------------+-----------+------------------------------------------------------+
+ |Do you want to add another environment?    | N         | Si el usuario no desea agregar otro entorno, se      |
+ |(Y/N)                                      |           | puede introducir como N.|                            |
+ +-------------------------------------------+-----------+------------------------------------------------------+
+
+La siguiente captura de pantalla representa gráficamente el proceso mencionado anteriormente:
+
+.. code-block:: bash
+
+
+ kevell@corp:/# ptconfigure envconfig config --keep-current-environments
+ Configure Environments Here? (Y/N) 
+ Y
+ Use existing environment settings? (Y/N) 
+ Y
+ Do you want to add another environment? (Y/N) 
+ N
+ ******************************
+
+
+ Success
+ In Environment Configuration
+ ******************************
+
+Cómo eliminar configuración del entorno
+--------------------------------------------------
+
+Si el usuario necesita para borrar la configuración del entorno, se puede introducir el siguiente comando:
+
+.. code-block:: bash
+
+		ptconfigure envconfig del --environment-name="kevells"
+
+El usuario puede especificar el nombre del entorno que desean eliminar como se muestra arriba.
+
+Después de introducir el comando anterior, se le preguntará
+
+Paso 1: Delete Environments Here?
+
+y muestra un mensaje de advertencia como
+
+.. code-block:: bash
+
+ WARNING: Deleting an environment from papyrus is final. You may be looking for boxify box-destroy instead (Y/N) 
+
+El usuario tiene que especificar Sí o No
+
+Paso 2: Environment Kevells(Name of the specified environment that is supposed to delete) found. Are you sure want to delete it? (Y/N)
+
+El usuario tiene que especificar Sí o No
+
+Por último, el entorno especificado se elimina como se muestra en la captura de pantalla.
+
+.. code-block:: bash
+
+
+
+ kevell@corp:/# ptconfigure envconfig del --environment-name="kevells"
+ Delete Environments Here?
+ WARNING: Deleting an environment from papyrus is final. You may be looking for boxify box-destroy instead (Y/N) 
+ Y
+ Environment kevells found. Are you sure you want to delete it? (Y/N) 
+ Y
+ [Pharaoh Logging] Removing environment kevells.
+ ******************************
+
+
+ Success
+ In Environment Configuration
+ ******************************
+
+Cómo listar configuración del entorno
+--------------------------------------------------
+
+Si el usuario desea ver la lista de los detalles con respecto a la configuración del entorno, pueden de entrada como se muestra:
+
+
+.. code-block:: bash
+
+		ptconfigure envconfig list --yes
+
+Después de introducir el comando anterior, se mostrará la salida como se muestra en la captura de pantalla:
+
+.. code-block:: bash
+
+
+ kevell@corp:/# ptconfigure envconfig list --yes
+ ******************************
+
+
+ array(0) {
+ }
+
+ In Environment Configuration
+ ******************************
+
+parámetros alternativos
+--------------------------------
+
+En lugar de envconfig los siguientes parámetros se puede utilizar en la declaración:
+
+* EnvironmentConfig
+* environmentconfig
+* Entorno-config
+* Env-config
+
+Beneficios
+------------
+
+* Es-acomodados tanto en OS ciento y así como en ubuntu.
+* Los parámetros utilizados en la declaración no son sensibles, que es una ventaja añadida, mientras que en comparación con otros.
+* Este módulo conduce a los usuarios cómo configurar el entorno, cómo eliminar el medio ambiente no deseado, cómo utilizar la opción de lista 
+  para mostrar los entornos disponibles.

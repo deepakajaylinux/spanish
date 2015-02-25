@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>File &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="PTConfigure" href="sptconfigure_main.html" />
+    <link rel="next" title="Gem" href="sgem.html" />
+    <link rel="prev" title="EnvironmentConfig" href="senvironmentconfig.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="sgem.html" title="Gem"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="senvironmentconfig.html" title="EnvironmentConfig"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" accesskey="U">PTConfigure</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="file">
+<h1>File<a class="headerlink" href="#file" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>Sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>El archivo es un programa estándar para reconocer el tipo de datos contenidos en un archivo de computadora. Los intentos del comando archivo para clasificar cada sistema objeto de archivo (es decir, archivo, directorio o enlace) que se proporciona a ella como un argumento (es decir, de entrada). Archivo prueba cada argumento en un intento de clasificarlo. Hay tres conjuntos de pruebas, realizadas en este orden: pruebas de sistemas de ficheros, pruebas de números mágicos y pruebas de lenguajes.</p>
+<p>La primera es una prueba del sistema de archivos, que utiliza la llamada al sistema stat para obtener información de i-nodo del objeto (que contiene información acerca de un archivo).</p>
+<p>La segunda prueba consiste en comprobar si hay un número mágico, que es un número incluido en o cerca del comienzo de muchos tipos de archivos que indica el formato de archivo (es decir, el tipo de archivo).</p>
+<p>En el caso de que las dos primeras pruebas fallan para determinar el tipo de un archivo, se emplean pruebas de lenguaje para determinar si se trata de texto plano (es decir, compuesto en su totalidad de caracteres legibles), y, en caso afirmativo, qué tipo de texto sin formato , tales como HTML (lenguaje de marcado de hipertexto) o código fuente</p>
+</div>
+<div class="section" id="ayuda-comando">
+<h2>Ayuda Comando<a class="headerlink" href="#ayuda-comando" title="Permalink to this headline">¶</a></h2>
+<p>Este comando ayuda a determinar el uso del módulo de archivo. El usuario se llega a saber acerca de las diferentes formas / formato para ejecutar este módulo. Este comando guía al usuario final a conocer el propósito de este comando. A continuación dado son el mando y la pantalla del mismo.
+.. code-block:: bash</p>
+<blockquote>
+<div>ptconfigure file help</div></blockquote>
+</div>
+<div class="section" id="crear">
+<h2>crear<a class="headerlink" href="#crear" title="Permalink to this headline">¶</a></h2>
+<p>Cuando el usuario necesita para crear un nuevo archivo de sistema, el comando a continuación se indica se ejecutará el proceso.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure file create --file<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+</pre></div>
+</div>
+<p>Las siguientes órdenes dadas sobrescribir archivos que existen</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure file create --file<span class="o">=</span><span class="s2">&quot;somename” --overwrite-existing</span>
+</pre></div>
+</div>
+<p>El siguiente comando dado para escribir los datos en el archive</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure file create –file<span class="o">=</span><span class="s2">&quot;somename” --data=&quot;</span>things to put in the file<span class="s2">&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="borrar">
+<h2>borrar<a class="headerlink" href="#borrar" title="Permalink to this headline">¶</a></h2>
+<p>Cuando el usuario necesita para eliminar un archivo del sistema, el comando a continuación se indica se ejecutará el proceso.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure file delete --file<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="existe">
+<h2>existe<a class="headerlink" href="#existe" title="Permalink to this headline">¶</a></h2>
+<p>Cuando el usuario necesita para comprobar la existencia de un archivo, el siguiente comando dado se ejecutará el proceso.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure file exists --filename<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="anexar">
+<h2>anexar<a class="headerlink" href="#anexar" title="Permalink to this headline">¶</a></h2>
+<p>Cuando el usuario necesita para añadir una línea en un archivo, el comando a continuación se indica se ejecutará el proceso.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure file append --filename<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --line<span class="o">=</span><span class="s2">&quot;a line&quot;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>La opción de línea - puede insertar una línea que se adjunta</li>
+</ul>
+</div>
+<div class="section" id="en-caso-de-tener-line">
+<h2>En caso de-tener-line<a class="headerlink" href="#en-caso-de-tener-line" title="Permalink to this headline">¶</a></h2>
+<p>Cuando el usuario necesita para asegurarse de que un archivo contiene una línea particular, el siguiente comando dado se ejecutará el proceso.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure file should-have-line --filename<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --line<span class="o">=</span><span class="s2">&quot;a line&quot;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>Opción Línea - Declaración de que necesita ser comprobada</li>
+</ul>
+</div>
+<div class="section" id="opciones">
+<h2>Opciones<a class="headerlink" href="#opciones" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="36%" />
+<col width="64%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">parámetros</th>
+<th class="head">Parámetro Alternativa</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Ptconfigure file help</td>
+<td><p class="first">Cualquiera de los dos parámetros alternativa
+se puede utilizar en el comando - File, file
+por ejemplo: Ptconfigure File Install/</p>
+<blockquote class="last">
+<div>Ptconfigure file Install|</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Especifique un archivo con formato especial que contiene pruebas sensibles a la posición;  No se realizaron pruebas sensibles a la posición
+por defecto y pruebas sensibles al contexto.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">File</a><ul>
+<li><a class="reference internal" href="#sinopsis">Sinopsis</a></li>
+<li><a class="reference internal" href="#ayuda-comando">Ayuda Comando</a></li>
+<li><a class="reference internal" href="#crear">crear</a></li>
+<li><a class="reference internal" href="#borrar">borrar</a></li>
+<li><a class="reference internal" href="#existe">existe</a></li>
+<li><a class="reference internal" href="#anexar">anexar</a></li>
+<li><a class="reference internal" href="#en-caso-de-tener-line">En caso de-tener-line</a></li>
+<li><a class="reference internal" href="#opciones">Opciones</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="senvironmentconfig.html"
+                        title="previous chapter">EnvironmentConfig</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sgem.html"
+                        title="next chapter">Gem</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/sfile.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="sgem.html" title="Gem"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="senvironmentconfig.html" title="EnvironmentConfig"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" >PTConfigure</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>
