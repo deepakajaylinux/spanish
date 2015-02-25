@@ -50,6 +50,23 @@ Jugando con módulos PTConfigure
    sgitkeysafe
    sgitlab
    sgittools
+   shaproxy
    shhvm
+   shostname
+   sinstallpackage
+   sintellij
+   sinvoke
+   sjava
+   sjenkins
+   sjenkinsplugins
+   sjenkinssudonopass
+   sjetty
+   sjmeter
+   sjrush
+   slighttpdserver
+   slogging 
+   smediatools
+   smemcached
+   sminify
    sptconfigure
    sptdeploy_cleo

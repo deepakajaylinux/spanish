@@ -1,0 +1,248 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>JenkinsPlugins &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="PTConfigure" href="sptconfigure_main.html" />
+    <link rel="next" title="JenkinsSudoNoPass" href="sjenkinssudonopass.html" />
+    <link rel="prev" title="Jenkins" href="sjenkins.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="sjenkinssudonopass.html" title="JenkinsSudoNoPass"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="sjenkins.html" title="Jenkins"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" accesskey="U">PTConfigure</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="jenkinsplugins">
+<h1>JenkinsPlugins<a class="headerlink" href="#jenkinsplugins" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>Sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Jenkins es popular para construir servidor. Jenins es una herramienta de integración continua fuente escrito en Java. Jenkins proporciona servicios de integración continua para el desarrollo de software.</p>
+<p>Plugins han sido puestos a Jenkins que extender su uso a los proyectos escritos en idiomas que no sean Java. Plugins están disponibles para la integración de Jenkins con la mayoría de los sistemas de control de versiones y las grandes bases de datos. Muchas herramientas de construcción están soportados a través de sus respectivos plugins. Plugins también pueden cambiar la forma Jenkins ve o añadir nuevas funcionalidades. Construye puede generar informes de pruebas en diversos formatos compatibles con plugins (apoyo JUnit se incluye en la actualidad) y Jenkins puede mostrar los informes y generar tendencias y hacerlos en la GUI.</p>
+</div>
+<div class="section" id="ayuda-comando">
+<h2>Ayuda Comando<a class="headerlink" href="#ayuda-comando" title="Permalink to this headline">¶</a></h2>
+<p>Este comando ayuda a determinar el uso del módulo JenkinsPlugins. El usuario se llega a saber acerca de las diferentes formas / formato para ejecutar este módulo. Este comando guía al usuario final a conocer el propósito de este comando. A continuación dado son el mando y la pantalla del mismo.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure JenkinsPlugins <span class="nb">help</span>
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure JenkinsPlugins <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>allows you to install a bunch of plugins that we recommend <span class="k">for</span>
+ PHP builds in Jenkins.
+
+ JenkinsPlugins, jenkinsplugins, jenkins-plugins, jenkins-plugs
+
+       - install
+       Installs the latest version of Jenkins Plugins <span class="k">for</span> PHP recommended by Golden Contact
+       example: ptconfigure jenkins-plugins install
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="instalacion">
+<h2>instalación<a class="headerlink" href="#instalacion" title="Permalink to this headline">¶</a></h2>
+<p>&nbsp; Este comando le permite instalar un montón de plugins que recomendamos para PHP construye en Jenkins. Si el usuario tiene que instalar el módulo Jenkins en la máquina, el siguiente comando dado se ejecutará el proceso de instalación.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure JenkinsPlugins install
+</pre></div>
+</div>
+<p>La captura de pantalla de la orden anterior se enumeran a continuación,</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure JenkinsPlugins install
+Install Jenkins Plugins? <span class="o">(</span>Y/N<span class="o">)</span>
+Y
+*******************************
+*        Pharaoh Tools        *
+*         Jenkns Plgs!        *
+*******************************
+Creating /tmp/ptconfigure-temp-script-80223312434.sh
+chmod <span class="m">755</span> /tmp/ptconfigure-temp-script-80223312434.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-80223312434.sh Permissions
+Executing /tmp/ptconfigure-temp-script-80223312434.sh
+Cloning into <span class="s1">&#39;jplugins&#39;</span>...
+remote: Counting objects: 39, <span class="k">done</span>.
+remote: Total <span class="m">39</span> <span class="o">(</span>delta 0<span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta 0<span class="o">)</span>
+Unpacking objects: 100% <span class="o">(</span>39/39<span class="o">)</span>, <span class="k">done</span>.
+Checking connectivity... <span class="k">done</span>.
+chown: invalid user: â€˜jenkinsâ€™
+jenkins: unrecognized service
+Temp File /tmp/ptconfigure-temp-script-80223312434.sh Removed
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+JenkinsPlugins: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="opciones">
+<h2>Opciones<a class="headerlink" href="#opciones" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="18%" />
+<col width="45%" />
+<col width="8%" />
+<col width="29%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parámetros</th>
+<th class="head">Parámetro Alternativa</th>
+<th class="head">Opciones</th>
+<th class="head">Comentarios</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>ptconfigure
+JenkinsPlugins Install</td>
+<td>Cualquiera de los cuatro parámetros alternativa se
+puede utilizar en comando JenkinsPlugins, jenkinsplugins,
+jenkins-plugins, jenkins-plugs Por ejemplo:
+ptconfigure jenkins-plugins Install</td>
+<td>Y(Yes)</td>
+<td>Una vez que el usuario proporciona
+la opción, sistema comienza proceso
+de instalación</td>
+</tr>
+<tr class="row-odd"><td>ptconfigure
+JenkinsPlugins Install</td>
+<td>Cualquiera de los cuatro parámetros alternativa se
+puede utilizar en comando JenkinsPlugins, jenkinsplugins,
+jenkins-plugins, jenkins-plugs Por ejemplo:
+ptconfigure jenkins-plugins Install|</td>
+<td>N(No)</td>
+<td>Una vez que el usuario proporciona
+la opción, Sistema Detiene proceso
+de instalación</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>El plug-in le dará un informe sobre cuánto se utilizará todos los plugins en todos sus trabajos. Por lo tanto, se analizará la extensión
+utilizada puntos de cada puesto de trabajo.</li>
+<li>Este plugin te da la posibilidad de analizar el uso de los plugins instalados.</li>
+<li>Sensitibilidad caso</li>
+<li>Well-to-do en Ubuntu y CentOS.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">JenkinsPlugins</a><ul>
+<li><a class="reference internal" href="#sinopsis">Sinopsis</a></li>
+<li><a class="reference internal" href="#ayuda-comando">Ayuda Comando</a></li>
+<li><a class="reference internal" href="#instalacion">instalación</a></li>
+<li><a class="reference internal" href="#opciones">Opciones</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="sjenkins.html"
+                        title="previous chapter">Jenkins</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sjenkinssudonopass.html"
+                        title="next chapter">JenkinsSudoNoPass</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/sjenkinsplugins.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="sjenkinssudonopass.html" title="JenkinsSudoNoPass"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="sjenkins.html" title="Jenkins"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" >PTConfigure</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

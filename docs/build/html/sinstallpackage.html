@@ -1,0 +1,260 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>InstallPackage &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="PTConfigure" href="sptconfigure_main.html" />
+    <link rel="next" title="IntelliJ" href="sintellij.html" />
+    <link rel="prev" title="Hostname" href="shostname.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="sintellij.html" title="IntelliJ"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="shostname.html" title="Hostname"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" accesskey="U">PTConfigure</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="installpackage">
+<h1>InstallPackage<a class="headerlink" href="#installpackage" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Instalar paquete son salidas lógicas diferenciales comúnmente utilizados en los circuitos de distribución de reloj de alta velocidad. Este comando proporciona al usuario instalar el paquete, construir servidor, cliente dev, servidor de prueba, servidor dev, la producción. Esta función principal mandamiento es lista preconfigurada de software. Es adecuado con Ubuntu y CentOS.</p>
+</div>
+<div class="section" id="comando-ayuda">
+<h2>comando Ayuda<a class="headerlink" href="#comando-ayuda" title="Permalink to this headline">¶</a></h2>
+<p>El comando de ayuda conduce a los usuarios en cuanto a la finalidad y al igual que sobre las opciones que se incluyen en los módulos InstallPackage. El comando help enumera los parámetros alternativos de InstallPackage bajo módulo ptconfigure. También describe la sintaxis para la instalación. El comando de ayuda para el módulo InstallPackage se muestra a continuación.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure installpackage <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La siguiente captura de pantalla muestra el esfuerzo total del módulo InstallPackage.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure InstallPackage <span class="nb">help</span>
+
+******************************
+
+
+ This <span class="nb">command </span>is part of Core and provides you  with a method by which you can perform some default CLI Installs of
+ different types of box.
+
+ InstallPackage, installpackage, installpack, install-pack, install, inpack, install-package
+
+   - dev-client
+     install a dev client machine <span class="k">for</span> you to work on, a bunch of IDE<span class="s1">&#39;s, DB&#39;</span>s and a <span class="nb">complete set </span>of the
+     tools you need to start work immediately.
+     example: ptconfigure install autopilot dev-client
+
+   - dev-server
+     Install the preconfigured list of software <span class="k">for</span> a developers server.
+     example: ptconfigure install autopilot dev-server
+
+   - <span class="nb">test</span>-server
+     Install the preconfigured list of software <span class="k">for</span> a testing server.
+     example: ptconfigure install autopilot <span class="nb">test</span>-server
+
+   - build-server
+     Install the preconfigured list of software <span class="k">for</span> a build server.
+     example: ptconfigure install autopilot <span class="nb">test</span>-server
+
+   - production
+     Install the preconfigured list of software <span class="k">for</span> a production server.
+     example: ptconfigure install autopilot <span class="nb">test</span>-server
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="instalacion">
+<h2>instalación<a class="headerlink" href="#instalacion" title="Permalink to this headline">¶</a></h2>
+<p>Instalación incluye la instalación de InstallPackage requerida para hacer la instalación en una versión actualizada. Es un proceso de manifiesto para instalar módulo InstallPackage bajo ptconfigure. InstallPackage sólo por el uso de la orden dada a continuación,</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure installpackage Install
+</pre></div>
+</div>
+<p>Después de vitalizar el comando se catequizar entrada.</p>
+<p>Cuando la entrada de usuario como si automáticamente se instalará InstallPackage con la comprobación del sistema. Si no salir de la instalación. La siguiente captura de pantalla de demostrar InstallPackage y sus funciones.</p>
+<div class="highlight-bash"><div class="highlight"><pre>
+</pre></div>
+</div>
+</div>
+<div class="section" id="parametros-alternativos">
+<h2>parámetros alternativos<a class="headerlink" href="#parametros-alternativos" title="Permalink to this headline">¶</a></h2>
+<p>Los siguientes son los parámetros alternativos que pueden ser definidos en las declaraciones:</p>
+<p>InstallPackage, installpackage, installpack, install, inpack, installpackage.</p>
+</div>
+<div class="section" id="dev-cliente">
+<h2>Dev-cliente<a class="headerlink" href="#dev-cliente" title="Permalink to this headline">¶</a></h2>
+<p>Este comando se utiliza para trabajar en un montón de Entorno de Desarrollo Integrado de la base de datos de y un juego completo de las herramientas que el usuario necesita para empezar a trabajar de inmediato. El siguiente comando se utiliza para la máquina cliente prog.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure install autopilot dev-client
+</pre></div>
+</div>
+<p>Después de entrada como por encima de dicho comando se inicia proceso de instalación.</p>
+<p>La siguiente instantánea muestra sus funciones.</p>
+<div class="highlight-bash"><div class="highlight"><pre>
+</pre></div>
+</div>
+</div>
+<div class="section" id="dev-servidor">
+<h2>Dev-servidor<a class="headerlink" href="#dev-servidor" title="Permalink to this headline">¶</a></h2>
+<p>Este comando se utiliza para instalar preconfigura lista de software para el servidor de un desarrollador. Piloto automático actúa como un papel vital en este proceso. Para calcular estas funciones correctamente ptconfigure recomienda dev-servidor utilizando este comando.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure install autopilot dev-server
+</pre></div>
+</div>
+<p>La captura de pantalla guía al usuario acerca de su función.</p>
+<div class="highlight-bash"><div class="highlight"><pre>
+</pre></div>
+</div>
+</div>
+<div class="section" id="test-servidor">
+<h2>Test-servidor<a class="headerlink" href="#test-servidor" title="Permalink to this headline">¶</a></h2>
+<p>Aquí piloto automático actúa un papel importante en el servidor de prueba. Se utiliza para instalar la lista preconfigurada de software para el servidor de prueba. Software también dispone de pruebas. El siguiente comando utilizado para instalar el servidor de prueba.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure install autopilot <span class="nb">test</span>-server
+</pre></div>
+</div>
+<p>La captura de pantalla guía al usuario acerca de su función.</p>
+<div class="highlight-bash"><div class="highlight"><pre>
+</pre></div>
+</div>
+</div>
+<div class="section" id="construir-servidor">
+<h2>construir servidor<a class="headerlink" href="#construir-servidor" title="Permalink to this headline">¶</a></h2>
+<p>Este comando se utiliza para instalar preconfigura lista de software para un servidor de compilación. Piloto automático actúa como un papel vital en este proceso. Para calcular estas funciones correctamente ptconfigure recomienda construir-servidor utilizando este comando.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure install autopilot build-server
+</pre></div>
+</div>
+<p>La captura de pantalla guía al usuario acerca de su función.</p>
+<div class="highlight-bash"><div class="highlight"><pre>
+</pre></div>
+</div>
+</div>
+<div class="section" id="produccion">
+<h2>producción<a class="headerlink" href="#produccion" title="Permalink to this headline">¶</a></h2>
+<p>Este comando se utiliza para instalar preconfigura lista de software para un servidor de producción. Piloto automático actúa como un papel vital en este proceso. Para calcular estas funciones correctamente ptconfigure recomienda servidor de producción mediante el uso de este comando.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure install autopilot build-server
+</pre></div>
+</div>
+<p>La captura de pantalla guía al usuario acerca de su función.</p>
+<div class="highlight-bash"><div class="highlight"><pre>
+</pre></div>
+</div>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Sensitibilidad caso.</li>
+<li>Well-to-do en Ubuntu y CentOS.</li>
+<li>Instalación dev-servidor, dev-cliente, la producción, construir-servidor, prueba de servidor es una ventaja añadida para este módulo.</li>
+<li>Piloto automático actúa como un papel vital.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">InstallPackage</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#comando-ayuda">comando Ayuda</a></li>
+<li><a class="reference internal" href="#instalacion">instalación</a></li>
+<li><a class="reference internal" href="#parametros-alternativos">parámetros alternativos</a></li>
+<li><a class="reference internal" href="#dev-cliente">Dev-cliente</a></li>
+<li><a class="reference internal" href="#dev-servidor">Dev-servidor</a></li>
+<li><a class="reference internal" href="#test-servidor">Test-servidor</a></li>
+<li><a class="reference internal" href="#construir-servidor">construir servidor</a></li>
+<li><a class="reference internal" href="#produccion">producción</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="shostname.html"
+                        title="previous chapter">Hostname</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sintellij.html"
+                        title="next chapter">IntelliJ</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/sinstallpackage.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="sintellij.html" title="IntelliJ"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="shostname.html" title="Hostname"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" >PTConfigure</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

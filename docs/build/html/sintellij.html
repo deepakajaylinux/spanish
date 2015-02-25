@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>IntelliJ &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="PTConfigure" href="sptconfigure_main.html" />
+    <link rel="next" title="Invoke" href="sinvoke.html" />
+    <link rel="prev" title="InstallPackage" href="sinstallpackage.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="sinvoke.html" title="Invoke"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="sinstallpackage.html" title="InstallPackage"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" accesskey="U">PTConfigure</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="intellij">
+<h1>IntelliJ<a class="headerlink" href="#intellij" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>Sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>En este módulo se acelere la instalación de IntelliJ que es un Brains Jet IDE con una versión más reciente. La Plataforma IntelliJ es una plataforma para la construcción, IDEs cuenta el idioma inteligentes con un conjunto completo ofÂ componentes, que incluye sistema virtual de archivos, marco de interfaz de usuario, editor de texto, léxico, análisis sintáctico, árboles de sintaxis abstracta y otra infraestructura específica del idioma, marcos de aplicación del navegación, completado de código, las inspecciones, las intenciones, refactorizaciones, integración de control de versiones, marco depurador, corredor gráfica de prueba de unidad.</p>
+<p>El código fuente de la plataforma IntelliJ está cubierto por la licencia Apache 2.0. Esto significa que usted puede construir tanto de código abierto y los productos comerciales en la parte superior de la plataforma sin pagar regalías a JetBrains. Veamos acerca de las funcionalidades de IntelliJ bajo este módulo.</p>
+</div>
+<div class="section" id="ayuda-comando">
+<h2>Ayuda Comando<a class="headerlink" href="#ayuda-comando" title="Permalink to this headline">¶</a></h2>
+<p>El comando help guía a los usuarios en cuanto a la finalidad y al igual que sobre las opciones que se incluyen en el módulo de IntelliJ. En él se enumeran los parámetros alternativos de módulo de IntelliJ. También describe la sintaxis para instalar el módulo de IntelliJ. El comando de ayuda para el módulo de IntelliJ se muestra a continuación.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure IntelliJ <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La sintaxis para declarar el comando de ayuda no es sensible a mayúsculas, que es una ventaja añadida. La siguiente captura de pantalla a visualizar sobre el comando de ayuda en virtud de IntelliJ.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure IntelliJ <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>allows you to install Intellij, the JetBrains IDE
+
+ IntelliJ, intellij
+
+       - install
+       Installs the latest version of Developer Tools
+       example: ptconfigure gittools install
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="instalacion">
+<h2>instalación<a class="headerlink" href="#instalacion" title="Permalink to this headline">¶</a></h2>
+<p>El comando utilizado para instalar el JRush a la máquina de los usuarios se muestra a continuación.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure IntelliJ install
+</pre></div>
+</div>
+<p>Después de introducir el comando anterior, las siguientes operaciones se produce:</p>
+<ul class="simple">
+<li>Se solicita al usuario que introduzca la versión IntelliJ.</li>
+<li>Asegura la disponibilidad de módulos y no comprueba la versión.</li>
+<li>Si no existe el módulo en la máquina de los usuarios, comienza la instalación.</li>
+<li>Durante la instalación lo hará pide al usuario que introduzca instalar el Java Directory.</li>
+</ul>
+<p>Por último, la instalación de IntelliJ se completó. La captura de pantalla como se muestra a continuación muestra el proceso de instalación de IntelliJ.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure IntelliJ install
+Install IntelliJ IDE? <span class="o">(</span>Y/N<span class="o">)</span>
+Y
+*******************************
+*        Pharaoh Tools        *
+*         IntelliJ IDE        *
+*******************************
+Enter IntelliJ Version
+PHP Notice:  Undefined offset: <span class="m">0</span> in /opt/ptconfigure/ptconfigure/src/Core/Base/Model/Base.php on line 187
+<span class="o">(</span>0<span class="o">)</span>
+PHP Notice:  Undefined offset: <span class="m">1</span> in /opt/ptconfigure/ptconfigure/src/Core/Base/Model/Base.php on line 187
+<span class="o">(</span>1<span class="o">)</span>
+
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Ensure module install is not checking versions
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Module Java reports itself as Installed
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Not installing as already installed
+Creating /tmp/ptconfigure-temp-script-98824051629.sh
+chmod <span class="m">755</span> /tmp/ptconfigure-temp-script-98824051629.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-98824051629.sh Permissions
+Executing /tmp/ptconfigure-temp-script-98824051629.sh
+Cloning into <span class="s1">&#39;intellij&#39;</span>...
+remote: Counting objects: 1026, <span class="k">done</span>.
+remote: Total <span class="m">1026</span> <span class="o">(</span>delta 0<span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta 0<span class="o">)</span>
+Receiving objects: 100% <span class="o">(</span>1026/1026<span class="o">)</span>, 205.06 MiB <span class="p">|</span> 410.00 KiB/s, <span class="k">done</span>.
+Resolving deltas: 100% <span class="o">(</span>60/60<span class="o">)</span>, <span class="k">done</span>.
+Checking connectivity... <span class="k">done</span>.
+Checking out files: 100% <span class="o">(</span>744/744<span class="o">)</span>, <span class="k">done</span>.
+Temp File /tmp/ptconfigure-temp-script-98824051629.sh Removed
+Program Executor Deleted <span class="k">if</span> existed
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+IntelliJ: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="parametros">
+<h2>parámetros<a class="headerlink" href="#parametros" title="Permalink to this headline">¶</a></h2>
+<p>En lugar de IntelliJ podemos utilizar, intelliJ</p>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Este módulo facilita al usuario en la instalación de IntelliJ con la última versión.</li>
+<li>Los parámetros utilizados en la declaración de la ayuda y las instalaciones no son sensibles, que se añade la ventaja, mientras que en
+comparación con otros.</li>
+<li>Es-acomodados tanto en OS ciento y así como en ubuntu.</li>
+<li>El estado requiere se supervisan con claridad durante la instalación.</li>
+<li>Durante la instalación, el usuario puede introducir la versión que desee y, así como Java Instale Directory.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">IntelliJ</a><ul>
+<li><a class="reference internal" href="#sinopsis">Sinopsis</a></li>
+<li><a class="reference internal" href="#ayuda-comando">Ayuda Comando</a></li>
+<li><a class="reference internal" href="#instalacion">instalación</a></li>
+<li><a class="reference internal" href="#parametros">parámetros</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="sinstallpackage.html"
+                        title="previous chapter">InstallPackage</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sinvoke.html"
+                        title="next chapter">Invoke</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/sintellij.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="sinvoke.html" title="Invoke"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="sinstallpackage.html" title="InstallPackage"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" >PTConfigure</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

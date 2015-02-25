@@ -1,0 +1,258 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Jenkins &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="PTConfigure" href="sptconfigure_main.html" />
+    <link rel="next" title="JenkinsPlugins" href="sjenkinsplugins.html" />
+    <link rel="prev" title="JAVA" href="sjava.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="sjenkinsplugins.html" title="JenkinsPlugins"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="sjava.html" title="JAVA"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" accesskey="U">PTConfigure</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="jenkins">
+<h1>Jenkins<a class="headerlink" href="#jenkins" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Jenkins es popular para construir servidor. Jenkins es una herramienta de integración continua de código abierto escrito en Java. Jenkins proporciona servicios de integración continua para el desarrollo de software. Se trata de un sistema en funcionamiento basado en servidor en un contenedor de servlets como Apache Tomcat.</p>
+<p>Funcionalidad central de Jenkins y flexibilidad permiten que se ajuste en una variedad de entornos y puede ayudar a simplificar el proceso de desarrollo para todos los grupos de interés involucrados</p>
+</div>
+<div class="section" id="ayuda-comando">
+<h2>Ayuda Comando<a class="headerlink" href="#ayuda-comando" title="Permalink to this headline">¶</a></h2>
+<p>Este comando ayuda a determinar el uso del módulo de Jenkins. El usuario se llega a saber acerca de las diferentes formas / formato para ejecutar este módulo. Este comando guía al usuario final a conocer el propósito de este comando.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure jenkins <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La captura de pantalla para el comando anterior se enumeran a continuación,</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure jenkins <span class="nb">help</span>
+******************************
+
+
+This <span class="nb">command </span>allows you to install Jenkins, the popular Build Server.
+
+Jenkins, jenkins
+
+- install
+Installs Jenkins through apt-get
+example: ptconfigure jenkins install
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="instalacion">
+<h2>instalación<a class="headerlink" href="#instalacion" title="Permalink to this headline">¶</a></h2>
+<p>Si el usuario tiene que instalar el módulo Jenkins en la máquina, el siguiente comando dado se ejecutará el proceso de instalación.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure jenkins install
+</pre></div>
+</div>
+<p>La captura de pantalla de la orden anterior se enumeran a continuación,</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure jenkins install
+Install Jenkins? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+*******************************
+*        Pharaoh Tools        *
+*          ! Jenkins !        *
+*******************************
+Creating /tmp/ptconfigure-temp-script-14615194352.sh
+chmod <span class="m">755</span> /tmp/ptconfigure-temp-script-14615194352.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-14615194352.sh Permissions
+Executing /tmp/ptconfigure-temp-script-14615194352.sh
+E: Could not get lock /var/lib/apt/lists/lock - open <span class="o">(</span>11: Resource temporarily unavailable<span class="o">)</span>
+E: Unable to lock directory /var/lib/apt/lists/
+OK
+Temp File /tmp/ptconfigure-temp-script-14615194352.sh Removed
+W: Duplicate sources.list entry http://dl.google.com/linux/chrome/deb/ stable/main amd64 Packages <span class="o">(</span>/var/lib/apt/lists/dl.google.com_linux_chrome_deb_dists_stable_main_binary-amd64_Packages<span class="o">)</span>
+W: Duplicate sources.list entry http://dl.google.com/linux/chrome/deb/ stable/main i386 Packages <span class="o">(</span>/var/lib/apt/lists/dl.google.com_linux_chrome_deb_dists_stable_main_binary-i386_Packages<span class="o">)</span>
+W: You may want to run apt-get update to correct these problems
+W: Duplicate sources.list entry http://dl.google.com/linux/chrome/deb/ stable/main amd64 Packages <span class="o">(</span>/var/lib/apt/lists/dl.google.com_linux_chrome_deb_dists_stable_main_binary-amd64_Packages<span class="o">)</span>
+W: Duplicate sources.list entry http://dl.google.com/linux/chrome/deb/ stable/main i386 Packages <span class="o">(</span>/var/lib/apt/lists/dl.google.com_linux_chrome_deb_dists_stable_main_binary-i386_Packages<span class="o">)</span>
+W: You may want to run apt-get update to correct these problems
+E: Unable to correct problems, you have held broken packages.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Some packages could not be installed. This may mean that you have
+requested an impossible situation or <span class="k">if</span> you are using the unstable
+distribution that some required packages have not yet been created
+or been moved out of Incoming.
+The following information may <span class="nb">help </span>to resolve the situation:
+
+The following packages have unmet dependencies:
+jenkins : Depends: daemon but it is not installable
+          Depends: default-jre-headless but it is not installable or
+                   java-runtime-headless
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package jenkins from the Packager Apt did not execute correctly
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+Jenkins: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="opciones">
+<h2>Opciones<a class="headerlink" href="#opciones" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="23%" />
+<col width="29%" />
+<col width="12%" />
+<col width="36%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parámetros</th>
+<th class="head">Parámetro Alternativa</th>
+<th class="head">Opciones</th>
+<th class="head">Comentarios</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>ptconfigure Jenkins Install</td>
+<td>En lugar de utilizar Jenkins, el
+usuario puede añadir jenkins</td>
+<td>Y(Yes)</td>
+<td>Una vez que el usuario proporciona la
+opción, sistema comienza proceso de
+instalación</td>
+</tr>
+<tr class="row-odd"><td>ptconfigure Jenkins Install</td>
+<td>En lugar de utilizar Jenkins, el
+usuario puede añadir jenkins</td>
+<td>N(No)</td>
+<td>Una vez que el usuario proporciona la
+opción, Sistema detiene proceso de
+instalación|</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Detección de errores Inmediata</li>
+<li>No paso de integración en el ciclo de vida</li>
+<li>Un sistema de despliegue en cualquier punto dado</li>
+<li>Registro de la evolución del proyecto</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Jenkins</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#ayuda-comando">Ayuda Comando</a></li>
+<li><a class="reference internal" href="#instalacion">instalación</a></li>
+<li><a class="reference internal" href="#opciones">Opciones</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="sjava.html"
+                        title="previous chapter">JAVA</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sjenkinsplugins.html"
+                        title="next chapter">JenkinsPlugins</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/sjenkins.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="sjenkinsplugins.html" title="JenkinsPlugins"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="sjava.html" title="JAVA"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" >PTConfigure</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

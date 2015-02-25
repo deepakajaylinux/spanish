@@ -1,0 +1,315 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>HAProxy &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="PTConfigure" href="sptconfigure_main.html" />
+    <link rel="next" title="HHVM" href="shhvm.html" />
+    <link rel="prev" title="Git tools" href="sgittools.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="shhvm.html" title="HHVM"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="sgittools.html" title="Git tools"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" accesskey="U">PTConfigure</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="haproxy">
+<h1>HAProxy<a class="headerlink" href="#haproxy" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>HAProxy es una solución de alta disponibilidad libre, de código abierto, proporcionando equilibrio de carga y proxy para TCP y aplicaciones basadas en HTTP mediante la difusión de las solicitudes a través de múltiples servidores. Tiene fama de ser rápido y eficiente (en términos de uso del procesador y la memoria).</p>
+</div>
+<div class="section" id="ayuda-comando">
+<h2>Ayuda Comando<a class="headerlink" href="#ayuda-comando" title="Permalink to this headline">¶</a></h2>
+<p>Este comando ayuda a determinar el uso del módulo HAProxy. El usuario se llega a saber acerca de las diferentes formas / formato para ejecutar este módulo. Este comando le guiará al usuario final para saber cuándo y cómo el comando que desea utilizar. A continuación dado son el mando y la pantalla del mismo.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure HAproxy <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La representación gráfica de la orden anterior se enumeran a continuación,</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure HAProxy <span class="nb">help</span>
+
+******************************
+
+
+ This module provides installs HA Proxy Server
+
+ HAProxy, ha-proxy, haproxy
+
+       - install
+       Installs HA Proxy Server
+       example: ptconfigure haproxy install
+
+       - configure
+       Configure Load Balancing with HA Proxy Server
+       example: ptconfigure haproxy configure
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="instalacion">
+<h2>instalación<a class="headerlink" href="#instalacion" title="Permalink to this headline">¶</a></h2>
+<p>Podemos instalar HAProxy usando el gestor de paquetes de la distribución. Cuando el usuario tiene que instalar el módulo HAProxy en máquina. El siguiente comando dado se ejecutará el proceso de instalación.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure HAproxy install
+</pre></div>
+</div>
+<p>La representación gráfica de la orden anterior se enumeran a continuación,</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure haproxy install
+Install HA Proxy Server? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+*******************************
+*        Pharaoh Tools        *
+*         HA Proxy Server!        *
+*******************************
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Package haproxy from the Packager Apt is already installed, so not installing
+HA Proxy Init script config file /etc/default/haproxy added
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Restarting haproxy service
+<span class="o">[</span>ALERT<span class="o">]</span> 041/154050 <span class="o">(</span>17460<span class="o">)</span> : parsing <span class="o">[</span>/etc/haproxy/haproxy.cfg:25<span class="o">]</span> : unknown keyword <span class="s1">&#39;1&#39;</span> in <span class="s1">&#39;defaults&#39;</span> section
+<span class="o">[</span>ALERT<span class="o">]</span> 041/154050 <span class="o">(</span>17460<span class="o">)</span> : parsing <span class="o">[</span>/etc/haproxy/haproxy.cfg:32<span class="o">]</span> : unknown option <span class="s1">&#39;tcp-check&#39;</span>.
+<span class="o">[</span>ALERT<span class="o">]</span> 041/154050 <span class="o">(</span>17460<span class="o">)</span> : parsing <span class="o">[</span>/etc/haproxy/haproxy.cfg:34<span class="o">]</span> : unknown keyword <span class="s1">&#39;tcp-check&#39;</span> in <span class="s1">&#39;backend&#39;</span> section
+<span class="o">[</span>ALERT<span class="o">]</span> 041/154050 <span class="o">(</span>17460<span class="o">)</span> : parsing <span class="o">[</span>/etc/haproxy/haproxy.cfg:35<span class="o">]</span> : unknown keyword <span class="s1">&#39;tcp-check&#39;</span> in <span class="s1">&#39;backend&#39;</span> section
+<span class="o">[</span>ALERT<span class="o">]</span> 041/154050 <span class="o">(</span>17460<span class="o">)</span> : parsing <span class="o">[</span>/etc/haproxy/haproxy.cfg:36<span class="o">]</span> : unknown keyword <span class="s1">&#39;tcp-check&#39;</span> in <span class="s1">&#39;backend&#39;</span> section
+<span class="o">[</span>ALERT<span class="o">]</span> 041/154050 <span class="o">(</span>17460<span class="o">)</span> : parsing <span class="o">[</span>/etc/haproxy/haproxy.cfg:37<span class="o">]</span> : unknown keyword <span class="s1">&#39;tcp-check&#39;</span> in <span class="s1">&#39;backend&#39;</span> section
+<span class="o">[</span>ALERT<span class="o">]</span> 041/154050 <span class="o">(</span>17460<span class="o">)</span> : parsing <span class="o">[</span>/etc/haproxy/haproxy.cfg:38<span class="o">]</span> : unknown keyword <span class="s1">&#39;tcp-check&#39;</span> in <span class="s1">&#39;backend&#39;</span> section
+<span class="o">[</span>ALERT<span class="o">]</span> 041/154050 <span class="o">(</span>17460<span class="o">)</span> : parsing <span class="o">[</span>/etc/haproxy/haproxy.cfg:39<span class="o">]</span> : unknown keyword <span class="s1">&#39;tcp-check&#39;</span> in <span class="s1">&#39;backend&#39;</span> section
+<span class="o">[</span>ALERT<span class="o">]</span> 041/154050 <span class="o">(</span>17460<span class="o">)</span> : Error<span class="o">(</span>s<span class="o">)</span> found in configuration file : /etc/haproxy/haproxy.cfg
+<span class="o">[</span>ALERT<span class="o">]</span> 041/154050 <span class="o">(</span>17460<span class="o">)</span> : Fatal errors found in configuration.
+* Restarting haproxy haproxy
+  ...fail!
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+HAProxy: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="opciones">
+<h2>Opciones<a class="headerlink" href="#opciones" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="21%" />
+<col width="27%" />
+<col width="12%" />
+<col width="41%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parámetros</th>
+<th class="head">Parámetro Alternativa</th>
+<th class="head">Opciones</th>
+<th class="head">Comentarios</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>ptconfigure HAProxy
+Install</td>
+<td>HAProxy , ha-proxy, haproxy</td>
+<td>Y(Yes)</td>
+<td>El sistema se inicia proceso de instalación</td>
+</tr>
+<tr class="row-odd"><td>ptconfigure HAProxy
+Install|</td>
+<td>HAProxy , ha-proxy, haproxy</td>
+<td>N(No)</td>
+<td>El sistema detiene proceso de instalación</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="configuracion">
+<h2>configuración<a class="headerlink" href="#configuracion" title="Permalink to this headline">¶</a></h2>
+<p>Este comando ayuda a la hora de configurar el equilibrio de carga con servidor HAProxy. Una vez que se ejecute el comando a continuación se indica el sistema le proporciona el valor predeterminado para cada sección, si hay algún cambio que hacer, el usuario puede proporcionar los datos.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure HAproxy configure
+</pre></div>
+</div>
+<p>La captura de pantalla para el comando anterior se enumeran a continuación,</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure haproxy configure
+
+*******************************
+*        Pharaoh Tools        *
+*         HA Proxy Server!        *
+*******************************
+
+What is the environment name you want to balance load to?
+
+PHP Notice:  Undefined index:  in /opt/ptconfigure/ptconfigure/src/Modules/HAProxy/Model/HAProxyConfigureUbuntu.php on line 102
+PHP Notice:  Undefined index:  in /opt/ptconfigure/ptconfigure/src/Modules/HAProxy/Model/HAProxyConfigureUbuntu.php on line 102
+PHP Warning:  Invalid argument supplied <span class="k">for</span> foreach<span class="o">()</span> in /opt/ptconfigure/ptconfigure/src/Modules/HAProxy/Model/HAProxyConfigureUbuntu.php on line 75
+Set non-default value <span class="k">for</span> global_log? Default is 127.0.0.1 local0 notice <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> global_maxconn? Default is <span class="m">20000</span> <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> global_user? Default is haproxy <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> global_group? Default is haproxy <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> defaults_log? Default is global <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> defaults_mode? Default is http <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> defaults_option_string? Default is option dontlognull
+   option redispatch <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> defaults_retries? Default is <span class="m">3</span> <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> defaults_timeout_connect? Default is <span class="m">5000</span> <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> defaults_timeout_client? Default is <span class="m">10000</span> <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> defaults_timeout_server? Default is <span class="m">10000</span> <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> listen_appname? Default is appname <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> listen_ip_port? Default is 0.0.0.0:80 <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> listen_mode? Default is http <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> listen_balance? Default is roundrobin <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> listen_option_string? Default is option httpclose
+   option forwardfor <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> listen_server_string? Default is  <span class="o">(</span>Y/N<span class="o">)</span>
+
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+HA Proxy Server: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Todas las aplicaciones de acceso al clúster a través de una sola dirección IP. La topología de la base de datos de clúster enmascarado detrás   HAProxy.</li>
+<li>Es posible añadir o eliminar nodos de base de datos sin ningún cambio en las aplicaciones.</li>
+<li>Una vez que el número máximo de conexiones de bases de datos (MySQL) alcanzó, HAProxy colas nuevas conexiones adicionales. Esto es una clara
+forma de peticiones de conexión de base de datos de estrangulamiento y logra protección de sobrecarga.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">HAProxy</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#ayuda-comando">Ayuda Comando</a></li>
+<li><a class="reference internal" href="#instalacion">instalación</a></li>
+<li><a class="reference internal" href="#opciones">Opciones</a></li>
+<li><a class="reference internal" href="#configuracion">configuración</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="sgittools.html"
+                        title="previous chapter">Git tools</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="shhvm.html"
+                        title="next chapter">HHVM</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/shaproxy.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="shhvm.html" title="HHVM"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="sgittools.html" title="Git tools"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" >PTConfigure</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

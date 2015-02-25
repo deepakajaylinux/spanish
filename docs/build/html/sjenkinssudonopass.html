@@ -1,0 +1,249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>JenkinsSudoNoPass &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="PTConfigure" href="sptconfigure_main.html" />
+    <link rel="next" title="Jetty" href="sjetty.html" />
+    <link rel="prev" title="JenkinsPlugins" href="sjenkinsplugins.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="sjetty.html" title="Jetty"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="sjenkinsplugins.html" title="JenkinsPlugins"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" accesskey="U">PTConfigure</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="jenkinssudonopass">
+<h1>JenkinsSudoNoPass<a class="headerlink" href="#jenkinssudonopass" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Jenkins es un servidor de creación popular. JenkinsÂ proporciona servicios de integración continua foros de desarrollo de software. Jenkinssudonopass tolera el usuario para unir una entrada al archivo sudo sistema. Esto puso a los jenkins usuario para funcionar con fuera passward. Esto es adecuado para Ubuntu y centOS.</p>
+</div>
+<div class="section" id="comando-ayuda">
+<h2>comando Ayuda<a class="headerlink" href="#comando-ayuda" title="Permalink to this headline">¶</a></h2>
+<p>El comando ayuda a controlar los usuarios en cuanto a la finalidad y, así como acerca de las opciones que se incluyen en el módulo jenkinssudonopass. Las listas de comandos de ayuda fuera de los parámetros alternativos de jenkinssudonopass. También se describe la sintaxis para utilizar jenkinssudonopass a Securify. El comando de ayuda para jenkinssudonopass es la siguiente.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure Jenkinssudonopass <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La sintaxis para declarar el comando de ayuda no es sensible a mayúsculas, que es una ventaja añadida. La siguiente captura de pantalla a visualizar sobre el comando de ayuda bajo jenkinssudonopass.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure JenkinsSudoNoPass <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>allows you to add an entry to the system sudo file that will
+ allow your Jenkins user to have passwordless sudo. This is required <span class="k">for</span>
+ quite a few of the Jenkins builds provided by Golden Contact, as Jenkins
+ will perform <span class="nb">test </span>execution, software installs and more, silently.
+
+ JenkinsSudoNoPass, jenkinssudonopass, jenkins-sudo-nopass, jenkins-sudo-passwordless
+
+       - install
+       Installs the Jenkins sudo without password entry
+       example: ptconfigure jenkins-sudo-nopass install
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="instalacion">
+<h2>instalación<a class="headerlink" href="#instalacion" title="Permalink to this headline">¶</a></h2>
+<p>Este comando autoriza a instalar jenkins sudo sin entrada de palabra pase. Cuando el usuario desea instalar jenkinssudonopass el comando siguiente guía al usuario para instalar.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure Jenkinssudonopass install
+</pre></div>
+</div>
+<p>Después de escribir este comando el sistema pide que los usuarios desean. El otro proceso explica la instalación a través de la pantalla.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure jenkinssudonopass install
+Install Sudo w/o Pass <span class="k">for</span> Jenkins User? <span class="o">(</span>Y/N<span class="o">)</span>
+Y
+*******************************
+*        Pharaoh Tools        *
+*         Jenk Sudo Ps        *
+*******************************
+Creating /tmp/ptconfigure-temp-script-2682022801.sh
+chmod <span class="m">755</span> /tmp/ptconfigure-temp-script-2682022801.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-2682022801.sh Permissions
+Executing /tmp/ptconfigure-temp-script-2682022801.sh
+The following will be written to /etc/sudoers
+Please check <span class="k">if</span> it looks wrong
+It may <span class="nb">break </span>your system <span class="k">if</span> wrong !!!
+jenkins <span class="nv">ALL</span><span class="o">=</span>NOPASSWD: ALL
+Temp File /tmp/ptconfigure-temp-script-2682022801.sh Removed
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+JenkinsSudoNoPass: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="opciones">
+<h2>Opciones<a class="headerlink" href="#opciones" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="22%" />
+<col width="31%" />
+<col width="10%" />
+<col width="37%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parámetros</th>
+<th class="head">Parámetro Alternativa</th>
+<th class="head">Opciones</th>
+<th class="head">Comentarios</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Install sudo w/o for
+Jenkins user? (Y/N)</td>
+<td>En lugar de jenkinssudonopass, las
+siguientes alternativas también se
+pueden utilizar: JenkinsSudoNoPass
+, jenkinssudonopass,
+jenkins-sudo-nopass,
+jenkins-sudo-passwordless</td>
+<td>Y(Yes)</td>
+<td>Si el usuario desea continuar el proceso
+de instalación se puede introducir como Y.</td>
+</tr>
+<tr class="row-odd"><td>Install sudo w/o for
+Jenkins user? (Y/N)</td>
+<td>En lugar de jenkinssudonopass, las
+siguientes alternativas también se
+pueden utilizar: JenkinsSudoNoPass
+, jenkinssudonopass,
+jenkins-sudo-nopass,
+jenkins-sudo-passwordless|</td>
+<td>N(No)</td>
+<td>Si el usuario desea abandonar el proceso
+de instalación se puede introducir como N.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Abrir fuente proceso de integración continua.</li>
+<li>Jenkinssudonopass es una automatización construye.</li>
+<li>Por scripting construye y eliminar problemas de errores humanos, las computadoras son apenas mejor en la ejecución de tareas repetitivas.</li>
+<li>Jenkinssudonopass necesita gastar tiempo en sus despliegues</li>
+<li>Versatilidad y flexibilidad.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">JenkinsSudoNoPass</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#comando-ayuda">comando Ayuda</a></li>
+<li><a class="reference internal" href="#instalacion">instalación</a></li>
+<li><a class="reference internal" href="#opciones">Opciones</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="sjenkinsplugins.html"
+                        title="previous chapter">JenkinsPlugins</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sjetty.html"
+                        title="next chapter">Jetty</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/sjenkinssudonopass.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="sjetty.html" title="Jetty"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="sjenkinsplugins.html" title="JenkinsPlugins"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" >PTConfigure</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>
