@@ -1,0 +1,484 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>HHVM &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="PTConfigure" href="sptconfigure_main.html" />
+    <link rel="next" title="PTConfigure" href="sptconfigure.html" />
+    <link rel="prev" title="Git tools" href="sgittools.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="sptconfigure.html" title="PTConfigure"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="sgittools.html" title="Git tools"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" accesskey="U">PTConfigure</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="hhvm">
+<h1>HHVM<a class="headerlink" href="#hhvm" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Este módulo facilita la instalación y la instalación de la ONU HHVM que es un servidor de compilación popular para su máquina. HipHop Virtual Machine (HHVM) es una máquina virtual proceso basado en just-in-time (JIT) compilación, que actúa como un motor de ejecución de PHP y Hack lenguajes de programación. Al utilizar el principio de la compilación JIT, PHP ejecutados o código Hack se transforma primero en intermedia código byte HipHop (HHBC), que luego se traduce dinámicamente en el código máquina x86-64, optimizado y nativa ejecutado. Veamos acerca del módulo HHVM en los próximos temas.</p>
+</div>
+<div class="section" id="ayuda-comando">
+<h2>Ayuda Comando<a class="headerlink" href="#ayuda-comando" title="Permalink to this headline">¶</a></h2>
+<p>El comando help guía a los usuarios en cuanto a la finalidad y al igual que sobre las opciones que se incluyen en el módulo HHVM. En él se enumeran los parámetros alternativos de módulo HHVM. También describe la sintaxis para instalar el módulo HHVM. El comando de ayuda para el módulo HHVM se muestra a continuación.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure HHVM <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La sintaxis para declarar el comando de ayuda no es sensible a mayúsculas, que es una ventaja añadida. La siguiente captura de pantalla a visualizar sobre el comando de ayuda bajo HHVM.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure HHVM <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>allows you to install HHVM, the popular Build Server.
+
+ HHVM, hhvm
+
+       - install
+       Installs HHVM through package manager
+       example: ptconfigure hhvm install
+
+       - uninstall
+       Uninstalls HHVM through package manager
+       example: ptconfigure hhvm uninstall
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="instalacion">
+<h2>instalación<a class="headerlink" href="#instalacion" title="Permalink to this headline">¶</a></h2>
+<p>El comando utilizado para instalar el HHVM a la máquina de los usuarios se muestra a continuación.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure HHVM install
+</pre></div>
+</div>
+<p>Después de introducir el comando anterior, el siguiente proceso se produce como se muestra en el formato tabular.</p>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="22%" />
+<col width="30%" />
+<col width="10%" />
+<col width="38%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parámetros</th>
+<th class="head">Parámetro Alternativa</th>
+<th class="head">Opciones</th>
+<th class="head">Comentarios</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Install HHVM? (Y/N)</td>
+<td>En lugar de HHVM podemos utilizar
+hhvm también.</td>
+<td>Y(Yes)</td>
+<td>Si el usuario desea continuar el proceso
+de instalación se puede introducir como Y.</td>
+</tr>
+<tr class="row-odd"><td>Install HHVM? (Y/N)</td>
+<td>En lugar de HHVM podemos utilizar
+hhvm también.</td>
+<td>N(No)</td>
+<td>Si el usuario desea abandonar el proceso
+de instalación se puede introducir como N.|</td>
+</tr>
+</tbody>
+</table>
+<p>Por último, se ha completado el proceso de instalación. La siguiente captura de pantalla representa gráficamente el proceso de instalación HHVM.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure HHVM install
+Install HHVM? (Y/N)
+Y
+*******************************
+*        Pharaoh Tools        *
+*          ! HHVM !        *
+*******************************
+Creating /tmp/ptconfigure-temp-script-41870275104.sh
+chmod 755 /tmp/ptconfigure-temp-script-41870275104.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-41870275104.sh Permissions
+Executing /tmp/ptconfigure-temp-script-41870275104.sh
+--2015-01-16 14:19:14--  http://dl.hhvm.com/conf/hhvm.gpg.key
+Resolving dl.hhvm.com (dl.hhvm.com)... 140.211.166.134
+Connecting to dl.hhvm.com (dl.hhvm.com)|140.211.166.134|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1707 (1.7K) [application/pgp-keys]
+Saving to: ‘STDOUT’
+
+100%[=====================================================================================================&gt;] 1,707       --.-K/s   in 0.001s
+
+2015-01-16 14:19:16 (1.68 MB/s) - written to stdout [1707/1707]
+
+OK
+deb http://dl.hhvm.com/ubuntu trusty main
+Get:1 http://dl.hhvm.com trusty InRelease [2,104 B]
+Hit http://downloads.hipchat.com stable InRelease
+Ign http://security.ubuntu.com trusty-security InRelease
+Ign http://extras.ubuntu.com trusty InRelease
+Ign http://in.archive.ubuntu.com trusty InRelease
+Get:2 http://security.ubuntu.com trusty-security Release.gpg [933 B]
+Hit http://downloads.hipchat.com stable/main amd64 Packages
+Get:3 http://dl.hhvm.com trusty/main amd64 Packages [1,669 B]
+Hit http://extras.ubuntu.com trusty Release.gpg
+Get:4 http://security.ubuntu.com trusty-security Release [62.0 kB]
+Ign http://in.archive.ubuntu.com trusty-updates InRelease
+Hit http://downloads.hipchat.com stable/main i386 Packages
+Get:5 http://dl.hhvm.com trusty/main i386 Packages [20 B]
+Hit http://extras.ubuntu.com trusty Release
+Ign http://in.archive.ubuntu.com trusty-backports InRelease
+Hit http://extras.ubuntu.com trusty/main Sources
+Hit http://in.archive.ubuntu.com trusty Release.gpg
+Hit http://extras.ubuntu.com trusty/main amd64 Packages
+Get:6 http://security.ubuntu.com trusty-security/main Sources [63.1 kB]
+Get:7 http://in.archive.ubuntu.com trusty-updates Release.gpg [933 B]
+Hit http://extras.ubuntu.com trusty/main i386 Packages
+Hit http://in.archive.ubuntu.com trusty-backports Release.gpg
+Get:8 http://security.ubuntu.com trusty-security/restricted Sources [2,061 B]
+Hit http://in.archive.ubuntu.com trusty Release
+Get:9 http://security.ubuntu.com trusty-security/universe Sources [17.4 kB]
+Get:10 http://in.archive.ubuntu.com trusty-updates Release [62.0 kB]
+Get:11 http://security.ubuntu.com trusty-security/multiverse Sources [716 B]
+Get:12 http://security.ubuntu.com trusty-security/main amd64 Packages [196 kB]
+Ign http://downloads.hipchat.com stable/main Translation-en_IN
+Ign http://dl.hhvm.com trusty/main Translation-en_IN
+Ign http://downloads.hipchat.com stable/main Translation-en
+Hit http://in.archive.ubuntu.com trusty-backports Release
+Ign http://dl.hhvm.com trusty/main Translation-en
+Hit http://in.archive.ubuntu.com trusty/main Sources
+Get:13 http://security.ubuntu.com trusty-security/restricted amd64 Packages [8,875 B]
+Get:14 http://security.ubuntu.com trusty-security/universe amd64 Packages [84.2 kB]
+Hit http://in.archive.ubuntu.com trusty/restricted Sources
+Hit http://in.archive.ubuntu.com trusty/universe Sources
+Ign http://extras.ubuntu.com trusty/main Translation-en_IN
+Hit http://in.archive.ubuntu.com trusty/multiverse Sources
+Get:15 http://security.ubuntu.com trusty-security/multiverse amd64 Packages [1,166 B]
+Ign http://extras.ubuntu.com trusty/main Translation-en
+Get:16 http://security.ubuntu.com trusty-security/main i386 Packages [187 kB]
+Hit http://in.archive.ubuntu.com trusty/main amd64 Packages
+Hit http://in.archive.ubuntu.com trusty/restricted amd64 Packages
+Hit http://in.archive.ubuntu.com trusty/universe amd64 Packages
+Hit http://in.archive.ubuntu.com trusty/multiverse amd64 Packages
+Hit http://in.archive.ubuntu.com trusty/main i386 Packages
+Hit http://in.archive.ubuntu.com trusty/restricted i386 Packages
+Get:17 http://security.ubuntu.com trusty-security/restricted i386 Packages [8,846 B]
+Hit http://in.archive.ubuntu.com trusty/universe i386 Packages
+Get:18 http://security.ubuntu.com trusty-security/universe i386 Packages [84.2 kB]
+Hit http://in.archive.ubuntu.com trusty/multiverse i386 Packages
+Get:19 http://security.ubuntu.com trusty-security/multiverse i386 Packages [1,412 B]
+Hit http://in.archive.ubuntu.com trusty/main Translation-en
+Hit http://security.ubuntu.com trusty-security/main Translation-en
+Hit http://security.ubuntu.com trusty-security/multiverse Translation-en
+Hit http://in.archive.ubuntu.com trusty/multiverse Translation-en
+Hit http://security.ubuntu.com trusty-security/restricted Translation-en
+Hit http://security.ubuntu.com trusty-security/universe Translation-en
+Hit http://in.archive.ubuntu.com trusty/restricted Translation-en
+Hit http://in.archive.ubuntu.com trusty/universe Translation-en
+Get:20 http://in.archive.ubuntu.com trusty-updates/main Sources [155 kB]
+Get:21 http://in.archive.ubuntu.com trusty-updates/restricted Sources [2,061 B]
+Get:22 http://in.archive.ubuntu.com trusty-updates/universe Sources [97.6 kB]
+Get:23 http://in.archive.ubuntu.com trusty-updates/multiverse Sources [3,550 B]
+Get:24 http://in.archive.ubuntu.com trusty-updates/main amd64 Packages [398 kB]
+Get:25 http://in.archive.ubuntu.com trusty-updates/restricted amd64 Packages [8,875 B]
+Get:26 http://in.archive.ubuntu.com trusty-updates/universe amd64 Packages [239 kB]
+Get:27 http://in.archive.ubuntu.com trusty-updates/multiverse amd64 Packages [9,373 B]
+Get:28 http://in.archive.ubuntu.com trusty-updates/main i386 Packages [390 kB]
+Get:29 http://in.archive.ubuntu.com trusty-updates/restricted i386 Packages [8,846 B]
+Get:30 http://in.archive.ubuntu.com trusty-updates/universe i386 Packages [240 kB]
+Get:31 http://in.archive.ubuntu.com trusty-updates/multiverse i386 Packages [9,567 B]
+Hit http://in.archive.ubuntu.com trusty-updates/main Translation-en
+Hit http://in.archive.ubuntu.com trusty-updates/multiverse Translation-en
+Hit http://in.archive.ubuntu.com trusty-updates/restricted Translation-en
+Hit http://in.archive.ubuntu.com trusty-updates/universe Translation-en
+Hit http://in.archive.ubuntu.com trusty-backports/main Sources
+Hit http://in.archive.ubuntu.com trusty-backports/restricted Sources
+Hit http://in.archive.ubuntu.com trusty-backports/universe Sources
+Hit http://in.archive.ubuntu.com trusty-backports/multiverse Sources
+Hit http://in.archive.ubuntu.com trusty-backports/main amd64 Packages
+Hit http://in.archive.ubuntu.com trusty-backports/restricted amd64 Packages
+Hit http://in.archive.ubuntu.com trusty-backports/universe amd64 Packages
+Hit http://in.archive.ubuntu.com trusty-backports/multiverse amd64 Packages
+Hit http://in.archive.ubuntu.com trusty-backports/main i386 Packages
+Hit http://in.archive.ubuntu.com trusty-backports/restricted i386 Packages
+Hit http://in.archive.ubuntu.com trusty-backports/universe i386 Packages
+Hit http://in.archive.ubuntu.com trusty-backports/multiverse i386 Packages
+Hit http://in.archive.ubuntu.com trusty-backports/main Translation-en
+Hit http://in.archive.ubuntu.com trusty-backports/multiverse Translation-en
+Hit http://in.archive.ubuntu.com trusty-backports/restricted Translation-en
+Hit http://in.archive.ubuntu.com trusty-backports/universe Translation-en
+Ign http://in.archive.ubuntu.com trusty/main Translation-en_IN
+Ign http://in.archive.ubuntu.com trusty/multiverse Translation-en_IN
+Ign http://in.archive.ubuntu.com trusty/restricted Translation-en_IN
+Ign http://in.archive.ubuntu.com trusty/universe Translation-en_IN
+Fetched 2,347 kB in 42s (55.6 kB/s)
+Reading package lists...
+Temp File /tmp/ptconfigure-temp-script-41870275104.sh Removed
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+ libboost-filesystem1.54.0 libboost-program-options1.54.0
+ libboost-regex1.54.0 libboost-thread1.54.0 libgflags2 libgoogle-glog0
+ libjemalloc1 libmemcached10 libonig2 libtbb2 libunwind8
+The following NEW packages will be installed:
+ hhvm libboost-filesystem1.54.0 libboost-program-options1.54.0
+ libboost-regex1.54.0 libboost-thread1.54.0 libgflags2 libgoogle-glog0
+ libjemalloc1 libmemcached10 libonig2 libtbb2 libunwind8
+0 upgraded, 12 newly installed, 0 to remove and 228 not upgraded.
+Need to get 13.8 MB of archives.
+After this operation, 4,036 kB of additional disk space will be used.
+Get:1 http://dl.hhvm.com/ubuntu/ trusty/main hhvm amd64 3.4.2~trusty [12.9 MB]
+Get:2 http://in.archive.ubuntu.com/ubuntu/ trusty-updates/main libboost-filesystem1.54.0 amd64 1.54.0-4ubuntu3.1 [34.2 kB]
+Get:3 http://in.archive.ubuntu.com/ubuntu/ trusty-updates/main libboost-program-options1.54.0 amd64 1.54.0-4ubuntu3.1 [115 kB]
+Get:4 http://in.archive.ubuntu.com/ubuntu/ trusty-updates/main libboost-regex1.54.0 amd64 1.54.0-4ubuntu3.1 [261 kB]
+Get:5 http://in.archive.ubuntu.com/ubuntu/ trusty-updates/main libboost-thread1.54.0 amd64 1.54.0-4ubuntu3.1 [26.5 kB]
+Get:6 http://in.archive.ubuntu.com/ubuntu/ trusty/main libgflags2 amd64 2.0-1.1ubuntu1 [65.9 kB]
+Get:7 http://in.archive.ubuntu.com/ubuntu/ trusty/main libunwind8 amd64 1.1-2.2ubuntu3 [48.3 kB]
+Get:8 http://in.archive.ubuntu.com/ubuntu/ trusty/main libgoogle-glog0 amd64 0.3.3-1 [61.3 kB]
+Get:9 http://in.archive.ubuntu.com/ubuntu/ trusty/main libmemcached10 amd64 1.0.8-1ubuntu2 [83.4 kB]
+Get:10 http://in.archive.ubuntu.com/ubuntu/ trusty/universe libjemalloc1 amd64 3.5.1-2 [76.8 kB]
+Get:11 http://in.archive.ubuntu.com/ubuntu/ trusty/universe libonig2 amd64 5.9.1-1ubuntu1 [89.1 kB]
+Get:12 http://in.archive.ubuntu.com/ubuntu/ trusty/universe libtbb2 amd64 4.2~20130725-1.1ubuntu1 [94.7 kB]
+Fetched 13.8 MB in 4min 15s (54.2 kB/s)
+Selecting previously unselected package libboost-filesystem1.54.0:amd64.
+(Reading database ... 180191 files and directories currently installed.)
+Preparing to unpack .../libboost-filesystem1.54.0_1.54.0-4ubuntu3.1_amd64.deb ...
+Unpacking libboost-filesystem1.54.0:amd64 (1.54.0-4ubuntu3.1) ...
+Selecting previously unselected package libboost-program-options1.54.0:amd64.
+Preparing to unpack .../libboost-program-options1.54.0_1.54.0-4ubuntu3.1_amd64.deb ...
+Unpacking libboost-program-options1.54.0:amd64 (1.54.0-4ubuntu3.1) ...
+Selecting previously unselected package libboost-regex1.54.0:amd64.
+Preparing to unpack .../libboost-regex1.54.0_1.54.0-4ubuntu3.1_amd64.deb ...
+Unpacking libboost-regex1.54.0:amd64 (1.54.0-4ubuntu3.1) ...
+Selecting previously unselected package libboost-thread1.54.0:amd64.
+Preparing to unpack .../libboost-thread1.54.0_1.54.0-4ubuntu3.1_amd64.deb ...
+Unpacking libboost-thread1.54.0:amd64 (1.54.0-4ubuntu3.1) ...
+Selecting previously unselected package libgflags2.
+Preparing to unpack .../libgflags2_2.0-1.1ubuntu1_amd64.deb ...
+Unpacking libgflags2 (2.0-1.1ubuntu1) ...
+Selecting previously unselected package libunwind8.
+Preparing to unpack .../libunwind8_1.1-2.2ubuntu3_amd64.deb ...
+Unpacking libunwind8 (1.1-2.2ubuntu3) ...
+Selecting previously unselected package libgoogle-glog0.
+Preparing to unpack .../libgoogle-glog0_0.3.3-1_amd64.deb ...
+Unpacking libgoogle-glog0 (0.3.3-1) ...
+Selecting previously unselected package libmemcached10:amd64.
+Preparing to unpack .../libmemcached10_1.0.8-1ubuntu2_amd64.deb ...
+Unpacking libmemcached10:amd64 (1.0.8-1ubuntu2) ...
+Selecting previously unselected package libjemalloc1.
+Preparing to unpack .../libjemalloc1_3.5.1-2_amd64.deb ...
+Unpacking libjemalloc1 (3.5.1-2) ...
+Selecting previously unselected package libonig2.
+Preparing to unpack .../libonig2_5.9.1-1ubuntu1_amd64.deb ...
+Unpacking libonig2 (5.9.1-1ubuntu1) ...
+Selecting previously unselected package libtbb2.
+Preparing to unpack .../libtbb2_4.2~20130725-1.1ubuntu1_amd64.deb ...
+Unpacking libtbb2 (4.2~20130725-1.1ubuntu1) ...
+Selecting previously unselected package hhvm.
+Preparing to unpack .../hhvm_3.4.2~trusty_amd64.deb ...
+Unpacking hhvm (3.4.2~trusty) ...
+Processing triggers for ureadahead (0.100.0-16) ...
+ureadahead will be reprofiled on next reboot
+Setting up libboost-filesystem1.54.0:amd64 (1.54.0-4ubuntu3.1) ...
+Setting up libboost-program-options1.54.0:amd64 (1.54.0-4ubuntu3.1) ...
+Setting up libboost-regex1.54.0:amd64 (1.54.0-4ubuntu3.1) ...
+Setting up libboost-thread1.54.0:amd64 (1.54.0-4ubuntu3.1) ...
+Setting up libgflags2 (2.0-1.1ubuntu1) ...
+Setting up libunwind8 (1.1-2.2ubuntu3) ...
+Setting up libgoogle-glog0 (0.3.3-1) ...
+Setting up libmemcached10:amd64 (1.0.8-1ubuntu2) ...
+Setting up libjemalloc1 (3.5.1-2) ...
+Setting up libonig2 (5.9.1-1ubuntu1) ...
+Setting up libtbb2 (4.2~20130725-1.1ubuntu1) ...
+Setting up hhvm (3.4.2~trusty) ...
+********************************************************************
+* HHVM is installed.
+*
+* Running PHP web scripts with HHVM is done by having your webserver talk to HHVM
+* over FastCGI. Install nginx or Apache, and then:
+* $ sudo /usr/share/hhvm/install_fastcgi.sh
+* $ sudo /etc/init.d/hhvm restart
+* (if using nginx)  $ sudo /etc/init.d/nginx restart
+* (if using apache) $ sudo /etc/init.d/apache restart
+*
+* Detailed FastCGI directions are online at:
+* https://github.com/facebook/hhvm/wiki/FastCGI
+*
+* If you&#39;re using HHVM to run web scripts, you probably want it to start at boot:
+* $ sudo update-rc.d hhvm defaults
+*
+* Running command-line scripts with HHVM requires no special setup:
+* $ hhvm whatever.php
+*
+* You can use HHVM for /usr/bin/php even if you have php-cli installed:
+* $ sudo /usr/bin/update-alternatives --install /usr/bin/php php /usr/bin/hhvm 60
+********************************************************************
+Processing triggers for libc-bin (2.19-0ubuntu6) ...
+[Pharaoh Logging] Adding Package hhvm from the Packager Apt executed correctly
+... All done!
+*******************************
+Thanks for installing , visit www.pharaohtools.com for more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+HHVM: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="desinstalacion">
+<h2>desinstalación<a class="headerlink" href="#desinstalacion" title="Permalink to this headline">¶</a></h2>
+<p>El comando utilizado para des instalar el hhvm se muestra a continuación.</p>
+<div class="highlight-fiesta"><div class="highlight"><pre>
+</pre></div>
+</div>
+<p>ptconfigure HHVM desinstalación</p>
+<p>La captura de pantalla para el comando anterior se enumeran a continuación,</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure hhvm uninstall
+
+Uninstall HHVM? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+*******************************
+*        Pharaoh Tools        *
+*          ! HHVM !        *
+*******************************
+PHP Warning:  Illegal string offset <span class="s1">&#39;object&#39;</span> in /opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/BaseLinuxApp.php on line 290
+PHP Warning:  Illegal string offset <span class="s1">&#39;method&#39;</span> in /opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/BaseLinuxApp.php on line 290
+PHP Warning:  Illegal string offset <span class="s1">&#39;params&#39;</span> in /opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/BaseLinuxApp.php on line 290
+PHP Warning:  call_user_func_array<span class="o">()</span> expects parameter <span class="m">1</span> to be a valid callback, class <span class="s1">&#39;p&#39;</span> not found in /opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/BaseLinuxApp.php on line 290
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+******************************
+
+
+Single App Uninstaller:
+------------------------------
+HHVM: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Los parámetros utilizados en ayuda y de instalación y desinstalación operaciones no son sensibles, que es una ventaja añadida, mientras que
+en comparación con otros.</li>
+<li>Es-acomodados tanto en Ubuntu y así como Cent OS.</li>
+<li>HHVM tiene la capacidad de utilizar la información de tipo vivo para producir código nativo más eficiente, dando lugar a un mayor
+rendimiento y el servidor web menor latencia.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">HHVM</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#ayuda-comando">Ayuda Comando</a></li>
+<li><a class="reference internal" href="#instalacion">instalación</a></li>
+<li><a class="reference internal" href="#desinstalacion">desinstalación</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="sgittools.html"
+                        title="previous chapter">Git tools</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sptconfigure.html"
+                        title="next chapter">PTConfigure</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/shhvm.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="sptconfigure.html" title="PTConfigure"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="sgittools.html" title="Git tools"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" >PTConfigure</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

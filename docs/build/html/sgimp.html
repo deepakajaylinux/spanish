@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>GIMP &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="PTConfigure" href="sptconfigure_main.html" />
+    <link rel="next" title="Gitbucket" href="sgitbucket.html" />
+    <link rel="prev" title="Generator" href="sgenerator.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="sgitbucket.html" title="Gitbucket"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="sgenerator.html" title="Generator"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" accesskey="U">PTConfigure</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="gimp">
+<h1>GIMP<a class="headerlink" href="#gimp" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>Sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Este módulo permite a los usuarios instalar GIMP que es un editor de imágenes populares.</p>
+<p>GIMP acrónimo de GNU Image Manipulation Program) es utilizado para el retoque y edición de imágenes, el dibujo de forma libre, cambiar el tamaño, recortar, fotomontajes, la conversión entre diferentes formatos de imagen, y las tareas más especializadas.</p>
+<p>GIMP se distribuye gratuitamente a (y por) a nadie, y nadie puede mirar a su contenido y su código fuente y puede agregar características o solucionar problemas. Es liberado bajo licencias LGPLv3 y GPLv3 +. GIMP se inició en 1995 como el proyecto de la escuela de dos estudiantes universitarios; ahora GIMP es una aplicación de pleno derecho, disponibles en todas las distribuciones de GNU / Linux y en las versiones recientes de Microsoft Windows y Mac OS X.</p>
+<p>Veamos cómo este módulo facilita la instalación de GIMP de los próximos temas.</p>
+</div>
+<div class="section" id="ayuda-comando">
+<h2>Ayuda Comando<a class="headerlink" href="#ayuda-comando" title="Permalink to this headline">¶</a></h2>
+<p>El comando de ayuda es un breve manual de usuario que representa a los usuarios en cuanto a la finalidad de este módulo, sus listas de outs sus parámetros alternativos que se pueden utilizar en las declaraciones, junto con la sintaxis para instalar GIMP través de apt-get. La sintaxis para utilizar la opción de ayuda en virtud de este módulo se muestra a continuación,</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure GIMP <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La sintaxis para declarar el comando de ayuda no es sensible a mayúsculas, que es una ventaja añadida. La siguiente captura de pantalla a visualizar sobre el comando de ayuda en virtud de GIMP.</p>
+</div>
+<div class="section" id="instalacion">
+<h2>instalación<a class="headerlink" href="#instalacion" title="Permalink to this headline">¶</a></h2>
+<p>El comando que se utiliza para la instalación de GIMP a través de apt-get usando este módulo es simple con sólo usar el siguiente comando,</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure GIMP install
+</pre></div>
+</div>
+<p>Después de introducir el comando anterior, los siguientes pasos se realizan como se muestra en la tabla,</p>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="21%" />
+<col width="32%" />
+<col width="10%" />
+<col width="37%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parámetros</th>
+<th class="head">Parámetro Alternativa</th>
+<th class="head">Opciones</th>
+<th class="head">Comentarios</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>GIMP Install? (Y/N)</td>
+<td>En lugar de GIMP podemos usar gimp
+también.</td>
+<td>Y(Yes)</td>
+<td>InsIf el deseo del usuario para continuar
+la instalación, se puede introducir como Y.</td>
+</tr>
+<tr class="row-odd"><td>GIMP Install? (Y/N)</td>
+<td>En lugar de GIMP podemos usar gimp
+también.</td>
+<td>N(No)</td>
+<td>Si el usuario desea para salir de la
+instalación, se puede introducir como N.|</td>
+</tr>
+</tbody>
+</table>
+<p>La siguiente captura de pantalla muestra visualmente sobre el proceso de instalación.</p>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Los parámetros utilizados declarando ayuda y otras características diferentes de apt no distinguen entre mayúsculas y minúsculas.</li>
+<li>Es-acomodado tanto os Cent y así como en Ubuntu.</li>
+</ul>
+<p>GIMP también proporciona herramientas &#8220;inteligentes&#8221; que utilizan un algoritmo más complejo de hacer cosas que de otro modo sería lento o imposible. Estos incluyen a:</p>
+<ul class="simple">
+<li>La herramienta de clonación, que copia píxeles utilizando un pincel</li>
+<li>Pincel corrector, que copia píxeles de un área y corrige el tono y color</li>
+<li>La herramienta de clon perspectiva, que funciona como la herramienta de clonación, pero corrige la distancia cambia</li>
+<li>Blur y afilar herramientas desenfoques y agudiza usando un cepillo</li>
+<li>Dodge y herramienta de grabación es un cepillo que hace diana píxeles más claros (dodges) o más oscuras (quemaduras)</li>
+</ul>
+<p>GIMP transformar herramientas incluyen:</p>
+<ul class="simple">
+<li>Alinear</li>
+<li>Movimiento</li>
+<li>Recortar</li>
+<li>Girar</li>
+<li>Escala</li>
+<li>Shear</li>
+<li>Perspectiva</li>
+<li>Voltear</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">GIMP</a><ul>
+<li><a class="reference internal" href="#sinopsis">Sinopsis</a></li>
+<li><a class="reference internal" href="#ayuda-comando">Ayuda Comando</a></li>
+<li><a class="reference internal" href="#instalacion">instalación</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="sgenerator.html"
+                        title="previous chapter">Generator</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sgitbucket.html"
+                        title="next chapter">Gitbucket</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/sgimp.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="sgitbucket.html" title="Gitbucket"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="sgenerator.html" title="Generator"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" >PTConfigure</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

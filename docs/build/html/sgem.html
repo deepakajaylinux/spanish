@@ -1,0 +1,288 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Gem &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="PTConfigure" href="sptconfigure_main.html" />
+    <link rel="next" title="Generator" href="sgenerator.html" />
+    <link rel="prev" title="Encryption" href="sencryption.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="sgenerator.html" title="Generator"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="sencryption.html" title="Encryption"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" accesskey="U">PTConfigure</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="gem">
+<h1>Gem<a class="headerlink" href="#gem" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Este módulo envuelve todas las necesidades de los usuarios para trabajar con GEM. Cubre varias características, y en la mano promueve diversas funciones a realizar.</p>
+<p>RubyGems es un gestor de paquetes para el lenguaje de programación Ruby que proporciona un formato estándar para la distribución de programas y bibliotecas de Ruby (en un formato autónomo llamado una &#8220;joya&#8221;), una herramienta diseñada para gestionar fácilmente la instalación de las joyas, y un servidor para la distribución de ellos.</p>
+<p>Veamos las diversas características y cómo utilizar este módulo de los próximos temas.</p>
+</div>
+<div class="section" id="ayuda-comando">
+<h2>Ayuda Comando<a class="headerlink" href="#ayuda-comando" title="Permalink to this headline">¶</a></h2>
+<p>El comando de ayuda instruye a los usuarios acerca de la finalidad y diversas características, y la sintaxis para aplicar esas diversas características. También se enumeran las salidas de parámetros alternativos que se pueden utilizar en las declaraciones. El formato de la sintaxis para la aplicación de opción de ayuda en virtud de este módulo, se da a continuación,</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure gem <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La siguiente captura de pantalla y visualizar la salida y de trabajo de la opción de ayuda en virtud de este módulo.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure gem <span class="nb">help</span>
+
+******************************
+
+
+ This <span class="nb">command </span>allows you to modify create or modify gems
+
+ Gem, gem
+
+       - create
+       Create a new system gem, overwriting <span class="k">if</span> it exists
+       example: ptconfigure gem create --gemname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+
+       - remove
+       Remove a system gem
+       example: ptconfigure gem remove --gemname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+
+       - <span class="nb">set</span>-password
+       Set the password of a system gem
+       example: ptconfigure gem <span class="nb">set</span>-password --gemname<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --new-password<span class="o">=</span>                                                                                        <span class="s2">&quot;somepassword&quot;</span>
+
+       - exists
+       Check the existence of a gem
+       example: ptconfigure gem exists --gemname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+
+       - show-groups
+       Show groups to which a gem belongs
+       example: ptconfigure gem show-groups --gemname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+
+       - add-to-group
+       Add gem to a group
+       example: ptconfigure gem add-to-group --gemname<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --groupname<span class="o">=</span><span class="s2">&quot;so                                                                                        megroupname&quot;</span>
+
+       - remove-from-group
+       Remove gem from a group
+       example: ptconfigure gem remove-from-group --gemname<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --groupnam                                                                                        <span class="nv">e</span><span class="o">=</span><span class="s2">&quot;somegroupname&quot;</span>
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="diferentes-caracteristicas-de-la-gema">
+<h2>Diferentes características de la gema<a class="headerlink" href="#diferentes-caracteristicas-de-la-gema" title="Permalink to this headline">¶</a></h2>
+<p>Como se muestra en el comando de ayuda anterior, las diversas características de la gema se enumeran a continuación,</p>
+<ul class="simple">
+<li>Crear</li>
+<li>Retire</li>
+<li>Establecer contraseña</li>
+<li>Existe</li>
+<li>Show_groups</li>
+<li>Add_to_group</li>
+<li>Remove_from_group</li>
+</ul>
+<p>Veamos en detalle acerca de estas características.</p>
+</div>
+<div class="section" id="crear">
+<h2>crear<a class="headerlink" href="#crear" title="Permalink to this headline">¶</a></h2>
+<p>Esta función tiene como objetivo la creación de una nueva joya del sistema, y así como sobrescribe en caso de que ya existe. Esta función de joya usando este módulo se puede lograr mediante la siguiente sintaxis,</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure gem create --gemname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+</pre></div>
+</div>
+<p>En el lugar de gemname el usuario puede especificar el nombre de la gema que se va a crear. Después de introducir el comando como se especifica anteriormente, la nueva joya se creará con el nombre especificado.</p>
+</div>
+<div class="section" id="retire">
+<h2>RETIRE<a class="headerlink" href="#retire" title="Permalink to this headline">¶</a></h2>
+<p>Esta función tiene como objetivo la eliminación de una joya existente. Esta función de joya usando este módulo se puede lograr mediante la siguiente sintaxis,</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure gem remove --gemname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+</pre></div>
+</div>
+<p>En el lugar de gemname el usuario puede especificar el nombre de la joya que se va a eliminar. Después de introducir el comando como se especifica anteriormente, se eliminará la gema especificado.</p>
+</div>
+<div class="section" id="contrasena-set">
+<h2>CONTRASEÑA SET<a class="headerlink" href="#contrasena-set" title="Permalink to this headline">¶</a></h2>
+<p>Esta función facilita el establecimiento de una nueva contraseña para una joya sistema según las necesidades. Esto se puede hacer mediante la aplicación del comando como se indica a continuación,</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure gem <span class="nb">set</span>-password --gemname<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --new-password<span class="o">=</span><span class="s2">&quot;somepassword&quot;</span>
+</pre></div>
+</div>
+<p>Para llevar a cabo estas funciones, el usuario tiene que especificar los dos campos,</p>
+<ul class="simple">
+<li>Nombre de la gema</li>
+<li>Nueva contraseña</li>
+</ul>
+<p>Después de especificar los dos campos en el formato de comando antes mencionado, se creará la nueva contraseña para la joya especificado.</p>
+</div>
+<div class="section" id="existe">
+<h2>EXISTE<a class="headerlink" href="#existe" title="Permalink to this headline">¶</a></h2>
+<p>Esta función tiene por objeto la comprobación de la existencia de una joya. Esto se puede hacer simplemente, mediante el comando de abajo,
+.. code-block:: bash</p>
+<blockquote>
+<div>ptconfigure gem exists &#8211;gemname=&#8221;somename&#8221;</div></blockquote>
+<p>Después de aplicar el comando como el anterior, la existencia de una joya mencionada se garantizará con los resultados.</p>
+</div>
+<div class="section" id="grupos-ver">
+<h2>GRUPOS VER<a class="headerlink" href="#grupos-ver" title="Permalink to this headline">¶</a></h2>
+<p>Esta función ayuda a los usuarios a conocer a qué grupo pertenece a la gema. Esto se puede conseguir simplemente utilizando el siguiente comando,</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure gem show-groups --gemname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+</pre></div>
+</div>
+<p>El usuario tiene que especificar el nombre de la joya en el campo de la gemname, con el fin de conocer los detalles de su grupo.</p>
+</div>
+<div class="section" id="anadir-to-group">
+<h2>AÑADIR _TO_GROUP<a class="headerlink" href="#anadir-to-group" title="Permalink to this headline">¶</a></h2>
+<p>El principal objetivo de esta función es añadir la gema requerida para el grupo requerido por la simple aplicación de la orden como se indica a continuación,</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure gem add-to-group --gemname<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --groupname<span class="o">=</span><span class="s2">&quot;somegroupname&quot;</span>
+</pre></div>
+</div>
+<p>Para implementar esta función, el usuario tiene que especificar los dos campos siguientes de acuerdo a sus necesidades en el formato de la mencionada orden,</p>
+<ul class="simple">
+<li>Gemname</li>
+<li>Nombre del grupo</li>
+</ul>
+</div>
+<div class="section" id="remove-from-group">
+<h2>REMOVE_FROM_GROUP<a class="headerlink" href="#remove-from-group" title="Permalink to this headline">¶</a></h2>
+<p>El principal objetivo de esta función es eliminar la gema de un grupo simplemente aplicando el comando como se indica a continuación,</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure gem remove-from-group --gemname<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --groupname<span class="o">=</span><span class="s2">&quot;somegroupname&quot;</span>
+</pre></div>
+</div>
+<p>Para implementar esta función, el usuario tiene que especificar los dos campos siguientes de acuerdo a sus necesidades en el formato de la mencionada orden,</p>
+<ul class="simple">
+<li>Gemname</li>
+<li>Nombre del grupo</li>
+</ul>
+</div>
+<div class="section" id="parametros-alternativos">
+<h2>parámetros alternativos<a class="headerlink" href="#parametros-alternativos" title="Permalink to this headline">¶</a></h2>
+<p>Los parámetros alternativos para este módulo, cualquiera de los cuales se pueden utilizar en la declaración es,</p>
+<ul class="simple">
+<li>Gem</li>
+<li>gem</li>
+</ul>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Los parámetros utilizados declarando ayuda y otras características diferentes de la gema no distinguen entre mayúsculas y minúsculas.</li>
+<li>Es-acomodado tanto os Cent y así como en Ubuntu.</li>
+<li>El uso de este módulo, el usuario puede crear y, así como modificar la gema de acuerdo a sus necesidades.</li>
+<li>La existencia de una joya puede garantizarse en este módulo.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Gem</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#ayuda-comando">Ayuda Comando</a></li>
+<li><a class="reference internal" href="#diferentes-caracteristicas-de-la-gema">Diferentes características de la gema</a></li>
+<li><a class="reference internal" href="#crear">crear</a></li>
+<li><a class="reference internal" href="#retire">RETIRE</a></li>
+<li><a class="reference internal" href="#contrasena-set">CONTRASEÑA SET</a></li>
+<li><a class="reference internal" href="#existe">EXISTE</a></li>
+<li><a class="reference internal" href="#grupos-ver">GRUPOS VER</a></li>
+<li><a class="reference internal" href="#anadir-to-group">AÑADIR _TO_GROUP</a></li>
+<li><a class="reference internal" href="#remove-from-group">REMOVE_FROM_GROUP</a></li>
+<li><a class="reference internal" href="#parametros-alternativos">parámetros alternativos</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="sencryption.html"
+                        title="previous chapter">Encryption</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sgenerator.html"
+                        title="next chapter">Generator</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/sgem.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="sgenerator.html" title="Generator"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="sencryption.html" title="Encryption"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" >PTConfigure</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Encryption &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="PTConfigure" href="sptconfigure_main.html" />
+    <link rel="next" title="Gem" href="sgem.html" />
+    <link rel="prev" title="DigitalOcean" href="sdigitalocean.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="sgem.html" title="Gem"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="sdigitalocean.html" title="DigitalOcean"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" accesskey="U">PTConfigure</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="encryption">
+<h1>Encryption<a class="headerlink" href="#encryption" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>Sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Este módulo permite a los usuarios cifrar o descifrar un archivo.</p>
+<p>El cifrado es el proceso de codificación de mensajes y la información de tal manera que sólo las partes autorizadas puedan leerlo. Cifrado en sí misma no evitar la interceptación, pero niega el contenido del mensaje al interceptor. En un esquema de cifrado, el mensaje o información, que se refiere como texto sin formato, se codifica mediante un algoritmo de encriptación, la generación de texto cifrado que sólo se puede leer si descifrado. Por razones técnicas, un esquema de encriptación normalmente utiliza una clave pseudo-aleatorios generados por un algoritmo. En principio, es posible descifrar el mensaje sin poseer la llave, pero, para un esquema de cifrado bien diseñado, se requieren grandes recursos computacionales y habilidad. Un destinatario autorizado puede descifrar fácilmente el mensaje con la clave proporcionada por el emisor a los receptores, pero no a los interceptores no autorizadas.</p>
+<p>Veamos cómo utilizar este módulo en cifrar y descifrar un archivo o una cadena.</p>
+</div>
+<div class="section" id="ayuda-comando">
+<h2>Ayuda Comando<a class="headerlink" href="#ayuda-comando" title="Permalink to this headline">¶</a></h2>
+<p>El comando de ayuda es un breve manual de usuario que ayuda a los usuarios en el manejo de este módulo. Se especifica los parámetros alternativos que se pueden utilizar en declarar. También especifica las posibles funciones conforme a este módulo de cifrado, junto con la sintaxis para usarlos. El comando utilizado para la declaración de opción de ayuda se muestra a continuación,</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure encryption <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La sintaxis para declarar el comando de ayuda no es sensible a mayúsculas, que es una ventaja añadida. La siguiente captura de pantalla a visualizar sobre el comando de ayuda bajo cifrado.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure encryption <span class="nb">help</span>
+
+******************************
+
+
+This <span class="nb">command </span>allows you to encrypt or decrypt a file.
+
+Encryption, encrypt
+
+- install
+       Encrypts a file or string
+       example: sudo ptconfigure encryption install --yes --unencrypted-data<span class="o">=</span>/var/www/a-website/build/config/ptconfigure/SSH/raw/bastion
+        --encryption-target-file<span class="o">=</span>/tmp/encrypted --encryption-key<span class="o">=</span>/root/.ptconfigure/SSH/key --encryption-file-permissions<span class="o">=</span><span class="s2">&quot;&quot;</span>
+        --encryption-file-owner<span class="o">=</span><span class="s2">&quot;&quot;</span> --encryption-file-group<span class="o">=</span><span class="s2">&quot;&quot;</span>
+
+- uninstall
+       Decrypts an encrypted file or string
+       example: sudo ptconfigure encryption uninstall --yes --encrypted-data<span class="o">=</span>/tmp/encrypted
+        --encryption-target-file<span class="o">=</span>/var/www/a-website/build/config/ptconfigure/SSH/raw/bastion --encryption-key<span class="o">=</span>/root/.ptconfigure/SSH/key                        --encryption-file-permissions<span class="o">=</span><span class="s2">&quot;&quot;</span> --encryption-file-owner<span class="o">=</span><span class="s2">&quot;&quot;</span> --encryption-file-group<span class="o">=</span><span class="s2">&quot;&quot;</span>
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="instalar">
+<h2>instalar<a class="headerlink" href="#instalar" title="Permalink to this headline">¶</a></h2>
+<p>Esta función permite a los usuarios cifrar un archivo o una cadena simplemente usando el comando como se indica a continuación,</p>
+<div class="highlight-bash"><div class="highlight"><pre> sudo ptconfigure encryption install --yes --unencrypted-data<span class="o">=</span>/var/www/a-website/build/config/ptconfigure/SSH/raw/bastion
+--encryption-target-file<span class="o">=</span>/tmp/encrypted --encryption-key<span class="o">=</span>/root/.ptconfigure/SSH/key --encryption-file-permissions<span class="o">=</span><span class="s2">&quot;&quot;</span>
+ --encryption-file-owner<span class="o">=</span><span class="s2">&quot;&quot;</span> --encryption-file-group<span class="o">=</span><span class="s2">&quot;&quot;</span>
+</pre></div>
+</div>
+<p>Para implementar esta función, el usuario tiene que especificar los siguientes campos en el formato de la sintaxis mencionada,</p>
+<ul class="simple">
+<li>Archivo de destino cifrado</li>
+<li>Clave de cifrado</li>
+<li>Clave SSH</li>
+<li>Permiso de archivo cifrado</li>
+<li>Propietario del archivo cifrado</li>
+<li>Grupo de archivos de cifrado</li>
+</ul>
+</div>
+<div class="section" id="desinstalar">
+<h2>Desinstalar<a class="headerlink" href="#desinstalar" title="Permalink to this headline">¶</a></h2>
+<p>Esta función permite a los usuarios para descifrar un archivo o cadena cifrada. Esto se puede lograr mediante el comando de abajo,</p>
+<div class="highlight-bash"><div class="highlight"><pre>sudo ptconfigure encryption uninstall --yes --encrypted-data<span class="o">=</span>/tmp/encrypted
+ --encryption-target-file<span class="o">=</span>/var/www/a-website/build/config/ptconfigure/SSH/raw/bastion --encryption-key<span class="o">=</span>/root/.ptconfigure/SSH/key                        --encryption-file-permissions<span class="o">=</span><span class="s2">&quot;&quot;</span> --encryption-file-owner<span class="o">=</span><span class="s2">&quot;&quot;</span> --encryption-file-group<span class="o">=</span><span class="s2">&quot;&quot;</span>
+</pre></div>
+</div>
+<p>Para implementar esta función, el usuario tiene que especificar los siguientes campos en el formato de la sintaxis mencionada,</p>
+<ul class="simple">
+<li>Archivo de destino cifrado</li>
+<li>Clave de cifrado</li>
+<li>Clave SSH</li>
+<li>Permiso de archivo cifrado</li>
+<li>Propietario del archivo cifrado</li>
+<li>Grupo de archivos de cifrado</li>
+</ul>
+</div>
+<div class="section" id="parametros-alternativos">
+<h2>parámetros alternativos<a class="headerlink" href="#parametros-alternativos" title="Permalink to this headline">¶</a></h2>
+<p>Los parámetros alternativos para este módulo, cualquiera de los cuales se pueden utilizar en la declaración es,</p>
+<ul class="simple">
+<li>Encryption</li>
+<li>encrypt</li>
+</ul>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Los parámetros utilizados en ayuda y de cifrado y descifrado de la ONU operaciones no son sensibles, que es una ventaja añadida, mientras que
+compararon a los demás.</li>
+<li>Es-acomodados tanto en Ubuntu y así como Cent OS.</li>
+<li>Se trata de un modo seguro, porque sólo una persona autorizada pueda utilizarlos.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Encryption</a><ul>
+<li><a class="reference internal" href="#sinopsis">Sinopsis</a></li>
+<li><a class="reference internal" href="#ayuda-comando">Ayuda Comando</a></li>
+<li><a class="reference internal" href="#instalar">instalar</a></li>
+<li><a class="reference internal" href="#desinstalar">Desinstalar</a></li>
+<li><a class="reference internal" href="#parametros-alternativos">parámetros alternativos</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="sdigitalocean.html"
+                        title="previous chapter">DigitalOcean</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sgem.html"
+                        title="next chapter">Gem</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/sencryption.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="sgem.html" title="Gem"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="sdigitalocean.html" title="DigitalOcean"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" >PTConfigure</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

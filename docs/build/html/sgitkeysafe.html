@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>PTConfigure &mdash; spanishkevell 1.0.1 documentation</title>
+    <title>GitKeySafe &mdash; spanishkevell 1.0.1 documentation</title>
     
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -25,8 +25,8 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
     <link rel="up" title="PTConfigure" href="sptconfigure_main.html" />
-    <link rel="next" title="PTDeploy" href="sptdeploy_cleo.html" />
-    <link rel="prev" title="HHVM" href="shhvm.html" /> 
+    <link rel="next" title="Git lab" href="sgitlab.html" />
+    <link rel="prev" title="Gitbucket" href="sgitbucket.html" /> 
   </head>
   <body>
     <div class="related">
@@ -36,10 +36,10 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="sptdeploy_cleo.html" title="PTDeploy"
+          <a href="sgitlab.html" title="Git lab"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="shhvm.html" title="HHVM"
+          <a href="sgitbucket.html" title="Gitbucket"
              accesskey="P">previous</a> |</li>
         <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
           <li><a href="sptconfigure_main.html" accesskey="U">PTConfigure</a> &raquo;</li> 
@@ -51,29 +51,33 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="ptconfigure">
-<h1>PTConfigure<a class="headerlink" href="#ptconfigure" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="gitkeysafe">
+<h1>GitKeySafe<a class="headerlink" href="#gitkeysafe" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="sinopsis">
 <h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
-<p>Esta instalación de ascensor módulo en versión actualizada. La automatización es posible. Ubicación de directorio de datos y directorio albacea se puede especificar durante la instalación de este módulo. En él se especifica la configuración de su entorno. Es fácil de usar con Ubuntu y CentOS.</p>
+<p>Git caja fuerte de llaves que le ayuda a instala clave Git seguro. Esto permite que el permiso de una manera segura. Estos sistemas tienen la capacidad de los usuarios para acceder a la autorización del sistema de archivos. El permiso de lectura otorga la capacidad de leer un archivo. El permiso de escritura otorga la capacidad de modificar un archivo. El permiso de ejecución otorga la capacidad de ejecutar un archivo. Se consuela con Ubuntu y CentOS.</p>
 </div>
 <div class="section" id="comando-ayuda">
 <h2>comando Ayuda<a class="headerlink" href="#comando-ayuda" title="Permalink to this headline">¶</a></h2>
-<p>&nbsp; Este comando ayuda a guiar al usuario acerca de ptconfigure. Adecuado para todo tipo de usuario. Representa los parámetros alternativos y comandos para la instalación. El siguiente comando ayuda y la captura de pantalla y ayudarán al usuario en relación con el uso.</p>
-<div class="highlight-bash"><div class="highlight"><pre>ptconfigure ptconfigure <span class="nb">help</span>
+<p>El comando de ayuda conduce a los usuarios en cuanto a la finalidad y al igual que sobre las opciones que se incluyen en los módulos Gitkeysafe. El comando help enumera los parámetros alternativos de Gitkeysafe bajo módulo ptconfigure. También se describe la sintaxis para la instalación de KeySafe del usuario. El comando de ayuda para Gitkeysafe se muestra a continuación.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure GitkeySafe <span class="nb">help</span>
 </pre></div>
 </div>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure ptconfigure <span class="nb">help</span>
+<p>La sintaxis para el comando de ayuda no entre mayúsculas y minúsculas, que añade una ventaja para este módulo. La siguiente captura de pantalla a visualizar al usuario sobre el comando de ayuda bajo la sintaxis para el comando de ayuda no entre mayúsculas y minúsculas, que añade una ventaja para este módulo. La siguiente captura de pantalla a visualizar al usuario sobre el comando de ayuda bajo gitkeysafe.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure GitKeySafe <span class="nb">help</span>
+
 ******************************
 
 
-This <span class="nb">command </span>allows you to update ptconfigure.
+ This module installs Git Key-Safe Server to the program git-key-safe
 
-ptconfigure, cleo, ptconfigure
+ GitKeySafe, git-key-safe, gitkeysafe
 
-- install
-Installs the latest version of ptconfigure
-example: ptconfigure ptconfigure install
+       - install
+       Installs Git Key-Safe Server
+       example: ptconfigure gitkeysafe install
+
+       script example: git-safe-key -i /path/to/key clone http://git.com/repo.git
 
 ------------------------------
 End Help
@@ -83,34 +87,21 @@ End Help
 </div>
 <div class="section" id="instalacion">
 <h2>instalación<a class="headerlink" href="#instalacion" title="Permalink to this headline">¶</a></h2>
-<p>Es un proceso más simple para instalar módulo ptconfigure simplemente usando la orden dada a continuación,</p>
-<div class="highlight-bash"><div class="highlight"><pre>ptconfigure ptconfigure install
+<p>Instalación implica típicamente código se copie / generada a partir de los archivos de instalación a los nuevos archivos en el equipo local para facilitar el acceso por el sistema operativo .. Su uso, el usuario tiene que asegurarse y tener una copia de seguridad, por lo que los datos del usuario siempre puede ser restaurado . El siguiente comando utiliza para instalar clave git seguro.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure gitkeysafe install
 </pre></div>
 </div>
-<p>Después de dar la orden de la ptconfigure se instalará con nuevas actualizaciones.</p>
-<p>Después de la entrada del usuario ha pasado comprobará si cualquier archivo falta y, en parte, se instalará automáticamente.</p>
-<p>La siguiente captura de pantalla que enumera.</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure ptconfigure install
+<p>Durante la instalación de este módulo se apareció la siguiente captura de pantalla.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure gitkeysafe install
 
-Install ptconfigure - Update to latest version ? <span class="o">(</span>Y/N<span class="o">)</span>
-y
+Install Git Key-Safe Server? <span class="o">(</span>Y/N<span class="o">)</span>
+Y
 *******************************
-*        Pharaoh Tools        *
-*          ptconfigure!         *
+*        Pharaoh Tools        *
+*         Git Key-Safe Server!        *
 *******************************
-What is the program data directory? Found <span class="s2">&quot;/opt/ptconfigure&quot;</span> - use this? <span class="o">(</span>Enter nothing <span class="k">for</span> yes, no end slash<span class="o">)</span>
-
-What is the program executor directory? Found <span class="s2">&quot;/usr/bin&quot;</span> - use this? <span class="o">(</span>Enter nothing <span class="k">for</span> yes, No Trailing Slash<span class="o">)</span>
-
-git clone <span class="s1">&#39;https://github.com/PharaohTools/ptconfigure.git&#39;</span>  /tmp/ptconfigure/ptconfigureCloning into <span class="s1">&#39;/tmp/ptconfigure/ptconfigure&#39;</span>...
-remote: Counting objects: 19656, <span class="k">done</span>.
-remote: Total <span class="m">19656</span> <span class="o">(</span>delta 0<span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta 0<span class="o">)</span>
-Receiving objects: 100% <span class="o">(</span>19656/19656<span class="o">)</span>, 6.15 MiB <span class="p">|</span> 66.00 KiB/s, <span class="k">done</span>.
-Resolving deltas: 100% <span class="o">(</span>11790/11790<span class="o">)</span>, <span class="k">done</span>.
-Checking connectivity... <span class="k">done</span>.
-Program Data Folder /opt/ptconfigure Deleted <span class="k">if</span> existed
-Program Data folder populated
-Program Executor Deleted <span class="k">if</span> existed
+Git Key-Safe script /usr/bin/git-key-safe added
+Git Key-Safe script /usr/bin/git-key-safe permissions changed to 775
 ... All <span class="k">done</span>!
 *******************************
 Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
@@ -119,42 +110,41 @@ Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span 
 
 Single App Installer:
 --------------------------------------------
-ptconfigure: Success
+GitKeySafe: Success
 ------------------------------
 Installer Finished
 ******************************
 </pre></div>
 </div>
+</div>
+<div class="section" id="opcion">
+<h2>opción<a class="headerlink" href="#opcion" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="table-bordered docutils">
 <colgroup>
-<col width="20%" />
+<col width="21%" />
 <col width="34%" />
 <col width="11%" />
 <col width="35%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Parámetros</th>
-<th class="head">parámetros alternativos</th>
-<th class="head">Necesario</th>
-<th class="head">Comentario</th>
+<th class="head">Parámetro Alternativa</th>
+<th class="head">Opciones</th>
+<th class="head">Comentarios</th>
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>Install ptconfigure
-ptconfigure Update to
-latest version? (Y/N)</td>
-<td>En lugar de ptconfigure podemos utilizar
-ptconfigure, cleo también</td>
+<tr class="row-even"><td>Install gitkeysafe</td>
+<td>En lugar de utilizar gitkeysafe podemos
+utilizar GitKeySafe,git-key-safe</td>
 <td>Y(Yes)</td>
-<td>Se instalará ptconfigure ptconfigure bajo</td>
+<td>Se instala gitkeysafe bajo ptconfigure</td>
 </tr>
-<tr class="row-odd"><td>Install ptconfigure
-ptconfigure Update to
-latest version? (Y/N)|</td>
-<td>En lugar de ptconfigure podemos utilizar
-ptconfigure, cleo también</td>
+<tr class="row-odd"><td>Install gitkeysafe</td>
+<td>En lugar de utilizar gitkeysafe podemos
+utilizar GitKeySafe,git-key-safe|</td>
 <td>N(No)</td>
-<td>Saldrá desde la instalación</td>
+<td>La salida de sistema de la instalación</td>
 </tr>
 </tbody>
 </table>
@@ -162,9 +152,11 @@ ptconfigure, cleo también</td>
 <div class="section" id="beneficios">
 <h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>ptconfigure se utiliza para instalar el archivo de configuración. Durante la instalación si hay algún archivo se Sobrescribir el contenido.</li>
-<li>La nueva versión puede actualizar automáticamente.</li>
-<li>Updation se puede hacer en este módulo sin búsqueda en la web.</li>
+<li>Sensitibilidad caso</li>
+<li>Utiliza la instalación segura clave Git</li>
+<li>Ver el permiso del usuario</li>
+<li>Trabajar con Ubuntu y CentOS</li>
+<li>La seguridad es posible</li>
 </ul>
 </div>
 </div>
@@ -177,24 +169,25 @@ ptconfigure, cleo también</td>
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">PTConfigure</a><ul>
+<li><a class="reference internal" href="#">GitKeySafe</a><ul>
 <li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
 <li><a class="reference internal" href="#comando-ayuda">comando Ayuda</a></li>
 <li><a class="reference internal" href="#instalacion">instalación</a></li>
+<li><a class="reference internal" href="#opcion">opción</a></li>
 <li><a class="reference internal" href="#beneficios">Beneficios</a></li>
 </ul>
 </li>
 </ul>
 
   <h4>Previous topic</h4>
-  <p class="topless"><a href="shhvm.html"
-                        title="previous chapter">HHVM</a></p>
+  <p class="topless"><a href="sgitbucket.html"
+                        title="previous chapter">Gitbucket</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="sptdeploy_cleo.html"
-                        title="next chapter">PTDeploy</a></p>
+  <p class="topless"><a href="sgitlab.html"
+                        title="next chapter">Git lab</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
-    <li><a href="_sources/sptconfigure.txt"
+    <li><a href="_sources/sgitkeysafe.txt"
            rel="nofollow">Show Source</a></li>
   </ul>
 <div id="searchbox" style="display: none">
@@ -221,10 +214,10 @@ ptconfigure, cleo también</td>
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="sptdeploy_cleo.html" title="PTDeploy"
+          <a href="sgitlab.html" title="Git lab"
              >next</a> |</li>
         <li class="right" >
-          <a href="shhvm.html" title="HHVM"
+          <a href="sgitbucket.html" title="Gitbucket"
              >previous</a> |</li>
         <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
           <li><a href="sptconfigure_main.html" >PTConfigure</a> &raquo;</li> 

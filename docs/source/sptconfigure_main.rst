@@ -33,5 +33,15 @@ Jugando con módulos PTConfigure
    scleofy
    scopy
    sdevelopertools
+   sdigitalocean
+   sencryption
+   sgem
+   sgenerator
+   sgimp
+   sgitbucket
+   sgitkeysafe
+   sgitlab
+   sgittools
+   shhvm
    sptconfigure
-
+   sptdeploy_cleo

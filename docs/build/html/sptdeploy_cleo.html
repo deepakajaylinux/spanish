@@ -1,0 +1,270 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>PTDeploy &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="PTConfigure" href="sptconfigure_main.html" />
+    <link rel="prev" title="PTConfigure" href="sptconfigure.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="sptconfigure.html" title="PTConfigure"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" accesskey="U">PTConfigure</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="ptdeploy">
+<h1>PTDeploy<a class="headerlink" href="#ptdeploy" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>Sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>El ptdeploy envuelve las aplicaciones de los usuarios con la implementación automatizada, construir y lanzar funciones, aplicación web de control de versiones y la infraestructura de código en PHP.</p>
+<p>Con el fin de construir para el bienestar de la implementación, se necesitan muchos archivos a copiar de FTP u otras soluciones ad hoc . Y también gran cantidad de herramientas de automatización Empresa faltaban . Para superar estas carencias ptdeploy bajo la herramienta faraón eran acumule. PHP tiene ptdeploy tan rubí fiils la brecha en ptdeploy .</p>
+<p>Esta herramienta es para aplicaciones de provisiones y construye a sus cajas. El usuario puede configurar aún patrón de despliegue de aplicaciones simples o complejas a su sistema con uno o dos archivos PHP o, de forma rápida patrones de despliegue amigables de configuración en la nube.</p>
+<p>Ptdeploy es modular, orientado a objetos y extensible. Así que si el usuario requiere ningún módulo extra que pueden crear y añadir los nuevos módulos en función de sus necesidades.</p>
+<p>Este ptdeploy actúa como un contenedor en el que todos los pasos de despliegue de usuario se cubren en un solo archivo. Esto permite el uso de un solo comando para arrancar una instancia de sus aplicaciones.</p>
+</div>
+<div class="section" id="ayuda-comando">
+<h2>Ayuda Comando<a class="headerlink" href="#ayuda-comando" title="Permalink to this headline">¶</a></h2>
+<p>Este comando ayuda a determinar el uso de ptdeploy módulo. El usuario se llega a saber acerca de la diferente forma / formato de ejecutar este módulo. Este comando guía al usuario final a conocer el propósito de este comando. A continuación dado son el mando y la pantalla del mismo.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure ptdeploy <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La captura de pantalla para el comando anterior se enumeran a continuación ,</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure Ptdeploy <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>allows you to update Ptdeploy.
+
+ Ptdeploy, dapper, ptdeploy
+
+       - install
+       Installs the latest version of ptdeploy
+       example: ptconfigure ptdeploy install
+
+       - ensure
+       Installs the latest version of ptdeploy, only <span class="k">if</span> a version is not installed
+       example: ptconfigure ptdeploy ensure
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="instalacion">
+<h2>instalación<a class="headerlink" href="#instalacion" title="Permalink to this headline">¶</a></h2>
+<p>Este comando ayuda a instalar la última versión de ptdeploy. El siguiente comando dado se ejecutará el proceso de instalación.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure ptdeploy install
+</pre></div>
+</div>
+<p>La captura de pantalla para el comando anterior se enumeran a continuación ,</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure ptdeploy install
+Install ptdeploy ? <span class="o">(</span>Y/N<span class="o">)</span>
+Y
+*******************************
+*        Pharaoh Tools        *
+*          ptdeploy         *
+*******************************
+What is the program data directory? Found <span class="s2">&quot;/opt/ptdeploy&quot;</span> - use this? <span class="o">(</span>Enter nothing <span class="k">for</span> yes, no end slash<span class="o">)</span>
+
+What is the program executor directory? Found <span class="s2">&quot;/usr/bin&quot;</span> - use this? <span class="o">(</span>Enter nothing <span class="k">for</span> yes, No Trailing Slash<span class="o">)</span>
+
+git clone <span class="s1">&#39;https://github.com/PharaohTools/ptdeploy.git&#39;</span>  /tmp/ptdeploy/ptdeployCloning into <span class="s1">&#39;/tmp/ptdeploy/ptdeploy&#39;</span>...
+remote: Counting objects: 6989, <span class="k">done</span>.
+remote: Total <span class="m">6989</span> <span class="o">(</span>delta 0<span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta 0<span class="o">)</span>, pack-reused 6989
+Receiving objects: 100% <span class="o">(</span>6989/6989<span class="o">)</span>, 2.61 MiB <span class="p">|</span> 176.00 KiB/s, <span class="k">done</span>.
+Resolving deltas: 100% <span class="o">(</span>4335/4335<span class="o">)</span>, <span class="k">done</span>.
+Checking connectivity... <span class="k">done</span>.
+Program Data folder populated
+Program Executor Deleted <span class="k">if</span> existed
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+ptdeploy: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="asegurar">
+<h2>asegurar<a class="headerlink" href="#asegurar" title="Permalink to this headline">¶</a></h2>
+<p>Este comando ayuda a instalar la última versión de ptdeploy, solamente si una versión no está instalado. El siguiente comando dado se ejecutará el proceso de instalación.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure ptdeploy ensure
+</pre></div>
+</div>
+<p>La captura de pantalla para el comando anterior se enumeran a continuación ,</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure ptdeploy ensure
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Ensure module install is not checking versions
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Module ptdeploy reports itself as Installed
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Not installing as already installed
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+ptdeploy: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="opciones">
+<h2>Opciones<a class="headerlink" href="#opciones" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="21%" />
+<col width="33%" />
+<col width="9%" />
+<col width="36%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">parámetros</th>
+<th class="head">Parámetro Alternativa</th>
+<th class="head">Opciones</th>
+<th class="head">Comentarios</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>ptconfigure ptdeploy
+install</td>
+<td><p class="first">Hay tres parámetros alternativos que
+pueden ser utilizados en la línea de
+comandos. Ptdeploy, dapper, ptdeploy
+ejemplo: ptconfigure ptdeploy install /</p>
+<blockquote class="last">
+<div>ptconfigure dapper install</div></blockquote>
+</td>
+<td>Y(Yes)</td>
+<td>El sistema se inicia proceso de instalación</td>
+</tr>
+<tr class="row-odd"><td>ptconfigure ptdeploy
+install</td>
+<td><p class="first">Hay tres parámetros alternativos que
+pueden ser utilizados en la línea de
+comandos. Ptdeploy, dapper, ptdeploy
+ejemplo: ptconfigure ptdeploy install /</p>
+<blockquote class="last">
+<div>ptconfigure dapper install|</div></blockquote>
+</td>
+<td>N(No)</td>
+<td>El sistema detiene proceso de instalación</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Edición de los archivos de host, los archivos de la máquina virtual, archivos de configuración, actualizaciones de bases de datos y más
+pueden ser automatizadas usando esto.</li>
+<li>Mediante el uso de la capacidad de gestión de servidor remoto, los usuarios pueden automatizar despliegues en toda la infraestructura de
+cualquier tamaño.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">PTDeploy</a><ul>
+<li><a class="reference internal" href="#sinopsis">Sinopsis</a></li>
+<li><a class="reference internal" href="#ayuda-comando">Ayuda Comando</a></li>
+<li><a class="reference internal" href="#instalacion">instalación</a></li>
+<li><a class="reference internal" href="#asegurar">asegurar</a></li>
+<li><a class="reference internal" href="#opciones">Opciones</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="sptconfigure.html"
+                        title="previous chapter">PTConfigure</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/sptdeploy_cleo.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="sptconfigure.html" title="PTConfigure"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" >PTConfigure</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

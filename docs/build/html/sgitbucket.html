@@ -1,0 +1,355 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Gitbucket &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="PTConfigure" href="sptconfigure_main.html" />
+    <link rel="next" title="GitKeySafe" href="sgitkeysafe.html" />
+    <link rel="prev" title="GIMP" href="sgimp.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="sgitkeysafe.html" title="GitKeySafe"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="sgimp.html" title="GIMP"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" accesskey="U">PTConfigure</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="gitbucket">
+<h1>Gitbucket<a class="headerlink" href="#gitbucket" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Git es un sistema de control distribuido de versiones con un énfasis en la rapidez, integridad de datos y soporte para flujos de trabajo distribuidas, no lineales. Git es el sistema de control de versiones ampliamente adoptado para el desarrollo de software.</p>
+<p>Directorio de trabajo Git es un repositorio de pleno derecho con la historia completa y plena capacidad de versión de seguimiento, independientemente del acceso a la red o en un servidor central.</p>
+<p>GitBucket es la fácil instalación Github clon escrito con Scala. Proporciona una serie de características básicas siguientes:</p>
+<ul class="simple">
+<li>Público / Privado repositorio Git (acceso http solamente)</li>
+<li>El visor de repositorio (algunas características avanzadas como la edición de archivos en línea no se implementan)</li>
+<li>Buscar descarga (Código y Cuestiones)</li>
+<li>Wiki</li>
+<li>Cuestiones</li>
+<li>Tenedor petición / Tirar</li>
+<li>Notificación por correo</li>
+<li>Actividad línea de tiempo</li>
+<li>Gestión de usuarios (para administradores)</li>
+<li>Grupo (como Organización en Github)</li>
+<li>Integración LDAP</li>
+<li>Soporte Gravatar</li>
+<li>Archivo war ejecutable</li>
+</ul>
+</div>
+<div class="section" id="ayuda-comando">
+<h2>Ayuda Comando<a class="headerlink" href="#ayuda-comando" title="Permalink to this headline">¶</a></h2>
+<p>Este comando ayuda a determinar el uso del módulo gitbucket. El usuario llega a saber acerca de las diferentes formas / formato para ejecutar este módulo. Este comando guía al usuario final a conocer el propósito de este comando. A continuación dado son el mando y la pantalla del mismo.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure gitbucket <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La captura de pantalla para el comando anterior se enumeran a continuación,</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure gitbucket <span class="nb">help</span>
+******************************
+ This <span class="nb">command </span>allows you to install a full Git Bucket installation on to a server
+ The dependencies <span class="k">for</span> GitBucket are also installed.
+
+ GitBucket, gitbucket, git-bucket
+
+       - install
+       Installs the latest version of GitBucket on a system
+       example: ptconfigure gitbucket install
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="instalacion">
+<h2>instalación<a class="headerlink" href="#instalacion" title="Permalink to this headline">¶</a></h2>
+<p>Cuando el usuario tiene que instalar el módulo gitbucket en máquina. El siguiente comando dado se ejecutará el proceso de instalación.
+Durante la instalación, el sistema pide el directorio raíz del repositorio. El usuario tiene que definir la ruta. No hay directorio predeterminado.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure gitbucket install
+</pre></div>
+</div>
+<p>La captura de pantalla para el comando anterior se enumeran a continuación,</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure gitbucket install
+Install Git Bucket? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+*******************************
+*        Pharaoh Tools        *
+*         !GitBucket!        *
+*******************************
+PHP Notice:  Undefined index: version in /opt/ptconfigure/ptconfigure/src/Modules/GitBucket/Model/GitBucketUbuntu.php on line 67
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Ensure module install is not checking versions
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Command <span class="s1">&#39;git&#39;</span> found
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> No <span class="nb">command</span> <span class="s1">&#39;gitk&#39;</span> found
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> No <span class="nb">command</span> <span class="s1">&#39;git-cola&#39;</span> found
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Installing as not installed
+*******************************
+*        Pharaoh Tools        *
+*         !Git Tools!!        *
+*******************************
+PHP Warning:  file_put_contents<span class="o">(</span>/opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/../../../cleovars<span class="o">)</span>: failed to open stream: Permission denied in /opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/AppConfig.php on line 115
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Package git from the Packager Apt is already installed, so not installing
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+ git-core
+<span class="m">0</span> upgraded, <span class="m">1</span> newly installed, <span class="m">0</span> to remove and <span class="m">301</span> not upgraded.
+Need to get 1,458 B of archives.
+After this operation, 21.5 kB of additional disk space will be used.
+Get:1 http://in.archive.ubuntu.com/ubuntu/ trusty-updates/main git-core all 1:1.9.1-1ubuntu0.1 <span class="o">[</span>1,458 B<span class="o">]</span>
+Fetched 1,458 B in 1s <span class="o">(</span><span class="m">783</span> B/s<span class="o">)</span>
+Selecting previously unselected package git-core.
+<span class="o">(</span>Reading database ... <span class="m">182763</span> files and directories currently installed.<span class="o">)</span>
+Preparing to unpack .../git-core_1%3a1.9.1-1ubuntu0.1_all.deb ...
+Unpacking git-core <span class="o">(</span>1:1.9.1-1ubuntu0.1<span class="o">)</span> ...
+Setting up git-core <span class="o">(</span>1:1.9.1-1ubuntu0.1<span class="o">)</span> ...
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package git-core from the Packager Apt executed correctly
+PHP Warning:  file_put_contents<span class="o">(</span>/opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/../../../cleovars<span class="o">)</span>: failed to open stream: Permission denied in /opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/AppConfig.php on line 115
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Suggested packages:
+ git-doc
+The following NEW packages will be installed:
+ gitk
+<span class="m">0</span> upgraded, <span class="m">1</span> newly installed, <span class="m">0</span> to remove and <span class="m">301</span> not upgraded.
+Need to get <span class="m">121</span> kB of archives.
+After this operation, 1,250 kB of additional disk space will be used.
+Get:1 http://in.archive.ubuntu.com/ubuntu/ trusty-updates/main gitk all 1:1.9.1-1ubuntu0.1 <span class="o">[</span><span class="m">121</span> kB<span class="o">]</span>
+Fetched <span class="m">121</span> kB in 2s <span class="o">(</span>43.1 kB/s<span class="o">)</span>
+Selecting previously unselected package gitk.
+<span class="o">(</span>Reading database ... <span class="m">182764</span> files and directories currently installed.<span class="o">)</span>
+Preparing to unpack .../gitk_1%3a1.9.1-1ubuntu0.1_all.deb ...
+Unpacking gitk <span class="o">(</span>1:1.9.1-1ubuntu0.1<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> man-db <span class="o">(</span>2.6.7.1-1<span class="o">)</span> ...
+Setting up gitk <span class="o">(</span>1:1.9.1-1ubuntu0.1<span class="o">)</span> ...
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package gitk from the Packager Apt executed correctly
+PHP Warning:  file_put_contents<span class="o">(</span>/opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/../../../cleovars<span class="o">)</span>: failed to open stream: Permission denied in /opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/AppConfig.php on line 115
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+ libjs-jquery libjs-underscore
+Suggested packages:
+ python-pyinotify python-simplejson javascript-common
+Recommended packages:
+ xxdiff
+The following NEW packages will be installed:
+ git-cola libjs-jquery libjs-underscore
+<span class="m">0</span> upgraded, <span class="m">3</span> newly installed, <span class="m">0</span> to remove and <span class="m">301</span> not upgraded.
+Need to get <span class="m">363</span> kB of archives.
+After this operation, 1,886 kB of additional disk space will be used.
+Get:1 http://in.archive.ubuntu.com/ubuntu/ trusty/main libjs-jquery all 1.7.2+dfsg-2ubuntu1 <span class="o">[</span>78.8 kB<span class="o">]</span>
+Get:2 http://in.archive.ubuntu.com/ubuntu/ trusty/main libjs-underscore all 1.4.4-2ubuntu1 <span class="o">[</span>45.6 kB<span class="o">]</span>
+Get:3 http://in.archive.ubuntu.com/ubuntu/ trusty/universe git-cola all 1.9.3-1 <span class="o">[</span><span class="m">239</span> kB<span class="o">]</span>
+Fetched <span class="m">363</span> kB in 13s <span class="o">(</span>27.8 kB/s<span class="o">)</span>
+Selecting previously unselected package libjs-jquery.
+<span class="o">(</span>Reading database ... <span class="m">182782</span> files and directories currently installed.<span class="o">)</span>
+Preparing to unpack .../libjs-jquery_1.7.2+dfsg-2ubuntu1_all.deb ...
+Unpacking libjs-jquery <span class="o">(</span>1.7.2+dfsg-2ubuntu1<span class="o">)</span> ...
+Selecting previously unselected package libjs-underscore.
+Preparing to unpack .../libjs-underscore_1.4.4-2ubuntu1_all.deb ...
+Unpacking libjs-underscore <span class="o">(</span>1.4.4-2ubuntu1<span class="o">)</span> ...
+Selecting previously unselected package git-cola.
+Preparing to unpack .../git-cola_1.9.3-1_all.deb ...
+Unpacking git-cola <span class="o">(</span>1.9.3-1<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> man-db <span class="o">(</span>2.6.7.1-1<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> gnome-menus <span class="o">(</span>3.10.1-0ubuntu2<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> desktop-file-utils <span class="o">(</span>0.22-1ubuntu1<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> bamfdaemon <span class="o">(</span>0.5.1+14.04.20140409-0ubuntu1<span class="o">)</span> ...
+Rebuilding /usr/share/applications/bamf-2.index...
+Processing triggers <span class="k">for</span> mime-support <span class="o">(</span>3.54ubuntu1<span class="o">)</span> ...
+Setting up libjs-jquery <span class="o">(</span>1.7.2+dfsg-2ubuntu1<span class="o">)</span> ...
+Setting up libjs-underscore <span class="o">(</span>1.4.4-2ubuntu1<span class="o">)</span> ...
+Setting up git-cola <span class="o">(</span>1.9.3-1<span class="o">)</span> ...
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package git-cola from the Packager Apt executed correctly
+PHP Warning:  file_put_contents<span class="o">(</span>/opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/../../../cleovars<span class="o">)</span>: failed to open stream: Permission denied in /opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/AppConfig.php on line 115
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Ensure module install is not checking versions
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Module Java reports itself as Installed
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Not installing as already installed
+Creating /tmp/ptconfigure-temp-script-15361773074.sh
+chmod <span class="m">755</span> /tmp/ptconfigure-temp-script-15361773074.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-15361773074.sh Permissions
+Executing /tmp/ptconfigure-temp-script-15361773074.sh
+Cloning into <span class="s1">&#39;gitbucket-war&#39;</span>...
+remote: Counting objects: 8, <span class="k">done</span>.
+remote: Total <span class="m">8</span> <span class="o">(</span>delta 0<span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta 0<span class="o">)</span>
+Unpacking objects: 100% <span class="o">(</span>8/8<span class="o">)</span>, <span class="k">done</span>.
+Checking connectivity... <span class="k">done</span>.
+mkdir: cannot create directory ‘/opt/gitbucket/’: Permission denied
+mv: target ‘/opt/gitbucket/’ is not a directory
+Temp File /tmp/ptconfigure-temp-script-15361773074.sh Removed
+Enter Repository Root Directory:
+/
+Program Executor Deleted <span class="k">if</span> existed
+PHP Warning:  file_put_contents<span class="o">(</span>/usr/bin/gitbucket<span class="o">)</span>: failed to open stream: Permission denied in /opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/BaseLinuxApp.php on line 312
+chmod: cannot access ‘/usr/bin/gitbucket’: No such file or directory
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+GitBucket: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="opciones">
+<h2>Opciones<a class="headerlink" href="#opciones" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="23%" />
+<col width="30%" />
+<col width="9%" />
+<col width="38%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parámetros</th>
+<th class="head">Parámetro Alternativa</th>
+<th class="head">Opciones</th>
+<th class="head">Comentarios</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>ptconfigure gitbucket
+Install</td>
+<td>GitBucket, gitbucket , git-bucket</td>
+<td>Y(Yes)</td>
+<td>El sistema se inicia proceso de instalación</td>
+</tr>
+<tr class="row-odd"><td>ptconfigure gitbucket
+Install|</td>
+<td>GitBucket, gitbucket , git-bucket</td>
+<td>N(No)</td>
+<td>El sistema se inicia proceso de instalación</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Git apoya ramificación rápida y fusión, e incluye herramientas específicas para la visualización y navegación de una historia de desarrollo
+no lineal.</li>
+<li>Los repositorios pueden ser publicados a través de HTTP, FTP, rsync, o un protocolo Git más bien una toma de corriente normal, o ssh.</li>
+<li>Git describe como muy rápido, escalable y demostró que era un orden de magnitud más rápido que algunos sistemas de control de versiones, y ir a  buscar historial de versiones de un repositorio almacenada localmente puede ser cien veces más rápido que ir a buscar desde el servidor remoto.</li>
+<li>Las palabras clave en changelogs tienen hipervínculos a las páginas de emisión que corresponda, Pull Pide páginas y páginas Wiki.</li>
+<li>El conjunto de cambios y diferencial en los registros de cambios se enlazará con GitBucket espectador repositorio.</li>
+<li>Desencadenar una acumulación cuando un cambio es empujado a GitBucket utilizando un WebHook.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Gitbucket</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#ayuda-comando">Ayuda Comando</a></li>
+<li><a class="reference internal" href="#instalacion">instalación</a></li>
+<li><a class="reference internal" href="#opciones">Opciones</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="sgimp.html"
+                        title="previous chapter">GIMP</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sgitkeysafe.html"
+                        title="next chapter">GitKeySafe</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/sgitbucket.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="sgitkeysafe.html" title="GitKeySafe"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="sgimp.html" title="GIMP"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" >PTConfigure</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>
