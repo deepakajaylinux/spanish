@@ -1,0 +1,240 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>FireFox17 &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="PTConfigure" href="sptconfigure_main.html" />
+    <link rel="next" title="FireFox24" href="sfirefox24.html" />
+    <link rel="prev" title="FireFox14" href="sfirefox14.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="sfirefox24.html" title="FireFox24"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="sfirefox14.html" title="FireFox14"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" accesskey="U">PTConfigure</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="firefox17">
+<h1>FireFox17<a class="headerlink" href="#firefox17" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>En este módulo se utiliza para instalar firefox17. Ubuntu lanza versiones actualizadas periódicamente. Implementa los estándares web actuales y previstos. Apoyo a largo plazo incluye actualizaciones para el nuevo hardware, parches de seguridad y actualizaciones de la infraestructura de cloud computing. Es cómodo con Ubuntu y CentOS.</p>
+</div>
+<div class="section" id="ayuda-comando">
+<h2>Ayuda Comando<a class="headerlink" href="#ayuda-comando" title="Permalink to this headline">¶</a></h2>
+<p>Este comando puede funcionar sobre los objetivos y los comandos disponibles bajo módulo Firefox17. También explica el comando para instalar firefox17. Antes de la instalación, el usuario puede leer este comando de ayuda explica su función.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure firefox17 <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La siguiente imagen también ayuda a entender este módulo con claridad.</p>
+<div class="highlight-bash"><div class="highlight"><pre>Kevell@corp:/# ptconfigure firefox17 <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>allows you to install Firefox17.
+
+ Firefox17, ff17, firefox17
+
+- install
+Installs the latest version of Firefox 17
+example: ptconfigure firefox17 install
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="instalacion">
+<h2>instalación<a class="headerlink" href="#instalacion" title="Permalink to this headline">¶</a></h2>
+<p>Es un proceso evidente para instalar módulo firefox17 bajo Ptconfigure simplemente usando la orden dada a continuación,</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure firefox17 install
+</pre></div>
+</div>
+<p>Después de clave en el comando, puede pregunta</p>
+<p>Install firefox17? (Y/N)</p>
+<p>En caso de que la entrada del usuario como Y, se puede instalar firefox17 del paquete. Si no, se puede salir de la pantalla. Las siguientes capturas de pantalla pueden explicarlo.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure Firefox17 install
+
+Install Firefox? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+*******************************
+*        Pharaoh Tools        *
+*          Firefox            *
+*******************************
+Creating /tmp/ptconfigure-temp-script-51942043520.sh
+chmod <span class="m">755</span> /tmp/ptconfigure-temp-script-51942043520.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-51942043520.sh Permissions
+Executing /tmp/ptconfigure-temp-script-51942043520.sh
+Cloning into <span class="s1">&#39;firefox17&#39;</span>...
+remote: Counting objects: 78, <span class="k">done</span>.
+remote: Total <span class="m">78</span> <span class="o">(</span>delta 0<span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta 0<span class="o">)</span>
+Unpacking objects: 100% <span class="o">(</span>78/78<span class="o">)</span>, <span class="k">done</span>.
+Checking connectivity... <span class="k">done</span>.
+Temp File /tmp/ptconfigure-temp-script-51942043520.sh Removed
+Program Executor Deleted <span class="k">if</span> existed
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+Firefox17: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="opciones">
+<h2>Opciones<a class="headerlink" href="#opciones" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="25%" />
+<col width="31%" />
+<col width="11%" />
+<col width="32%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">parámetros</th>
+<th class="head">Parámetro Alternativa</th>
+<th class="head">Opciones</th>
+<th class="head">Comentarios</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>ptconfigure firefox17 Install</td>
+<td>En lugar de utilizar firefox17
+podemos utilizar FF17, Firefox17</td>
+<td>Y(Yes)</td>
+<td>El sistema se inicia proceso de
+instalación Bajo ptconfigure</td>
+</tr>
+<tr class="row-odd"><td>ptconfigure firefox17 Install</td>
+<td>En lugar de utilizar firefox17
+podemos utilizar FF17, Firefox17</td>
+<td>N(No)</td>
+<td>El sistema detiene proceso de
+instalación Bajo ptconfigure|</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Firefox17 utiliza soporte para nuevo hardware y la integración de todas las actualizaciones publicadas en la serie hasta la fecha.</li>
+<li>Firefox17 no es sensible a mayúsculas.</li>
+<li>Privacidad y medidas de seguridad, búsqueda inteligente es posible.</li>
+<li>Es cómodo con Ubuntu y CentOS.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">FireFox17</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#ayuda-comando">Ayuda Comando</a></li>
+<li><a class="reference internal" href="#instalacion">instalación</a></li>
+<li><a class="reference internal" href="#opciones">Opciones</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="sfirefox14.html"
+                        title="previous chapter">FireFox14</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sfirefox24.html"
+                        title="next chapter">FireFox24</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/sfirefox17.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="sfirefox24.html" title="FireFox24"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="sfirefox14.html" title="FireFox14"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" >PTConfigure</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

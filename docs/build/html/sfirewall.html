@@ -1,0 +1,276 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Firewall &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="PTConfigure" href="sptconfigure_main.html" />
+    <link rel="next" title="Gem" href="sgem.html" />
+    <link rel="prev" title="FireFox33" href="sfirefox33.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="sgem.html" title="Gem"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="sfirefox33.html" title="FireFox33"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" accesskey="U">PTConfigure</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="firewall">
+<h1>Firewall<a class="headerlink" href="#firewall" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Un firewall es un sistema de seguridad de la red que controla el tráfico de red entrante y saliente en base a un conjunto de reglas aplicadas. Existen Firewalls tanto como una solución de software y como un dispositivo de hardware.</p>
+</div>
+<div class="section" id="comando-ayuda">
+<h2>comando Ayuda<a class="headerlink" href="#comando-ayuda" title="Permalink to this headline">¶</a></h2>
+<p>Este comando ayuda ayudar al usuario acerca de Ptconfigure. Guía al usuario permiso.</p>
+<p>El usuario puede hacer la modificación según el deseo. Ayuda imagen guiará al usuario. Vamos a visualizar la misma.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure Firewall <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La captura de pantalla para el comando anterior se enumeran a continuación,</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure Firewall <span class="nb">help</span>
+******************************
+This <span class="nb">command </span>allows you to modify create or modify firewalls
+
+ Firewall, firewall
+
+       - <span class="nb">enable</span>
+<span class="nb">       </span>Enable system firewall
+       example: ptconfigure firewall <span class="nb">enable</span>
+
+       - disable
+       Disable system firewall
+       example: ptconfigure firewall disable
+
+       - allow
+       Allow a Firewall rule
+       example: ptconfigure firewall allow --firewall-rule<span class="o">=</span><span class="s2">&quot;ssh/tcp&quot;</span>
+
+       - deny
+       Deny a Firewall rule. Allow connection attempts to be ignored and <span class="nb">time </span>out.
+       example: ptconfigure firewall deny --firewall-rule<span class="o">=</span><span class="s2">&quot;ssh/tcp&quot;</span>
+
+       - reject
+       Reject a Firewall rule. Terminate connections attempts with an error to the connector.
+       example: ptconfigure firewall reject --firewall-rule<span class="o">=</span><span class="s2">&quot;ssh/tcp&quot;</span>
+
+       - limit
+       Limit a Firewall rule. ufw will deny connections <span class="k">if</span> an IP address has attempted
+       to initiate <span class="m">6</span> or more connections in the last <span class="m">30</span> seconds.
+       example: ptconfigure firewall limit --firewall-rule<span class="o">=</span><span class="s2">&quot;ssh/tcp&quot;</span>
+
+       - delete
+       Delete a Firewall rule.
+       example: ptconfigure firewall delete --firewall-rule<span class="o">=</span><span class="s2">&quot;ssh/tcp&quot;</span>
+
+       - insert
+       Insert a Firewall rule.
+       example: ptconfigure firewall insert --firewall-rule<span class="o">=</span><span class="s2">&quot;ssh/tcp&quot;</span>
+
+       - reset
+       Reset a Firewall rule.
+       example: ptconfigure firewall reset --firewall-rule<span class="o">=</span><span class="s2">&quot;ssh/tcp&quot;</span>
+
+       - default
+       Set default policy, should be allow, deny, or reject
+       example: ptconfigure firewall default --policy<span class="o">=</span><span class="s2">&quot;deny&quot;</span>
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="opciones">
+<h2>Opciones<a class="headerlink" href="#opciones" title="Permalink to this headline">¶</a></h2>
+<p>Reglas Firewalls se pueden personalizar según sus necesidades, requisitos y niveles de amenaza de seguridad. El usuario puede crear o desactivar reglas de firewall basado en condiciones tales como:</p>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="18%" />
+<col width="49%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">parámetros</th>
+<th class="head">función</th>
+<th class="head">comentario</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>IP address</td>
+<td>El bloqueo de una determinada dirección IP o un rango de
+direcciones IP, lo que usted piensa es depredadora</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>Enable</td>
+<td>Habilitar firewall del sistema</td>
+<td>Ptconfigure firewall enable</td>
+</tr>
+<tr class="row-even"><td>Disable</td>
+<td>Firewall del sistema Desactivar</td>
+<td>Ptconfigure firewall disable</td>
+</tr>
+<tr class="row-odd"><td>Allow</td>
+<td>Permitir regla de firewall</td>
+<td>Ptconfigure firewall allow –firewall-
+rule=”ssh/tcp”</td>
+</tr>
+<tr class="row-even"><td>Deny</td>
+<td>Permitir intento de conexión que se ignora y el tiempo
+de espera</td>
+<td>Ptconfigure firewall deny –firewall-
+rule=”ssh/tcp”</td>
+</tr>
+<tr class="row-odd"><td>Reject</td>
+<td>Terminar los intentos de conexión con un error al
+conector</td>
+<td>Ptconfigure firewall reject –firewall-
+rule=”ssh/tcp”</td>
+</tr>
+<tr class="row-even"><td>Limit</td>
+<td>Ufw negará conexiones si una dirección IP tiene 6 o
+iniciar intentó más conexión en los últimos 30 segundos.</td>
+<td>Ptconfigure firewall limit –firewall-
+rule=”ssh/tcp”</td>
+</tr>
+<tr class="row-odd"><td>Delete</td>
+<td>Eliminar una regla de firewall</td>
+<td>Ptconfigure firewall delete –firewall-
+rule=”ssh/tcp”</td>
+</tr>
+<tr class="row-even"><td>Insert</td>
+<td>Inserte una regla de firewall</td>
+<td>Ptconfigure firewall insert –firewall-
+rule=”ssh/tcp”</td>
+</tr>
+<tr class="row-odd"><td>Reset</td>
+<td>Cambiar una regla de firewall</td>
+<td>Ptconfigure firewall reset –firewall-
+rule=”ssh/tcp”</td>
+</tr>
+<tr class="row-even"><td>default</td>
+<td>Política predeterminada, debe ser permitir, denegar o
+rechazar.</td>
+<td>Ptconfigure firewall default –
+policy=”deny”|</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>El servidor de seguridad impide el acceso no deseado al sistema a través de una conexión de red mediante la identificación y prevención de
+comunicación a través de los puertos de riesgo.</li>
+<li>Sistema de comunicarse a través de muchos puertos reconocidos diferentes, y el servidor de seguridad tiende a permitir que estos sin
+preguntar o alertar al usuario.</li>
+<li>Los firewalls también pueden detectar la actividad &#8220;sospechosa&#8221; desde el exterior.</li>
+<li>El usuario puede configurar su dominio de acuerdo a su deseo.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Firewall</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#comando-ayuda">comando Ayuda</a></li>
+<li><a class="reference internal" href="#opciones">Opciones</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="sfirefox33.html"
+                        title="previous chapter">FireFox33</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sgem.html"
+                        title="next chapter">Gem</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/sfirewall.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="sgem.html" title="Gem"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="sfirefox33.html" title="FireFox33"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" >PTConfigure</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

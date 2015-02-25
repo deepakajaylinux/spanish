@@ -37,6 +37,12 @@ Jugando con módulos PTConfigure
    sencryption
    senvironmentconfig
    sfile
+   sfirefox
+   sfirefox14
+   sfirefox17
+   sfirefox24
+   sfirefox33
+   sfirewall
    sgem
    sgenerator
    sgimp
