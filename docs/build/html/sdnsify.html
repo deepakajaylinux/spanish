@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Boxify &mdash; spanishkevell 1.0.1 documentation</title>
+    <title>Dnsify &mdash; spanishkevell 1.0.1 documentation</title>
     
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -25,8 +25,8 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
     <link rel="up" title="Ptconfigure" href="sptconfigure_main.html" />
-    <link rel="next" title="Cassandra" href="scassandra.html" />
-    <link rel="prev" title="Behat" href="sbehat.html" /> 
+    <link rel="next" title="Encryption" href="sencryption.html" />
+    <link rel="prev" title="DigitalOcean" href="sdigitalocean.html" /> 
   </head>
   <body>
     <div class="related">
@@ -36,10 +36,10 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="scassandra.html" title="Cassandra"
+          <a href="sencryption.html" title="Encryption"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="sbehat.html" title="Behat"
+          <a href="sdigitalocean.html" title="DigitalOcean"
              accesskey="P">previous</a> |</li>
         <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
           <li><a href="sptconfigure_main.html" accesskey="U">Ptconfigure</a> &raquo;</li> 
@@ -51,40 +51,39 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="boxify">
-<h1>Boxify<a class="headerlink" href="#boxify" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="dnsify">
+<h1>Dnsify<a class="headerlink" href="#dnsify" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="sinopsis">
 <h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
-<p>Esta módulos sobres las principales necesidades de los usuarios en la creación y así como la gestión de la caja. Este tema es discutir acerca de cómo utilizar este módulo, y sobre varias funciones en el uso de boxify.</p>
+<p>Esta módulos sobres las principales necesidades de los usuarios que gestionan DNS. Este tema es discutir acerca de cómo utilizar este módulo, y sobre varias funciones en el uso de dnsify.</p>
 </div>
 <div class="section" id="ayuda-comando">
 <h2>Ayuda Comando<a class="headerlink" href="#ayuda-comando" title="Permalink to this headline">¶</a></h2>
-<p>El comando de ayuda guía a los usuarios en el manejo de este módulo, con el fin de manejar y realizar diversas funciones de una caja. En él se enumeran las salidas de los parámetros alternativos, y resalta la sintaxis para las diversas funciones de uso y modificación de una caja. La sintaxis de opción de ayuda en el marco del módulo boxify se muestra a continuación,</p>
-<div class="highlight-bash"><div class="highlight"><pre>ptconfigure Boxify <span class="nb">help</span>
+<p>El comando de ayuda guía a los usuarios en el manejo de este módulo, con el fin de manejar y realizar diversas funciones de una caja. En él se enumeran las salidas de los parámetros alternativos, y resalta la sintaxis para las diversas funciones de uso y modificación de una caja. La sintaxis de opción de ayuda en el marco del módulo dnsify se muestra a continuación,</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure DNSify <span class="nb">help</span>
 </pre></div>
 </div>
-<p>La sintaxis para declarar el comando de ayuda no es sensible a mayúsculas, que es una ventaja añadida. La siguiente captura de pantalla a visualizar sobre el comando de ayuda bajo boxify.</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure Boxify <span class="nb">help</span>
+<p>La sintaxis para declarar el comando de ayuda no es sensible a mayúsculas, que es una ventaja añadida. La siguiente captura de pantalla a visualizar sobre el comando de ayuda bajo dnsify.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure Dnsify <span class="nb">help</span>
 ******************************
-
 
  This <span class="nb">command </span>provides a generic Box Management wrapper around all of the Box Providers <span class="o">(</span>Cloud and Otherwise<span class="o">)</span> so that we have a
  generic way to create and destroy boxes.
 
- Boxify, boxify
+ DNSify, dnsify
 
        - install-generic-autopilots
-       Install the generic Boxify autopilot templates <span class="k">for</span> a Tiny or Medium <span class="o">(</span>Current Default<span class="o">)</span> <span class="nb">set </span>of Environments
-       example: ptconfigure boxify install-generic-autopilots
-       example: ptconfigure boxify install-generic-autopilots
+       Install the generic Dnsify autopilot templates <span class="k">for</span> a Tiny or Medium <span class="o">(</span>Current Default<span class="o">)</span> <span class="nb">set </span>of Environments
+       example: ptconfigure dnsify install-generic-autopilots
+       example: ptconfigure dnsify install-generic-autopilots
                    --yes
-                   --guess <span class="c"># will set --destination-dir=*this dir +*build/config/ptconfigure/boxify/autopilots/</span>
+                   --guess <span class="c"># will set --destination-dir=*this dir +*build/config/ptconfigure/dnsify/autopilots/</span>
                    --template-group<span class="o">=</span>tiny
                    --destination-dir<span class="o">=</span>*path-to-destination*
 
        - box-add
        Installs a Box through a cloud provider
-       example: ptconfigure boxify box-add --environment-name<span class="o">=</span><span class="s2">&quot;*environment*&quot;</span>
+       example: ptconfigure dnsify box-add --environment-name<span class="o">=</span><span class="s2">&quot;*environment*&quot;</span>
            --server-prefix<span class="o">=</span><span class="s2">&quot;my-app&quot;</span>
            --provider<span class="o">=</span><span class="s2">&quot;DigitalOcean&quot;</span> // DigitalOcean, Rackspace, VSphere
            --image-id<span class="o">=</span><span class="s2">&quot;3101045&quot;</span> // <span class="nv">DO</span><span class="o">=</span><span class="m">3101045</span> , <span class="nv">RAX</span><span class="o">=</span>ffd597d6-2cc4-4b43-b8f4-b1006715b84e
@@ -96,18 +95,18 @@
 
        - box-remove
        Removes a Box from the papyrus
-       example: ptconfigure boxify box-remove --environment-name<span class="o">=</span><span class="s2">&quot;staging&quot;</span> --environment-version<span class="o">=</span><span class="s2">&quot;5.0&quot;</span> --provider<span class="o">=</span><span class="s2">&quot;apt-get&quot;</span>
+       example: ptconfigure dnsify box-remove --environment-name<span class="o">=</span><span class="s2">&quot;staging&quot;</span> --environment-version<span class="o">=</span><span class="s2">&quot;5.0&quot;</span> --provider<span class="o">=</span><span class="s2">&quot;apt-get&quot;</span>
 
        - box-destroy
        Removes a Box from both papyrus and the cloud provider
-       example: ptconfigure boxify box-destroy --environment-name<span class="o">=</span><span class="s2">&quot;staging&quot;</span>
+       example: ptconfigure dnsify box-destroy --environment-name<span class="o">=</span><span class="s2">&quot;staging&quot;</span>
            --destroy-all-boxes
            --destroy
 
        - list-papyrus
        List all servers in papyrus, or those of a particular environment
-       example: ptconfigure boxify list-papyrus --yes
-       example: ptconfigure boxify list-papyrus --yes --environment-name<span class="o">=</span><span class="s2">&quot;staging&quot;</span>
+       example: ptconfigure dnsify list-papyrus --yes
+       example: ptconfigure dnsify list-papyrus --yes --environment-name<span class="o">=</span><span class="s2">&quot;staging&quot;</span>
 
 
 ------------------------------
@@ -116,9 +115,9 @@ End Help
 </pre></div>
 </div>
 </div>
-<div class="section" id="varias-funciones-de-boxify">
-<h2>Varias funciones de boxify<a class="headerlink" href="#varias-funciones-de-boxify" title="Permalink to this headline">¶</a></h2>
-<p>Este tema describe acerca de las diversas funciones de boxify bajo este módulo, como se indica a continuación</p>
+<div class="section" id="varias-funciones-de-dnsify">
+<h2>Varias funciones de dnsify<a class="headerlink" href="#varias-funciones-de-dnsify" title="Permalink to this headline">¶</a></h2>
+<p>Este tema describe acerca de las diversas funciones de dnsify bajo este módulo, como se indica a continuación</p>
 <ul class="simple">
 <li>Instale pilotos automáticos genéricos</li>
 <li>Caja Adición</li>
@@ -130,9 +129,9 @@ End Help
 <div class="section" id="instale-pilotos-automaticos-genericos">
 <h2>Instale pilotos automáticos genéricos<a class="headerlink" href="#instale-pilotos-automaticos-genericos" title="Permalink to this headline">¶</a></h2>
 <p>Esta función tiene por objeto la instalación de los pilotos automáticos aplicables a una pequeña o mediana conjunto de ambientes. Esto se puede implementar mediante la aplicación del comando como se indica a continuación,</p>
-<div class="highlight-bash"><div class="highlight"><pre>ptconfigure boxify install-generic-autopilots
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure dnsify install-generic-autopilots
             --yes
-            --guess <span class="c"># will set --destination-dir=*this dir +*build/config/ptconfigure/boxify/autopilots/</span>
+            --guess <span class="c"># will set --destination-dir=*this dir +*build/config/ptconfigure/dnsify/autopilots/</span>
             --template-group<span class="o">=</span>tiny
             --destination-dir<span class="o">=</span>*path-to-destination*
 </pre></div>
@@ -146,15 +145,15 @@ End Help
 <div class="section" id="cuadro-adicion">
 <h2>cuadro Adición<a class="headerlink" href="#cuadro-adicion" title="Permalink to this headline">¶</a></h2>
 <p>Esta función tiene por objeto la adición de una caja a través de un proveedor de la nube, simplemente usando el siguiente comando,</p>
-<div class="highlight-bash"><div class="highlight"><pre>example: ptconfigure boxify box-add --environment-name<span class="o">=</span><span class="s2">&quot;*environment*&quot;</span>
-    --server-prefix<span class="o">=</span><span class="s2">&quot;my-app&quot;</span>
-    --provider<span class="o">=</span><span class="s2">&quot;DigitalOcean&quot;</span> // DigitalOcean, Rackspace, VSphere
-    --image-id<span class="o">=</span><span class="s2">&quot;3101045&quot;</span> // <span class="nv">DO</span><span class="o">=</span><span class="m">3101045</span> , <span class="nv">RAX</span><span class="o">=</span>ffd597d6-2cc4-4b43-b8f4-b1006715b84e
-    --size-id<span class="o">=</span><span class="s2">&quot;66&quot;</span> // <span class="nv">DO</span> <span class="o">=</span> 66, <span class="nv">RAX</span> <span class="o">=</span> 2
-    --region-id<span class="o">=</span><span class="s2">&quot;2&quot;</span> // <span class="nv">DO</span> <span class="o">=</span> 2, <span class="nv">RAX</span> <span class="o">=</span> LON
-    --box-amount<span class="o">=</span><span class="m">1</span> // An Integer number of boxes to create
-    --force-name<span class="o">=</span><span class="s2">&quot;a-box-name&quot;</span> // optional, will override other options <span class="k">for</span> name creation. may cause a conflict <span class="k">if</span> creating more than <span class="m">1</span> box.
-    --parallax // optional, when adding more than one box, <span class="k">if</span> the provider supports it we can execute all requests in parallel
+<div class="highlight-bash"><div class="highlight"><pre>example: ptconfigure dnsify box-add --environment-name<span class="o">=</span><span class="s2">&quot;*environment*&quot;</span>
+           --server-prefix<span class="o">=</span><span class="s2">&quot;my-app&quot;</span>
+           --provider<span class="o">=</span><span class="s2">&quot;DigitalOcean&quot;</span> // DigitalOcean, Rackspace, VSphere
+           --image-id<span class="o">=</span><span class="s2">&quot;3101045&quot;</span> // <span class="nv">DO</span><span class="o">=</span><span class="m">3101045</span> , <span class="nv">RAX</span><span class="o">=</span>ffd597d6-2cc4-4b43-b8f4-b1006715b84e
+           --size-id<span class="o">=</span><span class="s2">&quot;66&quot;</span> // <span class="nv">DO</span> <span class="o">=</span> 66, <span class="nv">RAX</span> <span class="o">=</span> 2
+           --region-id<span class="o">=</span><span class="s2">&quot;2&quot;</span> // <span class="nv">DO</span> <span class="o">=</span> 2, <span class="nv">RAX</span> <span class="o">=</span> LON
+           --box-amount<span class="o">=</span><span class="m">1</span> // An Integer number of boxes to create
+           --force-name<span class="o">=</span><span class="s2">&quot;a-box-name&quot;</span> // optional, will override other options <span class="k">for</span> name creation. may cause a conflict <span class="k">if</span> creating more than <span class="m">1</span> box.
+           --parallax // optional, when adding more than one box, <span class="k">if</span> the provider supports it we can execute all requests in parallel
 </pre></div>
 </div>
 <p>El usuario tiene que especificar los siguientes campos como se muestra en el comando anterior,</p>
@@ -171,7 +170,7 @@ End Help
 <div class="section" id="cuadro-de-extraccion">
 <h2>cuadro de Extracción<a class="headerlink" href="#cuadro-de-extraccion" title="Permalink to this headline">¶</a></h2>
 <p>Esta función tiene como objetivo la eliminación de una caja del papiro. Esto se puede implementar mediante el comando a continuación,</p>
-<div class="highlight-bash"><div class="highlight"><pre>ptconfigure boxify box-remove --environment-name<span class="o">=</span><span class="s2">&quot;staging&quot;</span> --environment-version<span class="o">=</span><span class="s2">&quot;5.0&quot;</span> --provider<span class="o">=</span><span class="s2">&quot;apt-get&quot;</span>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure dnsify box-remove --environment-name<span class="o">=</span><span class="s2">&quot;staging&quot;</span> --environment-version<span class="o">=</span><span class="s2">&quot;5.0&quot;</span> --provider<span class="o">=</span><span class="s2">&quot;apt-get&quot;</span>
 </pre></div>
 </div>
 <p>El usuario tiene que especificar los siguientes campos como se muestra en el comando anterior,</p>
@@ -184,7 +183,7 @@ End Help
 <div class="section" id="la-destruccion-de-una-caja">
 <h2>La destrucción de una caja<a class="headerlink" href="#la-destruccion-de-una-caja" title="Permalink to this headline">¶</a></h2>
 <p>Esta función tiene como objetivo la eliminación de una caja del papiro. Esta función se puede implementar simplemente usando el siguiente comando,</p>
-<div class="highlight-bash"><div class="highlight"><pre>ptconfigure boxify box-destroy --environment-name<span class="o">=</span><span class="s2">&quot;staging&quot;</span>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure dnsify box-destroy --environment-name<span class="o">=</span><span class="s2">&quot;staging&quot;</span>
     --destroy-all-boxes
     --destroy
 </pre></div>
@@ -192,19 +191,19 @@ End Help
 <p>El comando se ha mencionado anteriormente se utiliza para la destrucción de todas las cajas de un entorno particular.</p>
 </div>
 <div class="section" id="lista">
-<h2>Lista<a class="headerlink" href="#lista" title="Permalink to this headline">¶</a></h2>
-<p>El principal objetivo de esta función es hacer una lista de todos los servidores de un papiro en particular o en un entorno. La sintaxis para la inclusión de todos los servidores se muestra a continuación,</p>
-<div class="highlight-bash"><div class="highlight"><pre>ptconfigure boxify list-papyrus --yes --environment-name<span class="o">=</span><span class="s2">&quot;staging&quot;</span>
-</pre></div>
-</div>
+<h2>lista<a class="headerlink" href="#lista" title="Permalink to this headline">¶</a></h2>
+<p>El principal objetivo de esta función es hacer una lista de todos los servidores de un papiro en particular o en un entorno. La sintaxis para la inclusión de todos los servidores se muestra a continuación,
+.. code-block:: bash</p>
+<blockquote>
+<div>ptconfigure dnsify list-papyrus &#8211;yes &#8211;environment-name=&#8221;staging&#8221;</div></blockquote>
 <p>El comando anterior mencionado enumerará fuera papiro de un entorno determinado.</p>
 </div>
 <div class="section" id="parametros-alternativos">
 <h2>parámetros alternativos<a class="headerlink" href="#parametros-alternativos" title="Permalink to this headline">¶</a></h2>
 <p>Los parámetros alternativos para este módulo, cualquiera de los cuales se pueden utilizar en la declaración es,</p>
 <ul class="simple">
-<li>Boxify</li>
-<li>boxify</li>
+<li>DNSify</li>
+<li>dnsify</li>
 </ul>
 </div>
 <div class="section" id="beneficios">
@@ -212,7 +211,7 @@ End Help
 <ul class="simple">
 <li>La sintaxis utilizada en la ayuda y otras operaciones de caja no distinguen entre mayúsculas y minúsculas.</li>
 <li>Es-acomodados tanto en OS Cent y así como en Ubuntu.</li>
-<li>Todas las funciones principales de la gestión de una caja se envuelve bajo este único módulo.</li>
+<li>Todas las funciones principales de la gestión de una caja en la gestión de DNS se envuelve bajo este único módulo.</li>
 </ul>
 </div>
 </div>
@@ -225,15 +224,15 @@ End Help
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Boxify</a><ul>
+<li><a class="reference internal" href="#">Dnsify</a><ul>
 <li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
 <li><a class="reference internal" href="#ayuda-comando">Ayuda Comando</a></li>
-<li><a class="reference internal" href="#varias-funciones-de-boxify">Varias funciones de boxify</a></li>
+<li><a class="reference internal" href="#varias-funciones-de-dnsify">Varias funciones de dnsify</a></li>
 <li><a class="reference internal" href="#instale-pilotos-automaticos-genericos">Instale pilotos automáticos genéricos</a></li>
 <li><a class="reference internal" href="#cuadro-adicion">cuadro Adición</a></li>
 <li><a class="reference internal" href="#cuadro-de-extraccion">cuadro de Extracción</a></li>
 <li><a class="reference internal" href="#la-destruccion-de-una-caja">La destrucción de una caja</a></li>
-<li><a class="reference internal" href="#lista">Lista</a></li>
+<li><a class="reference internal" href="#lista">lista</a></li>
 <li><a class="reference internal" href="#parametros-alternativos">parámetros alternativos</a></li>
 <li><a class="reference internal" href="#beneficios">Beneficios</a></li>
 </ul>
@@ -241,14 +240,14 @@ End Help
 </ul>
 
   <h4>Previous topic</h4>
-  <p class="topless"><a href="sbehat.html"
-                        title="previous chapter">Behat</a></p>
+  <p class="topless"><a href="sdigitalocean.html"
+                        title="previous chapter">DigitalOcean</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="scassandra.html"
-                        title="next chapter">Cassandra</a></p>
+  <p class="topless"><a href="sencryption.html"
+                        title="next chapter">Encryption</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
-    <li><a href="_sources/sboxify.txt"
+    <li><a href="_sources/sdnsify.txt"
            rel="nofollow">Show Source</a></li>
   </ul>
 <div id="searchbox" style="display: none">
@@ -275,10 +274,10 @@ End Help
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="scassandra.html" title="Cassandra"
+          <a href="sencryption.html" title="Encryption"
              >next</a> |</li>
         <li class="right" >
-          <a href="sbehat.html" title="Behat"
+          <a href="sdigitalocean.html" title="DigitalOcean"
              >previous</a> |</li>
         <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
           <li><a href="sptconfigure_main.html" >Ptconfigure</a> &raquo;</li> 

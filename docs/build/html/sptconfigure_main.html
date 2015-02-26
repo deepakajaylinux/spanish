@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>PTConfigure &mdash; spanishkevell 1.0.1 documentation</title>
+    <title>Ptconfigure &mdash; spanishkevell 1.0.1 documentation</title>
     
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -50,9 +50,377 @@
           <div class="body">
             
   <div class="section" id="ptconfigure">
-<h1>PTConfigure<a class="headerlink" href="#ptconfigure" title="Permalink to this headline">¶</a></h1>
+<h1>Ptconfigure<a class="headerlink" href="#ptconfigure" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>Sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>El Ptconfigure es una unidad de automatización que permite DevOps ingenieros, administradores de sistemas, administradores de infraestructuras en el desempeño de la gestión de la configuración, Sistemas de Automatización e Infraestructura con la ayuda de php. Disposiciones It enteras de los proyectos de los usuarios de forma automática.</p>
+<p>Esto también se puede utilizar para proporcionar paquetes y archivos de configuración para sus proyectos. Asegura la estabilidad entorno de su proyecto.</p>
+<p>Los módulos bajo sobres y cumpla con los requisitos del entorno de desarrollo simple y así como complejo Ptconfigure mientras que en comparación con otros tipos de herramientas. Mediante la instalación de la herramienta de Ptconfigure, las funcionalidades de toda la herramienta faraón se cubre.</p>
+<p>Instalación de Ptconfigure a tus máquina actúa como un camino más corto para completar la instalación de otras herramientas de Faraón. Mientras se ejecuta el proceso de instalación de Ptconfigure la más reciente versión actualizada voluntad se prepara para instalar, lo cual es una ventaja añadida.</p>
+<p>Ptconfigure tiene por objeto simplificar los métodos de instalación del paquete. Y así como se asegura para el uso, fácilmente perceptible para los usuarios.</p>
+<p>Ptconfigure asiste en lo envuelve todo con la gestión de todos los tamaños. Se enriquece y satisface la necesidad de los usuarios de una gestión como los desarrolladores, administrador de sistemas, ingenieros de liberación etc.</p>
+<p>El sistema de codificación de Ptconfigure está basada en php. El Ptconfigure es que enriquecen no sólo el tipo de datos, sino también los tipos de operaciones que se pueden aplicar a los datos orientada a objetos.</p>
+<p>Por lo tanto, al comparar las técnicas de programación orientados a objetos sobre las técnicas de programación de procedimiento, la programación orientada a objetos permite a los usuarios crear módulos que no necesitan ser cambiadas cuando se añade un nuevo tipo de objeto.</p>
+<p>Es extensible, como si se requiere cualquiera de los módulos adicionales los usuarios pueden definir y diseñar el módulo de acuerdo a sus necesidades y pueden incluir.</p>
+<p>Y también es más fácil volver a escribir el código de acuerdo con las necesidades de los usuarios. Su documentación incluye versión de lanzamiento actual de la Ptconfigure como 1.1.1.</p>
+</div>
+<div class="section" id="instalacion">
+<h2>instalación<a class="headerlink" href="#instalacion" title="Permalink to this headline">¶</a></h2>
+<p>Antes de instalar el Ptconfigure a su máquina, asegúrese de si existe git y php5 en su máquina o no. Si no sigue se indican a continuación</p>
+</div>
+<div class="section" id="comando-para-instalar-git-y-php5-en-ubuntu">
+<h2>comando para instalar git y php5 en ubuntu<a class="headerlink" href="#comando-para-instalar-git-y-php5-en-ubuntu" title="Permalink to this headline">¶</a></h2>
+<p class="rubric">git</p>
+<div class="highlight-bash"><div class="highlight"><pre>apt-get install git
+</pre></div>
+</div>
+<p class="rubric">php</p>
+<div class="highlight-bash"><div class="highlight"><pre>apt-get install php
+</pre></div>
+</div>
+</div>
+<div class="section" id="comando-para-instalar-git-y-php5-en-ciento-os">
+<h2>comando para instalar git y php5 en ciento OS<a class="headerlink" href="#comando-para-instalar-git-y-php5-en-ciento-os" title="Permalink to this headline">¶</a></h2>
+<p class="rubric">git</p>
+<div class="highlight-bash"><div class="highlight"><pre>yum install git
+</pre></div>
+</div>
+<p class="rubric">php</p>
+<div class="highlight-bash"><div class="highlight"><pre>yum install php.
+</pre></div>
+</div>
+<p>después de la finalización de git y php5 instalación, vamos a ver cómo instalar el Ptconfigure en su máquina.</p>
+</div>
+<div class="section" id="para-mac-linux-o-unix">
+<h2>Para Mac, Linux o Unix<a class="headerlink" href="#para-mac-linux-o-unix" title="Permalink to this headline">¶</a></h2>
+<p>Es simple mediante el uso de la codificación
+.. code-block:: bash</p>
+<blockquote>
+<div>git clone <a class="reference external" href="https://github.com/PharaohTools/ptconfigure.git">https://github.com/PharaohTools/ptconfigure.git</a> &amp;&amp; sudo php ptconfigure/install-silent</div></blockquote>
+</div>
+<div class="section" id="para-windows">
+<h2>para Windows<a class="headerlink" href="#para-windows" title="Permalink to this headline">¶</a></h2>
+<p>Es simple, obtener el terminal abierto a través de la opción &#8220;Ejecutar como Administrador&#8221; y, a continuación, aplicar la siguiente codificación,
+.. code-block:: bash</p>
+<blockquote>
+<div>git clone <a class="reference external" href="https://github.com/PharaohTools/ptconfigure.git">https://github.com/PharaohTools/ptconfigure.git</a> &amp;&amp; php ptconfigureinstall-silent</div></blockquote>
+<div class="section" id="modulos-disponibles">
+<h3>Módulos disponibles<a class="headerlink" href="#modulos-disponibles" title="Permalink to this headline">¶</a></h3>
+<p>DummyLinuxModule - Dummy Linux Module</p>
+<p>AWSCloudFormation - The AWS CloudFormation CLI Tools</p>
+<p>AWSCloudWatch - The AWS CloudWatch CLI Tools</p>
+<p>AWSEC2 - AWS EC2 Server Management Functions</p>
+<p>ApacheConf - Apache Conf - Install a Apache Configuration</p>
+<p>ApacheModules - Apache Modules - Commonly used modules for Apache</p>
+<p>ApacheReverseProxyModules - Apache Reverse Proxy Modules - Reverse Proxy/Load Balancer Modules for Apache</p>
+<p>ApacheServer - Apache Server - Install or remove the Apache Server</p>
+<p>Apt - Add, Remove or Modify Apts</p>
+<p>Autopilot - Ptconfigure Autopilot - User Defined Installations</p>
+<p>Behat - Behat - The PHP BDD Testing Suite</p>
+<p>Boxify - Boxify Wrapper - Create Cloud Instances</p>
+<p>Chgrp - Chgrp Functionality</p>
+<p>Chmod - Chmod Functionality</p>
+<p>Chown - Chown Functionality</p>
+<p>Chrome - Chrome - Install or remove Chrome</p>
+<p>ChromeDriver - The Chrome Browser remote controlling server</p>
+<p>Citadel - Citadel Server - Install or remove the Citadel Server</p>
+<p>Cleofy - Ptconfigure Cleofyer - Creates default autopilots for your project</p>
+<p>Ptconfigure - Ptconfigure - Upgrade or Re-install Ptconfigure</p>
+<p>Composer - Composer - Upgrade or Re-install Composer</p>
+<p>Copy - Copy Functionality</p>
+<p>DNSify - DNSify Wrapper - Ensure the existence or removal of DNS records</p>
+<p>ptdeploy - ptdeploy - The PHP Automated Website Deployment tool</p>
+<p>DeveloperTools - Developer Tools - IDE&#8217;s and other tools for Developers</p>
+<p>DigitalOcean - Digital Ocean Server Management Functions</p>
+<p>DigitalOceanV2 - Digital Ocean Server Management Functions - API Version 2</p>
+<p>Encryption - Encryption or Decryption of files</p>
+<p>EnvironmentConfig - Environment Configuration - Configure Environments for a project</p>
+<p>File - Functions to Modify Files</p>
+<p>Firefox - Firefox - Install or remove Firefox</p>
+<p>Firefox14 - Firefox 14 - A version of Firefox highly tested with Selenium Server</p>
+<p>Firefox17 - Firefox 17 - A version of Firefox highly tested with Selenium Server</p>
+<p>Firefox24 - Firefox 24 - A version of Firefox highly tested with Selenium Server</p>
+<p>Firefox33 - Firefox 33 - A version of Firefox highly tested with Selenium Server</p>
+<p>Firewall - Add, Remove or Modify Firewalls</p>
+<p>GIMP - GIMP - The Image Editor</p>
+<p>Gem - Ruby Gems Package Manager</p>
+<p>Generator - ptdeploy Autopilot Generator - Generate Autopilot files interactively</p>
+<p>GitBucket - Git Bucket - The Git SCM Management Web Application</p>
+<p>GitKeySafe - Git Key-Safe - Install a script for git to allow specifying ssh keys during commands</p>
+<p>GitLab - Git Lab - The Git SCM Management Web Application</p>
+<p>GitTools - Git Tools - Tools for working with Git SCM</p>
+<p>HAProxy - HA Proxy Server - Install or remove the HA Proxy Server</p>
+<p>HHVM - HHVM - The PHP Virtual Machine runtime from Facebook</p>
+<p>Hostname - View or Modify Hostname</p>
+<p>InstallPackage - Ptconfigure Predefined Installers</p>
+<p>IntelliJ - IntelliJ - A great IDE from JetBrains</p>
+<p>Invoke - SSH Invocation Functions</p>
+<p>JRush - JRush - The Joomla command line utility from Golden Contact</p>
+<p>Java - Java JDK 1.7</p>
+<p>Jenkins - Jenkins - The Java Build Server</p>
+<p>JenkinsPlugins - Jenkins PHP Plugins - Common Plugins for Jenkins PHP Builds</p>
+<p>JenkinsSudoNoPass - Configure Passwordless Sudo for your Jenkins user</p>
+<p>LigHTTPDServer - LigHTTPD Server - Install or remove the LigHTTPD Server</p>
+<p>Logging - Logging - Output errors to the logging</p>
+<p>MediaTools - Media Tools - Tools to help view and manage Media files</p>
+<p>Mkdir - Mkdir Functionality</p>
+<p>ModuleManager - Manage the modules used in Ptconfigure</p>
+<p>MongoDB - MongoDB Server - The MongoDB Datastore Server</p>
+<p>MysqlAdmins - Mysql Admins - Install administrative users for Mysql</p>
+<p>MysqlServer - Mysql Server - The Mysql RDBMS Server</p>
+<p>MysqlServerGalera - Mysql Server Galera - The Galera Clustering compatible version of Mysql RDBMS Server</p>
+<p>MysqlTools - Mysql Tools - For administering and developing with Mysql</p>
+<p>NagiosServer - Nagios Server - Install or remove the Nagios Server</p>
+<p>NetworkTools - Network Tools - Tools for working with Networks</p>
+<p>NginxServer - Nginx Server - Install or remove the Nginx Server</p>
+<p>NodeJS - Node JS - The Server Side Javascript Engine</p>
+<p>PECL - Add, Remove or Modify PECLs</p>
+<p>PHPAPC - PHP APC - Commonly used PHP APC</p>
+<p>PHPCI - PHPCI - The PHP Build Server</p>
+<p>PHPCS - PHP Code Sniffer - The static code analysis tool</p>
+<p>PHPConf - PHP Conf - Install a PHP Configuration</p>
+<p>PHPMD - PHP Mess Detector - The static analysis tool</p>
+<p>PHPModules - PHP Modules - Commonly used PHP Modules</p>
+<p>PHPSSH - PHP SSH - PHP SSH Extension</p>
+<p>PHPStorm - PHPStorm - A great IDE from JetBrains</p>
+<p>PHPUnit - PHP Unit - The PHP Implementation of the XUnit Unit Testing standard</p>
+<p>PackageManager - Native Package Manager Wrapper - Install OS neutral packages</p>
+<p>PapyrusEditor - Papyrus Editor Web Interface</p>
+<p>Parallax - Parallax - Execute commands in parallel</p>
+<p>Pear - Pear Package Manager</p>
+<p>Phake - Phake - The PHP task creation tool (Make/Rake)</p>
+<p>PharaohTools - Pharaoh Tools - Gotta Install them all</p>
+<p>ptvirtualize - ptvirtualize - The Virtual Machine management solution for PHP</p>
+<p>Phrankinsense - Phrankinsense - The Pharaoh Tools Project Management Solution</p>
+<p>Ping - Test a Ping to see if its responding</p>
+<p>Port - Test a Port to see if its responding</p>
+<p>PostInput - HTTP Post/Get Input Interface</p>
+<p>PostgresServer - Postgres Server - The Postgres RDBMS Server</p>
+<p>Process - Process Functionality</p>
+<p>Python - Python - The programming language</p>
+<p>Ra - Ra - The Pharaoh Tools Build Server</p>
+<p>Rackspace - Rackspace/Opencloud Cloud Management Functions</p>
+<p>RubyBDD - Ruby BDD Suite - Install Common Gems for Cucumber, Calabash, Capybara and Saucelabs</p>
+<p>RubyRVM - Ruby RVM - The Ruby version manager</p>
+<p>RubySystem - Ruby RVM System wide - The Ruby version manager system wide version</p>
+<p>RunCommand - Execute a Command</p>
+<p>SFTP - SFTP Functionality</p>
+<p>SVN - SVN - The Source Control Manager</p>
+<p>SeleniumServer - The Selenium Web Browser controlling server</p>
+<p>Service - Start, Stop or Restart a Service</p>
+<p>SshEncrypt - Install/encrypt private SSH keys</p>
+<p>SshHarden - Apply security functions to the SSH accounts/setup of the machine</p>
+<p>SshKeyInstall - Install SSH Public Keys to a user account</p>
+<p>SshKeyStore - Install SSH Public Keys to a user account</p>
+<p>SshKeygen - SSH Keygen - Generate SSH Kay Pairs</p>
+<p>StandardTools - Standard Tools for any Installation</p>
+<p>SudoNoPass - Configure Passwordless Sudo for any User</p>
+<p>SystemDetection - System Detection - Detect the Running Operating System</p>
+<p>Teamcity - Teamcity - The Jetbrains Build Server</p>
+<p>Templating - Install files with placeholders or lines replaced at runtime</p>
+<p>pttest - Upgrade or Re-install pttest</p>
+<p>ThoughtWorksGo - The Continuous Delivery server from ThoughtWorks</p>
+<p>UbuntuCompiler - For Compiling Linux Programs</p>
+<p>User - Add, Remove or Modify Users</p>
+<p>VNC - VNC - The Display Manager Solution</p>
+<p>VNCPasswd - VNCPasswd - The Display Manager Solution</p>
+<p>VSphere - VMWare VSphere - Server Management Functions</p>
+<p>Varnish - The HTTP Cache</p>
+<p>Virtualbox - Virtualbox - The local Virtual Machine Solution</p>
+<p>WinExe - Add, Remove or Modify WinExes</p>
+<p>WireframeSketcher - Wireframe Sketcher - the Wireframing application</p>
+<p>Xvfb - Xvfb - The Display Manager Solution</p>
+<p>Yum - Add, Remove or Modify Yum Packages</p>
+</div>
+<div class="section" id="como-utilizar">
+<h3>Cómo utilizar<a class="headerlink" href="#como-utilizar" title="Permalink to this headline">¶</a></h3>
+<p>Veamos, cómo utilizar la herramienta de Ptconfigure, primero, simplemente escriba como</p>
+<div class="highlight-bash"><div class="highlight"><pre>Ptconfigure
+</pre></div>
+</div>
+<p>este comando listará todos los nombres de los módulos que están disponibles bajo Ptconfigure. aquí, la pantalla indica la pantalla de todos los módulos disponibles bajo Ptconfigure.</p>
+<div class="highlight-bash"><div class="highlight"><pre>   Kevell@Corp:/# ptconfigure
+   ******************************
+
+
+   Ptconfigure - Pharaoh Tools
+   -------------------
+
+   Configuration, Infrastructure and Systems Automation Management in PHP.
+
+   Can be used to set up a Development Client, Development Server, Testing Servers, SCM Servers or Production
+   Application Servers in minutes, out of the box, with Zero configuration across multiple Operating Systems.
+
+   You can quickly create simple or complex systems completely configured by code across platforms.
+
+   Using Convention over Configuration, a lot of common Configuration Management tasks can be completed with little or
+   no extra implementation work.
+
+   -------------------------------------------------------------
+
+Comandos disponibles:
+------------------------------
+
+DummyLinuxModule - Dummy Linux Module
+ApacheConf - Apache Conf - Install a Apache Configuration
+ApacheModules - Apache Modules - Commonly used modules for Apache
+ApacheReverseProxyModules - Apache Reverse Proxy Modules - Reverse Proxy/Load Balancer Modules for Apache
+ApacheServer - Apache Server - Install or remove the Apache Server
+Apt - Add, Remove or Modify Apts
+Autopilot - PTConfigure Autopilot - User Defined Installations
+Behat - Behat - The PHP BDD Testing Suite
+Boxify - Boxify Wrapper - Create Cloud Instances
+Chgrp - Chgrp Functionality
+Chmod - Chmod Functionality
+Chown - Chown Functionality
+Chrome - Chrome - Install or remove Chrome
+ChromeDriver - The Chrome Browser remote controlling server
+Citadel - Citadel Server - Install or remove the Citadel Server
+Cleofy - PTConfigure Cleofyer - Creates default autopilots for your project
+Composer - Composer - Upgrade or Re-install Composer
+Copy - Copy Functionality
+DNSify - DNSify Wrapper - Ensure the existence or removal of DNS records
+DeveloperTools - Developer Tools - IDE&#39;s and other tools for Developers
+DigitalOcean - Digital Ocean Server Management Functions
+DigitalOceanV2 - Digital Ocean Server Management Functions - API Version 2
+Encryption - Encryption or Decryption of files
+EnvironmentConfig - Environment Configuration - Configure Environments for a project
+File - Functions to Modify Files
+FileWatcher - File Watcher - Wait for changes in files, with optional actions on changes
+Firefox - Firefox - Install or remove Firefox
+Firefox14 - Firefox 14 - A version of Firefox highly tested with Selenium Server
+Firefox17 - Firefox 17 - A version of Firefox highly tested with Selenium Server
+Firefox24 - Firefox 24 - A version of Firefox highly tested with Selenium Server
+Firefox33 - Firefox 33 - A version of Firefox highly tested with Selenium Server
+Firewall - Add, Remove or Modify Firewalls
+GIMP - GIMP - The Image Editor
+Gem - Ruby Gems Package Manager
+Generator - PTDeploy Autopilot Generator - Generate Autopilot files interactively
+GitBucket - Git Bucket - The Git SCM Management Web Application
+GitCommand - Git Commands
+GitKeySafe - Git Key-Safe - Install a script for git to allow specifying ssh keys during commands
+GitLab - Git Lab - The Git SCM Management Web Application
+GitTools - Git Tools - Tools for working with Git SCM
+HAProxy - HA Proxy Server - Install or remove the HA Proxy Server
+HHVM - HHVM - The PHP Virtual Machine runtime from Facebook
+Hostname - View or Modify Hostname
+InstallPackage - PTConfigure Predefined Installers
+IntelliJ - IntelliJ - A great IDE from JetBrains
+Invoke - SSH Invocation Functions
+JRush - JRush - The Joomla command line utility from Golden Contact
+Java - Java JDK 1.7
+Jenkins - Jenkins - The Java Build Server
+JenkinsPlugins - Jenkins PHP Plugins - Common Plugins for Jenkins PHP Builds
+JenkinsSudoNoPass - Configure Passwordless Sudo for your Jenkins user
+LigHTTPDServer - LigHTTPD Server - Install or remove the LigHTTPD Server
+Logging - Logging - Output errors to the logging
+MediaTools - Media Tools - Tools to help view and manage Media files
+Mkdir - Mkdir Functionality
+ModuleManager - Manage the modules used in PTConfigure
+MongoDB - MongoDB Server - The MongoDB Datastore Server
+MysqlAdmins - Mysql Admins - Install administrative users for Mysql
+MysqlServer - Mysql Server - The Mysql RDBMS Server
+MysqlTools - Mysql Tools - For administering and developing with Mysql
+NagiosServer - Nagios Server - Install or remove the Nagios Server
+NetworkTools - Network Tools - Tools for working with Networks
+NginxServer - Nginx Server - Install or remove the Nginx Server
+NodeJS - Node JS - The Server Side Javascript Engine
+PECL - Add, Remove or Modify PECLs
+PHPAPC - PHP APC - Commonly used PHP APC
+PHPCI - PHPCI - The PHP Build Server
+PHPCS - PHP Code Sniffer - The static code analysis tool
+PHPConf - PHP Conf - Install a PHP Configuration
+PHPMD - PHP Mess Detector - The static analysis tool
+PHPModules - PHP Modules - Commonly used PHP Modules
+PHPSSH - PHP SSH - PHP SSH Extension
+PHPStorm - PHPStorm - A great IDE from JetBrains
+PHPUnit - PHP Unit - The PHP Implementation of the XUnit Unit Testing standard
+PTConfigure - PTConfigure - Upgrade or Re-install PTConfigure
+PTDeploy - PTDeploy - The PHP Automated Website Deployment tool
+PTTest - Upgrade or Re-install PTTest
+PTVirtualize - PTVirtualize - The Virtual Machine management solution for PHP
+PackageManager - Native Package Manager Wrapper - Install OS neutral packages
+PapyrusEditor - Papyrus Editor Web Interface
+Parallax - Parallax - Execute commands in parallel
+Pear - Pear Package Manager
+Phake - Phake - The PHP task creation tool (Make/Rake)
+PharaohTools - Pharaoh Tools - Gotta Install them all
+Ping - Test a Ping to see if its responding
+Port - Test a Port to see which process is listening on it
+PostInput - HTTP Post/Get Input Interface
+PostgresServer - Postgres Server - The Postgres RDBMS Server
+Process - Process Functionality
+Python - Python - The programming language
+RubyBDD - Ruby BDD Suite - Install Common Gems for Cucumber, Calabash, Capybara and Saucelabs
+RubyRVM - Ruby RVM - The Ruby version manager
+RubySystem - Ruby RVM System wide - The Ruby version manager system wide version
+RunCommand - Execute a Command
+SFTP - SFTP Functionality
+SVN - SVN - The Source Control Manager
+SeleniumServer - The Selenium Web Browser controlling server
+Service - Start, Stop or Restart a Service
+SshEncrypt - Install/encrypt private SSH keys
+SshHarden - Apply security functions to the SSH accounts/setup of the machine
+SshKeyInstall - Install SSH Public Keys to a user account
+SshKeyStore - For Storing and Accessing SSH Keys
+SshKeygen - SSH Keygen - Generate SSH Kay Pairs
+StandardTools - Standard Tools for any Installation
+SudoNoPass - Configure Passwordless Sudo for any User
+SystemDetection - System Detection - Detect the Running Operating System
+Task - Task Wrapper - easily repeatable tasks
+Teamcity - Teamcity - The Jetbrains Build Server
+Templating - Install files with placeholders or lines replaced at runtime
+ThoughtWorksGo - The Continuous Delivery server from ThoughtWorks
+UbuntuCompiler - For Compiling Linux Programs
+VNC - VNC - The Display Manager Solution
+VNCPasswd - VNCPasswd - The Display Manager Solution
+Varnish - The HTTP Cache
+Virtualbox - Virtualbox - The local Virtual Machine Solution
+WinExe - Add, Remove or Modify WinExes
+WireframeSketcher - Wireframe Sketcher - the Wireframing application
+Xvfb - Xvfb - The Display Manager Solution
+Yum - Add, Remove or Modify Yum Packages
+
+---------------------------------------
+Visit www.pharaohtools.com for more
+******************************
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="video-moldeada-instruccion">
+<h2>Vídeo moldeada Instrucción<a class="headerlink" href="#video-moldeada-instruccion" title="Permalink to this headline">¶</a></h2>
+<iframe width="560" height="315" src="http://pharaohtools.com/components/com_jomwebplayer/player.swf?r=1731863942" frameborder="0" allowfullscreen></iframe>
+<br>
+<br><p class="rubric">What You can Learn Here</p>
+</div>
+<div class="section" id="el-comando-ayuda">
+<h2>El comando Ayuda<a class="headerlink" href="#el-comando-ayuda" title="Permalink to this headline">¶</a></h2>
+<p>Si quieres saber el propósito de un módulo en particular, sólo tienes que escribir el comando de la siguiente manera:</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure ModuleName <span class="nb">help</span>
+</pre></div>
+</div>
+<p>este comando proporcionará el uso de ese módulo en particular y también las opciones disponibles en las acciones que se pueden realizar.
+La captura de pantalla se muestra bajo explica el uso de la Behat módulo bajo Ptconfigure con el comando ayuda.</p>
+<div class="highlight-bash"><div class="highlight"><pre>Kevell@Corp:/# ptconfigure behat <span class="nb">help</span>
+******************************
+
+
+This <span class="nb">command </span>allows you to install Behat.
+
+Behat, behat
+
+- install
+Installs the latest version of behat
+example: ptconfigure behat install
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
 <div class="section" id="jugando-con-modulos-ptconfigure">
-<h2>Jugando con módulos PTConfigure<a class="headerlink" href="#jugando-con-modulos-ptconfigure" title="Permalink to this headline">¶</a></h2>
+<h3>Jugando con módulos PTConfigure<a class="headerlink" href="#jugando-con-modulos-ptconfigure" title="Permalink to this headline">¶</a></h3>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="sapacheconf.html">ApacheConf</a><ul>
@@ -268,6 +636,19 @@
 <li class="toctree-l2"><a class="reference internal" href="sdigitalocean.html#lista">lista</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sdigitalocean.html#parametros-alternativos">parámetros alternativos</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sdigitalocean.html#beneficios">Beneficios</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sdnsify.html">Dnsify</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sdnsify.html#sinopsis">sinopsis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdnsify.html#ayuda-comando">Ayuda Comando</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdnsify.html#varias-funciones-de-dnsify">Varias funciones de dnsify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdnsify.html#instale-pilotos-automaticos-genericos">Instale pilotos automáticos genéricos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdnsify.html#cuadro-adicion">cuadro Adición</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdnsify.html#cuadro-de-extraccion">cuadro de Extracción</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdnsify.html#la-destruccion-de-una-caja">La destrucción de una caja</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdnsify.html#lista">lista</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdnsify.html#parametros-alternativos">parámetros alternativos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdnsify.html#beneficios">Beneficios</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="sencryption.html">Encryption</a><ul>
@@ -578,6 +959,7 @@
 </div>
 </div>
 </div>
+</div>
 
 
           </div>
@@ -587,8 +969,22 @@
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">PTConfigure</a><ul>
+<li><a class="reference internal" href="#">Ptconfigure</a><ul>
+<li><a class="reference internal" href="#sinopsis">Sinopsis</a></li>
+<li><a class="reference internal" href="#instalacion">instalación</a></li>
+<li><a class="reference internal" href="#comando-para-instalar-git-y-php5-en-ubuntu">comando para instalar git y php5 en ubuntu</a></li>
+<li><a class="reference internal" href="#comando-para-instalar-git-y-php5-en-ciento-os">comando para instalar git y php5 en ciento OS</a></li>
+<li><a class="reference internal" href="#para-mac-linux-o-unix">Para Mac, Linux o Unix</a></li>
+<li><a class="reference internal" href="#para-windows">para Windows</a><ul>
+<li><a class="reference internal" href="#modulos-disponibles">Módulos disponibles</a></li>
+<li><a class="reference internal" href="#como-utilizar">Cómo utilizar</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#video-moldeada-instruccion">Vídeo moldeada Instrucción</a></li>
+<li><a class="reference internal" href="#el-comando-ayuda">El comando Ayuda</a><ul>
 <li><a class="reference internal" href="#jugando-con-modulos-ptconfigure">Jugando con módulos PTConfigure</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
