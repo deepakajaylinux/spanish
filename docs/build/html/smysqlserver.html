@@ -1,0 +1,240 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Mysqlserver &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="Ptconfigure" href="sptconfigure_main.html" />
+    <link rel="next" title="MysqlTools" href="smysqltools.html" />
+    <link rel="prev" title="MysqlAdmins" href="smysqladmins.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="smysqltools.html" title="MysqlTools"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="smysqladmins.html" title="MysqlAdmins"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" accesskey="U">Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="mysqlserver">
+<h1>Mysqlserver<a class="headerlink" href="#mysqlserver" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Este módulo actúa como facilitador para instalar mysql-servidor con la versión actualizada a través de apt-get. Si el servidor mysql ya existe en su equipo, se comprueba la disponibilidad de módulo recién actualizado.</p>
+</div>
+<div class="section" id="ayuda-comando">
+<h2>Ayuda Comando<a class="headerlink" href="#ayuda-comando" title="Permalink to this headline">¶</a></h2>
+<p>El comando help guía a los usuarios en cuanto a la metodología en uso y también acerca de las acciones que se pueden realizar en virtud de estos módulos. También describe los nombres alternativos para mysql-server. El comando para el uso de la opción de ayuda se da a continuación</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure mysql-server <span class="nb">help</span>
+</pre></div>
+</div>
+<p>Este comando hace que los usuarios sean conscientes de su propósito y también sobre el comando utilizado para instalar el servidor mysql.
+La captura de pantalla que figura a continuación muestra un pictograma sobre el comando ayuda.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure MysqlServer <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>allows you to install the MySQL Server. Currently only
+ Mysql Workbench, the Database management GUI provided by Oracle <span class="k">for</span>
+ Mysql.
+
+ MysqlServer, mysql-server, mysqlserver
+
+       - install
+       Install some Mysql Server Tools through apt-get.
+       example: ptconfigure mysql-server install
+
+ Notes, during mysql install a root password will be set. First, it<span class="s1">&#39;ll look</span>
+<span class="s1"> for the parameter --mysql-root-pass, if this is not set, it&#39;</span>ll look in the
+ ptconfigure config <span class="k">for</span> a mysql-default-root-pass setting, and failing both of
+ those it will just <span class="nb">set </span>the password <span class="k">for</span> root to ptconfigure.
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="instalacion">
+<h2>instalación<a class="headerlink" href="#instalacion" title="Permalink to this headline">¶</a></h2>
+<p>El comando utilizado para instalar el servidor MySQL es la siguiente.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure mysql-server install
+</pre></div>
+</div>
+</div>
+<div class="section" id="durante-la-instalacion-se-produce-el-siguiente-proceso">
+<h2>Durante la instalación, se produce el siguiente proceso<a class="headerlink" href="#durante-la-instalacion-se-produce-el-siguiente-proceso" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Este módulo ayuda a instalar algunas herramientas para el servidor MySQL a través de apt-get.</li>
+<li>Inicialmente una contraseña de root se establecerá.</li>
+<li>Durante la instalación, se buscará un parámetro de la raíz del pase &#8211;mysql.</li>
+<li>Si la raíz de paso &#8211;mysql no está disponible, buscará la config ptconfigure para la configuración de la raíz del pase-mysql por defecto.</li>
+<li>En el caso de los dos pasos mencionados anteriormente no se, se procederá al establecer contraseña de root para ptconfigure.</li>
+</ul>
+</div>
+<div class="section" id="opciones-adicionales">
+<h2>Opciones adicionales<a class="headerlink" href="#opciones-adicionales" title="Permalink to this headline">¶</a></h2>
+<p>Veamos acerca de las opciones adicionales que intervienen en la instalación del servidor mysql.</p>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="21%" />
+<col width="34%" />
+<col width="11%" />
+<col width="34%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parámetros</th>
+<th class="head">Parámetro Alternativa</th>
+<th class="head">Opciones</th>
+<th class="head">Comentarios</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Install MySQL Server?
+(Y/N)</td>
+<td>En el lugar del MySQL Server estos
+nombres alternativos pueden ser
+utilizados: MySQLServer,
+mysql-server, mysqlserver.</td>
+<td>Y(Yes)</td>
+<td>Si el usuario desea continuar el
+proceso de instalación se puede
+introducir como Y.</td>
+</tr>
+<tr class="row-odd"><td>Install MySQL Server?
+(Y/N)</td>
+<td>En el lugar del MySQL Server estos
+nombres alternativos pueden ser
+utilizados: MySQLServer,
+mysql-server, mysqlserver.|</td>
+<td>N(No)</td>
+<td>Si el usuario desea abandonar el
+proceso de instalación se puede
+introducir como N.</td>
+</tr>
+</tbody>
+</table>
+<p>La siguiente captura de pantalla le da una presentación gráfica sobre el proceso de instalación.</p>
+<div class="highlight-bash"><div class="highlight"><pre>
+</pre></div>
+</div>
+<p>Si el servidor MySQL está ya existe en su máquina, entonces se lanza un mensaje al usuario, ya que ya está instalado. La siguiente captura de pantalla representa el proceso de garantizar:</p>
+<div class="highlight-bash"><div class="highlight"><pre>
+</pre></div>
+</div>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Durante la instalación del servidor mysql, se instala con la versión actualizada.</li>
+<li>Asegura antes de instalar, y compruebe la disponibilidad de módulos.</li>
+<li>En el caso de los nuevos módulos incluidos en la versión actualizada, se instalará de forma individual el módulo que falta.</li>
+<li>Comprueba la disponibilidad de funciones de la biblioteca en el servidor mysql.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Mysqlserver</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#ayuda-comando">Ayuda Comando</a></li>
+<li><a class="reference internal" href="#instalacion">instalación</a></li>
+<li><a class="reference internal" href="#durante-la-instalacion-se-produce-el-siguiente-proceso">Durante la instalación, se produce el siguiente proceso</a></li>
+<li><a class="reference internal" href="#opciones-adicionales">Opciones adicionales</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="smysqladmins.html"
+                        title="previous chapter">MysqlAdmins</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="smysqltools.html"
+                        title="next chapter">MysqlTools</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/smysqlserver.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="smysqltools.html" title="MysqlTools"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="smysqladmins.html" title="MysqlAdmins"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" >Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

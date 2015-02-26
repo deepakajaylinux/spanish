@@ -1,0 +1,260 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>NetworkTools &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="Ptconfigure" href="sptconfigure_main.html" />
+    <link rel="next" title="Newrelic" href="snewrelic.html" />
+    <link rel="prev" title="NetBeans" href="snetbeans.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="snewrelic.html" title="Newrelic"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="snetbeans.html" title="NetBeans"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" accesskey="U">Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="networktools">
+<h1>NetworkTools<a class="headerlink" href="#networktools" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Las herramientas de red son utilidades de software diseñadas para analizar y configurar varios aspectos de la red informática. Las herramientas de red más comunes que se encuentran en la mayor parte del sistema operativo incluye Traceroute, Netstat y Ping. Cada herramientas de red tienen sus propias funciones.</p>
+<p>Por ejemplo:</p>
+<p>Ping se utiliza para comprobar la conectividad</p>
+<p>Netstat se utiliza para mostrar la conexión entrante y saliente de la red</p>
+</div>
+<div class="section" id="ayuda-comando">
+<h2>Ayuda Comando<a class="headerlink" href="#ayuda-comando" title="Permalink to this headline">¶</a></h2>
+<p>Este comando ayuda a determinar el uso del módulo de herramientas de red. El usuario se llega a saber acerca de las diferentes formas / formato para ejecutar este módulo. Este comando le guiará al usuario final para saber cuándo y cómo el comando que desea utilizar. A continuación dado son el mando y la pantalla del mismo.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure networktools <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La representación gráfica de la orden anterior se enumeran a continuación,</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure NetworkTools <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>allows you to install a <span class="nb">set </span>of common Network Tools. These include
+ traceroute, netstat, lsof, telnet and ps.
+
+ NetworkTools, networktools, network-tools
+
+       - install
+       Installs the latest version of Network Tools
+       example: ptconfigure networktools install
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="instalacion">
+<h2>instalación<a class="headerlink" href="#instalacion" title="Permalink to this headline">¶</a></h2>
+<p>Cuando el usuario necesita para instalar cualquier herramienta de red en la máquina. El siguiente comando dado se ejecutará el proceso de instalación.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure networktool install
+</pre></div>
+</div>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="17%" />
+<col width="35%" />
+<col width="11%" />
+<col width="37%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parámetros</th>
+<th class="head">Parámetro Alternativa</th>
+<th class="head">Opciones</th>
+<th class="head">Comentarios</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Install Network
+Tools? (Y/N)</td>
+<td>En lugar de NetworkTools, podemos
+utilizar networktools, network-tools
+también.</td>
+<td>Y(Yes)</td>
+<td>Si el usuario desea continuar el proceso de
+instalación se puede introducir como Y.</td>
+</tr>
+<tr class="row-odd"><td>Install Network
+Tools? (Y/N)</td>
+<td>En lugar de NetworkTools, podemos
+utilizar networktools, network-tools
+también.|</td>
+<td>N(No)</td>
+<td>Si el usuario desea abandonar el proceso de
+instalación se puede introducir como N.</td>
+</tr>
+</tbody>
+</table>
+<p>Si la instalación procede de usuario, durante el proceso de instalación de los siguientes pasos están involucrados,</p>
+<ul class="simple">
+<li>Construye el árbol de dependencias.</li>
+<li>Lee la información de estado.</li>
+<li>Lista outs los nuevos paquetes que está instalando.</li>
+<li>Detalles sobre el número de archivos actualizados, recién instalados, retirados y no actualizados.</li>
+</ul>
+<p>La siguiente captura de pantalla representa gráficamente el proceso anteriormente descrito de la instalación.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure NetworkTools install
+Install Network Tools? <span class="o">(</span>Y/N<span class="o">)</span>
+Y
+*******************************
+*        Pharaoh Tools        *
+*         !Network Tools!!        *
+*******************************
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+ traceroute
+<span class="m">0</span> upgraded, <span class="m">1</span> newly installed, <span class="m">0</span> to remove and <span class="m">301</span> not upgraded.
+Need to get 45.0 kB of archives.
+After this operation, <span class="m">176</span> kB of additional disk space will be used.
+Get:1 http://in.archive.ubuntu.com/ubuntu/ trusty-updates/universe traceroute amd64 1:2.0.20-0ubuntu0.1 <span class="o">[</span>45.0 kB<span class="o">]</span>
+Fetched 45.0 kB in 4s <span class="o">(</span>10.0 kB/s<span class="o">)</span>
+Selecting previously unselected package traceroute.
+<span class="o">(</span>Reading database ... <span class="m">182980</span> files and directories currently installed.<span class="o">)</span>
+Preparing to unpack .../traceroute_1%3a2.0.20-0ubuntu0.1_amd64.deb ...
+Unpacking traceroute <span class="o">(</span>1:2.0.20-0ubuntu0.1<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> man-db <span class="o">(</span>2.6.7.1-1<span class="o">)</span> ...
+Setting up traceroute <span class="o">(</span>1:2.0.20-0ubuntu0.1<span class="o">)</span> ...
+update-alternatives: using /usr/bin/traceroute.db to provide /usr/bin/traceroute <span class="o">(</span>traceroute<span class="o">)</span> in auto mode
+update-alternatives: using /usr/bin/lft.db to provide /usr/bin/lft <span class="o">(</span>lft<span class="o">)</span> in auto mode
+update-alternatives: using /usr/bin/traceproto.db to provide /usr/bin/traceproto <span class="o">(</span>traceproto<span class="o">)</span> in auto mode
+update-alternatives: using /usr/sbin/tcptraceroute.db to provide /usr/sbin/tcptraceroute <span class="o">(</span>tcptraceroute<span class="o">)</span> in auto mode
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package traceroute from the Packager Apt executed correctly
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Package netstat from the Packager Apt is already installed, so not installing
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Package lsof from the Packager Apt is already installed, so not installing
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Package telnet from the Packager Apt is already installed, so not installing
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Package ps from the Packager Apt is already installed, so not installing
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+NetworkTools: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Este módulo ayuda en la instalación del conjunto de herramientas de red comunes. Esto beneficia a los usuarios para instalar varias herramientas que pueden ser útiles al trabajo en red con otros ordenadores, tanto dentro de la red ya través de internet. Esto ayuda a los usuarios que</dt>
+<dd>trabajan con máquinas remotas.</dd>
+</dl>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">NetworkTools</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#ayuda-comando">Ayuda Comando</a></li>
+<li><a class="reference internal" href="#instalacion">instalación</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="snetbeans.html"
+                        title="previous chapter">NetBeans</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="snewrelic.html"
+                        title="next chapter">Newrelic</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/snetworktools.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="snewrelic.html" title="Newrelic"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="snetbeans.html" title="NetBeans"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" >Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

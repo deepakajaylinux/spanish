@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Mkdir &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="Ptconfigure" href="sptconfigure_main.html" />
+    <link rel="next" title="ModuleManager" href="smodulemanager.html" />
+    <link rel="prev" title="Minify" href="sminify.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="smodulemanager.html" title="ModuleManager"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="sminify.html" title="Minify"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" accesskey="U">Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="mkdir">
+<h1>Mkdir<a class="headerlink" href="#mkdir" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Este módulo ayuda a crear un directorio. El usuario puede especificar el camino mientras que declara la creación del directorio o en tiempo de ejecución de la creación de un directorio. Se puede realizar ya sea en la máquina remota o local. Veamos cómo este módulo ayuda en la creación de un directorio.</p>
+</div>
+<div class="section" id="ayuda-comando">
+<h2>Ayuda Comando<a class="headerlink" href="#ayuda-comando" title="Permalink to this headline">¶</a></h2>
+<p>El comando de ayuda conduce a los usuarios en cuanto a la finalidad y al igual que sobre las opciones que se incluyen en el Mk Dir. El comando help enumera los parámetros alternativos de MK Dir. . También se describe la sintaxis para crear un directorio de dos maneras diferentes, ya sea al momento de la declaración o en tiempo de ejecución. . El comando de ayuda para MK dir se muestra a continuación.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure mkdir <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La sintaxis para declarar el comando de ayuda no es sensible a mayúsculas, que es una ventaja añadida. La siguiente captura de pantalla a visualizar sobre el comando de ayuda bajo MK dir.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure Mkdir <span class="nb">help</span>
+******************************
+
+
+This <span class="nb">command </span>handles file copying functions.
+
+ Mkdir, mkdir
+
+- path
+Will ask you <span class="k">for</span> details <span class="k">for</span> servers, <span class="k">then</span> copy a file or directory from <span class="nb">local </span>to remote
+example: ptconfigure mkdir path
+example: ptconfigure mkdir path --yes --path<span class="o">=</span><span class="s2">&quot;/path/to/new/directory&quot;</span>
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="parametros-alternativos">
+<h2>parámetros alternativos<a class="headerlink" href="#parametros-alternativos" title="Permalink to this headline">¶</a></h2>
+<p>Durante el uso de los comandos de ayuda y la creación de un directorio, en lugar de mkdir Mkdir también se puede utilizar.</p>
+</div>
+<div class="section" id="creacion-de-un-mc-dir">
+<h2>Creación de un Mc Dir<a class="headerlink" href="#creacion-de-un-mc-dir" title="Permalink to this headline">¶</a></h2>
+<p>Creación de un Dir Mc se puede hacer de dos maneras diferentes:</p>
+<p class="rubric">Ya sea en tiempo de ejecución</p>
+<div class="highlight-bash"><div class="highlight"><pre>Example: ptconfigure mkdir path
+</pre></div>
+</div>
+<p class="rubric">O bien, en el momento de la declaración</p>
+<div class="highlight-bash"><div class="highlight"><pre>Example: ptconfigure mkdir path --yes --path<span class="o">=</span><span class="s2">&quot;/path/to/new/directory&quot;</span>
+</pre></div>
+</div>
+<p>La siguiente captura de pantalla muestra la segunda forma de crear un directorio.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure mkdir path --yes --path<span class="o">=</span><span class="s2">&quot;/kevellsdoc&quot;</span>
+
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> <span class="o">[</span>Mkdir<span class="o">]</span> Executing mkdir /kevellsdoc
+******************************
+
+
+Mkdir Result: Success
+------------------------------
+Mkdir Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Los parámetros utilizados en la ayuda y la creación de unas operaciones de directorio no son sensibles, que es una ventaja añadida, mientras
+que en comparación con otros.</li>
+<li>Creación de un directorio se puede definir de dos maneras diferentes como el tiempo de declaración o en tiempo de ejecución.</li>
+<li>Se puede realizar tanto en el equipo local o remoto.</li>
+<li>Es-acomodados tanto en Ubuntu y así como Cent OS.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Mkdir</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#ayuda-comando">Ayuda Comando</a></li>
+<li><a class="reference internal" href="#parametros-alternativos">parámetros alternativos</a></li>
+<li><a class="reference internal" href="#creacion-de-un-mc-dir">Creación de un Mc Dir</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="sminify.html"
+                        title="previous chapter">Minify</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="smodulemanager.html"
+                        title="next chapter">ModuleManager</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/smkdir.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="smodulemanager.html" title="ModuleManager"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="sminify.html" title="Minify"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" >Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

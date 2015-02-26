@@ -597,5 +597,17 @@ Jugando con módulos PTConfigure
    smediatools
    smemcached
    sminify
+   smkdir
+   smodulemanager
+   smongodb
+   smysqladmins
+   smysqlserver
+   smysqltools
+   snagiosserver
+   snetbeans
+   snetworktools
+   snewrelic
+   snginxserver
+   snodejs
    sptconfigure
    sptdeploy_cleo

@@ -1,0 +1,271 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>NagiosServer &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="Ptconfigure" href="sptconfigure_main.html" />
+    <link rel="next" title="NetBeans" href="snetbeans.html" />
+    <link rel="prev" title="MysqlTools" href="smysqltools.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="snetbeans.html" title="NetBeans"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="smysqltools.html" title="MysqlTools"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" accesskey="U">Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="nagiosserver">
+<h1>NagiosServer<a class="headerlink" href="#nagiosserver" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>Sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Nagios es una aplicación de software de monitorización del sistema informático de código abierto, monitoreo de red y monitoreo de la infraestructura. Nagios ofrece monitoreo y servicios de alerta para los servidores, switches, aplicaciones y servicios. Se alerta a los usuarios cuando las cosas van mal y los alerta por segunda vez cuando el problema se ha resuelto.</p>
+<p>Nagios, creado originalmente bajo el nombre Netsaint, fue escrito y en la actualidad se mantiene por Ethan Galstad junto con un grupo de desarrolladores que están manteniendo activamente tanto el oficial y plugins no oficiales. Nagios fue originalmente diseñado para ejecutarse en Linux, pero también funciona bien en otras variantes de Unix. Es software libre licenciado bajo los términos de la Licencia Pública General GNU versión 2 publicada por la Free Software Foundation.</p>
+</div>
+<div class="section" id="ayuda-comando">
+<h2>Ayuda Comando<a class="headerlink" href="#ayuda-comando" title="Permalink to this headline">¶</a></h2>
+<p>Este comando ayuda a determinar el uso del módulo de Nagios. El usuario se llega a saber acerca de la diferente forma / formato de ejecutar este módulo. Este comando guía al usuario final a conocer el propósito de este comando. A continuación dado son el mando y la pantalla del mismo.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure nagios <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La captura de pantalla pictórica del comando anterior se enumeran a continuación,</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure nagios <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>is part of Core and provides you with a method by which you can install Nagios.
+
+ NagiosServer, nagios-server, nagiosserver, nagios
+
+       - install
+       Installs Nagios Network Monitoring Server
+       example: ptconfigure nagios-server install
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="instalacion">
+<h2>instalación<a class="headerlink" href="#instalacion" title="Permalink to this headline">¶</a></h2>
+<p>Este comando ayuda en la instalación del Nagios en el sistema. El siguiente comando dado se ejecutará el proceso de instalación.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure nagios install
+</pre></div>
+</div>
+<p>La representación gráfica de la orden anterior se enumeran a continuación,</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure nagios-server install
+
+Install Nagios Server? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+*******************************
+*        Pharaoh Tools        *
+*         Nagios Server!        *
+*******************************
+E: Unable to correct problems, you have held broken packages.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Some packages could not be installed. This may mean that you have
+requested an impossible situation or <span class="k">if</span> you are using the unstable
+distribution that some required packages have not yet been created
+or been moved out of Incoming.
+The following information may <span class="nb">help </span>to resolve the situation:
+
+The following packages have unmet dependencies:
+nagios3 : Depends: nagios3-core <span class="o">(=</span> 3.2.3-3ubuntu1<span class="o">)</span> but it is not going to be installed
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package nagios3 from the Packager Apt did not execute correctly
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+NagiosServer: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="opciones">
+<h2>Opciones<a class="headerlink" href="#opciones" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="17%" />
+<col width="41%" />
+<col width="11%" />
+<col width="32%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parámetros</th>
+<th class="head">Parámetro Alternativa</th>
+<th class="head">Opciones</th>
+<th class="head">Comentarios</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Install Nagios
+Server? (Y/N)</td>
+<td><p class="first">Hay cuatro parámetros alternativos que pueden ser
+utilizados en la línea de comandos.NagiosServer,
+nagios-server, nagiosserver, nagios Por
+ejemplo: ptconfigure nagios install/</p>
+<blockquote class="last">
+<div>ptconfigure nagiosserver install</div></blockquote>
+</td>
+<td>Y(Yes)</td>
+<td>Si el usuario desea continuar el proceso
+de instalación se puede introducir
+como Y.</td>
+</tr>
+<tr class="row-odd"><td>Install Nagios
+Server? (Y/N)</td>
+<td><p class="first">Hay cuatro parámetros alternativos que pueden ser
+utilizados en la línea de comandos.NagiosServer,
+nagios-server, nagiosserver, nagios Por
+ejemplo: ptconfigure nagios install/</p>
+<blockquote class="last">
+<div>ptconfigure nagiosserver install|</div></blockquote>
+</td>
+<td>N(No)</td>
+<td>Si el usuario desea abandonar el proceso
+de instalación se puede introducir como
+N.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Seguimiento de los servicios de red (SMTP, POP3, HTTP, NNTP, ICMP, SNMP, FTP, SSH)</li>
+<li>Seguimiento de los recursos de acogida (carga del procesador, uso de disco, los registros del sistema) en la mayoría de los sistemas
+operativos de red, incluyendo Microsoft&nbsp;Ventanas con plugin de la NSClient ++ o Comprobar MK.</li>
+<li>Monitoreo de cualquier otra cosa, como sondas (temperatura, alarmas, etc.) Que tienen la capacidad de enviar los datos recogidos a través de
+una red de&nbsp;&nbsp;plugins escritos específicamente</li>
+<li>Vigilancia a través de ejecutar scripts de forma remota a través de Nagios Ejecutor Plugin remoto</li>
+<li>Remoto monitoreo apoyado a través de SSH o SSL cifrada túneles.</li>
+<li>Un diseño simple plugin que permite a los usuarios desarrollar fácilmente sus propias comprobaciones de servicio en función de las necesidades, mediante el uso de sus herramientas de elección&nbsp;&nbsp;(shell scripts, C ++, Perl, Ruby, Python, PHP, C #, etc.)</li>
+<li>plugins gráficas de datos disponible</li>
+<li>comprobaciones de servicio paralelizado</li>
+<li>La capacidad de definir jerarquías de acogida de red utilizando hosts &#8220;padre&#8221;, lo que permite la detección de y la distinción entre hosts
+que están abajo o fuera de cobertura</li>
+<li>Contacto notificaciones cuando se producen problemas de servicio o de acogida y se resuelven (a través de correo electrónico, buscapersonas,
+SMS, o cualquier método definido por el usuario a través de plugin de sistema)</li>
+<li>La capacidad de definir controladores de eventos para ejecutar los servicios o realizar eventos para la resolución de problemas de manera
+proactiva</li>
+<li>Registro automático de rotación de archivos</li>
+<li>Apoyo a la implementación de los ejércitos de monitoreo redundantes</li>
+<li>Una interfaz web opcional para ver el estado actual de la red, notificaciones, historial de problemas, archivos, etc. log</li>
+<li>Almacenamiento de datos a través de archivos de texto en lugar de la base de datos</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">NagiosServer</a><ul>
+<li><a class="reference internal" href="#sinopsis">Sinopsis</a></li>
+<li><a class="reference internal" href="#ayuda-comando">Ayuda Comando</a></li>
+<li><a class="reference internal" href="#instalacion">instalación</a></li>
+<li><a class="reference internal" href="#opciones">Opciones</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="smysqltools.html"
+                        title="previous chapter">MysqlTools</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="snetbeans.html"
+                        title="next chapter">NetBeans</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/snagiosserver.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="snetbeans.html" title="NetBeans"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="smysqltools.html" title="MysqlTools"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" >Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

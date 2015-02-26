@@ -1,0 +1,258 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>MysqlAdmins &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="Ptconfigure" href="sptconfigure_main.html" />
+    <link rel="next" title="Mysqlserver" href="smysqlserver.html" />
+    <link rel="prev" title="MongoDB" href="smongodb.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="smysqlserver.html" title="Mysqlserver"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="smongodb.html" title="MongoDB"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" accesskey="U">Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="mysqladmins">
+<h1>MysqlAdmins<a class="headerlink" href="#mysqladmins" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Este módulo ayuda a la instalación y al igual que la gestión de los usuarios administradores de mysql sin usar usuario root. Mediante el uso de esto, los usuarios pueden gestionar sus funciones administrativas.</p>
+</div>
+<div class="section" id="ayuda-comando">
+<h2>Ayuda Comando<a class="headerlink" href="#ayuda-comando" title="Permalink to this headline">¶</a></h2>
+<p>El comando Ayuda guía a los usuarios en relación con el comando utilizado para la instalación de los administradores de mysql, y también sus ventajas. El comando utilizado para la opción de ayuda en virtud de este mysql administradores se muestra a continuación.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure MysqlAdmins <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La captura de pantalla tal como se indica a continuación puede conducir al usuario en el manejo del comando de ayuda para los administradores de mysql.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure MysqlAdmins <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>allows you to install admin users <span class="k">for</span> MySQL so that MySQL can
+ be managed without using the Root User.
+
+ MysqlAdmins, mysql-admins, mysqladmins
+
+       - install
+       Installs Mysql Admin Users.
+       example: ptconfigure mysql-admins install
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="instalacion">
+<h2>instalación<a class="headerlink" href="#instalacion" title="Permalink to this headline">¶</a></h2>
+<p>Instalación de los administradores de MySQL a su máquina facilita los usuarios especificar y gestionar sus actos administrativos. El comando que se utiliza para la instalación de los administradores mysql está marcado a continuación.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure MysqlAdmins install
+</pre></div>
+</div>
+<p>Además, las siguientes operaciones que se muestran en un formato tabular se produce.</p>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="17%" />
+<col width="36%" />
+<col width="13%" />
+<col width="34%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parámetros</th>
+<th class="head">Parámetro Alternativa</th>
+<th class="head">Opciones</th>
+<th class="head">Comentarios</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Install Admin User
+for MySQL? (Y/N)</td>
+<td>En el lugar de MysqlAdmins estos nombres
+alternativos se pueden utilizar:
+mysql-admins,mysqladmins.</td>
+<td>Y(Yes)</td>
+<td>Si el usuario desea continuar el proceso
+de instalación se puede introducir
+como Y.</td>
+</tr>
+<tr class="row-odd"><td>Install MySQL Server?
+(Y/N)</td>
+<td>En el lugar de MysqlAdmins estos nombres
+alternativos se pueden utilizar:
+mysql-admins,mysqladmins.</td>
+<td>N(No)</td>
+<td>Si el usuario desea abandonar el proceso
+de instalación se puede introducir como
+N.|</td>
+</tr>
+</tbody>
+</table>
+<p>Si el usuario siga el proceso de instalación, se pueden enmarcar sus funciones administrativas mediante la especificación de las siguientes limitaciones.</p>
+<ul class="simple">
+<li>MySQL Usuario root</li>
+<li>MySQL Root Pass</li>
+<li>MySQL Nueva User Admin</li>
+<li>MySQL Nueva admin Pass</li>
+</ul>
+<p>Si el usuario desea procesar instalación de los administradores de MySQL en un sistema remoto que puede especificar:</p>
+<ul class="simple">
+<li>Host MySQL.</li>
+</ul>
+<p>La siguiente captura de pantalla le da una representación pictórica sobre el proceso de instalación como se describe anteriormente.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure mysql-admins install
+Install Admin User <span class="k">for</span> MySQL? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+*******************************
+*        Pharaoh Tools        *
+*         MySQL Admins!        *
+*******************************
+Enter MySQL Root User:
+root
+Enter MySQL Root Pass:
+root123
+Enter MySQL New Admin User:
+kevells
+Enter MySQL New Admin Pass:
+kevells123
+Enter MySQL Host: Enter nothing <span class="k">for</span> 127.0.0.1
+
+Creating /tmp/ptconfigure-temp-script-74285705785.sh
+chmod <span class="m">755</span> /tmp/ptconfigure-temp-script-74285705785.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-74285705785.sh Permissions
+Executing /tmp/ptconfigure-temp-script-74285705785.sh
+ERROR <span class="m">1045</span> <span class="o">(</span>28000<span class="o">)</span>: Access denied <span class="k">for</span> user <span class="s1">&#39;root&#39;</span>@<span class="s1">&#39;localhost&#39;</span> <span class="o">(</span>using password: YES<span class="o">)</span>
+Temp File /tmp/ptconfigure-temp-script-74285705785.sh Removed
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+MysqlAdmins: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>En el caso de los administradores de MySQL ya está instalado en la máquina de los usuarios, a continuación, un mensaje se aparecen para
+informar a los usuarios, ya que ya está instalado.</li>
+<li>Mediante el uso de este módulo los administradores pueden gestionar sus acciones administrativas como por los requisitos.</li>
+<li>Pueden realizar el proceso de instalación, incluso en un sistema remoto.</li>
+<li>Sin el uso de los usuarios root, los usuarios pueden instalar los administradores mysql.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">MysqlAdmins</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#ayuda-comando">Ayuda Comando</a></li>
+<li><a class="reference internal" href="#instalacion">instalación</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="smongodb.html"
+                        title="previous chapter">MongoDB</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="smysqlserver.html"
+                        title="next chapter">Mysqlserver</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/smysqladmins.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="smysqlserver.html" title="Mysqlserver"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="smongodb.html" title="MongoDB"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" >Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

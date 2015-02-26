@@ -1,0 +1,391 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>ModuleManager &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="Ptconfigure" href="sptconfigure_main.html" />
+    <link rel="next" title="MongoDB" href="smongodb.html" />
+    <link rel="prev" title="Mkdir" href="smkdir.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="smongodb.html" title="MongoDB"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="smkdir.html" title="Mkdir"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" accesskey="U">Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="modulemanager">
+<h1>ModuleManager<a class="headerlink" href="#modulemanager" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>El ámbito principal de la gerente módulo es permitir al usuario gestionar sus módulos. Sus funciones principales incluyen la instalación, activar, desactivar, garantizar, desinstalación. vamos a ver sobre estas importantes funciones del administrador de módulos de una manera elaborada a partir de los próximos temas.</p>
+</div>
+<div class="section" id="ayuda-comando">
+<h2>Ayuda Comando<a class="headerlink" href="#ayuda-comando" title="Permalink to this headline">¶</a></h2>
+<p>El comando ayuda de este gestor de módulos es un breve manual de usuario que guía al usuario en cuanto a la finalidad, de gestor de módulos, describe al usuario sobre las funciones principales, tales como instalar, activar, desactivar, garantizar, desinstale junto con la sintaxis para declarar ellos. También enumera outs los parámetros alternativos de gestor de módulos. El comando para declarar la opción de ayuda en virtud de administrador de módulos se muestra a continuación:</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure ModuleManager <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La sintaxis para declarar el comando de ayuda no es sensible a mayúsculas, que es una ventaja añadida. La siguiente captura de pantalla a visualizar sobre el comando de ayuda bajo gestor de módulos.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure ModuleManager help
+
+******************************
+
+
+ The Module Manager allows you to manage modules. Install, Ensure, Uninstall, Enable, Disable.
+
+ ModuleManager, module-manager, modulemanager
+
+       - install
+       Installs the latest version of a module. If a module of the same name already exists in your Extensions directory,
+       an error will be thrown.
+       example: ptconfigure module-manager install --module-name=&quot;MyModule&quot; --module-source=&quot;http://git.cleo-modules.com/MyModule.git&quot;
+
+       - ensure
+       Ensures the existence of a module. The module will only be installed if it currently doesn&#39;t exist.
+       example: ptconfigure module-manager ensure --module-name=&quot;MyModule&quot; --module-source=&quot;http://git.cleo-modules.com/MyModule.git&quot;
+
+       - uninstall
+       Uninstalls a Module. This will delete all of the files for this Module
+       example: ptconfigure module-manager enable --module-name=&quot;MyModule&quot;
+
+       - enable
+       Enables a Module. All installed Modules are enabled by default.
+       example: ptconfigure module-manager enable --module-name=&quot;MyModule&quot;
+
+       - disable
+       Disables a Module. The files for this module will still exist, but none will be automatically loaded during execution.
+       example: ptconfigure module-manager disable --module-name=&quot;MyModule&quot;
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="instalacion">
+<h2>instalación<a class="headerlink" href="#instalacion" title="Permalink to this headline">¶</a></h2>
+<p>El comando utilizado para instalar el gestor de módulos en la máquina de los usuarios se muestra a continuación:</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure module-manager install
+</pre></div>
+</div>
+<p>Después de introducir el comando anterior, el siguiente proceso se produce como se muestra en el formato tabular.</p>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="22%" />
+<col width="30%" />
+<col width="11%" />
+<col width="37%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parámetros</th>
+<th class="head">Parámetro Alternativa</th>
+<th class="head">Opciones</th>
+<th class="head">Comentarios</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Install ModuleManager?
+(Y/N)</td>
+<td>En lugar de module-manager, podemos
+utilizar modulemanager,
+ModuleManager también.</td>
+<td>Y(Yes)</td>
+<td>Si el usuario desea continuar el proceso
+de instalación se puede introducir como Y.</td>
+</tr>
+<tr class="row-odd"><td>Install ModuleManager?
+(Y/N)</td>
+<td>En lugar de module-manager, podemos
+utilizar modulemanager,
+ModuleManager también.|</td>
+<td>N(No)</td>
+<td>Si el usuario desea abandonar el proceso
+de instalación se puede introducir como N.</td>
+</tr>
+</tbody>
+</table>
+<p>Si el usuario procede de la instalación, durante el proceso de instalación, el siguiente proceso se realiza como se muestra en el formato tabular:
+.. cssclass:: table-bordered</p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="27%" />
+<col width="13%" />
+<col width="39%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parámetros</th>
+<th class="head">camino</th>
+<th class="head">Opciones</th>
+<th class="head">Comentarios</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Program executor director
+(Por defecto)</td>
+<td>“/usr/bin”</td>
+<td>Y(Yes)</td>
+<td>Si el usuario de proceder con la instalación
+del directorio ejecutor programa predeterminado
+que puede introducir como Sí</td>
+</tr>
+<tr class="row-odd"><td>Program executor directory
+(Por defecto)</td>
+<td>específica de usuario</td>
+<td>No(End Slash)</td>
+<td>Si el usuario de proceder con la instalación
+de su propio directorio ejecutor del programa
+se puede introducir como N, y en la mano
+especificar que poseen ubicación|</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Finalmente voluntad instalación se completó como se muestra en la siguiente captura de pantalla.</p>
+</div>
+<div class="section" id="permitir">
+<h2>permitir<a class="headerlink" href="#permitir" title="Permalink to this headline">¶</a></h2>
+<p>El proceso de activación tiene por objeto permitir el módulo. Todos los módulos instalados están habilitadas por defecto con el comando a continuación:</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure module-manager <span class="nb">enable</span> --module-name<span class="o">=</span><span class="s2">&quot;MyModule&quot;</span>
+</pre></div>
+</div>
+<p>Después de introducir este comando, el módulo que se especifica se habilita.</p>
+</div>
+<div class="section" id="inhabilitar">
+<h2>inhabilitar<a class="headerlink" href="#inhabilitar" title="Permalink to this headline">¶</a></h2>
+<p>El proceso tiene como objetivo desactivar la desactivación del módulo. Los archivos de los módulos con discapacidad sigue siendo existe, pero que no serán cargados en el momento de la ejecución. Esto se puede lograr por el siguiente comando</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure module-manager disable --module-name<span class="o">=</span><span class="s2">&quot;MyModule&quot;</span>
+</pre></div>
+</div>
+<p>Después de introducir este comando, el módulo que se especifica se desactiva.</p>
+</div>
+<div class="section" id="asegurar">
+<h2>asegurar<a class="headerlink" href="#asegurar" title="Permalink to this headline">¶</a></h2>
+<p>El papel de asegurar que el proceso es comprobar la disponibilidad de módulos. Después de que el proceso de garantizar se completó se instalarán los módulos sólo si los módulos reportan como no se instala. El proceso de garantizar se puede hacer mediante el uso de la orden dada a continuación:</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure module-manager ensure
+</pre></div>
+</div>
+<p>Durante el proceso de garantizar, las versiones de los módulos no se comprueban. La siguiente captura de pantalla representan gráficamente el proceso de garantizar.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure module-manager ensure
+
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Ensure module install is not checking versions
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Module ModuleManager reports itself as Installed
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Not installing as already installed
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+ModuleManager: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="desinstalar">
+<h2>Desinstalar<a class="headerlink" href="#desinstalar" title="Permalink to this headline">¶</a></h2>
+<p>El proceso de desinstalación se utiliza para borrar todos los archivos de los módulos. El comando utilizado para desinstalar el gestor de módulos se muestra a continuación:</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure module-manager uninstall
+</pre></div>
+</div>
+<p>Después de introducir el comando anterior, el siguiente proceso se produce como se muestra en el formato tabular.</p>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="25%" />
+<col width="32%" />
+<col width="10%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parámetros</th>
+<th class="head">Parámetro Alternativa</th>
+<th class="head">Opciones</th>
+<th class="head">Comentarios</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Un Install ModuleManager? (Y/N)</td>
+<td>En lugar de module-manager, podemos
+utilizar modulemanager, ModuleManager
+también.</td>
+<td>Y(Yes)</td>
+<td>Si el usuario desea continuar el proceso
+de desinstalación se puede introducir como
+Y</td>
+</tr>
+<tr class="row-odd"><td>Un Install ModuleManager? (Y/N)</td>
+<td>En lugar de module-manager, podemos
+utilizar modulemanager, ModuleManager
+también</td>
+<td>N(No)</td>
+<td>Si el usuario desea abandonar el proceso
+de desinstalación se puede introducir
+como N.|</td>
+</tr>
+</tbody>
+</table>
+<p>Si el usuario procede de la instalación, durante el proceso de instalación, el siguiente proceso se realiza como se muestra en el formato tabular:</p>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="22%" />
+<col width="23%" />
+<col width="11%" />
+<col width="44%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parámetros</th>
+<th class="head">camino</th>
+<th class="head">Opciones</th>
+<th class="head">Comentarios</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Program executor directory
+(Por defecto)</td>
+<td>“/usr/bin”</td>
+<td>Y(Yes)</td>
+<td>Si el usuario para proceder desinstalación con el
+directorio ejecutor programa predeterminado que
+puede introducir como Sí</td>
+</tr>
+<tr class="row-odd"><td>Program executor directory
+(Por defecto)</td>
+<td>específica de usuario</td>
+<td>No (End
+slash)</td>
+<td>Si el usuario para proceder desinstalación con su
+propio directorio ejecutor del programa se puede
+introducir como N, y en la mano especificar que
+poseen ubicación|</td>
+</tr>
+</tbody>
+</table>
+<p>Por último, la desinstalación se completó como se muestra en la siguiente captura de pantalla.</p>
+<div class="highlight-bash"><div class="highlight"><pre>
+</pre></div>
+</div>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Los parámetros utilizados en la ayuda y la instalación, desinstalación, activar, desactivar, asegúrese de que no entre mayúsculas y
+minúsculas, que es una ventaja añadida, mientras que en comparación con otros.</li>
+<li>Es-acomodados tanto en Ubuntu y así como Cent OS.</li>
+<li>El proceso de garantizar facilita la disponibilidad de cheques de los módulos antes de la instalación.</li>
+<li>Si el usuario desea desactivar un módulo en particular que pueden desactivarlos sin borrar sus archivos correspondientes.</li>
+<li>Durante la instalación, desinstale el usuario puede especificar la ubicación de directorio ejecutor del programa.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">ModuleManager</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#ayuda-comando">Ayuda Comando</a></li>
+<li><a class="reference internal" href="#instalacion">instalación</a></li>
+<li><a class="reference internal" href="#permitir">permitir</a></li>
+<li><a class="reference internal" href="#inhabilitar">inhabilitar</a></li>
+<li><a class="reference internal" href="#asegurar">asegurar</a></li>
+<li><a class="reference internal" href="#desinstalar">Desinstalar</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="smkdir.html"
+                        title="previous chapter">Mkdir</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="smongodb.html"
+                        title="next chapter">MongoDB</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/smodulemanager.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="smongodb.html" title="MongoDB"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="smkdir.html" title="Mkdir"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" >Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

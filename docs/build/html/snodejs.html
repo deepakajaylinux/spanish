@@ -1,0 +1,309 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Node-JS &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="Ptconfigure" href="sptconfigure_main.html" />
+    <link rel="next" title="PTConfigure" href="sptconfigure.html" />
+    <link rel="prev" title="NginxServer" href="snginxserver.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="sptconfigure.html" title="PTConfigure"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="snginxserver.html" title="NginxServer"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" accesskey="U">Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="node-js">
+<h1>Node-JS<a class="headerlink" href="#node-js" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Este módulo ayuda a los usuarios a instalar Nodo JS que es un lado del servidor JS Idioma. Node.js es un código abierto, entorno de ejecución multiplataforma para el lado del servidor y aplicaciones de red. Aplicaciones Node.js están escritos en JavaScript, y se puede ejecutar en el tiempo de ejecución Node.js en OS X, Microsoft Windows, Linux y FreeBSD. Aquí, vamos a ver cómo este módulo facilita en la instalación y uso del Nodo-JS.</p>
+</div>
+<div class="section" id="ayuda-comando">
+<h2>Ayuda Comando<a class="headerlink" href="#ayuda-comando" title="Permalink to this headline">¶</a></h2>
+<p>El comando de ayuda conduce a los usuarios en cuanto a la finalidad y al igual que sobre las opciones que se incluyen en el módulo Node-JS. Las listas de comandos de ayuda fuera de los parámetros alternativos de módulo Node-JS. También describe la sintaxis para instalar el módulo Node-JS. El comando de ayuda para el módulo Node-JS se muestra a continuación.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure NodeJS <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La sintaxis para declarar el comando de ayuda no es sensible a mayúsculas, que es una ventaja añadida. La siguiente captura de pantalla a visualizar sobre el comando de ayuda bajo Nodo JS.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure NodeJS <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>allows you to install Node JS, The Server Side JS Language
+
+ NodeJS, node-js, nodejs
+
+       - install
+       Installs NodeJS through apt-get.
+       example: ptconfigure node-js install
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="instalacion">
+<h2>instalación<a class="headerlink" href="#instalacion" title="Permalink to this headline">¶</a></h2>
+<p>Instalación del Nodo-JS para su máquina, se puede hacer simplemente usando el comando siguiente como se muestra:</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure node-js install
+</pre></div>
+</div>
+<p>Después de introducir el comando anterior, las siguientes operaciones se produce como se muestra en el formato tabular.</p>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="20%" />
+<col width="30%" />
+<col width="13%" />
+<col width="37%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parámetros</th>
+<th class="head">Parámetro Alternativa</th>
+<th class="head">Opciones</th>
+<th class="head">Comentarios</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Install Node JS? (Y/N)</td>
+<td>En lugar de Nodo JS, NodeJS,
+nodo-js, también se pueden
+utilizar nodejs.</td>
+<td>Y(Yes)</td>
+<td>Si el usuario desea continuar el proceso
+de instalación se puede introducir como Y.</td>
+</tr>
+<tr class="row-odd"><td>Install Node JS? (Y/N)</td>
+<td>En lugar de Nodo JS, NodeJS,
+nodo-js, también se pueden
+utilizar nodejs.|</td>
+<td>N(No)</td>
+<td>Si el usuario desea continuar el proceso
+de instalación se puede introducir como N.</td>
+</tr>
+</tbody>
+</table>
+<p>Si el usuario continúa el proceso de instalación, durante la ejecución de la instalación produce el siguiente proceso:</p>
+<ul class="simple">
+<li>Lee las listas de paquetes.</li>
+<li>Construye el árbol de dependencias.</li>
+<li>Lee la información de estado.</li>
+<li>Lista de los paquetes que se instalan automáticamente.</li>
+<li>Lista de nuevos paquetes instalados.</li>
+<li>Muestra el número de archivos que se actualizan, recién instalados, removidos, no actualizados.</li>
+</ul>
+<p>Por último, se informa claramente de los informes y de estado. Y también, añadiendo paquete nodejs del Packager Apt ejecutados correctamente. La siguiente captura de pantalla muestra todo el proceso de instalación como se describe.</p>
+<p>Si el nodo-js módulo ya existe en la máquina de los usuarios, se mostrará un mensaje como el paquete de nodo-js del empaquetador Apt ya está instalado. La captura de pantalla de la siguiente es un buen ejemplo de ese tipo de mensajes.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure node-js install
+Install Node JS? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+*******************************
+*        Pharaoh Tools        *
+*         Node JS!        *
+*******************************
+       Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+ ax25-node libax25 openbsd-inetd
+The following NEW packages will be installed:
+ ax25-node libax25 node openbsd-inetd
+<span class="m">0</span> upgraded, <span class="m">4</span> newly installed, <span class="m">0</span> to remove and <span class="m">17</span> not upgraded.
+Need to get <span class="m">110</span> kB of archives.
+After this operation, <span class="m">465</span> kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu/ trusty/universe libax25 amd64 0.0.12-rc2+cvs20120204-2ubuntu2 <span class="o">[</span>22.7 kB<span class="o">]</span>
+Get:2 http://archive.ubuntu.com/ubuntu/ trusty/main openbsd-inetd amd64 0.20091229-2ubuntu3 <span class="o">[</span>30.8 kB<span class="o">]</span>
+Get:3 http://archive.ubuntu.com/ubuntu/ trusty/universe ax25-node amd64 0.3.2-7.4 <span class="o">[</span>54.8 kB<span class="o">]</span>
+Get:4 http://archive.ubuntu.com/ubuntu/ trusty/universe node all 0.3.2-7.4 <span class="o">[</span>1,284 B<span class="o">]</span>
+Fetched <span class="m">110</span> kB in 2s <span class="o">(</span>39.1 kB/s<span class="o">)</span>
+Selecting previously unselected package libax25.
+<span class="o">(</span>Reading database ... <span class="m">237551</span> files and directories currently installed.<span class="o">)</span>
+Preparing to unpack .../libax25_0.0.12-rc2+cvs20120204-2ubuntu2_amd64.deb ...
+Unpacking libax25 <span class="o">(</span>0.0.12-rc2+cvs20120204-2ubuntu2<span class="o">)</span> ...
+Selecting previously unselected package openbsd-inetd.
+Preparing to unpack .../openbsd-inetd_0.20091229-2ubuntu3_amd64.deb ...
+Unpacking openbsd-inetd <span class="o">(</span>0.20091229-2ubuntu3<span class="o">)</span> ...
+Selecting previously unselected package ax25-node.
+Preparing to unpack .../ax25-node_0.3.2-7.4_amd64.deb ...
+Unpacking ax25-node <span class="o">(</span>0.3.2-7.4<span class="o">)</span> ...
+Selecting previously unselected package node.
+Preparing to unpack .../node_0.3.2-7.4_all.deb ...
+Unpacking node <span class="o">(</span>0.3.2-7.4<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> man-db <span class="o">(</span>2.6.7.1-1ubuntu1<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> ureadahead <span class="o">(</span>0.100.0-16<span class="o">)</span> ...
+Setting up libax25 <span class="o">(</span>0.0.12-rc2+cvs20120204-2ubuntu2<span class="o">)</span> ...
+Setting up openbsd-inetd <span class="o">(</span>0.20091229-2ubuntu3<span class="o">)</span> ...
+* Stopping internet superserver inetd
+  ...done.
+* Not starting internet superserver: no services enabled
+Processing triggers <span class="k">for</span> ureadahead <span class="o">(</span>0.100.0-16<span class="o">)</span> ...
+Setting up ax25-node <span class="o">(</span>0.3.2-7.4<span class="o">)</span> ...
+Setting up node <span class="o">(</span>0.3.2-7.4<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> libc-bin <span class="o">(</span>2.19-0ubuntu6.4<span class="o">)</span> ...
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package node from the Packager Apt executed correctly
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+ libv8-3.14.5
+The following NEW packages will be installed:
+ libv8-3.14.5 nodejs
+<span class="m">0</span> upgraded, <span class="m">2</span> newly installed, <span class="m">0</span> to remove and <span class="m">17</span> not upgraded.
+Need to get 1,873 kB of archives.
+After this operation, 7,429 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu/ trusty/universe libv8-3.14.5 amd64 3.14.5.8-5ubuntu2 <span class="o">[</span>1,189 kB<span class="o">]</span>
+Get:2 http://archive.ubuntu.com/ubuntu/ trusty/universe nodejs amd64 0.10.25~dfsg2-2ubuntu1 <span class="o">[</span><span class="m">684</span> kB<span class="o">]</span>
+Fetched 1,873 kB in 14s <span class="o">(</span><span class="m">126</span> kB/s<span class="o">)</span>
+Selecting previously unselected package libv8-3.14.5.
+<span class="o">(</span>Reading database ... <span class="m">237621</span> files and directories currently installed.<span class="o">)</span>
+Preparing to unpack .../libv8-3.14.5_3.14.5.8-5ubuntu2_amd64.deb ...
+Unpacking libv8-3.14.5 <span class="o">(</span>3.14.5.8-5ubuntu2<span class="o">)</span> ...
+Selecting previously unselected package nodejs.
+Preparing to unpack .../nodejs_0.10.25~dfsg2-2ubuntu1_amd64.deb ...
+Unpacking nodejs <span class="o">(</span>0.10.25~dfsg2-2ubuntu1<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> doc-base <span class="o">(</span>0.10.5<span class="o">)</span> ...
+Processing <span class="m">1</span> added doc-base file...
+Processing triggers <span class="k">for</span> man-db <span class="o">(</span>2.6.7.1-1ubuntu1<span class="o">)</span> ...
+Setting up libv8-3.14.5 <span class="o">(</span>3.14.5.8-5ubuntu2<span class="o">)</span> ...
+Setting up nodejs <span class="o">(</span>0.10.25~dfsg2-2ubuntu1<span class="o">)</span> ...
+update-alternatives: using /usr/bin/nodejs to provide /usr/bin/js <span class="o">(</span>js<span class="o">)</span> in auto mode
+Processing triggers <span class="k">for</span> libc-bin <span class="o">(</span>2.19-0ubuntu6.4<span class="o">)</span> ...
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package nodejs from the Packager Apt executed correctly
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+NodeJS: Success
+------------------------------
+Installer Finished
+
+------------------------------
+</pre></div>
+</div>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Los parámetros utilizados para la declaración de la ayuda de mandatos, la instalación no son sensibles, que es una ventaja añadida, mientras
+que en comparación con otros.</li>
+<li>Es-acomodados tanto en OS Cent y así como en Ubuntu.</li>
+<li>Si el paquete nodo-js ya existe en la máquina del usuario, lo hará no sobrescribe, en lugar de que se mostrará un mensaje como ya&nbsp; existir.</li>
+<li>Node.js utiliza el motor de Google V8 JavaScript para ejecutar código, y un gran porcentaje de los módulos básicos están escritas en
+JavaScript.</li>
+<li>Node.js contiene una biblioteca incorporada para permitir que las aplicaciones para actuar como un servidor Web sin necesidad de software
+como Apache HTTP Server o IIS.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Node-JS</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#ayuda-comando">Ayuda Comando</a></li>
+<li><a class="reference internal" href="#instalacion">instalación</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="snginxserver.html"
+                        title="previous chapter">NginxServer</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sptconfigure.html"
+                        title="next chapter">PTConfigure</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/snodejs.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="sptconfigure.html" title="PTConfigure"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="snginxserver.html" title="NginxServer"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" >Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>NginxServer &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="Ptconfigure" href="sptconfigure_main.html" />
+    <link rel="next" title="Node-JS" href="snodejs.html" />
+    <link rel="prev" title="Newrelic" href="snewrelic.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="snodejs.html" title="Node-JS"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="snewrelic.html" title="Newrelic"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" accesskey="U">Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="nginxserver">
+<h1>NginxServer<a class="headerlink" href="#nginxserver" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="synopsis">
+<h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<p>Nginx, pronounced &#8220;Engine X&#8221;, is a high-performance Web server. The Nginx Web Server is a light weight and versatile server that can be configured for all the different tasks that many modern websites demand. Ngnix server acts as a facilitator to the users in configuring applications settings. Few examples for applications settings includes mysql admin user, host, pass. Nginx is making headlines as the new Web server of choice for many webmasters. The top reason for its popularity is its speed. Nginx is faster than Apache in non-testing environments because its architecture is event driven while Apache&#8217;s is process driven. The ptconfigure modules acts as a way through for installing this Nginx Server.</p>
+</div>
+<div class="section" id="help-command">
+<h2>Help Command<a class="headerlink" href="#help-command" title="Permalink to this headline">¶</a></h2>
+<p>The help command leads the users regarding the purpose and as well as about the options that are included in the Ngnix server module. The help command lists out the alternative parameters of Ngnix server. It also describes the syntax for installing Ngnix server. The help command for Ngnix server is given below.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure nginx-server <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La sintaxis para declarar el comando de ayuda no es sensible a mayúsculas, que es una ventaja añadida. La siguiente captura de pantalla a visualizar sobre el comando de ayuda bajo Nginx Server.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure NginxServer <span class="nb">help</span>
+******************************
+
+
+This <span class="nb">command </span>is part of Core and provides you  with a method by which you can configure Application Settings.
+You can configure default application settings, ie: mysql admin user, host, pass
+
+NginxServer, nginx-server, nginxserver
+
+- install
+Installs Nginx HTTP Server
+example: ptconfigure nginx-server install
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="instalacion">
+<h2>instalación<a class="headerlink" href="#instalacion" title="Permalink to this headline">¶</a></h2>
+<p>Instalación del servidor Nginx es más simple utilizando el siguiente comando como se muestra:</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure nginx-server install
+</pre></div>
+</div>
+<p>Después de introducir el comando anterior las siguientes operaciones como se muestra en el formato tabular ocurre.</p>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="18%" />
+<col width="36%" />
+<col width="11%" />
+<col width="36%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parámetros</th>
+<th class="head">Parámetro Alternativa</th>
+<th class="head">Opciones</th>
+<th class="head">Comentarios</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>ptconfigure
+nginx-server
+install? (Y/N)</td>
+<td>En lugar de Nginx Server, las siguientes
+alternativas también se pueden utilizar:
+NginxServer, nginx-server, nginxserver.</td>
+<td>Y(Yes)</td>
+<td>Si el usuario desea continuar el proceso
+de instalación se puede introducir
+como Y.</td>
+</tr>
+<tr class="row-odd"><td>ptconfigure
+nginx-server
+install? (Y/N)</td>
+<td>En lugar de Nginx Server, las siguientes
+alternativas también se pueden utilizar:
+NginxServer, nginx-server, nginxserver.|</td>
+<td>N(No)</td>
+<td>Si el usuario desea abandonar el proceso
+de instalación se puede introducir
+como N.</td>
+</tr>
+</tbody>
+</table>
+<p>Si el usuario continúa el proceso de instalación, se instalará el servidor HTTP Nginx. Si ya está el paquete existe de Nginx en la máquina de los usuarios, a continuación, aparecerá un mensaje para indicar al usuario como Nginx es ya existe en esa máquina. Finalmente se generan informes con resultados claros y el estado. La siguiente captura de pantalla explica el proceso mencionado anteriormente pictóricamente.</p>
+<div class="highlight-bash"><div class="highlight"><pre>Kevell@corp:/# ptconfigure nginx-server install
+
+Install Nginx Server? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+*******************************
+*        Pharaoh Tools        *
+*         Nginx Server!       *
+*******************************
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+nginx-common nginx-core
+Suggested packages:
+fcgiwrap nginx-doc
+The following NEW packages will be installed:
+nginx nginx-common nginx-core
+<span class="m">0</span> upgraded, <span class="m">3</span> newly installed, <span class="m">0</span> to remove and <span class="m">278</span> not upgraded.
+Need to get <span class="m">347</span> kB of archives.
+After this operation, 1,295 kB of additional disk space will be used.
+Get:1 http://in.archive.ubuntu.com/ubuntu/ trusty-updates/main nginx-common all 1.4.6-1ubuntu3.1 <span class="o">[</span>17.9 kB<span class="o">]</span>
+Get:2 http://in.archive.ubuntu.com/ubuntu/ trusty-updates/main nginx-core amd64 1.4.6-1ubuntu3.1 <span class="o">[</span><span class="m">324</span> kB<span class="o">]</span>
+Get:3 http://in.archive.ubuntu.com/ubuntu/ trusty-updates/main nginx all 1.4.6-1ubuntu3.1 <span class="o">[</span>5,218 B<span class="o">]</span>
+Fetched <span class="m">347</span> kB in 3s <span class="o">(</span><span class="m">104</span> kB/s<span class="o">)</span>
+Selecting previously unselected package nginx-common.
+<span class="o">(</span>Reading database ... <span class="m">168194</span> files and directories currently installed.<span class="o">)</span>
+Preparing to unpack .../nginx-common_1.4.6-1ubuntu3.1_all.deb ...
+Unpacking nginx-common <span class="o">(</span>1.4.6-1ubuntu3.1<span class="o">)</span> ...
+Selecting previously unselected package nginx-core.
+Preparing to unpack .../nginx-core_1.4.6-1ubuntu3.1_amd64.deb ...
+Unpacking nginx-core <span class="o">(</span>1.4.6-1ubuntu3.1<span class="o">)</span> ...
+Selecting previously unselected package nginx.
+Preparing to unpack .../nginx_1.4.6-1ubuntu3.1_all.deb ...
+Unpacking nginx <span class="o">(</span>1.4.6-1ubuntu3.1<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> ureadahead <span class="o">(</span>0.100.0-16<span class="o">)</span> ...
+ureadahead will be reprofiled on next reboot
+Processing triggers <span class="k">for</span> ufw <span class="o">(</span>0.34~rc-0ubuntu2<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> man-db <span class="o">(</span>2.6.7.1-1<span class="o">)</span> ...
+Setting up nginx-common <span class="o">(</span>1.4.6-1ubuntu3.1<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> ureadahead <span class="o">(</span>0.100.0-16<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> ufw <span class="o">(</span>0.34~rc-0ubuntu2<span class="o">)</span> ...
+Setting up nginx-core <span class="o">(</span>1.4.6-1ubuntu3.1<span class="o">)</span> ...
+Setting up nginx <span class="o">(</span>1.4.6-1ubuntu3.1<span class="o">)</span> ...
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package nginx from the Packager Apt executed correctly
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+NginxServer: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Al utilizar el usuario esta Nginx Server puede configurar sus ajustes de la aplicación.</li>
+<li>Los parámetros utilizados en ayuda de instalación y operaciones no son sensibles, que es una ventaja añadida, mientras que en comparación
+con otros.</li>
+<li>Nginx es rápido, ya que no necesita para crear un nuevo proceso para cada nueva solicitud.</li>
+<li>Nginx utiliza muy poca memoria, especialmente para páginas Web estáticas.</li>
+<li>Nginx se puede utilizar con una amplia gama de sistemas.</li>
+<li>Nginx es altamente escalable, y el rendimiento no depende de hardware.</li>
+<li>Nginx es fácil de instalar y configurar.</li>
+<li>Al igual que Apache, Nginx tiene todas las características que usted esperaría de un servidor web líder:</li>
+<li>Fichero estático de servir.</li>
+<li>Soporte SSL / TLS.</li>
+<li>Hosts virtuales.</li>
+<li>Invertir proxy.</li>
+<li>El equilibrio de carga.</li>
+<li>Compresión.</li>
+<li>Los controles de acceso.</li>
+<li>Reescritura de URL.</li>
+<li>Registro personalizado.</li>
+<li>Del lado del servidor incluye.</li>
+<li>WebDAV.</li>
+<li>Streaming FLV.</li>
+<li>FastCGI.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">NginxServer</a><ul>
+<li><a class="reference internal" href="#synopsis">Synopsis</a></li>
+<li><a class="reference internal" href="#help-command">Help Command</a></li>
+<li><a class="reference internal" href="#instalacion">instalación</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="snewrelic.html"
+                        title="previous chapter">Newrelic</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="snodejs.html"
+                        title="next chapter">Node-JS</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/snginxserver.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="snodejs.html" title="Node-JS"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="snewrelic.html" title="Newrelic"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" >Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>
