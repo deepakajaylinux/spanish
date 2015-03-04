@@ -1,0 +1,207 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>PackageManager &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="Ptconfigure" href="sptconfigure_main.html" />
+    <link rel="next" title="Parallax" href="sparallax.html" />
+    <link rel="prev" title="Oracle" href="soracle.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="sparallax.html" title="Parallax"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="soracle.html" title="Oracle"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" accesskey="U">Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="packagemanager">
+<h1>PackageManager<a class="headerlink" href="#packagemanager" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Este comando utiliza para envolver la gestión de paquetes. Se trata de tener tres opciones. Están PKG-instalar, pkg-asegurar, pkg-remove. Esto permite al usuario instalar en cualquier sistema. Se gestionar las funciones del Administrador de paquetes. Es adecuado para trabajar con Ubuntu y CentOS.</p>
+</div>
+<div class="section" id="comando-ayuda">
+<h2>comando Ayuda<a class="headerlink" href="#comando-ayuda" title="Permalink to this headline">¶</a></h2>
+<p>Este comando ayuda guía al usuario a instalar, asegurar, eliminar de gestión de paquetes. Esto permite la instalación, asegurarse, retire. El comando de ayuda para el paquete Administrador se muestra a continuación.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure packagemanager <span class="nb">help</span>
+</pre></div>
+</div>
+<p>Después de entradas el comando anterior, comienza a funcionar para envolver. Es la catequesis de las funciones en las capturas de pantalla.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure packagemanager <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>allows you to use a Package Management wrapper.
+
+ PackageManager, package-manager, packagemanager, package-mgr, pkgmgr
+
+       - pkg-install
+       Installs a Package through a Package Manager
+       example: ptconfigure package-manager install --package-name<span class="o">=</span><span class="s2">&quot;mysql&quot;</span> --package-version<span class="o">=</span><span class="s2">&quot;5.0&quot;</span> --packager<span class="o">=</span><span class="s2">&quot;apt-get&quot;</span>
+
+       - pkg-ensure
+       Installs a Package through a Package Manager
+       example: ptconfigure package-manager install --package-name<span class="o">=</span><span class="s2">&quot;mysql&quot;</span> --package-version<span class="o">=</span><span class="s2">&quot;5.0&quot;</span> --packager<span class="o">=</span><span class="s2">&quot;apt-get&quot;</span>
+
+       - pkg-remove
+       Removes a Package through a Package Manager
+       example: ptconfigure package-manager install --package-name<span class="o">=</span><span class="s2">&quot;mysql&quot;</span> --package-version<span class="o">=</span><span class="s2">&quot;5.0&quot;</span> --packager<span class="o">=</span><span class="s2">&quot;apt-get&quot;</span>
+
+ A package manager wrapper that will allow you to install packages on any system
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="parametros-alternativos">
+<h2>parámetros alternativos<a class="headerlink" href="#parametros-alternativos" title="Permalink to this headline">¶</a></h2>
+<p>Los siguientes son los parámetros alternativos que pueden ser definidos en las declaraciones:
+PackageManager, package-manager, packagemanager, pkgmgr, package-mgr.</p>
+</div>
+<div class="section" id="paquete-a-instalar">
+<h2>Paquete a instalar<a class="headerlink" href="#paquete-a-instalar" title="Permalink to this headline">¶</a></h2>
+<p>Instalación incluye la instalación de PackageManager requerida para hacer la instalación en una versión actualizada. Es un proceso de manifiesto para instalar módulo PackageManager bajo ptconfigure. PackageManager sólo por el uso de la orden dada a continuación,</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure PackageManager Install
+</pre></div>
+</div>
+<p>Después de vitalizar el comando se catequizar entrada.</p>
+<p>Cuando la entrada de usuario como si automáticamente se instalará PackageManager con la comprobación del sistema. Si no salir de la instalación. La siguiente captura de pantalla de demostrar PackageManager y sus funciones.</p>
+<div class="highlight-bash"><div class="highlight"><pre>
+</pre></div>
+</div>
+</div>
+<div class="section" id="pkg-garantizar">
+<h2>Pkg-garantizar<a class="headerlink" href="#pkg-garantizar" title="Permalink to this headline">¶</a></h2>
+<p>Garantizar Pkg un sistema de servicio se está ejecutando. En caso de no correr empezar en otro no intente. A través de este comando el usuario puede identificar si el sistema está funcionando o inactivo. Comandos simples son fáciles de manejar. El siguiente comando utiliza para asegurar a través del gestor de paquetes.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure PackageManager ensure
+</pre></div>
+</div>
+</div>
+<div class="section" id="pkg-remove">
+<h2>Pkg-remove<a class="headerlink" href="#pkg-remove" title="Permalink to this headline">¶</a></h2>
+<p>Pkg comando utilizado para eliminar un paquete de administrador de paquetes quitar. El gestor de paquetes comprueba en primer lugar el paquete para eliminarlas de su gestor de paquetes. Luego se pide confirmación. A continuación, utilice la opción Eliminar.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure PackageManager remove
+</pre></div>
+</div>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Sensitibilidad caso.</li>
+<li>Well-to-do en Ubuntu y CentOS.</li>
+<li>Retire el paquete es posible</li>
+<li>Envolver el gestor de paquetes</li>
+<li>Los comandos son fáciles de usar</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">PackageManager</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#comando-ayuda">comando Ayuda</a></li>
+<li><a class="reference internal" href="#parametros-alternativos">parámetros alternativos</a></li>
+<li><a class="reference internal" href="#paquete-a-instalar">Paquete a instalar</a></li>
+<li><a class="reference internal" href="#pkg-garantizar">Pkg-garantizar</a></li>
+<li><a class="reference internal" href="#pkg-remove">Pkg-remove</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="soracle.html"
+                        title="previous chapter">Oracle</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sparallax.html"
+                        title="next chapter">Parallax</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/spackagemanager.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="sparallax.html" title="Parallax"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="soracle.html" title="Oracle"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" >Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

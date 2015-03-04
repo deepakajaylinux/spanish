@@ -1,0 +1,294 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Python &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="Ptconfigure" href="sptconfigure_main.html" />
+    <link rel="next" title="Ra" href="sra.html" />
+    <link rel="prev" title="PTVirtualize" href="sptvirtualize.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="sra.html" title="Ra"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="sptvirtualize.html" title="PTVirtualize"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" accesskey="U">Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="python">
+<h1>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Python es un propósito general, el lenguaje de programación de alto nivel utilizado. Este módulo tiene como objetivo instalar la última versión del paquete python y sus dependencias.</p>
+</div>
+<div class="section" id="ayuda-comando">
+<h2>Ayuda Comando<a class="headerlink" href="#ayuda-comando" title="Permalink to this headline">¶</a></h2>
+<p>El comando de ayuda guía al usuario para proporcionar lo necesario para realizar la tarea. El comando para hacer uso de la ayuda debajo del terminal se da de la siguiente manera,</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure python <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La instantánea de abajo te da una representación pictórica de comando de ayuda y aparece dos parámetros como Python y Python. (Los parámetros son mayúsculas y minúsculas)</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure Python <span class="nb">help</span>
+******************************
+
+
+This <span class="nb">command </span>allows you to install the latest available Python in the Ubuntu
+repositories.
+
+Python, python
+
+- install
+ Installs the latest version of Python
+ example: ptconfigure python install
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="instalacion">
+<h2>instalación<a class="headerlink" href="#instalacion" title="Permalink to this headline">¶</a></h2>
+<p>El comando que se utiliza para la instalación de módulo de python se da a continuación,</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure python install
+</pre></div>
+</div>
+<p>La captura de pantalla para el comando anterior se enumeran a continuación,</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure python install
+
+Install Python? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+*******************************
+*        Pharaoh Tools        *
+*         !Python!!        *
+*******************************
+Reading package lists...
+Building dependency tree...
+Reading state information...
+ python is already the newest version.
+<span class="m">0</span> upgraded, <span class="m">0</span> newly installed, <span class="m">0</span> to remove and <span class="m">13</span> not upgraded.
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Package python from the Packager Apt is already installed, so not installing.
+dpkg: warning: parsing file <span class="s1">&#39;/var/lib/dpkg/available&#39;</span> near line <span class="m">47618</span> package <span class="s1">&#39;ptconfigure&#39;</span>:
+ missing maintainer
+dpkg: warning: parsing file <span class="s1">&#39;/var/lib/dpkg/available&#39;</span> near line <span class="m">47618</span> package <span class="s1">&#39;ptconfigure&#39;</span>:
+missing architecture
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+ docutils-common docutils-doc python-pygments python-roman
+Suggested packages:
+ texlive-latex-recommended texlive-latex-base texlive-lang-french
+ ttf-linux-libertine ttf-bitstream-vera
+The following NEW packages will be installed:
+ docutils-common docutils-doc python-docutils python-pygments python-roman
+<span class="m">0</span> upgraded, <span class="m">5</span> newly installed, <span class="m">0</span> to remove and <span class="m">13</span> not upgraded.
+Need to get 2,190 kB of archives.
+After this operation, 8,623 kB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu/ precise/main docutils-common all 0.8.1-4ubuntu1 <span class="o">[</span><span class="m">153</span> kB<span class="o">]</span>
+Get:2 http://us.archive.ubuntu.com/ubuntu/ precise/main docutils-doc all 0.8.1-4ubuntu1 <span class="o">[</span>1,289 kB<span class="o">]</span>
+Get:3 http://us.archive.ubuntu.com/ubuntu/ precise/main python-roman all 0.8.1-4ubuntu1 <span class="o">[</span>12.6 kB<span class="o">]</span>
+Get:4 http://us.archive.ubuntu.com/ubuntu/ precise/main python-docutils all 0.8.1-4ubuntu1 <span class="o">[</span><span class="m">382</span> kB<span class="o">]</span>
+Get:5 http://us.archive.ubuntu.com/ubuntu/ precise/main python-pygments all 1.4+dfsg-2 <span class="o">[</span><span class="m">353</span> kB<span class="o">]</span>
+Fetched 2,190 kB in 7s <span class="o">(</span><span class="m">277</span> kB/s<span class="o">)</span>
+Selecting previously unselected package docutils-common.
+<span class="o">(</span>Reading database ... <span class="m">254879</span> files and directories currently installed.<span class="o">)</span>
+Preparing to unpack .../docutils-common_0.8.1-4ubuntu1_all.deb ...
+Unpacking docutils-common <span class="o">(</span>0.8.1-4ubuntu1<span class="o">)</span> ...
+Selecting previously unselected package docutils-doc.
+Preparing to unpack .../docutils-doc_0.8.1-4ubuntu1_all.deb ...
+Unpacking docutils-doc <span class="o">(</span>0.8.1-4ubuntu1<span class="o">)</span> ...
+Selecting previously unselected package python-roman.
+Preparing to unpack .../python-roman_0.8.1-4ubuntu1_all.deb ...
+Unpacking python-roman <span class="o">(</span>0.8.1-4ubuntu1<span class="o">)</span> ...
+Selecting previously unselected package python-docutils.
+Preparing to unpack .../python-docutils_0.8.1-4ubuntu1_all.deb ...
+Unpacking python-docutils <span class="o">(</span>0.8.1-4ubuntu1<span class="o">)</span> ...
+Selecting previously unselected package python-pygments.
+Preparing to unpack .../python-pygments_1.4+dfsg-2_all.deb ...
+Unpacking python-pygments <span class="o">(</span>1.4+dfsg-2<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> man-db <span class="o">(</span>2.6.7.1-1ubuntu1<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> sgml-base <span class="o">(</span>1.26+nmu4ubuntu1<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> doc-base <span class="o">(</span>0.10.5<span class="o">)</span> ...
+Processing <span class="m">1</span> added doc-base file...
+Setting up docutils-common <span class="o">(</span>0.8.1-4ubuntu1<span class="o">)</span> ...
+update-catalog: Suppressing action on super catalog. Invoking trigger instead.
+Setting up docutils-doc <span class="o">(</span>0.8.1-4ubuntu1<span class="o">)</span> ...
+Setting up python-roman <span class="o">(</span>0.8.1-4ubuntu1<span class="o">)</span> ...
+Setting up python-pygments <span class="o">(</span>1.4+dfsg-2<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> sgml-base <span class="o">(</span>1.26+nmu4ubuntu1<span class="o">)</span> ...
+Setting up python-docutils <span class="o">(</span>0.8.1-4ubuntu1<span class="o">)</span> ...
+update-alternatives: using /usr/share/docutils/scripts/python2/rst-buildhtml to provide /usr/bin/rst-buildhtml <span class="o">(</span>rst-buildhtml<span class="o">)</span> in auto mode
+update-alternatives: using /usr/share/docutils/scripts/python2/rst2html to provide /usr/bin/rst2html <span class="o">(</span>rst2html<span class="o">)</span> in auto mode
+update-alternatives: using /usr/share/docutils/scripts/python2/rst2latex to provide /usr/bin/rst2latex <span class="o">(</span>rst2latex<span class="o">)</span> in auto mode
+update-alternatives: using /usr/share/docutils/scripts/python2/rst2man to provide /usr/bin/rst2man <span class="o">(</span>rst2man<span class="o">)</span> in auto mode
+update-alternatives: using /usr/share/docutils/scripts/python2/rst2odt to provide /usr/bin/rst2odt <span class="o">(</span>rst2odt<span class="o">)</span> in auto mode
+update-alternatives: using /usr/share/docutils/scripts/python2/rst2odt_prepstyles to provide /usr/bin/rst2odt_prepstyles <span class="o">(</span>rst2odt_prepstyles<span class="o">)</span> in auto mode
+update-alternatives: using /usr/share/docutils/scripts/python2/rst2pseudoxml to provide /usr/bin/rst2pseudoxml <span class="o">(</span>rst2pseudoxml<span class="o">)</span> in auto mode
+update-alternatives: using /usr/share/docutils/scripts/python2/rst2s5 to provide /usr/bin/rst2s5 <span class="o">(</span>rst2s5<span class="o">)</span> in auto mode
+update-alternatives: using /usr/share/docutils/scripts/python2/rst2xetex to provide /usr/bin/rst2xetex <span class="o">(</span>rst2xetex<span class="o">)</span> in auto mode
+update-alternatives: using /usr/share/docutils/scripts/python2/rst2xml to provide /usr/bin/rst2xml <span class="o">(</span>rst2xml<span class="o">)</span> in auto mode
+update-alternatives: using /usr/share/docutils/scripts/python2/rstpep2html to provide /usr/bin/rstpep2html <span class="o">(</span>rstpep2html<span class="o">)</span> in auto mode
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package python-docutils from the Packager Apt executed correctly
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+Python: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="opciones">
+<h2>Opciones<a class="headerlink" href="#opciones" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="20%" />
+<col width="28%" />
+<col width="10%" />
+<col width="43%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parámetros</th>
+<th class="head">Parámetro Alternativa</th>
+<th class="head">Opciones</th>
+<th class="head">Comentarios</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Install Python? (Y/N)</td>
+<td>Python, python</td>
+<td>Y(Yes)</td>
+<td>Si el usuario desea continuar el proceso de
+instalación se puede introducir como Y.</td>
+</tr>
+<tr class="row-odd"><td>Install Python? (Y/N)</td>
+<td>Python, python</td>
+<td>N(No)</td>
+<td>Si el usuario desea abandonar el proceso de
+instalación se puede introducir como N.|</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Pérdida de tiempo</li>
+<li>Uso La facilidad de acceso y la instalación</li>
+<li>La codificación es sensible a mayúsculas</li>
+<li>Fuente completo está disponible y no hay costos de licencia.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Python</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#ayuda-comando">Ayuda Comando</a></li>
+<li><a class="reference internal" href="#instalacion">instalación</a></li>
+<li><a class="reference internal" href="#opciones">Opciones</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="sptvirtualize.html"
+                        title="previous chapter">PTVirtualize</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sra.html"
+                        title="next chapter">Ra</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/spython.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="sra.html" title="Ra"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="sptvirtualize.html" title="PTVirtualize"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" >Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

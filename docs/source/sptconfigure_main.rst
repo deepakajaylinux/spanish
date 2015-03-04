@@ -609,5 +609,29 @@ Jugando con módulos PTConfigure
    snewrelic
    snginxserver
    snodejs
+   sopenoffice   
+   soracle
+   spackagemanager
+   sparallax
+   spear
+   specl
+   sphake
+   spharaohtools
+   sphpapc
+   sphpci
+   sphpcodebeautifier
+   sphpconf
+   sphpcs
+   sphpdox
+   sphpeclipse
+   sphpedit
+   sphpmodules
+   sport
+   spostgressserver
+   sprocess
    sptconfigure
    sptdeploy_cleo
+   sptvirtualize
+   spython
+   sra
+   sredis

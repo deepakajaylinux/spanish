@@ -1,0 +1,294 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>PHPAPC &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="Ptconfigure" href="sptconfigure_main.html" />
+    <link rel="next" title="Phpci" href="sphpci.html" />
+    <link rel="prev" title="PharaohTools" href="spharaohtools.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="sphpci.html" title="Phpci"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="spharaohtools.html" title="PharaohTools"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" accesskey="U">Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="phpapc">
+<h1>PHPAPC<a class="headerlink" href="#phpapc" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Este módulo tiene como objetivo instalar el PHP APC a la máquina de los usuarios de todas las maneras posibles.</p>
+<p>APC es uno de los mecanismo de caché más popular para código de operación de almacenamiento en caché de PHP. Una vez activado, se inicia el almacenamiento en caché códigos PHP automáticamente. También funciona muy bien con W3 Total Cache plugin para almacenar objetos y MySQL cachés.</p>
+<p>Los temas que serán las próximas guías su totalidad en todos los aspectos que intervienen en la instalación del PHP APC.</p>
+</div>
+<div class="section" id="ayuda-comando">
+<h2>Ayuda Comando<a class="headerlink" href="#ayuda-comando" title="Permalink to this headline">¶</a></h2>
+<p>El comando help guía a los usuarios en cuanto a la finalidad y al igual que sobre las opciones que se incluyen en el módulo PHP APC. En él se enumeran los parámetros alternativos de módulo PHP APC. También describe la sintaxis para instalar el módulo PHP APC. El comando de ayuda para el módulo PHP APC se muestra a continuación.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure PHPAPC <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La sintaxis para declarar el comando de ayuda no es sensible a mayúsculas, que es una ventaja añadida. La siguiente captura de pantalla a visualizar sobre el comando de ayuda bajo PHP APC.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure PHPAPC <span class="nb">help</span>
+
+******************************
+
+
+ This <span class="nb">command </span>allows you to install some common and helpful PHP APC.
+
+ PHPAPC, php-apc, phpapc, phpapc
+
+       - install
+       Install PHP APC.
+       example: ptconfigure phpapc install
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="instalacion">
+<h2>instalación<a class="headerlink" href="#instalacion" title="Permalink to this headline">¶</a></h2>
+<p>El comando utilizado para instalar el PHP APC en la máquina de los usuarios se muestra a continuación:</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure phpapc install
+</pre></div>
+</div>
+<p>Después de introducir el comando anterior, el siguiente proceso se produce como se muestra en el formato tabular.</p>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="20%" />
+<col width="35%" />
+<col width="10%" />
+<col width="35%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parámetros</th>
+<th class="head">Parámetro Alternativa</th>
+<th class="head">Opciones</th>
+<th class="head">Comentarios</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Install PHP APC? (Y/N)</td>
+<td>En lugar de phpapc, podemos utilizar
+PHPAPC, php-apc</td>
+<td>Y(Yes)</td>
+<td>Si el usuario desea continuar el proceso de
+instalación se puede introducir como Y.</td>
+</tr>
+<tr class="row-odd"><td>Install PHP APC? (Y/N)</td>
+<td>En lugar de phpapc, podemos utilizar
+PHPAPC, php-apc</td>
+<td>N(No)</td>
+<td>Si el usuario desea abandonar el proceso de
+instalación se puede introducir como N.|</td>
+</tr>
+</tbody>
+</table>
+<p>Si el usuario procede de la instalación, durante el proceso de instalación se describe en las listas siguientes:</p>
+<ul class="simple">
+<li>Lee las listas de paquetes.</li>
+<li>Construye el árbol de dependencias.</li>
+<li>Lee la información de estado.</li>
+<li>Lista outs los paquetes que se instalan automáticamente.</li>
+<li>Lista outs el paquete adicional que está instalando.</li>
+<li>Lista outs los paquetes sugeridos.</li>
+<li>Lista outs los nuevos paquetes que está instalando.</li>
+<li>Los detalles sobre el número de archivos actualizados, recién instalados, retirados y no actualizados.</li>
+</ul>
+<p>Finalmente, el proceso de instalación se completó. La siguiente captura de pantalla representar visualmente el proceso de instalación del PHP APC.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure phpapc install
+
+Install PHP APC? <span class="o">(</span>Y/N<span class="o">)</span>
+Y
+*******************************
+*        Pharaoh Tools        *
+*         PHP APC!        *
+*******************************
+E: Could not get lock /var/cache/apt/archives/lock - open <span class="o">(</span>11: Resource temporarily unavailable<span class="o">)</span>
+E: Unable to lock directory /var/cache/apt/archives/
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following packages were automatically installed and are no longer required:
+ gyp libc-ares-dev libc-ares2 libjs-node-uuid libv8-3.14-dev
+ linux-headers-3.13.0-32 linux-headers-3.13.0-32-generic
+ linux-image-3.13.0-32-generic linux-image-extra-3.13.0-32-generic
+ node-abbrev node-ansi node-archy node-async node-block-stream
+ node-combined-stream node-cookie-jar node-delayed-stream node-forever-agent
+ node-form-data node-fstream node-fstream-ignore node-github-url-from-git
+ node-glob node-graceful-fs node-gyp node-inherits node-ini
+ node-json-stringify-safe node-lockfile node-lru-cache node-mime
+ node-minimatch node-mkdirp node-mute-stream node-node-uuid node-nopt
+ node-normalize-package-data node-npmlog node-once node-osenv node-qs
+ node-read node-read-package-json node-request node-retry node-rimraf
+ node-semver node-sha node-sigmund node-slide node-tar node-tunnel-agent
+ node-which nodejs nodejs-dev ttf-dejavu-core
+Use <span class="s1">&#39;apt-get autoremove&#39;</span> to remove them.
+The following extra packages will be installed:
+ php5-apcu
+The following packages will be REMOVED:
+ php5-xcache
+The following NEW packages will be installed:
+ php-apc php5-apcu
+<span class="m">0</span> upgraded, <span class="m">2</span> newly installed, <span class="m">1</span> to remove and <span class="m">78</span> not upgraded.
+<span class="m">9</span> not fully installed or removed.
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package php-apc from the Packager Apt did not execute correctly
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+PHPAPC: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="funciones-de-apc">
+<h2>Funciones de APC<a class="headerlink" href="#funciones-de-apc" title="Permalink to this headline">¶</a></h2>
+<p>Esta sub temas se ocupa de las funciones más usadas bajo APC. Mientras trabajaba con Php APC el usuario puede hacer referencia a estas funciones de APC.</p>
+<ul class="simple">
+<li>Apc_add -cache una nueva variable en el almacén de datos</li>
+<li>Apc_bin_dump -Obtener una copia binaria de los archivos dados y variables de usuario</li>
+<li>Apc_bin_dumpfile -Salida una copia binaria de los archivos almacenados en caché y las variables de usuario en un archivo</li>
+<li>Apc_bin_load -load un volcado binario en la caché de archivos APC / usuario</li>
+<li>Apc_bin_loadfile -Carga un volcado binario de un archivo en la memoria caché de archivos APC / usuario</li>
+<li>Apc_cache_info -Retrieves información almacenada en caché del almacén de datos de APC</li>
+<li>Apc_cas -Actualizaciones un valor antiguo con un nuevo valor</li>
+<li>Apc_clear_cache -Clears la caché de APC</li>
+<li>Apc_compile_file -tiendas un archivo en la memoria caché de código de bytes, por encima de todos los filtros.</li>
+<li>Apc_dec -Disminución un número almacenado</li>
+<li>apc_define_constants: define un conjunto de constantes para la recuperación y la masa definición</li>
+<li>Apc_delete_file: elimina los archivos de la caché de código de operación</li>
+<li>Apc_delete: se toma una variable almacenada en el caché</li>
+<li>Apc_exists para comprobar que las clave existe APC</li>
+<li>Apc_fetch -Fetch una variable almacenada en la caché</li>
+<li>Apc_inc -Aumentar un número almacenado</li>
+<li>apc_load_constants -Loads un conjunto de constantes de la caché</li>
+<li>La información de asignación de memoria compartida de apc_sma_info -Retrieves APC</li>
+<li>Apc_store -cache una variable en el almacén de datos</li>
+</ul>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Los parámetros utilizados en la ayuda y la instalación no son sensibles, que es una ventaja añadida, mientras que en comparación con otros.</li>
+<li>Es-acomodados tanto en Ubuntu y así como Cent OS.</li>
+<li>Este módulo se instala el apc php en la versión actualizada.</li>
+<li>Si el módulo ya existe en la máquina del usuario, se mostrará un mensaje, ya que ya existe.</li>
+<li>APC viene con archivo llamado apc.php, que proporciona una sencilla interfaz basada en web.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">PHPAPC</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#ayuda-comando">Ayuda Comando</a></li>
+<li><a class="reference internal" href="#instalacion">instalación</a></li>
+<li><a class="reference internal" href="#funciones-de-apc">Funciones de APC</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="spharaohtools.html"
+                        title="previous chapter">PharaohTools</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sphpci.html"
+                        title="next chapter">Phpci</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/sphpapc.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="sphpci.html" title="Phpci"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="spharaohtools.html" title="PharaohTools"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" >Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

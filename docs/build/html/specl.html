@@ -1,0 +1,287 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>PECL &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="Ptconfigure" href="sptconfigure_main.html" />
+    <link rel="next" title="Phake" href="sphake.html" />
+    <link rel="prev" title="Pear" href="spear.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="sphake.html" title="Phake"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="spear.html" title="Pear"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" accesskey="U">Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="pecl">
+<h1>PECL<a class="headerlink" href="#pecl" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>PECL significa para &#8220;Emisor lógica positiva Acoplado&#8221;. Pecl son salidas lógicas diferenciales comúnmente utilizados en los circuitos de distribución de reloj de alta velocidad. Este comando proporciona al usuario crear, eliminar, setpassward, existe. Las actividades de grupo también posible a través de este comando. Esta función de control principal se basa en el sistema. Es adecuado con Ubuntu y CentOS.</p>
+</div>
+<div class="section" id="comando-ayuda">
+<h2>comando Ayuda<a class="headerlink" href="#comando-ayuda" title="Permalink to this headline">¶</a></h2>
+<p>Pecl hace que el desarrollo conjunto de una brisa: trabaja con existir, modificar, crear, para apoyar el conjunto passward para pecl sistema. Con pecl, modificar un paquete llega a ser tan fácil que será el diseño predeterminado de usuario cada vez que el usuario está escribiendo una cantidad significativa de código.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure pecl <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La siguiente captura de pantalla y explica su función.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure PECL <span class="nb">help</span>
+
+******************************
+
+
+ This <span class="nb">command </span>allows you to modify create or modify pecls
+
+ PECL, pecl
+
+       - create
+       Create a new system pecl, overwriting <span class="k">if</span> it exists
+       example: ptconfigure pecl create --peclname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+
+       - remove
+       Remove a system pecl
+       example: ptconfigure pecl remove --peclname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+
+       - <span class="nb">set</span>-password
+       Set the password of a system pecl
+       example: ptconfigure pecl <span class="nb">set</span>-password --peclname<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --new-password<span class="o">=</span><span class="s2">&quot;somepassword&quot;</span>
+
+       - exists
+       Check the existence of a pecl
+       example: ptconfigure pecl exists --peclname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+
+       - show-groups
+       Show groups to which a pecl belongs
+       example: ptconfigure pecl show-groups --peclname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+
+       - add-to-group
+       Add pecl to a group
+       example: ptconfigure pecl add-to-group --peclname<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --groupname<span class="o">=</span><span class="s2">&quot;somegroupname&quot;</span>
+
+       - remove-from-group
+       Remove pecl from a group
+       example: ptconfigure pecl remove-from-group --peclname<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --groupname<span class="o">=</span><span class="s2">&quot;somegroupname&quot;</span>
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="crear">
+<h2>crear<a class="headerlink" href="#crear" title="Permalink to this headline">¶</a></h2>
+<p>Este comando permite al usuario crear un nuevo pecl sistema. Overwriting es posible en caso de la existencia. Nuevo nombre pecl puede ser mencionado en un solo comando en sí.</p>
+<p>El comando utilizado para crear es el siguiente</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure pecl create
+</pre></div>
+</div>
+<p>Después de la entrada como el comando anterior, comienza a crear pecl. En caso de archivo existente aparece la indicación de mensaje. El comando y su función se explica con las capturas de pantalla.</p>
+<div class="highlight-bash"><div class="highlight"><pre>- create
+Create a new system pecl, overwriting <span class="k">if</span> it exists
+example: ptconfigure pecl create --peclname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="quitar">
+<h2>quitar<a class="headerlink" href="#quitar" title="Permalink to this headline">¶</a></h2>
+<p>Este comando permite al usuario eliminar una pecl. Nombre pecl extraíble puede ser mencionado en una sola línea de comandos.
+El comando utilizado para crear es el siguiente</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure pecl remove
+</pre></div>
+</div>
+<p>Después de la entrada como el comando anterior, comienza a retirar pecl. En el caso de archivos ya eliminados de la pecl aparece la indicación de mensaje. El comando y su función se explica con las capturas de pantalla.</p>
+<div class="highlight-bash"><div class="highlight"><pre>- remove
+Remove a system pecl
+example: ptconfigure pecl remove --peclname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="establecer-contrasena">
+<h2>Establecer contraseña<a class="headerlink" href="#establecer-contrasena" title="Permalink to this headline">¶</a></h2>
+<p>Setpassward se utiliza para ejecutar un comando en particular con permisos de root en pecl. Lo interesante es que cuando el usuario usa passward de un comando en particular, el sistema solicita al usuario la contraseña del usuario actual. El comando utilizado para crear es el siguiente</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure pecl  <span class="nb">set</span>-password
+</pre></div>
+</div>
+<p>Nombre Pecl y nueva passward también mencionan en la misma línea de comandos. Esto hace que otro beneficio para este módulo. La siguiente captura de pantalla de visualización de sus funciones.</p>
+<div class="highlight-bash"><div class="highlight"><pre>- <span class="nb">set</span>-password
+Set the password of a system pecl
+example: ptconfigure pecl <span class="nb">set</span>-password --peclname<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --new-password<span class="o">=</span><span class="s2">&quot;somepassword&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="existe">
+<h2>existe<a class="headerlink" href="#existe" title="Permalink to this headline">¶</a></h2>
+<p>Este comando sirve para comprobar la existencia de un pecl. Comando simple que hace que este trabajo de comando correctamente. En primer lugar se comprueba nombre pecl en el sistema, entonces indica si está vigente o no. El siguiente comando usa para hacer esta función</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure pecl Exists
+</pre></div>
+</div>
+<p>La siguiente captura de pantalla de visualización de sus funciones.</p>
+<div class="highlight-bash"><div class="highlight"><pre>- exists
+Check the existence of a pecl
+example: ptconfigure pecl exists --peclname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="show-grupo">
+<h2>Show-Grupo<a class="headerlink" href="#show-grupo" title="Permalink to this headline">¶</a></h2>
+<p>Este comando sirve para comprobar el grupo de trabajo de un pecl. Comando simple que hace que este trabajo de comando correctamente. En primer lugar, comprueba el nombre del grupo y luego pecl nombre en el sistema entonces indica el nombre del grupo al que pertenece un pecl. El siguiente comando usa para hacer esta función.</p>
+<div class="highlight-bash"><div class="highlight"><pre>- show-groups
+Show groups to which a pecl belongs
+example: ptconfigure pecl show-groups --peclname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="add-to-grupos">
+<h2>Add-To-Grupos<a class="headerlink" href="#add-to-grupos" title="Permalink to this headline">¶</a></h2>
+<p>Esto facilita al usuario añadir un pecl a un grupo. Mientras que la adición de lo posible pide nombre pecl y nombre del grupo. El usuario puede entrar en el acuerdo a su deseo.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure pecl add-to-group
+</pre></div>
+</div>
+<p>Después de introducir el comando que añadir un pecl en grupo.</p>
+<div class="highlight-bash"><div class="highlight"><pre>- add-to-group
+Add pecl to a group
+example: ptconfigure pecl add-to-group --peclname<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --groupname<span class="o">=</span><span class="s2">&quot;somegroupname&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="remove-de-grupo">
+<h2>Remove-de-grupo<a class="headerlink" href="#remove-de-grupo" title="Permalink to this headline">¶</a></h2>
+<p>Este comando permite al usuario eliminar una pecl del grupo. Nombre pecl extraíble puede ser mencionado en una sola línea de comandos.
+El comando utilizado para crear es el siguiente</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure pecl remove-from-group
+</pre></div>
+</div>
+<p>Después de la entrada como el comando anterior, comienza a retirar pecl de grupo. En el caso de archivos ya eliminados de la pecl aparece la indicación de mensaje. El comando y su función se explica con las capturas de pantalla.</p>
+<div class="highlight-bash"><div class="highlight"><pre>- remove-from-group
+Remove pecl from a group
+example: ptconfigure pecl remove-from-group --peclname<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --groupname<span class="o">=</span><span class="s2">&quot;somegroupname&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Sensitibilidad caso.</li>
+<li>Well-to-do en Ubuntu y CentOS.</li>
+<li>Menor consumo de energía.</li>
+<li>Crear un nuevo pecl sistema</li>
+<li>Retirar un pecl</li>
+<li>Añadir a grupo es posible</li>
+<li>Retire el grupo es posible</li>
+<li>Mostrar grupo es posible</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">PECL</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#comando-ayuda">comando Ayuda</a></li>
+<li><a class="reference internal" href="#crear">crear</a></li>
+<li><a class="reference internal" href="#quitar">quitar</a></li>
+<li><a class="reference internal" href="#establecer-contrasena">Establecer contraseña</a></li>
+<li><a class="reference internal" href="#existe">existe</a></li>
+<li><a class="reference internal" href="#show-grupo">Show-Grupo</a></li>
+<li><a class="reference internal" href="#add-to-grupos">Add-To-Grupos</a></li>
+<li><a class="reference internal" href="#remove-de-grupo">Remove-de-grupo</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="spear.html"
+                        title="previous chapter">Pear</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sphake.html"
+                        title="next chapter">Phake</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/specl.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="sphake.html" title="Phake"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="spear.html" title="Pear"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" >Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

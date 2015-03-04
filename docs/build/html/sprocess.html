@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Process &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="Ptconfigure" href="sptconfigure_main.html" />
+    <link rel="next" title="PTConfigure" href="sptconfigure.html" />
+    <link rel="prev" title="PostgresServer" href="spostgressserver.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="sptconfigure.html" title="PTConfigure"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="spostgressserver.html" title="PostgresServer"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" accesskey="U">Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="process">
+<h1>Process<a class="headerlink" href="#process" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Este módulo ayuda a los usuarios en el manejo de unas funciones de proceso requeridos, y también para matar un proceso. El usuario puede especificar el proceso en particular sobre la base de sus requisitos. El usuario puede especificar el nombre del proceso, el archivo o directorio, ya sea desde el ámbito local o en un equipo remoto. Veamos, el uso y las metodologías que participan en ella.</p>
+</div>
+<div class="section" id="ayuda-comando">
+<h2>Ayuda Comando<a class="headerlink" href="#ayuda-comando" title="Permalink to this headline">¶</a></h2>
+<p>El comando de ayuda sirve a los usuarios respecto a cómo manejar y trabajar con procesos de acuerdo a sus necesidades. También enumera los parámetros alternativos de proceso. Se describe la sintaxis para matar un proceso, y también acerca de cómo especificar matar a un proceso sobre la base de sus necesidades. El comando de ayuda para el módulo de proceso se muestra a continuación.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure process <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La siguiente captura de pantalla como se muestra a continuación, muestra cómo matar un proceso, y cómo definir matar a un proceso.</p>
+</div>
+<div class="section" id="como-definir-y-utilizar-el-proceso">
+<h2>¿Cómo definir y utilizar el proceso<a class="headerlink" href="#como-definir-y-utilizar-el-proceso" title="Permalink to this headline">¶</a></h2>
+<p>Para matar a un proceso de la siguiente sintaxis se puede utilizar.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure process <span class="nb">kill</span>
+</pre></div>
+</div>
+<p>or
+.. code-block:: bash</p>
+<blockquote>
+<div>ptconfigure process kill &#8211;yes &#8211;name=&#8221;selenium&#8221; &#8211;use-psax # default</div></blockquote>
+<p>La sintaxis que se muestra arriba voluntad busca la cadena en consecuencia de.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure process <span class="nb">kill</span> --yes --name<span class="o">=</span><span class="s2">&quot;selenium&quot;</span> --use-pkill <span class="c">#</span>
+</pre></div>
+</div>
+<p>La sintaxis que se muestra arriba se utiliza para especificar o buscar una cadena que se va a morir.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure process <span class="nb">kill</span> --yes
+                --guess
+                <span class="nv">id</span><span class="o">=</span><span class="s2">&quot;1234 #</span>
+</pre></div>
+</div>
+<p>El comando como se muestra arriba voluntad mata a un proceso como por el id indicado.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure process <span class="nb">kill</span> --yes
+        --level <span class="c">#</span>
+</pre></div>
+</div>
+<p>El comando que arriba se utiliza para matar un proceso como por el nivel especificado.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure process <span class="nb">kill</span> --yes --guess --name<span class="o">=</span><span class="s2">&quot;skype&quot;</span>
+</pre></div>
+</div>
+<p>El comando que arriba se utiliza para matar un proceso especificando su nombre. La siguiente captura de pantalla muestra el trabajo de matar a un proceso.</p>
+</div>
+<div class="section" id="matar-a-un-proceso-utilizando-un-pid">
+<h2>Matar a un proceso utilizando un PID<a class="headerlink" href="#matar-a-un-proceso-utilizando-un-pid" title="Permalink to this headline">¶</a></h2>
+<p>Si el PID # 3486 se asigna al proceso lighttpd. Para matar el servidor lighttpd, necesita pasar un PID de la siguiente manera:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="c"># kill 3486</span>
+</pre></div>
+</div>
+<p>or
+.. code-block:: bash</p>
+<blockquote>
+<div>$ sudo kill 3486</div></blockquote>
+<p>Esto terminar un proceso con un PID de 3486.</p>
+</div>
+<div class="section" id="como-puedo-verificar-que-el-proceso-se-ha-ido-mato">
+<h2>¿Cómo puedo verificar que el proceso se ha ido / mató?<a class="headerlink" href="#como-puedo-verificar-que-el-proceso-se-ha-ido-mato" title="Permalink to this headline">¶</a></h2>
+<p>Utilice el comando pidof ps o:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>ps aux <span class="p">|</span> grep lighttpd
+<span class="nv">$ </span>pidof lighttpd
+</pre></div>
+</div>
+</div>
+<div class="section" id="como-puedo-matar-a-dos-o-mas-pid">
+<h2>¿Cómo puedo matar a dos o más PID?<a class="headerlink" href="#como-puedo-matar-a-dos-o-mas-pid" title="Permalink to this headline">¶</a></h2>
+<p>La sintaxis es la siguiente para matar a dos o más los PID como lo requiere se puede utilizar en un solo comando:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nb">kill  </span>pid1 pid2 pid3
+<span class="nb">kill</span> -15  pid1 pid2 pid3
+<span class="nb">kill</span> -9  pid1 pid2 pid3
+<span class="nb">kill</span>  -9 <span class="m">3546</span> <span class="m">5557</span> 4242
+</pre></div>
+</div>
+</div>
+<div class="section" id="saluda-a-matar-a-todos-los-comandos">
+<h2>Saluda a matar a todos los comandos<a class="headerlink" href="#saluda-a-matar-a-todos-los-comandos" title="Permalink to this headline">¶</a></h2>
+<p>Se trata de un único comando Linux. para matar procesos por nombre. Así que no hay necesidad de encontrar los PID utilizando el &#8216;proceso pidof &#8220;o&#8221; ps aux | grep proceso&#8217; comando. No utilice killall comandos en sistemas operativos Unix. Se trata de un comando específico Linux.</p>
+<p>La sintaxis es</p>
+<div class="highlight-bash"><div class="highlight"><pre>killall Process-Name-Here
+</pre></div>
+</div>
+<p>Para matar el servidor lighttpd, escriba:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="c"># killall -15 lighttpd</span>
+</pre></div>
+</div>
+<p>or
+.. code-block:: bash</p>
+<blockquote>
+<div># killall -9 lighttpd</div></blockquote>
+<p>Para matar el proceso navegador web Firefox, escriba:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="c"># killall -9 firefox-bin</span>
+</pre></div>
+</div>
+<p>Como he dicho antes, el comando en todo sistema UNIX matan Qué otra cosa. Mata a todos los procesos y proceso no sólo una parte. No utilice matar a todos en el sistema UNIX.</p>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>El usuario puede matar a un proceso con diferentes parámetros de acuerdo a sus requerimientos. Por ejemplo: a través de la identificación, nivel del proceso se puede especificar para matar.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Process</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#ayuda-comando">Ayuda Comando</a></li>
+<li><a class="reference internal" href="#como-definir-y-utilizar-el-proceso">¿Cómo definir y utilizar el proceso</a></li>
+<li><a class="reference internal" href="#matar-a-un-proceso-utilizando-un-pid">Matar a un proceso utilizando un PID</a></li>
+<li><a class="reference internal" href="#como-puedo-verificar-que-el-proceso-se-ha-ido-mato">¿Cómo puedo verificar que el proceso se ha ido / mató?</a></li>
+<li><a class="reference internal" href="#como-puedo-matar-a-dos-o-mas-pid">¿Cómo puedo matar a dos o más PID?</a></li>
+<li><a class="reference internal" href="#saluda-a-matar-a-todos-los-comandos">Saluda a matar a todos los comandos</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="spostgressserver.html"
+                        title="previous chapter">PostgresServer</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sptconfigure.html"
+                        title="next chapter">PTConfigure</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/sprocess.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="sptconfigure.html" title="PTConfigure"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="spostgressserver.html" title="PostgresServer"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" >Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

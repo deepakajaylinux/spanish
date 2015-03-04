@@ -1,0 +1,290 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Parallax &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="Ptconfigure" href="sptconfigure_main.html" />
+    <link rel="next" title="Pear" href="spear.html" />
+    <link rel="prev" title="PackageManager" href="spackagemanager.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="spear.html" title="Pear"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="spackagemanager.html" title="PackageManager"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" accesskey="U">Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="parallax">
+<h1>Parallax<a class="headerlink" href="#parallax" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>El paralaje promueve las funciones multitarea en la máquina de los usuarios. Los parámetros que definen la instalación y ayuda no son sensibles, mientras que en comparación con otros. Es más fácil para definir la función multitarea ya sea en el momento de la instalación o en el momento de ejecutar el proceso de instalación.</p>
+</div>
+<div class="section" id="ayuda-comando">
+<h2>Ayuda Comando<a class="headerlink" href="#ayuda-comando" title="Permalink to this headline">¶</a></h2>
+<p>El comando de ayuda guía al usuario en el trabajo con este paralaje. También especifica el comando que se utiliza para la instalación de la paralaje y también la sintaxis para dos tipos de declarar instalación. El comando de ayuda también enumera los parámetros alternativos que se pueden utilizar. El comando utilizado para la opción de ayuda bajo el paralaje es la siguiente.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure parallax <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La visualización de los resultados después de la entrada de comando de ayuda se representa en la siguiente imagen.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure Parallax help
+******************************
+
+
+
+This Module lets you execute commands in parallel
+
+Parallax, parallax
+
+- cli
+Go through all questions to execute parallel programs
+example: ptconfigure parallax cli
+example: ptconfigure parallax cli --yes --command-1=&quot;pwd&quot; --command-2=&quot;ls&quot;
+
+- child
+Unlikely you&#39;ll use this, its used by cli to spawn child processes
+example: parallax cli child
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="instalacion">
+<h2>instalación<a class="headerlink" href="#instalacion" title="Permalink to this headline">¶</a></h2>
+<p>Es más fácil ir con paralaje para la instalación como instalación se puede definir de dos maneras diferentes según las necesidades de los usuarios. Estas dos formas se definen como a continuación:</p>
+<ul class="simple">
+<li>Al mencionar los tipos de múltiples tareas que se requieren al definir el mandato de instalación.</li>
+<li>O, al mencionar los tipos de tareas durante la ejecución (tiempo de ejecución) de la instalación.</li>
+</ul>
+<p>El comando que se utiliza para especificar las múltiples tareas en el momento del comando de instalación declarar se muestra a continuación:</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure parallax cli --yes --command-1<span class="o">=</span><span class="s2">&quot;pwd&quot;</span> --command-2<span class="o">=</span><span class="s2">&quot;who&quot;</span>
+</pre></div>
+</div>
+<p>Después de mencionar este comando, el paralaje ejecuta tanto de las funciones especificadas anteriormente al mando-1 y comando-2. Las dos tareas se realizan en paralelo y se visualizan resultado. La captura de pantalla adjunta a continuación es un ejemplo muy bueno para el tipo de declaración se ha definido anteriormente.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure parallax cli --yes --command-1<span class="o">=</span><span class="s2">&quot;pwd&quot;</span> --command-2<span class="o">=</span><span class="s2">&quot;who&quot;</span>
+Completed task: <span class="nb">pwd</span>
+Completed task: who
+******************************
+
+
+COMMAND: <span class="nb">pwd</span>
+COMPLETE: 1
+EXIT_STATUS: 0
+OUTPUT: /home/kevells
+
+
+COMMAND: who
+COMPLETE: 1
+EXIT_STATUS: 0
+OUTPUT: kevells   :0           2015-01-08 12:15 <span class="o">(</span>:0<span class="o">)</span>
+kevells   pts/2        2015-01-08 14:11 <span class="o">(</span>:0<span class="o">)</span>
+kevells   pts/1        2015-01-08 16:36 <span class="o">(</span>:0<span class="o">)</span>
+kevells   pts/10       2015-01-08 16:36 <span class="o">(</span>:0<span class="o">)</span>
+
+
+
+-----------------
+
+In Cli
+
+
+******************************
+</pre></div>
+</div>
+<p>El comando utilizado para declarar las tareas múltiples en tiempo de ejecución se muestra a continuación:</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure parallax cli
+</pre></div>
+</div>
+<p>Después de introducir el comando anterior se produce el siguiente proceso:</p>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="19%" />
+<col width="37%" />
+<col width="10%" />
+<col width="34%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parámetros</th>
+<th class="head">Parámetro Alternativa</th>
+<th class="head">Opciones</th>
+<th class="head">Comentarios</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Run Commands in
+Parallel? (Y/N)</td>
+<td>A pesar de parallax, las siguientes alternativas
+también se pueden utilizar., Parallax</td>
+<td>Y(Yes)</td>
+<td>Si el usuario desea continuar el proceso de
+instalación se puede introducir como Y.</td>
+</tr>
+<tr class="row-odd"><td>Run Commands in
+Parallel? (Y/N)</td>
+<td>A pesar de parallax, las siguientes alternativas
+también se pueden utilizar., Parallax</td>
+<td>N(No)</td>
+<td>Si el usuario desea abandonar el proceso de
+instalación se puede introducir como N.|</td>
+</tr>
+</tbody>
+</table>
+<p>Si el usuario desea continuar la instalación, el usuario puede especificar las múltiples tareas según sus necesidades. Tras la finalización de la especificación de las múltiples tareas, si los usuarios desean dejar que pueden detener con sólo introducir ninguna.</p>
+<p>Por último, los resultados de las tareas realizadas, junto con su estado se definen al final. Las siguientes capturas de pantalla que puede una representación gráfica sobre el proceso antes mencionado.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure parallax cli
+
+Run Commands in Parallel? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+Enter Command to include next. Enter none to end.
+<span class="nb">pwd</span>
+Enter Command to include next. Enter none to end.
+who
+Enter Command to include next. Enter none to end.
+
+Completed task: <span class="nb">pwd</span>
+Completed task: who
+******************************
+
+
+COMMAND: <span class="nb">pwd</span>
+COMPLETE: 1
+EXIT_STATUS: 0
+OUTPUT: /home/kevells
+
+
+COMMAND: who
+COMPLETE: 1
+EXIT_STATUS: 0
+OUTPUT: kevells   :0           2015-01-08 12:15 <span class="o">(</span>:0<span class="o">)</span>
+kevells   pts/2        2015-01-08 14:11 <span class="o">(</span>:0<span class="o">)</span>
+kevells   pts/1        2015-01-08 16:36 <span class="o">(</span>:0<span class="o">)</span>
+kevells   pts/10       2015-01-08 16:36 <span class="o">(</span>:0<span class="o">)</span>
+
+
+
+-----------------
+
+In Cli
+
+
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>El usuario puede definir las tareas en paralelo, ya sea en tiempo de ejecución o en un modo predefinido según sus necesidades.</li>
+<li>Por último, tras la finalización de las multi-tareas de los resultados y el estado de las tareas completadas se informan con claridad.</li>
+<li>La sintaxis utilizada para declarar no distingue entre mayúsculas y minúsculas al comparar a los demás lo que es una ventaja añadida.</li>
+<li>Es-acomodados tanto en CentOS y así como mayúsculas y minúsculas.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Parallax</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#ayuda-comando">Ayuda Comando</a></li>
+<li><a class="reference internal" href="#instalacion">instalación</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="spackagemanager.html"
+                        title="previous chapter">PackageManager</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="spear.html"
+                        title="next chapter">Pear</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/sparallax.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="spear.html" title="Pear"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="spackagemanager.html" title="PackageManager"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" >Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

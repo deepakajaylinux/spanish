@@ -1,0 +1,246 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Phake &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="Ptconfigure" href="sptconfigure_main.html" />
+    <link rel="next" title="PharaohTools" href="spharaohtools.html" />
+    <link rel="prev" title="PECL" href="specl.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="spharaohtools.html" title="PharaohTools"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="specl.html" title="PECL"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" accesskey="U">Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="phake">
+<h1>Phake<a class="headerlink" href="#phake" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Phake es un marco de burla para PHP. Permite la creación de objetos que imitan a un objeto real de una manera predecible y controlada. Esto le permite tratar las llamadas a métodos externos realizados por el sistema bajo prueba (SUT) como otra forma de entrada a tu SUT y salida de su SUT. Esto se hace por métodos que suministran entrada indirecta en su prueba de tropezar y mediante la verificación de los parámetros a los métodos que reciben salida indirecta de la prueba.</p>
+</div>
+<div class="section" id="ayuda-comando">
+<h2>Ayuda Comando<a class="headerlink" href="#ayuda-comando" title="Permalink to this headline">¶</a></h2>
+<p>Este comando ayuda a determinar el uso del módulo Phake. El usuario se llega a saber acerca de las diferentes formas / formato para ejecutar este módulo. Este comando guía al usuario final a conocer el propósito de este comando. A continuación dado son el mando y la pantalla del mismo.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure Phake <span class="nb">help</span>
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure Phake <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>allows you to install or update Phake.
+
+ Phake, phake
+
+       - install
+       Installs the latest version of phake
+       example: ptconfigure phake install
+
+       - ensure
+       Installs the latest version of phake, only <span class="k">if</span> a version is not installed
+       example: ptconfigure phake ensure
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="instalacion">
+<h2>instalación<a class="headerlink" href="#instalacion" title="Permalink to this headline">¶</a></h2>
+<p>Cuando el usuario necesita para instalar Phake en la máquina, el siguiente comando dado se ejecutará el proceso de instalación.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure Phake install
+</pre></div>
+</div>
+<p>El sistema pide el nombre del directorio, si usted quiere establecer su PATH puede definir su camino. Defina su trayectoria seguida por el símbolo &#8220;/&#8221;. Pulse Intro si no hay cambios por hacer.</p>
+<p>&#8220;What is the program data directory? Found &#8220;/opt/phake&#8221; - use this?</p>
+<p>A continuación, el sistema pide la ejecución de nombre de directorio, si usted quiere establecer su PATH puede definir su camino. Defina su trayectoria seguida por el símbolo &#8220;/&#8221;. Pulse Intro si no hay cambios por hacer</p>
+<p>&#8220;What is the program executer directory? Found &#8220;/usr/bin&#8221; - Use this? &#8220;</p>
+<p>La siguiente captura de pantalla muestra la misma.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure Phake install
+Install Phake ? <span class="o">(</span>Y/N<span class="o">)</span>
+Y
+*******************************
+*        Pharaoh Tools        *
+*          Phake         *
+*******************************
+What is the program data directory? Found <span class="s2">&quot;/opt/phake&quot;</span> - use this? <span class="o">(</span>Enter nothing <span class="k">for</span> yes, no end slash<span class="o">)</span>
+
+What is the program executor directory? Found <span class="s2">&quot;/usr/bin&quot;</span> - use this? <span class="o">(</span>Enter nothing <span class="k">for</span> yes, No Trailing Slash<span class="o">)</span>
+
+git clone <span class="s1">&#39;http://github.com/jaz303/phake.git&#39;</span>  /tmp/phake/phakeCloning into <span class="s1">&#39;/tmp/phake/phake&#39;</span>...
+remote: Counting objects: 552, <span class="k">done</span>.
+remote: Total <span class="m">552</span> <span class="o">(</span>delta 0<span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta 0<span class="o">)</span>
+Receiving objects: 100% <span class="o">(</span>552/552<span class="o">)</span>, 91.36 KiB <span class="p">|</span> 76.00 KiB/s, <span class="k">done</span>.
+Resolving deltas: 100% <span class="o">(</span>314/314<span class="o">)</span>, <span class="k">done</span>.
+Checking connectivity... <span class="k">done</span>.
+Program Data folder populated
+Program Executor Deleted <span class="k">if</span> existed
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+Phake: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="opciones">
+<h2>Opciones<a class="headerlink" href="#opciones" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="16%" />
+<col width="40%" />
+<col width="8%" />
+<col width="36%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parámetros</th>
+<th class="head">Parámetro Alternativa</th>
+<th class="head">Opciones</th>
+<th class="head">Comentarios</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Install Phake? (Y/N)</td>
+<td>Cualquiera de los dos parámetros alternativa se
+puede utilizar en mandamiento Phake, phake por
+ejemplo: ptconfigure phake Install</td>
+<td>Y(Yes)</td>
+<td>Una vez que el usuario proporciona la opción,
+sistema comienza proceso de instalación</td>
+</tr>
+<tr class="row-odd"><td>Install Phake? (Y/N)</td>
+<td>Cualquiera de los dos parámetros alternativa se
+puede utilizar en mandamiento Phake, phake por
+ejemplo: ptconfigure phake Install|</td>
+<td>N(No)</td>
+<td>Una vez que el usuario proporciona la opción,
+Sistema detiene proceso de instalación</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Phake es una gran biblioteca de burla y se puede integrar fácilmente en PHPUnit.</li>
+<li>Su nuevo enfoque de la burla y talones de prototipos y la separación entre las fases Stubbing y verificación es muy refrescante y fácil de
+usar.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Phake</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#ayuda-comando">Ayuda Comando</a></li>
+<li><a class="reference internal" href="#instalacion">instalación</a></li>
+<li><a class="reference internal" href="#opciones">Opciones</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="specl.html"
+                        title="previous chapter">PECL</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="spharaohtools.html"
+                        title="next chapter">PharaohTools</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/sphake.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="spharaohtools.html" title="PharaohTools"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="specl.html" title="PECL"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" >Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

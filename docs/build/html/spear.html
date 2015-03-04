@@ -1,0 +1,260 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Pear &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="Ptconfigure" href="sptconfigure_main.html" />
+    <link rel="next" title="PECL" href="specl.html" />
+    <link rel="prev" title="Parallax" href="sparallax.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="specl.html" title="PECL"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="sparallax.html" title="Parallax"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" accesskey="U">Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="pear">
+<h1>Pear<a class="headerlink" href="#pear" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>Sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>PEAR es la abreviatura de &#8220;Extensión PHP y Repositorio de aplicaciones&#8221; y se pronuncia igual que la fruta. El propósito de PEAR es proporcionar:</p>
+<ul class="simple">
+<li>Una biblioteca estructurada de código abierto para los usuarios de PHP</li>
+<li>Un sistema de distribución de código y mantenimiento de paquetes</li>
+<li>Un estilo estándar para el código escrito en PHP, especifica aquí</li>
+<li>El PHP Extension Community Library (PECL)</li>
+</ul>
+<p>La misión de PEAR es proporcionar componentes reutilizables, la innovación principal en PHP, proporcionar las mejores prácticas para el desarrollo de PHP y educar a los desarrolladores.</p>
+<p>El código de PEAR se divide en &#8220;paquetes&#8221;. Cada paquete es un proyecto independiente con su propio equipo de desarrollo, el número de versión, ciclo de lanzamiento, la documentación y una relación definida con otros paquetes (incluyendo dependencias). Los paquetes se distribuyen como ficheros tar comprimidos con gzip con un archivo de descripción en el interior, y se instalan en el sistema local utilizando el instalador de PEAR.</p>
+</div>
+<div class="section" id="ayuda-comando">
+<h2>Ayuda Comando<a class="headerlink" href="#ayuda-comando" title="Permalink to this headline">¶</a></h2>
+<p>Este comando ayuda a determinar el uso del módulo PEAR. El usuario se llega a saber acerca de la diferente forma / formato de ejecutar este módulo. Este comando guía al usuario final a conocer el propósito de este comando. A continuación dado son el mando y la pantalla del mismo.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure pear <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La representación gráfica de la orden anterior se enumeran a continuación,</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure pear <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>allows you to modify create or modify pears
+
+ Pear, pear
+
+       - create
+       Create a new system pear, overwriting <span class="k">if</span> it exists
+       example: ptconfigure pear create --pearname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+
+       - remove
+       Remove a system pear
+       example: ptconfigure pear remove --pearname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+
+       - <span class="nb">set</span>-password
+       Set the password of a system pear
+       example: ptconfigure pear <span class="nb">set</span>-password --pearname<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --new-password<span class="o">=</span><span class="s2">&quot;somepassword&quot;</span>
+
+       - exists
+       Check the existence of a pear
+       example: ptconfigure pear exists --pearname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+
+       - show-groups
+       Show groups to which a pear belongs
+       example: ptconfigure pear show-groups --pearname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+
+       - add-to-group
+       Add pear to a group
+       example: ptconfigure pear add-to-group --pearname<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --groupname<span class="o">=</span><span class="s2">&quot;somegroupname&quot;</span>
+
+       - remove-from-group
+       Remove pear from a group
+       example: ptconfigure pear remove-from-group --pearname<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --groupname<span class="o">=</span><span class="s2">&quot;somegroupname&quot;</span>
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="crear">
+<h2>crear<a class="headerlink" href="#crear" title="Permalink to this headline">¶</a></h2>
+<p>Cuando el usuario necesita para crear un nuevo sistema de pera o necesita para sobrescribir el existente, el comando a continuación se indica se ejecutará el proceso.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure pear create --pearname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="quitar">
+<h2>quitar<a class="headerlink" href="#quitar" title="Permalink to this headline">¶</a></h2>
+<p>Cuando el usuario necesita para eliminar una pera sistema, el comando a continuación se indica se ejecutará el proceso.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure pear remove --pearname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="establecer-contrasena">
+<h2>Establecer contraseña<a class="headerlink" href="#establecer-contrasena" title="Permalink to this headline">¶</a></h2>
+<p>Cuando el usuario necesita establecer una contraseña de una pera sistema, el comando a continuación se indica se ejecutará el proceso.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure pear <span class="nb">set</span>-password --pearname<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --new-password<span class="o">=</span><span class="s2">&quot;somepassword&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="existe">
+<h2>existe<a class="headerlink" href="#existe" title="Permalink to this headline">¶</a></h2>
+<p>Cuando el usuario necesita conocer la existencia de la pera, el siguiente comando dado se ejecutará el proceso.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure pear exists --pearname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="mostrar-grupos">
+<h2>Mostrar grupos<a class="headerlink" href="#mostrar-grupos" title="Permalink to this headline">¶</a></h2>
+<p>Cuando el usuario necesita conocer el grupo al que pertenece una pera, el siguiente comando dado se ejecutará el proceso.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure pear show-groups --pearname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="anadir-al-grupo">
+<h2>Añadir al grupo<a class="headerlink" href="#anadir-al-grupo" title="Permalink to this headline">¶</a></h2>
+<p>Cuando el usuario necesita asignar pera a un grupo particular, el siguiente comando dado se ejecutará el proceso.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure pear add-to-group --pearname<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --groupname<span class="o">=</span><span class="s2">&quot;somegroupname&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="eliminar-de-grupo">
+<h2>Eliminar de grupo<a class="headerlink" href="#eliminar-de-grupo" title="Permalink to this headline">¶</a></h2>
+<p>Cuando el usuario necesita para eliminar la pera de un grupo, el siguiente comando dado se ejecutará el proceso.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure pear remove-from-group --pearname<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --groupname<span class="o">=</span><span class="s2">&quot;somegroupname&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="parametro-alternativa">
+<h2>Parámetro Alternativa<a class="headerlink" href="#parametro-alternativa" title="Permalink to this headline">¶</a></h2>
+<p>Hay dos parámetros alternativos que pueden ser utilizados en la línea de comandos.</p>
+<p>Pear, pear</p>
+<div class="highlight-bash"><div class="highlight"><pre>Por ejemplo: ptconfigure pear create --pearname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>/ ptconfigure Pear create --pearname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<p>Pear.php.net proporciona tanto un ser humano-friendly (HTML) y máquina mascotas (currently REST) interfaz para los paquetes disponibles en pear.php.net. Toda la comunicación se produce a través del protocolo HTTP. Otras funciones del sitio pear.php.net ofrece son:</p>
+<ul class="simple">
+<li>Gestión de cuentas de usuario (independiente del servidor SVN)</li>
+<li>Gestión de paquetes</li>
+<li>Gestión de la liberación</li>
+<li>Well-to-do en Ubuntu y CentOS</li>
+<li>Sensitibilidad caso</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Pear</a><ul>
+<li><a class="reference internal" href="#sinopsis">Sinopsis</a></li>
+<li><a class="reference internal" href="#ayuda-comando">Ayuda Comando</a></li>
+<li><a class="reference internal" href="#crear">crear</a></li>
+<li><a class="reference internal" href="#quitar">quitar</a></li>
+<li><a class="reference internal" href="#establecer-contrasena">Establecer contraseña</a></li>
+<li><a class="reference internal" href="#existe">existe</a></li>
+<li><a class="reference internal" href="#mostrar-grupos">Mostrar grupos</a></li>
+<li><a class="reference internal" href="#anadir-al-grupo">Añadir al grupo</a></li>
+<li><a class="reference internal" href="#eliminar-de-grupo">Eliminar de grupo</a></li>
+<li><a class="reference internal" href="#parametro-alternativa">Parámetro Alternativa</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="sparallax.html"
+                        title="previous chapter">Parallax</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="specl.html"
+                        title="next chapter">PECL</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/spear.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="specl.html" title="PECL"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="sparallax.html" title="Parallax"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" >Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

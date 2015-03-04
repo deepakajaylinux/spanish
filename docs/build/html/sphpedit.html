@@ -1,0 +1,214 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>PHPEdit &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="Ptconfigure" href="sptconfigure_main.html" />
+    <link rel="next" title="PHPModules" href="sphpmodules.html" />
+    <link rel="prev" title="PHPEclipse" href="sphpeclipse.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="sphpmodules.html" title="PHPModules"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="sphpeclipse.html" title="PHPEclipse"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" accesskey="U">Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="phpedit">
+<h1>PHPEdit<a class="headerlink" href="#phpedit" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Módulo PHPEdit es un completo entorno de desarrollo integrado para PHP. Mucho más que una simple modificación de PHP, que ayuda al usuario a realizar sus proyectos de una forma amable y eficiente, con una única herramienta de integración de todas las características que el usuario va a necesitar desde el diseño de sus proyectos, su documentación, para su despliegue. Es apropiado con Ubuntu y CentOS.</p>
+</div>
+<div class="section" id="comando-ayuda">
+<h2>comando Ayuda<a class="headerlink" href="#comando-ayuda" title="Permalink to this headline">¶</a></h2>
+<p>El comando help guía a los usuarios en cuanto a la finalidad y al igual que sobre las opciones que se incluyen en el módulo PHPEdit. En él se enumeran los parámetros alternativos de módulo PHPEdit. También describe la sintaxis para instalar el módulo PHPEdit. El comando de ayuda para el módulo PHPEdit se muestra a continuación.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure Phpedit <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La sintaxis para declarar el comando de ayuda no es sensible a mayúsculas, que es una ventaja añadida. La siguiente captura de pantalla a visualizar sobre el comando de ayuda bajo PHPEdit.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure PHPEdit <span class="nb">help</span>
+
+******************************
+
+
+ This <span class="nb">command </span>allows you to update PHPEdit.
+
+ PHP-Edit, phpedit, PHPEdit
+
+       - install
+       Installs the latest version of PHPEdit
+       example: ptconfigure phpedit install
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="instalacion">
+<h2>instalación<a class="headerlink" href="#instalacion" title="Permalink to this headline">¶</a></h2>
+<p>PHPEdit viene con una gran cantidad de extensiones, marcos, archivos de ayuda y herramientas, por lo que se envía en un instalador que se puede personalizar para trajes de la needs.However usuario, porque PHPEdit está en constante evolución, con nuevas características y correcciones de mantenimiento, una actualización automática sistema también está disponible para ayudar a continuar con los últimos lanzamientos de PHPEdit esfuerzo. el comando utilizado para la instalación de este módulo de la siguiente manera,</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure Phpedit install
+</pre></div>
+</div>
+<p>La captura de pantalla deja claro acerca de este módulo.</p>
+<div class="highlight-bash"><div class="highlight"><pre>
+</pre></div>
+</div>
+</div>
+<div class="section" id="opcion">
+<h2>opción<a class="headerlink" href="#opcion" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="20%" />
+<col width="32%" />
+<col width="10%" />
+<col width="38%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parámetros</th>
+<th class="head">Parámetro Alternativa</th>
+<th class="head">Opciones</th>
+<th class="head">Comentarios</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Install phpedit? (Y/N)</td>
+<td>En lugar de PHP-Edit, las siguientes
+alternativas también se pueden utilizar:
+phpedit, PHPEdit</td>
+<td>Y(Yes)</td>
+<td>El usuario desea continuar el proceso de
+instalación.</td>
+</tr>
+<tr class="row-odd"><td>Install phpedit? (Y/N)</td>
+<td>En lugar de PHP-Edit, las siguientes
+alternativas también se pueden utilizar:
+phpedit, PHPEdit|</td>
+<td>N(No)</td>
+<td>El usuario desea salir del proceso de
+instalación.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Escriba el código de usuario más rápido con todos los asistentes de código disponibles y generadores de código.</li>
+<li>Mejorar la calidad de sus proyectos con el depurador integrado, y el módulo de pruebas unitarias</li>
+<li>Implementar fácilmente con un solo clic los proyectos de usuario, y trabajar de forma transparente con ficheros remotos</li>
+<li>Aumentar la productividad de los usuarios con sus marcos favoritos</li>
+<li>Código de inteligencia es posible.</li>
+<li>Depurador y profiler también disponibles.</li>
+<li>Sensitibilidad caso actúa un papel vital en este módulo</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">PHPEdit</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#comando-ayuda">comando Ayuda</a></li>
+<li><a class="reference internal" href="#instalacion">instalación</a></li>
+<li><a class="reference internal" href="#opcion">opción</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="sphpeclipse.html"
+                        title="previous chapter">PHPEclipse</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sphpmodules.html"
+                        title="next chapter">PHPModules</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/sphpedit.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="sphpmodules.html" title="PHPModules"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="sphpeclipse.html" title="PHPEclipse"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" >Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

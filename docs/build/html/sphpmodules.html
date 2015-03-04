@@ -1,0 +1,252 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>PHPModules &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="Ptconfigure" href="sptconfigure_main.html" />
+    <link rel="next" title="Port" href="sport.html" />
+    <link rel="prev" title="PHPEdit" href="sphpedit.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="sport.html" title="Port"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="sphpedit.html" title="PHPEdit"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" accesskey="U">Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="phpmodules">
+<h1>PHPModules<a class="headerlink" href="#phpmodules" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Esto apunta a la instalación de los módulos y envolviendo algunos de los módulos de PHP comunes y útiles, de apoyo. Algunos ejemplos son: php5-gd el libs imagen, php5-imagick la libs imagen, php5-rizo el archivo remoto manejo libs, php5-mysql las librerías para el manejo de conexiones mysql. Veamos cómo utilizar este módulo, el proceso de instalación en los próximos temas.</p>
+</div>
+<div class="section" id="ayuda-comando">
+<h2>Ayuda Comando<a class="headerlink" href="#ayuda-comando" title="Permalink to this headline">¶</a></h2>
+<p>El comando help guía a los usuarios en cuanto a la finalidad y al igual que sobre las opciones que se incluyen en el módulo de PHP. En él se enumeran los parámetros alternativos de módulo PHP. También describe la sintaxis para instalar el módulo de PHP. El comando de ayuda para el módulo de PHP se muestra a continuación.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure PHPModules <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La sintaxis para declarar el comando de ayuda no es sensible a mayúsculas, que es una ventaja añadida. La siguiente captura de pantalla a visualizar sobre el comando de ayuda bajo módulo PHP.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure PHPModules <span class="nb">help</span>
+
+******************************
+
+
+ This <span class="nb">command </span>allows you to install some common and helpful PHP Modules.
+
+ PHPModules, php-mods, phpmods, php-modules, phpmodules
+
+       - install
+       Installs some common PHP Modules. These include php5-gd the image libs,
+       php5-imagick the image libs, php5-curl the remote file handling libs,
+       php5-mysql the libs <span class="k">for</span> handling mysql connections.
+       example: ptconfigure phpmods install
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="instalacion">
+<h2>Instalación<a class="headerlink" href="#instalacion" title="Permalink to this headline">¶</a></h2>
+<p>El comando que se utiliza para la instalación de los módulos de php en la máquina de los usuarios se muestra a continuación:</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure phpmods install
+</pre></div>
+</div>
+<p>Después de introducir el comando anterior, el siguiente proceso se produce como se muestra en el formato tabular.</p>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="21%" />
+<col width="34%" />
+<col width="11%" />
+<col width="35%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parámetros</th>
+<th class="head">Parámetro Alternativa</th>
+<th class="head">Opciones</th>
+<th class="head">Comentarios</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Install PHP Modules? (Y/N)</td>
+<td>En lugar de phpmods, podemos utilizar
+PHPModules, php-mods, php-modules,
+phpmodules también.</td>
+<td>Y(Yes)</td>
+<td>Si el usuario desea continuar el proceso de
+instalación se puede introducir como Y.</td>
+</tr>
+<tr class="row-odd"><td>Install PHP Modules? (Y/N)</td>
+<td>En lugar de phpmods, podemos utilizar
+PHPModules, php-mods, php-modules,
+phpmodules también.|</td>
+<td>N(No)</td>
+<td>Si el usuario desea abandonar el proceso de
+instalación se puede introducir como N.</td>
+</tr>
+</tbody>
+</table>
+<p>Si el usuario procede de la instalación, durante el proceso de instalación se describe en las listas siguientes:</p>
+<ul class="simple">
+<li>Construye el árbol de dependencias.</li>
+<li>Lee la información de estado.</li>
+<li>Lista outs los paquetes que se instalan automáticamente.</li>
+<li>Lista outs los nuevos paquetes que está instalando.</li>
+<li>Detalles sobre el número de archivos actualizados, recién instalados, retirados y no actualizados.</li>
+</ul>
+<p>La siguiente captura de pantalla representa gráficamente el proceso anteriormente descrito de la instalación.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure phpmods install
+
+Install PHP Modules? <span class="o">(</span>Y/N<span class="o">)</span>
+Y
+*******************************
+*        Pharaoh Tools        *
+*         PHP Mods!        *
+*******************************
+E: dpkg was interrupted, you must manually run <span class="s1">&#39;sudo dpkg --configure -a&#39;</span> to correct the problem.
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package php-apc from the Packager Apt did not execute correctly
+E: dpkg was interrupted, you must manually run <span class="s1">&#39;sudo dpkg --configure -a&#39;</span> to correct the problem.
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package php5-gd from the Packager Apt did not execute correctly
+E: dpkg was interrupted, you must manually run <span class="s1">&#39;sudo dpkg --configure -a&#39;</span> to correct the problem.
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package php5-imagick from the Packager Apt did not execute correctly
+E: dpkg was interrupted, you must manually run <span class="s1">&#39;sudo dpkg --configure -a&#39;</span> to correct the problem.
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package php5-curl from the Packager Apt did not execute correctly
+E: dpkg was interrupted, you must manually run <span class="s1">&#39;sudo dpkg --configure -a&#39;</span> to correct the problem.
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package php5-mysql from the Packager Apt did not execute correctly
+E: dpkg was interrupted, you must manually run <span class="s1">&#39;sudo dpkg --configure -a&#39;</span> to correct the problem.
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package php5-memcache from the Packager Apt did not execute correctly
+E: dpkg was interrupted, you must manually run <span class="s1">&#39;sudo dpkg --configure -a&#39;</span> to correct the problem.
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package php5-memcached from the Packager Apt did not execute correctly
+E: dpkg was interrupted, you must manually run <span class="s1">&#39;sudo dpkg --configure -a&#39;</span> to correct the problem.
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package php5-mongo from the Packager Apt did not execute correctly
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+PHPModules: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Los parámetros utilizados en la ayuda y la instalación no son sensibles, que es una ventaja añadida, mientras que en comparación con otros.</li>
+<li>Es-acomodados tanto en Ubuntu y así como Cent OS.</li>
+<li>Todos los módulos de la instalación de php utilizado con frecuencia se envolvió en un único proceso.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">PHPModules</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#ayuda-comando">Ayuda Comando</a></li>
+<li><a class="reference internal" href="#instalacion">Instalación</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="sphpedit.html"
+                        title="previous chapter">PHPEdit</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sport.html"
+                        title="next chapter">Port</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/sphpmodules.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="sport.html" title="Port"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="sphpedit.html" title="PHPEdit"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" >Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

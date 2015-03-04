@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>OpenOffice &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="Ptconfigure" href="sptconfigure_main.html" />
+    <link rel="next" title="Oracle" href="soracle.html" />
+    <link rel="prev" title="Node-JS" href="snodejs.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="soracle.html" title="Oracle"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="snodejs.html" title="Node-JS"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" accesskey="U">Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="openoffice">
+<h1>OpenOffice<a class="headerlink" href="#openoffice" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Este módulo actúa como facilitador para instalar Openoffice .Open-office es la suite abierta premier de software relacionados con la oficina. Veamos el uso y las metodologías de la instalación de la oficina abierta en los próximos temas.</p>
+</div>
+<div class="section" id="ayuda-comando">
+<h2>Ayuda Comando<a class="headerlink" href="#ayuda-comando" title="Permalink to this headline">¶</a></h2>
+<p>El comando help guía a los usuarios en cuanto a la finalidad y al igual que sobre las opciones que se incluyen en el módulo de Open Office. En él se enumeran los parámetros alternativos de módulo de Open Office. También describe la sintaxis para instalar el módulo de Open Office. El comando de ayuda para el módulo de Open Office se muestra a continuación.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure OpenOffice <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La sintaxis para declarar el comando de ayuda no es sensible a mayúsculas, que es una ventaja añadida. La siguiente captura de pantalla a visualizar sobre el comando de ayuda en virtud de Open Office.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure openoffice <span class="nb">help</span>
+
+******************************
+
+
+ This <span class="nb">command </span>allows you to install OpenOffice.
+
+ OpenOffice,openoffice,Openoffice
+
+       - install
+       Installs OpenOffice.
+       example: ptconfigure openoffice install
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="instalacion">
+<h2>instalación<a class="headerlink" href="#instalacion" title="Permalink to this headline">¶</a></h2>
+<p>El comando utilizado para instalar el Open Office en el equipo del usuario se muestra a continuación:</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure openoffice install
+</pre></div>
+</div>
+<p>Después de introducir el comando anterior, el siguiente proceso se produce como se muestra en el formato tabular.</p>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="17%" />
+<col width="37%" />
+<col width="10%" />
+<col width="36%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parámetros</th>
+<th class="head">Parámetro Alternativa</th>
+<th class="head">Opciones</th>
+<th class="head">Comentarios</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Install Open Office?
+(Y/N)</td>
+<td>En lugar de openoffice, podemos utilizar
+OpenOffice, Openoffice también.</td>
+<td>Y(Yes)</td>
+<td>Si el usuario desea continuar el proceso
+de instalación se puede introducir como Y.</td>
+</tr>
+<tr class="row-odd"><td>Install Open Office?
+(Y/N)</td>
+<td>En lugar de openoffice, podemos utilizar
+OpenOffice, Openoffice también.</td>
+<td>N(No)</td>
+<td>Si el usuario desea abandonar el proceso
+de instalación se puede introducir como N.|</td>
+</tr>
+</tbody>
+</table>
+<p>Si el usuario procede de la instalación, durante el proceso de instalación se describe en las listas siguientes:</p>
+<ul class="simple">
+<li>Lee las listas de paquetes.</li>
+<li>Construye el árbol de dependencias.</li>
+<li>Lee la información de estado.</li>
+<li>Lista outs los paquetes que se instalan automáticamente.</li>
+<li>Lista outs el paquete adicional que está instalando.</li>
+<li>Lista outs los paquetes sugeridos.</li>
+<li>Lista outs los nuevos paquetes que está instalando.</li>
+<li>Los detalles sobre el número de archivos actualizados, recién instalados, retirados y no actualizados.</li>
+</ul>
+<p>Finalmente, el proceso de instalación se completó. La siguiente captura de pantalla representar visualmente el proceso de instalación de la Oficina abierta.
+.. code-block:: bash</p>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Los parámetros utilizados en la ayuda y la instalación no son sensibles, que es una ventaja añadida, mientras que en comparación con otros.</li>
+<li>Es-acomodados tanto en Ubuntu y así como Cent OS.</li>
+<li>Este módulo se instala el apc php en la versión actualizada.</li>
+<li>La principal ventaja de utilizar Apache OpenOffice como una suite de productividad viene del costo. Incluye procesador de textos, hoja de
+cálculo, presentación, edición gráfica vectorial y componentes de gestión de base de datos.</li>
+<li>Es fácil para los principiantes a aprender a usar, pero es lo suficientemente potente como para hacer las tareas avanzadas usuarios
+experimentados quieren. Está diseñado para que los comandos y funciones que debe utilizar en un componente del trabajo de software en toda
+la suite.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">OpenOffice</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#ayuda-comando">Ayuda Comando</a></li>
+<li><a class="reference internal" href="#instalacion">instalación</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="snodejs.html"
+                        title="previous chapter">Node-JS</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="soracle.html"
+                        title="next chapter">Oracle</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/sopenoffice.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="soracle.html" title="Oracle"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="snodejs.html" title="Node-JS"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" >Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

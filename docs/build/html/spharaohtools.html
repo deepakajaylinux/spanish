@@ -1,0 +1,363 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>PharaohTools &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="Ptconfigure" href="sptconfigure_main.html" />
+    <link rel="next" title="PHPAPC" href="sphpapc.html" />
+    <link rel="prev" title="Phake" href="sphake.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="sphpapc.html" title="PHPAPC"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="sphake.html" title="Phake"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" accesskey="U">Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="pharaohtools">
+<h1>PharaohTools<a class="headerlink" href="#pharaohtools" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>El módulo herramienta Faraón asistencias en la instalación Ptdeploy, Pttest, Jrush, generando informes ptconfigure. Facilita a los usuarios para garantizar la disponibilidad antes de instalaciones. Sólo módulos faltantes se pueden instalar en concreto.</p>
+</div>
+<div class="section" id="ayuda-comando">
+<h2>Ayuda Comando<a class="headerlink" href="#ayuda-comando" title="Permalink to this headline">¶</a></h2>
+<p>El comando help guía a los usuarios sobre cómo hacer uso de este módulo en particular bajo ptconfigure.
+También los hace conscientes de las opciones que se pueden realizar en este módulo específico.</p>
+<p>La captura de pantalla como se muestra a continuación le da una representación gráfica sobre el uso del comando de ayuda.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure PharaohTools <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>allows you to install the Pharaoh Tools which are ready. These include
+ ptconfigure - this Configuration Management tool, ptdeploy - the Automated Deployment tool,
+ and pttest, the <span class="nb">test </span>configuration and automation tool.
+
+ PharaohTools, pharaohtools, pharaoh-tools
+
+       - install
+       Installs the latest version of all of the Pharaoh Tools
+       example: ptconfigure pharaoh-tools install
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="instalacion">
+<h2>instalación<a class="headerlink" href="#instalacion" title="Permalink to this headline">¶</a></h2>
+<p>El módulo herramienta faraón actúa como una ruta más corta que envuelve la instalación de ptdeploy, pttest, Jrush. Si cualquier módulo en particular no se encuentra entre los tres, se instalará el módulo específico solo que es una ventaja añadida. El proceso de garantizar juega un papel importante en el acaparamiento de datos con respecto a la disponibilidad de módulos.</p>
+<p>El comando que se utiliza para el proceso de instalación en herramienta Faraón se da a continuación,</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure pharaoh-tools install
+</pre></div>
+</div>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="20%" />
+<col width="32%" />
+<col width="10%" />
+<col width="38%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parámetros</th>
+<th class="head">Parámetro Alternativa</th>
+<th class="head">Opciones</th>
+<th class="head">Comentarios</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Install Pharaoh Tools?
+(Y/N)</td>
+<td>PharaohTools, pharaohtools,
+pharaoh-tools</td>
+<td>Y(Yes)</td>
+<td>Si el usuario desea continuar con el proceso
+de instalación, se puede introducir como Y</td>
+</tr>
+<tr class="row-odd"><td>Install Pharaoh Tools?
+(Y/N)</td>
+<td>PharaohTools, pharaohtools,
+pharaoh-tools</td>
+<td>N(No)</td>
+<td>Si el usuario desea salir del proceso de
+instalación, pueden dejar simplemente usando N|</td>
+</tr>
+</tbody>
+</table>
+<p>Durante la instalación de la herramienta de Faraón los siguientes pasos se lleva a cabo:</p>
+</div>
+<div class="section" id="asegurar">
+<h2>Asegurar<a class="headerlink" href="#asegurar" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>La herramienta faraón asegura que los módulos disponibles.</li>
+<li>Además de garantizar, No comprobará sobre las versiones.</li>
+</ul>
+</div>
+<div class="section" id="ptdeploy">
+<h2>Ptdeploy<a class="headerlink" href="#ptdeploy" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>El módulo ptdeploy indica que es instalado, en el caso de la existencia.</li>
+<li>También comprueba la versión para ptdeploy módulo.</li>
+<li>Si el módulo ptdeploy no está disponible en la máquina, entonces automáticamente ptdeploy progresará a instalar.</li>
+</ul>
+</div>
+<div class="section" id="pttest">
+<h2>Pttest<a class="headerlink" href="#pttest" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Después de completar la instalación ptdeploy, se asegurará el módulo pttest.</li>
+<li>El módulo pttest indica que es instalado, en el caso de la existencia.</li>
+<li>Si el módulo pttest no está disponible en la máquina, entonces automáticamente pttest progresará instalar.</li>
+</ul>
+</div>
+<div class="section" id="jrush">
+<h2>Jrush<a class="headerlink" href="#jrush" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Después de completar la instalación pttest, se asegurará el módulo Jrush.</li>
+<li>El módulo Jrush indica que es instalado, en el caso de la existencia.</li>
+<li>Si el módulo Jrush no está disponible en la máquina, entonces automáticamente Jrush progresará instalar.</li>
+</ul>
+<p>Si todos los tres módulos ya existen, a continuación, se mostrará el mensaje excepcional como se da en la siguiente imagen,</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure pharaoh-tools install
+Install Pharaoh Tools? <span class="o">(</span>Y/N<span class="o">)</span>
+Y
+*******************************
+*        Pharaoh Tools        *
+*         Pharaoh Tools        *
+*******************************
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Ensure module install is not checking versions
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Module ptdeploy reports itself as Installed
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Not installing as already installed
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Ensure module install is not checking versions
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Module pttest reports itself as Installed
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Not installing as already installed
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Ensure module install is not checking versions
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Module ptconfigure reports itself as Installed
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Not installing as already installed
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Ensure module install is not checking versions
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Module JRush reports itself as Installed
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Not installing as already installed
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+PharaohTools: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="opciones-adicionales">
+<h2>Opciones Adicionales<a class="headerlink" href="#opciones-adicionales" title="Permalink to this headline">¶</a></h2>
+<p>Durante la instalación de ptdeploy, pttest, Jrush las siguientes opciones se requieren como entrada del usuario. Veamos acerca de las opciones adicionales que se pueden especificar por los usuarios si desean, se representa en forma de tabla como se muestra a continuación.</p>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="19%" />
+<col width="24%" />
+<col width="11%" />
+<col width="46%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parámetros</th>
+<th class="head">camino</th>
+<th class="head">Opciones</th>
+<th class="head">Comentarios</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Program data directory
+(Por defecto)</td>
+<td>“/opt/pttest (módulo
+correspondiente)”</td>
+<td>Y(Yes)</td>
+<td>Si el usuario de proceder con la instalación del directorio
+de datos de programa predeterminado que puede introducir
+como Sí</td>
+</tr>
+<tr class="row-odd"><td>Program data directory</td>
+<td>específica de usuario</td>
+<td>N(Fin barra)</td>
+<td>Si el usuario desea continuar con su propio directorio de
+datos del programa, pueden de entrada como N, y en la mano
+especificar que poseen ubicación.</td>
+</tr>
+<tr class="row-even"><td>Program executor
+directory (Por defecto)</td>
+<td>“/usr/bin”</td>
+<td>Yes</td>
+<td>Si el usuario de proceder con la instalación del directorio
+ejecutor programa predeterminado que puede introducir como Sí</td>
+</tr>
+<tr class="row-odd"><td>Program executor
+directory</td>
+<td>específica de usuario</td>
+<td>N(Fin barra)</td>
+<td>Si el usuario desea continuar con su propio directorio
+ejecutor del programa, pueden de entrada como N, y en la mano
+especificar que poseen ubicación.|</td>
+</tr>
+</tbody>
+</table>
+<p>Durante la instalación se especificará la ubicación de git clone, muestra el número de objetos, que reciben los objetos, la resolución de los deltas, conectividad.</p>
+<p>La siguiente captura de pantalla que explica gráficamente sobre el proceso para la instalación de la herramienta de Faraón.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure pharaoh-tools install
+Install Pharaoh Tools? <span class="o">(</span>Y/N<span class="o">)</span>
+Y
+*******************************
+*        Pharaoh Tools        *
+*         Pharaoh Tools        *
+*******************************
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Ensure module install is not checking versions
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Module ptdeploy reports itself as Installed
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Not installing as already installed
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Ensure module install is not checking versions
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Module pttest reports itself as Installed
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Not installing as already installed
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Ensure module install is not checking versions
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Module ptconfigure reports itself as Installed
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Not installing as already installed
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Ensure module install is not checking versions
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Module JRush reports itself as Installed
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Not installing as already installed
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+PharaohTools: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Facilita a los usuarios para asegurarse antes de la instalación.</li>
+<li>En caso de cualquier módulo en particular no se encuentra, el usuario puede proceder a instalar ese módulo en particular solo.</li>
+<li>El usuario puede especificar su propia vía o ubicación para el directorio de datos del programa y el directorio de albacea.</li>
+<li>Si algún módulo en particular ya existe en la máquina, entonces la herramienta de instalación generará un mensaje de excepción, ya que ya
+está instalado.</li>
+<li>Evita sobreescritura no deseado de módulos, por lo tanto, es el ahorro de tiempo.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">PharaohTools</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#ayuda-comando">Ayuda Comando</a></li>
+<li><a class="reference internal" href="#instalacion">instalación</a></li>
+<li><a class="reference internal" href="#asegurar">Asegurar</a></li>
+<li><a class="reference internal" href="#ptdeploy">Ptdeploy</a></li>
+<li><a class="reference internal" href="#pttest">Pttest</a></li>
+<li><a class="reference internal" href="#jrush">Jrush</a></li>
+<li><a class="reference internal" href="#opciones-adicionales">Opciones Adicionales</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="sphake.html"
+                        title="previous chapter">Phake</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sphpapc.html"
+                        title="next chapter">PHPAPC</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/spharaohtools.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="sphpapc.html" title="PHPAPC"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="sphake.html" title="Phake"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" >Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>PTVirtualize &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="Ptconfigure" href="sptconfigure_main.html" />
+    <link rel="next" title="Python" href="spython.html" />
+    <link rel="prev" title="PTDeploy" href="sptdeploy_cleo.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="spython.html" title="Python"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="sptdeploy_cleo.html" title="PTDeploy"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" accesskey="U">Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="ptvirtualize">
+<h1>PTVirtualize<a class="headerlink" href="#ptvirtualize" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>&nbsp; ptvirtualize lograr gestionar el VirtualBox. Este módulo ayuda a instalar bajo ptconfigure. Directorio de datos y el directorio albacea puede especificar durante la instalación de este módulo. Este módulo es el más cómodo con Ubuntu y CentOS.</p>
+</div>
+<div class="section" id="comando-ayuda">
+<h2>comando Ayuda<a class="headerlink" href="#comando-ayuda" title="Permalink to this headline">¶</a></h2>
+<p>Este comando ayuda a guiar al usuario sobre el módulo ptvirtualize. Esto es adecuado para todo tipo de personas de negocios. El comando help muestra una breve lista de los comandos integrados en el módulo ptvirtualize.</p>
+<div class="highlight-bash"><div class="highlight"><pre>Kevell@corp:/# ptconfigure ptvirtualize <span class="nb">help</span>
+******************************
+
+
+This <span class="nb">command </span>allows you to install or update ptvirtualize.
+
+ptvirtualize, ptvirtualize
+
+- install
+Installs the latest version of ptvirtualize
+example: ptconfigure ptvirtualize install
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="instalacion">
+<h2>instalación<a class="headerlink" href="#instalacion" title="Permalink to this headline">¶</a></h2>
+<p>La instalación de un módulo ptvirtualize es incluyendo controladores de dispositivos y plugins, acto de hacer el programa listo para su ejecución. Durante la instalación de este módulo se aprobó el siguiente comando.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure ptvirtualize install
+</pre></div>
+</div>
+<p>Después introduce el comando, el sistema puede pedir</p>
+<p>Install ptvirtualize?(Y/N)</p>
+<p>Si el usuario da Y entonces ptvirtualize se instalarán. La siguiente captura de pantalla demuestran.</p>
+<div class="highlight-bash"><div class="highlight"><pre>Kevell@corp:/# ptconfigure ptvirtualize install
+Install ptvirtualize ? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+*******************************
+*        Pharaoh Tools        *
+*          ptvirtualize         *
+*******************************
+What is the program data directory? Found <span class="s2">&quot;/opt/ptvirtualize&quot;</span> - use this? <span class="o">(</span>Enter nothing <span class="k">for</span> yes, no end slash<span class="o">)</span>
+
+What is the program executor directory? Found <span class="s2">&quot;/usr/bin&quot;</span> - use this? <span class="o">(</span>Enter nothing <span class="k">for</span> yes, No Trailing Slash<span class="o">)</span>
+
+git clone <span class="s1">&#39;https://github.com/PharaohTools/ptvirtualize.git&#39;</span>  /tmp/ptvirtualize/ptvirtualizeCloning into <span class="s1">&#39;/tmp/ptvirtualize/ptvirtualize&#39;</span>...
+remote: Counting objects: 4063, <span class="k">done</span>.
+remote: Total <span class="m">4063</span> <span class="o">(</span>delta 0<span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta 0<span class="o">)</span>
+Receiving objects: 100% <span class="o">(</span>4063/4063<span class="o">)</span>, 2.13 MiB <span class="p">|</span> 393.00 KiB/s, <span class="k">done</span>.
+Resolving deltas: 100% <span class="o">(</span>2530/2530<span class="o">)</span>, <span class="k">done</span>.
+Checking connectivity... <span class="k">done</span>.
+Program Data folder populated
+Program Executor Deleted <span class="k">if</span> existed
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+ptvirtualize: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+<p>Si el usuario da N entonces saldrá de la pantalla. La siguiente captura de pantalla demuestran.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevells@corp:/# ptconfigure ptvirtualize install
+Install ptvirtualize ? <span class="o">(</span>Y/N<span class="o">)</span>
+n
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+ptvirtualize: Failure
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="opcion">
+<h2>opción<a class="headerlink" href="#opcion" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="23%" />
+<col width="25%" />
+<col width="9%" />
+<col width="43%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parámetros</th>
+<th class="head">camino</th>
+<th class="head">Opciones</th>
+<th class="head">Comentarios</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Program data directory
+(Por defecto)</td>
+<td>“/opt/ptvirtualize”</td>
+<td>Yes</td>
+<td>Se instalará ptvirtualize bajo ptconfigure</td>
+</tr>
+<tr class="row-odd"><td>Program data directory</td>
+<td>No (End slash)</td>
+<td>No</td>
+<td>El usuario tiene a un especifique la ruta.</td>
+</tr>
+<tr class="row-even"><td>Program executor directory
+(Por defecto)</td>
+<td>“/usr/bin”</td>
+<td>Yes</td>
+<td>Se instalará directorio ejecutor</td>
+</tr>
+<tr class="row-odd"><td>Program executor directory</td>
+<td>No (End slash)</td>
+<td>No</td>
+<td>El usuario da entrada como nombre del directorio|</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Los usuarios de Ubuntu pueden instalar simplemente ptvirtualize del repositorio.</li>
+<li>La ventaja real de ptvirtualize radica en su rendimiento.</li>
+<li>Integración con Host OS.</li>
+<li>Accesibilidad velocidad.</li>
+<li>Gestión de caja virtual.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">PTVirtualize</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#comando-ayuda">comando Ayuda</a></li>
+<li><a class="reference internal" href="#instalacion">instalación</a></li>
+<li><a class="reference internal" href="#opcion">opción</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="sptdeploy_cleo.html"
+                        title="previous chapter">PTDeploy</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="spython.html"
+                        title="next chapter">Python</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/sptvirtualize.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="spython.html" title="Python"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="sptdeploy_cleo.html" title="PTDeploy"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" >Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

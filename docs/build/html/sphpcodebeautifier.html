@@ -1,0 +1,253 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>PHPCodeBeautifier &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="Ptconfigure" href="sptconfigure_main.html" />
+    <link rel="next" title="phpconf" href="sphpconf.html" />
+    <link rel="prev" title="Phpci" href="sphpci.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="sphpconf.html" title="phpconf"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="sphpci.html" title="Phpci"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" accesskey="U">Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="phpcodebeautifier">
+<h1>PHPCodeBeautifier<a class="headerlink" href="#phpcodebeautifier" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>PhpCodeBeautifier es un módulo que evitar que el usuario de pasar horas en reformating código para satisfacer el propio camino de usuario de presentarlo. El formato apropiado hace el código más fácil de leer y entender. PHP embellecedor analiza el código fuente de usuario y formatea en el estilo de la elección del usuario. Se desempeña bien en Ubuntu y CentOS.</p>
+</div>
+<div class="section" id="comando-ayuda">
+<h2>comando Ayuda<a class="headerlink" href="#comando-ayuda" title="Permalink to this headline">¶</a></h2>
+<p>El comando de ayuda conduce a los usuarios en cuanto a la finalidad y al igual que sobre las opciones que se incluyen en los módulos PhpCodeBeautifier. El comando help enumera los parámetros alternativos de código PHP bajo módulo ptconfigure. También se describe la sintaxis para la instalación de código embellecedor del usuario. El comando de ayuda para PhpCodeBeautifier se muestra a continuación.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure PHPCodeBeautifier <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La sintaxis para el comando de ayuda no entre mayúsculas y minúsculas, que añade una ventaja para este módulo. La siguiente captura de pantalla a visualizar al usuario sobre el comando de ayuda bajo la sintaxis para el comando de ayuda no entre mayúsculas y minúsculas, que añade una ventaja para este módulo. La siguiente captura de pantalla a visualizar al usuario sobre el comando de ayuda bajo el código php.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure PHPCodeBeautifier <span class="nb">help</span>
+
+******************************
+
+This <span class="nb">command </span>allows you to update PHPCodeBeautifier.
+
+PHPCodeBeautifier, phpcodebeautifier
+
+- install
+Installs the latest version of PHPCodeBeautifier
+example: ptconfigure PHPCodeBeautifier install
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="instalacion">
+<h2>instalación<a class="headerlink" href="#instalacion" title="Permalink to this headline">¶</a></h2>
+<p>Instalación normalmente implica código se copie / generada a partir de los archivos de instalación a los nuevos archivos en el equipo local para facilitar el acceso por el sistema operativo. Formatea y embellecer el código; algunos de ellos pueden eliminar los elementos redundantes. Su uso, el usuario tiene que asegurarse y tener una copia de seguridad, por lo que los datos del usuario siempre puede ser restaurado. El siguiente comando utiliza para instalar PhpCodeBeautifier.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure PhpCodeBeautifier install
+</pre></div>
+</div>
+<p>Durante la instalación de este módulo se apareció la siguiente captura de pantalla.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure PHPCodeBeautifier install
+
+Install PHPCodeBeautifier? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+*******************************
+*        Pharaoh Tools        *
+*         PHPCodeBeautifier!        *
+*******************************
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Package php-pear from the Packager Apt is already installed, so not installing
+Creating /tmp/ptconfigure-temp-script-47226840682.sh
+chmod <span class="m">755</span> /tmp/ptconfigure-temp-script-47226840682.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-47226840682.sh Permissions
+Executing /tmp/ptconfigure-temp-script-47226840682.sh
+PHP Warning:  PHP Startup: Unable to load dynamic library <span class="s1">&#39;/usr/lib/php5/20121212/mcrypt.so&#39;</span> - /usr/lib/php5/20121212/mcrypt.so: cannot open shared object file: No such file or directory in Unknown on line 0
+WARNING: <span class="s2">&quot;pear/Console_Getopt&quot;</span> is deprecated in favor of <span class="s2">&quot;pear/Console_GetoptPlus&quot;</span>
+Did not download optional dependencies: pear/PHP_DocBlockGenerator, use --alldeps to download automatically
+WARNING: <span class="s2">&quot;pear/DB&quot;</span> is deprecated in favor of <span class="s2">&quot;pear/MDB2&quot;</span>
+Did not download optional dependencies: pear/DB, pear/MDB2, pear/Mail, use --alldeps to download automatically
+pear/PHP_Beautifier can optionally use package <span class="s2">&quot;pear/PHP_DocBlockGenerator&quot;</span> <span class="o">(</span>version &gt;<span class="o">=</span> 1, excluded versions: 1<span class="o">)</span>
+pear/Log can optionally use package <span class="s2">&quot;pear/DB&quot;</span> <span class="o">(</span>version &gt;<span class="o">=</span> 1.3<span class="o">)</span>
+pear/Log can optionally use package <span class="s2">&quot;pear/MDB2&quot;</span> <span class="o">(</span>version &gt;<span class="o">=</span> 2.0.0RC1<span class="o">)</span>
+pear/Log can optionally use package <span class="s2">&quot;pear/Mail&quot;</span>
+pear/Log can optionally use PHP extension <span class="s2">&quot;sqlite&quot;</span>
+downloading PHP_Beautifier-0.1.15.tgz ...
+Starting to download PHP_Beautifier-0.1.15.tgz <span class="o">(</span>74,408 bytes<span class="o">)</span>
+.................done: 74,408 bytes
+downloading Log-1.12.8.tgz ...
+Starting to download Log-1.12.8.tgz <span class="o">(</span>46,725 bytes<span class="o">)</span>
+...done: 46,725 bytes
+install ok: channel://pear.php.net/Log-1.12.8
+install ok: channel://pear.php.net/PHP_Beautifier-0.1.15
+Temp File /tmp/ptconfigure-temp-script-47226840682.sh Removed
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+PHPCodeBeautifier: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="opciones">
+<h2>Opciones<a class="headerlink" href="#opciones" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="21%" />
+<col width="33%" />
+<col width="8%" />
+<col width="38%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parámetros</th>
+<th class="head">Parámetro Alternativa</th>
+<th class="head">Opciones</th>
+<th class="head">Comentarios</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Install
+PhpCodeBeautifier? (Y/N)</td>
+<td>En lugar de utilizar PhpcodeBeautifier el
+usuario puede utilizar phpcodebeautifier</td>
+<td>Y(Yes)</td>
+<td>Comienza la instalación de phpCodeBeautifier
+bajo ptconfigure</td>
+</tr>
+<tr class="row-odd"><td>Install
+PhpCodeBeautifier? (Y/N)</td>
+<td>En lugar de utilizar PhpcodeBeautifier el
+usuario puede utilizar phpcodebeautifier|</td>
+<td>N(No)</td>
+<td>Finalizando la instalación</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>PhpCodeBeautifier que permiten procesar un archivo visual.</li>
+<li>PhpCodeBeautifier puede formatear códigos fuente escritos en más de 85 idiomas, entre ellos PHP, Ruby, HTML.</li>
+<li>Esta es la sensibilidad no caso.</li>
+<li>Trajes PhpCodeBeautifier para trabajar con Ubuntu y CentOS.</li>
+<li>PhpCodeBeautifier es una utilidad específica que reformatea un programa para ajustarse a un nivel de presentación.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">PHPCodeBeautifier</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#comando-ayuda">comando Ayuda</a></li>
+<li><a class="reference internal" href="#instalacion">instalación</a></li>
+<li><a class="reference internal" href="#opciones">Opciones</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="sphpci.html"
+                        title="previous chapter">Phpci</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sphpconf.html"
+                        title="next chapter">phpconf</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/sphpcodebeautifier.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="sphpconf.html" title="phpconf"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="sphpci.html" title="Phpci"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" >Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

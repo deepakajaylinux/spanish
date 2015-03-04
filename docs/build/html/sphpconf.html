@@ -1,0 +1,338 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>phpconf &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="Ptconfigure" href="sptconfigure_main.html" />
+    <link rel="next" title="PHPCS" href="sphpcs.html" />
+    <link rel="prev" title="PHPCodeBeautifier" href="sphpcodebeautifier.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="sphpcs.html" title="PHPCS"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="sphpcodebeautifier.html" title="PHPCodeBeautifier"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" accesskey="U">Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="phpconf">
+<h1>phpconf<a class="headerlink" href="#phpconf" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Este módulo ayuda a la instalación y al igual que la gestión de la configuración de php. El usuario puede enmarcar su configuración según sus necesidades en el momento de la ejecución de la instalación.</p>
+</div>
+<div class="section" id="ayuda-comando">
+<h2>Ayuda Comando<a class="headerlink" href="#ayuda-comando" title="Permalink to this headline">¶</a></h2>
+<p>El comando de ayuda guía al usuario en el trabajo con este php config. También especifica el comando que se utiliza para la instalación. El comando de ayuda también enumera los parámetros alternativos que se pueden utilizar. El comando utilizado para la opción de ayuda bajo la config php es la siguiente.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure PHPConf <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La captura de pantalla, tal como figura a continuación muestra la representación pictórica en cuanto a la utilización de la ayuda en php config.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure PHPConf <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>is part of Core and provides you  with a method by which you can install Apache HTTP Server
+
+ PHPConf, php-configure, php-configuration, php-conf, phpconf
+
+       - install
+       Installs a configuration <span class="k">for</span> PHP
+       example: ptconfigure phpconf install
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="instalacion">
+<h2>instalación<a class="headerlink" href="#instalacion" title="Permalink to this headline">¶</a></h2>
+<p>Instalación de la config php es más beneficioso para los usuarios, ya que pueden enmarcar la configuración según sus necesidades. El comando utilizado para la instalación se da a continuación:</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure PHPConf install
+</pre></div>
+</div>
+<p>Después de introducir el comando, como se muestra por encima de las siguientes operaciones se produce como se muestra en el formato tabular.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure PHPConf install
+Install PHP Conf? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+*******************************
+*Pharaoh Tools*
+* PHP Conf!*
+*******************************
+Set non-default value <span class="k">for</span> user_ini.filename? Default is .user.ini <span class="o">(</span>Y/N<span class="o">)</span>
+y
+What value <span class="k">for</span> user_ini.filename?
+
+Set non-default value <span class="k">for</span> user_ini.cache_ttl? Default is <span class="m">300</span> <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> engine? Default is On <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> short_open_tag? Default is On <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> asp_tags? Default is Off <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> precision? Default is <span class="m">14</span> <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> y2k_compliance? Default is On <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> output_buffering? Default is <span class="m">4096</span> <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> output_handler? Default isâ€‚â€‚<span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> zlib.output_compression? Default is Off <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> zlib.output_compression_level? Default is -1 <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> zlib.output_handler? Default isâ€‚â€‚<span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> implicit_flush? Default is Off <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> unserialize_callback_func? Default isâ€‚â€‚<span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> serialize_precision? Default is <span class="m">17</span> <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> allow_call_time_pass_reference? Default is Off <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> safe_mode? Default is Off <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> safe_mode_gid? Default is Off <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> safe_mode_exec_dir? Default isâ€‚â€‚<span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> safe_mode_allowed_env_vars? Default is PHP_ <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> safe_mode_protected_env_vars? Default is LD_LIBRARY_PATH <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> open_basedir? Default isâ€‚â€‚<span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> disable_functions? Default is pcntl_alarm,pcntl_fork,pcntl_waitpid,pcntl_wait,pcntl_wifexited,pcntl_wifstopped,pcntl_wifsignaled,pcntl_wexitstatus,pcntl_wtermsig,pcntl_wstopsig,pcntl_signal,pcntl_signal_dispatch,pcntl_get_last_error,pcntl_strerror,pcntl_sigpr ocmask,pcntl_sigwaitinfo,pcntl_sigtimedwait,pcntl_exec,pcntl_getpriority,pcntl_setpriority, <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> disable_classes? Default isâ€‚â€‚<span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> ignore_user_abort? Default is On <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> realpath_cache_size? Default is 16k <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> realpath_cache_ttl? Default is <span class="m">120</span> <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> zend.enable_gc? Default is On <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> expose_php? Default is On <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> max_execution_time? Default is <span class="m">30</span> <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> max_input_time? Default is <span class="m">60</span> <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> max_input_nesting_level? Default is <span class="m">64</span> <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> max_input_vars? Default is <span class="m">1000</span> <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> memory_limit? Default is 128M <span class="o">(</span>Y/N<span class="o">)</span>
+
+
+
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+PHPConf: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="opciones">
+<h2>Opciones<a class="headerlink" href="#opciones" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="18%" />
+<col width="35%" />
+<col width="9%" />
+<col width="38%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parámetros</th>
+<th class="head">Parámetro Alternativa</th>
+<th class="head">Opciones</th>
+<th class="head">Comentarios</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Install PHPConf? (Y/N)</td>
+<td>En lugar de PHP Conf estos nombres
+alternativos pueden ser utilizados:
+php-configure, php-conf php-configuration,
+phpconf</td>
+<td>Y(Yes)</td>
+<td>Si el usuario desea continuar el proceso
+nstalación que puede introducir como Y</td>
+</tr>
+<tr class="row-odd"><td>Install PHPConf? (Y/N)</td>
+<td>En lugar de PHP Conf estos nombres
+alternativos pueden ser utilizados:
+php-configure, php-conf php-configuration,
+phpconf|</td>
+<td>N(No)</td>
+<td>Si el usuario desea abandonar el proceso
+de instalación se puede introducir como N.</td>
+</tr>
+</tbody>
+</table>
+<p>Si el usuario continúa el proceso de instalación, durante la ejecución de la instalación, el módulo especifica el valor por defecto de la configuración y también se pregunta al usuario hablar de los valores no predeterminados para la configuración según sus necesidades. Las especificaciones para la configuración durante la instalación de A continuación se relacionan:</p>
+<ul class="simple">
+<li>Relación calidad user_ini.filename</li>
+<li>Valor de user_ini.cache_ttl?</li>
+<li>Valor para el motor.</li>
+<li>Valor de short_open_tag.</li>
+<li>Valor de asp_tags.</li>
+<li>Valor de la precisión.</li>
+<li>Valor de y2k_compliance.</li>
+<li>Valor de output_buffering.</li>
+<li>Valor de output_handler.</li>
+<li>Valor de zlib.output_compression.</li>
+<li>Valor de zlib.output_compression_level.</li>
+<li>Valor de zlib.output_handler.</li>
+<li>Valor de implicit_flush.</li>
+<li>Valor de unserialize_callback_func.</li>
+<li>Valor de la precisión serialize.</li>
+<li>Valor de allow_call_time_pass_reference.</li>
+<li>Valor de safe_mode.</li>
+<li>Valor de safe_mode_gid.</li>
+<li>Valor de safe_mode_exec_dir?</li>
+<li>Valor de safe_mode_allowed_env_vars.</li>
+<li>Valor de BASEDIR abierto.</li>
+<li>Valor para desactivar funciones.</li>
+<li>Valor de disable_classes?</li>
+<li>Valor de ignore_user_abort</li>
+<li>Valor de realpath_cache_size?</li>
+<li>Valor de realpath_cache_ttl.</li>
+<li>Valor de zend.enable_gc.</li>
+<li>Valor de expose_php.</li>
+<li>Valor de max_execution_time.</li>
+<li>Valor de max_input_time.</li>
+<li>Valor de max_input_nesting_level.</li>
+<li>Valor de max_input_vars.</li>
+<li>Valor de memory_limits.</li>
+</ul>
+<p>Después de mirar los valores por defecto para las funciones de configuración, el usuario puede decidir sus acciones. Si son roble con valores predeterminados que pueden ingresarse como N. Si se requieren para especificar los valores de configuración que pueden ingresarse como Y. La captura de pantalla como se muestra a continuación explica el proceso descrito anteriormente visualmente.</p>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Los parámetros utilizados para definir la instalación y el comando de ayuda no distingue entre mayúsculas y minúsculas.</li>
+<li>Los usuarios pueden enmarcar las funciones de configuración en el tiempo de ejecución de la instalación.</li>
+<li>Funciona bien tanto en OS Cent y ventanas.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">phpconf</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#ayuda-comando">Ayuda Comando</a></li>
+<li><a class="reference internal" href="#instalacion">instalación</a></li>
+<li><a class="reference internal" href="#opciones">Opciones</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="sphpcodebeautifier.html"
+                        title="previous chapter">PHPCodeBeautifier</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sphpcs.html"
+                        title="next chapter">PHPCS</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/sphpconf.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="sphpcs.html" title="PHPCS"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="sphpcodebeautifier.html" title="PHPCodeBeautifier"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" >Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

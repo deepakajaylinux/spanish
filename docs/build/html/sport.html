@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Port &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="Ptconfigure" href="sptconfigure_main.html" />
+    <link rel="next" title="PostgresServer" href="spostgressserver.html" />
+    <link rel="prev" title="PHPModules" href="sphpmodules.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="spostgressserver.html" title="PostgresServer"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="sphpmodules.html" title="PHPModules"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" accesskey="U">Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="port">
+<h1>Port<a class="headerlink" href="#port" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Puerto certificar para comprobar el estado de los puertos y los servicios. Este módulo ayuda a comprobar el servicio portuario bajo ptconfigure. Este módulo es el más cómodo con Ubuntu y CentOS.</p>
+</div>
+<div class="section" id="ayuda-comando">
+<h2>Ayuda Comando<a class="headerlink" href="#ayuda-comando" title="Permalink to this headline">¶</a></h2>
+<p>Este comando ayuda a guiar al usuario sobre el módulo de puerto. Esto es adecuado para todo tipo de gente de TI.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure port <span class="nb">help</span>
+</pre></div>
+</div>
+<p>El comando help muestra una breve lista de los comandos integrados en el módulo de puerto.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure Port  <span class="nb">help</span>
+******************************
+
+
+  This <span class="nb">command </span>allows you to <span class="nb">test </span>the status of ports and services running on them
+
+  Port, port
+
+- is-responding
+Test <span class="k">if</span> a port is responding
+example: ptconfigure port is-responding --port-number<span class="o">=</span><span class="s2">&quot;25&quot;</span>
+
+- process
+See which process is using a port
+example: ptconfigure port process --port-number<span class="o">=</span><span class="s2">&quot;25&quot;</span>
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="anfitrion-local">
+<h2>anfitrión local<a class="headerlink" href="#anfitrion-local" title="Permalink to this headline">¶</a></h2>
+<p>Cuando el usuario quiere comprobar el estado del puerto de host local entonces puede pedir a la dirección IP del usuario. La siguiente captura de pantalla y lo explicará.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure port process --port-number<span class="o">=</span><span class="s2">&quot;22&quot;</span>
+
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Port <span class="m">22</span> is being used by the process sshd
+******************************
+
+
+Port Modifications:
+--------------------------------------------
+
+Port: Success
+
+------------------------------
+Port Mods Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="opciones">
+<h2>Opciones<a class="headerlink" href="#opciones" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="16%" />
+<col width="19%" />
+<col width="35%" />
+<col width="29%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parámetros</th>
+<th class="head">Parámetro Alternativa</th>
+<th class="head">funciones</th>
+<th class="head">salida</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Is-responding</td>
+<td>Port, port</td>
+<td>Prueba de puerto está respondiendo o no</td>
+<td>Responde al proceso de puerto</td>
+</tr>
+<tr class="row-odd"><td>Process</td>
+<td>Port, port</td>
+<td>Pon a prueba el estado del proceso de Port</td>
+<td>Se mostrará el proceso de puerto|</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>El usuario puede comprobar el estado de funcionamiento actual del puerto.</li>
+<li>Se trata de un módulo de uso fácil.</li>
+<li>Consumir menos tiempo.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Port</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#ayuda-comando">Ayuda Comando</a></li>
+<li><a class="reference internal" href="#anfitrion-local">anfitrión local</a></li>
+<li><a class="reference internal" href="#opciones">Opciones</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="sphpmodules.html"
+                        title="previous chapter">PHPModules</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="spostgressserver.html"
+                        title="next chapter">PostgresServer</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/sport.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="spostgressserver.html" title="PostgresServer"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="sphpmodules.html" title="PHPModules"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" >Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>
