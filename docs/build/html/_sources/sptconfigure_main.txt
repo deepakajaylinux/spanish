@@ -1,5 +1,4 @@
-=============
-Ptconfigure
+PTConfigure
 =============
 
 Sinopsis
