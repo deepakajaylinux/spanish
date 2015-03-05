@@ -1,0 +1,272 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Varnish &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="Ptconfigure" href="sptconfigure_main.html" />
+    <link rel="next" title="Virtualbox" href="svirtualbox.html" />
+    <link rel="prev" title="User" href="suser.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="svirtualbox.html" title="Virtualbox"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="suser.html" title="User"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" accesskey="U">Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="varnish">
+<h1>Varnish<a class="headerlink" href="#varnish" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Este módulo ayuda a instalar el barniz a la máquina de los usuarios. El barniz es un programa que puede acelerar en gran medida de un sitio web al tiempo que reduce la carga en el servidor Web. Según el sitio oficial de barniz, barniz es un &#8220;acelerador de aplicaciones Web también conocido como un proxy inverso HTTP caché&#8221;. Veamos aquí, sobre cómo este módulo realiza la instalación de barniz de apt-get.</p>
+</div>
+<div class="section" id="ayuda-comando">
+<h2>Ayuda Comando<a class="headerlink" href="#ayuda-comando" title="Permalink to this headline">¶</a></h2>
+<p>El comando help guía a los usuarios en cuanto a la finalidad y al igual que sobre las opciones que se incluyen en el módulo de barniz. El comando help enumera los parámetros alternativos de barniz. También se describe la sintaxis para la instalación de barniz. El comando de ayuda en el marco del módulo de barniz se da a continuación:</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure varnish <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La sintaxis para declarar el comando de ayuda no es sensible a mayúsculas, que es una ventaja añadida. La siguiente captura de pantalla que representa aproximadamente el comando de ayuda bajo módulo de barniz.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure Varnish <span class="nb">help</span>
+******************************
+
+
+This <span class="nb">command </span>allows you to install Varnish, the popular HTTP Cache
+
+Varnish, varnish
+
+- install
+Installs Varnish through apt-get
+example: ptconfigure varnish install
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="instalacion">
+<h2>instalación<a class="headerlink" href="#instalacion" title="Permalink to this headline">¶</a></h2>
+<p>El comando utilizado para instalar el barniz a la máquina de los usuarios se muestra a continuación.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure varnish install
+</pre></div>
+</div>
+<p>Después de introducir el comando anterior, las siguientes operaciones se produce como se muestra en el formato tabular.</p>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="19%" />
+<col width="24%" />
+<col width="9%" />
+<col width="48%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parámetros</th>
+<th class="head">Parámetro Alternativa</th>
+<th class="head">Opciones</th>
+<th class="head">Comentarios</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Install Varnish? (Y/N)</td>
+<td>Varnish, varnish</td>
+<td>Y(Yes)</td>
+<td>Si el usuario desea continuar el proceso de instalación
+se puede introducir como Y.</td>
+</tr>
+<tr class="row-odd"><td>Install Varnish? (Y/N)</td>
+<td>Varnish, varnish</td>
+<td>N(No)</td>
+<td>Si el usuario desea abandonar el proceso de instalación
+se puede introducir como N.|</td>
+</tr>
+</tbody>
+</table>
+<p>Si el usuario continúa el proceso de instalación, durante la ejecución de la instalación produce el siguiente proceso:</p>
+<ul class="simple">
+<li>Lee las listas de paquetes.</li>
+<li>Construye el árbol de dependencias.</li>
+<li>Lee la información de estado.</li>
+<li>Lista de los paquetes instalados.</li>
+<li>Lista de paquetes adicionales instalados.</li>
+<li>Lista de nuevos paquetes instalados.</li>
+<li>Número de archivos actualizados, recién instalados, retirados, sin actualizar.</li>
+<li>Por último, a partir del acelerador HTTP barnizada.</li>
+<li>La siguiente captura de pantalla muestra el proceso mencionado anteriormente:</li>
+</ul>
+<div class="highlight-bash"><div class="highlight"><pre>Kevell@corp:/# ptconfigure varnish install
+Install Varnish? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+*******************************
+*        Pharaoh Tools        *
+*          ! Varnish !        *
+*******************************
+Creating /tmp/ptconfigure-temp-script-95745650915.sh
+chmod <span class="m">755</span> /tmp/ptconfigure-temp-script-95745650915.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-95745650915.sh Permissions
+Executing /tmp/ptconfigure-temp-script-95745650915.sh
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+libjemalloc1 libvarnishapi1
+Suggested packages:
+varnish-doc
+The following NEW packages will be installed:
+libjemalloc1 libvarnishapi1 varnish
+<span class="m">0</span> upgraded, <span class="m">3</span> newly installed, <span class="m">0</span> to remove and <span class="m">6</span> not upgraded.
+Need to get <span class="m">518</span> kB of archives.
+After this operation, 1,653 kB of additional disk space will be used.
+Get:1 http://in.archive.ubuntu.com/ubuntu/ trusty/universe libvarnishapi1 amd64 3.0.5-2 <span class="o">[</span>29.9 kB<span class="o">]</span>
+Get:2 http://in.archive.ubuntu.com/ubuntu/ trusty/universe libjemalloc1 amd64 3.5.1-2 <span class="o">[</span>76.8 kB<span class="o">]</span>
+Get:3 http://in.archive.ubuntu.com/ubuntu/ trusty/universe varnish amd64 3.0.5-2 <span class="o">[</span><span class="m">411</span> kB<span class="o">]</span>
+Fetched <span class="m">518</span> kB in 3s <span class="o">(</span><span class="m">152</span> kB/s<span class="o">)</span>
+Selecting previously unselected package libvarnishapi1.
+<span class="o">(</span>Reading database ... <span class="m">201582</span> files and directories currently installed.<span class="o">)</span>
+Preparing to unpack .../libvarnishapi1_3.0.5-2_amd64.deb ...
+Unpacking libvarnishapi1 <span class="o">(</span>3.0.5-2<span class="o">)</span> ...
+Selecting previously unselected package libjemalloc1.
+Preparing to unpack .../libjemalloc1_3.5.1-2_amd64.deb ...
+Unpacking libjemalloc1 <span class="o">(</span>3.5.1-2<span class="o">)</span> ...
+Selecting previously unselected package varnish.
+Preparing to unpack .../varnish_3.0.5-2_amd64.deb ...
+Unpacking varnish <span class="o">(</span>3.0.5-2<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> man-db <span class="o">(</span>2.6.7.1-1ubuntu1<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> ureadahead <span class="o">(</span>0.100.0-16<span class="o">)</span> ...
+Setting up libvarnishapi1 <span class="o">(</span>3.0.5-2<span class="o">)</span> ...
+Setting up libjemalloc1 <span class="o">(</span>3.5.1-2<span class="o">)</span> ...
+Setting up varnish <span class="o">(</span>3.0.5-2<span class="o">)</span> ...
+ * Starting HTTP accelerator varnishd
+   ...done.
+Processing triggers <span class="k">for</span> libc-bin <span class="o">(</span>2.19-0ubuntu6.4<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> ureadahead <span class="o">(</span>0.100.0-16<span class="o">)</span> ...
+Temp File /tmp/ptconfigure-temp-script-95745650915.sh Removed
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+Varnish: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>El barniz es un alto rendimiento moderno, aplicación proxy HTTP inverso caché de código abierto.</li>
+<li>Los parámetros utilizados para la declaración de la ayuda de mandatos, la instalación no son sensibles, que es una ventaja añadida, mientras
+que en comparación con otros.</li>
+<li>Es-acomodados tanto en OS Cent y así como en Ubuntu.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Varnish</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#ayuda-comando">Ayuda Comando</a></li>
+<li><a class="reference internal" href="#instalacion">instalación</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="suser.html"
+                        title="previous chapter">User</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="svirtualbox.html"
+                        title="next chapter">Virtualbox</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/svarnish.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="svirtualbox.html" title="Virtualbox"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="suser.html" title="User"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" >Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

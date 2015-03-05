@@ -1,0 +1,278 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>StandardTools &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="Ptconfigure" href="sptconfigure_main.html" />
+    <link rel="next" title="Sudonopass" href="ssudonopass.html" />
+    <link rel="prev" title="SshKeygen" href="ssshkeygen.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="ssudonopass.html" title="Sudonopass"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="ssshkeygen.html" title="SshKeygen"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" accesskey="U">Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="standardtools">
+<h1>StandardTools<a class="headerlink" href="#standardtools" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Este módulo ayudar en la instalación de herramientas estándar en el sistema. Se puede instalar todas las herramientas como vim, zip, etc,. La automatización es posible. Especifica la estandarización de su entorno. Es fácil de usar con Ubuntu y CentOS.</p>
+</div>
+<div class="section" id="comando-ayuda">
+<h2>comando Ayuda<a class="headerlink" href="#comando-ayuda" title="Permalink to this headline">¶</a></h2>
+<p>Comando que se utiliza para encontrar información sobre un comando especificado Ayuda. Para obtener más información acerca de las herramientas estándar. podemos utilizar este comando ayuda.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure StandardTools <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La siguiente captura de pantalla te guiará.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure StandardTools <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>allows you to install a few GC recommended Standard Tools
+ <span class="k">for</span> productivity in your system.  The kinds of tools we found ourselves
+ installing on every box we have, client or server. These include curl,
+ vim, drush and zip.
+
+ StandardTools, standard-tools, standardtools, stdtools, std-tools
+
+       - install
+       Installs some standard tools
+       example: ptconfigure stdtools install
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="instalacion">
+<h2>instalación<a class="headerlink" href="#instalacion" title="Permalink to this headline">¶</a></h2>
+<p>&nbsp; Como empresa y como personas, herramientas estándar se ha dedicado a responder a los retos de los usuarios, satisfaciendo sus necesidades y satisfacer sus objetivos de negocio. Es un proceso obvio para instalar un módulo de herramientas estándar bajo ptconfigure sólo por el uso de la orden dada a continuación,</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure stdtools install
+</pre></div>
+</div>
+<p>Después de introducir el comando,</p>
+<p>Install standard tools? (Y/N)</p>
+<p>Si el valor para el usuario como y</p>
+<p>Entonces todas las herramientas estándar actualizados instalados.</p>
+<p>Si el valor de usuario como N</p>
+<p>Se saldrá de la pantalla</p>
+<p>Las capturas de pantalla muestra esto.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure stdtools install
+Install Standard Tools? <span class="o">(</span>Y/N<span class="o">)</span>
+Y
+*******************************
+*        Pharaoh Tools        *
+*         Std. Tools!!        *
+*******************************
+Reading package lists...
+Building dependency tree...
+Reading state information...
+curl is already the newest version.
+<span class="m">0</span> upgraded, <span class="m">0</span> newly installed, <span class="m">0</span> to remove and <span class="m">13</span> not upgraded.
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Package curl from the Packager Apt is already installed, so not installing.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+vim is already the newest version.
+<span class="m">0</span> upgraded, <span class="m">0</span> newly installed, <span class="m">0</span> to remove and <span class="m">13</span> not upgraded.
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Package vim from the Packager Apt is already installed, so not installing.
+
+Creating config file /etc/php5/mods-available/mysql.ini with new version
+php5_invoke: Enable module mysql <span class="k">for</span> cli SAPI
+php5_invoke: Enable module mysql <span class="k">for</span> fpm SAPI
+php5_invoke: Enable module mysql <span class="k">for</span> apache2 SAPI
+
+Creating config file /etc/php5/mods-available/mysqli.ini with new version
+php5_invoke: Enable module mysqli <span class="k">for</span> cli SAPI
+php5_invoke: Enable module mysqli <span class="k">for</span> fpm SAPI
+php5_invoke: Enable module mysqli <span class="k">for</span> apache2 SAPI
+
+Creating config file /etc/php5/mods-available/pdo_mysql.ini with new version
+php5_invoke: Enable module pdo_mysql <span class="k">for</span> cli SAPI
+php5_invoke: Enable module pdo_mysql <span class="k">for</span> fpm SAPI
+php5_invoke: Enable module pdo_mysql <span class="k">for</span> apache2 SAPI
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+  php-console-table php5-mysql
+Suggested packages:
+  drupal7
+Recommended packages:
+ php-console-color
+The following NEW packages will be installed:
+ drush php-console-table php5-mysql
+<span class="m">0</span> upgraded, <span class="m">3</span> newly installed, <span class="m">0</span> to remove and <span class="m">13</span> not upgraded.
+Need to get <span class="m">430</span> kB of archives.
+After this operation, 1,800 kB of additional disk space will be used.
+Get:1 http://in.archive.ubuntu.com/ubuntu/ trusty-updates/main php5-mysql amd64 5.5.9+dfsg-1ubuntu4.5 <span class="o">[</span>62.9 kB<span class="o">]</span>
+Get:2 http://in.archive.ubuntu.com/ubuntu/ trusty/universe php-console-table all 1.1.6-1 <span class="o">[</span>14.7 kB<span class="o">]</span>
+Get:3 http://in.archive.ubuntu.com/ubuntu/ trusty/universe drush all 5.10.0-2 <span class="o">[</span><span class="m">353</span> kB<span class="o">]</span>
+Fetched <span class="m">430</span> kB in 1min 4s <span class="o">(</span>6,634 B/s<span class="o">)</span>
+Selecting previously unselected package php5-mysql.
+<span class="o">(</span>Reading database ... <span class="m">212663</span> files and directories currently installed.<span class="o">)</span>
+Preparing to unpack .../php5-mysql_5.5.9+dfsg-1ubuntu4.5_amd64.deb ...
+Unpacking php5-mysql <span class="o">(</span>5.5.9+dfsg-1ubuntu4.5<span class="o">)</span> ...
+Selecting previously unselected package php-console-table.
+Preparing to unpack .../php-console-table_1.1.6-1_all.deb ...
+Unpacking php-console-table <span class="o">(</span>1.1.6-1<span class="o">)</span> ...
+Selecting previously unselected package drush.
+Preparing to unpack .../drush_5.10.0-2_all.deb ...
+Unpacking drush <span class="o">(</span>5.10.0-2<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> libapache2-mod-php5 <span class="o">(</span>5.5.9+dfsg-1ubuntu4.5<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> php5-fpm <span class="o">(</span>5.5.9+dfsg-1ubuntu4.5<span class="o">)</span> ...
+php5-fpm stop/waiting
+php5-fpm start/running, process 5110
+Processing triggers <span class="k">for</span> man-db <span class="o">(</span>2.6.7.1-1ubuntu1<span class="o">)</span> ...
+Setting up php5-mysql <span class="o">(</span>5.5.9+dfsg-1ubuntu4.5<span class="o">)</span> ...
+Setting up php-console-table <span class="o">(</span>1.1.6-1<span class="o">)</span> ...
+Setting up drush <span class="o">(</span>5.10.0-2<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> libapache2-mod-php5 <span class="o">(</span>5.5.9+dfsg-1ubuntu4.5<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> php5-fpm <span class="o">(</span>5.5.9+dfsg-1ubuntu4.5<span class="o">)</span> ...
+php5-fpm stop/waiting
+php5-fpm start/running, process 6189
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package drush from the Packager Apt executed correctly
+Reading package lists...
+Building dependency tree...
+Reading state information...
+zip is already the newest version.
+<span class="m">0</span> upgraded, <span class="m">0</span> newly installed, <span class="m">0</span> to remove and <span class="m">13</span> not upgraded.
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Package zip from the Packager Apt is already installed, so not installing.
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+StandardTools: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="parametros-alternativos">
+<h2>parámetros alternativos<a class="headerlink" href="#parametros-alternativos" title="Permalink to this headline">¶</a></h2>
+<p>Los siguientes son los parámetros alternativos. StandardTools, herramientas estándar, standardtools, std-herramientas, stdtools.</p>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Versión actualizada de instalación disponible.</li>
+<li>En caso de existir, se puede sobrescribir.</li>
+<li>No mayúsculas y minúsculas</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">StandardTools</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#comando-ayuda">comando Ayuda</a></li>
+<li><a class="reference internal" href="#instalacion">instalación</a></li>
+<li><a class="reference internal" href="#parametros-alternativos">parámetros alternativos</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="ssshkeygen.html"
+                        title="previous chapter">SshKeygen</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="ssudonopass.html"
+                        title="next chapter">Sudonopass</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/sstandardtools.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="ssudonopass.html" title="Sudonopass"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="ssshkeygen.html" title="SshKeygen"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" >Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,311 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Tomcat &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="Ptconfigure" href="sptconfigure_main.html" />
+    <link rel="next" title="Ubuntu Compiler" href="subuntucompiler.html" />
+    <link rel="prev" title="Templating" href="stemplating.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="subuntucompiler.html" title="Ubuntu Compiler"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="stemplating.html" title="Templating"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" accesskey="U">Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="tomcat">
+<h1>Tomcat<a class="headerlink" href="#tomcat" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Tomcat es un servidor de aplicaciones de ptconfigure que ejecuta PHP y hace que las páginas Web que incluyen php codificación. Tomcat es el resultado de los desarrolladores y está disponible en el sitio Web de php en ambas versiones binarios y fuentes. Tomcat puede usarse como un producto independiente, con su propio servidor web interno o junto con otros servidores Web. Tomcat es compatible con OS Ubuntu y ciento.</p>
+</div>
+<div class="section" id="comando-ayuda">
+<h2>comando Ayuda<a class="headerlink" href="#comando-ayuda" title="Permalink to this headline">¶</a></h2>
+<p>Este comando puede funcionar sobre los objetivos y los comandos disponibles bajo módulo tomcat. También explica el comando para instalar Tomcat. Antes de la instalación el usuario lea este comando ayuda.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure tomcat <span class="nb">help</span>
+</pre></div>
+</div>
+<p>Las siguientes capturas de pantalla explica su función</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure Tomcat <span class="nb">help</span>
+
+******************************
+
+
+ This <span class="nb">command </span>allows you to update tomcat.
+
+ Tomcat, tomcat, tom-cat
+
+       - install
+       Installs the latest version of awstats
+       example: ptconfigure tomcat install
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="instalacion">
+<h2>instalación<a class="headerlink" href="#instalacion" title="Permalink to this headline">¶</a></h2>
+<p>Utilice este módulo para instalar Tomcat en sistemas Ubuntu Linux desde php. Mientras que Ubuntu incluye su propio Tomcat, los servidores oficiales de Tomcat son generalmente más up-to-fecha.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure tomcat install
+</pre></div>
+</div>
+<p>Install tomcat? (Y/N)</p>
+<p>Cuando el usuario da entrada como Sí automáticamente instala todos depencies en default y también instalar la versión actualizada. La siguiente captura de pantalla de lo explicará.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure Tomcat install
+Install Tomcat? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+*******************************
+*        Pharaoh Tools        *
+*         Tomcat!        *
+*******************************
+
+Creating config file /etc/default/tomcat7 with new version
+Adding system user <span class="sb">`</span>tomcat7<span class="s1">&#39; (UID 117) ...</span>
+<span class="s1">Adding new user `tomcat7&#39;</span> <span class="o">(</span>UID 117<span class="o">)</span> with group <span class="sb">`</span>tomcat7<span class="s1">&#39; ...</span>
+<span class="s1">Not creating home directory `/usr/share/tomcat7&#39;</span>.
+Creating config file /etc/logrotate.d/tomcat7 with new version
+* Starting Tomcat servlet engine tomcat7                                                                                               <span class="o">[</span> OK <span class="o">]</span>
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+ authbind libcommons-collections3-java libcommons-dbcp-java
+ libcommons-pool-java libecj-java libgeronimo-jta-1.1-spec-java
+ libservlet3.0-java libtomcat7-java tomcat7-common
+Suggested packages:
+ libcommons-collections3-java-doc libcommons-dbcp-java-doc ecj ant
+ libecj-java-gcj libgeronimo-jta-java-doc tomcat7-docs tomcat7-admin
+ tomcat7-examples tomcat7-user libtcnative-1
+The following NEW packages will be installed:
+ authbind libcommons-collections3-java libcommons-dbcp-java
+ libcommons-pool-java libecj-java libgeronimo-jta-1.1-spec-java
+ libservlet3.0-java libtomcat7-java tomcat7 tomcat7-common
+<span class="m">0</span> upgraded, <span class="m">10</span> newly installed, <span class="m">0</span> to remove and <span class="m">15</span> not upgraded.
+Need to get 6,266 kB of archives.
+After this operation, 8,097 kB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu/ trusty/main libcommons-collections3-java all 3.2.1-6 <span class="o">[</span><span class="m">602</span> kB<span class="o">]</span>
+Get:2 http://us.archive.ubuntu.com/ubuntu/ trusty/main libcommons-pool-java all 1.6-2 <span class="o">[</span><span class="m">105</span> kB<span class="o">]</span>
+Get:3 http://us.archive.ubuntu.com/ubuntu/ trusty/main libcommons-dbcp-java all 1.4-3ubuntu1 <span class="o">[</span><span class="m">149</span> kB<span class="o">]</span>
+Get:4 http://us.archive.ubuntu.com/ubuntu/ trusty/main libecj-java all 3.9.0-1 <span class="o">[</span>1,352 kB<span class="o">]</span>
+Get:5 http://us.archive.ubuntu.com/ubuntu/ trusty/main libgeronimo-jta-1.1-spec-java all 1.1.1-3ubuntu1 <span class="o">[</span>12.4 kB<span class="o">]</span>
+Get:6 http://us.archive.ubuntu.com/ubuntu/ trusty-updates/main libservlet3.0-java all 7.0.52-1ubuntu0.1 <span class="o">[</span><span class="m">293</span> kB<span class="o">]</span>
+Get:7 http://us.archive.ubuntu.com/ubuntu/ trusty-updates/main libtomcat7-java all 7.0.52-1ubuntu0.1 <span class="o">[</span>3,649 kB<span class="o">]</span>
+Get:8 http://us.archive.ubuntu.com/ubuntu/ trusty-updates/main tomcat7-common all 7.0.52-1ubuntu0.1 <span class="o">[</span>47.9 kB<span class="o">]</span>
+Get:9 http://us.archive.ubuntu.com/ubuntu/ trusty-updates/main tomcat7 all 7.0.52-1ubuntu0.1 <span class="o">[</span>35.6 kB<span class="o">]</span>
+Get:10 http://us.archive.ubuntu.com/ubuntu/ trusty/main authbind amd64 2.1.1 <span class="o">[</span>19.6 kB<span class="o">]</span>
+Preconfiguring packages ...
+Fetched 6,266 kB in 8min 28s <span class="o">(</span>12.3 kB/s<span class="o">)</span>
+Selecting previously unselected package libcommons-collections3-java.
+<span class="o">(</span>Reading database ... <span class="m">199303</span> files and directories currently installed.<span class="o">)</span>
+Preparing to unpack .../libcommons-collections3-java_3.2.1-6_all.deb ...
+Unpacking libcommons-collections3-java <span class="o">(</span>3.2.1-6<span class="o">)</span> ...
+Selecting previously unselected package libcommons-pool-java.
+Preparing to unpack .../libcommons-pool-java_1.6-2_all.deb ...
+Unpacking libcommons-pool-java <span class="o">(</span>1.6-2<span class="o">)</span> ...
+Selecting previously unselected package libcommons-dbcp-java.
+Preparing to unpack .../libcommons-dbcp-java_1.4-3ubuntu1_all.deb ...
+Unpacking libcommons-dbcp-java <span class="o">(</span>1.4-3ubuntu1<span class="o">)</span> ...
+Selecting previously unselected package libecj-java.
+Preparing to unpack .../libecj-java_3.9.0-1_all.deb ...
+Unpacking libecj-java <span class="o">(</span>3.9.0-1<span class="o">)</span> ...
+Selecting previously unselected package libgeronimo-jta-1.1-spec-java.
+Preparing to unpack .../libgeronimo-jta-1.1-spec-java_1.1.1-3ubuntu1_all.deb ...
+Unpacking libgeronimo-jta-1.1-spec-java <span class="o">(</span>1.1.1-3ubuntu1<span class="o">)</span> ...
+Selecting previously unselected package libservlet3.0-java.
+Preparing to unpack .../libservlet3.0-java_7.0.52-1ubuntu0.1_all.deb ...
+Unpacking libservlet3.0-java <span class="o">(</span>7.0.52-1ubuntu0.1<span class="o">)</span> ...
+Selecting previously unselected package libtomcat7-java.
+Preparing to unpack .../libtomcat7-java_7.0.52-1ubuntu0.1_all.deb ...
+Unpacking libtomcat7-java <span class="o">(</span>7.0.52-1ubuntu0.1<span class="o">)</span> ...
+Selecting previously unselected package tomcat7-common.
+Preparing to unpack .../tomcat7-common_7.0.52-1ubuntu0.1_all.deb ...
+Unpacking tomcat7-common <span class="o">(</span>7.0.52-1ubuntu0.1<span class="o">)</span> ...
+Selecting previously unselected package tomcat7.
+Preparing to unpack .../tomcat7_7.0.52-1ubuntu0.1_all.deb ...
+Unpacking tomcat7 <span class="o">(</span>7.0.52-1ubuntu0.1<span class="o">)</span> ...
+Selecting previously unselected package authbind.
+Preparing to unpack .../authbind_2.1.1_amd64.deb ...
+Unpacking authbind <span class="o">(</span>2.1.1<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> ureadahead <span class="o">(</span>0.100.0-16<span class="o">)</span> ...
+ureadahead will be reprofiled on next reboot
+Processing triggers <span class="k">for</span> man-db <span class="o">(</span>2.6.7.1-1ubuntu1<span class="o">)</span> ...
+Setting up libcommons-collections3-java <span class="o">(</span>3.2.1-6<span class="o">)</span> ...
+Setting up libcommons-pool-java <span class="o">(</span>1.6-2<span class="o">)</span> ...
+Setting up libcommons-dbcp-java <span class="o">(</span>1.4-3ubuntu1<span class="o">)</span> ...
+Setting up libecj-java <span class="o">(</span>3.9.0-1<span class="o">)</span> ...
+Setting up libgeronimo-jta-1.1-spec-java <span class="o">(</span>1.1.1-3ubuntu1<span class="o">)</span> ...
+Setting up libservlet3.0-java <span class="o">(</span>7.0.52-1ubuntu0.1<span class="o">)</span> ...
+Setting up libtomcat7-java <span class="o">(</span>7.0.52-1ubuntu0.1<span class="o">)</span> ...
+Setting up tomcat7-common <span class="o">(</span>7.0.52-1ubuntu0.1<span class="o">)</span> ...
+Setting up tomcat7 <span class="o">(</span>7.0.52-1ubuntu0.1<span class="o">)</span> ...
+Setting up authbind <span class="o">(</span>2.1.1<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> ureadahead <span class="o">(</span>0.100.0-16<span class="o">)</span> ...
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package tomcat7 from the Packager Apt executed correctly
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+Tomcat: Success
+------------------------------
+Installer Finished
+
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="opciones">
+<h2>Opciones<a class="headerlink" href="#opciones" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="21%" />
+<col width="28%" />
+<col width="13%" />
+<col width="38%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parámetros</th>
+<th class="head">Parámetro Alternativa</th>
+<th class="head">Opciones</th>
+<th class="head">Comentarios</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Install Tomcat? (Y/N)</td>
+<td>Tomcat, tomcat, tom-cat</td>
+<td>Y(Yes)</td>
+<td>Si el usuario desea continuar el proceso de
+instalación se puede introducir como Y.</td>
+</tr>
+<tr class="row-odd"><td>Install Tomcat? (Y/N)</td>
+<td>Tomcat, tomcat, tom-cat</td>
+<td>N(No)</td>
+<td>Si el usuario desea abandonar el proceso de
+instalación se puede introducir como N.|</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Su muy extensible con módulos para ejecutar cosas como PHP, Python, etc.</li>
+<li>Se consuela con Ubuntu y CentOS.</li>
+<li>Sensitibilidad caso es una ventaja destacada.</li>
+<li>Tomcat es la capa de aplicación en la que la mayor parte del procesamiento de la lógica pasa.</li>
+<li>Finalmente habría una capa de base de datos que las conversaciones de Tomcat.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Tomcat</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#comando-ayuda">comando Ayuda</a></li>
+<li><a class="reference internal" href="#instalacion">instalación</a></li>
+<li><a class="reference internal" href="#opciones">Opciones</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="stemplating.html"
+                        title="previous chapter">Templating</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="subuntucompiler.html"
+                        title="next chapter">Ubuntu Compiler</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/stomcat.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="subuntucompiler.html" title="Ubuntu Compiler"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="stemplating.html" title="Templating"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" >Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

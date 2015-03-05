@@ -1,0 +1,241 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>SFTP &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="Ptconfigure" href="sptconfigure_main.html" />
+    <link rel="next" title="Skipfish" href="sskipfish.html" />
+    <link rel="prev" title="Service" href="sservice.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="sskipfish.html" title="Skipfish"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="sservice.html" title="Service"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" accesskey="U">Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="sftp">
+<h1>SFTP<a class="headerlink" href="#sftp" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>&nbsp; Este módulo ayudar en la transferencia de archivos de un sistema a otro. Se puede cargar o descargar los archivos en el sistema. La automatización es posible. PUT y GET opciones están disponibles en este módulo. En él se especifica la configuración de su entorno. Es fácil de usar con Ubuntu y CentOS.</p>
+</div>
+<div class="section" id="comando-ayuda">
+<h2>comando Ayuda<a class="headerlink" href="#comando-ayuda" title="Permalink to this headline">¶</a></h2>
+<p>Comando que se utiliza para encontrar información sobre un comando especificado Ayuda. Para obtener más información acerca de los cambios a la funcionalidad de SFTP podemos utilizar este comando ayuda.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure sftp <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La siguiente captura de pantalla te guiará.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure sftp <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>handles SFTP Transfer Functions.
+
+ SFTP, sftp
+
+       - put
+       Will ask you <span class="k">for</span> details <span class="k">for</span> servers, <span class="k">then</span> copy a file or directory from <span class="nb">local </span>to remote
+       example: ptconfigure sftp put
+       example: ptconfigure sftp put --yes --environment-name<span class="o">=</span>staging --source<span class="o">=</span><span class="s2">&quot;/tmp/file&quot;</span> --target<span class="o">=</span><span class="s2">&quot;/home/user/file&quot;</span>
+       example: ptconfigure sftp put --yes --source<span class="o">=</span><span class="s2">&quot;/tmp/file&quot;</span> --target<span class="o">=</span><span class="s2">&quot;/home/user/file&quot;</span> <span class="c"># will ask for server details</span>
+
+       - get
+       Will ask you <span class="k">for</span> details <span class="k">for</span> servers, <span class="k">then</span> copy a file or directory from remote to <span class="nb">local</span>
+<span class="nb">       </span>example: ptconfigure sftp get
+       example: ptconfigure sftp get --yes --environment-name<span class="o">=</span>staging --source<span class="o">=</span><span class="s2">&quot;/tmp/file&quot;</span> --target<span class="o">=</span><span class="s2">&quot;/home/user/file&quot;</span>
+       example: ptconfigure sftp get --yes --source<span class="o">=</span><span class="s2">&quot;/tmp/file&quot;</span> --target<span class="o">=</span><span class="s2">&quot;/home/user/file&quot;</span> <span class="c"># will ask for server details</span>
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="instalacion">
+<h2>instalación<a class="headerlink" href="#instalacion" title="Permalink to this headline">¶</a></h2>
+<p>Como empresa y como individuos, SFTP se ha dedicado a responder a los retos tecnológicos de cada socio, el cumplimiento de sus requisitos de ingeniería, y la satisfacción de sus objetivos de negocio. Es un proceso obvio para instalar el módulo SFTP bajo ptconfigure sólo por el uso de la orden dada a continuación,</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure SFTP put
+</pre></div>
+</div>
+<p>Después de dar la orden, entonces el sistema va a plantear la cuestión,</p>
+<p>Install SFTP server group? Y/N</p>
+<p>Si la entrada del usuario como Y entonces</p>
+<p>SSh timeout section?</p>
+<p>El usuario tiene que introducir el valor</p>
+<p>Please enter remote ssh port</p>
+<p>El valor predeterminado es 22. El usuario puede introducir cualquier valor</p>
+<p>Enter server host IP?</p>
+<p>El usuario tiene que introducir nombre de usuario, contraseña y ruta de la clave.</p>
+<p>Add another server?</p>
+<p>Si la entrada del usuario como Y él tiene que ingresar el nuevo nombre de servidor</p>
+<p>Entonces todo estará conectado.</p>
+<p>Si se puede acceder a la entrada del usuario como N anterior nombre del servidor.</p>
+<p>La siguiente captura de pantalla te guiará.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure sftp put
+
+SFTP on Server group? <span class="o">(</span>Y/N<span class="o">)</span>
+Y
+Please Enter SSH Timeout in seconds
+90
+Please Enter remote SSH Port
+22
+Use Environments Configured in Project? <span class="o">(</span>Y/N<span class="o">)</span>
+N
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Attempting to load SFTP connections...
+Enter <span class="nb">local source </span>file path
+/root/vv
+Enter remote target file path
+/root/gg/vv
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Opening SFTP Connections...
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> All SFTP Puts Completed
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="opciones">
+<h2>Opciones<a class="headerlink" href="#opciones" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="17%" />
+<col width="23%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parámetros</th>
+<th class="head">Parámetro Alternativa</th>
+<th class="head">Comentarios</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>put</td>
+<td>SFTP, sftp</td>
+<td>Source to target_El archivo puede transferirse del origen al destino.</td>
+</tr>
+<tr class="row-odd"><td>get</td>
+<td>SFTP, sftp</td>
+<td>Path to source_El archivo se puede recoger del sistema remoto.|</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Servidor Multi de área remota.</li>
+<li>El archivo especificado no es mensaje de error disponibles vendrá.</li>
+<li>Accessability es difícil sin permiso.</li>
+<li>Sobrescribe automáticamente en caso de que ya en el caso de archivo existir.</li>
+<li>No mayúsculas y minúsculas.</li>
+<li>El secreto y la seguridad es posible.</li>
+</ul>
+<p>Resolución de problemas de la tecnología a los clientes más exigentes y permitiendo su éxito es la misión SFTP y pasión.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">SFTP</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#comando-ayuda">comando Ayuda</a></li>
+<li><a class="reference internal" href="#instalacion">instalación</a></li>
+<li><a class="reference internal" href="#opciones">Opciones</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="sservice.html"
+                        title="previous chapter">Service</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sskipfish.html"
+                        title="next chapter">Skipfish</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/ssftp.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="sskipfish.html" title="Skipfish"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="sservice.html" title="Service"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" >Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Sudonopass &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="Ptconfigure" href="sptconfigure_main.html" />
+    <link rel="next" title="SVN" href="ssvn.html" />
+    <link rel="prev" title="StandardTools" href="sstandardtools.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="ssvn.html" title="SVN"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="sstandardtools.html" title="StandardTools"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" accesskey="U">Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="sudonopass">
+<h1>Sudonopass<a class="headerlink" href="#sudonopass" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Sudonopass utiliza para ejecutar un comando en particular con permisos de root. Lo interesante es que cuando el usuario sudo uso de un comando en particular, el sistema solicita al usuario la contraseña del usuario actual. Una vez que el usuario introduzca la contraseña, el comando se ejecuta con privilegios de root. Esto es adecuado para trabajar con Ubuntu y CentOS.</p>
+</div>
+<div class="section" id="comando-ayuda">
+<h2>comando Ayuda<a class="headerlink" href="#comando-ayuda" title="Permalink to this headline">¶</a></h2>
+<p>Este comando ayuda a guiar al usuario sobre el módulo sudonopass. Esto es adecuado para todo tipo de usuarios de negocios. El comando help muestra una breve lista de los comandos integrados en el módulo sudonopass. La siguiente captura de pantalla que enumera.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure SudoNoPass <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>allows you to add an entry to the system sudo file that will
+ allow your user to have passwordless sudo. This is required <span class="k">for</span>
+ quite a few of the  builds provided by Golden Contact, as
+ will perform <span class="nb">test </span>execution, software installs and more, silently.
+
+ SudoNoPass, sudonopass, sudo-nopass, sudo-passwordless
+
+- install
+Installs the sudo without password entry
+example: ptconfigure sudo-nopass install
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="instalacion">
+<h2>instalación<a class="headerlink" href="#instalacion" title="Permalink to this headline">¶</a></h2>
+<p>Utilice este módulo para instalar sudonopass en paquetes del sistema Ubuntu Linux.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure sudonopass install
+</pre></div>
+</div>
+<p>Install sudonopass ?(Y/N)</p>
+<p>Cuando el usuario se da de entrada, como si automáticamente se instalará configurar el pase de acceso raíz para todos. La siguiente captura de pantalla de lo explicará.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure sudo-nopass install
+Install Sudo w/o Pass <span class="k">for</span> User? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+*******************************
+*        Pharaoh Tools        *
+*         Sudo NoPass!        *
+*******************************
+Enter User To Install As:
+Kevells
+The following will be written to /etc/sudoers
+Please check <span class="k">if</span> it looks wrong
+You may not be able to use Sudo <span class="k">if</span> it is incorrect!!!
+Kevells <span class="nv">ALL</span><span class="o">=</span>NOPASSWD: ALL
+Is this okay? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+SudoNoPass: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="opciones">
+<h2>Opciones<a class="headerlink" href="#opciones" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="19%" />
+<col width="30%" />
+<col width="19%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parámetros</th>
+<th class="head">Parámetro Alternativa</th>
+<th class="head">Dirctory (por defecto)</th>
+<th class="head">Comentarios</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Install Sudo w/o Pass
+for User? (Y/N)</td>
+<td>SudoNoPass, sudonopass, sudo-nopass,
+sudo-passwordless</td>
+<td>Y(Yes)</td>
+<td>Si el usuario desea continuar el proceso
+de instalación se puede introducir como Y.</td>
+</tr>
+<tr class="row-odd"><td>Install Sudo w/o Pass
+for User? (Y/N)</td>
+<td>SudoNoPass, sudonopass, sudo-nopass,
+sudo-passwordless</td>
+<td>N(No)</td>
+<td>Si el usuario desea abandonar el proceso
+de instalación se puede introducir como N|</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Sudonopass se asegura de que los privilegios de root están allí para un comando específico (o por un tiempo específico) y no para la sesión
+completa que puede resultar en el mal uso accidental de los privilegios de root.</li>
+<li>El usuario puede utilizar sudonopass incluso conceder privilegios limitados a un usuario. Esto es útil cuando el usuario no desea que un
+usuario tenga el control de todos los poderes de superusuario mientras haciendo un sudonopass.</li>
+<li>La mejor ventaja es que sudonopass requiere propia contraseña de inicio de sesión del usuario en lugar de la contraseña de root. Esto ayuda
+a mantener la contraseña de root privado y no hay necesidad de cambiarlo, aun cuando un usuario (sudoer) deja.</li>
+<li>Este archivo proporciona información sobre los comandos que se ejecutan usando sudo y su tiempo de ejecución. Esto ayuda al administrador para  realizar un seguimiento de los usuarios, incluso de confianza</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Sudonopass</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#comando-ayuda">comando Ayuda</a></li>
+<li><a class="reference internal" href="#instalacion">instalación</a></li>
+<li><a class="reference internal" href="#opciones">Opciones</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="sstandardtools.html"
+                        title="previous chapter">StandardTools</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="ssvn.html"
+                        title="next chapter">SVN</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/ssudonopass.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="ssvn.html" title="SVN"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="sstandardtools.html" title="StandardTools"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" >Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

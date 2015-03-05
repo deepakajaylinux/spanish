@@ -1,0 +1,357 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Virtualbox &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="Ptconfigure" href="sptconfigure_main.html" />
+    <link rel="next" title="Vmplayer" href="svmplayer.html" />
+    <link rel="prev" title="Varnish" href="svarnish.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="svmplayer.html" title="Vmplayer"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="svarnish.html" title="Varnish"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" accesskey="U">Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="virtualbox">
+<h1>Virtualbox<a class="headerlink" href="#virtualbox" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Este módulo fomentar la instalación de voz. En caso de módulo phlagrant totalmente administrada por caja virtual. Es fácil de usar con Ubuntu y CentOS. El paquete de Virtual Box se instala en un sistema operativo host existente como una aplicación. Los usuarios de Virtual Box pueden cargar invitados varios sistemas operativos bajo un solo sistema operativo host. Virtual Box ha apoyado Open Virtualization Format (OVF) .Este es cómodo con Ubuntu y CentOS.</p>
+</div>
+<div class="section" id="comando-ayuda">
+<h2>comando Ayuda<a class="headerlink" href="#comando-ayuda" title="Permalink to this headline">¶</a></h2>
+<p>El comando ayuda a guiar al usuario para instalar la caja virtual. La siguiente captura de pantalla muestra acerca de la instalación de la caja virtual.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure Virtualbox <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>allows you to install Virtualbox, the popular Virtual Machine Solution.
+
+ Virtualbox, virtualbox
+
+- install
+Installs Virtualbox through apt-get
+example: ptconfigure virtualbox install
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="instalacion">
+<h2>instalación<a class="headerlink" href="#instalacion" title="Permalink to this headline">¶</a></h2>
+<p>En este módulo se instruye al usuario instalar. Para activar caja virtual ejecuta la orden como,</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure virtual box install
+</pre></div>
+</div>
+<p>A continuación, el sistema puede preguntar</p>
+<p>ptconfigure virtual box install? (Y/N)</p>
+<p>Si el usuario introduce Y luego se va a instalar, de lo contrario se sale de la pantalla.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure Virtualbox install
+Install Virtualbox? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+*******************************
+*        Pharaoh Tools        *
+*          ! Virtualbox !        *
+*******************************
+Creating /tmp/ptconfigure-temp-script-27415379023.sh
+chmod <span class="m">755</span> /tmp/ptconfigure-temp-script-27415379023.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-27415379023.sh Permissions
+Executing /tmp/ptconfigure-temp-script-27415379023.sh
+invoke-rc.d: initscript virtualbox, action <span class="s2">&quot;restart&quot;</span> failed.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+ dkms libgsoap4 virtualbox-dkms virtualbox-qt
+Suggested packages:
+ debhelper virtualbox-guest-additions-iso vde2
+The following NEW packages will be installed:
+  dkms libgsoap4 virtualbox virtualbox-dkms virtualbox-qt
+<span class="m">0</span> upgraded, <span class="m">5</span> newly installed, <span class="m">0</span> to remove and <span class="m">6</span> not upgraded.
+Need to get 21.2 MB of archives.
+After this operation, 85.7 MB of additional disk space will be used.
+Get:1 http://in.archive.ubuntu.com/ubuntu/ trusty/universe libgsoap4 amd64 2.8.16-2 <span class="o">[</span><span class="m">525</span> kB<span class="o">]</span>
+Get:2 http://in.archive.ubuntu.com/ubuntu/ trusty/multiverse virtualbox amd64 4.3.10-dfsg-1 <span class="o">[</span>15.5 MB<span class="o">]</span>
+Get:3 http://in.archive.ubuntu.com/ubuntu/ trusty-updates/main dkms all 2.2.0.3-1.1ubuntu5.14.04 <span class="o">[</span>64.6 kB<span class="o">]</span>
+Get:4 http://in.archive.ubuntu.com/ubuntu/ trusty/multiverse virtualbox-dkms all 4.3.10-dfsg-1 <span class="o">[</span><span class="m">538</span> kB<span class="o">]</span>
+Get:5 http://in.archive.ubuntu.com/ubuntu/ trusty/multiverse virtualbox-qt amd64 4.3.10-dfsg-1 <span class="o">[</span>4,592 kB<span class="o">]</span>
+Fetched 21.2 MB in 54s <span class="o">(</span><span class="m">389</span> kB/s<span class="o">)</span>
+Selecting previously unselected package libgsoap4:amd64.
+<span class="o">(</span>Reading database ... <span class="m">203014</span> files and directories currently installed.<span class="o">)</span>
+Preparing to unpack .../libgsoap4_2.8.16-2_amd64.deb ...
+Unpacking libgsoap4:amd64 <span class="o">(</span>2.8.16-2<span class="o">)</span> ...
+Selecting previously unselected package virtualbox.
+Preparing to unpack .../virtualbox_4.3.10-dfsg-1_amd64.deb ...
+Unpacking virtualbox <span class="o">(</span>4.3.10-dfsg-1<span class="o">)</span> ...
+Selecting previously unselected package dkms.
+Preparing to unpack .../dkms_2.2.0.3-1.1ubuntu5.14.04_all.deb ...
+Unpacking dkms <span class="o">(</span>2.2.0.3-1.1ubuntu5.14.04<span class="o">)</span> ...
+Selecting previously unselected package virtualbox-dkms.
+Preparing to unpack .../virtualbox-dkms_4.3.10-dfsg-1_all.deb ...
+Unpacking virtualbox-dkms <span class="o">(</span>4.3.10-dfsg-1<span class="o">)</span> ...
+Selecting previously unselected package virtualbox-qt.
+Preparing to unpack .../virtualbox-qt_4.3.10-dfsg-1_amd64.deb ...
+Unpacking virtualbox-qt <span class="o">(</span>4.3.10-dfsg-1<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> man-db <span class="o">(</span>2.6.7.1-1ubuntu1<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> ureadahead <span class="o">(</span>0.100.0-16<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> hicolor-icon-theme <span class="o">(</span>0.13-1<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> shared-mime-info <span class="o">(</span>1.2-0ubuntu3<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> mime-support <span class="o">(</span>3.54ubuntu1.1<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> gnome-menus <span class="o">(</span>3.10.1-0ubuntu2<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> desktop-file-utils <span class="o">(</span>0.22-1ubuntu1<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> bamfdaemon <span class="o">(</span>0.5.1+14.04.20140409-0ubuntu1<span class="o">)</span> ...
+Rebuilding /usr/share/applications/bamf-2.index...
+Setting up libgsoap4:amd64 <span class="o">(</span>2.8.16-2<span class="o">)</span> ...
+Setting up virtualbox <span class="o">(</span>4.3.10-dfsg-1<span class="o">)</span> ...
+* Stopping VirtualBox kernel modules
+  ...done.
+* Starting VirtualBox kernel modules
+* No suitable module <span class="k">for</span> running kernel found
+  ...fail!
+Setting up dkms <span class="o">(</span>2.2.0.3-1.1ubuntu5.14.04<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> ureadahead <span class="o">(</span>0.100.0-16<span class="o">)</span> ...
+Setting up virtualbox-dkms <span class="o">(</span>4.3.10-dfsg-1<span class="o">)</span> ...
+Loading new virtualbox-4.3.10 DKMS files...
+First Installation: checking all kernels...
+Building <span class="k">for</span> 3.13.0-32-generic and 3.13.0-43-generic
+Building initial module <span class="k">for</span> 3.13.0-32-generic
+Done.
+
+vboxdrv:
+Running module version sanity check.
+- Original module
+  - No original module exists within this kernel
+- Installation
+  - Installing to /lib/modules/3.13.0-32-generic/updates/dkms/
+
+vboxnetadp.ko:
+Running module version sanity check.
+- Original module
+  - No original module exists within this kernel
+- Installation
+  - Installing to /lib/modules/3.13.0-32-generic/updates/dkms/
+
+vboxnetflt.ko:
+Running module version sanity check.
+- Original module
+  - No original module exists within this kernel
+- Installation
+  - Installing to /lib/modules/3.13.0-32-generic/updates/dkms/
+
+vboxpci.ko:
+Running module version sanity check.
+- Original module
+  - No original module exists within this kernel
+- Installation
+  - Installing to /lib/modules/3.13.0-32-generic/updates/dkms/
+
+depmod.......
+
+DKMS: install completed.
+Building initial module <span class="k">for</span> 3.13.0-43-generic
+Done.
+
+vboxdrv:
+Running module version sanity check.
+- Original module
+  - No original module exists within this kernel
+- Installation
+  - Installing to /lib/modules/3.13.0-43-generic/updates/dkms/
+
+vboxnetadp.ko:
+ Running module version sanity check.
+- Original module
+  - No original module exists within this kernel
+- Installation
+  - Installing to /lib/modules/3.13.0-43-generic/updates/dkms/
+
+vboxnetflt.ko:
+Running module version sanity check.
+- Original module
+  - No original module exists within this kernel
+- Installation
+  - Installing to /lib/modules/3.13.0-43-generic/updates/dkms/
+
+vboxpci.ko:
+Running module version sanity check.
+- Original module
+  - No original module exists within this kernel
+- Installation
+  - Installing to /lib/modules/3.13.0-43-generic/updates/dkms/
+
+depmod.........
+
+DKMS: install completed.
+* Stopping VirtualBox kernel modules
+  ...done.
+* Starting VirtualBox kernel modules
+  ...done.
+Setting up virtualbox-qt <span class="o">(</span>4.3.10-dfsg-1<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> libc-bin <span class="o">(</span>2.19-0ubuntu6.4<span class="o">)</span> ...
+Temp File /tmp/ptconfigure-temp-script-27415379023.sh Removed
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+Virtualbox: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="opciones">
+<h2>Opciones<a class="headerlink" href="#opciones" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="22%" />
+<col width="24%" />
+<col width="10%" />
+<col width="44%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parámetros</th>
+<th class="head">Parámetro Alternativa</th>
+<th class="head">Opciones</th>
+<th class="head">Comentarios</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Install Virtualbox? (Y/N)</td>
+<td>Virtualbox, virtualbox</td>
+<td>Y(Yes)</td>
+<td>Si el usuario desea continuar el proceso de
+instalación se puede introducir como Y.</td>
+</tr>
+<tr class="row-odd"><td>Install Virtualbox? (Y/N)</td>
+<td>Virtualbox, virtualbox</td>
+<td>N(No)</td>
+<td>Si el usuario desea abandonar el proceso de
+instalación se puede introducir como N.|</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Voz se puede instalar a través de este módulo.</li>
+<li>Ambas imágenes ISO y dispositivos físicos de host conectados pueden ser montados como unidades de CD / DVD.</li>
+<li>La imagen del DVD de una distribución de Linux puede ser descargado y utilizado directamente por VirtualBox.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Virtualbox</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#comando-ayuda">comando Ayuda</a></li>
+<li><a class="reference internal" href="#instalacion">instalación</a></li>
+<li><a class="reference internal" href="#opciones">Opciones</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="svarnish.html"
+                        title="previous chapter">Varnish</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="svmplayer.html"
+                        title="next chapter">Vmplayer</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/svirtualbox.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="svmplayer.html" title="Vmplayer"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="svarnish.html" title="Varnish"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" >Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

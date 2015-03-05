@@ -1,0 +1,243 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>User &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="Ptconfigure" href="sptconfigure_main.html" />
+    <link rel="next" title="Varnish" href="svarnish.html" />
+    <link rel="prev" title="Ubuntu Compiler" href="subuntucompiler.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="svarnish.html" title="Varnish"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="subuntucompiler.html" title="Ubuntu Compiler"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" accesskey="U">Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="user">
+<h1>User<a class="headerlink" href="#user" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>Sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Un usuario es cualquier persona que usa una computadora. La computadora tiene un nombre para cada cuenta que crea, y es este nombre por el cual una persona adquiere el acceso a usar la computadora. Algunos servicios del sistema también se ejecutan utilizando cuentas de usuario restringidas o privilegiados.</p>
+<p>Administración de usuarios se realiza con el propósito de la seguridad limitando el acceso de ciertas maneras específicas. El superusuario (root) tiene acceso completo al sistema operativo y su configuración; que está diseñado sólo para uso administrativo. Los usuarios sin privilegios pueden utilizar los programas del SU y sudo para una escalada de privilegios controlada.</p>
+<p>Una parte fundamental de la administración del sistema es la configuración y administración de usuarios y grupos. Parte de esta tarea consiste en la vigilancia de la log en las capacidades de todas las entidades del sistema.</p>
+<p>Vamos a explorar estos conceptos en un Ubuntu 12.04 VPS, pero se puede seguir a lo largo de toda distribución hasta al fecha Linux.</p>
+</div>
+<div class="section" id="ayuda-comando">
+<h2>Ayuda Comando<a class="headerlink" href="#ayuda-comando" title="Permalink to this headline">¶</a></h2>
+<p>Este comando ayuda a determinar el uso del módulo de usuario. El usuario se llega a saber acerca de la diferente forma / formato de ejecutar este módulo. Este comando guía al usuario final a conocer el propósito de este comando. A continuación dado son el mando y la pantalla del mismo.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure user <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La captura de pantalla para el comando anterior se enumeran a continuación,</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure user <span class="nb">help</span>
+******************************
+This <span class="nb">command </span>allows you to modify create or modify users
+User, user
+
+      - create
+      Create a new system user, overwriting <span class="k">if</span> it exists
+      example: ptconfigure user create --username<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+
+      - remove
+      Remove a system user
+      example: ptconfigure user remove --username<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+
+      - <span class="nb">set</span>-password
+      Set the password of a system user
+      example: ptconfigure user <span class="nb">set</span>-password --username<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --new-password<span class="o">=</span><span class="s2">&quot;somepassword&quot;</span>
+
+      - exists
+      Check the existence of a user
+      example: ptconfigure user exists --username<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+
+      - show-groups
+      Show groups to which a user belongs
+      example: ptconfigure user show-groups --username<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+
+      - add-to-group
+      Add user to a group
+      example: ptconfigure user add-to-group --username<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --groupname<span class="o">=</span><span class="s2">&quot;somegroupname&quot;</span>
+
+      - remove-from-group
+      Remove user from a group
+      example: ptconfigure user remove-from-group --username<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --groupname<span class="o">=</span><span class="s2">&quot;somegroupname&quot;</span>
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="crear">
+<h2>crear<a class="headerlink" href="#crear" title="Permalink to this headline">¶</a></h2>
+<p>Cuando el usuario necesita para crear una nueva cuenta de usuario del sistema, el comando a continuación se indica se ejecutará el proceso.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure user create --username<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="quitar">
+<h2>quitar<a class="headerlink" href="#quitar" title="Permalink to this headline">¶</a></h2>
+<p>Cuando el usuario necesita eliminar una cuenta de usuario del sistema, el comando a continuación se indica se ejecutará el proceso.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure user remove --username<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="set-contrasena">
+<h2>Set-contraseña<a class="headerlink" href="#set-contrasena" title="Permalink to this headline">¶</a></h2>
+<p>Cuando el usuario necesita para establecer la contraseña de un usuario del sistema, el comando a continuación se indica se ejecutará el proceso.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure user <span class="nb">set</span>-password --username<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --new-password<span class="o">=</span><span class="s2">&quot;somepassword&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="existe">
+<h2>existe<a class="headerlink" href="#existe" title="Permalink to this headline">¶</a></h2>
+<p>Cuando el usuario necesita para comprobar la existencia de un usuario, el comando a continuación se indica se ejecutará el proceso.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure user exists --username<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="mostrar-grupos">
+<h2>Mostrar grupos<a class="headerlink" href="#mostrar-grupos" title="Permalink to this headline">¶</a></h2>
+<p>Cuando el usuario necesita para mostrar grupos a los que pertenece un usuario, el comando a continuación se indica se ejecutará el proceso.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure user show-groups --username<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="add-a-grupo">
+<h2>Add-a grupo<a class="headerlink" href="#add-a-grupo" title="Permalink to this headline">¶</a></h2>
+<p>Cuando el usuario necesita añadir usuario a un grupo, el siguiente comando dado se ejecutará el proceso.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure user add-to-group --username<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --groupname<span class="o">=</span><span class="s2">&quot;somegroupname&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="remove-de-grupo">
+<h2>Remove-de-grupo<a class="headerlink" href="#remove-de-grupo" title="Permalink to this headline">¶</a></h2>
+<p>Cuando el usuario necesita para eliminar el usuario de un grupo, el siguiente comando dado se ejecutará el proceso.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure user remove-from-group --username<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --groupname<span class="o">=</span><span class="s2">&quot;somegroupname&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="parametro-alternativa">
+<h2>Parámetro Alternativa<a class="headerlink" href="#parametro-alternativa" title="Permalink to this headline">¶</a></h2>
+<p>Hay dos parámetros alternativos que pueden ser utilizados en la línea de comandos.</p>
+<p>User, user</p>
+<p>ejemplo: ptconfigure User help /ptconfigure user help</p>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<p>La autenticación de usuarios en Linux es un área relativamente flexible de gestión del sistema. Hay muchas maneras de lograr el mismo objetivo con herramientas muy simples.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">User</a><ul>
+<li><a class="reference internal" href="#sinopsis">Sinopsis</a></li>
+<li><a class="reference internal" href="#ayuda-comando">Ayuda Comando</a></li>
+<li><a class="reference internal" href="#crear">crear</a></li>
+<li><a class="reference internal" href="#quitar">quitar</a></li>
+<li><a class="reference internal" href="#set-contrasena">Set-contraseña</a></li>
+<li><a class="reference internal" href="#existe">existe</a></li>
+<li><a class="reference internal" href="#mostrar-grupos">Mostrar grupos</a></li>
+<li><a class="reference internal" href="#add-a-grupo">Add-a grupo</a></li>
+<li><a class="reference internal" href="#remove-de-grupo">Remove-de-grupo</a></li>
+<li><a class="reference internal" href="#parametro-alternativa">Parámetro Alternativa</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="subuntucompiler.html"
+                        title="previous chapter">Ubuntu Compiler</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="svarnish.html"
+                        title="next chapter">Varnish</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/suser.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="svarnish.html" title="Varnish"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="subuntucompiler.html" title="Ubuntu Compiler"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" >Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,406 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>SVN &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="Ptconfigure" href="sptconfigure_main.html" />
+    <link rel="next" title="SystemDetection" href="ssystemdetection.html" />
+    <link rel="prev" title="Sudonopass" href="ssudonopass.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="ssystemdetection.html" title="SystemDetection"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="ssudonopass.html" title="Sudonopass"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" accesskey="U">Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="svn">
+<h1>SVN<a class="headerlink" href="#svn" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Este módulo ayuda a los usuarios a instalar la última versión de SVN en Ubuntu. Subversion (a menudo abreviado SVN, después de que el nombre del comando svn) es un sistema de control de versiones de software y control de revisiones distribuido como software libre bajo la licencia Apache. [1] Los desarrolladores usar Subversion para mantener las versiones actuales e históricas de archivos como el código fuente, web páginas y documentación. Su objetivo es ser un sucesor en su mayoría compatibles con la Concurrent Versions System ampliamente utilizado (CVS). Veamos cómo este módulo facilita en instalación, desinstalación, asegurando la subversión en ubuntu.</p>
+</div>
+<div class="section" id="ayuda-comando">
+<h2>Ayuda Comando<a class="headerlink" href="#ayuda-comando" title="Permalink to this headline">¶</a></h2>
+<p>El comando help guía a los usuarios en cuanto a la finalidad y al igual que sobre las opciones que se incluyen en el SVN. En él se enumeran los parámetros alternativos de subversion. También describe la sintaxis para instalar, desinstalar, asegurando la subversion. El comando de ayuda para el módulo de SVN se muestra a continuación.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure svn <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La sintaxis para declarar el comando de ayuda no es sensible a mayúsculas, que es una ventaja añadida. La siguiente captura de pantalla a visualizar sobre el comando de ayuda en virtud de subversion.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure svn <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>allows you to install the latest available SVN in the Ubuntu
+ repositories.
+
+ SVN, svn
+
+       - install
+       Installs the latest available <span class="o">(</span>In your package manager<span class="o">)</span> version of SVN
+       example: ptconfigure svn install
+
+       - ensure
+       Ensures SVN is installed
+       example: ptconfigure svn ensure
+
+       - uninstall
+       Installs the latest version of SVN
+       example: ptconfigure svn uninstall
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="instalacion">
+<h2>instalación<a class="headerlink" href="#instalacion" title="Permalink to this headline">¶</a></h2>
+<p>El comando utilizado para instalar el SVN para el ubuntu se muestra a continuación.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure svn install
+</pre></div>
+</div>
+<p>Después de introducir el comando anterior, las siguientes operaciones se produce como se muestra en forma de tabla.</p>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="20%" />
+<col width="30%" />
+<col width="9%" />
+<col width="41%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parámetros</th>
+<th class="head">Parámetro Alternativa</th>
+<th class="head">Opciones</th>
+<th class="head">Comentarios</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Install SVN? (Y/N)</td>
+<td>En lugar de SVN, podemos utilizar
+svn también.</td>
+<td>Y(Yes)</td>
+<td>Si el usuario desea continuar el proceso de
+instalación se puede introducir como Y.</td>
+</tr>
+<tr class="row-odd"><td>Install SVN? (Y/N)</td>
+<td>En lugar de SVN, podemos utilizar
+svn también.</td>
+<td>N(No)</td>
+<td>Si el usuario desea abandonar el proceso de
+instalación se puede introducir como N.|</td>
+</tr>
+</tbody>
+</table>
+<p>Si el usuario continúa el proceso de instalación, durante la ejecución de la instalación produce el siguiente proceso:</p>
+<ul class="simple">
+<li>Lee las listas de paquetes.</li>
+<li>Construye el árbol de dependencias.</li>
+<li>Lee la información de estado.</li>
+<li>Enumera a cabo paquetes adicionales instalados.</li>
+<li>Enumera nuevos paquetes instalados.</li>
+<li>Número de archivos actualizados, recién instalados, retirados, sin actualizar.</li>
+<li>Por último, la instalación de SVN se completó. La siguiente captura de pantalla que muestra sobre el proceso de instalación de SVN en ubuntu.</li>
+</ul>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure svn install
+Install SVN? <span class="o">(</span>Y/N<span class="o">)</span>
+Y
+*******************************
+*        Pharaoh Tools        *
+*         !Subversion!        *
+*******************************
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+ libserf-1-1 libsvn1
+Suggested packages:
+ subversion-tools db5.3-util
+The following NEW packages will be installed:
+ libserf-1-1 libsvn1 subversion
+<span class="m">0</span> upgraded, <span class="m">3</span> newly installed, <span class="m">0</span> to remove and <span class="m">8</span> not upgraded.
+Need to get 1,240 kB of archives.
+After this operation, 4,701 kB of additional disk space will be used.
+Get:1 http://in.archive.ubuntu.com/ubuntu/ trusty-updates/main libserf-1-1 amd64 1.3.3-1ubuntu0.1 <span class="o">[</span>42.2 kB<span class="o">]</span>
+Get:2 http://in.archive.ubuntu.com/ubuntu/ trusty-updates/main libsvn1 amd64 1.8.8-1ubuntu3.1 <span class="o">[</span><span class="m">917</span> kB<span class="o">]</span>
+Get:3 http://in.archive.ubuntu.com/ubuntu/ trusty-updates/main subversion amd64 1.8.8-1ubuntu3.1 <span class="o">[</span><span class="m">280</span> kB<span class="o">]</span>
+Fetched 1,240 kB in 43s <span class="o">(</span>28.3 kB/s<span class="o">)</span>
+Selecting previously unselected package libserf-1-1:amd64.
+<span class="o">(</span>Reading database ... <span class="m">211229</span> files and directories currently installed.<span class="o">)</span>
+Preparing to unpack .../libserf-1-1_1.3.3-1ubuntu0.1_amd64.deb ...
+Unpacking libserf-1-1:amd64 <span class="o">(</span>1.3.3-1ubuntu0.1<span class="o">)</span> ...
+Selecting previously unselected package libsvn1:amd64.
+Preparing to unpack .../libsvn1_1.8.8-1ubuntu3.1_amd64.deb ...
+Unpacking libsvn1:amd64 <span class="o">(</span>1.8.8-1ubuntu3.1<span class="o">)</span> ...
+Selecting previously unselected package subversion.
+Preparing to unpack .../subversion_1.8.8-1ubuntu3.1_amd64.deb ...
+Unpacking subversion <span class="o">(</span>1.8.8-1ubuntu3.1<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> man-db <span class="o">(</span>2.6.7.1-1ubuntu1<span class="o">)</span> ...
+Setting up libserf-1-1:amd64 <span class="o">(</span>1.3.3-1ubuntu0.1<span class="o">)</span> ...
+Setting up libsvn1:amd64 <span class="o">(</span>1.8.8-1ubuntu3.1<span class="o">)</span> ...
+Setting up subversion <span class="o">(</span>1.8.8-1ubuntu3.1<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> libc-bin <span class="o">(</span>2.19-0ubuntu6.5<span class="o">)</span> ...
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package subversion from the Packager Apt executed correctly
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+SVN: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="un-instalar">
+<h2>Un instalar<a class="headerlink" href="#un-instalar" title="Permalink to this headline">¶</a></h2>
+<p>El comando utilizado para des instalar el SVN para el ubuntu se muestra a continuación.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure svn uninstall
+</pre></div>
+</div>
+<p>Después de introducir el comando anterior, las siguientes operaciones se produce como se muestra en el formato tabular.</p>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="21%" />
+<col width="28%" />
+<col width="10%" />
+<col width="41%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parámetros</th>
+<th class="head">Parámetro Alternativa</th>
+<th class="head">Opciones</th>
+<th class="head">Comentarios</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Uninstall SVN? (Y/N)</td>
+<td>En lugar de SVN, podemos
+utilizar svn también.</td>
+<td>Y(Yes)</td>
+<td>Si el usuario desea continuar el proceso de
+desinstalación se puede introducir como Y.</td>
+</tr>
+<tr class="row-odd"><td>Uninstall SVN? (Y/N)</td>
+<td>En lugar de SVN, podemos
+utilizar svn también.</td>
+<td>N(No)</td>
+<td>Si el usuario desea salir del proceso de
+desinstalación que puede introducir como N.|</td>
+</tr>
+</tbody>
+</table>
+<p>Si el usuario continúa el proceso de instalación de la ONU, durante la ejecución de desinstalación produce el siguiente proceso:</p>
+<ul class="simple">
+<li>Lee las listas de paquetes.</li>
+<li>Construye el árbol de dependencias.</li>
+<li>Lee la información de estado.</li>
+<li>Lista cabo paquetes que se instalan automáticamente.</li>
+<li>Enumera a paquetes que se eliminan.</li>
+<li>Número de archivos actualizados, recién instalados, retirados, sin actualizar.</li>
+</ul>
+<p>Por último, la desinstalación de SVN se completó. La siguiente captura de pantalla que muestra sobre el proceso de des instalar subversion en ubuntu.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure svn uninstall
+Uninstall SVN? <span class="o">(</span>Y/N<span class="o">)</span>
+Y
+*******************************
+*        Pharaoh Tools        *
+*         !Subversion!        *
+*******************************
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Removing Package subversion
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following packages were automatically installed and are no longer required:
+ libserf-1-1 libsvn1
+Use <span class="s1">&#39;apt-get autoremove&#39;</span> to remove them.
+The following packages will be REMOVED:
+ subversion
+<span class="m">0</span> upgraded, <span class="m">0</span> newly installed, <span class="m">1</span> to remove and <span class="m">8</span> not upgraded.
+After this operation, 1,425 kB disk space will be freed.
+<span class="o">(</span>Reading database ... <span class="m">211322</span> files and directories currently installed.<span class="o">)</span>
+Removing subversion <span class="o">(</span>1.8.8-1ubuntu3.1<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> man-db <span class="o">(</span>2.6.7.1-1ubuntu1<span class="o">)</span> ...
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Removed Package subversion from the Packager Apt
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+******************************
+
+
+Single App Uninstaller:
+------------------------------
+SVN: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="asegurar">
+<h2>asegurar<a class="headerlink" href="#asegurar" title="Permalink to this headline">¶</a></h2>
+<p>El comando utilizado para asegurar SVN se muestra a continuación.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure svn ensure
+</pre></div>
+</div>
+<p>El proceso de garantizar realiza las siguientes funciones:</p>
+<ul class="simple">
+<li>Se asegurará de si el módulo está instalado o no, y no se comprueba la versión.</li>
+<li>Si ya está instalado el módulo se reportará como ya lo está existía.</li>
+<li>Si el módulo no está disponible en la máquina del usuario, a continuación, se procederá de la instalación.</li>
+</ul>
+<p>Las siguientes imágenes se aprecia el proceso de asegurar.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure svn ensure
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Ensure module install is not checking versions
+sh: 1: svn: not found
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Module SVN reports itself as Not Installed
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Installing as not installed
+*******************************
+*        Pharaoh Tools        *
+*         !Subversion!        *
+*******************************
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Suggested packages:
+ subversion-tools db5.3-util
+The following NEW packages will be installed:
+ subversion
+<span class="m">0</span> upgraded, <span class="m">1</span> newly installed, <span class="m">0</span> to remove and <span class="m">8</span> not upgraded.
+Need to get <span class="m">0</span> B/280 kB of archives.
+After this operation, 1,425 kB of additional disk space will be used.
+Selecting previously unselected package subversion.
+<span class="o">(</span>Reading database ... <span class="m">211282</span> files and directories currently installed.<span class="o">)</span>
+Preparing to unpack .../subversion_1.8.8-1ubuntu3.1_amd64.deb ...
+Unpacking subversion <span class="o">(</span>1.8.8-1ubuntu3.1<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> man-db <span class="o">(</span>2.6.7.1-1ubuntu1<span class="o">)</span> ...
+Setting up subversion <span class="o">(</span>1.8.8-1ubuntu3.1<span class="o">)</span> ...
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package subversion from the Packager Apt executed correctly
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Los parámetros utilizados en la declaración de la ayuda y de las instalaciones, desinstalación, asegúrese de que no distinguen entre
+mayúsculas y minúsculas, lo que se añade la ventaja, mientras que en comparación con otros.</li>
+<li>El usuario puede asegurarse sobre la disponibilidad antes de proceder con la instalación.</li>
+<li>No va a sobrescribir los paquetes, por lo que es menos tiempo.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">SVN</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#ayuda-comando">Ayuda Comando</a></li>
+<li><a class="reference internal" href="#instalacion">instalación</a></li>
+<li><a class="reference internal" href="#un-instalar">Un instalar</a></li>
+<li><a class="reference internal" href="#asegurar">asegurar</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="ssudonopass.html"
+                        title="previous chapter">Sudonopass</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="ssystemdetection.html"
+                        title="next chapter">SystemDetection</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/ssvn.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="ssystemdetection.html" title="SystemDetection"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="ssudonopass.html" title="Sudonopass"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" >Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>SshKeygen &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="Ptconfigure" href="sptconfigure_main.html" />
+    <link rel="next" title="StandardTools" href="sstandardtools.html" />
+    <link rel="prev" title="SshKeyInstall" href="ssshkeyinstall.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="sstandardtools.html" title="StandardTools"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="ssshkeyinstall.html" title="SshKeyInstall"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" accesskey="U">Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="sshkeygen">
+<h1>SshKeygen<a class="headerlink" href="#sshkeygen" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Es una ayuda para generar el valor de la clave. Este módulo es tener dos tipos de clave. Son DSA, RSA. dsa valor clave de bits es 1024 y el valor del bit de claves RSA es más de 768. A continuación, sólo puede funcionar. Es muy útil en la tarea con Ubuntu y CentOS.</p>
+</div>
+<div class="section" id="ayuda-comando">
+<h2>Ayuda Comando<a class="headerlink" href="#ayuda-comando" title="Permalink to this headline">¶</a></h2>
+<p>Este comando ayuda explica acerca de la instalación de un módulo en particular. El comando de ayuda es fácil de manejar por el usuario final. El siguiente comando guió al usuario acerca de la instalación.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure Sshkeygen <span class="nb">help</span>
+</pre></div>
+</div>
+<p>Después de dar el comando, el comando listará las opciones de ayuda. Las siguientes capturas de pantalla darán efecto visual para el uso de este módulo.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure SshKeygen <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>allows you to install an SSH Key Pair.
+
+ SshKeygen, ssh-keygen, sshkeygen
+
+       - install
+       Installs a new SSH Key
+       example: ptconfigure ssh-keygen install
+       example: ptconfigure ssh-keygen install --yes --bits<span class="o">=</span><span class="m">4096</span> --type<span class="o">=</span>rsa --path<span class="o">=</span><span class="s2">&quot;/home/dave/.ssh/id_rsa&quot;</span> --comment<span class="o">=</span><span class="s2">&quot;Daves&quot;</span>
+
+       - uninstall
+       Removes an SSH Key
+       example: ptconfigure ssh-keygen uninstall
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="instalacion">
+<h2>instalación<a class="headerlink" href="#instalacion" title="Permalink to this headline">¶</a></h2>
+<p>La instalación no es un proceso difícil de instalar este módulo bajo ptconfigure por la mera utilización de la orden dada a continuación,</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure sshkeygen install
+</pre></div>
+</div>
+<p>Después de introducir los insumos claves SSH gen se ha instalado correctamente. Las siguientes capturas de pantalla darán efecto visual para el uso de este módulo.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure ssh-keygen install
+Install SSH Key Generation? <span class="o">(</span>Y/N<span class="o">)</span>
+Y
+*******************************
+*        Pharaoh Tools        *
+*         sshkeygen!        *
+*******************************
+Enter number of bits <span class="k">for</span> SSH Key <span class="o">(</span>multiple of 1024<span class="o">)</span>:
+1024
+Choose Key <span class="nb">type</span> <span class="o">(</span>rsa/dsa<span class="o">)</span>
+<span class="o">(</span>0<span class="o">)</span> rsa
+<span class="o">(</span>1<span class="o">)</span> dsa
+1
+Enter path to store private key <span class="o">(</span>public key will be same with .pub<span class="o">)</span>:
+/root/SSH/abcd
+Plain text comment appended to public key. None is fine
+kevell
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+SshKeygen: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="opciones">
+<h2>Opciones<a class="headerlink" href="#opciones" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="20%" />
+<col width="24%" />
+<col width="9%" />
+<col width="48%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parámetros</th>
+<th class="head">Directorio (por defecto)</th>
+<th class="head">Opciones</th>
+<th class="head">Comentarios</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Install Key Generation</td>
+<td>Yes</td>
+<td>&nbsp;</td>
+<td>Se instalará la generación de claves bajo ptconfigure</td>
+</tr>
+<tr class="row-odd"><td>Install Key Generation</td>
+<td>No</td>
+<td>&nbsp;</td>
+<td>El proceso se cierra.</td>
+</tr>
+<tr class="row-even"><td>Choose key type</td>
+<td>rsa</td>
+<td>0</td>
+<td>Se instalará la generación de claves bajo tipo de clave
+seleccionado</td>
+</tr>
+<tr class="row-odd"><td>Choose key type</td>
+<td>dsa</td>
+<td>1</td>
+<td>Se instalará la generación de claves bajo tipo de clave
+seleccionado</td>
+</tr>
+<tr class="row-even"><td>path</td>
+<td>/root/ssh/filename</td>
+<td>&nbsp;</td>
+<td>Se va a crear el archivo con la clave pública y privada|</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<p>Podemos trabajar de un lugar remoto. El usuario tiene que indicar al sistema para la ruta. Generación automática es posible. Podemos añadir el archivo cuando lo necesite. Podemos compartir las llaves sin contraseña. No entre mayúsculas y minúsculas.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">SshKeygen</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#ayuda-comando">Ayuda Comando</a></li>
+<li><a class="reference internal" href="#instalacion">instalación</a></li>
+<li><a class="reference internal" href="#opciones">Opciones</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="ssshkeyinstall.html"
+                        title="previous chapter">SshKeyInstall</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sstandardtools.html"
+                        title="next chapter">StandardTools</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/ssshkeygen.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="sstandardtools.html" title="StandardTools"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="ssshkeyinstall.html" title="SshKeyInstall"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" >Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

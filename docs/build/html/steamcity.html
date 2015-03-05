@@ -1,0 +1,232 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Teamcity module &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="Ptconfigure" href="sptconfigure_main.html" />
+    <link rel="next" title="Templating" href="stemplating.html" />
+    <link rel="prev" title="SystemDetection" href="ssystemdetection.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="stemplating.html" title="Templating"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="ssystemdetection.html" title="SystemDetection"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" accesskey="U">Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="teamcity-module">
+<h1>Teamcity module<a class="headerlink" href="#teamcity-module" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>TeamCity es una gestión de construcción basada en Java y el servidor de integración continua. Este módulo tiene como objetivo instalar la última versión del servidor TeamCity y sus dependencias.</p>
+</div>
+<div class="section" id="ayuda-comando">
+<h2>Ayuda Comando<a class="headerlink" href="#ayuda-comando" title="Permalink to this headline">¶</a></h2>
+<p>El comando de ayuda guía al usuario para proporcionar lo necesario para realizar la tarea. El comando para hacer uso de la ayuda debajo del terminal se da de la siguiente manera,</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure Teamcity <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La instantánea de abajo te da una representación pictórica de comando de ayuda y aparece dos parámetros como TeamCity y TeamCity. (Los parámetros son mayúsculas y minúsculas)</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@copy:/# ptconfigure teamcity <span class="nb">help</span>
+******************************
+
+
+This <span class="nb">command </span>allows you to install Teamcity, the popular Build Server.
+
+Teamcity, teamcity
+
+- install
+Installs Teamcity from the Jetbrains distributed native package
+example: ptconfigure teamcity install
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="instalacion">
+<h2>instalación<a class="headerlink" href="#instalacion" title="Permalink to this headline">¶</a></h2>
+<p>El comando que se utiliza para la instalación de módulo TeamCity se da a continuación,</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure Teamcity install
+</pre></div>
+</div>
+<p>La pantalla de abajo se explica cómo instalar el módulo TeamCity.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure Teamcity install
+Install Teamcity? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+*******************************
+*        Pharaoh Tools        *
+*          ! Teamcity !        *
+*******************************
+PHP Notice:  Undefined index: version in /opt/ptconfigure/ptconfigure/src/Modules/Teamcity/Model/TeamcityUbuntu.php on line 42
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Ensure module install is not checking versions
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Module Java reports itself as Installed
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Not installing as already installed
+Creating /tmp/ptconfigure-temp-script-82478215982.sh
+chmod <span class="m">755</span> /tmp/ptconfigure-temp-script-82478215982.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-82478215982.sh Permissions
+Executing /tmp/ptconfigure-temp-script-82478215982.sh
+--2015-01-08 14:42:15--  http://download.jetbrains.com/teamcity/TeamCity-8.1.3.tar.gz
+Resolving download.jetbrains.com <span class="o">(</span>download.jetbrains.com<span class="o">)</span>... 54.217.236.18
+Connecting to download.jetbrains.com <span class="o">(</span>download.jetbrains.com<span class="o">)</span><span class="p">|</span>54.217.236.18<span class="p">|</span>:80... connected.
+HTTP request sent, awaiting response... <span class="m">302</span> Moved Temporarily
+Location: http://download-cf.jetbrains.com/teamcity/TeamCity-8.1.3.tar.gz <span class="o">[</span>following<span class="o">]</span>
+--2015-01-08 14:42:16--  http://download-cf.jetbrains.com/teamcity/TeamCity-8.1.3.tar.gz
+Resolving download-cf.jetbrains.com <span class="o">(</span>download-cf.jetbrains.com<span class="o">)</span>... 54.230.190.208, 54.230.190.220, 54.230.190.210, ...
+Connecting to download-cf.jetbrains.com <span class="o">(</span>download-cf.jetbrains.com<span class="o">)</span><span class="p">|</span>54.230.190.208<span class="p">|</span>:80... connected.
+HTTP request sent, awaiting response... <span class="m">200</span> OK
+Length: <span class="m">551078596</span> <span class="o">(</span>526M<span class="o">)</span> <span class="o">[</span>application/x-tar<span class="o">]</span>
+Saving to: â€˜TeamCity-8.1.3.tar.gzâ€™
+
+ 99% <span class="o">[</span>                                                                                                   &gt;  <span class="o">]</span> 60,46,771   63.3KB/s
+</pre></div>
+</div>
+</div>
+<div class="section" id="opciones">
+<h2>Opciones<a class="headerlink" href="#opciones" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="22%" />
+<col width="21%" />
+<col width="10%" />
+<col width="47%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parámetros</th>
+<th class="head">Parámetro Alternativa</th>
+<th class="head">Opciones</th>
+<th class="head">Comentarios</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Install Teamcity? (Y/N)</td>
+<td>Teamcity, teamcity</td>
+<td>Y(Yes)</td>
+<td>Si el usuario desea continuar el proceso de
+instalación se puede introducir como Y.</td>
+</tr>
+<tr class="row-odd"><td>Install Teamcity? (Y/N)</td>
+<td>Teamcity, teamcity</td>
+<td>N(No)</td>
+<td>Si el usuario desea abandonar el proceso de
+instalación se puede introducir como N.|</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Instala todos los requisitos de apoyo para ejecutar el servidor TeamCity de manera eficiente</li>
+<li>Uso La facilidad de acceso y la instalación</li>
+<li>La codificación es sensible a mayúsculas.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Teamcity module</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#ayuda-comando">Ayuda Comando</a></li>
+<li><a class="reference internal" href="#instalacion">instalación</a></li>
+<li><a class="reference internal" href="#opciones">Opciones</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="ssystemdetection.html"
+                        title="previous chapter">SystemDetection</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="stemplating.html"
+                        title="next chapter">Templating</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/steamcity.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="stemplating.html" title="Templating"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="ssystemdetection.html" title="SystemDetection"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" >Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>SystemDetection &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="Ptconfigure" href="sptconfigure_main.html" />
+    <link rel="next" title="Teamcity module" href="steamcity.html" />
+    <link rel="prev" title="SVN" href="ssvn.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="steamcity.html" title="Teamcity module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="ssvn.html" title="SVN"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" accesskey="U">Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="systemdetection">
+<h1>SystemDetection<a class="headerlink" href="#systemdetection" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Este módulo tiene como objetivo la detección de la máquina de los usuarios y en la mano les proporciona la información necesaria para ellos en relación con el sistema del usuario. También proporciona una facilidad para los usuarios configurar sus ajustes de aplicaciones. Los pocos ejemplos de configuración de aplicaciones incluye mysql usuario administrador, anfitrión, pase.</p>
+</div>
+<div class="section" id="ayuda-comando">
+<h2>Ayuda Comando<a class="headerlink" href="#ayuda-comando" title="Permalink to this headline">¶</a></h2>
+<p>El comando de ayuda conduce a los usuarios en cuanto a la finalidad y al igual que sobre las opciones que se incluyen en los módulos de detección del sistema. Las listas de comandos de ayuda fuera de los parámetros alternativos de detección del sistema. También se describe la sintaxis para la detección de la máquina de los usuarios. El comando de ayuda para la detección de sistema se muestra a continuación.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure systemdetection <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La sintaxis para declarar el comando de ayuda no es sensible a mayúsculas, que es una ventaja añadida. La siguiente captura de pantalla a visualizar sobre el comando de ayuda en virtud de detección del sistema.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure SystemDetection <span class="nb">help</span>
+******************************
+
+
+This is a default Module and provides you with a method by which you can configure Application Settings.
+ You can configure default application settings, ie: mysql admin user, host, pass
+
+ SystemDetection, system-detection, systemdetection
+
+- detect
+Detects the Operating System
+example: ptconfigure system-detection detect
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="deteccion">
+<h2>detección<a class="headerlink" href="#deteccion" title="Permalink to this headline">¶</a></h2>
+<p>El comando que se utiliza para la detección de sistema es la siguiente.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure systemdetection detect
+</pre></div>
+</div>
+<p>Después de introducir el comando anterior, el proceso de detección del sistema comienza. Durante la detección del sistema de la siguiente información con respecto a la máquina correspondiente se informa:</p>
+<ul class="simple">
+<li>Sistema Operativo</li>
+<li>Tipo de Linux</li>
+<li>Distro</li>
+<li>Versión</li>
+<li>Arquitectura</li>
+<li>Nombre de host</li>
+<li>Dirección IP 0.</li>
+<li>Dirección IP 1.</li>
+</ul>
+<p>Finalmente, después de la detección de la información relativa a las características antes mencionadas se informó claramente. La siguiente captura de pantalla que muestra sobre el proceso de detección del sistema.</p>
+<div class="highlight-bash"><div class="highlight"><pre>Kevell@corp:/# ptconfigure system-detection detect
+******************************
+
+
+Systems Detection:
+--------------------------------------------
+
+Operating System: Linux
+Linux Type: Debian
+Distro: Ubuntu
+Version: 14.04
+Architecture: 64
+Host Name: Kevells
+IP Address 0: 127.0.0.1
+IP Address 1: 192.168.1.3
+
+------------------------------
+Detection Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="parametros-alternativos">
+<h2>parámetros alternativos<a class="headerlink" href="#parametros-alternativos" title="Permalink to this headline">¶</a></h2>
+<p>En lugar de systemdetection, los siguientes parámetros pueden ser utilizados:</p>
+<p>SystemDetection, system-detection, systemdetection</p>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Los usuarios pueden configurar los parámetros de la aplicación que utilizan este sistema de detecciones.</li>
+<li>Los parámetros utilizados para la declaración de comando de ayuda, detección de sistemas no son sensibles, que es una ventaja añadida,
+mientras que en comparación con otros.</li>
+<li>Es-acomodados tanto en OS Cent y así como en Ubuntu.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">SystemDetection</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#ayuda-comando">Ayuda Comando</a></li>
+<li><a class="reference internal" href="#deteccion">detección</a></li>
+<li><a class="reference internal" href="#parametros-alternativos">parámetros alternativos</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="ssvn.html"
+                        title="previous chapter">SVN</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="steamcity.html"
+                        title="next chapter">Teamcity module</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/ssystemdetection.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="steamcity.html" title="Teamcity module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="ssvn.html" title="SVN"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" >Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

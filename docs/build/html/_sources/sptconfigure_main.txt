@@ -635,10 +635,11 @@ Jugando con módulos PTConfigure
    sport
    spostgressserver
    sprocess
-   sptbuild
+   sptbuild_configure
    sptconfigure
-   sptdeploy_cleo
-   sptvirtualize
+   sptdeploy_configure
+   spttest_configure
+   sptvirtualize_configure
    spython
    sra
    sredis
@@ -647,3 +648,33 @@ Jugando con módulos PTConfigure
    srubysystem
    sruncommand
    sseleniumserver
+   sservice
+   ssftp
+   sskipfish
+   ssshencrypt
+   ssshharden
+   ssshkeyinstall
+   ssshkeygen
+   sstandardtools
+   ssudonopass
+   ssvn
+   ssystemdetection
+   steamcity
+   stemplating
+   stomcat
+   subuntucompiler
+   suser
+   svarnish
+   svirtualbox
+   svmplayer
+   svmwareworkstation
+   svnc
+   svncpassword
+   swireframesketcher
+   sxvfb
+   szendserver
+
+
+
+
+   
