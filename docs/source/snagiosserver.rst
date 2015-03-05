@@ -97,13 +97,13 @@ Opciones
  |Server? (Y/N)         | utilizados en la línea de comandos.NagiosServer,      |              | de instalación se puede introducir       |
  |                      | nagios-server, nagiosserver, nagios Por               |              | como Y.                                  |
  |                      | ejemplo: ptconfigure nagios install/                  |              |                                          |
- |                      |          ptconfigure nagiosserver install             |              |                                          |
+ |                      | ptconfigure nagiosserver install                      |              |                                          |
  +----------------------+-------------------------------------------------------+--------------+------------------------------------------+
  |Install Nagios        | Hay cuatro parámetros alternativos que pueden ser     | N(No)        | Si el usuario desea abandonar el proceso |
  |Server? (Y/N)         | utilizados en la línea de comandos.NagiosServer,      |              | de instalación se puede introducir como  |
  |                      | nagios-server, nagiosserver, nagios Por            	|              | N.                                       |
  |                      | ejemplo: ptconfigure nagios install/                  |              |                                          |
- |                      |          ptconfigure nagiosserver install|            |              |                                          |
+ |                      | ptconfigure nagiosserver install|                     |              |                                          |
  +----------------------+-------------------------------------------------------+--------------+------------------------------------------+
 
 

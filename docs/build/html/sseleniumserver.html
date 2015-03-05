@@ -1,0 +1,263 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Selenium Server &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="Ptconfigure" href="sptconfigure_main.html" />
+    <link rel="prev" title="Run Command" href="sruncommand.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="sruncommand.html" title="Run Command"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" accesskey="U">Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="selenium-server">
+<h1>Selenium Server<a class="headerlink" href="#selenium-server" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div>El selenio es un marco de pruebas de software portátil para aplicaciones web. El selenio proporciona una herramienta de grabación / reproducción para la edición de las pruebas sin tener que aprender un lenguaje de script de prueba (Selenio IDE). También proporciona un lenguaje de dominio específico de prueba (Selenese) [1] para escribir pruebas en varios lenguajes de programación, como Java, C #, Groovy, Perl, PHP, Python y Ruby. Las pruebas pueden ser ejecutadas en contra de la mayoría de los navegadores web modernos. El selenio se despliega en Windows, Linux y</div></blockquote>
+<p>Macintosh</p>
+<p>Veamos cómo este módulo facilita a los usuarios en la instalación de servidor de selenio.</p>
+</div>
+<div class="section" id="ayuda-comando">
+<h2>Ayuda Comando<a class="headerlink" href="#ayuda-comando" title="Permalink to this headline">¶</a></h2>
+<p>El comando help guía a los usuarios en cuanto a la finalidad y al igual que sobre las opciones que se incluyen en el módulo de servidor selenio. En él se enumeran los parámetros alternativos de módulo de servidor selenio. También describe la sintaxis para instalarlo. El comando de ayuda para el módulo de servidor de selenio se muestra a continuación.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure seleniumserver <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La sintaxis para declarar el comando de ayuda no es sensible a mayúsculas, que es una ventaja añadida. La siguiente captura de pantalla a visualizar sobre el comando de ayuda bajo módulo de servidor selenio.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure SeleniumServer help
+******************************
+
+
+ This command allows you to install Selenium Server.
+
+ SeleniumServer, selenium-server, selenium, selenium-srv, seleniumserver
+
+       - install
+       Installs Selenium Server. Note, you&#39;ll also need Java installed
+       as it is a prerequisite for Selenium
+       example: ptconfigure selenium install
+       example: ptconfigure selenium install --with-chrome-driver # will set the executor command to use default chrome driver
+
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="instalacion">
+<h2>instalación<a class="headerlink" href="#instalacion" title="Permalink to this headline">¶</a></h2>
+<p>El comando utilizado para instalar el servidor de selenio es sencillo como introducir el comando que se muestra a continuación.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure seleniumserver install
+</pre></div>
+</div>
+<p>La captura de pantalla para el comando anterior se enumeran a continuación,</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure selenium install
+
+Install Selenium Server? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+*******************************
+*        Pharaoh Tools        *
+*         Selenium Srv        *
+*******************************
+Enter Selenium Version
+<span class="o">(</span>0<span class="o">)</span> 2.39
+<span class="o">(</span>1<span class="o">)</span> 2.40
+<span class="o">(</span>2<span class="o">)</span> 2.41
+<span class="o">(</span>3<span class="o">)</span> 2.42
+<span class="o">(</span>4<span class="o">)</span> 2.43
+<span class="o">(</span>5<span class="o">)</span> 2.44
+5
+PHP Notice:  Undefined index: version in /opt/ptconfigure/ptconfigure/src/Modules/SeleniumServer/Model/SeleniumServerAllLinux.php on line 50
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Ensure module install is not checking versions
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Command <span class="s1">&#39;git&#39;</span> found
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Command <span class="s1">&#39;gitk&#39;</span> found
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Command <span class="s1">&#39;git-cola&#39;</span> found
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Not installing as already installed
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Ensure module install is not checking versions
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Module Java reports itself as Installed
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Not installing as already installed
+Creating /tmp/ptconfigure-temp-script-96670533394.sh
+chmod <span class="m">755</span> /tmp/ptconfigure-temp-script-96670533394.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-96670533394.sh Permissions
+Executing /tmp/ptconfigure-temp-script-96670533394.sh
+--2015-02-12 15:31:34--  http://selenium-release.storage.googleapis.com//selenium-server-standalone-.0.jar
+Resolving selenium-release.storage.googleapis.com <span class="o">(</span>selenium-release.storage.googleapis.com<span class="o">)</span>... 74.125.236.43, 74.125.236.42, 74.125.236.44, ...
+Connecting to selenium-release.storage.googleapis.com <span class="o">(</span>selenium-release.storage.googleapis.com<span class="o">)</span><span class="p">|</span>74.125.236.43<span class="p">|</span>:80... connected.
+HTTP request sent, awaiting response... <span class="m">404</span> Not Found
+2015-02-12 15:31:35 ERROR 404: Not Found.
+
+mv: cannot stat €˜/tmp/selenium/*€™: No such file or directory
+mv: cannot stat €˜selenium-server-standalone-.0.jar€™: No such file or directory
+Temp File /tmp/ptconfigure-temp-script-96670533394.sh Removed
+Program Executor Deleted <span class="k">if</span> existed
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+SeleniumServer: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="opciones">
+<h2>Opciones<a class="headerlink" href="#opciones" title="Permalink to this headline">¶</a></h2>
+<p>Después de introducir el comando anterior, las siguientes operaciones se produce como se muestra en el formato tabular.</p>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="18%" />
+<col width="35%" />
+<col width="11%" />
+<col width="35%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parámetros</th>
+<th class="head">Parámetro Alternativa</th>
+<th class="head">Opciones</th>
+<th class="head">Comentarios</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Install Selenium
+Server? (Y/N)</td>
+<td>En lugar de seleniumserver, podemos utilizar
+SeleniumServer, Selenium, selenium-srv,
+selenium-server también.</td>
+<td>Y(Yes)</td>
+<td>Si el usuario desea continuar el proceso de
+instalación se puede introducir como Y.</td>
+</tr>
+<tr class="row-odd"><td>Install Selenium
+Server? (Y/N)</td>
+<td>En lugar de seleniumserver, podemos utilizar
+SeleniumServer, Selenium, selenium-srv,
+selenium-server también.|</td>
+<td>N(No)</td>
+<td>Si el usuario desea abandonar el proceso de
+instalación se puede introducir como N.</td>
+</tr>
+</tbody>
+</table>
+<p>La siguiente captura de pantalla puede dar una representación pictórica sobre el proceso de instalación.</p>
+<div class="highlight-bash"><div class="highlight"><pre>
+</pre></div>
+</div>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Los parámetros utilizados en la ayuda y la instalación no son sensibles, que es una ventaja añadida, mientras que en comparación con otros.</li>
+<li>Es-acomodados tanto en Ubuntu y así como Cent OS.</li>
+<li>Puede desarrollar pruebas automatizadas en el lenguaje de programación de su elección como C #, Java, Python, PHP, Perl y Ruby, así como
+aquellos que se ejecutan las pruebas sobre las diferentes combinaciones de navegadores como Chrome, Firefox o IE.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Selenium Server</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#ayuda-comando">Ayuda Comando</a></li>
+<li><a class="reference internal" href="#instalacion">instalación</a></li>
+<li><a class="reference internal" href="#opciones">Opciones</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="sruncommand.html"
+                        title="previous chapter">Run Command</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/sseleniumserver.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="sruncommand.html" title="Run Command"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" >Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

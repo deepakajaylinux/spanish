@@ -1,0 +1,260 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>PHPMD &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="Ptconfigure" href="sptconfigure_main.html" />
+    <link rel="next" title="PhpSSH" href="sphpssh.html" />
+    <link rel="prev" title="PHPModules" href="sphpmodules.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="sphpssh.html" title="PhpSSH"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="sphpmodules.html" title="PHPModules"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" accesskey="U">Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="phpmd">
+<h1>PHPMD<a class="headerlink" href="#phpmd" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>PHP MessDeductor es un spin-off de PHP dependen y pretende ser un PHP equivalente a la herramienta Java conocida PMD. PHPMD puede ser visto como una aplicación frontend fácil de usar para la corriente métricas medida en bruto por PHP Depend. Colateral General o GC es la gama de activos que son aceptadas, en un momento dado, como garantía en el mercado de repos por la mayoría de los intermediarios del mercado ya un tipo de interés muy similar. Esto es adecuado con Ubuntu y CentOS.</p>
+</div>
+<div class="section" id="comando-ayuda">
+<h2>comando Ayuda<a class="headerlink" href="#comando-ayuda" title="Permalink to this headline">¶</a></h2>
+<p>Se necesita una base de código fuente PHPMD dado y buscar varios problemas potenciales dentro de esa fuente. PHPMD es un proyecto joven y tan sólo proporciona un conjunto limitado de reglas predefinidas, en comparación con el PMD, que detectan código de olores y posibles errores en el código fuente analizada. Pedido la sección de reglas para aprender más acerca de las reglas allimplemented. El siguiente comando ayuda guía al usuario a instalar el módulo phpmd.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure PHPMD <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La siguiente captura de pantalla vizualize sus funciones.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure PHPMD <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>allows you to install PHPMD from a GC Repo.
+
+ PHPMD
+
+       - install
+       Installs the latest GC Repo version of PHPMD
+       example: ptconfigure phpmd install
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="instalacion">
+<h2>instalación<a class="headerlink" href="#instalacion" title="Permalink to this headline">¶</a></h2>
+<p>Por el momento PHPMD viene con los siguientes tres procesadores:</p>
+<ul class="simple">
+<li>Xml, que formatea el informe como XML.</li>
+<li>Texto, formato de texto simple.</li>
+<li>Html, único archivo HTML con posibles problemas.</li>
+</ul>
+<p>El comando utilizado para instalar el PHPMD a la máquina de los usuarios se muestra a continuación.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure PHPMD install
+</pre></div>
+</div>
+<p>Después de introducir el comando anterior, el siguiente proceso se produce como se muestra en el formato de pantalla.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure phpmd install
+Install PHP Mess Detector ? <span class="o">(</span>Y/N<span class="o">)</span>
+Y
+*******************************
+*        Pharaoh Tools        *
+*         PHP Mess Dt.        *
+*******************************
+What is the program data directory? Found <span class="s2">&quot;/opt/phpmd&quot;</span> - use this? <span class="o">(</span>Enter nothing <span class="k">for</span> yes, no end slash<span class="o">)</span>
+
+What is the program executor directory? Found <span class="s2">&quot;/usr/bin&quot;</span> - use this? <span class="o">(</span>Enter nothing <span class="k">for</span> yes, No Trailing Slash<span class="o">)</span>
+
+git clone <span class="s1">&#39;https://github.com/phpengine/ptconfigure-phpmd.git&#39;</span>  /tmp/phpmd/phpmdCloning into <span class="s1">&#39;/tmp/phpmd/phpmd&#39;</span>...
+remote: Counting objects: 356, <span class="k">done</span>.
+remote: Total <span class="m">356</span> <span class="o">(</span>delta 0<span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta 0<span class="o">)</span>
+Receiving objects: 100% <span class="o">(</span>356/356<span class="o">)</span>, 306.45 KiB <span class="p">|</span> 9.00 KiB/s, <span class="k">done</span>.
+Resolving deltas: 100% <span class="o">(</span>239/239<span class="o">)</span>, <span class="k">done</span>.
+Checking connectivity... <span class="k">done</span>.
+Program Data folder populated
+Program Executor Deleted <span class="k">if</span> existed
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+PHPMD: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="opciones">
+<h2>Opciones<a class="headerlink" href="#opciones" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="tabe-bordered docutils">
+<colgroup>
+<col width="21%" />
+<col width="27%" />
+<col width="10%" />
+<col width="43%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parámetros</th>
+<th class="head">Directorio (por defecto)</th>
+<th class="head">Opciones</th>
+<th class="head">Comentarios</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Data directory
+(Por defecto)</td>
+<td>“/opt/PHPMD”</td>
+<td>Yes</td>
+<td>Se instalará módulo PHPMD bajo ptconfigure</td>
+</tr>
+<tr class="row-odd"><td>Data directory</td>
+<td>End slash</td>
+<td>No</td>
+<td>El usuario tiene a un especifique la ruta.</td>
+</tr>
+<tr class="row-even"><td>Executor directory
+(Por defecto)</td>
+<td>“/usr/bin”</td>
+<td>Yes</td>
+<td>Se instalará directorio ejecutor</td>
+</tr>
+<tr class="row-odd"><td>Executor directory</td>
+<td>No trailing slash</td>
+<td>No</td>
+<td>El usuario da entrada como nombre del directorio|</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<p>ExcessivePublicCount:</p>
+<p>Es posible que un gran número de métodos públicos y atributos declarados en una clase puede indicar la categoría de no estar funcionando como
+un mayor esfuerzo lo hará ser requerido para probar a fondo.</p>
+<p>ExcessiveParameterList:</p>
+<p>Listas de parámetros largos pueden indicar que un nuevo objeto debe ser creado para envolver los numerosos parámetros. Básicamente, pruebe los parámetros junto al grupo.</p>
+<p>CyclomaticComplexity:</p>
+<p>Complejidad se determina por el número de puntos de decisión en un método más uno para la entrada método.</p>
+<p>superglobals:</p>
+<p>Acceso a una variable de super-mundial directamente se considera una mala práctica. Estas variables deben ser encapsulados en los objetos que
+se proporcionan por un marco, por ejemplo.</p>
+<p>ShortVariable:</p>
+<p>Detecta cuando un campo, local o parámetro tiene un nombre muy corto.</p>
+<p>LongVariable:</p>
+<p>Detecta cuando un campo, variables formales o local se declara con un nombre largo.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">PHPMD</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#comando-ayuda">comando Ayuda</a></li>
+<li><a class="reference internal" href="#instalacion">instalación</a></li>
+<li><a class="reference internal" href="#opciones">Opciones</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="sphpmodules.html"
+                        title="previous chapter">PHPModules</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sphpssh.html"
+                        title="next chapter">PhpSSH</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/sphpmd.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="sphpssh.html" title="PhpSSH"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="sphpmodules.html" title="PHPModules"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" >Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

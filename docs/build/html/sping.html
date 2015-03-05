@@ -1,0 +1,290 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Ping &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="Ptconfigure" href="sptconfigure_main.html" />
+    <link rel="next" title="Port" href="sport.html" />
+    <link rel="prev" title="PHPVM" href="sphpvm.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="sport.html" title="Port"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="sphpvm.html" title="PHPVM"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" accesskey="U">Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="ping">
+<h1>Ping<a class="headerlink" href="#ping" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Como verbo, PING significa &#8220;para llamar la atención de&#8221; o &#8220;para comprobar la presencia de&#8221; la otra parte en línea. PING módulo (Packet Internet Groper) utiliza para probar la conectividad del sistema. PING utiliza para enviar los datos de red a, y recibir datos de la red de, otro equipo de una red. PING utiliza con frecuencia para probar, si otro sistema es accesible a través de una red, y si es así, ¿cuánto tiempo se necesita para que los datos que se intercambian.</p>
+</div>
+<div class="section" id="comando-ayuda">
+<h2>comando Ayuda<a class="headerlink" href="#comando-ayuda" title="Permalink to this headline">¶</a></h2>
+<p>Este comando ayuda a determinar el uso del módulo de PING. Este comando figura ayuda a las opciones para utilizar junto con el comando PING. Este comando guiará al usuario final para saber el uso de diferentes opciones y la sintaxis de esas opciones. A continuación dado son el mando y la pantalla del mismo.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure ping <span class="nb">help</span>
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure ping <span class="nb">help</span>
+
+******************************
+
+
+ This <span class="nb">command </span>allows you to <span class="nb">test </span>the status of ports
+
+ Ping, ping
+
+       - once
+       ping a target once
+       example: ptconfigure ping once --yes --guess
+           --target<span class="o">=</span>www.google.com <span class="c"># url/ip to ping test</span>
+           --interval<span class="o">=</span><span class="m">5</span> <span class="c"># no seconds to wait between requests, will guess 2</span>
+
+       - ten
+       ping a target ten <span class="nb">times</span>
+<span class="nb">       </span>example: ptconfigure ping ten --yes --guess
+           --target<span class="o">=</span>www.google.com <span class="c"># url/ip to ping test</span>
+           --interval<span class="o">=</span><span class="m">5</span> <span class="c"># no seconds to wait between requests, will guess 2</span>
+
+       - <span class="k">until</span>-responding
+       ping a target <span class="k">for</span> a <span class="nb">set </span>amount of <span class="nb">time </span><span class="k">until</span> it responds
+       example: ptconfigure ping once --yes --guess
+           --target<span class="o">=</span>www.google.com <span class="c"># url/ip to ping test</span>
+           --interval<span class="o">=</span><span class="m">5</span> <span class="c"># no seconds to wait between requests, will guess 2</span>
+           --max-wait<span class="o">=</span><span class="m">100</span> <span class="c"># no seconds in total to keep trying, will guess 60</span>
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="opciones">
+<h2>Opciones<a class="headerlink" href="#opciones" title="Permalink to this headline">¶</a></h2>
+<p>Módulo PING tiene tres opciones diferentes, que recuperan datos como por la opción utilizada en los comandos. Por debajo de la mesa, explica la misma</p>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="11%" />
+<col width="37%" />
+<col width="52%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Options</th>
+<th class="head">Befehle</th>
+<th class="head">Funktionen</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Once</td>
+<td>ptconfigure ping once – yes –guess –
+target=google.com – interval=5</td>
+<td>Nos ping a un destino una vez. Una vez que la opción
+será recuperar los datos una sola vez</td>
+</tr>
+<tr class="row-odd"><td>Ten</td>
+<td>ptconfigure ping ten – yes –guess –
+target=google.com – interval=5</td>
+<td>Diez datos de extracción de opciones para diez veces, con
+intervalo de tiempo como de 5 segundos [espera a segundos antes
+de enviar el siguiente paquete</td>
+</tr>
+<tr class="row-even"><td>Until-
+responding</td>
+<td>ptconfigure ping once – yes –guess
+&#8211;target=google.com &#8211; interval=5
+&#8211; max-wait=100</td>
+<td>Nos ping al destino de una cantidad fija de tiempo hasta que se
+responde , que tiene tiempo de intervalo como 5 segundos y un
+máximo de 100 segundos para tratar de la meta|</td>
+</tr>
+</tbody>
+</table>
+<p>Nota:</p>
+<ul class="simple">
+<li>Intervalo - Número de segundos a esperar entre cada solicitud</li>
+<li>Max-espera - El número de segundos en total para seguir intentando</li>
+<li>Tiempo de intervalo y Max-espera frecuencia de tiempo puede ser decidida por el usuario como por la exigencia</li>
+</ul>
+</div>
+<div class="section" id="una-vez-opcion">
+<h2>Una vez Opción<a class="headerlink" href="#una-vez-opcion" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure ping once --yes --guess --target<span class="o">=</span>www.google.com
+
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Ping Latency is <span class="m">34</span> ms
+******************************
+
+
+Ping Modifications:
+--------------------------------------------
+
+Ping: Success
+
+------------------------------
+Ping Mods Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="diez-opcion">
+<h2>Diez Opción<a class="headerlink" href="#diez-opcion" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure ping ten --yes --guess --target<span class="o">=</span>www.google.com
+
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Ping Latency is <span class="m">36</span> ms
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Ping Latency is <span class="m">34</span> ms
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Ping Latency is <span class="m">34</span> ms
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Ping Latency is <span class="m">34</span> ms
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Ping Latency is <span class="m">36</span> ms
+******************************
+
+
+Ping Modifications:
+--------------------------------------------
+
+Ping: Success
+
+------------------------------
+Ping Mods Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="hasta-responder">
+<h2>hasta responder<a class="headerlink" href="#hasta-responder" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure ping once -- yes --guess --target<span class="o">=</span>google.com -- <span class="nv">interval</span><span class="o">=</span><span class="m">5</span> -- max-wait<span class="o">=</span>100
+
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Ping Latency is <span class="m">37</span> ms
+******************************
+
+
+Ping Modifications:
+--------------------------------------------
+
+Ping: Success
+
+------------------------------
+Ping Mods Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="parametros-alternativos">
+<h2>parámetros alternativos<a class="headerlink" href="#parametros-alternativos" title="Permalink to this headline">¶</a></h2>
+<p>Los parámetros alternativos para este módulo son:</p>
+<p>Ping</p>
+<p>ping</p>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<p>PING ayuda al usuario a verificar una existencia determinada dirección IP y puede aceptar la solicitud. Comando PING es la mejor manera de probar la conectividad entre dos nodos. Ya se trate de la red de área local (LAN) o red de área amplia (WAN).</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Ping</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#comando-ayuda">comando Ayuda</a></li>
+<li><a class="reference internal" href="#opciones">Opciones</a></li>
+<li><a class="reference internal" href="#una-vez-opcion">Una vez Opción</a></li>
+<li><a class="reference internal" href="#diez-opcion">Diez Opción</a></li>
+<li><a class="reference internal" href="#hasta-responder">hasta responder</a></li>
+<li><a class="reference internal" href="#parametros-alternativos">parámetros alternativos</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="sphpvm.html"
+                        title="previous chapter">PHPVM</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sport.html"
+                        title="next chapter">Port</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/sping.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="sport.html" title="Port"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="sphpvm.html" title="PHPVM"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" >Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

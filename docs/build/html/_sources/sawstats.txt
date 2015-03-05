@@ -152,5 +152,6 @@ Beneficios
 * Los desarrolladores pueden contribuir al proyecto AWStats través de SourceForge.net.
 * Escrito en Perl, AWStats se pueden implementar en casi cualquier sistema operativo
 * Se trata de una herramienta de administración de servidores, con los paquetes disponibles para la mayoría de las distribuciones de Linux.
+
 * AWStats se pueden instalar en una estación de trabajo, tales como MS Windows, para uso local en situaciones en que los archivos de registro 
   se puede descargar desde un servidor remoto.

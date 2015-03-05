@@ -626,12 +626,24 @@ Jugando con módulos PTConfigure
    sphpeclipse
    sphpedit
    sphpmodules
+   sphpmd 
+   sphpssh
+   sphpstrom
+   sphpunit
+   sphpvm
+   sping
    sport
    spostgressserver
    sprocess
+   sptbuild
    sptconfigure
    sptdeploy_cleo
    sptvirtualize
    spython
    sra
    sredis
+   srubybdd
+   srubyrvm
+   srubysystem
+   sruncommand
+   sseleniumserver

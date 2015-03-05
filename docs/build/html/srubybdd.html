@@ -1,0 +1,265 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>RubyBDD &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="Ptconfigure" href="sptconfigure_main.html" />
+    <link rel="next" title="RubyRVM" href="srubyrvm.html" />
+    <link rel="prev" title="Redis" href="sredis.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="srubyrvm.html" title="RubyRVM"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="sredis.html" title="Redis"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" accesskey="U">Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="rubybdd">
+<h1>RubyBDD<a class="headerlink" href="#rubybdd" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Rubí Behaviour Driven Development (BDD) te ofrece la mejor de Test Driven Development, Domain Driven Design, y prueba de aceptación de técnicas de planificación Driven, por lo que el usuario puede instalar Rubí BDD para un mejor software con auto-documentado, pruebas ejecutables que aportan los usuarios y desarrolladores juntos con un lenguaje PHP. Se consuela con Ubuntu y CentOS.</p>
+</div>
+<div class="section" id="comando-ayuda">
+<h2>comando Ayuda<a class="headerlink" href="#comando-ayuda" title="Permalink to this headline">¶</a></h2>
+<p>El comando de ayuda conduce a los usuarios en cuanto a la finalidad y al igual que sobre las opciones que se incluyen en los módulos de Ruby BDD. El comando help enumera los parámetros alternativos de Ruby Bdd bajo módulo ptconfigure. También se describe la sintaxis para la instalación de updation del usuario. El comando de ayuda para Ruby Bdd se muestra a continuación.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure Ruby Bdd <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La siguiente captura de pantalla muestra el esfuerzo total de Rubí Bdd.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure RubyBDD <span class="nb">help</span>
+
+******************************
+
+
+ This <span class="nb">command </span>allows you to install Ruby RVM.
+
+ RubyBDD, rubybdd, ruby-bdd
+
+       - install
+       Installs Ruby BDD Gems
+       example: ptconfigure ruby-bdd install
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="instalacion">
+<h2>instalación<a class="headerlink" href="#instalacion" title="Permalink to this headline">¶</a></h2>
+<p>Instalación incluye la instalación de Rubí Bdd requerida para hacer la instalación en una versión actualizada. Es un proceso de manifiesto para instalar el módulo de Ruby Bdd bajo ptconfigure sólo por el uso de la orden dada a continuación,</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure Ruby Bdd Install
+</pre></div>
+</div>
+<p>Después de vitalizar el comando se catequizar entrada.
+Cuando la entrada de usuario como si automáticamente se instalará Rubí Bdd con la comprobación del sistema. Si no salir de la instalación. La siguiente captura de pantalla demuestra.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure ruby-bdd install
+
+Install Ruby BDD? <span class="o">(</span>Y/N<span class="o">)</span>
+Y
+*******************************
+*        Pharaoh Tools        *
+*          !Ruby BDD!!        *
+*******************************
+ERROR:  Error installing cucumber:
+       ERROR: Failed to build gem native extension.
+
+       /usr/bin/ruby1.9.1 extconf.rb
+/usr/lib/ruby/1.9.1/rubygems/custom_require.rb:36:in <span class="sb">`</span>require<span class="s1">&#39;: cannot load such file -- mkmf (LoadError)</span>
+<span class="s1">       from /usr/lib/ruby/1.9.1/rubygems/custom_require.rb:36:in `require&#39;</span>
+       from extconf.rb:1:in <span class="sb">`</span>&lt;main&gt;<span class="s1">&#39;</span>
+
+
+<span class="s1">Gem files will remain installed in /var/lib/gems/1.9.1/gems/gherkin-2.12.2 for inspection.</span>
+<span class="s1">Results logged to /var/lib/gems/1.9.1/gems/gherkin-2.12.2/ext/gherkin_lexer_ar/gem_make.out</span>
+<span class="s1">INFO:  `gem install -y` is now default and will be removed</span>
+<span class="s1">INFO:  use --ignore-dependencies to install only the gems you list</span>
+<span class="s1">Building native extensions.  This could take a while...</span>
+<span class="s1">[Pharaoh Logging] Adding Package cucumber from the Packager Gem did not execute correctly</span>
+<span class="s1">ERROR:  Error installing capybara:</span>
+<span class="s1">       ERROR: Failed to build gem native extension.</span>
+
+<span class="s1">       /usr/bin/ruby1.9.1 extconf.rb</span>
+<span class="s1">/usr/lib/ruby/1.9.1/rubygems/custom_require.rb:36:in `require&#39;</span>: cannot load such file -- mkmf <span class="o">(</span>LoadError<span class="o">)</span>
+       from /usr/lib/ruby/1.9.1/rubygems/custom_require.rb:36:in <span class="sb">`</span>require<span class="s1">&#39;</span>
+<span class="s1">       from extconf.rb:4:in `&lt;main&gt;&#39;</span>
+
+
+Gem files will remain installed in /var/lib/gems/1.9.1/gems/nokogiri-1.6.6.2 <span class="k">for</span> inspection.
+Results logged to /var/lib/gems/1.9.1/gems/nokogiri-1.6.6.2/ext/nokogiri/gem_make.out
+INFO:  <span class="sb">`</span>gem install -y<span class="sb">`</span> is now default and will be removed
+INFO:  use --ignore-dependencies to install only the gems you list
+Building native extensions.  This could take a <span class="k">while</span>...
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package capybara from the Packager Gem did not execute correctly
+ERROR:  While executing gem ... <span class="o">(</span>Gem::DependencyError<span class="o">)</span>
+    Unable to resolve dependencies: calabash-android requires rubyzip <span class="o">(</span>~&gt; 0.9.9<span class="o">)</span><span class="p">;</span> xamarin-test-cloud requires rubyzip <span class="o">(</span>~&gt; 1.1<span class="o">)</span>
+INFO:  <span class="sb">`</span>gem install -y<span class="sb">`</span> is now default and will be removed
+INFO:  use --ignore-dependencies to install only the gems you list
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package calabash from the Packager Gem did not execute correctly
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+RubyBDD: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="opciones">
+<h2>Opciones<a class="headerlink" href="#opciones" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="20%" />
+<col width="34%" />
+<col width="11%" />
+<col width="35%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parámetros</th>
+<th class="head">Parámetro Alternativa</th>
+<th class="head">Opciones</th>
+<th class="head">Comentarios</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Install RubyBdd?(Y/N)</td>
+<td>En lugar de utilizar RubyBdd podemos usar
+ruby-bdd,rubybdd</td>
+<td>Y(Yes)</td>
+<td>Se instalará RubyBdd bajo ptconfigure en
+herramientas Faraón</td>
+</tr>
+<tr class="row-odd"><td>Install RubyBdd?(Y/N)</td>
+<td>En lugar de utilizar RubyBdd podemos usar
+ruby-bdd,rubybdd|</td>
+<td>N(No)</td>
+<td>La salida de sistema de la instalación</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Rubybdd es acomodado en Ubuntu y CentOS</li>
+<li>Rubybdd apoya sensibilidad no caso</li>
+<li>Rubybdd es flexible</li>
+<li>Otra gran ventaja de tener BDD son el desarrollo impulsado por el usuario puede actualizar como versión más reciente de rubybdd, y nivel de
+parche, de rubí.</li>
+<li>Rubybdd utiliza para la instalación</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">RubyBDD</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#comando-ayuda">comando Ayuda</a></li>
+<li><a class="reference internal" href="#instalacion">instalación</a></li>
+<li><a class="reference internal" href="#opciones">Opciones</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="sredis.html"
+                        title="previous chapter">Redis</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="srubyrvm.html"
+                        title="next chapter">RubyRVM</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/srubybdd.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="srubyrvm.html" title="RubyRVM"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="sredis.html" title="Redis"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" >Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

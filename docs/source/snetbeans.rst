@@ -13,6 +13,7 @@ La plataforma NetBeans permite que las aplicaciones que se desarrollan a partir 
 
 Ayuda Comando
 ----------------------
+
 Este comando ayuda a determinar el uso del módulo de Netbeans. El usuario se llega a saber acerca de la diferente forma / formato de ejecutar este módulo. Este comando guía al usuario final a conocer el propósito de este comando. A continuación dado son el mando y la pantalla del mismo.
 
 .. code-block:: bash
@@ -21,13 +22,17 @@ Este comando ayuda a determinar el uso del módulo de Netbeans. El usuario se ll
 
 instalación
 ----------------
+
 Este comando ayuda en la instalación de Netbeans en el sistema. El siguiente comando dado se ejecutará el proceso de instalación.
 
 .. code-block:: bash
         
 	        ptconfigure netbeans install
+
+
 Opciones
------------
+------------
+
 
 .. cssclass:: table-bordered
 
@@ -38,13 +43,13 @@ Opciones
  |Install? (Y/N)          | utilizar en la línea de comandos. Netbeans ,         |             | de instalación                      |
  |                        | NetBeans ,netbeans Por                               |             |                                     |
  |                        | ejemplo: ptconfigure NetBeans install,               |             |                                     |
- |                        |          ptconfigure netbeans install                |             |                                     |
+ |                        | ptconfigure netbeans install                         |             |                                     |
  +------------------------+------------------------------------------------------+-------------+-------------------------------------+
  |ptconfigure Netbeans    | Hay tres parámetros alternativos que se pueden       | N(No)       | El sistema detiene proceso          |
  |Install? (Y/N)          | utilizar en la línea de comandos. Netbeans ,         |             | de instalación                      |
  |                        | NetBeans ,netbeans Por                               |             |                                     |
  |                        | ejemplo: ptconfigure NetBeans install,               |             |                                     |
- |                        |          ptconfigure netbeans install|               |             |                                     |
+ |                        | ptconfigure netbeans install|                        |             |                                     |
  +------------------------+------------------------------------------------------+-------------+-------------------------------------+
 
 

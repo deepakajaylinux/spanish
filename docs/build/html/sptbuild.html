@@ -1,0 +1,316 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>PTBuild &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="Ptconfigure" href="sptconfigure_main.html" />
+    <link rel="next" title="PTConfigure" href="sptconfigure.html" />
+    <link rel="prev" title="Process" href="sprocess.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="sptconfigure.html" title="PTConfigure"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="sprocess.html" title="Process"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" accesskey="U">Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="ptbuild">
+<h1>PTBuild<a class="headerlink" href="#ptbuild" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Esta herramienta ayuda al usuario a instalar y actualizar ptbuild bajo ptconfigure en herramientas faraón. Automatización de la construcción debe incluir la automatización de la integración, que a menudo incluye el despliegue en un entorno de producción similar. En muchos casos, el script de construcción no sólo compila binarios, pero también genera documentación, páginas web, las estadísticas y los medios de distribución, tales como Red Hat. Se consuela con Ubuntu y CentOS.</p>
+</div>
+<div class="section" id="comando-ayuda">
+<h2>comando Ayuda<a class="headerlink" href="#comando-ayuda" title="Permalink to this headline">¶</a></h2>
+<p>El comando de ayuda conduce a los usuarios en cuanto a la finalidad y al igual que sobre las opciones que se incluyen en los módulos ptbuild. Las listas de comandos de ayuda fuera de los parámetros alternativos de ptbuild bajo módulo ptconfigure. También se describe la sintaxis para la instalación de updation del usuario. El comando de ayuda para ptbuild se muestra a continuación.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure ptbuild <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La siguiente captura de pantalla muestra el esfuerzo total de ptbuild.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure ptbuild <span class="nb">help</span>
+
+******************************
+
+
+ This <span class="nb">command </span>allows you to install or update ptbuild.
+
+ ptbuild, Ptbuild
+
+       - install
+       Installs the latest version of ptbuild
+       example: ptconfigure ptbuild install
+
+       - ensure
+       Ensures ptbuild is installed
+       example: ptconfigure ptbuild ensure
+
+       - uninstall
+       Uninstalls the latest version of ptbuild
+       example: ptconfigure ptbuild uninstall
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="instalacion">
+<h2>instalación<a class="headerlink" href="#instalacion" title="Permalink to this headline">¶</a></h2>
+<p>Esta es una herramienta que se encuentra bajo ptconfigure y tira hacia abajo copias limpias de la base de código de usuario y no completa construye, a partir de cero, todo el tiempo. Este comando se utiliza para instalar la última versión de ptbuild. El comando utilizado para la instalación es el siguiente.</p>
+<div class="highlight-bash"><div class="highlight"><pre>       ptconfigure ptbuild install
+
+Después introduce el comando, el sistema puede pedir
+</pre></div>
+</div>
+<p>install ptbuild?(Y/N)</p>
+<p>Si el usuario da Y entonces se instalará ptbuild. La siguiente captura de pantalla demuestran.</p>
+<div class="highlight-bash"><div class="highlight"><pre>
+</pre></div>
+</div>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="19%" />
+<col width="24%" />
+<col width="11%" />
+<col width="45%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parámetros</th>
+<th class="head">Directorio (por defecto)</th>
+<th class="head">Opciones</th>
+<th class="head">Comentarios</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Program data directory
+(Por defecto)</td>
+<td>“/opt/ptbuild(módulo
+correspondiente)”</td>
+<td>Y(Yes)</td>
+<td>Si el usuario de proceder con la instalación del
+directorio de datos de programa predeterminado que
+puede introducir como Sí</td>
+</tr>
+<tr class="row-odd"><td>Program data directory</td>
+<td>específica de usuario</td>
+<td>N(Fin barra)</td>
+<td>Si el usuario desea continuar con su propio directorio
+de datos del programa, pueden de entrada como N, y en
+la mano especificar que poseen ubicación.</td>
+</tr>
+<tr class="row-even"><td>Program executor
+directory (Por defecto)</td>
+<td>“/usr/bin”</td>
+<td>Y(Yes)</td>
+<td>Si el usuario de proceder con la instalación del
+directorio ejecutor programa predeterminado que puede
+introducir como Sí</td>
+</tr>
+<tr class="row-odd"><td>Program executor
+directory</td>
+<td>específica de usuario</td>
+<td>N(Fin barra)</td>
+<td>Si el usuario desea continuar con su propio directorio
+ejecutor del programa, pueden de entrada como N, y en
+la mano especificar que poseen ubicación.|</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="desinstalar">
+<h2>Desinstalar<a class="headerlink" href="#desinstalar" title="Permalink to this headline">¶</a></h2>
+<p>Este comando se utiliza para desinstalar la versión más reciente de ptbuild. El comando que se utiliza para la desinstalación es el siguiente.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure ptbuild Uninstall
+</pre></div>
+</div>
+<p>Después introduce el comando, el sistema puede pedir</p>
+<p>Uninstall ptbuild?(Y/N)</p>
+<p>Si el usuario da Y entonces ptbuild será desinstalado. La siguiente captura de pantalla demuestran.</p>
+<div class="highlight-bash"><div class="highlight"><pre>
+</pre></div>
+</div>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="19%" />
+<col width="24%" />
+<col width="11%" />
+<col width="45%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parámetros</th>
+<th class="head">Directorio (por defecto)</th>
+<th class="head">Opciones</th>
+<th class="head">Comentarios</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Program data directory
+(Por defecto)</td>
+<td>“/opt/ptbuild(módulo
+correspondiente)”</td>
+<td>Y(Yes)</td>
+<td>Si el usuario para proceder con los datos del programa
+de desinstalación directorio predeterminado para ser
+introducido como Sí</td>
+</tr>
+<tr class="row-odd"><td>Program data directory</td>
+<td>específica de usuario</td>
+<td>N(Fin barra)</td>
+<td>Si el usuario desea continuar con su propio directorio
+de datos del programa, pueden de entrada como N, y en
+la mano especificar que poseen ubicación.</td>
+</tr>
+<tr class="row-even"><td>Program executor
+directory (Por defecto)</td>
+<td>“/usr/bin”</td>
+<td>Y(Yes)</td>
+<td>Si el usuario para proceder con el directorio
+predeterminado desinstalación del programa en
+ejecución que se puede introducir en Sí</td>
+</tr>
+<tr class="row-odd"><td>Program executor
+directory</td>
+<td>específica de usuario</td>
+<td>N(Fin barra)</td>
+<td>Si el usuario desea continuar con su propio directorio
+ejecutor del programa, pueden de entrada como N, y en
+la mano especificar que poseen ubicación.|</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="asegurar">
+<h2>asegurar<a class="headerlink" href="#asegurar" title="Permalink to this headline">¶</a></h2>
+<p>Proceso que se utiliza para comprobar el ptbuild instalado en el sistema del usuario o no Ensure. El siguiente comando ayuda al usuario para asegurarse.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure ptbuild ensure
+</pre></div>
+</div>
+<p>La siguiente captura de pantalla muestra sus funciones.</p>
+<div class="highlight-bash"><div class="highlight"><pre>
+</pre></div>
+</div>
+</div>
+<div class="section" id="parametros-alternativos">
+<h2>parámetros alternativos<a class="headerlink" href="#parametros-alternativos" title="Permalink to this headline">¶</a></h2>
+<p>Los parámetros alternativos que se pueden utilizar en la declaración son:</p>
+<p>&nbsp; Ptbuild</p>
+<p>&nbsp; Ptbuild</p>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Se utiliza para instalar ptbuilds posible.</li>
+<li>Adecuado para trabajar con Ubuntu y CentOS.</li>
+<li>Sensitibilidad caso.</li>
+<li>Automatización en la versión actualizada.</li>
+<li>Fiabilidad, disponibilidad, capacidad de servicio con otras conexiones.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">PTBuild</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#comando-ayuda">comando Ayuda</a></li>
+<li><a class="reference internal" href="#instalacion">instalación</a></li>
+<li><a class="reference internal" href="#desinstalar">Desinstalar</a></li>
+<li><a class="reference internal" href="#asegurar">asegurar</a></li>
+<li><a class="reference internal" href="#parametros-alternativos">parámetros alternativos</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="sprocess.html"
+                        title="previous chapter">Process</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sptconfigure.html"
+                        title="next chapter">PTConfigure</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/sptbuild.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="sptconfigure.html" title="PTConfigure"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="sprocess.html" title="Process"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" >Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

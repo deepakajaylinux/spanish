@@ -1,0 +1,334 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>PHPUnit &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="Ptconfigure" href="sptconfigure_main.html" />
+    <link rel="next" title="PHPVM" href="sphpvm.html" />
+    <link rel="prev" title="PHPStorm" href="sphpstrom.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="sphpvm.html" title="PHPVM"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="sphpstrom.html" title="PHPStorm"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" accesskey="U">Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="phpunit">
+<h1>PHPUnit<a class="headerlink" href="#phpunit" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Este módulo facilita a los usuarios para instalar PHPUnit de un GC Repo. PHP Unidad Testing Framework es un marco de unidad de pruebas que permite a los desarrolladores de descubrir los errores y, a su vez reducir los costos asociados con el desarrollo de software PHP. El Marco de pruebas Unidad de PHP genera informes, ya sea en XML, XHTML o ASCII. Veamos, ¿cómo funciona este módulo nos ayuda en la instalación de una unidad de PHP.</p>
+</div>
+<div class="section" id="ayuda-comando">
+<h2>Ayuda Comando<a class="headerlink" href="#ayuda-comando" title="Permalink to this headline">¶</a></h2>
+<p>El comando de ayuda conduce a los usuarios en cuanto a la finalidad y al igual que sobre las opciones que se incluyen en el módulo de unidad de PHP. También describe la sintaxis para la instalación de la unidad de PHP. El comando de ayuda para el módulo de unidad de PHP se muestra a continuación.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure PHPUnit <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La sintaxis para declarar el comando de ayuda no es sensible a mayúsculas, que es una ventaja añadida. La siguiente captura de pantalla a visualizar sobre el comando de ayuda debajo de la unidad de PHP.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure PHPUnit <span class="nb">help</span>
+******************************
+
+ This <span class="nb">command </span>allows you to install PHPUnit from a GC Repo.
+
+ PHPUnit
+
+       - install
+       Installs the latest GC Repo version of PHPUnit
+       example: ptconfigure phpunit install
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="instalacion">
+<h2>instalación<a class="headerlink" href="#instalacion" title="Permalink to this headline">¶</a></h2>
+<p>El comando que se utiliza para la instalación de la unidad de PHP a la máquina de los usuarios se muestra a continuación.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure PHPUnit install
+</pre></div>
+</div>
+<p>Después de introducir el comando anterior, las siguientes operaciones se produce como se muestra en el formato tabular.</p>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="19%" />
+<col width="14%" />
+<col width="67%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parámetros</th>
+<th class="head">Opciones</th>
+<th class="head">Comentarios</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Install PHP Unit? (Y/N)</td>
+<td>Y(Yes)</td>
+<td>Si el usuario desea continuar el proceso de instalación se puede introducir como Y.</td>
+</tr>
+<tr class="row-odd"><td>Install PHP Unit? (Y/N)</td>
+<td>N(No)</td>
+<td>Si el usuario desea abandonar el proceso de instalación se puede introducir como N.|</td>
+</tr>
+</tbody>
+</table>
+<p>Si el usuario continúa el proceso de instalación de las siguientes operaciones se produce como se muestra en el formato tabular.</p>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="18%" />
+<col width="23%" />
+<col width="8%" />
+<col width="51%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parámetros</th>
+<th class="head">camino</th>
+<th class="head">Opciones</th>
+<th class="head">Comentarios</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Program data directory
+(Por defecto)</td>
+<td>“/opt/phpunit (módulo
+correspondiente)”</td>
+<td>Y(Yes)</td>
+<td>Si el usuario de proceder con la instalación del directorio de
+datos de programa predeterminado que puede introducir como Sí</td>
+</tr>
+<tr class="row-odd"><td>Program data directory</td>
+<td>específica de usuario</td>
+<td>N(Fin
+barra)</td>
+<td>Si el usuario desea continuar con su propio directorio de datos
+del programa, pueden de entrada como N, y en la mano especificar
+que poseen ubicación.</td>
+</tr>
+<tr class="row-even"><td>Program executor
+directory
+(Por defecto)</td>
+<td>“/usr/bin”</td>
+<td>Yes</td>
+<td>Si el usuario de proceder con la instalación del directorio
+ejecutor programa predeterminado que puede introducir como Sí</td>
+</tr>
+<tr class="row-odd"><td>Program executor
+directory</td>
+<td>específica de usuario</td>
+<td>N(Fin
+barra)</td>
+<td>Si el usuario desea continuar con su propio directorio ejecutor
+del programa, pueden de entrada como N, y en la mano especificar
+que poseen ubicación.|</td>
+</tr>
+</tbody>
+</table>
+<p>Por último, se ha completado la instalación de la unidad de PHP. La siguiente captura de pantalla muestra visualmente sobre el proceso de instalación.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure phpunit install
+Install PHP Unit ? <span class="o">(</span>Y/N<span class="o">)</span>
+Y
+*******************************
+*        Pharaoh Tools        *
+*          PHP Unit !         *
+*******************************
+What is the program data directory? Found <span class="s2">&quot;/opt/phpunit&quot;</span> - use this? <span class="o">(</span>Enter nothing <span class="k">for</span> yes, no end slash<span class="o">)</span>
+
+What is the program executor directory? Found <span class="s2">&quot;/usr/bin&quot;</span> - use this? <span class="o">(</span>Enter nothing <span class="k">for</span> yes, No Trailing Slash<span class="o">)</span>
+
+git clone -b 3.5 <span class="s1">&#39;https://github.com/sebastianbergmann/phpunit.git&#39;</span>  /tmp/phpunit/phpunitCloning into <span class="s1">&#39;/tmp/phpunit/phpunit&#39;</span>...
+
+remote: Counting objects: 50529, <span class="k">done</span>.
+Receiving objects:  71% <span class="o">(</span>35876/50529<span class="o">)</span>, 12.02 MiB <span class="p">|</span> 41.00 KiB/s
+Receiving objects:  95% <span class="o">(</span>48003/50529<span class="o">)</span>, 16.82 MiB <span class="p">|</span> 38.00 KiB/s
+Receiving objects:  95% <span class="o">(</span>48254/50529<span class="o">)</span>, 16.86 MiB <span class="p">|</span> 40.00 KiB/s
+Receiving objects:  96% <span class="o">(</span>48508/50529<span class="o">)</span>, 16.95 MiB <span class="p">|</span> 43.00 KiB/s
+
+
+
+remote: Total <span class="m">50529</span> <span class="o">(</span>delta 0<span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta 0<span class="o">)</span>
+Receiving objects: 100% <span class="o">(</span>50529/50529<span class="o">)</span>, 17.91 MiB <span class="p">|</span> 36.00 KiB/s, <span class="k">done</span>.
+Resolving deltas: 100% <span class="o">(</span>26834/26834<span class="o">)</span>, <span class="k">done</span>.
+Checking connectivity... <span class="k">done</span>.
+git clone -b 1.0 <span class="s1">&#39;https://github.com/sebastianbergmann/dbunit.git&#39;</span>  /tmp/phpunit/dbunitCloning into <span class="s1">&#39;/tmp/phpunit/dbunit&#39;</span>...
+remote: Counting objects: 4596, <span class="k">done</span>.
+remote: Total <span class="m">4596</span> <span class="o">(</span>delta 0<span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta 0<span class="o">)</span>
+Receiving objects: 100% <span class="o">(</span>4596/4596<span class="o">)</span>, 1.04 MiB <span class="p">|</span> 31.00 KiB/s, <span class="k">done</span>.
+Resolving deltas: 100% <span class="o">(</span>3183/3183<span class="o">)</span>, <span class="k">done</span>.
+Checking connectivity... <span class="k">done</span>.
+git clone -b 1.2 <span class="s1">&#39;https://github.com/sebastianbergmann/php-file-iterator.git&#39;</span>  /tmp/phpunit/php-file-iteratorCloning into <span class="s1">&#39;/tmp/phpunit/php-file-iterator&#39;</span>...
+remote: Counting objects: 453, <span class="k">done</span>.
+remote: Total <span class="m">453</span> <span class="o">(</span>delta 0<span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta 0<span class="o">)</span>
+Receiving objects: 100% <span class="o">(</span>453/453<span class="o">)</span>, 60.66 KiB <span class="p">|</span> 16.00 KiB/s, <span class="k">done</span>.
+Resolving deltas: 100% <span class="o">(</span>188/188<span class="o">)</span>, <span class="k">done</span>.
+Checking connectivity... <span class="k">done</span>.
+git clone -b 1.0 <span class="s1">&#39;https://github.com/sebastianbergmann/php-code-coverage.git&#39;</span>  /tmp/phpunit/php-code-coverageCloning into <span class="s1">&#39;/tmp/phpunit/php-code-coverage&#39;</span>...
+remote: Counting objects: 7650, <span class="k">done</span>.
+remote: Total <span class="m">7650</span> <span class="o">(</span>delta 0<span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta 0<span class="o">)</span>
+Receiving objects: 100% <span class="o">(</span>7650/7650<span class="o">)</span>, 2.77 MiB <span class="p">|</span> 17.00 KiB/s, <span class="k">done</span>.
+Resolving deltas: 100% <span class="o">(</span>3671/3671<span class="o">)</span>, <span class="k">done</span>.
+Checking connectivity... <span class="k">done</span>.
+git clone -b 1.0 <span class="s1">&#39;https://github.com/sebastianbergmann/php-token-stream.git&#39;</span>  /tmp/phpunit/php-token-streamCloning into <span class="s1">&#39;/tmp/phpunit/php-token-stream&#39;</span>...
+remote: Counting objects: 1234, <span class="k">done</span>.
+remote: Total <span class="m">1234</span> <span class="o">(</span>delta 0<span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta 0<span class="o">)</span>
+Receiving objects: 100% <span class="o">(</span>1234/1234<span class="o">)</span>, 201.76 KiB <span class="p">|</span> 41.00 KiB/s, <span class="k">done</span>.
+Resolving deltas: 100% <span class="o">(</span>565/565<span class="o">)</span>, <span class="k">done</span>.
+Checking connectivity... <span class="k">done</span>.
+git clone -b 1.0 <span class="s1">&#39;https://github.com/sebastianbergmann/phpunit-mock-objects.git&#39;</span>  /tmp/phpunit/phpunit-mock-objectsCloning into <span class="s1">&#39;/tmp/phpunit/phpunit-mock-objects&#39;</span>...
+remote: Counting objects: 4703, <span class="k">done</span>.
+remote: Total <span class="m">4703</span> <span class="o">(</span>delta 0<span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta 0<span class="o">)</span>
+Receiving objects: 100% <span class="o">(</span>4703/4703<span class="o">)</span>, 837.24 KiB <span class="p">|</span> 104.00 KiB/s, <span class="k">done</span>.
+Resolving deltas: 100% <span class="o">(</span>2910/2910<span class="o">)</span>, <span class="k">done</span>.
+Checking connectivity... <span class="k">done</span>.
+git clone -b 1.0 <span class="s1">&#39;https://github.com/sebastianbergmann/phpunit-selenium.git&#39;</span>  /tmp/phpunit/phpunit-seleniumCloning into <span class="s1">&#39;/tmp/phpunit/phpunit-selenium&#39;</span>...
+remote: Counting objects: 8115, <span class="k">done</span>.
+remote: Total <span class="m">8115</span> <span class="o">(</span>delta 0<span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta 0<span class="o">)</span>
+Receiving objects: 100% <span class="o">(</span>8115/8115<span class="o">)</span>, 2.07 MiB <span class="p">|</span> 28.00 KiB/s, <span class="k">done</span>.
+Resolving deltas: 100% <span class="o">(</span>4762/4762<span class="o">)</span>, <span class="k">done</span>.
+Checking connectivity... <span class="k">done</span>.
+git clone <span class="s1">&#39;https://github.com/phpengine/ptconfigure-phpunit-php-timer&#39;</span>  /tmp/phpunit/php-timerCloning into <span class="s1">&#39;/tmp/phpunit/php-timer&#39;</span>...
+remote: Counting objects: 253, <span class="k">done</span>.
+remote: Total <span class="m">253</span> <span class="o">(</span>delta 0<span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta 0<span class="o">)</span>
+Receiving objects: 100% <span class="o">(</span>253/253<span class="o">)</span>, 31.55 KiB <span class="p">|</span> 12.00 KiB/s, <span class="k">done</span>.
+Resolving deltas: 100% <span class="o">(</span>126/126<span class="o">)</span>, <span class="k">done</span>.
+Checking connectivity... <span class="k">done</span>.
+git clone <span class="s1">&#39;https://github.com/sebastianbergmann/php-text-template.git&#39;</span>  /tmp/phpunit/php-text-templateCloning into <span class="s1">&#39;/tmp/phpunit/php-text-template&#39;</span>...
+remote: Counting objects: 209, <span class="k">done</span>.
+remote: Total <span class="m">209</span> <span class="o">(</span>delta 0<span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta 0<span class="o">)</span>
+Receiving objects: 100% <span class="o">(</span>209/209<span class="o">)</span>, 33.69 KiB <span class="p">|</span> 16.00 KiB/s, <span class="k">done</span>.
+Resolving deltas: 100% <span class="o">(</span>92/92<span class="o">)</span>, <span class="k">done</span>.
+Checking connectivity... <span class="k">done</span>.
+Program Data folder populated
+Program Executor Deleted <span class="k">if</span> existed
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+PHPUnit35: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Este módulo facilita al usuario en la instalación de la Unidad de PHP desde la versión GC Repo.</li>
+<li>El usuario puede seleccionar su propio camino para el directorio de datos del programa y ejecutor</li>
+<li>Los parámetros utilizados en la declaración de la ayuda y las instalaciones no son sensibles, que se añade la ventaja, mientras que en
+comparación con otros.</li>
+<li>Es-acomodados tanto en OS ciento y así como en ubuntu.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">PHPUnit</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#ayuda-comando">Ayuda Comando</a></li>
+<li><a class="reference internal" href="#instalacion">instalación</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="sphpstrom.html"
+                        title="previous chapter">PHPStorm</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sphpvm.html"
+                        title="next chapter">PHPVM</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/sphpunit.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="sphpvm.html" title="PHPVM"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="sphpstrom.html" title="PHPStorm"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" >Ptconfigure</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

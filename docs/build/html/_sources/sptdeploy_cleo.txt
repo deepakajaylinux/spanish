@@ -133,13 +133,13 @@ Opciones
  |install                    | pueden ser utilizados en la línea de     |            |                                              |
  |                           | comandos. Ptdeploy, dapper, ptdeploy     |            |                                              |
  |                           | ejemplo: ptconfigure ptdeploy install /  |            |                                              | 
- |                           |          ptconfigure dapper install      |            |                                              |
+ |                           | ptconfigure dapper install               |            |                                              |
  +---------------------------+------------------------------------------+------------+----------------------------------------------+
  |ptconfigure ptdeploy       | Hay tres parámetros alternativos que     | N(No)      | El sistema detiene proceso de instalación    |
  |install                    | pueden ser utilizados en la línea de     |            |                                              |
  |                           | comandos. Ptdeploy, dapper, ptdeploy     |            |                                              |
  |                           | ejemplo: ptconfigure ptdeploy install /  |            |                                              |
- |                           |          ptconfigure dapper install|     |            |                                              |
+ |                           | ptconfigure dapper install|              |            |                                              |
  +---------------------------+------------------------------------------+------------+----------------------------------------------+
 
 Beneficios

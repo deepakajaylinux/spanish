@@ -93,7 +93,7 @@ Opciones
  |Ptconfigure file help     | Cualquiera de los dos parámetros alternativa | 
  |                          | se puede utilizar en el comando - File, file |
  |                          | por ejemplo: Ptconfigure File Install/       |
- |                          |              Ptconfigure file Install|       |
+ |                          | Ptconfigure file Install|                    |
  +--------------------------+----------------------------------------------+
 
 
