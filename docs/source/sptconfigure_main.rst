@@ -652,8 +652,9 @@ Jugando con módulos PTConfigure
    sskipfish
    ssshencrypt
    ssshharden
-   ssshkeyinstall
    ssshkeygen
+   ssshkeyinstall
+   ssshkeystore
    sstandardtools
    ssudonopass
    ssvn
