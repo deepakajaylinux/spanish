@@ -1,0 +1,310 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Apache Control &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="PTDeploy" href="sptdeploy_main.html" />
+    <link rel="next" title="ApacheVHostEditor" href="sapachevhosteditor_deploy.html" />
+    <link rel="prev" title="PTDeploy" href="sptdeploy_main.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="sapachevhosteditor_deploy.html" title="ApacheVHostEditor"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="sptdeploy_main.html" title="PTDeploy"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptdeploy_main.html" accesskey="U">PTDeploy</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="apache-control">
+<h1>Apache Control<a class="headerlink" href="#apache-control" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Este módulo es uno de los módulos por defecto que tiene como objetivo en el manejo de las funciones de control del servidor apache. Se permite y facilita las funciones de control necesarias que han de realizarse en el servidor Apache. Veamos, el trabajo y el propósito de las funciones de control y cómo estos módulos involucrados en el manejo de las funciones de control del servidor apache.</p>
+</div>
+<div class="section" id="ayuda-comando">
+<h2>Ayuda Comando<a class="headerlink" href="#ayuda-comando" title="Permalink to this headline">¶</a></h2>
+<p>El comando ayuda actúa como una guía de usuario breve que lleva a los usuarios cómo manejan y utilizan este módulo en particular.
+La sintaxis de comando de ayuda bajo el control de Apache se muestra a continuación:</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy ApacheControl <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La sintaxis para declarar el comando de ayuda no es sensible a mayúsculas, que es una ventaja añadida. El comando de ayuda también enumera los parámetros alternativos que se pueden utilizar en la declaración. La siguiente captura de pantalla a visualizar sobre el comando de ayuda bajo control Apache.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy ApacheControl <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>is part of Default Modules and handles Apache Server Control Functions.
+
+ ApacheControl, apachecontrol, apachectl
+
+         - start
+         Start the Apache server
+         example: ptdeploy apachecontrol start
+         example: ptdeploy apachecontrol start --yes --guess
+         example: ptdeploy apachecontrol start --yes --apache-command<span class="o">=</span><span class="s2">&quot;apache2&quot;</span>
+
+         - stop
+         Stop the Apache server
+         example: ptdeploy apachecontrol stop
+         example: ptdeploy apachecontrol stop --yes --guess
+         example: ptdeploy apachecontrol stop --yes --apache-command<span class="o">=</span><span class="s2">&quot;apache2&quot;</span>
+
+         - restart
+         Restart the Apache server
+         example: ptdeploy apachecontrol restart
+         example: ptdeploy apachecontrol restart --yes --guess
+         example: ptdeploy apachecontrol restart --yes --apache-command<span class="o">=</span><span class="s2">&quot;apache2&quot;</span>
+
+         - reload
+         Reloads the Apache server configuration without restarting
+         example: ptdeploy apachecontrol reload
+         example: ptdeploy apachecontrol reload --yes --guess
+         example: ptdeploy apachecontrol reload --yes --apache-command<span class="o">=</span><span class="s2">&quot;apache2&quot;</span>
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+<p>Las cuatro funciones básicas de control incluidos en el servidor Apache son:</p>
+<ul class="simple">
+<li>Inicio</li>
+<li>Deténgase</li>
+<li>Reanudar</li>
+<li>Recargar</li>
+</ul>
+<p>Hay tres formas posibles en la definición de una función de control. Por ejemplo, si tomamos función de inicio, se puede definir de tres formas diferentes según los requisitos del usuario, como se muestra a continuación.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy ApacheControl start
+</pre></div>
+</div>
+<p>or
+.. code-block:: bash</p>
+<blockquote>
+<div>ptdeploy ApacheControl start &#8211;yes &#8211;guess</div></blockquote>
+<p>or
+.. code-block:: bash</p>
+<blockquote>
+<div>ptdeploy ApacheControl start &#8211;yes &#8211;apache-command=&#8221;apache2&#8221;</div></blockquote>
+<p>Veamos el uso de tres sintaxis diferente al declarar en los próximos temas.</p>
+</div>
+<div class="section" id="parametros-alternativos">
+<h2>parámetros alternativos<a class="headerlink" href="#parametros-alternativos" title="Permalink to this headline">¶</a></h2>
+<p>Los siguientes son los parámetros alternativos que pueden ser definidos en las declaraciones:</p>
+<p>ApacheControl, apachecontrol, apachectl</p>
+</div>
+<div class="section" id="funcion-de-arranque">
+<h2>función de arranque<a class="headerlink" href="#funcion-de-arranque" title="Permalink to this headline">¶</a></h2>
+<p>Si el usuario desea iniciar la función de control de apache, la puede usar las siguientes sintaxis como se muestra:</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy ApacheControl start
+</pre></div>
+</div>
+<p>(Este es el primer tipo de sintaxis en la definición de funciones de control para un apche servidor)</p>
+<p>Después de introducir el comando que el anterior, se realizan los siguientes pasos:</p>
+<p>Paso 1: Do you want to start Apache? (Y/N).</p>
+<p>El usuario tiene que especificar Y o N.</p>
+<p>Paso 2: What is the apache service name?</p>
+<ol class="arabic simple" start="0">
+<li>apache2</li>
+<li>httpd</li>
+</ol>
+<p>El usuario debe especificar si 0 o 1 como por la exigencia.</p>
+<p>Después de conseguir la entrada del nombre de servicio de apache, lo hará inicia el proceso.</p>
+<p>La siguiente captura de pantalla muestra el proceso de inicio pictóricamente.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy apachecontrol start
+Do you want to Start Apache? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+What is the apache service name?
+<span class="o">(</span>0<span class="o">)</span> apache2
+<span class="o">(</span>1<span class="o">)</span> httpd
+0
+Starting Apache...
+* Starting web server apache2
+*
+******************************
+
+
+1Apache Controller Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="funcion-stop">
+<h2>Función Stop<a class="headerlink" href="#funcion-stop" title="Permalink to this headline">¶</a></h2>
+<p>Si el usuario desea detener la función de control de apache, la puede usar las siguientes sintaxis como se muestra:</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy apachecontrol stop --yes --guess
+</pre></div>
+</div>
+<p>(Este es el segundo tipo de sintaxis en la definición de unas funciones de control de servidor apache)</p>
+<p>La opción conjetura se puede utilizar para realizar un valores predeterminados de las funciones definidas en particular.</p>
+<p>Para ubuntu la apche2 es el valor predeterminado.</p>
+<p>Para httpd Cent OS es el valor predeterminado.</p>
+<p>La siguiente captura de pantalla que muestra sobre la función de parada y el propósito de las opciones guess ilustrado.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy apachecontrol stop --yes --guess
+Stopping Apache...
+* Stopping web server apache2
+*
+******************************
+
+
+1Apache Controller Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="reinicie-una-funcion">
+<h2>Reinicie una función<a class="headerlink" href="#reinicie-una-funcion" title="Permalink to this headline">¶</a></h2>
+<p>Si el usuario desea reiniciar la función de control de apache, la puede usar las siguientes sintaxis como se muestra:</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy apachecontrol restart --yes --apache-command<span class="o">=</span><span class="s2">&quot;apache2&quot;</span>
+</pre></div>
+</div>
+<p>(Este es el tercer tipo de sintaxis en la definición de unas funciones de control para apche servidor)</p>
+<p>El usuario puede utilizar este tercer tipo de sintaxis para especificar el valor de la orden de Apache requeridos. La captura de pantalla como se muestra a continuación muestra este tercer tipo de sintaxis y proceso de reiniciar una función pictóricamente.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy apachecontrol restart --yes --apache-command=&quot;apache2&quot;
+Restarting Apache...
+AH00558: apache2: Could not reliably determine the server&#39;s fully qualified domain name, using 127.0.1.1. Set the &#39;ServerName&#39; directive globa lly to suppress this message
+* Restarting web server apache2
+â€‚
+ ....done.
+******************************
+
+
+1Apache Controller Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="recarga-de-una-funcion">
+<h2>Recarga de una función<a class="headerlink" href="#recarga-de-una-funcion" title="Permalink to this headline">¶</a></h2>
+<p>Si el usuario desea volver a cargar la función de control de apache, la puede usar las siguientes sintaxis como se muestra:</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy apachecontrol reload
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy apachecontrol --yes --guess
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy apachecontrol --yes --apache-command<span class="o">=</span><span class="s2">&quot;apache2&quot;</span>
+</pre></div>
+</div>
+<p>La función de recarga realiza la recarga del servidor apache sin necesidad de reiniciar.</p>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Es así que ver tanto en ciento-OS y ubuntu.</li>
+<li>Los parámetros utilizados para las declaraciones no distinguen entre mayúsculas y minúsculas, lo que es una ventaja añadida, mientras que en
+comparación con otros.</li>
+<li>Hay tres sintaxis diferente utilizado para la declaración, el usuario puede elegir uno de ellos según las necesidades.</li>
+<li>La sintaxis tres diferentes son aplicables para las cuatro funciones de control de arranque, parada, reiniciar, volver a cargar.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Apache Control</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#ayuda-comando">Ayuda Comando</a></li>
+<li><a class="reference internal" href="#parametros-alternativos">parámetros alternativos</a></li>
+<li><a class="reference internal" href="#funcion-de-arranque">función de arranque</a></li>
+<li><a class="reference internal" href="#funcion-stop">Función Stop</a></li>
+<li><a class="reference internal" href="#reinicie-una-funcion">Reinicie una función</a></li>
+<li><a class="reference internal" href="#recarga-de-una-funcion">Recarga de una función</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="sptdeploy_main.html"
+                        title="previous chapter">PTDeploy</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sapachevhosteditor_deploy.html"
+                        title="next chapter">ApacheVHostEditor</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/sapachecontrol_deploy.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="sapachevhosteditor_deploy.html" title="ApacheVHostEditor"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="sptdeploy_main.html" title="PTDeploy"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptdeploy_main.html" >PTDeploy</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

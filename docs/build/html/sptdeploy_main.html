@@ -1,0 +1,332 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>PTDeploy &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="next" title="Apache Control" href="sapachecontrol_deploy.html" />
+    <link rel="prev" title="Zend Server" href="szendserver.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="sapachecontrol_deploy.html" title="Apache Control"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="szendserver.html" title="Zend Server"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="ptdeploy">
+<h1>PTDeploy<a class="headerlink" href="#ptdeploy" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>El ptdeploy envuelve las aplicaciones de los usuarios con la implementación automatizada, construir y lanzar funciones, aplicación web de control de versiones y la infraestructura de código en PHP.</p>
+<p>Es a aliviar los usuarios y proporciona plantillas de implementación automatizadas e instala una acumulación totalmente continua para su proyecto.</p>
+</div>
+<div class="section" id="ayuda-comando">
+<h2>Ayuda Comando<a class="headerlink" href="#ayuda-comando" title="Permalink to this headline">¶</a></h2>
+<p>Si quieres saber el propósito de un módulo en particular, sólo tienes que escribir el comando de la siguiente manera:</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy ModuleName <span class="nb">help</span>
+</pre></div>
+</div>
+<p>este comando proporcionará el uso de ese módulo en particular y también las opciones disponibles en las acciones que se pueden realizar. La captura de pantalla se muestra bajo explica el uso del control apache módulo bajo ptdeploy usando el comando help.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy ApacheControl <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>is part of Default Modules and handles Apache Server Control Functions.
+
+ ApacheControl, apachecontrol, apachectl
+
+         - start
+         Start the Apache server
+         example: ptdeploy apachecontrol start
+         example: ptdeploy apachecontrol start --yes --guess
+         example: ptdeploy apachecontrol start --yes --apache-command<span class="o">=</span><span class="s2">&quot;apache2&quot;</span>
+
+         - stop
+         Stop the Apache server
+         example: ptdeploy apachecontrol stop
+         example: ptdeploy apachecontrol stop --yes --guess
+         example: ptdeploy apachecontrol stop --yes --apache-command<span class="o">=</span><span class="s2">&quot;apache2&quot;</span>
+
+         - restart
+         Restart the Apache server
+         example: ptdeploy apachecontrol restart
+         example: ptdeploy apachecontrol restart --yes --guess
+         example: ptdeploy apachecontrol restart --yes --apache-command<span class="o">=</span><span class="s2">&quot;apache2&quot;</span>
+
+         - reload
+         Reloads the Apache server configuration without restarting
+         example: ptdeploy apachecontrol reload
+         example: ptdeploy apachecontrol reload --yes --guess
+         example: ptdeploy apachecontrol reload --yes --apache-command<span class="o">=</span><span class="s2">&quot;apache2&quot;</span>
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+<p>El comando de ayuda también se indican los parámetros alternativos que se pueden utilizar en la declaración.</p>
+</div>
+<div class="section" id="por-que-construir-este-ptdeploy">
+<h2>¿Por qué construir este ptdeploy<a class="headerlink" href="#por-que-construir-este-ptdeploy" title="Permalink to this headline">¶</a></h2>
+<p>Con el fin de construir para el bienestar de la implementación, se necesitan muchos archivos a copiar de FTP u otras soluciones ad hoc. Y también gran cantidad de herramientas de automatización Empresa faltaban. Para superar estas carencias ptdeploy bajo la herramienta faraón eran acumule.</p>
+<p>PHP tiene ptdeploy tan rubí fiils la brecha en Capistrano.</p>
+<p>Esta herramienta es para aplicaciones de provisiones y construye a sus cajas. El usuario puede configurar aún patrón de despliegue de aplicaciones simples o complejas a su sistema con uno o dos archivos PHP o, de forma rápida patrones de despliegue amigables de configuración en la nube.</p>
+<p>ptdeploy es modular. orientado a objetos y extensible. Así que si el usuario requiere ningún módulo extra que pueden crear y añadir los nuevos módulos en función de sus necesidades.</p>
+<p>Este ptdeploy actúa como un contenedor en el que todos los pasos de despliegue usuarios se cubre en un solo archivo. Esto permite el uso de un solo comando para arrancar una instancia de sus aplicaciones.</p>
+</div>
+<div class="section" id="instalacion">
+<h2>Instalación<a class="headerlink" href="#instalacion" title="Permalink to this headline">¶</a></h2>
+<p>Instalación del ptdeploy se puede hacer de dos maneras posibles, dependiendo de la disponibilidad y requerimientos de los usuarios. Ellos dos formas de instalar ptdeploy son:</p>
+<ul class="simple">
+<li>Instalación ptdeploy través ptconfigure</li>
+<li>Instalación de la ptdeploy sin depender de ptconfigure.</li>
+</ul>
+</div>
+<div class="section" id="instalacion-ptdeploy-traves-ptconfigure">
+<h2>Instalación ptdeploy través ptconfigure<a class="headerlink" href="#instalacion-ptdeploy-traves-ptconfigure" title="Permalink to this headline">¶</a></h2>
+<p>Si el usuario tiene la ptconfigure en su máquina, entonces es la manera más sencilla de instalar ptdeploy utilizando el siguiente comando:</p>
+<div class="highlight-bash"><div class="highlight"><pre>sudo ptconfigure ptdeploy install --yes --guess
+</pre></div>
+</div>
+</div>
+<div class="section" id="instalacion-del-ptdeploy-sin-depender-de-ptconfigure">
+<h2>Instalación del ptdeploy sin depender de ptconfigure<a class="headerlink" href="#instalacion-del-ptdeploy-sin-depender-de-ptconfigure" title="Permalink to this headline">¶</a></h2>
+<p>Si el usuario desea instalar el ptdeploy sin depender y utilizando el ptconfigure que pueden utilizar el siguiente comando:</p>
+<div class="highlight-bash"><div class="highlight"><pre>sudo apt-get install php5 git
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>git clone https://git.pharaoh-tools.com/phpengine/ptdeploy <span class="o">&amp;&amp;</span> sudo php ptdeploy/install-silent
+</pre></div>
+</div>
+<p>o</p>
+<p>El siguiente comando es predecible para los usuarios que deseen especificar la ubicación durante la instalación.</p>
+<div class="highlight-bash"><div class="highlight"><pre>git clone https://git.pharaoh-tools.com/phpengine/ptdeploy <span class="o">&amp;&amp;</span> sudo php ptdeploy/install
+</pre></div>
+</div>
+</div>
+<div class="section" id="las-funciones-avanzadas">
+<h2>Las funciones avanzadas<a class="headerlink" href="#las-funciones-avanzadas" title="Permalink to this headline">¶</a></h2>
+<p>Edición de los archivos de host, los archivos de la máquina virtual, archivos de configuración, actualizaciones de bases de datos y más pueden ser automatizadas usando esto.</p>
+<p>Mediante el uso de la capacidad de gestión de servidor remoto, los usuarios pueden automatizar despliegues en toda la infraestructura de cualquier tamaño.</p>
+</div>
+<div class="section" id="la-manera-como-el-ptdeploy-promueve-su-proyecto-usando-dapperfy">
+<h2>La manera cómo el ptdeploy promueve su proyecto usando dapperfy<a class="headerlink" href="#la-manera-como-el-ptdeploy-promueve-su-proyecto-usando-dapperfy" title="Permalink to this headline">¶</a></h2>
+<p>La palabra dapperfy es un comando ptdeploy que crea algunos pilotos automáticos para su proyecto.</p>
+<p>Utilizando el dapperfy es muy rápido, y es probablemente el mejor punto de partida.</p>
+</div>
+<div class="section" id="capify-vs-dapperfy">
+<h2>Capify Vs Dapperfy<a class="headerlink" href="#capify-vs-dapperfy" title="Permalink to this headline">¶</a></h2>
+<p>Al comparar la capify con dapperfy, es obvio decir que la dapperfy es la mejor, ya que está escrito en PHP.</p>
+<p>El punto fuerte es que el comando ptdeploy dapperfy ofrece el conjunto estándar de los pilotos automáticos de los proyectos de los usuarios. donde el capify ofrece funciones similares al proyecto Ruby.</p>
+</div>
+<div class="section" id="como-utilizar-y-modulos-disponibles">
+<h2>Cómo utilizar y módulos disponibles<a class="headerlink" href="#como-utilizar-y-modulos-disponibles" title="Permalink to this headline">¶</a></h2>
+<p>Veamos, cómo utilizar la herramienta ptdeploy, primero, simplemente escriba como</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy
+</pre></div>
+</div>
+<p>este comando listará todos los nombres de los módulos que están disponibles bajo ptdeploy.</p>
+<ul class="simple">
+<li>ApacheControl - Apache Server Control</li>
+<li>ApacheVHostEditor - Apache Virtual Host Functions</li>
+<li>AppSettings - PTDeploy Application Settings</li>
+<li>Autopilot - PTConfigure Autopilot - User Defined Installations</li>
+<li>Builderfy - PTDeploy Builderfyer - Create some standard autopilots for your project</li>
+<li>CukeConf - Cucumber Configuration</li>
+<li>DBConfigure - Database Connection Configuration Functions</li>
+<li>DBInstall - Database Installation Management Functions</li>
+<li>Dapperfy - PTDeploy Dapperfyer - Automated Application Deployment autopilots for your project</li>
+<li>Drupal - Drupal - Integration and Templates for Drupal</li>
+<li>EnvironmentConfig - Environment Configuration - Configure Environments for a project</li>
+<li>GitClone - GitClone Source Control Clone Functions</li>
+<li>HostEditor - Host File Management Functions</li>
+<li>Invoke - SSH Invocation Functions</li>
+<li>Joomla - Joomla - Integration and Templates for Joomla</li>
+<li>LighttpdControl - Lighttpd Server Control</li>
+<li>Logging - Logging - Output errors to the logging</li>
+<li>NginxControl - Nginx Server Control</li>
+<li>NginxSBEditor - Nginx Server Block Functions</li>
+<li>ParallelSshChild - Command Execution Functions</li>
+<li>Project - PTDeploy Project Management Functions</li>
+<li>RunCommand - Execute a Command</li>
+<li>SFTP - SFTP Functionality</li>
+<li>SVN - SVN Source Control Project Checkout/Download Functions</li>
+<li>SystemDetection - System Detection - Detect the Running Operating System</li>
+<li>Templating - Templating</li>
+<li>Version - Versioning Functions</li>
+<li>Wordpress - Wordpress - Integration and Templates for Wordpress</li>
+</ul>
+<p>aquí, la pantalla indica la pantalla de todos los módulos disponibles bajo ptconfigure.</p>
+<div class="highlight-bash"><div class="highlight"><pre>Comandos disponibles:
+---------------------------------------
+
+ApacheControl - Apache Server Control
+ApacheVHostEditor - Apache Virtual Host Functions
+AppSettings - PTDeploy Application Settings
+Autopilot - PTConfigure Autopilot - User Defined Installations
+Builderfy - PTDeploy Builderfyer - Create some standard autopilots <span class="k">for</span> your project
+CukeConf - Cucumber Configuration
+DBConfigure - Database Connection Configuration Functions
+DBInstall - Database Installation Management Functions
+Dapperfy - PTDeploy Dapperfyer - Automated Application Deployment autopilots <span class="k">for</span> your project
+Drupal - Drupal - Integration and Templates <span class="k">for</span> Drupal
+EnvironmentConfig - Environment Configuration - Configure Environments <span class="k">for</span> a project
+GitClone - GitClone Source Control Clone Functions
+HostEditor - Host File Management Functions
+Invoke - SSH Invocation Functions
+Joomla - Joomla - Integration and Templates <span class="k">for</span> Joomla
+LighttpdControl - Lighttpd Server Control
+Logging - Logging - Output errors to the logging
+NginxControl - Nginx Server Control
+NginxSBEditor - Nginx Server Block Functions
+ParallelSshChild - Command Execution Functions
+Project - PTDeploy Project Management Functions
+RunCommand - Execute a Command
+SFTP - SFTP Functionality
+SVN - SVN Source Control Project Checkout/Download Functions
+SystemDetection - System Detection - Detect the Running Operating System
+Templating - Templating
+Version - Versioning Functions
+Wordpress - Wordpress - Integration and Templates <span class="k">for</span> Wordpress
+</pre></div>
+</div>
+<hr class="docutils" />
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="sapachecontrol_deploy.html">Apache Control</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sapachecontrol_deploy.html#sinopsis">sinopsis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sapachecontrol_deploy.html#ayuda-comando">Ayuda Comando</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sapachecontrol_deploy.html#parametros-alternativos">parámetros alternativos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sapachecontrol_deploy.html#funcion-de-arranque">función de arranque</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sapachecontrol_deploy.html#funcion-stop">Función Stop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sapachecontrol_deploy.html#reinicie-una-funcion">Reinicie una función</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sapachecontrol_deploy.html#recarga-de-una-funcion">Recarga de una función</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sapachecontrol_deploy.html#beneficios">Beneficios</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sapachevhosteditor_deploy.html">ApacheVHostEditor</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sapachevhosteditor_deploy.html#sinopsis">sinopsis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sapachevhosteditor_deploy.html#comando-ayuda">comando Ayuda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sapachevhosteditor_deploy.html#parametros-alternativos">parámetros alternativos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sapachevhosteditor_deploy.html#anadir">añadir</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sapachevhosteditor_deploy.html#mas-balancer">Más- Balancer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sapachevhosteditor_deploy.html#quitar">quitar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sapachevhosteditor_deploy.html#lista">lista</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sapachevhosteditor_deploy.html#permitir">permitir</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sapachevhosteditor_deploy.html#inhabilitar">inhabilitar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sapachevhosteditor_deploy.html#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">PTDeploy</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#ayuda-comando">Ayuda Comando</a></li>
+<li><a class="reference internal" href="#por-que-construir-este-ptdeploy">¿Por qué construir este ptdeploy</a></li>
+<li><a class="reference internal" href="#instalacion">Instalación</a></li>
+<li><a class="reference internal" href="#instalacion-ptdeploy-traves-ptconfigure">Instalación ptdeploy través ptconfigure</a></li>
+<li><a class="reference internal" href="#instalacion-del-ptdeploy-sin-depender-de-ptconfigure">Instalación del ptdeploy sin depender de ptconfigure</a></li>
+<li><a class="reference internal" href="#las-funciones-avanzadas">Las funciones avanzadas</a></li>
+<li><a class="reference internal" href="#la-manera-como-el-ptdeploy-promueve-su-proyecto-usando-dapperfy">La manera cómo el ptdeploy promueve su proyecto usando dapperfy</a></li>
+<li><a class="reference internal" href="#capify-vs-dapperfy">Capify Vs Dapperfy</a></li>
+<li><a class="reference internal" href="#como-utilizar-y-modulos-disponibles">Cómo utilizar y módulos disponibles</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="szendserver.html"
+                        title="previous chapter">Zend Server</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sapachecontrol_deploy.html"
+                        title="next chapter">Apache Control</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/sptdeploy_main.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="sapachecontrol_deploy.html" title="Apache Control"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="szendserver.html" title="Zend Server"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

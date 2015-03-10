@@ -23,3 +23,4 @@ Contents:
 
 
  sptconfigure_main
+ sptdeploy_main
