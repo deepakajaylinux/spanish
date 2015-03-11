@@ -1,0 +1,239 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Logging &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="PTDeploy" href="sptdeploy_main.html" />
+    <link rel="prev" title="LighttpdControl" href="slighttpdcontrol_deploy.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="slighttpdcontrol_deploy.html" title="LighttpdControl"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptdeploy_main.html" accesskey="U">PTDeploy</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="logging">
+<h1>Logging<a class="headerlink" href="#logging" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Este módulo de registro se utiliza con el propósito de registrar un mensaje a la consola, y se utiliza opcionalmente para registro de errores php. Veamos cómo instalar y utilizar el registro para la declaración de mensaje y en registro de errores php.</p>
+</div>
+<div class="section" id="ayuda-comando">
+<h2>Ayuda Comando<a class="headerlink" href="#ayuda-comando" title="Permalink to this headline">¶</a></h2>
+<p>El comando ayuda actúa como un breve manual de usuario que lleva al usuario acerca de su uso y metodologías. Se especifica los parámetros alternativos que se pueden utilizar en la declaración, y un ejemplo de sintaxis para definir un registro. El comando utilizado para declarar la opción de ayuda se da a continuación:</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy Logging <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La siguiente captura de pantalla muestra gráficamente sobre el funcionamiento de comando ayuda.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy Logging <span class="nb">help</span>
+******************************
+
+
+ Use this to log a message to the Console, and optionally the php error log.
+
+ Logging, logging
+
+       - log
+       Logs a message the console or
+       example: ptconfigure logging log --php-log --log-message<span class="o">=</span><span class="s2">&quot;Here is something logging to the console and error log&quot;</span>
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="instalacion">
+<h2>instalación<a class="headerlink" href="#instalacion" title="Permalink to this headline">¶</a></h2>
+<p>El comando utilizado para instalar el registro bajo ptdeploy se da a continuación:</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy logging log
+</pre></div>
+</div>
+<p>Después de la introducción, el comando anterior, el proceso de instalación se representa en la siguiente columna tabular.</p>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="20%" />
+<col width="30%" />
+<col width="11%" />
+<col width="39%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parámetros</th>
+<th class="head">Parámetro Alternativa</th>
+<th class="head">Opciones</th>
+<th class="head">Comentarios</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Install Logging? (Y/N)</td>
+<td>En lugar de Logging, podemos
+utilizar logging también.</td>
+<td>Y(Yes)</td>
+<td>Si el usuario desea continuar el proceso de
+instalación se puede introducir como Y.</td>
+</tr>
+<tr class="row-odd"><td>Install Logging? (Y/N)</td>
+<td>En lugar de Logging, podemos
+utilizar logging también.</td>
+<td>N(No)</td>
+<td>Si el usuario desea abandonar el proceso de
+instalación se puede introducir como N.|</td>
+</tr>
+</tbody>
+</table>
+<p>Si el usuario continúa el proceso de instalación, el proceso de solicitud de los usuarios para especificar el mensaje de registro pidiendo</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="s2">&quot;Enter Log Message&quot;</span>
+
+<span class="s2">&quot;Good Morning&quot;</span>
+</pre></div>
+</div>
+<p>Una vez que la entrada del usuario el mensaje, el mensaje de registro dan irán apareciendo en la pantalla como se muestra:
+&#8220;Good Morning&#8221;</p>
+<p>Por último, la instalación se completó. La siguiente captura de pantalla muestra el proceso de instalación ilustrado.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/#  ptdeploy logging log
+Install Logging? <span class="o">(</span>Y/N<span class="o">)</span>
+Y
+*******************************
+*   Golden Contact Computing  *
+*           Logging!          *
+*******************************
+Enter Log Message
+Good Morning
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Good Morning
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for</span> installing , visit www.gcsoftshop.co.uk <span class="k">for</span> more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+
+
+No Data.
+
+------------------------------
+Installer Finished
+</pre></div>
+</div>
+</div>
+<div class="section" id="como-definir-php-registro-de-errores">
+<h2>¿Cómo definir php registro de errores<a class="headerlink" href="#como-definir-php-registro-de-errores" title="Permalink to this headline">¶</a></h2>
+<p>La sintaxis para declarar el registro de registro de errores php se muestra a continuación:</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure logging log --php- log --log-message<span class="o">=</span><span class="s2">&quot;Here is something logging to the console and error log&quot;</span>
+</pre></div>
+</div>
+<p>en lugar de</p>
+<div class="highlight-bash"><div class="highlight"><pre>log-message<span class="o">=</span><span class="s2">&quot;Here is something logging to the console and error log&quot;</span>
+</pre></div>
+</div>
+<p>el usuario puede añadir cualquier texto a la parte del mensaje de registro en función de sus necesidades.</p>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>El usuario puede añadir su mensaje de registro frecuentemente utilizado para el registro de errores php.</li>
+<li>Durante la instalación del registro que el usuario puede introducir y garantizar la visualización de mensaje de registro.</li>
+<li>Es-acomodados tanto en ubuntu y al igual que en ciento OS.</li>
+<li>Los parámetros utilizados en la declaración no distingue entre mayúsculas y minúsculas.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Logging</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#ayuda-comando">Ayuda Comando</a></li>
+<li><a class="reference internal" href="#instalacion">instalación</a></li>
+<li><a class="reference internal" href="#como-definir-php-registro-de-errores">¿Cómo definir php registro de errores</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="slighttpdcontrol_deploy.html"
+                        title="previous chapter">LighttpdControl</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/slogging_deploy.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="slighttpdcontrol_deploy.html" title="LighttpdControl"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptdeploy_main.html" >PTDeploy</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

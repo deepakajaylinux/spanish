@@ -1,0 +1,235 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>DBInstall &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="PTDeploy" href="sptdeploy_main.html" />
+    <link rel="next" title="Drupal" href="sdrupal_deploy.html" />
+    <link rel="prev" title="ApacheVHostEditor" href="sapachevhosteditor_deploy.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="sdrupal_deploy.html" title="Drupal"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="sapachevhosteditor_deploy.html" title="ApacheVHostEditor"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptdeploy_main.html" accesskey="U">PTDeploy</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="dbinstall">
+<h1>DBInstall<a class="headerlink" href="#dbinstall" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>Sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Dbinstall módulo ayuda en el manejo de las funciones de instalación de base de datos. Este comando utiliza para instalar una nueva base de datos. La instalación requiere acceso sudo, o tiene que ser ejecutado como root. Esto incluye la ejecución del comando rpm, o el comando miminstall del paquete de alquitrán, y también cuando se utiliza el comando dbinstall que crea una base de datos inicial.</p>
+<p>Si bien la creación de una base de datos inicial, que ha instalado el software usted puede construir una base de datos SQL Mimer utilizando el comando dbinstall.</p>
+<p>Acabamos de instalar una nueva base de datos en un servidor Linux (CentOS) y cuando intento conectar a la base de datos (desde el servidor) que requiere el nombre de base de datos en la cadena de conexión. Como se mencionó antes, el comando dbinstall requiere acceso sudo, o debe ser ejecutado por root. Si no se ha iniciado desde un shell contraseña sudo privilegiada se le pedirá.</p>
+<p>Durante la sesión dbinstall, nombre de la base de datos, la ubicación de base de datos, y la contraseña del administrador de base de datos (es decir, SYSADM) debe ser especificado. También habrá opciones para instalar entornos de ejemplo, etc. Cuando se termina la sesión, una base de datos totalmente operativa está disponible - habilitado para acceso de cliente / servidor a través de TCP y arranque automático al iniciar el sistema.</p>
+</div>
+<div class="section" id="ayuda-comando">
+<h2>Ayuda Comando<a class="headerlink" href="#ayuda-comando" title="Permalink to this headline">¶</a></h2>
+<p>Este comando ayuda a determinar el uso del módulo DBinstall. El usuario se llega a saber acerca de las diferentes formas / formato para ejecutar este módulo. Este comando guía al usuario final a conocer el propósito de este comando. A continuación dado son el comando y la captura de pantalla de la misma.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy DBInstall <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La representación gráfica de la orden anterior se muestra a continuación,</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy DBInstall help
+******************************
+
+
+ This command is part of Default Modules and handles Database Installation Functions.
+
+ DBInstall, db-install, dbinstall
+
+         - install
+         install the database for a project. run DBConfigure first to set up users unless you already have them.
+         example: ptdeploy db-install install
+
+         - save
+         save the database for a project. run DBConfigure first to set up users unless you already have them.
+         example: ptdeploy db-install save
+
+         - drop
+         drop the database for a project.
+         example: ptdeploy db-install drop
+
+
+--------------
+ Wordpress Module:
+
+ The Wordpress module extends DBInstall by adding wordpress-install
+
+ Wordpress module adds the actions wordpress-install and wp-install to DBInstall, requiresd to allow the Post DB
+ Install hooks for Wordpress, the DB restore won&#39;t work correctly without at least the url.
+
+ ptdeploy dbinstall wordpress-install --yes --guess --hook-url=www.site.env
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="instalacion">
+<h2>instalación<a class="headerlink" href="#instalacion" title="Permalink to this headline">¶</a></h2>
+<p>Cuando el usuario tiene que instalar, el usuario puede ejecutar los siguientes comandos para DBIstall. El sistema ejecutará el proceso de instalación.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy dbinstall install
+</pre></div>
+</div>
+<p>El sistema pide el anfitrión Mysql, Pulse Intro para utilizar el host predeterminado.</p>
+<div class="highlight-bash"><div class="highlight"><pre>What&#39;s the Mysql Host? Enter for 127.0.0.1
+</pre></div>
+</div>
+<p>A continuación, el sistema pedirá usuario Mysql administración, el nombre de usuario será &#8220;root&#8221; ?? y la contraseña del administrador de MySQL.</p>
+<div class="highlight-bash"><div class="highlight"><pre>What<span class="s1">&#39;s the MySQL Admin User?</span>
+<span class="s1">root</span>
+<span class="s1">What&#39;</span>s the MySQL Admin Password?
+123456
+</pre></div>
+</div>
+<p>A continuación, el sistema pide el usuario de la aplicación DB.
+.. code-block:: bash</p>
+</div>
+<div class="section" id="gota">
+<h2>gota<a class="headerlink" href="#gota" title="Permalink to this headline">¶</a></h2>
+<p>Cuando el usuario necesita para dejar la base de datos para un proyecto, el siguiente comando dado se ejecutará el proceso.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy dbinstall drop
+</pre></div>
+</div>
+<p>Antes de la ejecución, el sistema pide la confirmación para continuar, si desea continuar enter &#8216;Y&#8217;, si no entran en &#8216;N&#8217;.</p>
+<div class="highlight-bash"><div class="highlight"><pre>
+</pre></div>
+</div>
+<p>El sistema pide el anfitrión Mysql, Pulse Intro para utilizar el host predeterminado.</p>
+<div class="highlight-bash"><div class="highlight"><pre>What&#39;s the Mysql Host? Enter for 127.0.0.1
+</pre></div>
+</div>
+<p>A continuación, el sistema pedirá usuario Mysql administración, el nombre de usuario será &#8220;root&#8221; ?? y la contraseña del administrador de MySQL.</p>
+<div class="highlight-bash"><div class="highlight"><pre>What<span class="s1">&#39;s the MySQL Admin User?</span>
+<span class="s1">root</span>
+<span class="s1">What&#39;</span>s the MySQL Admin Password?
+123456
+</pre></div>
+</div>
+<p>A continuación, el sistema pide el usuario de la aplicación DB.</p>
+<div class="highlight-bash"><div class="highlight"><pre>
+</pre></div>
+</div>
+</div>
+<div class="section" id="parametro-alternativa">
+<h2>Parámetro Alternativa<a class="headerlink" href="#parametro-alternativa" title="Permalink to this headline">¶</a></h2>
+<p>Cualquiera de los tres parámetros alternativa se puede utilizar en mandamiento dbinstall, DBInstall and db-install</p>
+<p>por ejemplo: ptdeploy DBInstall help/  ptdeploy db-install help</p>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Se comprobará y verificará todas las dependencias para el paquete que está instalando</li>
+<li>Esto ejecutará dbconfigure primero para configurar los usuarios a menos que el sistema ya los tiene</li>
+<li>Dbinstall crea todas las bases de datos del sistema en el directorio de inicio del servidor de base de datos dada</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">DBInstall</a><ul>
+<li><a class="reference internal" href="#sinopsis">Sinopsis</a></li>
+<li><a class="reference internal" href="#ayuda-comando">Ayuda Comando</a></li>
+<li><a class="reference internal" href="#instalacion">instalación</a></li>
+<li><a class="reference internal" href="#gota">gota</a></li>
+<li><a class="reference internal" href="#parametro-alternativa">Parámetro Alternativa</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="sapachevhosteditor_deploy.html"
+                        title="previous chapter">ApacheVHostEditor</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sdrupal_deploy.html"
+                        title="next chapter">Drupal</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/sdbinstall_deploy.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="sdrupal_deploy.html" title="Drupal"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="sapachevhosteditor_deploy.html" title="ApacheVHostEditor"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptdeploy_main.html" >PTDeploy</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

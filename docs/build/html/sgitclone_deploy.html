@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>GitClone &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="PTDeploy" href="sptdeploy_main.html" />
+    <link rel="next" title="Grafana" href="sgrafana_deploy.html" />
+    <link rel="prev" title="EnvironmentConfig" href="senvironmentconfig_deploy.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="sgrafana_deploy.html" title="Grafana"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="senvironmentconfig_deploy.html" title="EnvironmentConfig"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptdeploy_main.html" accesskey="U">PTDeploy</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="gitclone">
+<h1>GitClone<a class="headerlink" href="#gitclone" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>El objetivo final de este módulo es para manejar el registro de salida funciones. Se puede realizar la comprobación de las funciones en la carpeta del proyecto de la usuario.</p>
+<p>La naturaleza de trabajo de este módulo consiste en clonar un repositorio en un directorio recién creado, crea ramas de rastreo remoto para cada rama en el repositorio clonado y crea, comprueba a cabo una rama inicial que se bifurcaba de rama actualmente activo del repositorio clonado.</p>
+<p>Veamos cómo este módulo facilita a los usuarios en el manejo de la comprobación de las funciones, y también acerca de cómo utilizar este módulo de los próximos temas.</p>
+</div>
+<div class="section" id="ayuda-comando">
+<h2>Ayuda Comando<a class="headerlink" href="#ayuda-comando" title="Permalink to this headline">¶</a></h2>
+<p>El comando de ayuda es un breve manual de usuario. Se destaca la función principal de este módulo, se enumeran las salidas de los parámetros alternativos que se pueden utilizar en la declaración, y también explica acerca de las opciones de sintaxis y posibles de utilizar la comprobación de las funciones previstas en una opción única mediante el uso de comando de ayuda, como se muestra a continuación,</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy GitClone <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La sintaxis para declarar el comando de ayuda no es sensible a mayúsculas, que es una ventaja añadida. La siguiente captura de pantalla a visualizar sobre el comando de ayuda bajo git clone.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy GitClone help
+******************************
+
+
+ This command is part of Default Modules and handles Checkout Functions.
+
+ clone, co
+
+         - perform a checkout into configured projects folder. If you don&#39;t want to specify target dir but do want
+         to specify a branch, then enter the text &quot;none&quot; as that parameter.
+         example: ptdeploy git co https://github.com/phpengine/yourmum {optional target dir} {optional branch}
+         example: ptdeploy git co https://github.com/phpengine/yourmum none {optional branch}
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="como-utilizar-las-funciones-de-pago-y-envio">
+<h2>Cómo utilizar las funciones de pago y envío<a class="headerlink" href="#como-utilizar-las-funciones-de-pago-y-envio" title="Permalink to this headline">¶</a></h2>
+<p>La sintaxis para utilizar el cheque las funciones previstas en git clone es la siguiente.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy git co https: // github.com/ phpengine/yourmum
+</pre></div>
+</div>
+<p>Después de entrar en la orden dada anteriormente, la ejecución de la función de pago comienza como se describe en la siguiente tabla,</p>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="19%" />
+<col width="29%" />
+<col width="9%" />
+<col width="42%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parámetros</th>
+<th class="head">Parámetro Alternativa</th>
+<th class="head">Opciones</th>
+<th class="head">Comentarios</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Perform a clone/download
+of files? (Y/N)</td>
+<td>En lugar de co, podemos utilizar
+checkout, Checkout también.</td>
+<td>Y(Yes)</td>
+<td>Si el usuario necesita para llevar a cabo un clon /
+descarga de los archivos se puede introducir como Y.</td>
+</tr>
+<tr class="row-odd"><td>Perform a clone/download
+of files? (Y/N)</td>
+<td>En lugar de co, podemos utilizar
+checkout, Checkout también.</td>
+<td>N(No)</td>
+<td>Si el usuario no se necesita realizar un clon /
+descarga de archivos que pueden como N.|</td>
+</tr>
+</tbody>
+</table>
+<p>La siguiente captura de pantalla muestra gráficamente sobre el proceso y el trabajo de comprobar a cabo funciones.</p>
+<div class="highlight-bash"><div class="highlight"><pre>
+</pre></div>
+</div>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Es-acomodados tanto en ubuntu y al igual que en ciento OS.</li>
+<li>Los parámetros utilizados en la declaración no distingue entre mayúsculas y minúsculas.</li>
+<li>El usuario puede realizar y supervisar las funciones de comprobación en virtud git clone.</li>
+<li>Mientras se realiza la comprobación de las funciones, el usuario puede especificar el directorio de destino, es necesario especificar la rama.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">GitClone</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#ayuda-comando">Ayuda Comando</a></li>
+<li><a class="reference internal" href="#como-utilizar-las-funciones-de-pago-y-envio">Cómo utilizar las funciones de pago y envío</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="senvironmentconfig_deploy.html"
+                        title="previous chapter">EnvironmentConfig</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sgrafana_deploy.html"
+                        title="next chapter">Grafana</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/sgitclone_deploy.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="sgrafana_deploy.html" title="Grafana"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="senvironmentconfig_deploy.html" title="EnvironmentConfig"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptdeploy_main.html" >PTDeploy</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>LighttpdControl &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="PTDeploy" href="sptdeploy_main.html" />
+    <link rel="next" title="Logging" href="slogging_deploy.html" />
+    <link rel="prev" title="Joomla" href="sjoomla_deploy.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="slogging_deploy.html" title="Logging"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="sjoomla_deploy.html" title="Joomla"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptdeploy_main.html" accesskey="U">PTDeploy</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="lighttpdcontrol">
+<h1>LighttpdControl<a class="headerlink" href="#lighttpdcontrol" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Lighttpd es un servidor web seguro, rápido, compatible, y muy flexible que ha sido optimizada para entornos de alto rendimiento. Lighttpd que la eficiencia de un ptdeploy redefiniendo rápidamente; ya que está diseñado y optimizado para entornos de alto rendimiento. Con una pequeña huella de memoria en comparación con otros servidores web, la gestión eficaz de la cpu-carga, y conjunto de características avanzadas lighttpd es la solución perfecta para cada servidor que está sufriendo problemas de carga. Esto es adecuado para trabajar con Ubuntu y CentOS.</p>
+</div>
+<div class="section" id="comando-ayuda">
+<h2>comando Ayuda<a class="headerlink" href="#comando-ayuda" title="Permalink to this headline">¶</a></h2>
+<p>Ayuda se utiliza para acceder a la información sobre lighttpd. Para una consulta rápida con los comandos de ayuda en cualquiera de las versiones de ptdeploy también puede utilizar el comando de ayuda. El comando de ayuda es un comando interno y está disponible en el módulo ptdeploy.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy lighttpdcontrol <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La siguiente captura de pantalla y ayuda al usuario a la servidumbre con ptdeploy.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy LighttpdControl <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>is part of Default Modules and handles Lighttpd Server Control Functions.
+
+ LighttpdControl, lighttpdcontrol, lighttpdctl
+
+         - start
+         Start the Lighttpd server
+         example: ptdeploy lighttpdcontrol start
+         example: ptdeploy lighttpdcontrol start --yes
+
+         - stop
+         Stop the Lighttpd server
+         example: ptdeploy lighttpdcontrol stop
+         example: ptdeploy lighttpdcontrol stop --yes
+
+         - restart
+         Restart the Lighttpd server
+         example: ptdeploy lighttpdcontrol restart
+         example: ptdeploy lighttpdcontrol restart --yes
+
+         - reload
+         Reloads the Lighttpd server configuration without restarting
+         example: ptdeploy lighttpdcontrol reload
+         example: ptdeploy lighttpdcontrol reload --yes
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="parametro-alternativa">
+<h2>Parámetro Alternativa<a class="headerlink" href="#parametro-alternativa" title="Permalink to this headline">¶</a></h2>
+<p>Preferiblemente usando Lighttpd el usuario puede esfuerzo las siguientes opciones.</p>
+<p>LighttpdControl, lighttpdcontrol, lighttpdctl.</p>
+</div>
+<div class="section" id="comienzo">
+<h2>comienzo<a class="headerlink" href="#comienzo" title="Permalink to this headline">¶</a></h2>
+<p>Opción utilizada para iniciar el servidor lighttpd Iniciar. Lighttpdcontrol es una sesión interactiva que se ejecuta con la opción módulo ptdeploy. Dependiendo de cómo se ejecuta el servidor, el comando de arranque podría ser almacenado en un guión, en el registro de Linux.</p>
+<p>El servidor se puede iniciar el uso de un simple comando con la opción de conectarse de nuevo con el control de servidor para obtener opciones adicionales.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy lighttpdcontrol start
+</pre></div>
+</div>
+<p>después de escribir el comando, que permite al usuario iniciar el funcionamiento del servidor lighttpd.</p>
+</div>
+<div class="section" id="detengase">
+<h2>Deténgase<a class="headerlink" href="#detengase" title="Permalink to this headline">¶</a></h2>
+<p>Esta opción de parada se utiliza para detener el servicio lighttpd. Específicamente Ubuntu Linux, el comando de parada llama al lighttpd para detener un trabajo que se ejecuta en el sistema. Es equivalente a la parada del servicio de mandatos. A continuación se muestra una descripción completa del comando de parada.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy lighttpdcontrol stop
+</pre></div>
+</div>
+<p>Después de la entrada como el comando anterior, el servicio se detiene la función.</p>
+</div>
+<div class="section" id="reanudar">
+<h2>reanudar<a class="headerlink" href="#reanudar" title="Permalink to this headline">¶</a></h2>
+<p>El término se refiere a un reinicio del sistema operativo de cerrar todos los programas antes de un arranque en caliente del servidor lighttpd. Reiniciar veces es necesario para recuperarse de un error, o para reiniciar los controladores o dispositivos de hardware. Un programa de almacenamiento informático normalmente realizar un reinicio con el siguiente comando simple.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy lighttpdcontrol restart
+</pre></div>
+</div>
+<p>Después de la entrada como el comando anterior, el servicio, reinicie el servicio lighttpd.</p>
+</div>
+<div class="section" id="recargar">
+<h2>recargar<a class="headerlink" href="#recargar" title="Permalink to this headline">¶</a></h2>
+<p>Recargar significa que las cosas están cambiando. El lighttpd está experimentando una revisión y una limpieza. Facilita la reutilización de lighttpd y servicios. Sin matar el proceso se puede recargar lighttpd. El siguiente comando assis el usuario para recargar. Junto con el comando si el uso del usuario sí .. opciones sin hacer ninguna pregunta de forma automática puede funcionar.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy lighttpdcontrol reload
+</pre></div>
+</div>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Hosting virtual flexible.</li>
+<li>Compatible con todo tipo de módulos.</li>
+<li>Ligero (menos de 1 MB).</li>
+<li>No mayúsculas y minúsculas.</li>
+<li>El usuario puede funcionar según su deseo.</li>
+<li>La terminación es posible.</li>
+<li>La automatización es posible.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">LighttpdControl</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#comando-ayuda">comando Ayuda</a></li>
+<li><a class="reference internal" href="#parametro-alternativa">Parámetro Alternativa</a></li>
+<li><a class="reference internal" href="#comienzo">comienzo</a></li>
+<li><a class="reference internal" href="#detengase">Deténgase</a></li>
+<li><a class="reference internal" href="#reanudar">reanudar</a></li>
+<li><a class="reference internal" href="#recargar">recargar</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="sjoomla_deploy.html"
+                        title="previous chapter">Joomla</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="slogging_deploy.html"
+                        title="next chapter">Logging</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/slighttpdcontrol_deploy.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="slogging_deploy.html" title="Logging"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="sjoomla_deploy.html" title="Joomla"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptdeploy_main.html" >PTDeploy</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>
