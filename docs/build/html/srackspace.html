@@ -1,0 +1,265 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Rackspace &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="PTConfigure" href="sptconfigure_main.html" />
+    <link rel="next" title="Redis" href="sredis.html" />
+    <link rel="prev" title="Ra" href="sra.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="sredis.html" title="Redis"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="sra.html" title="Ra"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" accesskey="U">PTConfigure</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="rackspace">
+<h1>Rackspace<a class="headerlink" href="#rackspace" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Rackspace ofrece alto rendimiento , infraestructura confiable para tener éxito en la nube. Se necesita , plataformas optimizadas con todas las funciones , y un equipo de expertos para ejecutar cargas de trabajo.</p>
+<p>Rackspace tiene dos líneas principales de negocio - Servidores Cloud y Servidores Dedicados. Rackspace ayuda a diseñar , construir y operar cargas de trabajo en entornos tanto en función de las necesidades individuales del cliente .</p>
+<p>Servidores Cloud - El nivel de servicio Infraestructura gestionada proporciona un conjunto básico de servicios necesarios para configurar los clientes en la nube , incluyendo consejos arquitectura, asistencia en seguridad y asistencia para el desarrollo de código (a través de APIs y SDKs ) . El nivel de soporte de operaciones Gestionado ofrece todos los servicios de infraestructura administrados además de soporte proactivo adicional.</p>
+<p>Servidores Dedicados - El nivel de servicio Managed consiste en el apoyo a la carta , donde se proporcionan servicios proactivos .</p>
+</div>
+<div class="section" id="ayuda-comando">
+<h2>Ayuda Comando<a class="headerlink" href="#ayuda-comando" title="Permalink to this headline">¶</a></h2>
+<p>Este comando ayuda a determinar el uso de Rackspace . El usuario se llega a saber acerca de la diferente forma / formato de ejecutar este módulo. Este comando guía al usuario final a conocer el propósito de este comando. A continuación dado son el mando y la pantalla del mismo .</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure Rackspace <span class="nb">help</span>
+
+******************************
+
+
+   This is an extension provided <span class="k">for</span> Handling Servers on Rackspace.
+
+   Rackspace, rackspace
+
+       - box-add
+       Lets you add boxes to Rackspace, and adds them to your papyrusfile
+       example: ptconfigure rackspace box-add
+                   --yes
+                   --rackspace-ssh-key-path<span class="o">=</span><span class="s2">&quot;/home/dave/.ssh/bastion.pub&quot;</span>
+                   --rackspace-ssh-key-name<span class="o">=</span><span class="s2">&quot;bastion&quot;</span>
+
+       - box-destroy
+       Will destroy box/es in an environment <span class="k">for</span> you, and remove them from the papyrus file
+       example: ptconfigure rackspace box-destroy --yes --guess --rackspace-ssh-key-path<span class="o">=</span><span class="s2">&quot;/home/dave/.ssh/bastion.pub&quot;</span> --rackspace-ssh-key-name<span class="o">=</span><span class="s2">&quot;bastion&quot;</span>
+
+       - box-destroy-all
+       Will destroy all boxes in your Rackspace account - Careful - its irreversible
+       example: ptconfigure rackspace box-destroy-all --yes --guess
+
+       - save-ssh-key, sshkey, ssh-key
+       Will <span class="nb">let </span>you save a <span class="nb">local </span>ssh key to your Rackspace account, so you can ssh in to your nodes with it
+       securely and without a password
+       example: ptconfigure rackspace save-ssh-key
+                   --yes
+                   --rackspace-ssh-key-path<span class="o">=</span><span class="s2">&quot;/home/dave/.ssh/bastion.pub&quot;</span>
+                   --rackspace-ssh-key-name<span class="o">=</span><span class="s2">&quot;bastion&quot;</span>
+
+       - list
+       Will display data about your Rackspace account
+       example: ptconfigure rackspace list
+       example: ptconfigure rackspace list --yes
+                   --guess <span class="c"># use project saved connection details if possible</span>
+                   --rackspace-list-data-type<span class="o">=</span>sizes <span class="c"># servers, sizes, images, domains, regions, ssh_keys</span>
+
+       - list-containers
+       Will display Container data about your Rackspace account
+       example: ptconfigure rackspace list-containers
+       example: ptconfigure rackspace list-containers --yes
+                   --guess <span class="c"># use project saved connection details if possible</span>
+
+       - list-objects
+       Will display object of Containers data about your Rackspace account
+       example: ptconfigure rackspace list-objects
+       example: ptconfigure rackspace list-objects --yes
+                   --guess <span class="c"># use project saved connection details if possible</span>
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="box-add">
+<h2>Box- add<a class="headerlink" href="#box-add" title="Permalink to this headline">¶</a></h2>
+<p>Este comando ayuda a añadir cajas de Rackspace , y los agrega a su archivo de papiro. El siguiente comando dado se ejecutará el proceso.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure rackspace box-add --yes --rackspace-ssh-key-path<span class="o">=</span><span class="s2">&quot;/home/dave/.ssh/bastion.pub&quot;</span> --rackspace-ssh-key-name<span class="o">=</span><span class="s2">&quot;bastion&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="box-destruir">
+<h2>Box- destruir<a class="headerlink" href="#box-destruir" title="Permalink to this headline">¶</a></h2>
+<p>Este comando ayuda a destruir la caja / es en un entorno para usted, y eliminarlos del archivo de papiro. El siguiente comando dado se ejecutará el proceso.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure rackspace box-destroy --yes --guess --rackspace-ssh-key-path<span class="o">=</span><span class="s2">&quot;/home/dave/.ssh/bastion.pub&quot;</span> --rackspace-ssh-key-name<span class="o">=</span><span class="s2">&quot;bastion&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="box-destruir-todo">
+<h2>Box- destruir - todo<a class="headerlink" href="#box-destruir-todo" title="Permalink to this headline">¶</a></h2>
+<p>Este comando ayuda a destruir todas las cajas en su cuenta de Rackspace . La parte más crítica es que es irreversible.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure rackspace box-destroy-all --yes --guess
+</pre></div>
+</div>
+</div>
+<div class="section" id="save-ssh-clave">
+<h2>Save- ssh- clave<a class="headerlink" href="#save-ssh-clave" title="Permalink to this headline">¶</a></h2>
+<p>Este comando ayuda a ahorrar una clave ssh local a su cuenta de Rackspace , así que usted puede ssh a los nodos con él de forma segura y sin una contraseña . Hay tres parámetros alternativo utilizado para este comando en particular - - clave ssh , sshkey , llave ssh . El siguiente comando dado se ejecutará el proceso.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure rackspace save-ssh-key --yes --rackspace-ssh-key-path<span class="o">=</span><span class="s2">&quot;/home/dave/.ssh/bastion.pub&quot;</span> --rackspace-ssh-key-name<span class="o">=</span><span class="s2">&quot;bastion&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="lista">
+<h2>lista<a class="headerlink" href="#lista" title="Permalink to this headline">¶</a></h2>
+<p>Este comando ayuda a datos sobre su cuenta de Rackspace . El siguiente comando dado se ejecutará el proceso.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure rackspace list
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure rackspace list --yes --guess <span class="c"># use project saved connection details if possible --rackspace-list-data-type=sizes # servers, sizes, images, domains, regions, ssh_keys</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="lista-de-los-contenedores">
+<h2>Lista de los contenedores<a class="headerlink" href="#lista-de-los-contenedores" title="Permalink to this headline">¶</a></h2>
+<p>Este comando ayuda a mostrar los datos de contenedores sobre su cuenta de Rackspace . El siguiente comando dado se ejecutará el proceso.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure rackspace list-containers
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure rackspace list-containers --yes --guess <span class="c"># use project saved connection details if possible</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="lista-de-los-objetos">
+<h2>Lista de los objetos-<a class="headerlink" href="#lista-de-los-objetos" title="Permalink to this headline">¶</a></h2>
+<p>Este comando ayuda a visualizar objeto de datos de Contenedores sobre su cuenta de Rackspace . El siguiente comando dado se ejecutará el proceso.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure rackspace list-objects
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure rackspace list-objects --yes --guess <span class="c"># use project saved connection details if possible</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="parametro-alternativa">
+<h2>Parámetro Alternativa<a class="headerlink" href="#parametro-alternativa" title="Permalink to this headline">¶</a></h2>
+<p>Hay dos parámetros alternativos que pueden ser utilizados en la línea de comandos .</p>
+<p>Rackspace, rackspace</p>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<p>Rackspace ofrece una solución completa para clientes exigentes una infraestructura especialmente diseñada de alto rendimiento diseñado para bases de datos relacionales respaldados y apoyados por los ingenieros que se especializan en las cargas de trabajo de MySQL. Rackspace es un servicio completamente gestionado para los clientes que quieren centrarse en el desarrollo de sus aplicaciones y no preocuparse por la infraestructura subyacente. El servicio ofrece a las copias de seguridad y restauraciones de la demanda , la vigilancia integrada, almacenamiento redundante , escalabilidad para crecer en base a sus necesidades de aplicación y el control total de su base de datos .</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Rackspace</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#ayuda-comando">Ayuda Comando</a></li>
+<li><a class="reference internal" href="#box-add">Box- add</a></li>
+<li><a class="reference internal" href="#box-destruir">Box- destruir</a></li>
+<li><a class="reference internal" href="#box-destruir-todo">Box- destruir - todo</a></li>
+<li><a class="reference internal" href="#save-ssh-clave">Save- ssh- clave</a></li>
+<li><a class="reference internal" href="#lista">lista</a></li>
+<li><a class="reference internal" href="#lista-de-los-contenedores">Lista de los contenedores</a></li>
+<li><a class="reference internal" href="#lista-de-los-objetos">Lista de los objetos-</a></li>
+<li><a class="reference internal" href="#parametro-alternativa">Parámetro Alternativa</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="sra.html"
+                        title="previous chapter">Ra</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sredis.html"
+                        title="next chapter">Redis</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/srackspace.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="sredis.html" title="Redis"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="sra.html" title="Ra"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" >PTConfigure</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

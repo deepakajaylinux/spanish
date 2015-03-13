@@ -641,6 +641,7 @@ Jugando con módulos PTConfigure
    sptvirtualize_configure
    spython
    sra
+   srackspace
    sredis
    srubybdd
    srubyrvm
