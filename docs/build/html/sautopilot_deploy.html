@@ -1,0 +1,207 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Autopilot &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="PTDeploy" href="sptdeploy_main.html" />
+    <link rel="next" title="Dapperfy" href="sdapperfy_deploy.html" />
+    <link rel="prev" title="ApacheVHostEditor" href="sapachevhosteditor_deploy.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="sdapperfy_deploy.html" title="Dapperfy"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="sapachevhosteditor_deploy.html" title="ApacheVHostEditor"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptdeploy_main.html" accesskey="U">PTDeploy</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="autopilot">
+<h1>Autopilot<a class="headerlink" href="#autopilot" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Piloto automático proporciona ejecución definido por el usuario . Apoya a las empresas corporativas de tamaño pequeño y mediano listos para experimentar el crecimiento y encontrar nuevas oportunidades. Nuestra amplia Managed IT Services ofrecen una amplia variedad de soluciones detalladas y exhaustivas para el negocio del usuario , incluyendo la red , nube , software de copia de seguridad de datos y servicios de TI.</p>
+<p>Nos tomamos la molestia de la tecnología de usuario. En el entorno empresarial competitivo de hoy que el usuario no tiene tiempo para problemas de la computadora ? Hacemos problemas que se vaya , para bien ! Las funciones de negocio de usuario mejor cuando el usuario no tiene que preocuparse por las soluciones tecnológicas DevOps que la impulsan . Queremos ayudar al usuario a poner el piloto automático para que el usuario pueda centrarse en el usuario de negocios quieren construir . Es cómodo con Ubntu y CentOS .</p>
+</div>
+<div class="section" id="comando-ayuda">
+<h2>comando Ayuda<a class="headerlink" href="#comando-ayuda" title="Permalink to this headline">¶</a></h2>
+<p>El comando de ayuda conduce a los usuarios en cuanto a la finalidad y al igual que sobre las opciones que se incluyen en los módulos de piloto automático . El comando help enumera los parámetros alternativos de módulo de piloto automático ptdeploy . También describe la sintaxis para la detección de la máquina del usuario . El comando de ayuda para el piloto automático se muestra a continuación .</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy autopilot <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La siguiente captura de pantalla muestra la funcionalidad de piloto automático.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy Autopilot <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>is part of a default Module and provides you with a method by which you can perform user defined
+ executions of any ptdeploy Modules, in any order, and with your own predefined settings.
+
+ Autopilot, autopilot, auto
+
+   - install, execute, x
+   execute all of the defined modules in your Autopilot file
+   example: ptdeploy autopilot install --autopilot-file<span class="o">=</span>*path-to-file*
+   example: ptdeploy auto x --af<span class="o">=</span>*path-to-file*
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="instalacion">
+<h2>instalación<a class="headerlink" href="#instalacion" title="Permalink to this headline">¶</a></h2>
+<p>Piloto automático actuar como un módulo por defecto y también proporciona ejecuciones definidos por el usuario . Hay tres opciones disponibles . Ellos son,</p>
+<ul class="simple">
+<li>Install</li>
+<li>Execute</li>
+<li>X</li>
+</ul>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy autopilot install
+</pre></div>
+</div>
+<p>After input as the above said command it starts installation. The following snap shots guides the user about autopilot installation.</p>
+</div>
+<div class="section" id="opciones">
+<h2>Opciones<a class="headerlink" href="#opciones" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="22%" />
+<col width="38%" />
+<col width="39%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">parámetros</th>
+<th class="head">parámetro alternativo</th>
+<th class="head">Comentarios</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Install autopilot</td>
+<td>En lugar de utilizar el piloto automático
+el usuario puede utilizar Autopilot,
+autopilot, auto|</td>
+<td>Piloto automático puede ser instalado bajo
+ptdeploy.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Aumento de la eficiencia operativa</li>
+<li>Reducir y controlar los costos de operación</li>
+<li>Acceso rentable a Soporte a nivel de empresa</li>
+<li>Experiencia mínimo tiempo de inactividad</li>
+<li>Capacidad para concentrarse en el manejo de la ejecución definido por el usuario</li>
+<li>Sensitibilidad caso.</li>
+<li>Trabajo complaciente con Ubuntu y CentOS .</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Autopilot</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#comando-ayuda">comando Ayuda</a></li>
+<li><a class="reference internal" href="#instalacion">instalación</a></li>
+<li><a class="reference internal" href="#opciones">Opciones</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="sapachevhosteditor_deploy.html"
+                        title="previous chapter">ApacheVHostEditor</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sdapperfy_deploy.html"
+                        title="next chapter">Dapperfy</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/sautopilot_deploy.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="sdapperfy_deploy.html" title="Dapperfy"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="sapachevhosteditor_deploy.html" title="ApacheVHostEditor"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptdeploy_main.html" >PTDeploy</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

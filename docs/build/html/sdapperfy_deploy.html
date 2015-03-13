@@ -1,0 +1,339 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Dapperfy &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="PTDeploy" href="sptdeploy_main.html" />
+    <link rel="next" title="DBInstall" href="sdbinstall_deploy.html" />
+    <link rel="prev" title="Autopilot" href="sautopilot_deploy.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="sdbinstall_deploy.html" title="DBInstall"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="sautopilot_deploy.html" title="Autopilot"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptdeploy_main.html" accesskey="U">PTDeploy</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="dapperfy">
+<h1>Dapperfy<a class="headerlink" href="#dapperfy" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Dapperfy es una fina pieza de módulo principal defecto que ayuda y apoya a los usuarios en la creación de un conjunto estándar de archivos pilotos automáticos para sus proyectos . Los usuarios pueden configurar los ajustes predeterminados a las aplicaciones . Por ejemplo : usuario admin mysql , anfitrión, pasar.</p>
+<p>Veamos cómo utilizar las funciones de lista estándar y apuestos apuestos bajo este módulo a partir de los próximos temas .</p>
+</div>
+<div class="section" id="ayuda-comando">
+<h2>Ayuda Comando<a class="headerlink" href="#ayuda-comando" title="Permalink to this headline">¶</a></h2>
+<p>El comando de ayuda envuelve toda la información necesaria sobre dapperfy como sus principales usos , la lista de parámetros alternativos que se pueden utilizar en la declaración , ¿cuáles son función principal de dapperfy ( Ej: estándar, lista) , y también la sintaxis utilizada para declarar esas funciones interesantes . El siguiente comando se utiliza para declarar opción de ayuda bajo dapperfy ,</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy Dapperfy <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La siguiente captura de pantalla muestra gráficamente sobre el funcionamiento de comando ayuda.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy Dapperfy <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>is part of a default Module Core and provides you with a method by which you can
+ create a standard <span class="nb">set </span>of Autopilot files <span class="k">for</span> your project from the <span class="nb">command </span>line.
+ You can configure default application settings, ie: mysql admin user, host, pass
+
+
+ Dapperfy, dapperfy
+
+       - list
+       List all of the autopilot files in your build/config/ptdeploy/autopilots
+       example: ptdeploy dapperfy list
+
+       - standard
+       Create a standard <span class="nb">set </span>of autopilots to manage
+       example: ptdeploy dapperfy standard
+
+       The start of the <span class="nb">command </span>will be ptdeploy autopilot execute *filename*
+
+
+--------------
+ Drupal Module:
+
+ The Drupal module extends Dapperfy by providing Templates <span class="k">for</span> automated deployment Autopilots that will be configured
+ <span class="k">for</span> your particular Drupal site. This module adds the <span class="s1">&#39;drupal&#39;</span> action to dapperfy.
+
+ - drupal
+ create drupal tailored automated deployment ptdeploy autopilots
+ example: ptdeploy dapperfy drupal --yes --guess
+
+--------------
+ Joomla Module:
+
+ The Joomla module extends Dapperfy by providing Templates <span class="k">for</span> automated deployment Autopilots that will be configured
+ <span class="k">for</span> your particular Joomla site. This module adds the <span class="s1">&#39;joomla&#39;</span> action to dapperfy.
+
+ - joomla, joomla30
+ create joomla tailored automated deployment ptdeploy autopilots
+ example: ptdeploy dapperfy joomla --yes --guess
+
+ - joomla-phlagrant, joomla30-phlagrant
+ create joomla tailored automated deployment ptdeploy autopilots <span class="k">for</span> your Phlagrant Virtual Machines
+ example: ptdeploy dapperfy joomla-phlagrant --yes --guess
+--------------
+ Wordpress Module:
+
+ The Wordpress module extends Dapperfy by providing Templates <span class="k">for</span> automated deployment Autopilots that will be configured
+ <span class="k">for</span> your particular Wordpress site. This module adds the <span class="s1">&#39;wordpress&#39;</span> action to dapperfy.
+
+ - wordpress
+ create wordpress tailored automated deployment ptdeploy autopilots
+ example: ptdeploy dapperfy wordpress --yes --guess
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="como-utilizar-dapper-standard">
+<h2>Cómo utilizar Dapper Standard<a class="headerlink" href="#como-utilizar-dapper-standard" title="Permalink to this headline">¶</a></h2>
+<p>El comando utilizado para dapperfy estándar se muestra a continuación ,</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy dapperfy standard
+</pre></div>
+</div>
+<p>Después de introducir el comando dado anteriormente, el siguiente proceso como se describe en la voluntad tabla siguiente se produce en una base paso a paso.</p>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="20%" />
+<col width="32%" />
+<col width="8%" />
+<col width="39%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">parámetros</th>
+<th class="head">parámetros alternativos</th>
+<th class="head">Opciones</th>
+<th class="head">Comentarios</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Dapperfy This? (Y/N)</td>
+<td>En lugar de dapperfy , podemos utilizar
+Dapperfy también.</td>
+<td>Y(Yes)</td>
+<td>Si el usuario desea continuar dapperfying
+proceso que puede introducir como Y.</td>
+</tr>
+<tr class="row-odd"><td>Dapperfy This? (Y/N)</td>
+<td>En lugar de dapperfy , podemos utilizar
+Dapperfy también.</td>
+<td>N(No)</td>
+<td>Si el usuario desea salir de la dapperfying
+proceso que puede introducir como N.</td>
+</tr>
+<tr class="row-even"><td>Utilice entorno existente
+ajustes? (Y/N)</td>
+<td>&nbsp;</td>
+<td>Y(Yes)</td>
+<td>Si el usuario desea proceder con la
+configuración del entorno existentes que pueden
+de entrada como Y.</td>
+</tr>
+<tr class="row-odd"><td>Utilice entorno existente
+ajustes? (Y/N)</td>
+<td>&nbsp;</td>
+<td>N(No)</td>
+<td>Si el usuario desea proceder con el nuevo
+configuración del entorno que puede
+introducir como N.</td>
+</tr>
+<tr class="row-even"><td>¿Quieres añadir
+otro ambiente ?</td>
+<td>&nbsp;</td>
+<td>Y(Yes)</td>
+<td>Si el usuario desea agregar otro entorno
+para dapperfying se puede introducir como Y.</td>
+</tr>
+<tr class="row-odd"><td>¿Quieres añadir
+otro ambiente ?</td>
+<td>&nbsp;</td>
+<td>N(No)</td>
+<td>Si el usuario no está en la necesidad de añadir
+otro ambiente para dapperfying se puede
+introducir como N.|</td>
+</tr>
+</tbody>
+</table>
+<p>Los dos tipos diferentes de capturas de pantalla pueden ser útiles para los usuarios en la definición de una representación gráfica de proceso de dapperfying . La segunda captura de pantalla muestra método de especificar la disposición en el uso de la configuración del entorno existentes.</p>
+</div>
+<div class="section" id="como-utilizar-la-lista-dapperfy">
+<h2>Cómo utilizar la Lista Dapperfy<a class="headerlink" href="#como-utilizar-la-lista-dapperfy" title="Permalink to this headline">¶</a></h2>
+<p>El objetivo principal de la función de la lista es la lista de todos los archivos de piloto automático de los proyectos de los usuarios que están disponibles en un lugar determinado. La sintaxis para utilizar la lista bajo dapperfy se muestra a continuación,</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy dapperfy list
+</pre></div>
+</div>
+<p>La captura de pantalla muestra a continuación representa el funcionamiento de la opción de lista bajo dapperfy .</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy dapperfy standard
+Dapperfy This? <span class="o">(</span>Y/N<span class="o">)</span>
+Y
+Use existing environment settings? <span class="o">(</span>Y/N<span class="o">)</span>
+n
+Do you want to add another environment? <span class="o">(</span>Y/N<span class="o">)</span>
+n
+//build/config/ptdeploy/dapperfy/autopilots/generated/default-local-invoke-code-data.php
+//build/config/ptdeploy/dapperfy/autopilots/generated/default-local-invoke-code-dbconf.php
+//build/config/ptdeploy/dapperfy/autopilots/generated/default-local-invoke-code-no-dbconf.php
+//build/config/ptdeploy/dapperfy/autopilots/generated/default-local-invoke-enforce-revisions.php
+//build/config/ptdeploy/dapperfy/autopilots/generated/default-local-invoke-rollback-newest.php
+//build/config/ptdeploy/dapperfy/autopilots/generated/default-local-invoke-rollback-previous.php
+//build/config/ptdeploy/dapperfy/autopilots/generated/default-local-node-install-code-no-dbconf.php
+//build/config/ptdeploy/dapperfy/autopilots/generated/default-local-node-install-enforce-revisions.php
+//build/config/ptdeploy/dapperfy/autopilots/generated/default-local-node-install-rollback-newest.php
+//build/config/ptdeploy/dapperfy/autopilots/generated/default-local-node-install-rollback-previous.php
+//build/config/ptdeploy/dapperfy/autopilots/generated/default-local-node-uninstall-code-data.php
+//build/config/ptdeploy/dapperfy/autopilots/generated/default-local-node-uninstall-code.php
+//build/config/ptdeploy/dapperfy/autopilots/generated/default-local-nodepool-install-code-no-dbconf.php
+//build/config/ptdeploy/dapperfy/autopilots/generated/default-local-phlagrant-host-install-host-file-entry.php
+//build/config/ptdeploy/dapperfy/autopilots/generated/default-local-phlagrant-host-uninstall-host-file-entry.php
+//build/config/ptdeploy/dapperfy/autopilots/generated/default-local-phlagrant-install-code-no-dbconf.php
+//build/config/ptdeploy/dapperfy/autopilots/generated/default-local-workstation-install-code-no-dbconf.php
+//build/config/ptdeploy/dapperfy/autopilots/generated/default-local-workstation-uninstall-code-data.php
+//build/config/ptdeploy/dapperfy/autopilots/generated/default-local-workstation-uninstall-code.php
+//build/config/ptdeploy/dapperfy/autopilots/generated/default-local-8080-invoke-code-data.php
+//build/config/ptdeploy/dapperfy/autopilots/generated/default-local-8080-invoke-code-dbconf.php
+//build/config/ptdeploy/dapperfy/autopilots/generated/default-local-8080-invoke-code-no-dbconf.php
+//build/config/ptdeploy/dapperfy/autopilots/generated/default-local-8080-invoke-enforce-revisions.php
+//build/config/ptdeploy/dapperfy/autopilots/generated/default-local-8080-invoke-rollback-newest.php
+//build/config/ptdeploy/dapperfy/autopilots/generated/default-local-8080-invoke-rollback-previous.php
+//build/config/ptdeploy/dapperfy/autopilots/generated/default-local-8080-node-install-code-no-dbconf.php
+//build/config/ptdeploy/dapperfy/autopilots/generated/default-local-8080-node-install-enforce-revisions.php
+//build/config/ptdeploy/dapperfy/autopilots/generated/default-local-8080-node-install-rollback-newest.php
+//build/config/ptdeploy/dapperfy/autopilots/generated/default-local-8080-node-install-rollback-previous.php
+//build/config/ptdeploy/dapperfy/autopilots/generated/default-local-8080-node-uninstall-code-data.php
+//build/config/ptdeploy/dapperfy/autopilots/generated/default-local-8080-node-uninstall-code.php
+//build/config/ptdeploy/dapperfy/autopilots/generated/default-local-8080-nodepool-install-code-no-dbconf.php
+//build/config/ptdeploy/dapperfy/autopilots/generated/default-local-8080-phlagrant-host-install-host-file-entry.php
+//build/config/ptdeploy/dapperfy/autopilots/generated/default-local-8080-phlagrant-host-uninstall-host-file-entry.php
+//build/config/ptdeploy/dapperfy/autopilots/generated/default-local-8080-phlagrant-install-code-no-dbconf.php
+//build/config/ptdeploy/dapperfy/autopilots/generated/default-local-8080-workstation-install-code-no-dbconf.php
+//build/config/ptdeploy/dapperfy/autopilots/generated/default-local-8080-workstation-uninstall-code-data.php
+//build/config/ptdeploy/dapperfy/autopilots/generated/default-local-8080-workstation-uninstall-code.php
+******************************
+
+
+Success
+In Dapperfy
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Es - acomodados tanto en ubuntu y al igual que en ciento OS .</li>
+<li>Los parámetros utilizados en la declaración no distingue entre mayúsculas y minúsculas.</li>
+<li>El usuario puede ver la lista de archivos de pilotos automáticos que están disponibles para sus proyectos.</li>
+<li>Mientras dapperfying , el usuario puede especificar la configuración del entorno que requiere .</li>
+<li>Muchos entornos pueden ser añadidos a dapperfy .</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Dapperfy</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#ayuda-comando">Ayuda Comando</a></li>
+<li><a class="reference internal" href="#como-utilizar-dapper-standard">Cómo utilizar Dapper Standard</a></li>
+<li><a class="reference internal" href="#como-utilizar-la-lista-dapperfy">Cómo utilizar la Lista Dapperfy</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="sautopilot_deploy.html"
+                        title="previous chapter">Autopilot</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sdbinstall_deploy.html"
+                        title="next chapter">DBInstall</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/sdapperfy_deploy.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="sdbinstall_deploy.html" title="DBInstall"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="sautopilot_deploy.html" title="Autopilot"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptdeploy_main.html" >PTDeploy</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

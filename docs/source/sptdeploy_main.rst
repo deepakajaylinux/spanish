@@ -16,7 +16,7 @@ Si quieres saber el propósito de un módulo en particular, sólo tienes que esc
 
 .. code-block:: bash
 	
-		ptdeploy ModuleName help
+	ptdeploy ModuleName help
 
 este comando proporcionará el uso de ese módulo en particular y también las opciones disponibles en las acciones que se pueden realizar. La captura de pantalla se muestra bajo explica el uso del control apache módulo bajo ptdeploy usando el comando help.
 
@@ -108,7 +108,7 @@ Si el usuario desea instalar el ptdeploy sin depender y utilizando el ptconfigur
 
 	git clone https://git.pharaoh-tools.com/phpengine/ptdeploy && sudo php ptdeploy/install-silent
 
-o
+or
 
 El siguiente comando es predecible para los usuarios que deseen especificar la ubicación durante la instalación.
 
@@ -224,6 +224,8 @@ aquí, la pantalla indica la pantalla de todos los módulos disponibles bajo ptc
 
  sapachecontrol_deploy
  sapachevhosteditor_deploy
+ sautopilot_deploy
+ sdapperfy_deploy
  sdbinstall_deploy
  sdrupal_deploy
  senvironmentconfig_deploy
@@ -232,7 +234,8 @@ aquí, la pantalla indica la pantalla de todos los módulos disponibles bajo ptc
  sjoomla_deploy
  slighttpdcontrol_deploy
  slogging_deploy
- 
+ stemplating_deploy
+ sversion_deploy 
 
 
 
