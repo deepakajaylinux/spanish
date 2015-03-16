@@ -18,6 +18,32 @@ El comando de ayuda sirve a los usuarios respecto a cómo manejar y trabajar con
 
 La siguiente captura de pantalla como se muestra a continuación, muestra cómo matar un proceso, y cómo definir matar a un proceso.
 
+.. code-block:: bash 
+
+ kevell@corp:/# ptconfigure process help
+ ******************************
+
+
+  This command handles process functions, kill a process for now
+
+  Process, process
+
+        - kill
+        Will ask you for process name, aa file or directory from local to remote
+        example: ptconfigure process kill
+        example: ptconfigure process kill --yes --name="selenium" --use-psax # default, will look for string in result of
+        example: ptconfigure process kill --yes --name="selenium" --use-pkill # will allow pkill to find  by string to kill
+        example: ptconfigure process kill --yes
+                                        --guess
+                                        --id="1234 # will kill a process by id
+                                        --level # will guess a 9
+
+ ------------------------------
+ End Help
+ ******************************
+
+
+
 ¿Cómo definir y utilizar el proceso
 --------------------------------------------
 

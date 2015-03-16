@@ -226,14 +226,17 @@ aquí, la pantalla indica la pantalla de todos los módulos disponibles bajo ptc
  sapachevhosteditor_deploy
  sautopilot_deploy
  sdapperfy_deploy
+ sdbconfigure_deploy
  sdbinstall_deploy
  sdrupal_deploy
  senvironmentconfig_deploy
  sgitclone_deploy
  sgrafana_deploy
+ shosteditor_deploy
  sjoomla_deploy
  slighttpdcontrol_deploy
  slogging_deploy
+ snginxcontrol_deploy
  stemplating_deploy
  sversion_deploy 
 

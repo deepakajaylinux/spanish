@@ -71,9 +71,9 @@ La captura de pantalla para el comando de instalación se enumeran a continuaci�
 .. code-block:: bash
 
  kevell@corp:/$ ptconfigure composer install
- Install Composer - Update to latest version ? (Y/N)
- y
- *******************************
+ Install Composer - Update to latest version ? (Y/N) 
+ Y
+ ******************************
  *        Pharaoh Tools        *
  *          Composer!         *
  *******************************
@@ -82,28 +82,19 @@ La captura de pantalla para el comando de instalación se enumeran a continuaci�
  What is the program executor directory? Found "/usr/bin" - use this? (Enter nothing for yes, No Trailing Slash)
 
  git clone 'https://github.com/phpengine/composer-phar.git'  /tmp/composer/composerCloning into '/tmp/composer/composer'...
+
  remote: Counting objects: 6, done.
- remote: Total 6 (delta 0), reused 0 (delta 0)
+ remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 6
  Unpacking objects: 100% (6/6), done.
  Checking connectivity... done.
- PHP Warning:  mkdir(): Permission denied in /opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/BasePHPApp.php on line 192
- cp: cannot create directory ‘/opt/composer’: Permission denied
+ Program Data Folder /opt/composer Deleted if existed
  Program Data folder populated
  Program Executor Deleted if existed
- PHP Warning:  scandir(/opt/composer): failed to open dir: No such file or directory in /opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/BasePHPApp.php on line 172
- PHP Warning:  scandir(): (errno 2): No such file or directory in /opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/BasePHPApp.php on line 172
- PHP Warning:  Invalid argument supplied for foreach() in /opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/BasePHPApp.php on line 174
- PHP Warning:  scandir(/opt/composer): failed to open dir: No such file or directory in /opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/BasePHPApp.php on line 172
- PHP Warning:  scandir(): (errno 2): No such file or directory in /opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/BasePHPApp.php on line 172
- PHP Warning:  Invalid argument supplied for foreach() in /opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/BasePHPApp.php on line 174
- PHP Warning:  file_put_contents(/usr/bin/composer): failed to open stream: Permission denied in /opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/BasePHPApp.php on line 214
- chmod: cannot access ‘/opt/composer’: No such file or directory
- chmod: cannot access ‘/usr/bin/composer’: No such file or directory
  ... All done!
  *******************************
  Thanks for installing , visit www.pharaohtools.com for more
  ******************************
- 
+
 
  Single App Installer:
  --------------------------------------------

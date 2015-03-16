@@ -127,9 +127,6 @@ Después de introducir el comando anterior, las siguientes operaciones se produc
  +------------------------+----------------------------------------------+---------------+----------------------------------------------+
 
 
-La siguiente captura de pantalla puede dar una representación pictórica sobre el proceso de instalación.
-
-.. code-block:: bash
 
 
 Beneficios

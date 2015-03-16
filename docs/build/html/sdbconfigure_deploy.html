@@ -1,0 +1,232 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>DBConfigure &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="PTDeploy" href="sptdeploy_main.html" />
+    <link rel="next" title="DBInstall" href="sdbinstall_deploy.html" />
+    <link rel="prev" title="Dapperfy" href="sdapperfy_deploy.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="sdbinstall_deploy.html" title="DBInstall"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="sdapperfy_deploy.html" title="Dapperfy"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptdeploy_main.html" accesskey="U">PTDeploy</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="dbconfigure">
+<h1>DBConfigure<a class="headerlink" href="#dbconfigure" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Esta base de datos de los módulos de función apodos . Configuración se puede derivar de esta base de datos se puede colocar en el mismo conjunto como una base de datos derivada de DbContext para definir la configuración de Entity Framework para una aplicación. La configuración se realiza llamando a métodos protegidos y configuración de propiedades protegidas de esta base de datos en el constructor de tipo derivado de usuario. El tipo de uso también se pueden registrar en el archivo de configuración de la aplicación. Esto es suficiente con Ubuntu y CentOS .</p>
+</div>
+<div class="section" id="comando-ayuda">
+<h2>comando Ayuda<a class="headerlink" href="#comando-ayuda" title="Permalink to this headline">¶</a></h2>
+<p>El comando de ayuda guía al usuario para manejar la base de datos en ptdeploy . Este comando ayuda guía al usuario para crear un conf . Esto también restablecer la base de datos actual . Las bases de datos se utilizan para apoyar las operaciones internas de las organizaciones y de refuerzo de las interacciones en línea con clientes y proveedores . El comando de ayuda para dbconfigure se muestra a continuación .</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy  DBConfigure <span class="nb">help</span>
+</pre></div>
+</div>
+<p>Después de entradas el comando anterior, comienza a funcionar para manejar la base de datos . Es la catequesis de las funciones en las capturas de pantalla .</p>
+<p>La siguiente captura de pantalla muestra sobre DBConfigure .</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy DBConfigure <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>is part of Default Modules and handles Databasing Functions.
+
+ DBConfigure, db-configure, dbconfigure, db-conf
+
+     - configure, conf
+     <span class="nb">set </span>up db user <span class="p">&amp;</span> pw <span class="k">for</span> a project, use admins to create new resources as needed.
+     example: ptdeploy db-conf conf drupal
+     example: ptdeploy db-conf conf --yes --platform<span class="o">=</span>joomla30 --mysql-host<span class="o">=</span>127.0.0.1 --mysql-admin-user<span class="o">=</span><span class="s2">&quot;&quot;</span> --mysql-user<span class="o">=</span><span class="s2">&quot;impi_dv_user&quot;</span> --mysql-pass<span class="o">=</span><span class="s2">&quot;impi_dv_pass&quot;</span> --mysql-db<span class="o">=</span><span class="s2">&quot;impi_dv_db&quot;</span>
+
+     - reset
+     reset current db to generic values so ptdeploy can write them. may need to be run before db conf.
+     example: ptdeploy db-conf reset drupal
+     example: ptdeploy db-conf reset --yes --platform<span class="o">=</span>joomla30
+</pre></div>
+</div>
+</div>
+<div class="section" id="parametro-alternativa">
+<h2>parámetro Alternativa<a class="headerlink" href="#parametro-alternativa" title="Permalink to this headline">¶</a></h2>
+<p>Hay cuatro parámetros alternativos disponibles .</p>
+<p>DBConfigure, db-configure, dbconfigure, db-conf.</p>
+</div>
+<div class="section" id="configurar-conf">
+<h2>Configurar, conf<a class="headerlink" href="#configurar-conf" title="Permalink to this headline">¶</a></h2>
+<p>Este proceso creó usuario de base de datos y passward para un proyecto. Utilice también administrador para crear nuevos recursos si necesitan . La siguiente captura de pantalla muestra su función.</p>
+<div class="highlight-bash"><div class="highlight"><pre>- configure, conf
+<span class="nb">set </span>up db user <span class="p">&amp;</span> pw <span class="k">for</span> a project, use admins to create new resources as needed.
+example: ptdeploy db-conf conf drupal
+example: ptdeploy db-conf conf --yes --platform<span class="o">=</span>joomla30 --mysql-host<span class="o">=</span>127.0.0.1 --mysql-admin-user<span class="o">=</span><span class="s2">&quot;&quot;</span> --mysql-user<span class="o">=</span><span class="s2">&quot;impi_dv_user&quot;</span> --m          ysql-pass<span class="o">=</span><span class="s2">&quot;impi_dv_pass&quot;</span> --mysql-db<span class="o">=</span><span class="s2">&quot;impi_dv_db&quot;</span>
+</pre></div>
+</div>
+<p>El siguiente comando utiliza para configurar .</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy  db-conf Conf
+</pre></div>
+</div>
+<p>Después de clave en el por encima de dicho comando el siguiente proceso , puede ser ejercido . Se ha demostrado en las capturas de pantalla .</p>
+<p>Después de la entrada como &#8220;Y&#8221; , Se pregunta MySql usuario admin , Mysql anfitrión, aplicación Db usuario , contraseña y aplicación db , nombre Db . El usuario introduce la entrada de éstos este proceso comenzará sus funciones</p>
+</div>
+<div class="section" id="reajustar">
+<h2>reajustar<a class="headerlink" href="#reajustar" title="Permalink to this headline">¶</a></h2>
+<p>Este proceso utiliza para restablecer la base de datos actual a los valores genéricos. En tales casos ptdeploy puede escribir antes de la configuración de base de datos de ejecución. El nombre de la base de datos se puede introducir en la misma línea de comandos.</p>
+<p>El siguiente comando utiliza para reiniciar .</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy  db-conf reset
+</pre></div>
+</div>
+<p>La siguiente captura de pantalla muestra la función de este proceso.</p>
+<div class="highlight-bash"><div class="highlight"><pre>- reset
+reset current db to generic values so ptdeploy can write them. may need to be run before db conf.
+example: ptdeploy db-conf reset drupal
+example: ptdeploy db-conf reset --yes --platform<span class="o">=</span>joomla30
+</pre></div>
+</div>
+</div>
+<div class="section" id="opcion">
+<h2>opción<a class="headerlink" href="#opcion" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="36%" />
+<col width="18%" />
+<col width="46%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">parámetros</th>
+<th class="head">opción</th>
+<th class="head">Comentarios</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Do you want to configure a database?</td>
+<td>Yes</td>
+<td>Configurado la base de datos undder ptdeploy.</td>
+</tr>
+<tr class="row-odd"><td>Do you want to configure a database?</td>
+<td>No</td>
+<td>Salga de la pantalla de configuración|</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>La configuración de base de datos Advantage es un alto rendimiento , bajo costo de mantenimiento , configuración de base de datos remoto
+que permite al usuario construir fácilmente y desplegar aplicaciones cliente / servidor y aplicaciones basadas en la Web .</li>
+<li>Es fácil de usar con Ubuntu y CentOS .</li>
+<li>Sensitibilidad caso es un gran mérito de este módulo</li>
+<li>Es compatible con interfaces estándar como PHP</li>
+<li>Es fácil de manejar con funciones de base de datos</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">DBConfigure</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#comando-ayuda">comando Ayuda</a></li>
+<li><a class="reference internal" href="#parametro-alternativa">parámetro Alternativa</a></li>
+<li><a class="reference internal" href="#configurar-conf">Configurar, conf</a></li>
+<li><a class="reference internal" href="#reajustar">reajustar</a></li>
+<li><a class="reference internal" href="#opcion">opción</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="sdapperfy_deploy.html"
+                        title="previous chapter">Dapperfy</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sdbinstall_deploy.html"
+                        title="next chapter">DBInstall</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/sdbconfigure_deploy.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="sdbinstall_deploy.html" title="DBInstall"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="sdapperfy_deploy.html" title="Dapperfy"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptdeploy_main.html" >PTDeploy</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

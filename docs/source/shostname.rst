@@ -48,9 +48,29 @@ Los nombres de host se utilizan normalmente en una capacidad administrativa y pu
 
 .. code-block:: bash
 
-ptconfigure hostname change –hostname=”kevellcorp”
+	ptconfigure hostname change –hostname=”kevellcorp”
 
 Desde el comando anterior el nuevo nombre de host puede entrar.
+
+.. code-block:: bash
+
+ kevell@corp:/# ptconfigure hostname change –hostname=”kevellcorp”
+ Enter Hostname:
+ kevellcorp
+ ******************************
+
+
+ Hostname Modifications:
+ --------------------------------------------
+
+ Hostname: Success
+
+ ------------------------------
+ Hostname Mods Finished
+ ******************************
+
+
+
 
 show
 -------------------
@@ -62,6 +82,9 @@ Este módulo es un proceso perceptible para ver el nombre de host en ptconfigure
                 ptconfigure hostname show
 
 Después de clave en el comando, se muestra el nombre de host.
+
+
+
 
 opción
 ------------

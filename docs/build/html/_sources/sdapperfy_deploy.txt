@@ -128,17 +128,6 @@ Después de introducir el comando dado anteriormente, el siguiente proceso como 
 Los dos tipos diferentes de capturas de pantalla pueden ser útiles para los usuarios en la definición de una representación gráfica de proceso de dapperfying . La segunda captura de pantalla muestra método de especificar la disposición en el uso de la configuración del entorno existentes.
 
 
-Cómo utilizar la Lista Dapperfy
----------------------------------
-
-El objetivo principal de la función de la lista es la lista de todos los archivos de piloto automático de los proyectos de los usuarios que están disponibles en un lugar determinado. La sintaxis para utilizar la lista bajo dapperfy se muestra a continuación,
-
-.. code-block:: bash
-
-	ptdeploy dapperfy list
-
-La captura de pantalla muestra a continuación representa el funcionamiento de la opción de lista bajo dapperfy .
-
 
 .. code-block:: bash
 
@@ -194,6 +183,20 @@ La captura de pantalla muestra a continuación representa el funcionamiento de l
  Success
  In Dapperfy
  ******************************
+
+
+Cómo utilizar la Lista Dapperfy
+---------------------------------
+
+El objetivo principal de la función de la lista es la lista de todos los archivos de piloto automático de los proyectos de los usuarios que están disponibles en un lugar determinado. La sintaxis para utilizar la lista bajo dapperfy se muestra a continuación,
+
+.. code-block:: bash
+
+        ptdeploy dapperfy list
+
+La captura de pantalla muestra a continuación representa el funcionamiento de la opción de lista bajo dapperfy .
+
+
 
 
 Beneficios
