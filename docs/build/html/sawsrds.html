@@ -1,0 +1,287 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>AWS RDS &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="PTConfigure" href="sptconfigure_main.html" />
+    <link rel="next" title="ApacheConf" href="sapacheconf.html" />
+    <link rel="prev" title="AWSCloudFormation" href="sawscloudformation.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="sapacheconf.html" title="ApacheConf"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="sawscloudformation.html" title="AWSCloudFormation"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" accesskey="U">PTConfigure</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="aws-rds">
+<h1>AWS RDS<a class="headerlink" href="#aws-rds" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Servicio de base de datos relacional de Amazon (Amazon RDS) es un servicio web que hace que sea fácil de configurar, operar y ampliar una base de datos relacional en la nube. Proporciona capacidad costo-eficientes y redimensionable gestionando las tareas de administración desperdiciadora de tiempo de base de datos, liberándote hasta enfocar sus aplicaciones y negocios al mismo tiempo.</p>
+<p>Amazon RDS te ofrece acceso en línea a las capacidades de un sistema de gestión de base de datos relacional MySQL, Oracle, Microsoft SQL Server, PostgreSQL o Amazon Aurora. Esto significa que se pueden utilizar el código, aplicaciones y herramientas que ya utiliza hoy con sus bases de datos existentes con Amazon RDS. Amazon RDS automáticamente los parches del software de base de datos y respalda su base de datos, guardar las copias de seguridad por un período de retención definidos por el usuario y que permite recuperación point-in-time. Se beneficia de la flexibilidad de poder escalar los recursos computacionales o capacidad de almacenamiento asociado con la instancia de base de datos (DB instancia) mediante una simple llamada de API.</p>
+<p>Instancias de base de datos con MySQL, Oracle, SQL Server y PostgreSQL motores de Amazon RDS pueden ser aprovisionadas con almacenamiento de propósito General (SSD), Storage Provisioning IOPS (SSD) o almacenamiento magnético. Instancias de base de datos utilizando el motor Aurora Amazon emplean un tolerante a fallas, auto-sanación capa de almacenamiento virtualizado respaldados por SSD creada ex profeso para cargas de trabajo de base de datos.</p>
+<p>Además, Amazon RDS hace que sea fácil de usar replicación para mejorar la disponibilidad y confiabilidad para cargas de trabajo de producción. Usando la opción de despliegue Multi-AZ puede ejecutar cargas de trabajo críticos de misión con alta disponibilidad e integrado automatizado failover desde su base de datos principal a una base de datos secundaria replicado sincrónicamente en caso de un fallo. Uso de réplicas de lectura, Amazon RDS para MySQL, PostgreSQL y Aurora Amazon también permiten ampliar más allá de la capacidad de una implementación de base de datos única para cargas de trabajo pesado leer base de datos. Como sucede con los Amazon Web Services, no hay ninguna inversión inicial necesaria, y usted sólo paga por los recursos que utiliza.</p>
+</div>
+<div class="section" id="comando-ayuda">
+<h2>comando Ayuda<a class="headerlink" href="#comando-ayuda" title="Permalink to this headline">¶</a></h2>
+<p>Este comando ayuda a determinar el uso de Amazon RDS. El usuario llegará a saber acerca del manera/formato diferente para ejecutar este módulo. Este comando guía al usuario final para conocer el propósito de este comando. A continuación dado son el comando y la captura de pantalla del mismo.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevel@corp:/# ptconfigure Amazon RDS <span class="nb">help</span>
+
+******************************
+
+
+   This is an extension provided <span class="k">for </span>Handling AWS ElastiCache.
+
+   Amazon RDS, Amazon RDS, aws-elasticache
+
+       - create-cache-cluster
+       Lets you add cache Cluster to AWS ElastiCache
+       example: ptconfigure Amazon RDS create-cache-cluster
+                   --yes
+                   --guess
+       - create-health-check
+       Lets you add Health Check to AWS Route53
+       example: ptconfigure AWSRoute53 create-health-check
+                   --yes
+                   --guess
+
+         - reboot-cache-cluster
+       Lets you reboot cache Cluster to AWS ElastiCache
+       example: ptconfigure AWSRoute53 delete-hosted-zone
+                   --yes
+                   --guess
+
+        - delete-cache-cluster
+       Lets you delete cache Cluster to AWS ElastiCache
+       example: ptconfigure Amazon RDS delete-cache-cluster
+                   --yes
+                   --guess
+
+        - delete-replication-group
+       Lets you delete replication group to AWS ElastiCache
+       example: ptconfigure Amazon RDS delete-replication-group
+                   --yes
+                   --guess
+
+       - list
+       Will display data about your AWS ElastiCache
+       example: ptconfigure Amazon RDS list
+                   --yes
+                   --guess
+
+       Note: region must be one of the following...
+       us-east-1, ap-northeast-1, sa-east-1, ap-southeast-1, ap-southeast-2, us-west-2, us-gov-west-1, us-west-1, cn-north-1, eu-west-1
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="describe-instance">
+<h2>Describe-instance<a class="headerlink" href="#describe-instance" title="Permalink to this headline">¶</a></h2>
+<p>Este comando permite para describir a instancia de AWS RDS. La continuación dado comando se ejecutará el proceso.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure AWSRDS describe-instance --yes --guess
+</pre></div>
+</div>
+</div>
+<div class="section" id="delete-instance">
+<h2>Delete-instance<a class="headerlink" href="#delete-instance" title="Permalink to this headline">¶</a></h2>
+<p>Este comando permite para eliminar instancia. La continuación dado comando se ejecutará el proceso.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure AWSRDS delete-instance --yes --guess
+</pre></div>
+</div>
+</div>
+<div class="section" id="create-db-snapshot">
+<h2>Create-db-snapshot<a class="headerlink" href="#create-db-snapshot" title="Permalink to this headline">¶</a></h2>
+<p>Este comando ayuda a reiniciar crea instantánea db. La continuación dado comando se ejecutará el proceso.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure AWSRDS create-db-snapshot --yes --guess
+</pre></div>
+</div>
+</div>
+<div class="section" id="delete-db-snapshot">
+<h2>Delete-db-snapshot<a class="headerlink" href="#delete-db-snapshot" title="Permalink to this headline">¶</a></h2>
+<p>Este comando ayuda a eliminar db instantánea. La continuación dado comando se ejecutará el proceso.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure AWSRDS delete-db-snapshot –yes –guess
+</pre></div>
+</div>
+</div>
+<div class="section" id="copy-db-snapshot">
+<h2>Copy-db-snapshot<a class="headerlink" href="#copy-db-snapshot" title="Permalink to this headline">¶</a></h2>
+<p>Este comando permite para copiar db instantánea. La continuación dado comando se ejecutará el proceso.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure AWSRDS copy-db-snapshot --yes --guess
+</pre></div>
+</div>
+</div>
+<div class="section" id="create-instance">
+<h2>Create-instance<a class="headerlink" href="#create-instance" title="Permalink to this headline">¶</a></h2>
+<p>Este comando permite para crear instancia. La continuación dado comando se ejecutará el proceso.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure AWSRDS create-instance --yes –guess
+</pre></div>
+</div>
+</div>
+<div class="section" id="reboot-instance">
+<h2>Reboot-instance<a class="headerlink" href="#reboot-instance" title="Permalink to this headline">¶</a></h2>
+<p>Este comando permite para reiniciar la instancia. La continuación dado comando se ejecutará el proceso.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure AWSRDS reboot-instance --yes --guess
+</pre></div>
+</div>
+</div>
+<div class="section" id="create-instance-read-replica">
+<h2>Create-instance-read replica<a class="headerlink" href="#create-instance-read-replica" title="Permalink to this headline">¶</a></h2>
+<p>Este comando permite para crear db instancia leer réplica. La continuación dado comando se ejecutará el proceso.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure AWSRDS create-instance-readreplica --yes --guess
+</pre></div>
+</div>
+</div>
+<div class="section" id="list">
+<h2>List<a class="headerlink" href="#list" title="Permalink to this headline">¶</a></h2>
+<p>Este comando permite para visualizar datos sobre su AWS RDS. La continuación dado comando se ejecutará el proceso.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure AWSRDS list --yes --guess
+</pre></div>
+</div>
+</div>
+<div class="section" id="parametros-alternativos">
+<h2>parámetros alternativos<a class="headerlink" href="#parametros-alternativos" title="Permalink to this headline">¶</a></h2>
+<p>Hay tres parámetros alternativos que pueden utilizarse en la línea de comandos.</p>
+<p>AWSRDS, awsrds, aws-rds</p>
+</div>
+<div class="section" id="beneficios">
+<h2>beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<p>Fácil de implementar base de datos Web Service: Amazon RDS hace que sea fácil para ir desde la concepción del proyecto de implementación. Utilice la consola de administración de AWS o simples llamadas a la API para acceder a las capacidades de una base de datos relacional de producción listos para usar en minutos sin tener que preocuparse acerca de provisioning de infraestructura o instalación y mantenimiento de software de base de datos.</p>
+<p>Administrado: Amazon RDS maneja las tareas de administración desperdiciadora de tiempo de base de datos, tales como copias de seguridad, gestión de parches y replicación, permitiéndole seguir el desarrollo de aplicaciones de mayor valor o refinamientos de base de datos.</p>
+<p>Compatible: Con Amazon RDS, obtienes acceso nativo a un sistema de gestión de base de datos relacional. Esto facilita la compatibilidad con sus aplicaciones y herramientas existentes. Además, Amazon RDS le da control opcional apoyado poderes versión motor DB instancia mediante administración de versión de motor de DB.</p>
+<p>Rápido, Performance predecible: Instancias de base de datos utilizando MySQL de Amazon RDS, motores Oracle, SQL Server y Oracle pueden provisionable con almacenamiento de propósito General (SSD), Storage Provisioning IOPS (SSD) o almacenamiento magnético.</p>
+<p>Almacenamiento de propósito General Amazon RDS (SSD) proporciona una base consistente de 3 IOPS por GB provisionado y ofrece la posibilidad de explotar hasta 3.000 IOPS.</p>
+<p>Almacenamiento de Amazon RDS provisionado IOPS (SSD) es una opción de almacenamiento de alto rendimiento diseñada para ofrecer un rendimiento rápido, predecible y consistente para cargas de trabajo de I/O intensivo de bases de datos transaccionales. Puede aprovisionar de 1.000 IOPS a 30.000 IOPS por instancia de DB. (Máximo realizado que IOPS variará según el tipo de motor).
+Almacenamiento magnético (anteriormente conocido como almacenamiento de Amazon RDS estándar) es útil para cargas de trabajo de base de datos pequeño donde datos se accede con menor frecuencia.</p>
+<p>Instancias de base de datos utilizando el motor Aurora Amazon emplean un tolerante a fallas, auto-sanación capa de almacenamiento virtualizado respaldados por SSD creada ex profeso para cargas de trabajo de base de datos.</p>
+<p>Base de datos escalable en la nube: puede escalar el cálculo y recursos de almacenamiento de información disponibles para la base de datos para satisfacer su aplicación necesita usar la API de Amazon RDS o la consola de administración de AWS. Si utiliza almacenamiento Amazon RDS provisionado IOPS con Amazon RDS para MySQL, Oracle o PostgreSQL, puede aprovisionar y escala hasta el almacenamiento de 3TB y IOPS de hasta 30.000. Tenga en cuenta ese máximo se dio cuenta de que IOPS variará según el tipo de motor. Además, para los motores de base de datos MySQL, PostgreSQL y Amazon Aurora, también puede asociar uno o más réplicas de lectura con su despliegue de instancia de base de datos, permitiéndole escalar más allá de la capacidad de una instancia de base de datos única para leer pesadas cargas de trabajo.</p>
+<p>El motor de base de datos de Amazon Aurora le permite escalar su almacenamiento hasta 64TB. Se pueden asociar hasta 15 Amazonas Aurora réplicas con la implementación de la instancia de base de datos. Amazon Aurora réplicas comparten el mismo almacenamiento subyacente como la instancia de origen, reduciendo los costos y evitar la necesidad de copiar los datos en los nodos de réplica.</p>
+<p>Confiable: Amazon RDS tiene varias características que mejoran la fiabilidad para bases de datos de producción crítica, incluyendo copias de seguridad automatizadas, DB instantáneas, reemplazo automático host y las implementaciones de Multi-AZ. Amazon RDS se ejecuta en la misma infraestructura altamente confiable usada por otros servicios Web de Amazon.</p>
+<p>Para el motor Aurora de Amazon, Amazon RDS utiliza tecnología RDS Multi-AZ para automatizar la conmutación por error a uno de hasta 15 réplicas de Aurora ha creado en cualquiera de las tres zonas de disponibilidad.</p>
+<p>Diseñado para su uso con otros servicios Web de Amazon: Amazon RDS está estrechamente integrado con otros servicios Web de Amazon. Por ejemplo, una aplicación que se ejecuta en Amazon EC2 experimentará acceso de baja latencia de base de datos en una instancia Amazon RDS DB en la misma región.</p>
+<p>Seguro: Amazon RDS proporciona una serie de mecanismos para garantizar su RDS Instances.Amazon DB permite cifrar tus bases de datos PostgreSQL o MySQL usando llaves que logras a través de AWS claves Management Service (KMS). En una instancia de base de datos con cifrado de Amazon RDS, se encriptan los datos almacenados en reposo en el almacenamiento subyacente, como son sus copias de seguridad automatizadas, leer copias instantáneas y réplicas.</p>
+<p>Amazon RDS soporta encriptación transparente de datos en SQL Server y Oracle. Cifrado de datos transparente en Oracle está integrado con AWS CloudHSM, que permite generar, almacenar y administrar sus claves criptográficas en aparatos de módulo de seguridad de Hardware (HSM) único arrendatario dentro de la nube AWS firmemente.</p>
+<p>Amazon RDS incluye interfaces de servicio web para configurar los parámetros del servidor de seguridad que controlan el acceso a la red a su base de datos.</p>
+<p>Amazon RDS le permite ejecutar sus instancias de DB en nube privada Virtual de Amazon (Amazon VPC). Amazon VPC permite aislar las instancias DB especificando el rango de IP que desea utilizar y conectar a su existente infraestructura a través de VPN IPsec cifrado estándar de la industria. Para aprender más sobre Amazon RDS en VPC, consulte la guía de usuario de Amazon RDS.</p>
+<p>Barato: Usted paga tasas muy bajas y sólo por los recursos que realmente consume. Además, usted se beneficiará de la opción de On-Demand precios sin compromisos inmediatos o a largo plazo, o precios aún más bajos por hora mediante nuestra opción precios reservada.</p>
+<p>On-Demand DB instancias – On-Demand DB instancias dejarte pagar para calcular capacidad por hora sin compromisos a largo plazo. Esto libera de los costos y la complejidad de la planificación, compra y mantenimiento hardware y transforma lo que son comúnmente grandes costos fijos en costos variables mucho más pequeños.</p>
+<p>Reservados DB instancias – instancias DB reservados darle la opción de hacer un pago bajo, una sola vez para cada instancia de DB que desea reservar y a su vez reciben un descuento significativo en la carga horaria de uso para esa instancia DB. Dependiendo de su uso, puede elegir entre tres tipos de instancia reservada de DB (luz, medio y pesado utilización) y recibir en cualquier lugar entre 30% y el 55% de descuento sobre los precios On-Demand.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">AWS RDS</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#comando-ayuda">comando Ayuda</a></li>
+<li><a class="reference internal" href="#describe-instance">Describe-instance</a></li>
+<li><a class="reference internal" href="#delete-instance">Delete-instance</a></li>
+<li><a class="reference internal" href="#create-db-snapshot">Create-db-snapshot</a></li>
+<li><a class="reference internal" href="#delete-db-snapshot">Delete-db-snapshot</a></li>
+<li><a class="reference internal" href="#copy-db-snapshot">Copy-db-snapshot</a></li>
+<li><a class="reference internal" href="#create-instance">Create-instance</a></li>
+<li><a class="reference internal" href="#reboot-instance">Reboot-instance</a></li>
+<li><a class="reference internal" href="#create-instance-read-replica">Create-instance-read replica</a></li>
+<li><a class="reference internal" href="#list">List</a></li>
+<li><a class="reference internal" href="#parametros-alternativos">parámetros alternativos</a></li>
+<li><a class="reference internal" href="#beneficios">beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="sawscloudformation.html"
+                        title="previous chapter">AWSCloudFormation</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sapacheconf.html"
+                        title="next chapter">ApacheConf</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/sawsrds.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="sapacheconf.html" title="ApacheConf"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="sawscloudformation.html" title="AWSCloudFormation"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" >PTConfigure</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>

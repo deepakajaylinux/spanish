@@ -1,0 +1,256 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Amazon ElastiCache &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="PTConfigure" href="sptconfigure_main.html" />
+    <link rel="next" title="AMAZON ROUTE 53" href="samazonroute53.html" />
+    <link rel="prev" title="Amazon DynamoDB" href="samazondynamodb.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="samazonroute53.html" title="AMAZON ROUTE 53"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="samazondynamodb.html" title="Amazon DynamoDB"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" accesskey="U">PTConfigure</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="amazon-elasticache">
+<h1>Amazon ElastiCache<a class="headerlink" href="#amazon-elasticache" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>ElastiCache es un servicio web que hace que sea fácil de implementar, operar y escalar una caché en memoria en la nube. El servicio mejora el rendimiento de las aplicaciones web al permitirle recuperar la información de rápido, administrado, en memoria caché, en lugar de depender totalmente de bases de datos basadas en disco más lentos. ElastiCache soporta dos open source en memoria caché motores:</p>
+<p>Memcached - un objeto ampliamente adoptado de la memoria caché de sistema. ElastiCache es compatible con Memcached, protocolo herramientas populares que se utilizan hoy con entornos existentes Memcached funcionará perfectamente con el servicio.</p>
+<p>Redis – una popular open source en memoria par clave-valor tienda que admite conjuntos de datos de estructuras tales como ordenadas y listas. Soporta ElastiCache maestro / esclavo de replicación y Multi-AZ que puede utilizarse para lograr Cruz AZ redundancia.</p>
+<p>Amazon ElastiCache detecta automáticamente y sustituye los nodos fallidos, reducir la sobrecarga asociada a infraestructuras autogestionadas y proporciona un sistema flexible que mitiga el riesgo de bases de datos sobrecargados, tiempos de carga que sitio web lento y aplicación. Mediante la integración con Amazon CloudWatch, Amazon ElastiCache proporciona una visibilidad mejorada en indicadores de rendimiento clave asociadas con los nodos Memcached o Redis.</p>
+<p>Usando Amazon ElastiCache, puede agregar una capa de almacenamiento en caché en la memoria a su infraestructura en cuestión de minutos utilizando la consola de administración de AWS.</p>
+</div>
+<div class="section" id="comando-ayuda">
+<h2>comando Ayuda<a class="headerlink" href="#comando-ayuda" title="Permalink to this headline">¶</a></h2>
+<p>Este comando ayuda a determinar el uso de Amazon ElastiCache. El usuario llegará a saber acerca del manera/formato diferente para ejecutar este módulo. Este comando guía al usuario final para conocer el propósito de este comando. A continuación dado son el comando y la captura de pantalla del mismo.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure AWSElastiCache <span class="nb">help</span>
+
+******************************
+
+
+   This is an extension provided <span class="k">for </span>Handling AWS ElastiCache.
+
+   AWSElastiCache, awselasticache, aws-elasticache
+
+       - create-cache-cluster
+       Lets you add cache Cluster to AWS ElastiCache
+       example: ptconfigure AWSElastiCache create-cache-cluster
+                   --yes
+                   --guess
+       - create-health-check
+       Lets you add Health Check to AWS Route53
+       example: ptconfigure AWSRoute53 create-health-check
+                   --yes
+                   --guess
+
+         - reboot-cache-cluster
+       Lets you reboot cache Cluster to AWS ElastiCache
+       example: ptconfigure AWSRoute53 delete-hosted-zone
+                   --yes
+                   --guess
+
+        - delete-cache-cluster
+       Lets you delete cache Cluster to AWS ElastiCache
+       example: ptconfigure AWSElastiCache delete-cache-cluster
+                   --yes
+                   --guess
+
+        - delete-replication-group
+       Lets you delete replication group to AWS ElastiCache
+       example: ptconfigure AWSElastiCache delete-replication-group
+                   --yes
+                   --guess
+
+       - list
+       Will display data about your AWS ElastiCache
+       example: ptconfigure AWSElastiCache list
+                   --yes
+                   --guess
+
+       Note: region must be one of the following...
+       us-east-1, ap-northeast-1, sa-east-1, ap-southeast-1, ap-southeast-2, us-west-2, us-gov-west-1, us-west-1, cn-north-1, eu-west-1
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="create-cache-cluster">
+<h2>Create-cache-cluster<a class="headerlink" href="#create-cache-cluster" title="Permalink to this headline">¶</a></h2>
+<p>Este comando permite para añadir memoria caché Cluster a AWS ElastiCache. La continuación dado comando se ejecutará el proceso.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure AWSElastiCache create-cache-cluster –yes --guess
+</pre></div>
+</div>
+</div>
+<div class="section" id="create-health-check">
+<h2>Create-health-check<a class="headerlink" href="#create-health-check" title="Permalink to this headline">¶</a></h2>
+<p>Este comando permite para añadir chequeo a AWS Route53. La continuación dado comando se ejecutará el proceso.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure AWSRoute53 create-health-check –yes –guess
+</pre></div>
+</div>
+</div>
+<div class="section" id="reboot-cache-cluster">
+<h2>Reboot-cache-cluster<a class="headerlink" href="#reboot-cache-cluster" title="Permalink to this headline">¶</a></h2>
+<p>Este comando permite para reiniciar caché Cluster a AWS ElastiCache.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure AWSRoute53 delete-hosted-zone --yes --guess
+</pre></div>
+</div>
+</div>
+<div class="section" id="delete-cache-cluster">
+<h2>Delete-cache-cluster<a class="headerlink" href="#delete-cache-cluster" title="Permalink to this headline">¶</a></h2>
+<p>Este comando permite para borrar caché de clúster a AWS ElastiCache. La continuación dado comando se ejecutará el proceso.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure AWSElastiCache delete-cache-cluster --yes --guess
+</pre></div>
+</div>
+</div>
+<div class="section" id="delete-replication-group">
+<h2>Delete-replication-group<a class="headerlink" href="#delete-replication-group" title="Permalink to this headline">¶</a></h2>
+<p>Este comando permite para borrar grupo de replicación a AWS ElastiCache. La continuación dado comando se ejecutará el proceso.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure AWSElastiCache delete-replication-group --yes --guess
+</pre></div>
+</div>
+</div>
+<div class="section" id="list">
+<h2>List<a class="headerlink" href="#list" title="Permalink to this headline">¶</a></h2>
+<p>Este comando permite para mostrar pantalla datos acerca de su ElastiCache de AWS. La continuación dado comando se ejecutará el proceso.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure AWSElastiCache list --yes --guess
+</pre></div>
+</div>
+</div>
+<div class="section" id="parametros-alternativos">
+<h2>parámetros alternativos<a class="headerlink" href="#parametros-alternativos" title="Permalink to this headline">¶</a></h2>
+<p>Hay tres parámetros alternativos que pueden utilizarse en la línea de comandos.</p>
+<p>AWSElastiCache, awselasticache, aws-elasticache</p>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<p>Fácil de implementar: Amazon ElastiCache lo pone muy fácil implementar un entorno compatible con caché Memcached o Redis. Utilice la consola de administración de AWS o simples llamadas a la API para acceder a las capacidades de un cluster de caché nube listo para la producción en minutos sin tener que preocuparse sobre el provisioning de infraestructura o instalación y mantenimiento de software de caché.</p>
+<p>Administrado: Amazon ElastiCache automatiza las tareas de gestión desperdiciador de tiempo&#8211;tales como gestión de parches, detección de fallos y recuperación&#8211;permitiéndole seguir el desarrollo de aplicaciones de mayor valor.</p>
+<p>Compatible: Con Amazon ElastiCache, obtienes acceso nativo a los entornos en la memoria caché de Memcached o Redis. Esto facilita la compatibilidad con sus aplicaciones y herramientas existentes.</p>
+<p>Elástico: Con una simple llamada de API o un par de clics de AWS Management Console, puede agregar o eliminar caché de nodos en el clúster de caché de nube para satisfacer la carga de las aplicaciones. Autodescubrimiento de Memcached permite detección automática de nodos de memoria caché por ElastiCache los clientes cuando los nodos se agregan o quitan de un clúster de Amazon ElastiCache.</p>
+<p>Confiable: Amazon ElastiCache tiene varias características que mejoran la fiabilidad para implementaciones de producción crítica, incluyendo la recuperación y detección de fallos automática. Amazon ElastiCache se ejecuta en la misma infraestructura altamente confiable usada por otros servicios Web de Amazon. Integrado: Amazon ElastiCache está diseñado para uso sin fisuras con otros servicios Web de Amazon, incluyendo servicio de base de datos relacional de Amazon (Amazon RDS), DynamoDB de Amazon, Amazon Elastic Compute Cloud (Amazon EC2), Amazon CloudWatch y Amazon Simple Notification Service (Amazon SNS).</p>
+<p>Seguro: Amazon ElastiCache proporciona una serie de mecanismos para garantizar su racimo de caché.
+Amazon ElastiCache proporciona interfaces de servicio web que le permiten configurar la configuración del firewall que controlan el acceso a la red para el clúster de caché.</p>
+<p>Amazon ElastiCache le permite ejecutar su racimo de caché en nube privada Virtual de Amazon (Amazon VPC). Amazon VPC permite aislar el clúster de caché especificando los intervalos de direcciones IP que desea utilizar para los nodos de memoria caché y conectar a las aplicaciones existentes dentro de Amazon VPC. Para aprender más sobre Amazon ElastiCache en VPC, consulte la guía de usuario de Amazon ElastiCache.</p>
+<p>Rentable: Amazon ElastiCache ahorra el coste administrativo de configuración y administración de un clúster de varios nodos caché. Puede ampliar y reducir el número de nodos de memoria caché en el clúster de caché para ofrecer un rendimiento óptimo como el uso de aplicaciones cambios de patrones, pagando sólo por los recursos que realmente consume. El precio de la demanda le permite pagar para capacidad de memoria/computar por hora sin compromisos a largo plazo. Esto hace que el uso de Amazon ElastiCache muy rentable y libera de los costos y la complejidad de la planificación, compra y mantenimiento de hardware.</p>
+<p>Multi-AZ: Amazon ElastiCache proporciona funcionalidades de replicación para el motor Redis y funcionalidad Multi-AZ. Usted puede tomar ventaja de varias zonas de la disponibilidad de AWS para obtener la disponibilidad y escalar más allá de las limitaciones de capacidad de un nodo único caché. En caso de pérdida del nodo principal, ElastiCache detectará automáticamente el fracaso y failover a leer una réplica para proporcionar mayor disponibilidad sin necesidad de intervención manual.</p>
+<p>Backup y Restore: Amazon ElastiCache para Redis le ayuda a proteger sus datos mediante la creación de instantáneas de los clústeres. Mediante unos pocos clics en la consola o simples llamadas a la API, usted puede configurar instantáneas automáticas, así como iniciar una copia de seguridad cada vez que usted elige. Las instantáneas entonces pueden utilizarse para la siembra de nueva ElastiCache para clústeres de Redis.</p>
+<p>Principales casos de uso: Amazon ElastiCache puede utilizarse para mejorar significativamente el rendimiento de muchas cargas de trabajo pesado leer aplicaciones (por ejemplo, las redes sociales, juegos, compartir medios y portales Q&amp;A) o cargas informáticas (por ejemplo, un motor de recomendación) y latencia. Almacenamiento en caché mejora el rendimiento de la aplicación mediante el almacenamiento de piezas críticas de datos en memoria para acceso de baja latencia. Información en la memoria caché puede incluir los resultados de las consultas de base de datos/O-intensivos o los resultados de los cálculos de cómputo intensivo. Las aplicaciones que necesitan un servidor de estructura de datos, encontrará el motor Redis más útiles.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Amazon ElastiCache</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#comando-ayuda">comando Ayuda</a></li>
+<li><a class="reference internal" href="#create-cache-cluster">Create-cache-cluster</a></li>
+<li><a class="reference internal" href="#create-health-check">Create-health-check</a></li>
+<li><a class="reference internal" href="#reboot-cache-cluster">Reboot-cache-cluster</a></li>
+<li><a class="reference internal" href="#delete-cache-cluster">Delete-cache-cluster</a></li>
+<li><a class="reference internal" href="#delete-replication-group">Delete-replication-group</a></li>
+<li><a class="reference internal" href="#list">List</a></li>
+<li><a class="reference internal" href="#parametros-alternativos">parámetros alternativos</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="samazondynamodb.html"
+                        title="previous chapter">Amazon DynamoDB</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="samazonroute53.html"
+                        title="next chapter">AMAZON ROUTE 53</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/samazonelasticache.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="samazonroute53.html" title="AMAZON ROUTE 53"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="samazondynamodb.html" title="Amazon DynamoDB"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" >PTConfigure</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>

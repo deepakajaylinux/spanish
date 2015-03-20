@@ -131,12 +131,12 @@ End Help
 <div class="highlight-bash"><div class="highlight"><pre>sudo apt-get install php5 git
 </pre></div>
 </div>
-<div class="highlight-bash"><div class="highlight"><pre>git clone https://git.pharaoh-tools.com/phpengine/ptdeploy <span class="o">&amp;&amp;</span> sudo php ptdeploy/install-silent
+<div class="highlight-bash"><div class="highlight"><pre>git clone https://git.pharaoh-tools.com/phpengine/ptdeploy &amp;&amp; sudo php ptdeploy/install-silent
 </pre></div>
 </div>
 <p>or</p>
 <p>El siguiente comando es predecible para los usuarios que deseen especificar la ubicación durante la instalación.</p>
-<div class="highlight-bash"><div class="highlight"><pre>git clone https://git.pharaoh-tools.com/phpengine/ptdeploy <span class="o">&amp;&amp;</span> sudo php ptdeploy/install
+<div class="highlight-bash"><div class="highlight"><pre>git clone https://git.pharaoh-tools.com/phpengine/ptdeploy &amp;&amp; sudo php ptdeploy/install
 </pre></div>
 </div>
 </div>
@@ -200,17 +200,17 @@ ApacheControl - Apache Server Control
 ApacheVHostEditor - Apache Virtual Host Functions
 AppSettings - PTDeploy Application Settings
 Autopilot - PTConfigure Autopilot - User Defined Installations
-Builderfy - PTDeploy Builderfyer - Create some standard autopilots <span class="k">for</span> your project
+Builderfy - PTDeploy Builderfyer - Create some standard autopilots <span class="k">for </span>your project
 CukeConf - Cucumber Configuration
 DBConfigure - Database Connection Configuration Functions
 DBInstall - Database Installation Management Functions
-Dapperfy - PTDeploy Dapperfyer - Automated Application Deployment autopilots <span class="k">for</span> your project
-Drupal - Drupal - Integration and Templates <span class="k">for</span> Drupal
-EnvironmentConfig - Environment Configuration - Configure Environments <span class="k">for</span> a project
+Dapperfy - PTDeploy Dapperfyer - Automated Application Deployment autopilots <span class="k">for </span>your project
+Drupal - Drupal - Integration and Templates <span class="k">for </span>Drupal
+EnvironmentConfig - Environment Configuration - Configure Environments <span class="k">for </span>a project
 GitClone - GitClone Source Control Clone Functions
 HostEditor - Host File Management Functions
 Invoke - SSH Invocation Functions
-Joomla - Joomla - Integration and Templates <span class="k">for</span> Joomla
+Joomla - Joomla - Integration and Templates <span class="k">for </span>Joomla
 LighttpdControl - Lighttpd Server Control
 Logging - Logging - Output errors to the logging
 NginxControl - Nginx Server Control
@@ -223,7 +223,7 @@ SVN - SVN Source Control Project Checkout/Download Functions
 SystemDetection - System Detection - Detect the Running Operating System
 Templating - Templating
 Version - Versioning Functions
-Wordpress - Wordpress - Integration and Templates <span class="k">for</span> Wordpress
+Wordpress - Wordpress - Integration and Templates <span class="k">for </span>Wordpress
 </pre></div>
 </div>
 <hr class="docutils" />
@@ -371,8 +371,28 @@ Wordpress - Wordpress - Integration and Templates <span class="k">for</span> Wor
 <li class="toctree-l2"><a class="reference internal" href="snginxcontrol_deploy.html#detengase">Deténgase</a></li>
 <li class="toctree-l2"><a class="reference internal" href="snginxcontrol_deploy.html#reanudar">reanudar</a></li>
 <li class="toctree-l2"><a class="reference internal" href="snginxcontrol_deploy.html#recargar">recargar</a></li>
-<li class="toctree-l2"><a class="reference internal" href="snginxcontrol_deploy.html#opciones">Opciones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="snginxcontrol_deploy.html#parametro-alternativa">Parámetro Alternativa</a></li>
 <li class="toctree-l2"><a class="reference internal" href="snginxcontrol_deploy.html#beneficios">Beneficios</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="snginxsbeditor_deploy.html">NginxSBEditor</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="snginxsbeditor_deploy.html#sinopsis">Sinopsis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="snginxsbeditor_deploy.html#comando-ayuda">comando Ayuda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="snginxsbeditor_deploy.html#como-utilizar">Cómo utilizar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="snginxsbeditor_deploy.html#add">Add</a></li>
+<li class="toctree-l2"><a class="reference internal" href="snginxsbeditor_deploy.html#remove">Remove</a></li>
+<li class="toctree-l2"><a class="reference internal" href="snginxsbeditor_deploy.html#list">List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="snginxsbeditor_deploy.html#beneficios">Beneficios</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sproject_deploy.html">Project</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sproject_deploy.html#sinopsis">Sinopsis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sproject_deploy.html#comando-ayuda">comando Ayuda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sproject_deploy.html#container">Container</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sproject_deploy.html#init">init</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sproject_deploy.html#build-install">Build-Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sproject_deploy.html#parametros-alternativos">parámetros alternativos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sproject_deploy.html#beneficios">beneficios</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="stemplating_deploy.html">Templating</a><ul>
@@ -465,7 +485,7 @@ Wordpress - Wordpress - Integration and Templates <span class="k">for</span> Wor
     </div>
     <div class="footer">
         &copy; Copyright 2015, 1.0.1.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
     </div>
   </body>
 </html>

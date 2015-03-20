@@ -1,0 +1,263 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Box &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="PTVirtualize" href="sptvirtualize_main.html" />
+    <link rel="next" title="Destroy" href="sdestroy_virtualize.html" />
+    <link rel="prev" title="AutoSSH" href="sautossh_virtualize.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="sdestroy_virtualize.html" title="Destroy"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="sautossh_virtualize.html" title="AutoSSH"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptvirtualize_main.html" accesskey="U">PTVirtualize</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="box">
+<h1>Box<a class="headerlink" href="#box" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Este módulo ayuda a los usuarios en el manejo y gestión de las cajas que están disponibles en el ptvirtualize. Veamos cómo funciona este módulo en el manejo de las funciones de la caja.</p>
+</div>
+<div class="section" id="comando-ayuda">
+<h2>comando Ayuda<a class="headerlink" href="#comando-ayuda" title="Permalink to this headline">¶</a></h2>
+<p>El comando ayuda guía a los usuarios sobre la finalidad y así como sobre las opciones que se incluyen en el módulo de caja. Enumera los parámetros alternativos del módulo de caja. También describe la sintaxis para utilizar al agregar, quitar, paquete, lista comandos. El comando de ayuda para el módulo de caja se muestra a continuación.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptvirtualize Box <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La sintaxis para declarar el comando help no es sensible a mayúsculas que es una ventaja añadida. La siguiente pantalla te visualizar sobre el comando ayuda debajo de caja.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptvirtualize Box <span class="nb">help</span>
+
+******************************
+Pharaoh Tools - Virtualize
+******************************
+
+
+ This <span class="nb">command </span>allows you to manage the Base boxes available to you in ptvirtualize
+
+ Box, box
+
+       - add
+       Initialises the Box as usable by ptvirtualize
+       example: ptvirtualize box add
+       example: ptvirtualize box add --yes --guess
+           --source<span class="o">=</span><span class="s2">&quot;/home/dave/file.box&quot;</span> <span class="c"># where the box file is</span>
+           --target<span class="o">=</span><span class="s2">&quot;opt/ptvirtualize/boxes&quot;</span> <span class="c"># will guess the dir next to ptvirtualize install dir</span>
+           --name<span class="o">=</span><span class="s2">&quot;vanillaubuntu&quot;</span>
+
+       - remove
+       Removes the box as usable by ptvirtualize
+       example: ptvirtualize box remove
+
+       - package
+       Packages a box as usable by ptvirtualize
+       example: ptvirtualize box package
+       example ptvirtualize box package --yes --guess
+           --name<span class="o">=</span><span class="s2">&quot;Vanilla Ubuntu 12.04 amd 64&quot;</span>
+           --vmname<span class="o">=</span><span class="s2">&quot;a4dc638f-2721-40c4-a943-2f2565c83fee&quot;</span> <span class="c"># use name or id of virtual machine</span>
+           --provider<span class="o">=</span><span class="s2">&quot;virtualbox&quot;</span> <span class="c"># guess will use virtualbox</span>
+           --group<span class="o">=</span><span class="s2">&quot;ptvirtualize&quot;</span>
+           --slug<span class="o">=</span><span class="s2">&quot;&quot;</span> <span class="c"># guess can generate this based on name field</span>
+           --description<span class="o">=</span><span class="s2">&quot;A Vanilla install of Ubuntu...&quot;</span>
+           --home_location<span class="o">=</span><span class="s2">&quot;http://www.someplace.net/&quot;</span> <span class="c"># guess will set this to http://www.ptvirtualizeboxes.co.uk/</span>
+           --target<span class="o">=</span><span class="s2">&quot;/opt/ptvirtualize/boxes&quot;</span> <span class="c"># save location, will guess /opt/ptvirtualize/boxes</span>
+
+       - list
+       List boxes installed in ptvirtualize
+       example: ptvirtualize box list
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="funciones-de-ptvirtualize-caja">
+<h2>Funciones de ptvirtualize caja<a class="headerlink" href="#funciones-de-ptvirtualize-caja" title="Permalink to this headline">¶</a></h2>
+<p>Como se muestra en el comando anterior ayuda las funciones del cuadro de ptvirtualize incluye lo siguiente:</p>
+<ul class="simple">
+<li>Add</li>
+<li>Remove</li>
+<li>Package</li>
+<li>List</li>
+</ul>
+</div>
+<div class="section" id="add">
+<h2>Add<a class="headerlink" href="#add" title="Permalink to this headline">¶</a></h2>
+<p>El complemento se utiliza para inicializar la caja como utilizable por ptvirtualize. Puede utilizarse la siguiente sintaxis para agregar un cuadro de ptvirtualize.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptvirtualize box add
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptvirtualize box add --yes --guess
+--source=&quot;/home/dave/file.box   (This line describes where the box is)
+--target=&quot;opt/ptvirtualize/boxes&quot;       (This line guess the dir next to ptvirtualize install dir)
+--name=&quot;vanillaubuntu&quot;
+</pre></div>
+</div>
+<p>In the above mentioned ways the box can be added to a ptvirtualize.</p>
+</div>
+<div class="section" id="remove">
+<h2>Remove<a class="headerlink" href="#remove" title="Permalink to this headline">¶</a></h2>
+<p>Esta función se utiliza para quitar el cuadro como utilizable por ptvirtualize. Esto puede hacerse utilizando el comando se muestra a continuación:</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptvirtualize box remove
+</pre></div>
+</div>
+<p>En las formas mencionadas puede eliminarse el cuadro de un ptvirtualize.</p>
+</div>
+<div class="section" id="package">
+<h2>Package<a class="headerlink" href="#package" title="Permalink to this headline">¶</a></h2>
+<p>Esta función se utiliza para empaquetar la caja como utilizable por ptvirtualize. Esto puede implementarse usando el siguiente comando:</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptvirtualize box package
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptvirtualize box package --yes --guess
+<span class="nv">name</span><span class="o">=</span><span class="s2">&quot;Vanilla Ubuntu 12.04 amd 64&quot;</span>
+<span class="nv">vmname</span><span class="o">=</span><span class="s2">&quot;a4..............&quot;</span> <span class="o">(</span>This two lines represents the name and id of virtual machine<span class="o">)</span>
+--provider<span class="o">=</span><span class="s2">&quot;virtualbox&quot;</span> <span class="o">(</span>guess will use virtual box<span class="o">)</span>
+--group<span class="o">=</span><span class="s2">&quot;ptvirtualize&quot;</span>
+--slug<span class="o">=</span><span class="s2">&quot;&quot;</span> <span class="o">(</span>The guess can generate this based on the name field<span class="o">)</span>
+--description<span class="o">=</span><span class="s2">&quot;A vanilla install of Ubuntu...&quot;</span>
+--home_location<span class="o">=</span><span class="s2">&quot;http://www.someplace.net/&quot;</span> <span class="o">(</span>guess will <span class="nb">set </span>this to http://www.ptvirtualizeboxes.co.uk/
+--target<span class="o">=</span><span class="s2">&quot;/opt/ptvirtualize/boxes&quot;</span> <span class="o">(</span>The location <span class="k">for </span>saving<span class="o">)</span>
+</pre></div>
+</div>
+<p>Finalmente, una caja de empaquetado como utilizable por la ptvirtualize.</p>
+</div>
+<div class="section" id="list">
+<h2>List<a class="headerlink" href="#list" title="Permalink to this headline">¶</a></h2>
+<p>Esta función se utiliza para enumerar las cajas que se instalan en ptvirtualize. Esto puede hacerse usando el siguiente comando,</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptvirtualize box list
+</pre></div>
+</div>
+<p>Utilizando el comando anterior, se mostrará la lista de las cajas ptvirtualize que están recién instalados.</p>
+</div>
+<div class="section" id="parametros-alternativos">
+<h2>parámetros alternativos<a class="headerlink" href="#parametros-alternativos" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Box</li>
+<li>box</li>
+</ul>
+<p>En la lista antes mencionada, cualquiera de los parámetros alternativos pueden utilizarse en la declaración.</p>
+</div>
+<div class="section" id="beneficios">
+<h2>beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Los parámetros utilizados en la ayuda no es sensible a mayúsculas que es una ventaja añadida mientras que comparado con otros.</li>
+<li>Está acomodada en ambos Ubuntu y así como ciento so.</li>
+<li>La sintaxis para usar agregar, quitar, paquete, la lista no son mayúsculas y minúsculas.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Box</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#comando-ayuda">comando Ayuda</a></li>
+<li><a class="reference internal" href="#funciones-de-ptvirtualize-caja">Funciones de ptvirtualize caja</a></li>
+<li><a class="reference internal" href="#add">Add</a></li>
+<li><a class="reference internal" href="#remove">Remove</a></li>
+<li><a class="reference internal" href="#package">Package</a></li>
+<li><a class="reference internal" href="#list">List</a></li>
+<li><a class="reference internal" href="#parametros-alternativos">parámetros alternativos</a></li>
+<li><a class="reference internal" href="#beneficios">beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="sautossh_virtualize.html"
+                        title="previous chapter">AutoSSH</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sdestroy_virtualize.html"
+                        title="next chapter">Destroy</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/sbox_virtualize.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="sdestroy_virtualize.html" title="Destroy"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="sautossh_virtualize.html" title="AutoSSH"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptvirtualize_main.html" >PTVirtualize</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>

@@ -25,6 +25,7 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
     <link rel="up" title="PTDeploy" href="sptdeploy_main.html" />
+    <link rel="next" title="PTTest" href="spttest_main.html" />
     <link rel="prev" title="Templating" href="stemplating_deploy.html" /> 
   </head>
   <body>
@@ -34,6 +35,9 @@
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="spttest_main.html" title="PTTest"
+             accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="stemplating_deploy.html" title="Templating"
              accesskey="P">previous</a> |</li>
@@ -64,23 +68,23 @@
 ******************************
 
 
- This <span class="nb">command </span>is part of Default Modules and handles Application Versioning, allowing <span class="k">for</span> rollbacks and the like.
+ This <span class="nb">command </span>is part of Default Modules and handles Application Versioning, allowing <span class="k">for </span>rollbacks and the like.
 
  Version, version, vrs
 
          - specific
          Will change back the *current* symlink to whichever available version you pick
-         example: ptdeploy version specific --limit<span class="o">=</span><span class="m">4</span> --container<span class="o">=</span>/var/www/applications/the-app --version<span class="o">=</span>2
+         example: ptdeploy version specific --limit<span class="o">=</span>4 --container<span class="o">=</span>/var/www/applications/the-app --version<span class="o">=</span>2
 
          - latest
          Will change back the *current* symlink to the latest created version
          example: ptdeploy version latest
-         example: ptdeploy version latest --limit<span class="o">=</span><span class="m">3</span> --container<span class="o">=</span>/var/www/applications/the-app
+         example: ptdeploy version latest --limit<span class="o">=</span>3 --container<span class="o">=</span>/var/www/applications/the-app
 
          - rollback
          Will change back the *current* symlink to the latest created version but one
          example: ptdeploy version rollback
-         example: ptdeploy version rollback --limit<span class="o">=</span><span class="m">3</span> --container<span class="o">=</span>/var/www/applications/the-app
+         example: ptdeploy version rollback --limit<span class="o">=</span>3 --container<span class="o">=</span>/var/www/applications/the-app
 
 
      You can also apply a limit to the number of Versions to keep by using the --limit parameter
@@ -173,6 +177,9 @@ el usuario puede utilizar Version, VERSION|</td>
   <h4>Previous topic</h4>
   <p class="topless"><a href="stemplating_deploy.html"
                         title="previous chapter">Templating</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="spttest_main.html"
+                        title="next chapter">PTTest</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
     <li><a href="_sources/sversion_deploy.txt"
@@ -202,6 +209,9 @@ el usuario puede utilizar Version, VERSION|</td>
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
+          <a href="spttest_main.html" title="PTTest"
+             >next</a> |</li>
+        <li class="right" >
           <a href="stemplating_deploy.html" title="Templating"
              >previous</a> |</li>
         <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
@@ -210,7 +220,7 @@ el usuario puede utilizar Version, VERSION|</td>
     </div>
     <div class="footer">
         &copy; Copyright 2015, 1.0.1.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
     </div>
   </body>
 </html>

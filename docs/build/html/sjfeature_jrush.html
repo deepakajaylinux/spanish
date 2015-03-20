@@ -1,0 +1,304 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>JFeature &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="Jrush" href="sjrush_main.html" />
+    <link rel="next" title="JUser" href="sjuser_jrush.html" />
+    <link rel="prev" title="JConfiguration" href="sjconfiguration_jrush.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="sjuser_jrush.html" title="JUser"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="sjconfiguration_jrush.html" title="JConfiguration"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sjrush_main.html" accesskey="U">Jrush</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="jfeature">
+<h1>JFeature<a class="headerlink" href="#jfeature" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>JFeatures es uno de los paquetes de software más populares del mundo solíamos construir, organizar, gestionar y publicar contenidos para sitios web, blogs, Intranets. Cuando el usuario presione el archivo zip a otro archivo se agregará todas las características. Debido a su arquitectura escalable es también una gran base para crear aplicaciones web. Se utiliza para administrar el componente de la migración de la etapa. Es una comodidad con Ubuntu y CentOS.</p>
+</div>
+<div class="section" id="comando-ayuda">
+<h2>comando Ayuda<a class="headerlink" href="#comando-ayuda" title="Permalink to this headline">¶</a></h2>
+<p>El comando ayuda guía a los usuarios sobre la finalidad y así como sobre las opciones que se incluyen en el módulo JFeatures. Enumera los parámetros alternativos del módulo JFeatures. También describe la sintaxis para instalar el módulo JFeatures. El comando de ayuda para el módulo JFeatures se muestra a continuación.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure JFeatures <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La sintaxis para declarar el comando help es sensible al caso no que es una ventaja añadida. La siguiente captura de pantalla visualizar al usuario sobre el comando de ayuda en JFeatures.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# jrush JFeature <span class="nb">help</span>
+****************************************
+GC JRush - The Joomla Command Line Shell
+****************************************
+
+ This <span class="nb">command </span>manages the JFeature Component <span class="k">for </span>Stage Migration.
+
+ JFeature, jfeature
+
+       - folder-defaults
+         Reset the feature file storage folders being used to the default
+         example jrush jfeature folder-defaults --config-file<span class="o">=</span><span class="s2">&quot;/var/www/website/configuration.php&quot;</span>
+
+       - feature-install
+         Install the metadata <span class="k">for </span>a database migration, fileset, or both from the GC Features component
+         example jrush jfeature feature-install --feature-file<span class="o">=</span><span class="s2">&quot;/var/www/website/XXX_XXX.zip&quot;</span> --config-file<span class="o">=</span><span class="s2">&quot;/var/www/website/configuration.php&quot;</span>
+
+       - feature-pull
+         perform a pull on an installed feature so it is integrated into the site, db and file changes executed.
+         example jrush jfeature feature-pull --pull-unique-time<span class="o">=</span><span class="s2">&quot;XXX_XXX&quot;</span> --config-file<span class="o">=</span><span class="s2">&quot;/var/www/website/configuration.php&quot;</span>
+         example jrush jfeature feature-pull --pull-id<span class="o">=</span><span class="s2">&quot;XX&quot;</span> --config-file<span class="o">=</span><span class="s2">&quot;/var/www/website/configuration.php&quot;</span>
+
+       - feature-push
+         perform a push on an installed feature so it is saved locally.
+         example jrush jfeature feature-push --profile-unique<span class="o">=</span><span class="s2">&quot;XXX&quot;</span> --config-file<span class="o">=</span><span class="s2">&quot;/var/www/website/configuration.php&quot;</span> --push-type<span class="o">=</span><span class="s2">&quot;local&quot;</span>
+
+       - group-install
+         Install the metadata <span class="k">for </span>a database migration, fileset, or both from the GC Features component
+         example jrush jfeature group-install --group-file<span class="o">=</span><span class="s2">&quot;/var/www/website/XXXX.group&quot;</span> --config-file<span class="o">=</span><span class="s2">&quot;/var/www/website/configuration.php&quot;</span>
+
+       - group-install-all
+         Install the metadata <span class="k">for </span>a database migration, fileset, or both from the GC Features component. Will scan the configured metadata
+         Directory <span class="k">for </span>group files, and install or update all found groups.
+         example jrush jfeature group-install-all --config-file<span class="o">=</span><span class="s2">&quot;/var/www/website/configuration.php&quot;</span>
+
+       - group-push
+         perform a push of a group profile into a locally saved file.
+         example jrush jfeature group-push --group-unique<span class="o">=</span><span class="s2">&quot;XXXXXXXXXXXXXXXX&quot;</span> --config-file<span class="o">=</span><span class="s2">&quot;/var/www/website/configuration.php&quot;</span>
+
+       - group-pull
+         perform a pull on all installed features in the specified group so they are integrated into the site, db and
+         file changes executed.
+         example jrush jfeature group-pull --group-id<span class="o">=</span><span class="s2">&quot;XX&quot;</span> --config-file<span class="o">=</span><span class="s2">&quot;/var/www/website/configuration.php&quot;</span>
+         example jrush jfeature group-pull --group-name<span class="o">=</span><span class="s2">&quot;my group&quot;</span> --config-file<span class="o">=</span><span class="s2">&quot;/var/www/website/configuration.php&quot;</span>
+         example jrush jfeature group-pull --group-unique<span class="o">=</span><span class="s2">&quot;XX1234&quot;</span> --config-file<span class="o">=</span><span class="s2">&quot;/var/www/website/configuration.php&quot;</span>
+
+------------------------------
+End Help
+****************************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="parametros-alternativos">
+<h2>parámetros alternativos<a class="headerlink" href="#parametros-alternativos" title="Permalink to this headline">¶</a></h2>
+<p>Los siguientes son los parámetros alternativos que pueden definirse en declaraciones:</p>
+<p>JFeature, jfeature</p>
+</div>
+<div class="section" id="folder-default">
+<h2>Folder-default<a class="headerlink" href="#folder-default" title="Permalink to this headline">¶</a></h2>
+<p>Este proceso que se utiliza para establecer el valor predeterminado de la carpeta de archivo de almacenamiento. Un ajuste preestablecido o valor que se utilizará si ninguna opción se realiza en carpeta. Interacción del usuario debería ser obligatoria. Configuración predeterminada para las opciones seleccionadas más comúnmente sirve para este propósito.</p>
+<p>El comando de ayuda para el proceso de carpeta predeterminada se muestra a continuación.</p>
+<div class="highlight-bash"><div class="highlight"><pre>Jrush JFeature folder-defaults
+</pre></div>
+</div>
+<p>La captura de pantalla siguiente muestra su función.</p>
+<div class="highlight-bash"><div class="highlight"><pre>folder-defaults
+Reset the feature file storage folders being used to the default
+example jrush jfeature folder-defaults --config-file<span class="o">=</span><span class="s2">&quot;/var/www/website/configuration.php&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="feature-install">
+<h2>Feature-install<a class="headerlink" href="#feature-install" title="Permalink to this headline">¶</a></h2>
+<p>Este proceso utilizado para instalar los metadatos para una migración de base de datos. Aquí pide característica nombre del archivo y nombre de archivo configurado. El usuario tiene que introducir todos los datos anteriores uno por uno. De lo contrario el usuario puede introducir como todo en una misma línea. Se utiliza el siguiente comando para instalar jfeature.</p>
+<div class="highlight-bash"><div class="highlight"><pre>Jrush JFeature feature-install
+</pre></div>
+</div>
+<p>La captura de pantalla muestra sus funciones.</p>
+<div class="highlight-bash"><div class="highlight"><pre>feature-install
+Install the metadata <span class="k">for </span>a database migration, fileset, or both from the GC Features component
+example jrush jfeature feature-install --feature-file<span class="o">=</span><span class="s2">&quot;/var/www/website/XXX_XXX.zip&quot;</span> --config-file<span class="o">=</span><span class="s2">&quot;/var/www/website/configuration.php&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="feature-pull">
+<h2>Feature-Pull<a class="headerlink" href="#feature-pull" title="Permalink to this headline">¶</a></h2>
+<p>Disponen de tracción utilizado para realizar un tirón en una característica instalada. Debido a la integración de cambios en el archivo pueden ser ejecutados.El siguiente comando puede utilizarse para tirar de archivo de configuración.</p>
+<div class="highlight-bash"><div class="highlight"><pre>Jrush JFeature feature-pull
+</pre></div>
+</div>
+<p>Después de introducir el comando anterior dijo, pide tiempo y dirección Ip. Basado en esta atracción puede ser ejecutado. La captura de pantalla siguiente explica su función.</p>
+<div class="highlight-bash"><div class="highlight"><pre>feature-pull
+perform a pull on an installed feature so it is integrated into the site, db and file changes executed.
+example jrush jfeature feature-pull --pull-unique-time<span class="o">=</span><span class="s2">&quot;XXX_XXX&quot;</span> --config-file<span class="o">=</span><span class="s2">&quot;/var/www/website/configuration.php&quot;</span>
+example jrush jfeature feature-pull --pull-id<span class="o">=</span><span class="s2">&quot;XX&quot;</span> --config-file<span class="o">=</span><span class="s2">&quot;/var/www/website/configuration.php&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="feature-push">
+<h2>Feature-Push<a class="headerlink" href="#feature-push" title="Permalink to this headline">¶</a></h2>
+<p>Cuentan con empuje solía alcanza un empujón sobre una característica instalada. Cuando se empuja completa puede guardarse localmente. El comando utilizado para empujar la característica.</p>
+<div class="highlight-bash"><div class="highlight"><pre>Jrush JFeature feature-push
+</pre></div>
+</div>
+<p>Después de entrada el comando anterior dijo, pide perfil único y tipo de archivo y empuje la configuración. El usuario debe introducir uno o todo en la misma línea. Esto puede explicarse como sigue a través de las instantáneas,</p>
+<div class="highlight-bash"><div class="highlight"><pre>feature-push
+perform a push on an installed feature so it is saved locally.
+example jrush jfeature feature-push --profile-unique<span class="o">=</span><span class="s2">&quot;XXX&quot;</span> --config-file<span class="o">=</span><span class="s2">&quot;/var/www/website/configuration.php&quot;</span> --push-type<span class="o">=</span><span class="s2">&quot;local&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="group-install">
+<h2>Group-install<a class="headerlink" href="#group-install" title="Permalink to this headline">¶</a></h2>
+<p>Este proceso utilizado para instalar los metadatos para una migración de base de datos. Aquí pide a nombre de archivo de grupo de función y nombre de archivo configurado. El usuario tiene que introducir todos los datos anteriores uno por uno. De lo contrario el usuario puede introducir como todo en una misma línea.</p>
+<div class="highlight-bash"><div class="highlight"><pre>Jrush JFeature group-install
+</pre></div>
+</div>
+<p>La captura de pantalla muestra sus funciones.</p>
+<div class="highlight-bash"><div class="highlight"><pre>group-install
+Install the metadata <span class="k">for </span>a database migration, fileset, or both from the GC Features component
+example jrush jfeature group-install --group-file<span class="o">=</span><span class="s2">&quot;/var/www/website/XXXX.group&quot;</span> --config-file<span class="o">=</span><span class="s2">&quot;/var/www/website/configuration.php&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="group-install-all">
+<h2>Group-install-all<a class="headerlink" href="#group-install-all" title="Permalink to this headline">¶</a></h2>
+<p>Establezca este proceso utilizado para instalar los metadatos de archivo de migración de base de datos. Componente de las características de la configuración de grupo. Instalación y actualización es posible. El siguiente comando para instalar todo el grupo.</p>
+<div class="highlight-bash"><div class="highlight"><pre>Jrush JFeature group-install-all
+</pre></div>
+</div>
+<p>Entrando en el comando anterior dijo que pide el archivo de configuración. El usuario puede introducir el nombre del archivo de configuración. La siguiente pantalla disparó a guías del usuario para instalar a grupo todos.</p>
+<div class="highlight-bash"><div class="highlight"><pre>group-install-all
+Install the metadata <span class="k">for </span>a database migration, fileset, or both from the GC Features component. Will scan the configured metadata
+Directory <span class="k">for </span>group files, and install or update all found groups.
+example jrush jfeature group-install-all --config-file<span class="o">=</span><span class="s2">&quot;/var/www/website/configuration.php&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="group-push">
+<h2>Group-push<a class="headerlink" href="#group-push" title="Permalink to this headline">¶</a></h2>
+<p>Este proceso puede realizar un empuje de un perfil de grupo en el archivo local. Aquí se pueden mencionar el grupo único y nombre del archivo de configuración. El siguiente comando utilizado para empujar el perfil del grupo en localmente guardó el archivo.</p>
+<div class="highlight-bash"><div class="highlight"><pre>Jrush JFeature group-push
+</pre></div>
+</div>
+<p>La siguiente pantalla disparó a guías del usuario para instalar empuje del grupo.</p>
+<div class="highlight-bash"><div class="highlight"><pre>group-push
+perform a push of a group profile into a locally saved file.
+example jrush jfeature group-push --group-unique<span class="o">=</span><span class="s2">&quot;XXXXXXXXXXXXXXXX&quot;</span> --config-file<span class="o">=</span><span class="s2">&quot;/var/www/website/configuration.php&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="beneficios">
+<h2>beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Apoyo para todo tipo de usuarios</li>
+<li>fáciles actualizaciones</li>
+<li>mejor, búsqueda inteligente de búsqueda</li>
+<li>potente extensibilidad</li>
+<li>hacer más con menos tiempo pasar para la codificación y hacer más con menos comandos jfeature * bueno hacerlo con Ubuntu y ciento OS</li>
+<li>sensibilidad a mayúsuclas y no</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">JFeature</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#comando-ayuda">comando Ayuda</a></li>
+<li><a class="reference internal" href="#parametros-alternativos">parámetros alternativos</a></li>
+<li><a class="reference internal" href="#folder-default">Folder-default</a></li>
+<li><a class="reference internal" href="#feature-install">Feature-install</a></li>
+<li><a class="reference internal" href="#feature-pull">Feature-Pull</a></li>
+<li><a class="reference internal" href="#feature-push">Feature-Push</a></li>
+<li><a class="reference internal" href="#group-install">Group-install</a></li>
+<li><a class="reference internal" href="#group-install-all">Group-install-all</a></li>
+<li><a class="reference internal" href="#group-push">Group-push</a></li>
+<li><a class="reference internal" href="#beneficios">beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="sjconfiguration_jrush.html"
+                        title="previous chapter">JConfiguration</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sjuser_jrush.html"
+                        title="next chapter">JUser</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/sjfeature_jrush.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="sjuser_jrush.html" title="JUser"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="sjconfiguration_jrush.html" title="JConfiguration"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sjrush_main.html" >Jrush</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>

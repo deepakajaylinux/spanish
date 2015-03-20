@@ -1,0 +1,238 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>AWSCloudFormation &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="PTConfigure" href="sptconfigure_main.html" />
+    <link rel="next" title="AWS RDS" href="sawsrds.html" />
+    <link rel="prev" title="Amazon S3" href="samazons3.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="sawsrds.html" title="AWS RDS"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="samazons3.html" title="Amazon S3"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" accesskey="U">PTConfigure</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="awscloudformation">
+<h1>AWSCloudFormation<a class="headerlink" href="#awscloudformation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>AWS CloudFormation da los desarrolladores y los administradores de sistemas una manera fácil de crear y administrar una colección de recursos relacionados de la AWS, aprovisionamiento y actualizándolos en una manera ordenada y predecible.</p>
+<p>Puede utilizar las plantillas de muestra de AWS CloudFormation o crear sus propias plantillas para describir los recursos de la AWS y dependencias asociadas o los parámetros de tiempo de ejecución, necesarios para ejecutar la aplicación. No necesitas saber el orden para el aprovisionamiento de servicios de AWS o las sutilezas de hacer trabajar a esas dependencias. CloudFormation se encarga de esto por usted. Después de que los recursos AWS se despliegan, puede modificar y actualizar de manera controlada y predecible, en efecto aplicar control de versiones para su infraestructura de AWS del mismo modo que hacer con su software.</p>
+<p>Puede implementar y actualizar una plantilla y su asociado colección de recursos (llamado una pila) mediante el uso de la consola de administración de AWS, AWS Command Line Interface o API. CloudFormation está disponible sin costo adicional, y usted sólo paga por los recursos AWS necesarios para ejecutar sus aplicaciones.</p>
+</div>
+<div class="section" id="comando-ayuda">
+<h2>comando Ayuda<a class="headerlink" href="#comando-ayuda" title="Permalink to this headline">¶</a></h2>
+<p>Este comando ayuda a determinar el uso de AWS CloudFormation. El usuario llegará a saber acerca del manera/formato diferente para ejecutar este módulo. Este comando guía al usuario final para conocer el propósito de este comando. A continuación dado son el comando y la captura de pantalla del mismo.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure AWSCloudFormation help
+
+******************************
+
+
+ This command allows you to install a The AWS Cloud Formation Command
+ Line Tools. This tool is provided by
+
+ AWSCloudFormation, aws-cloud-formation, aws-cloudformation
+
+       - install
+       Installs AWSCloudFormation. Note, you&#39;ll also need Java installed
+       as it is a prerequisite for AWSCloudFormation.
+       example: ptconfigure aws-cloud-formation install
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="instalacion">
+<h2>instalación<a class="headerlink" href="#instalacion" title="Permalink to this headline">¶</a></h2>
+<p>Si el usuario necesita instalar el módulo AWSCloudFormation en la máquina, la continuación dado comando se ejecutará el proceso de instalación.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure aws-cloud-formation install
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure aws-cloud-formation install
+
+Install AWSCloudFormation? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+*******************************
+*        Pharaoh Tools        *
+*         AWS CloudFn!        *
+*******************************
+Creating /tmp/ptconfigure-temp-script-17956189939.sh
+chmod 755 /tmp/ptconfigure-temp-script-17956189939.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-17956189939.sh Permissions
+Executing /tmp/ptconfigure-temp-script-17956189939.sh
+Cloning into <span class="s1">&#39;aws-cloudformation&#39;</span>...
+remote: Counting objects: 64, <span class="k">done</span>.
+remote: Total 64 <span class="o">(</span>delta 0<span class="o">)</span>, reused 0 <span class="o">(</span>delta 0<span class="o">)</span>, pack-reused 64
+Unpacking objects: 100% <span class="o">(</span>64/64<span class="o">)</span>, <span class="k">done</span>.
+Checking connectivity... <span class="k">done</span>.
+mv: cannot move ‘/tmp/aws-cloudformation/bin’ to ‘/opt/aws-cloudformation/bin’: Directory not empty
+mv: cannot move ‘/tmp/aws-cloudformation/lib’ to ‘/opt/aws-cloudformation/lib’: Directory not empty
+Temp File /tmp/ptconfigure-temp-script-17956189939.sh Removed
+PHP Notice:  Undefined index: object in /opt/ptconfigure/ptconfigure/src/Modules/PtconfigureRequired/Model/BaseLinuxApp.php on line 279
+PHP Notice:  Undefined index: method in /opt/ptconfigure/ptconfigure/src/Modules/PtconfigureRequired/Model/BaseLinuxApp.php on line 279
+PHP Notice:  Undefined index: params in /opt/ptconfigure/ptconfigure/src/Modules/PtconfigureRequired/Model/BaseLinuxApp.php on line 279
+PHP Warning:  call_user_func_array<span class="o">()</span> expects parameter 1 to be a valid callback, first array member is not a valid class name or object in /opt/ptconfigure/ptconfigure/src/Modules/PtconfigureRequired/Model/BaseLinuxApp.php on line 279
+PHP Notice:  Undefined index: object in /opt/ptconfigure/ptconfigure/src/Modules/PtconfigureRequired/Model/BaseLinuxApp.php on line 279
+PHP Notice:  Undefined index: method in /opt/ptconfigure/ptconfigure/src/Modules/PtconfigureRequired/Model/BaseLinuxApp.php on line 279
+PHP Notice:  Undefined index: params in /opt/ptconfigure/ptconfigure/src/Modules/PtconfigureRequired/Model/BaseLinuxApp.php on line 279
+PHP Warning:  call_user_func_array<span class="o">()</span> expects parameter 1 to be a valid callback, first array member is not a valid class name or object in /opt/ptconfigure/ptconfigure/src/Modules/PtconfigureRequired/Model/BaseLinuxApp.php on line 279
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for </span>installing , visit www.pharaohtools.com <span class="k">for </span>more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+AWSCloudFormation: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="parametros-alternativos">
+<h2>parámetros alternativos<a class="headerlink" href="#parametros-alternativos" title="Permalink to this headline">¶</a></h2>
+<p>Hay tres parámetros alternativos que pueden utilizarse en la línea de comandos.</p>
+<p>AWSCloudFormation, aws-cloud-formation, aws-cloudformation</p>
+</div>
+<div class="section" id="beneficios">
+<h2>beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<p>Soporta una amplia gama de recursos de AWS: AWS CloudFormation soporta una amplia gama de AWS recursos, permite generar una alta disponibilidad, confiable y escalable infraestructura AWS para sus necesidades de aplicación. AWS CloudFormation actualmente soporta los recursos en los siguientes servicios AWS:</p>
+<p>Auto Scaling</p>
+<p>Amazon CloudFront</p>
+<p>AWS CloudWatch</p>
+<p>Amazon DynamoDB</p>
+<p>Amazon EC2</p>
+<p>Amazon ElastiCache</p>
+<p>AWS Elastic Beanstalk</p>
+<p>AWS Elastic Load Balancing</p>
+<p>AWS Identity and Access Management</p>
+<p>Amazon RDS</p>
+<p>Amazon Redshift</p>
+<p>Amazon Route 53</p>
+<p>Amazon S3</p>
+<p>Amazon SimpleDB</p>
+<p>Amazon SNS</p>
+<p>Amazon SQS</p>
+<p>Amazon VPC</p>
+<p>Fácil de usar: CloudFormation hace que sea fácil de organizar y desplegar una colección de recursos AWS y permite describir cualquier dependencias o parámetros especiales para pasar en tiempo de ejecución. Puede utilizar una de las muchas plantillas de muestra CloudFormation&#8211;literales o como punto de partida.</p>
+<p>No hay necesidad de reinventar la rueda: una plantilla puede usarse repetidamente para crear copias idénticas de la misma pila (o utilizar como base para iniciar una nueva pila). Puede capturar y controlar las variaciones de infraestructuras específicas para la región como Amazon EC2 AMIs, así como nombres de Amazon Elastic Block Store (EBS) y Amazon RDS instantánea.</p>
+<p>Transparente y abierta: las plantillas son archivos de texto con formato JSON simple que pueden ser colocados bajo sus mecanismos de control de fuente normal, almacenados en lugares públicos o privados tales como Amazon S3 e intercambiados por correo electrónico. Con AWS CloudFormation, puede &#8220;abrir el capó,&#8221; para ver exactamente qué recursos AWS conforman una pila. Puede mantener el control completo y tiene la capacidad de modificar cualquiera de los recursos AWS creados como parte de una pila.</p>
+<p>Declarativo y Flexible: para crear la infraestructura que quieras, se enumeran qué recursos AWS, los valores de configuración y las interconexiones que necesita en una plantilla y luego deje que AWS CloudFormation hagan el resto con unos pocos clics en la consola de administración de AWS, un comando mediante el uso de la interfaz de línea de comandos AWS, o pide un solo mediante una llamada a las API. Usted no tendrá que recordar los detalles de cómo crear e interconectar los respectivos recursos AWS mediante su servicio APIs; AWS CloudFormation hace esto para usted. También no necesitas escribir una plantilla desde cero si empiezas con una de las muchas plantillas de muestra que vienen con AWS CloudFormation.</p>
+<p>Personalizado via parámetros: puede utilizar parámetros para personalizar los aspectos de su plantilla en tiempo de ejecución cuando se construye la pila. Por ejemplo, puede pasar el RDS tamaño base de datos, EC2 instancia tipos, base de datos y números de Puerto de servidor web a AWS CloudFormation cuando se crea una pila. También puede usar una plantilla parametrizada para crear múltiples pilas que pueden diferir de forma controlada. Por ejemplo, su tipo de instancia de Amazon EC2, umbrales de alarma Amazon CloudWatch y Amazon RDS leer-réplica ajustes pueden diferir entre las regiones AWS si usted recibe más tráfico de clientes en los Estados Unidos que en Europa. Puede utilizar para ajustar la configuración de parámetros de plantilla y umbrales de cada región por separado y todavía estar seguro de que la aplicación esté desplegada sistemáticamente en todas las regiones.</p>
+<p>Integración listo: Puede integrar AWS CloudFormation con las herramientas de desarrollo y gestión de su elección.</p>
+<p>AWS CloudFormation publica eventos de progreso a través de Amazon Simple notificación servicio (SNS). Con el SNS, puede seguimiento pila creación y cancelación mediante correo electrónico y se integran con otros procesos mediante programación.</p>
+<p>Sin recargo: AWS CloudFormation está disponible sin costo adicional. Usted será facturado solamente las tarifas normales para los recursos AWS que AWS CloudFormation crea y utiliza su aplicación.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">AWSCloudFormation</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#comando-ayuda">comando Ayuda</a></li>
+<li><a class="reference internal" href="#instalacion">instalación</a></li>
+<li><a class="reference internal" href="#parametros-alternativos">parámetros alternativos</a></li>
+<li><a class="reference internal" href="#beneficios">beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="samazons3.html"
+                        title="previous chapter">Amazon S3</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sawsrds.html"
+                        title="next chapter">AWS RDS</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/sawscloudformation.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="sawsrds.html" title="AWS RDS"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="samazons3.html" title="Amazon S3"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" >PTConfigure</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>

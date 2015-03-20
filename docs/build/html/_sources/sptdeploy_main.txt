@@ -237,6 +237,8 @@ aquí, la pantalla indica la pantalla de todos los módulos disponibles bajo ptc
  slighttpdcontrol_deploy
  slogging_deploy
  snginxcontrol_deploy
+ snginxsbeditor_deploy
+ sproject_deploy
  stemplating_deploy
  sversion_deploy 
 

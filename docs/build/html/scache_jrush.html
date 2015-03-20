@@ -1,0 +1,244 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Cache &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="Jrush" href="sjrush_main.html" />
+    <link rel="next" title="Extension" href="sextension_jrush.html" />
+    <link rel="prev" title="Jrush" href="sjrush_main.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="sextension_jrush.html" title="Extension"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="sjrush_main.html" title="Jrush"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sjrush_main.html" accesskey="U">Jrush</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="cache">
+<h1>Cache<a class="headerlink" href="#cache" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Jrush auxiliar para vaciar caché en memoria temporal. Tiene dos tipos de memoria caché. Pero ambos tienen distintas funciones según lo especificado en su nombre. Son sitio claro y claro admin. Es gratificada con Ubuntu y ciento OS. Eliminar archivos, carpetas y aplicaciones y borrar los datos de la memoria temporal, no hará el truco si vas a reciclar el contenido no esté disponible en su computadora.</p>
+</div>
+<div class="section" id="comando-ayuda">
+<h2>comando Ayuda<a class="headerlink" href="#comando-ayuda" title="Permalink to this headline">¶</a></h2>
+<p>El comando de ayuda encarga de los usuarios con respecto a la determinación y así como sobre las opciones que están incluidas en la memoria caché. Enumera los parámetros alternativos de caché. También describe la sintaxis para el funcionamiento del módulo de Jrush. El comando de ayuda para la memoria caché se muestra a continuación.</p>
+<div class="highlight-bash"><div class="highlight"><pre>jrush cache <span class="nb">help</span>
+</pre></div>
+</div>
+<p>Después de escribir el comando enumera las opciones de acción. La siguiente imagen concebirla observable.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# jrush cache <span class="nb">help</span>
+****************************************
+GC JRush - The Joomla Command Line Shell
+****************************************
+
+ This <span class="nb">command </span>allows you to clear Cache.
+
+ Cache, cache
+
+       - site-clear
+       Deletes a user
+       example: jrush cache site-clear
+
+       - admin-clear
+       Clear the administrator cache
+       example: jrush cache admin-clear
+
+------------------------------
+End Help
+****************************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="parametros-alternativos">
+<h2>parámetros alternativos<a class="headerlink" href="#parametros-alternativos" title="Permalink to this headline">¶</a></h2>
+<p>Por otro lado utilizar caché el usuario puede conceder las siguientes opciones.</p>
+<p>Cache, cache.</p>
+</div>
+<div class="section" id="opciones">
+<h2>Opciones<a class="headerlink" href="#opciones" title="Permalink to this headline">¶</a></h2>
+<p>Hay dos opciones están disponibles. Son los siguientes.</p>
+<ul class="simple">
+<li>Site-clear</li>
+<li>Admin-clear</li>
+</ul>
+<p>Ahora déjenos saber acerca de ambas opciones.</p>
+</div>
+<div class="section" id="site-clear">
+<h2>Site-clear<a class="headerlink" href="#site-clear" title="Permalink to this headline">¶</a></h2>
+<p>Sitio-claro es costoff para eliminar el usuario. El siguiente comando se utiliza para limpiar el sitio.</p>
+<div class="highlight-bash"><div class="highlight"><pre>jrush cache site-clear
+</pre></div>
+</div>
+<p>Después de insumos como sobre comando, la salida viene como una codificación. En la memoria caché de final claro acabado puede ser demostrado. Las capturas de pantalla se presenta el mismo.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# jrush cache site-clear --config-file<span class="o">=</span><span class="s2">&quot;/var/www/html/joomla/configuration.php&quot;</span>
+****************************************
+GC JRush - The Joomla Command Line Shell
+****************************************
+
+Joomla Cache Clearing Info:
+
+-------------------------
+
+Cache: array<span class="o">(</span>2<span class="o">)</span> <span class="o">{</span>
+ <span class="o">[</span><span class="s2">&quot;site_cache_clear&quot;</span><span class="o">]=</span>&gt;
+ string<span class="o">(</span>19<span class="o">)</span> <span class="s2">&quot;Site Cache Clearing&quot;</span>
+ <span class="o">[</span><span class="s2">&quot;site_cache_clear_result&quot;</span><span class="o">]=</span>&gt;
+ array<span class="o">(</span>0<span class="o">)</span> <span class="o">{</span>
+ <span class="o">}</span>
+<span class="o">}</span>
+
+------------------------------
+Joomla Cache Clearing Finished
+****************************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="admin-clear">
+<h2>Admin-clear<a class="headerlink" href="#admin-clear" title="Permalink to this headline">¶</a></h2>
+<p>Esta desgastado Borrar caché del administrador. El comando de servicios al usuario para borrar el admin como sigue.</p>
+<div class="highlight-bash"><div class="highlight"><pre>jrush cache admin-clear
+</pre></div>
+</div>
+<p>Las siguientes fotos de pantalla instruyan al usuario sobre la función admin-clear.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# jrush cache admin-clear --config-file<span class="o">=</span><span class="s2">&quot;/var/www/html/joomla/configuration.php&quot;</span>
+****************************************
+GC JRush - The Joomla Command Line Shell
+****************************************
+
+Joomla Cache Clearing Info:
+
+-------------------------
+
+Cache: array<span class="o">(</span>2<span class="o">)</span> <span class="o">{</span>
+ <span class="o">[</span><span class="s2">&quot;admin_cache_clear&quot;</span><span class="o">]=</span>&gt;
+ string<span class="o">(</span>20<span class="o">)</span> <span class="s2">&quot;Admin Cache Clearing&quot;</span>
+ <span class="o">[</span><span class="s2">&quot;admin_cache_clear_result&quot;</span><span class="o">]=</span>&gt;
+ array<span class="o">(</span>0<span class="o">)</span> <span class="o">{</span>
+ <span class="o">}</span>
+<span class="o">}</span>
+
+------------------------------
+Joomla Cache Clearing Finished
+****************************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Es complaciente con esfuerzo con Ubuntu y ciento OS.</li>
+<li>No minúsculas.</li>
+<li>Lo seminuevo para eliminar el usuario.</li>
+<li>Ayuda a clara admin.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Cache</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#comando-ayuda">comando Ayuda</a></li>
+<li><a class="reference internal" href="#parametros-alternativos">parámetros alternativos</a></li>
+<li><a class="reference internal" href="#opciones">Opciones</a></li>
+<li><a class="reference internal" href="#site-clear">Site-clear</a></li>
+<li><a class="reference internal" href="#admin-clear">Admin-clear</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="sjrush_main.html"
+                        title="previous chapter">Jrush</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sextension_jrush.html"
+                        title="next chapter">Extension</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/scache_jrush.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="sextension_jrush.html" title="Extension"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="sjrush_main.html" title="Jrush"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sjrush_main.html" >Jrush</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>

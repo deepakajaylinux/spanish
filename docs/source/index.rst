@@ -22,5 +22,10 @@ Contents:
    :maxdepth: 2
 
 
+ sjrush_main
  sptconfigure_main
  sptdeploy_main
+ spttest_main
+ sptvirtualize_main
+
+

@@ -1,0 +1,254 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Amazon S3 &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="PTConfigure" href="sptconfigure_main.html" />
+    <link rel="next" title="AWSCloudFormation" href="sawscloudformation.html" />
+    <link rel="prev" title="AMAZON ROUTE 53" href="samazonroute53.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="sawscloudformation.html" title="AWSCloudFormation"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="samazonroute53.html" title="AMAZON ROUTE 53"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" accesskey="U">PTConfigure</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="amazon-s3">
+<h1>Amazon S3<a class="headerlink" href="#amazon-s3" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>Sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Amazon Simple Storage Service (Amazon S3), proporciona a los desarrolladores y los equipos de con el almacenamiento de objetos altamente escalable, segura y durable. Amazon S3 es fácil de usar, con una interfaz de servicios web simple para almacenar y recuperar cualquier cantidad de datos desde cualquier sitio en la web. Con Amazon S3, usted sólo paga por el almacenamiento en realidad usas. No hay ningún honorario mínimo y ninguna disposición costo.</p>
+<p>Amazon S3 puede usarse sola o junto con otros servicios AWS como Amazon Elastic Compute Cloud (Amazon EC2), Amazon Elastic Block Store (Amazon EBS) y Amazon glaciar, así como repositorios de almacenamiento de información de terceros y las entradas. Amazon S3 proporciona almacenamiento objeto rentable para una amplia variedad de casos de uso, incluyendo aplicaciones cloud, distribución de contenidos, backup, archiving y recuperación ante desastres y análisis de datos grande.</p>
+</div>
+<div class="section" id="comando-ayuda">
+<h2>comando Ayuda<a class="headerlink" href="#comando-ayuda" title="Permalink to this headline">¶</a></h2>
+<p>Este comando permite para determinar el uso de AWS S3. El usuario llegará a saber acerca del manera/formato diferente para ejecutar este módulo. Este comando guía al usuario final para conocer el propósito de este comando. A continuación dado son el comando y la captura de pantalla del mismo.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure AWSS3 <span class="nb">help</span>
+
+******************************
+
+
+   This is an extension provided <span class="k">for </span>Handling AWSS3.
+
+   AWSS3, awss3 aws-s3
+
+       - ensure-bucket-exists
+       Lets you add bucket to AWSS3 <span class="k">if </span>doesnt exists
+       example: ptconfigure AWSS3 ensure-bucket-exists
+                   --yes
+                   --guess
+       - add-object
+       Lets you upload object to bucket
+       example: ptconfigure AWSS3 add-object
+                   --yes
+                   --guess
+
+
+       - remove-bucket
+         Lets you remove bucket
+         example: ptconfigure AWSS3 remove-bucket
+                   --yes
+                   --guess
+
+       - remove-object-all
+      Lets you remove all object from a bucket
+         example: ptconfigure AWSS3 remove-object-all
+                   --yes
+                   --guess
+
+
+           - remove-object
+      Lets you remove a object from a bucket
+         example: ptconfigure AWSS3 remove-object
+                   --yes
+                   --guess
+
+       - list
+       Will display data about your AWS S3
+       example: ptconfigure AWSS3 list
+                 --yes
+                 --guess
+
+
+       Note: region must be one of the following...
+       us-east-1, ap-northeast-1, sa-east-1, ap-southeast-1, ap-southeast-2, us-west-2, us-gov-west-1, us-west-1, cn-north-1, eu-west-1
+
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="ensure-bucket-exists">
+<h2>Ensure-bucket-exists<a class="headerlink" href="#ensure-bucket-exists" title="Permalink to this headline">¶</a></h2>
+<p>Este comando ayuda a añadir cubo a AWSS3 si no existe. La continuación dado comando se ejecutará el proceso.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure AWSRoute53 create-hosted-zone --yes --guess
+</pre></div>
+</div>
+</div>
+<div class="section" id="add-object">
+<h2>Add-object<a class="headerlink" href="#add-object" title="Permalink to this headline">¶</a></h2>
+<p>Este comando permite para cargar objeto para cubo. La continuación dado comando se ejecutará el proceso.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure AWSS3 add-object --yes –guess
+</pre></div>
+</div>
+</div>
+<div class="section" id="remove-bucket">
+<h2>Remove-bucket<a class="headerlink" href="#remove-bucket" title="Permalink to this headline">¶</a></h2>
+<p>Este comando contribuye a eliminar el cubo. La continuación dado comando se ejecutará el proceso.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure AWSS3 remove-bucket --yes --guess
+</pre></div>
+</div>
+</div>
+<div class="section" id="remove-object-all">
+<h2>Remove-object-all<a class="headerlink" href="#remove-object-all" title="Permalink to this headline">¶</a></h2>
+<p>Este comando ayuda a quitar todos los objetos de un cubo. La continuación dado comando se ejecutará el proceso.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure AWSS3 remove-object-all --yes --guess
+</pre></div>
+</div>
+</div>
+<div class="section" id="remove-object">
+<h2>Remove-object<a class="headerlink" href="#remove-object" title="Permalink to this headline">¶</a></h2>
+<p>Este comando permite para eliminar un objeto de un cubo. La continuación dado comando se ejecutará el proceso.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure AWSS3 remove-object --yes --guess
+</pre></div>
+</div>
+</div>
+<div class="section" id="list">
+<h2>List<a class="headerlink" href="#list" title="Permalink to this headline">¶</a></h2>
+<p>Este comando permite para visualizar datos sobre su S3 AWS. La continuación dado comando se ejecutará el proceso.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure AWSS3 list --yes --guess
+</pre></div>
+</div>
+</div>
+<div class="section" id="parametros-alternativos">
+<h2>parámetros alternativos<a class="headerlink" href="#parametros-alternativos" title="Permalink to this headline">¶</a></h2>
+<p>Hay tres parámetros alternativos que pueden utilizarse en la línea de comandos.</p>
+<p>AWSS3, awss3 aws-s3</p>
+</div>
+<div class="section" id="beneficios">
+<h2>beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<p>Durable: Amazon S3 proporciona infraestructura durable para almacenar datos importantes y está diseñado para la durabilidad del 99.999999999% de objetos. Los datos se almacenan redundante a través de múltiples instalaciones y múltiples dispositivos en cada planta.</p>
+<p>Bajo costo: Amazon S3 permite almacenar grandes cantidades de datos a un costo muy bajo. Usted paga por lo que necesita, sin compromisos mínimos o honorarios prepagos.</p>
+<p>Disponible: Amazon S3 está diseñado para la disponibilidad de 99.99% de los objetos más de un año determinado.  Amazon S3 también está respaldado por el Amazon S3 Service Level Agreement, asegurando que usted puede confiar en él cuando lo necesite. Y usted puede elegir una región AWS a optimizar para latencia, minimizar costos o requerimientos regulatorios.</p>
+<p>Seguro: Amazon S3 soporta transferencia de datos sobre SSL y encriptación automática de los datos una vez que se haya cargado. También puede configurar el cubo políticas para administrar los permisos del objeto y controlar el acceso a sus datos usando AWS identidad y acceso gestión (IAM).</p>
+<p>Escalable: Con Amazon S3, se pueden almacenar tantos datos como quieras y acceder a él cuando lo necesite. Puedes dejar de adivinar sus necesidades futuras de almacenamiento y escala hacia arriba y hacia abajo según sea necesario, aumentando la agilidad del negocio.
+Enviar notificaciones de eventos: Amazon S3 puede enviar notificaciones de eventos cuando se cargan objetos a Amazon S3. Las notificaciones de eventos de Amazon S3 pueden entregadas usando Amazon SQS o Amazon SNS, o enviadas directamente a AWS Lambda, que permite a gatillo flujos de trabajo, alertas u otro proceso. Por ejemplo, necesitas las notificaciones de eventos de Amazon S3 para desencadenar la transcodificación de archivos multimedia cuando se carguen, procesamiento de archivos de datos cuando estén disponibles, o sincronización de Amazon S3 objetos con otros almacenes de datos.</p>
+<p>Alto rendimiento: Amazon S3 soporta varias partes subidos para maximizar la flexibilidad y el rendimiento de la red y le permite elegir la región AWS para almacenar los datos cerca del usuario final y minimizar la latencia de la red. Y Amazon S3 está integrado con Amazon CloudFront, un servicio de entrega de contenido web que distribuye el contenido a los usuarios finales con una latencia baja, altas velocidades de transferencia y sin compromisos de uso mínimo.</p>
+<p>Integrado: Amazon S3 se integra con otros servicios AWS para simplificar la carga y descarga de datos de Amazon S3 y que sea más fácil construir las soluciones que utilizan los servicios de una gama de AWS. Amazon S3 integraciones incluyen Amazon CloudFront, Amazon Kinesis, Amazon RDS, glaciar de Amazon, Amazon EBS, Amazon DynamoDB, Amazon Redshift, Amazon ruta 53, Amazon EMR y AWS Lambda.
+Fácil de usar: Amazon S3 es fácil de usar con una consola de administración basada en web y aplicaciones móviles y resto completo APIs y SDKs para una fácil integración con tecnologías de terceros.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Amazon S3</a><ul>
+<li><a class="reference internal" href="#sinopsis">Sinopsis</a></li>
+<li><a class="reference internal" href="#comando-ayuda">comando Ayuda</a></li>
+<li><a class="reference internal" href="#ensure-bucket-exists">Ensure-bucket-exists</a></li>
+<li><a class="reference internal" href="#add-object">Add-object</a></li>
+<li><a class="reference internal" href="#remove-bucket">Remove-bucket</a></li>
+<li><a class="reference internal" href="#remove-object-all">Remove-object-all</a></li>
+<li><a class="reference internal" href="#remove-object">Remove-object</a></li>
+<li><a class="reference internal" href="#list">List</a></li>
+<li><a class="reference internal" href="#parametros-alternativos">parámetros alternativos</a></li>
+<li><a class="reference internal" href="#beneficios">beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="samazonroute53.html"
+                        title="previous chapter">AMAZON ROUTE 53</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sawscloudformation.html"
+                        title="next chapter">AWSCloudFormation</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/samazons3.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="sawscloudformation.html" title="AWSCloudFormation"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="samazonroute53.html" title="AMAZON ROUTE 53"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" >PTConfigure</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>

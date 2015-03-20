@@ -1,0 +1,328 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Behat &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="PTTest" href="spttest_main.html" />
+    <link rel="next" title="Cucumber" href="scucumber_test.html" />
+    <link rel="prev" title="PTTest" href="spttest_main.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="scucumber_test.html" title="Cucumber"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="spttest_main.html" title="PTTest"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="spttest_main.html" accesskey="U">PTTest</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="behat">
+<h1>Behat<a class="headerlink" href="#behat" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>Sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Este módulo permite al usuario inicializar behat test suite. El behat ayuda en las pruebas de un script php. Pueden destacar las plantillas habilitadas y deshabilitadas. Veamos cómo init y ejecutar el teskingkamen behat.</p>
+</div>
+<div class="section" id="comando-ayuda">
+<h2>comando Ayuda<a class="headerlink" href="#comando-ayuda" title="Permalink to this headline">¶</a></h2>
+<p>El comando ayuda guía al usuario en cuanto al propósito y opciones disponibles bajo un módulo. Enumera los parámetros alternativos que se utilizan en la declaración. Describe la sintaxis para inicializar y ejecutar un behat bajo la pttest. A continuación se muestra el comando utilizado para declarar ayuda:</p>
+<div class="highlight-bash"><div class="highlight"><pre>pttest behat <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La captura de pantalla siguiente muestra gráficamente sobre el funcionamiento del comando help.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# pttest Behat <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>allows you to initialize a Behat <span class="nb">test </span>suite.
+
+ Behat, behat
+
+       - init, initialize
+       Initialises the Behat <span class="nb">test </span>suite of this project
+       example: pttest behat init
+       example: pttest behat initialize
+
+       - execute
+       Executes the Behat <span class="nb">test </span>suite of this project
+       example: pttest behat execute
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="como-inicializar-behat">
+<h2>Cómo inicializar Behat<a class="headerlink" href="#como-inicializar-behat" title="Permalink to this headline">¶</a></h2>
+<p>El comando usado para inicializar el behat bajo pttest se muestra:</p>
+<div class="highlight-bash"><div class="highlight"><pre>pttest behat init
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-bash"><div class="highlight"><pre>pttest behat initialize
+</pre></div>
+</div>
+<p>Después de introducir el comando anterior, ocurre el proceso de inicialización, como se muestra en la tabla siguiente.</p>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="20%" />
+<col width="35%" />
+<col width="11%" />
+<col width="34%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">parámetros</th>
+<th class="head">parámetro alternativo</th>
+<th class="head">opciones</th>
+<th class="head">comentarios</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Initialize Behat?
+(Y/N)</td>
+<td>En lugar de Behat , podemos utilizar
+Behat también</td>
+<td>Y(Yes)</td>
+<td>Si el usuario desea continuar el
+init se puede introducir como Y.</td>
+</tr>
+<tr class="row-odd"><td>Initialize Behat?
+(Y/N)</td>
+<td>En lugar de Behat , podemos utilizar
+Behat también</td>
+<td>N(No)</td>
+<td>Si el usuario desea salir del proceso
+init que puede introducir como N.|</td>
+</tr>
+</tbody>
+</table>
+<p>En lugar de Behat , podemos utilizar Behat también</p>
+<p>Finalmente el pttest behat obtiene inicializada como se muestra en la siguiente pantalla.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# pttest behat init
+Initialize Behat? <span class="o">(</span>Y/N<span class="o">)</span>
+Y
+*******************************
+*   Golden Contact Computing  *
+*          Behat         *
+*******************************
+Creating /tmp/ptconfigure-temp-script-72748278108.sh
+chmod 755 /tmp/ptconfigure-temp-script-72748278108.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-72748278108.sh Permissions
+Executing /tmp/ptconfigure-temp-script-72748278108.sh
+/tmp/ptconfigure-temp-script-72748278108.sh: 3: /tmp/ptconfigure-temp-script-72748278108.sh: behat: not found
+Temp File /tmp/ptconfigure-temp-script-72748278108.sh Removed
+Creating /tmp/ptconfigure-temp-script-35600300430.sh
+chmod 755 /tmp/ptconfigure-temp-script-35600300430.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-35600300430.sh Permissions
+Executing /tmp/ptconfigure-temp-script-35600300430.sh
+Temp File /tmp/ptconfigure-temp-script-35600300430.sh Removed
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for </span>installing , visit www.gcsoftshop.co.uk <span class="k">for </span>more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+
+
+Behat: Success
+
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="como-ejecutar-el-behat">
+<h2>Cómo ejecutar el Behat<a class="headerlink" href="#como-ejecutar-el-behat" title="Permalink to this headline">¶</a></h2>
+<p>Se muestra el comando utilizado para ejecutar el behat bajo pttest:</p>
+<div class="highlight-bash"><div class="highlight"><pre>pttest behat execute
+</pre></div>
+</div>
+<p>Después de introducir el comando anterior, ocurre el proceso de ejecución, como se muestra en la tabla siguiente.</p>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="19%" />
+<col width="33%" />
+<col width="10%" />
+<col width="39%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">parámetros</th>
+<th class="head">parámetro alternativo</th>
+<th class="head">opciones</th>
+<th class="head">comentarios</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Execute Behat?
+(Y/N)</td>
+<td>En lugar de Behat , podemos utilizar
+Behat también</td>
+<td>Y(Yes)</td>
+<td>Si el usuario desea continuar el proceso de
+ejecución se puede introducir como Y.</td>
+</tr>
+<tr class="row-odd"><td>Execute Behat?
+(Y/N)</td>
+<td>En lugar de Behat , podemos utilizar
+Behat también</td>
+<td>N(No)</td>
+<td>Si el usuario desea abandonar el proceso de
+ejecución se puede introducir como N.|</td>
+</tr>
+</tbody>
+</table>
+<p>Si el usuario procede a la ejecución, el proceso de ejecución se producirá como se muestra en la siguiente captura de pantalla.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# pttest behat execute
+Execute Behat? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+*******************************
+*   Golden Contact Computing  *
+*            Behat!           *
+*******************************
+Creating /tmp/ptconfigure-temp-script-93439425208.sh
+chmod 755 /tmp/ptconfigure-temp-script-93439425208.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-93439425208.sh Permissions
+Executing /tmp/ptconfigure-temp-script-93439425208.sh
+/tmp/ptconfigure-temp-script-93439425208.sh: 2: /tmp/ptconfigure-temp-script-93439425208.sh: behat: not found
+Temp File /tmp/ptconfigure-temp-script-93439425208.sh Removed
+Creating /tmp/ptconfigure-temp-script-97268122064.sh
+chmod 755 /tmp/ptconfigure-temp-script-97268122064.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-97268122064.sh Permissions
+Executing /tmp/ptconfigure-temp-script-97268122064.sh
+Temp File /tmp/ptconfigure-temp-script-97268122064.sh Removed
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for </span>installing , visit www.gcsoftshop.co.uk <span class="k">for </span>more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+
+
+Behat: Success
+
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Guía a los usuarios para identificar los errores de script php.</li>
+<li>Utilizar las funciones del behat los usuarios pueden enmarcar y especificar el comportamiento de desarrollo conducido.</li>
+<li>El proceso de inicialización y ejecución puede hacerse bajo este behat de pttestt.</li>
+<li>Es acomodada en ambos OS ciento y así como en ubuntu.</li>
+<li>Los parámetros utilizados en la declaración no son mayúsculas y minúsculas que es una ventaja añadida mientras que comparado con otros.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Behat</a><ul>
+<li><a class="reference internal" href="#sinopsis">Sinopsis</a></li>
+<li><a class="reference internal" href="#comando-ayuda">comando Ayuda</a></li>
+<li><a class="reference internal" href="#como-inicializar-behat">Cómo inicializar Behat</a></li>
+<li><a class="reference internal" href="#como-ejecutar-el-behat">Cómo ejecutar el Behat</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="spttest_main.html"
+                        title="previous chapter">PTTest</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="scucumber_test.html"
+                        title="next chapter">Cucumber</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/sbehat_test.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="scucumber_test.html" title="Cucumber"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="spttest_main.html" title="PTTest"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="spttest_main.html" >PTTest</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>

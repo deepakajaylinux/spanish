@@ -69,7 +69,7 @@
 
 
  This <span class="nb">command </span>is part of a default Module and provides you with a method by which you can
- configure environments <span class="k">for</span> your project from the <span class="nb">command </span>line. Currently compliant with
+ configure environments <span class="k">for </span>your project from the <span class="nb">command </span>line. Currently compliant with
  both ptdeploy and ptconfigure.
 
 
@@ -80,12 +80,12 @@
        example: ptconfigure envconfig list --yes
 
        - configure, config
-       Configure the environments <span class="k">for</span> your project to use
+       Configure the environments <span class="k">for </span>your project to use
        example: ptconfigure envconfig config
        example: ptconfigure envconfig config --keep-current-environments
 
        - delete, del
-       Configure the environments <span class="k">for</span> your project to use
+       Configure the environments <span class="k">for </span>your project to use
        example: ptconfigure envconfig delete
        example: ptconfigure envconfig del --environment-name<span class="o">=</span><span class="s2">&quot;staging&quot;</span>
 
@@ -121,8 +121,8 @@ Paso 1: Configure Environments Here? (Y/N)</p>
 <div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure envconfig config
 Configure Environments Here? <span class="o">(</span>Y/N<span class="o">)</span>
 Y
-Environment <span class="m">1</span>  :
-Default Settings <span class="k">for</span> Any App not setup <span class="k">for</span> environment  enter them now.
+Environment 1  :
+Default Settings <span class="k">for </span>Any App not setup <span class="k">for </span>environment  enter them now.
 Value <span class="k">for</span>: Name of this Environment
 kevells
 Value <span class="k">for</span>: Default Temp Dir <span class="o">(</span>should usually be /tmp/<span class="o">)</span>
@@ -220,7 +220,7 @@ In Environment Configuration
 <p>Después de introducir el comando anterior, se le preguntará</p>
 <p>Paso 1: Delete Environments Here?</p>
 <p>y muestra un mensaje de advertencia como</p>
-<div class="highlight-bash"><div class="highlight"><pre>WARNING: Deleting an environment from papyrus is final. You may be looking <span class="k">for</span> boxify box-destroy instead <span class="o">(</span>Y/N<span class="o">)</span>
+<div class="highlight-bash"><div class="highlight"><pre>WARNING: Deleting an environment from papyrus is final. You may be looking <span class="k">for </span>boxify box-destroy instead <span class="o">(</span>Y/N<span class="o">)</span>
 </pre></div>
 </div>
 <p>El usuario tiene que especificar Sí o No</p>
@@ -229,7 +229,7 @@ In Environment Configuration
 <p>Por último, el entorno especificado se elimina como se muestra en la captura de pantalla.</p>
 <div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure envconfig del --environment-name<span class="o">=</span><span class="s2">&quot;kevells&quot;</span>
 Delete Environments Here?
-WARNING: Deleting an environment from papyrus is final. You may be looking <span class="k">for</span> boxify box-destroy instead <span class="o">(</span>Y/N<span class="o">)</span>
+WARNING: Deleting an environment from papyrus is final. You may be looking <span class="k">for </span>boxify box-destroy instead <span class="o">(</span>Y/N<span class="o">)</span>
 Y
 Environment kevells found. Are you sure you want to delete it? <span class="o">(</span>Y/N<span class="o">)</span>
 Y
@@ -249,14 +249,14 @@ In Environment Configuration
 <p>Después de introducir el comando anterior, se le preguntará</p>
 <p>Paso 1: Delete Environments Here?</p>
 <p>y muestra un mensaje de advertencia como</p>
-<div class="highlight-bash"><div class="highlight"><pre>WARNING: Deleting an environment from papyrus is final. You may be looking <span class="k">for</span> boxify box-destroy instead <span class="o">(</span>Y/N<span class="o">)</span>
+<div class="highlight-bash"><div class="highlight"><pre>WARNING: Deleting an environment from papyrus is final. You may be looking <span class="k">for </span>boxify box-destroy instead <span class="o">(</span>Y/N<span class="o">)</span>
 </pre></div>
 </div>
 <p>El usuario tiene que especificar Sí o No</p>
 <p>Por último, el medio ambiente se elimina como se muestra en la captura de pantalla:</p>
 <div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy envconfig delete
 Delete Environments Here?
-WARNING: Deleting an environment from papyrus is final. You may be looking <span class="k">for</span> boxify box-destroy instead <span class="o">(</span>Y/N<span class="o">)</span>
+WARNING: Deleting an environment from papyrus is final. You may be looking <span class="k">for </span>boxify box-destroy instead <span class="o">(</span>Y/N<span class="o">)</span>
 Y
 PHP Notice:  Undefined index: environment-name in /opt/ptdeploy/ptdeploy/src/Modules/EnvironmentConfig/Model/EnvironmentConfigAllLinux .php on line 161
 PHP Notice:  Undefined index: environment-name in /opt/ptdeploy/ptdeploy/src/Modules/EnvironmentConfig/Model/EnvironmentConfigAllLinux .php on line 161
@@ -423,7 +423,7 @@ lista para mostrar los entornos disponibles.</li>
     </div>
     <div class="footer">
         &copy; Copyright 2015, 1.0.1.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
     </div>
   </body>
 </html>

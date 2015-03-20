@@ -1,0 +1,452 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>NginxSBEditor &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="PTDeploy" href="sptdeploy_main.html" />
+    <link rel="next" title="Project" href="sproject_deploy.html" />
+    <link rel="prev" title="Nginx Control" href="snginxcontrol_deploy.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="sproject_deploy.html" title="Project"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="snginxcontrol_deploy.html" title="Nginx Control"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptdeploy_main.html" accesskey="U">PTDeploy</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="nginxsbeditor">
+<h1>NginxSBEditor<a class="headerlink" href="#nginxsbeditor" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>Sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Este módulo es una parte bien de módulos predeterminados y encarga de las funciones de Nginx ServerBlocks. Vamos a ver sobre las metodologías para el uso de esto y también sobre las funciones bajo este editor nginx en próximos temas.</p>
+</div>
+<div class="section" id="comando-ayuda">
+<h2>comando Ayuda<a class="headerlink" href="#comando-ayuda" title="Permalink to this headline">¶</a></h2>
+<p>El comando help envuelve toda la información necesaria con respecto a NginxSBEditor como sus principales usos, la lista de parámetros alternativos que pueden utilizarse en la declaración, qué función primaria de NginxSBEditor (Ex: agregar, quitar, lista, activar, desactivar) y también la sintaxis utilizada para declarar esas funciones interesantes. El siguiente comando se utiliza para declarar la opción ayuda en NginxSBEditor,</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy NginxSBEditor <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La captura de pantalla siguiente muestra gráficamente sobre el funcionamiento del comando help.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy NginxSBEditor <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>is part of Default Modules and handles Nginx ServerBlocks Functions.
+
+ NginxSBEditor, nginx-sb-editor, nginxsbe
+
+         - add
+         create a Server Block
+         example: ptdeploy nginxsbe add
+         sb-docroot
+         sb-url
+         sb-ip-port
+
+         - rm
+         remove a Server Block
+         example: ptdeploy nginxsbe rm
+
+         - list
+         List current Server Blocks
+         example: ptdeploy nginxsbe list
+
+         - <span class="nb">enable</span>
+<span class="nb">         enable </span>a Server Block
+         example: ptdeploy nginxsbe <span class="nb">enable</span>
+
+         - disable
+         disable a Server Block
+         example: ptdeploy nginxsbe disable
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="como-utilizar">
+<h2>Cómo utilizar<a class="headerlink" href="#como-utilizar" title="Permalink to this headline">¶</a></h2>
+<p>Como representado y explicado en el anterior comando help, el NginxSBEditor, tiene las siguientes funciones,</p>
+<ul class="simple">
+<li>Add</li>
+<li>Remove</li>
+<li>List</li>
+<li>Enable</li>
+<li>Disable</li>
+</ul>
+<p>Vamos a ver cómo utilizar estas funciones interesantes bajo NginxSBEditor.</p>
+</div>
+<div class="section" id="add">
+<h2>Add<a class="headerlink" href="#add" title="Permalink to this headline">¶</a></h2>
+<p>El papel de esta función es crear o agregar un nuevo bloque de servidor. El comando y el trabajo de agregar funciones es representado por debajo,</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy NginxSBEditor add
+</pre></div>
+</div>
+<p>Después de introducir el mandato dado por encima, se muestra a continuación, el funcionamiento de esta función agregar</p>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="18%" />
+<col width="34%" />
+<col width="8%" />
+<col width="40%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">parámetros</th>
+<th class="head">parámetro alternativo</th>
+<th class="head">opciones</th>
+<th class="head">comentarios</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Do you want to add a
+ServerBlock? (Y/N)</td>
+<td>En lugar de NginxSBEditor , podemos utilizar
+nginx-sb-editor, nginxsbe también</td>
+<td>Y(Yes)</td>
+<td>Si el usuario tiene que agregar un nuevo servidor
+bloque se puede introducir como Y.</td>
+</tr>
+<tr class="row-odd"><td>Do you want to add a
+ServerBlock? (Y/N)</td>
+<td>En lugar de NginxSBEditor , podemos utilizar
+nginx-sb-editor, nginxsbe también</td>
+<td>N(No)</td>
+<td>Si el usuario no está en necesidad de añadir una
+nuevo bloque de servidor que puede introducir como N|</td>
+</tr>
+</tbody>
+</table>
+<p>Si el usuario continúa agregando los bloques del servidor durante el proceso de agregar los siguientes pasos están involucrados.</p>
+<p>Step 1:</p>
+<p>What is document root?</p>
+<p>El usuario se especifica la raíz, si no desean continuar con el valor por defecto.</p>
+<p>Step 2:</p>
+<p>What URL do you want to add as server name?</p>
+<p>El usuario debe especificar la dirección url que se supone para añadir.</p>
+<p>Step 3:</p>
+<p>What IP? Port should be set?</p>
+<p>El usuario se especificar la IP, si no desean continuar con el valor por defecto.</p>
+<p>Step 4:</p>
+<p>What is your ServerBlock Template directory?</p>
+<p>El usuario se especifique el directorio, si no desean continuar con el valor por defecto.</p>
+<p>Step 5:</p>
+<p>Please check the ServerBlock
+El usuario ha Compruebe la pantalla de salida del bloque de servidor que se añade y asegurar.</p>
+<p>Step 6:</p>
+<p>Is this Okay? (Y/N)</p>
+<p>Si el usuario está feliz con el resultado generado, puede introducir como Y demás N.</p>
+<p>Step 7:</p>
+<p>What is your ServerBlock directory?</p>
+<p>El usuario se especifique el directorio.</p>
+<p>Step 8:</p>
+<p>Do you want to enable a server block? (Y/N)</p>
+<p>El usuario tiene que entrar como Y o N dependiendo de sus necesidades.</p>
+<p>Step 9:</p>
+<p>What is your Enabled Symlink ServerBlock directory.</p>
+<p>Si un bloque de servidor está activado, el usuario debe especificar su directorio.</p>
+<p>La captura de pantalla siguiente muestra visualmente el proceso explicado anteriormente.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy nginxsbe add
+Do you want to add a ServerBlock? (Y/N)
+Y
+What&#39;s the document root? Enter nothing for /
+/root/Nginx
+What URL do you want to add as server name?
+www.ngx.com
+What IP:Port should be set? Enter nothing for 127.0.0.1:80
+
+What is your ServerBlock Template directory? Enter nothing for default templates
+/root/Nginxdir
+Please Choose ServerBlock Template:
+--- Default Server Block Templates: ---
+(0) docroot-no-suffix
+(1) docroot-src-sfx
+(2) docroot-web-suffix
+(3) docroot-www-suffix
+(4) docroot-docroot-suffix
+
+3
+Please check ServerBlock: server {
+       listen   127.0.0.1:80 ; ## listen for ipv4; this line is default and implied
+       #listen   [::]:80 default ipv6only=on; ## listen for ipv6
+
+       root /root/Nginx/www ;
+       index index.html index.htm index.php;
+
+       # Make site accessible from http://localhost/
+       server_name www.ngx.com ;
+
+       # pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
+       #
+       location ~ \.php$ {
+               try_files $uri =404;
+               fastcgi_split_path_info ^(.+\.php)(/.+)$;
+               fastcgi_pass 127.0.0.1:9000;
+               fastcgi_index index.php;
+               include fastcgi_params;
+       }
+
+}
+
+Is this Okay? (Y/N)
+Y
+What is your ServerBlock directory?
+/root/Nginxdir
+Do you want to enable a ServerBlock? (Y/N)
+Y
+What is your Enabled Symlink ServerBlock directory?
+/home/Nginxsymlink
+Server Block Enabled Symlink Created
+******************************
+
+
+1ServerBlock Creator Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="remove">
+<h2>Remove<a class="headerlink" href="#remove" title="Permalink to this headline">¶</a></h2>
+<p>Al eliminar la función se utiliza para quitar los bloques de servidor no deseados. Esto puede hacerse utilizando el comando siguiente,</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy NginxSBEditor rm
+</pre></div>
+</div>
+<p>Después de introducir el comando anterior, el siguiente proceso de eliminación, como se muestra en la table</p>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="18%" />
+<col width="35%" />
+<col width="8%" />
+<col width="39%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">parámetros</th>
+<th class="head">parámetro alternativo</th>
+<th class="head">opciones</th>
+<th class="head">comentarios</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Do you want to delete
+a ServerBlock/s? (Y/N)</td>
+<td>En lugar de NginxSBEditor , podemos utilizar
+nginx-sb-editor, nginxsbe también</td>
+<td>Y(Yes)</td>
+<td>Si el usuario tiene que eliminar el servidor
+bloque se puede introducir como Y.</td>
+</tr>
+<tr class="row-odd"><td>Do you want to delete
+a ServerBlock/s? (Y/N)</td>
+<td>En lugar de NginxSBEditor , podemos utilizar
+nginx-sb-editor, nginxsbe también</td>
+<td>N(No)</td>
+<td>Si el usuario no está en la necesidad de eliminar
+el bloque de servidor que puede introducir como N|</td>
+</tr>
+</tbody>
+</table>
+<p>Si el usuario procede eliminar los bloques de servidor durante este proceso están implicados los siguientes pasos.</p>
+<p>Step 1:</p>
+<p>Deleting ServerBlock</p>
+<p>What is your ServerBlock directory?</p>
+<p>El usuario tiene que especificar el directorio.</p>
+<p>Step 2:</p>
+<p>Please Choose ServerBlock</p>
+<p>&#8211;All Server Blocks: &#8212;</p>
+<ol class="arabic simple" start="0">
+<li>www.ngn.com</li>
+<li>www.ngx.com</li>
+<li>www.nx.com</li>
+</ol>
+<p>El usuario debe especificar los valores de 0 a 2 dependiendo de sus necesidades.</p>
+<p>Step 3:</p>
+<p>!! Sure? Definitely delete ServerBlock? (Y/N) !!</p>
+<p>El usuario debe especificar Y o N dependiendo de sus necesidades.</p>
+<p>Step 4:</p>
+<p>Do you want to disable a ServerBlock? (Y/N)</p>
+<p>El usuario debe especificar Y o N dependiendo de sus necesidades.</p>
+<p>Step 5:</p>
+<p>What is your Enabled Symlink ServerBlock directory?</p>
+<p>El usuario tiene que especificar el directorio.</p>
+<p>La siguiente captura representa visualmente sobre el proceso de eliminación.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy nginxsbe rm
+Do you want to delete ServerBlock/s? <span class="o">(</span>Y/N<span class="o">)</span>
+Y
+Deleting ServerBlock
+What is your ServerBlock directory?
+/root/Nginxdir
+Please Choose ServerBlock:
+---All Server Blocks: ---
+<span class="o">(</span>0<span class="o">)</span> www.ngn.com
+<span class="o">(</span>1<span class="o">)</span> www.ngx.com
+<span class="o">(</span>2<span class="o">)</span> www.nx.com
+
+2
+!! Sure? Definitely delete ServerBlock? <span class="o">(</span>Y/N<span class="o">)</span> !!
+Y
+Do you want to disable a ServerBlock? <span class="o">(</span>Y/N<span class="o">)</span>
+Y
+What is your Enabled Symlink ServerBlock directory?
+/root/home/Nginxsymlink
+Server Block www.nx.com Disabled <span class="k">if </span>existed
+Server Block www.nx.com Deleted <span class="k">if </span>existed
+*******************************
+
+
+1ServerBlock Creator Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="list">
+<h2>List<a class="headerlink" href="#list" title="Permalink to this headline">¶</a></h2>
+<p>La función de la opción de la lista es enumerar los bloques instalado el servidor actual. Se da el comando utilizado para la lista de abajo,</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy NginxSBEditor list
+</pre></div>
+</div>
+<p>Después de introducir el comando anterior, el siguiente proceso de opción de la lista.</p>
+<p>Step 1:</p>
+<p>What is your ServerBlock directory?</p>
+<p>El usuario tiene que especificar el directorio.</p>
+<p>Step 2:</p>
+<p>What is your Enabled Symlink ServerBlock directory?</p>
+<p>El usuario tiene que especificar el directorio.</p>
+<p>Después de estos pasos, se muestran él enumera de ServerBlocks instalado actualmente.</p>
+<p>La captura de pantalla siguiente muestra el funcionamiento de la opción de la lista visualmente.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy nginxsbe list
+What is your ServerBlock directory?
+/root/Nginxdir
+What is your Enabled Symlink ServerBlock directory?
+
+Current Installed ServerBlocks:
+--- Enabled Server Blocks: ---
+<span class="o">(</span>0<span class="o">)</span> www.ngn.com
+<span class="o">(</span>1<span class="o">)</span> www.ngx.com
+--- All Available Server Blocks: ---
+<span class="o">(</span>2<span class="o">)</span> www.ngn.com
+<span class="o">(</span>3<span class="o">)</span> www.ngx.com
+******************************
+
+
+1ServerBlock Creator Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Es acomodada en ambos ubuntu y así como ciento OS.</li>
+<li>Los parámetros utilizados en la declaración no es sensible a mayúsculas.</li>
+<li>Los usuarios pueden visualizar la lista de bloques de servidor disponibles y actualmente instaladas, incluso antes de añadir o eliminar
+un bloque de servidor.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">NginxSBEditor</a><ul>
+<li><a class="reference internal" href="#sinopsis">Sinopsis</a></li>
+<li><a class="reference internal" href="#comando-ayuda">comando Ayuda</a></li>
+<li><a class="reference internal" href="#como-utilizar">Cómo utilizar</a></li>
+<li><a class="reference internal" href="#add">Add</a></li>
+<li><a class="reference internal" href="#remove">Remove</a></li>
+<li><a class="reference internal" href="#list">List</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="snginxcontrol_deploy.html"
+                        title="previous chapter">Nginx Control</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sproject_deploy.html"
+                        title="next chapter">Project</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/snginxsbeditor_deploy.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="sproject_deploy.html" title="Project"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="snginxcontrol_deploy.html" title="Nginx Control"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptdeploy_main.html" >PTDeploy</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>

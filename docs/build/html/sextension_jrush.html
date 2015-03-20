@@ -1,0 +1,279 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Extension &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="Jrush" href="sjrush_main.html" />
+    <link rel="next" title="JArticle" href="sjarticle_jrush.html" />
+    <link rel="prev" title="Cache" href="scache_jrush.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="sjarticle_jrush.html" title="JArticle"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="scache_jrush.html" title="Cache"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sjrush_main.html" accesskey="U">Jrush</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="extension">
+<h1>Extension<a class="headerlink" href="#extension" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Extensión debe ser identificado por el sistema operativo puede hacerles frente. Estos nombres tienen normas específicas. La primera parte del nombre a la izquierda de la época se llama el nombre raíz. El nombre de la raíz puede ser el mismo como un nombre de dispositivo. La segunda parte a la derecha de la época es la extensión. Es opcional y es a menudo, pero no necesariamente tres caracteres de largo. Extensión puede agregarse a través de codificación. Consolidó para estafar con Ubuntu y ciento OS.</p>
+</div>
+<div class="section" id="comando-ayuda">
+<h2>comando Ayuda<a class="headerlink" href="#comando-ayuda" title="Permalink to this headline">¶</a></h2>
+<p>El comando ayuda guía a los usuarios sobre la finalidad y así como sobre las opciones que están incluidas en la extensión. Enumera los parámetros alternativos de extensión. También describe la sintaxis para el funcionamiento del módulo de Jrush. El comando de ayuda para la extensión se muestra a continuación.</p>
+<div class="highlight-bash"><div class="highlight"><pre>jrush extension <span class="nb">help</span>
+</pre></div>
+</div>
+<p>Después de escribir el comando enumera las opciones de acción. La siguiente imagen visualizarlo obviamente.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# jrush Extension <span class="nb">help</span>
+****************************************
+GC JRush - The Joomla Command Line Shell
+****************************************
+
+ This <span class="nb">command </span>allows you to manage Joomla Extensions <span class="o">(</span>Component, Module or Plugin<span class="o">)</span>.
+
+ Extension, extension
+
+       - disable
+       Deletes a extension
+       example: jrush extension disable
+
+       - <span class="nb">enable</span>
+<span class="nb">       </span>Enables a extension
+       example: jrush extension <span class="nb">enable</span>
+
+       - info
+       Display the details of a extension
+       example: jrush extension info
+
+
+------------------------------
+End Help
+****************************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="parametros-alternativos">
+<h2>parámetros alternativos<a class="headerlink" href="#parametros-alternativos" title="Permalink to this headline">¶</a></h2>
+<p>Como una cuestión de elección con extensión el usuario puede hacer uso de las siguientes opciones.</p>
+<p>Extension, extension</p>
+</div>
+<div class="section" id="opciones">
+<h2>Opciones<a class="headerlink" href="#opciones" title="Permalink to this headline">¶</a></h2>
+<p>Hay tres opciones están disponibles. Vamos a ver sobre la opción de extensión.</p>
+<ul class="simple">
+<li>Enable</li>
+<li>Disable</li>
+<li>Info</li>
+</ul>
+</div>
+<div class="section" id="disable">
+<h2>Disable<a class="headerlink" href="#disable" title="Permalink to this headline">¶</a></h2>
+<p>Cuando el usuario de entrada como habilitarlo automáticamente elimina la extensión. El siguiente comando utilizado para habilitar.</p>
+<div class="highlight-bash"><div class="highlight"><pre>jrush extension Disable
+</pre></div>
+</div>
+<p>El siguiente tiro de manto puede visualizar su función.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# jrush Extension disable --config-file<span class="o">=</span><span class="s2">&quot;/var/www/html/joomla/configuration.php&quot;</span>
+Enter a Extension ID. To enter element/extension name use --extension-element or --extension-name parameters
+1
+****************************************
+GC JRush - The Joomla Command Line Shell
+****************************************
+
+Extension:
+-------------------------
+
+The following extension was modified:
+
+Extension ID: 1
+Name: com_mailto
+Element: com_mailto
+Enabled: 0
+------------------------------
+Extension Manage Finished
+****************************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="enable">
+<h2>Enable<a class="headerlink" href="#enable" title="Permalink to this headline">¶</a></h2>
+<p>Permitir usos habilitar la extensión. El siguiente comando ayudan al usuario a habilitar.</p>
+<div class="highlight-bash"><div class="highlight"><pre>jrush extension <span class="nb">enable</span>
+</pre></div>
+</div>
+<p>Las siguientes capturas de pantalla guía al usuario para activar su función.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# jrush Extension <span class="nb">enable</span> --config-file<span class="o">=</span><span class="s2">&quot;/var/www/html/joomla/configuration.php&quot;</span>
+Enter a Extension ID. To enter element/extension name use --extension-element or --extension-name parameters
+1
+****************************************
+GC JRush - The Joomla Command Line Shell
+****************************************
+
+Extension:
+-------------------------
+
+The following extension was modified:
+
+Extension ID: 1
+Name: com_mailto
+Element: com_mailto
+Enabled: 1
+------------------------------
+Extension Manage Finished
+****************************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="info">
+<h2>Info<a class="headerlink" href="#info" title="Permalink to this headline">¶</a></h2>
+<p>Info es una ayuda para el usuario para mostrar los detalles de la expansión. Pide id de extensión. Después entra en el valor muestra los detalles de la extensión. El siguiente comando que se utiliza para Mostrar información.</p>
+<div class="highlight-bash"><div class="highlight"><pre>jrush extension info
+</pre></div>
+</div>
+<p>Puede ser visualiza por la captura de pantalla.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# jrush Extension info --config-file<span class="o">=</span><span class="s2">&quot;/var/www/html/joomla/configuration.php&quot;</span>
+Enter a Extension ID. To enter element/extension name use --extension-element or --extension-name parameters
+1
+****************************************
+GC JRush - The Joomla Command Line Shell
+****************************************
+
+Extension:
+-------------------------
+
+The following extension was modified:
+
+Extension ID: 1
+Name: com_mailto
+Element: com_mailto
+Enabled: 0
+------------------------------
+Extension Manage Finished
+****************************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="beneficios">
+<h2>beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Extensiones pueden ser consideradas un tipo de metadatos.</li>
+<li>Múltiples aplicaciones para ser asociado a una extensión determinada.</li>
+<li>No caso sensible</li>
+<li>cómodo con Ubuntu y ciento OS.</li>
+<li>Se utiliza para eliminar la extensión</li>
+<li>información se utiliza para Mostrar información acerca de extensión.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Extension</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#comando-ayuda">comando Ayuda</a></li>
+<li><a class="reference internal" href="#parametros-alternativos">parámetros alternativos</a></li>
+<li><a class="reference internal" href="#opciones">Opciones</a></li>
+<li><a class="reference internal" href="#disable">Disable</a></li>
+<li><a class="reference internal" href="#enable">Enable</a></li>
+<li><a class="reference internal" href="#info">Info</a></li>
+<li><a class="reference internal" href="#beneficios">beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="scache_jrush.html"
+                        title="previous chapter">Cache</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sjarticle_jrush.html"
+                        title="next chapter">JArticle</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/sextension_jrush.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="sjarticle_jrush.html" title="JArticle"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="scache_jrush.html" title="Cache"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sjrush_main.html" >Jrush</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>

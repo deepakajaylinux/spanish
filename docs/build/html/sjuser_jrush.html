@@ -1,0 +1,266 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>JUser &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="Jrush" href="sjrush_main.html" />
+    <link rel="next" title="PTConfigure" href="sptconfigure_main.html" />
+    <link rel="prev" title="JFeature" href="sjfeature_jrush.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="sptconfigure_main.html" title="PTConfigure"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="sjfeature_jrush.html" title="JFeature"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sjrush_main.html" accesskey="U">Jrush</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="juser">
+<h1>JUser<a class="headerlink" href="#juser" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Un usuario es una persona que utiliza un servicio de ordenador o red. Los usuarios generalmente usan un sistema o un producto de software sin los conocimientos técnicos necesarios para lo entender completamente.</p>
+<p>A menudo un usuario tiene una cuenta de usuario y se identifica al sistema mediante un nombre de usuario (o nombre de usuario). Otros términos para username incluyen nombre de usuario, nombre de pantalla.</p>
+<p>Cuenta de un usuario permite a los usuarios autenticarse en un sistema y que se conceda autorización para acceder a los recursos proporcionados por o conectado a ese sistema; Sin embargo, la autenticación no implica la autorización. Para iniciar sesión en una cuenta, un usuario es típicamente necesaria para autenticar a sí mismo con una contraseña u otras credenciales para los propósitos de la gestión de recursos, seguridad, registro y contabilidad.</p>
+</div>
+<div class="section" id="comando-ayuda">
+<h2>comando Ayuda<a class="headerlink" href="#comando-ayuda" title="Permalink to this headline">¶</a></h2>
+<p>Este comando permite para determinar el uso del módulo Juser. El usuario llegará a conocer el diferente formas/formato para ejecutar este módulo. Este comando guía al usuario final para conocer el propósito de este comando. A continuación dado son el comando y la captura de pantalla del mismo.</p>
+<div class="highlight-bash"><div class="highlight"><pre>jrush juser <span class="nb">help</span>
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# jrush juser <span class="nb">help</span>
+****************************************
+GC JRush - The Joomla Command Line Shell
+****************************************
+
+ This <span class="nb">command </span>allows you to update JUser.
+
+ JUser, juser
+
+       - delete
+       Deletes a user
+       example: jrush juser delete
+
+       - info
+       Display the details of a user
+       example: jrush juser info
+
+       - change the password of a user
+       Change a users password
+       example: jrush juser password
+
+------------------------------
+End Help
+****************************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="delete">
+<h2>Delete<a class="headerlink" href="#delete" title="Permalink to this headline">¶</a></h2>
+<p>Cuando el usuario necesita borrar un usuario en la máquina, la continuación dado comando se ejecutará el proceso de instalación.</p>
+<div class="highlight-bash"><div class="highlight"><pre>jrush juser delete ..config <span class="nv">file</span><span class="o">=</span>”bootstrap file path”
+</pre></div>
+</div>
+<p>La representación pictórica del comando anterior se enumera a continuación,</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# jrush juser delete --config-file<span class="o">=</span><span class="s2">&quot;/var/www/html/joomla/configuration.php&quot;</span>
+Enter a JUser ID. To enter email/username use --user-email or --username parameters
+2
+****************************************
+GC JRush - The Joomla Command Line Shell
+****************************************
+
+JUser Delete:
+-------------------------
+
+The following user has been deleted:
+
+User ID: 0
+Name:
+User Name:
+Email:
+------------------------------
+JUser Delete Finished
+****************************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="info">
+<h2>Info<a class="headerlink" href="#info" title="Permalink to this headline">¶</a></h2>
+<p>Cuando el usuario necesita mostrar los detalles de un usuario en la máquina, la continuación dado comando se ejecutará el proceso de instalación.</p>
+<div class="highlight-bash"><div class="highlight"><pre>jrush juser info ..config <span class="nv">file</span><span class="o">=</span>”bootstrap file path”
+</pre></div>
+</div>
+<p>La representación pictórica del comando anterior se enumera a continuación,</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# jrush juser info --config-file<span class="o">=</span><span class="s2">&quot;/var/www/html/joomla/configuration.php&quot;</span>
+Enter a JUser ID. To enter email/username use --user-email or --username parameters
+1
+****************************************
+GC JRush - The Joomla Command Line Shell
+****************************************
+
+JUser Info:
+-------------------------
+
+User ID:
+Name:
+User Name:
+Email:
+
+------------------------------
+JUser Info Finished
+****************************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="password">
+<h2>Password<a class="headerlink" href="#password" title="Permalink to this headline">¶</a></h2>
+<p>Cuando el usuario necesita cambiar la contraseña de un usuario en la máquina, la continuación dado comando se ejecutará el proceso de instalación.</p>
+<div class="highlight-bash"><div class="highlight"><pre>jrush juser password ..config <span class="nv">file</span><span class="o">=</span>”bootstrap file path”
+</pre></div>
+</div>
+</div>
+<div class="section" id="parametros-alternativos">
+<h2>parámetros alternativos<a class="headerlink" href="#parametros-alternativos" title="Permalink to this headline">¶</a></h2>
+<p>Ninguno de los dos parámetros alternativos pueden utilizarse en comando-juser and JUser</p>
+<p>eg: jrush juser info ..config file=”bootstrap file path” / jrush JUser info ..config file=”bootstrap file path”</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# jrush juser password --config-file<span class="o">=</span><span class="s2">&quot;/var/www/html/joomla/configuration.php&quot;</span>
+Enter a JUser ID. To enter email/username use --user-email or --username parameters
+5
+Enter a new Password. To enter as parameter use --password
+12345
+****************************************
+GC JRush - The Joomla Command Line Shell
+****************************************
+
+JUser Password:
+-------------------------
+
+User ID: 0
+Name:
+User Name:
+Email:
+User Password: NOT SET
+
+------------------------------
+JUser Password Finished
+****************************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="beneficios">
+<h2>beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Fácil para obtener la información sobre un usuario utilizando un único comando</li>
+<li>fácil de cambiar la contraseña de un usuario de back-end usando solo comando</li>
+<li>fácil de manejar a cuentas de usuario</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">JUser</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#comando-ayuda">comando Ayuda</a></li>
+<li><a class="reference internal" href="#delete">Delete</a></li>
+<li><a class="reference internal" href="#info">Info</a></li>
+<li><a class="reference internal" href="#password">Password</a></li>
+<li><a class="reference internal" href="#parametros-alternativos">parámetros alternativos</a></li>
+<li><a class="reference internal" href="#beneficios">beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="sjfeature_jrush.html"
+                        title="previous chapter">JFeature</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sptconfigure_main.html"
+                        title="next chapter">PTConfigure</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/sjuser_jrush.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="sptconfigure_main.html" title="PTConfigure"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="sjfeature_jrush.html" title="JFeature"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sjrush_main.html" >Jrush</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>

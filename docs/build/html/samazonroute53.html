@@ -1,0 +1,233 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>AMAZON ROUTE 53 &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="PTConfigure" href="sptconfigure_main.html" />
+    <link rel="next" title="Amazon S3" href="samazons3.html" />
+    <link rel="prev" title="Amazon ElastiCache" href="samazonelasticache.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="samazons3.html" title="Amazon S3"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="samazonelasticache.html" title="Amazon ElastiCache"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" accesskey="U">PTConfigure</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="amazon-route-53">
+<h1>AMAZON ROUTE 53<a class="headerlink" href="#amazon-route-53" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Amazon ruta 53 es una nube altamente disponible y escalable servicio web Domain Name System (DNS). Está diseñado para dar los desarrolladores y empresas una forma extremadamente fiable y rentable para los usuarios finales de la ruta a las aplicaciones de Internet traduciendo nombres como www.example.com a las direcciones IP numéricas como 192.0.2.1 que utilizan computadoras para conectar entre sí.</p>
+<p>Amazon ruta 53 efectivamente conecta las peticiones del usuario funcionando en AWS – como instancias de Amazon EC2, balanceo de carga elástica equilibradores de carga o cubos de Amazon S3 – infraestructura y puede utilizarse también para los usuarios de ruta a la infraestructura fuera de AWS. Puede utilizar Amazon ruta 53 configurar DNS los controles sanitarios para tráfico de ruta hacia los extremos sanos o controlar independientemente la salud de su aplicación y sus extremos. Amazon ruta 53 hace posible para que usted pueda administrar el tráfico en todo el mundo a través de una variedad de tipos de enrutamiento, incluyendo enrutamiento basado en latencia, Geo DNS y Weighted Round Robin — todos los cuales pueden combinarse con Failover de DNS para permitir una variedad de arquitecturas de baja latencia y tolerante. Amazon ruta 53 también ofrece registro de nombres de dominio – usted puede comprar y administrar nombres de dominio como ejemplo.com y Amazonas ruta 53 se configurará automáticamente la configuración de DNS de sus dominios.</p>
+</div>
+<div class="section" id="comando-ayuda">
+<h2>comando Ayuda<a class="headerlink" href="#comando-ayuda" title="Permalink to this headline">¶</a></h2>
+<p>Este comando permite para determinar el uso del Amazonas ruta 53. El usuario llegará a saber acerca del manera/formato diferente para ejecutar este módulo. Este comando guía al usuario final para conocer el propósito de este comando. A continuación dado son el comando y la captura de pantalla del mismo.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure AWSRoute53 <span class="nb">help</span>
+
+******************************
+
+
+   This is an extension provided <span class="k">for </span>Handling AWS ROUTE53.
+
+   AWSRoute53, awsroute53, aws-route53
+
+       - create-hosted-zone
+       Lets you add Hosted zone to AWS Route53
+       example: ptconfigure AWSRoute53 create-hosted-zone
+                   --yes
+                   --guess
+       - create-health-check
+       Lets you add Health Check to AWS Route53
+       example: ptconfigure AWSRoute53 create-health-check
+                   --yes
+                   --guess
+         - delete-hosted-zone
+       Lets you delete Hosted zone to AWS Route53
+       example: ptconfigure AWSRoute53 delete-hosted-zone
+                   --yes
+                   --guess
+        - delete-health-check
+       Lets you delete Health Check to AWS Route53
+       example: ptconfigure AWSRoute53 delete-health-check
+                   --yes
+                   --guess
+
+       - list
+       Will display data about your AWS Route53
+       example: ptconfigure AWSRoute53 list
+                   --yes
+                   --guess
+
+       Note: region must be one of the following...
+       us-east-1, ap-northeast-1, sa-east-1, ap-southeast-1, ap-southeast-2, us-west-2, us-gov-west-1, us-west-1, cn-north-1, eu-west-1
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="create-hosted-zone">
+<h2>Create-hosted-zone<a class="headerlink" href="#create-hosted-zone" title="Permalink to this headline">¶</a></h2>
+<p>Este comando permite para añadir zona alojado a AWS Route53. La continuación dado comando se ejecutará el proceso.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure AWSRoute53 create-hosted-zone --yes --guess
+</pre></div>
+</div>
+</div>
+<div class="section" id="create-health-check">
+<h2>Create-health-check<a class="headerlink" href="#create-health-check" title="Permalink to this headline">¶</a></h2>
+<p>Este comando permite para añadir chequeo a AWS Route53. La continuación dado comando se ejecutará el proceso.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure AWSRoute53 create-health-check --yes --guess
+</pre></div>
+</div>
+</div>
+<div class="section" id="delete-hosted-zone">
+<h2>Delete-hosted-zone<a class="headerlink" href="#delete-hosted-zone" title="Permalink to this headline">¶</a></h2>
+<p>Este comando permite para borrar zona alojado a AWS Route53. La continuación dado comando se ejecutará el proceso.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure AWSRoute53 delete-hosted-zone --yes --guess
+</pre></div>
+</div>
+</div>
+<div class="section" id="delete-health-check">
+<h2>Delete-health-check<a class="headerlink" href="#delete-health-check" title="Permalink to this headline">¶</a></h2>
+<p>Este comando permite para borrar chequeo a AWS Route53. La continuación dado comando se ejecutará el proceso.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure AWSRoute53 delete-health-check --yes --guess
+</pre></div>
+</div>
+</div>
+<div class="section" id="list">
+<h2>List<a class="headerlink" href="#list" title="Permalink to this headline">¶</a></h2>
+<p>Este comando permite para Mostrar datos acerca de su Route53 de AWS. La continuación dado comando se ejecutará el proceso.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure AWSRoute53 list --yes --guess
+</pre></div>
+</div>
+</div>
+<div class="section" id="parametros-alternativos">
+<h2>parámetros alternativos<a class="headerlink" href="#parametros-alternativos" title="Permalink to this headline">¶</a></h2>
+<p>Hay tres parámetros alternativos que pueden utilizarse en la línea de comandos.</p>
+<p>AWSRoute53, awsroute53, aws-route53</p>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<p>Altamente disponibles y confiable: Amazon ruta 53 se construye utilizando la infraestructura altamente confiable y disponible de AWS. La naturaleza distribuida de nuestros servidores DNS ayuda a garantizar una capacidad constante para los usuarios finales a su aplicación. Ruta 53 está diseñado para proporcionar el nivel de fiabilidad requerido por las aplicaciones importantes. Amazon ruta 53 está respaldado por el Amazonas ruta 53 Service Level Agreement.</p>
+<p>Escalable: Ruta 53 está diseñado para escalar automáticamente para manejar volúmenes muy grandes consulta sin intervención alguna de ti.</p>
+<p>Diseñado para su uso con otros servicios Web de Amazon: Amazon ruta 53 está diseñado para trabajar bien con otras características AWS y ofrendas. Puede utilizar Amazon ruta 53 para asignar nombres de dominio a sus instancias de EC2 de Amazon, Amazon S3 cubos, Amazon CloudFront distribuciones y otros recursos AWS. Al utilizar el servicio de identidad de AWS y acceso gestión (IAM) con Amazon ruta 53, tienes control de grano fino sobre quién puede actualizar sus datos de DNS. Puede utilizar Amazon ruta 53 para asignar su ápice de zona (ejemplo.com versus www.example.com) a su instancia de equilibrio de carga de elástico, Amazon CloudFront distribución o cubo de Amazon S3 Web utilizando una característica denominada registro de Alias.</p>
+<p>Simple: Con inscripción de autoservicio, ruta 53 puede comenzar a responder sus consultas DNS dentro de minutos. Puede configurar sus ajustes DNS con la consola de administración de AWS o nuestra API fácil de usar. También mediante programación puede integrar la ruta 53 API en su aplicación web global. Por ejemplo, dispones API de ruta 53 para crear un nuevo registro DNS cada vez que se crea una nueva instancia de EC2.</p>
+<p>Rápido: Usando una red global anycast de servidores DNS alrededor del mundo, Amazon ruta 53 está diseñado para enrutar automáticamente los usuarios a la ubicación óptima dependiendo de las condiciones de la red. Como resultado, el servicio ofrece latencia baja consulta para los usuarios finales, así como actualización de baja latencia para sus necesidades de administración de registros de DNS.</p>
+<p>Rentable: Amazon ruta 53 pasa sobre los beneficios de escala de AWS a usted. Usted sólo paga por gestión de dominios a través del servicio y el número de consultas que el servicio de respuestas para cada uno de sus dominios, a un bajo costo y sin compromisos de uso mínimo ni cargos por adelantado.</p>
+<p>Seguro: Mediante la integración amazónica ruta 53 con AWS identidad y acceso gestión (IAM), puede otorgar credenciales únicas y gestionar los permisos de cada usuario dentro de su cuenta AWS y especificar quién tiene acceso a qué partes del servicio Amazon ruta 53.</p>
+<p>Flexible: Amazon ruta 53 ofrece Weighted Round-Robin (WRR), también conocido como equilibrio de carga de DNS. Esto le permite asignar pesos a sus registros de DNS que especifican qué porción de su tráfico se enruta a diversos extremos.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">AMAZON ROUTE 53</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#comando-ayuda">comando Ayuda</a></li>
+<li><a class="reference internal" href="#create-hosted-zone">Create-hosted-zone</a></li>
+<li><a class="reference internal" href="#create-health-check">Create-health-check</a></li>
+<li><a class="reference internal" href="#delete-hosted-zone">Delete-hosted-zone</a></li>
+<li><a class="reference internal" href="#delete-health-check">Delete-health-check</a></li>
+<li><a class="reference internal" href="#list">List</a></li>
+<li><a class="reference internal" href="#parametros-alternativos">parámetros alternativos</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="samazonelasticache.html"
+                        title="previous chapter">Amazon ElastiCache</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="samazons3.html"
+                        title="next chapter">Amazon S3</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/samazonroute53.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="samazons3.html" title="Amazon S3"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="samazonelasticache.html" title="Amazon ElastiCache"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" >PTConfigure</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>

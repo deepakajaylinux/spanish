@@ -91,20 +91,15 @@ Cuando el usuario necesita para Actualizar el servidor Nginx sin reiniciar , el 
 
 Antes de la ejecución , el sistema pide la confirmación para continuar , si desea continuar enter ' Y', si no entran en 'N'.
 
-Opciones
------------                               
 
-.. cssclass:: table-bordered
+Parámetro Alternativa
+--------------------------------------
 
- +----------------------------+------------------------------------------------------+--------------------------------------------+
- | Parameters		      | Parámetro Alternativa			             | Comentarios	     	                  |
- +----------------------------+------------------------------------------------------+--------------------------------------------+
- |ptdeploy ngnixcontrolhelp   | Cualquiera de los tres parámetros alternativa puede  | Once the user provides the option, System  |
- |			      | puede ser utilizado en el comando - ngnixcontrol ,   | starts processing			  |	
- |			      | NgnixControl and nginxcil			     |						  |
- |			      | eg: ptdeploy ngnixcontrol help/ 	             |						  |
- |			      | ptdeploy ngnixControl help|		             |						  |
- +----------------------------+------------------------------------------------------+--------------------------------------------+
+Cualquiera de los tres parámetros alternativa se puede utilizar en ngnixcontrol de comandos , NgnixControl y nginxcil
+
+por ejemplo : ngnixcontrol ptdeploy ayuda / ptdeploy ngnixControl ayuda
+
+
 
 Beneficios
 --------------

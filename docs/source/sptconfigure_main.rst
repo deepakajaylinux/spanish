@@ -538,6 +538,14 @@ Jugando con módulos PTConfigure
    :maxdepth: 6
     
  
+   samazoncloudfront
+   samazoncloudwatch
+   samazondynamodb
+   samazonelasticache
+   samazonroute53
+   samazons3
+   sawscloudformation
+   sawsrds
    sapacheconf
    sapachemodules 
    sapachereverseproxy

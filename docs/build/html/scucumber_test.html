@@ -1,0 +1,286 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Cucumber &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="PTTest" href="spttest_main.html" />
+    <link rel="next" title="EnvironmentConfig" href="senvironmentconfig_test.html" />
+    <link rel="prev" title="Behat" href="sbehat_test.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="senvironmentconfig_test.html" title="EnvironmentConfig"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="sbehat_test.html" title="Behat"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="spttest_main.html" accesskey="U">PTTest</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="cucumber">
+<h1>Cucumber<a class="headerlink" href="#cucumber" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>Sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Este módulo ayuda al usuario a iniciar y ejecutar el paquete de pruebas de pepino. Veamos cómo inicializar y ejecutar el paquete de pruebas de pepino en los próximos temas.</p>
+</div>
+<div class="section" id="comando-ayuda">
+<h2>comando Ayuda<a class="headerlink" href="#comando-ayuda" title="Permalink to this headline">¶</a></h2>
+<p>El comando ayuda guía al usuario en cuanto al propósito y opciones disponibles bajo un módulo. Enumera los parámetros alternativos que se utilizan en la declaración. Describe la sintaxis para inicializar y ejecutar el pepino bajo el pttest. A continuación se muestra el comando utilizado para declarar ayuda:</p>
+<div class="highlight-bash"><div class="highlight"><pre>pttest cucumber <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La captura de pantalla siguiente muestra gráficamente sobre el funcionamiento del comando help.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# pttest cucumber <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>allows you to initialize a Cucumber <span class="nb">test </span>suite.
+
+ Cucumber, cucumber
+
+       - init, initialize
+       Initialises the Cucumber <span class="nb">test </span>suite of this project
+       example: pttest cucumber init
+       example: pttest cucumber initialize
+
+       - execute
+       Executes the Cucumber <span class="nb">test </span>suite of this project
+       example: pttest cucumber execute
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="como-inicializar-pepino">
+<h2>Cómo inicializar pepino<a class="headerlink" href="#como-inicializar-pepino" title="Permalink to this headline">¶</a></h2>
+<p>El comando usado para inicializar el pepino en pttest se muestra:</p>
+<div class="highlight-bash"><div class="highlight"><pre>pttest cucumber init
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-bash"><div class="highlight"><pre>pttest cucumber initialize
+</pre></div>
+</div>
+<p>Después de introducir el comando anterior, ocurre el proceso de inicialización, como se muestra en la tabla siguiente.</p>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="25%" />
+<col width="32%" />
+<col width="9%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">parámetros</th>
+<th class="head">parámetro alternativo</th>
+<th class="head">opciones</th>
+<th class="head">comentarios</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Initialize Cucumber? (Y/N)</td>
+<td>En vez de pepino , podemos utilizar
+el pepino también</td>
+<td>Y(Yes)</td>
+<td>Si el usuario desea continuar el init
+se puede introducir como Y.</td>
+</tr>
+<tr class="row-odd"><td>Initialize Cucumber? (Y/N)</td>
+<td>En vez de pepino , podemos utilizar
+el pepino también</td>
+<td>N(No)</td>
+<td>Si el usuario desea salir del proceso
+init que puede introducir como N.|</td>
+</tr>
+</tbody>
+</table>
+<p>Finalmente consigue inicializado el pepino pttest como se muestra en la siguiente pantalla.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# pttest cucumber init
+Initialize Cucumber? <span class="o">(</span>Y/N<span class="o">)</span>
+Y
+*******************************
+*   Golden Contact Computing  *
+*          Cucumber         *
+*******************************
+Creating /tmp/ptconfigure-temp-script-81470621814.sh
+chmod 755 /tmp/ptconfigure-temp-script-81470621814.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-81470621814.sh Permissions
+Executing /tmp/ptconfigure-temp-script-81470621814.sh
+Temp File /tmp/ptconfigure-temp-script-81470621814.sh Removed
+Creating /tmp/ptconfigure-temp-script-65310697385.sh
+chmod 755 /tmp/ptconfigure-temp-script-65310697385.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-65310697385.sh Permissions
+Executing /tmp/ptconfigure-temp-script-65310697385.sh
+Temp File /tmp/ptconfigure-temp-script-65310697385.sh Removed
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for </span>installing , visit www.gcsoftshop.co.uk <span class="k">for </span>more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+
+
+Cucumber: Success
+
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="como-ejecutar-el-pepino">
+<h2>Cómo ejecutar el pepino<a class="headerlink" href="#como-ejecutar-el-pepino" title="Permalink to this headline">¶</a></h2>
+<p>The command used for executing the cucumber under pttest is shown:</p>
+<div class="highlight-bash"><div class="highlight"><pre>
+</pre></div>
+</div>
+<p>pttest cucumber execute</p>
+<p>Después de introducir el comando anterior, ocurre el proceso de ejecución, como se muestra en la tabla siguiente.</p>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="24%" />
+<col width="31%" />
+<col width="9%" />
+<col width="36%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">parámetros</th>
+<th class="head">parámetro alternativo</th>
+<th class="head">opciones</th>
+<th class="head">comentarios</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Execute Cucumber? (Y/N)</td>
+<td>En vez de pepino , podemos utilizar
+el pepino también</td>
+<td>Y(Yes)</td>
+<td>Si el usuario desea continuar el proceso
+de ejecución se puede introducir como Y.</td>
+</tr>
+<tr class="row-odd"><td>Execute Cucumber? (Y/N)</td>
+<td>En vez de pepino , podemos utilizar
+el pepino también</td>
+<td>N(No)</td>
+<td>Si el usuario desea abandonar el proceso
+de ejecución se puede introducir como N.|</td>
+</tr>
+</tbody>
+</table>
+<p>Si el usuario procede a la ejecución, el proceso de ejecución se producirá como se muestra en la siguiente pantalla.</p>
+</div>
+<div class="section" id="beneficios">
+<h2>beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Es acomodada en ambos OS ciento y así como en ubuntu.</li>
+<li>Los parámetros utilizados en la declaración no son mayúsculas y
+minúsculas que es una ventaja añadida mientras que comparado con otros. * Este pepino permite a los usuarios para iniciar y ejecutar el paque  te de pruebas de pepino.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Cucumber</a><ul>
+<li><a class="reference internal" href="#sinopsis">Sinopsis</a></li>
+<li><a class="reference internal" href="#comando-ayuda">comando Ayuda</a></li>
+<li><a class="reference internal" href="#como-inicializar-pepino">Cómo inicializar pepino</a></li>
+<li><a class="reference internal" href="#como-ejecutar-el-pepino">Cómo ejecutar el pepino</a></li>
+<li><a class="reference internal" href="#beneficios">beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="sbehat_test.html"
+                        title="previous chapter">Behat</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="senvironmentconfig_test.html"
+                        title="next chapter">EnvironmentConfig</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/scucumber_test.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="senvironmentconfig_test.html" title="EnvironmentConfig"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="sbehat_test.html" title="Behat"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="spttest_main.html" >PTTest</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Amazon DynamoDB &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="PTConfigure" href="sptconfigure_main.html" />
+    <link rel="next" title="Amazon ElastiCache" href="samazonelasticache.html" />
+    <link rel="prev" title="Amazon CloudWatch" href="samazoncloudwatch.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="samazonelasticache.html" title="Amazon ElastiCache"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="samazoncloudwatch.html" title="Amazon CloudWatch"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" accesskey="U">PTConfigure</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="amazon-dynamodb">
+<h1>Amazon DynamoDB<a class="headerlink" href="#amazon-dynamodb" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Amazon DynamoDB es un servicio rápido y flexible de base de datos NoSQL para todas las aplicaciones que necesitan latencia milisegundo consistente, de un solo dígito en cualquier escala. Es una base de datos totalmente gestionado y soporta tanto documento y modelos de datos de clave y valor. Su modelo de datos flexible y fiable rendimiento hacen un gran ajuste para el móvil, web, juegos de azar, ad-tech, muchos y muchas otras aplicaciones.</p>
+</div>
+<div class="section" id="comando-ayuda">
+<h2>comando Ayuda<a class="headerlink" href="#comando-ayuda" title="Permalink to this headline">¶</a></h2>
+<p>Este comando ayuda a determinar el uso de AWS DynamoDB. El usuario llegará a saber acerca del manera/formato diferente para ejecutar este módulo. Este comando guía al usuario final para conocer el propósito de este comando. A continuación dado son el comando y la captura de pantalla del mismo.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure AWSDynamoDb <span class="nb">help</span>
+
+******************************
+
+
+   This is an extension provided <span class="k">for </span>Handling AWSDynamoDb.
+
+   AWSDynamoDb, awsdynamodb,aws-dynamodb
+
+       - describe-table
+       Describe a table
+       example: ptconfigure AWSDynamoDb describe-table
+                   --yes
+                   --guess
+       - delete-table
+       Lets you delete a table
+       example: ptconfigure AWSDynamoDb delete-table
+                   --yes
+                   --guess
+
+
+       - create-table
+         Lets you create a table
+         example: ptconfigure AWSDynamoDb create-table
+                   --yes
+                   --guess
+
+
+
+
+       - list
+       Will display data about your AWS AWSDynamoDb
+       example: ptconfigure AWSDynamoDb list
+                 --yes
+                 --guess
+
+
+       Note: region must be one of the following...
+       us-east-1, ap-northeast-1, sa-east-1, ap-southeast-1, ap-southeast-2, us-west-2, us-gov-west-1, us-west-1, cn-north-1, eu-west-1
+
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="describe-table">
+<h2>Describe-table<a class="headerlink" href="#describe-table" title="Permalink to this headline">¶</a></h2>
+<p>Este comando permite para describir una mesa. La continuación dado comando se ejecutará el proceso.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure AWSDynamoDb describe-table --yes --guess
+</pre></div>
+</div>
+</div>
+<div class="section" id="delete-table">
+<h2>Delete-table<a class="headerlink" href="#delete-table" title="Permalink to this headline">¶</a></h2>
+<p>Este comando permite para borrar una tabla. La continuación dado comando se ejecutará el proceso.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure AWSDynamoDb delete-table --yes --guess
+</pre></div>
+</div>
+</div>
+<div class="section" id="create-table">
+<h2>Create-table<a class="headerlink" href="#create-table" title="Permalink to this headline">¶</a></h2>
+<p>Este comando permite para crear una tabla. La parte más crítica es que es irreversible.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure AWSDynamoDb create-table --yes --guess
+</pre></div>
+</div>
+</div>
+<div class="section" id="list">
+<h2>List<a class="headerlink" href="#list" title="Permalink to this headline">¶</a></h2>
+<p>Este comando permite para Mostrar datos acerca de su AWSDynamoDb de AWS. La continuación dado comando se ejecutará el proceso.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure AWSDynamoDb list --yes --guess
+</pre></div>
+</div>
+</div>
+<div class="section" id="parametros-alternativos">
+<h2>parámetros alternativos<a class="headerlink" href="#parametros-alternativos" title="Permalink to this headline">¶</a></h2>
+<p>Hay dos parámetros alternativos que pueden utilizarse en la línea de comandos.</p>
+<p>AWSDynamoDb, awsdynamodb,aws-dynamodb</p>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<p>Escaneo de índice secundario – una manera más simple para analizar tablas DynamoDB: Amazon DynamoDB permite recuperar todos los elementos de una tabla mediante la operación de análisis. Con secundario Index Scan, ahora puede utilizar la operación de análisis de índices secundarios y recuperar todos los datos de seleccionados atributos y elementos que se proyectan en un índice secundario. Escaneo de índice secundario trabaja en índices secundarios globales y locales. Índices secundarios pueden analizarse desde la consola de DynamoDB o llamando a la API de exploración con un parámetro adicional para especificar el índice.</p>
+<p>Indexación en línea – una manera flexible para administrar los índices globales de secundaria: Amazon DynamoDB le permite crear índices secundarios Global (GSI) en mesa de crear tiempo. GSIs permiten escribir ricas consultas con filtros. Con indexación en línea, usted puede agregar o borrar GSIs a una tabla de DynamoDB en cualquier momento utilizando la consola de DynamoDB o a través de una simple llamada de API. Mientras el GSI es ser añadido o eliminado, el DynamoDB mesa todavía manejar tráfico directo y proporcionar servicio continuo en el nivel de rendimiento con provisioning.</p>
+<p>Para registrarse para la previsualización de secuencias de DynamoDB: DynamoDB arroyos proporciona un tiempo ordenó la secuencia de cambios de nivel de elemento en cualquier mesa de DynamoDB. Los cambios son desduplicados y almacenados durante 24 horas. Esta capacidad permite a los desarrolladores ampliar el poder de DynamoDB con replicación Cruz-región, analytics continua con integración de corrimiento al rojo, las notificaciones de cambios y muchos otros.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Amazon DynamoDB</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#comando-ayuda">comando Ayuda</a></li>
+<li><a class="reference internal" href="#describe-table">Describe-table</a></li>
+<li><a class="reference internal" href="#delete-table">Delete-table</a></li>
+<li><a class="reference internal" href="#create-table">Create-table</a></li>
+<li><a class="reference internal" href="#list">List</a></li>
+<li><a class="reference internal" href="#parametros-alternativos">parámetros alternativos</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="samazoncloudwatch.html"
+                        title="previous chapter">Amazon CloudWatch</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="samazonelasticache.html"
+                        title="next chapter">Amazon ElastiCache</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/samazondynamodb.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="samazonelasticache.html" title="Amazon ElastiCache"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="samazoncloudwatch.html" title="Amazon CloudWatch"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptconfigure_main.html" >PTConfigure</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>
