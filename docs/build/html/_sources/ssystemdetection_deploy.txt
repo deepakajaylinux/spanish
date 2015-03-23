@@ -67,7 +67,7 @@ Finalmente, después de detectar la información con respecto a lo anterior menc
 
 .. code-block:: bash
 
- kevell@corp:/# ptconfigure system-detection detect
+ kevell@corp:/# ptdeploy system-detection detect
  ******************************
 
 

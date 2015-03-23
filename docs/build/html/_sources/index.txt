@@ -1,7 +1,3 @@
-Welcome to spanishkevell's documentation!
-=========================================
-
-
 Pharaohtools Documentation
 ============================
 
