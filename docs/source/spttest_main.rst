@@ -10,4 +10,6 @@ PTTest
  scucumber_test
  senvironmentconfig_test
  sphpunit_test
-
+ stemplating_test
+ ssystemdetection_test
+ 
