@@ -19,21 +19,25 @@ La siguiente captura de pantalla muestra gráficamente sobre el funcionamiento d
 
 .. code-block:: bash
 
- kevell@corp:/# ptdeploy Logging help
- ******************************
+
+ kevell@corp:/# ptdeploy logging help 
+
+ ****************************** 
+
+  Use this to log a message to the Console, and optionally the php error log. 
+
+  Logging, logging 
+
+        - log 
+        Logs a message the console or 
+        example: ptdeploy logging log --php-log --log-message="Here is something logging to the console and error log" 
+
+ ------------------------------ 
+ End Help 
+ ****************************** 
 
 
-  Use this to log a message to the Console, and optionally the php error log.
 
-  Logging, logging
-
-        - log
-        Logs a message the console or
-        example: ptconfigure logging log --php-log --log-message="Here is something logging to the console and error log"
-
- ------------------------------
- End Help
- ******************************
 
 instalación
 ---------------
@@ -115,6 +119,37 @@ en lugar de
  	log-message="Here is something logging to the console and error log"
 
 el usuario puede añadir cualquier texto a la parte del mensaje de registro en función de sus necesidades.
+
+
+.. code-block:: bash
+
+ kevell@corp:/# ptdeploy logging log --php-log --log-message="Here is something logging to the console and error log" 
+
+ Install Logging? (Y/N) 
+ y 
+ ******************************* 
+ *   Golden Contact Computing  * 
+ *           Logging!          * 
+ ******************************* 
+ [Pharaoh Logging] Here is something logging to the console and error log 
+ [Pharaoh Logging] Here is something logging to the console and error log 
+
+ ... All done! 
+ ******************************* 
+ Thanks for installing , visit www.gcsoftshop.co.uk for more 
+ ****************************** 
+
+
+ Single App Installer: 
+ -------------------------------------------- 
+
+ No Data. 
+
+ ------------------------------ 
+ Installer Finished 
+ *********************** 
+
+
 
 Beneficios
 --------------

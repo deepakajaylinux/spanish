@@ -28,21 +28,21 @@ La siguiente captura de pantalla y explica sobre plantillas.
 
 .. code-block:: bash
 
- kevell@corp:/# ptdeploy templating help
- ******************************
+ kevell@corp:/# ptdeploy Templating help 
 
+ ****************************** 
 
-  This command allows you to install a templated file with new values.
+  This command allows you to install a templated file with new values. 
 
-  Templating, templating, template
+  Templating, templating, template 
 
-        - install
-        Installs a template
-        example: ptconfigure template install
+        - install 
+        Installs a template 
+        example: ptconfigure template install 
 
- ------------------------------
- End Help
- ******************************
+ ------------------------------ 
+ End Help 
+ ****************************** 
 
 
 instalación

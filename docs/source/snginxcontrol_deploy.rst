@@ -58,6 +58,21 @@ Cuando el usuario necesita para iniciar el servidor Nginx , el comando a continu
 
 Antes de la ejecución , el sistema pide la confirmación para continuar , si desea continuar enter ' Y', si no entran en 'N'.
 
+
+.. code-block:: bash
+
+ kevell@corp:/# ptdeploy nginxcontrol start 
+
+ Do you want to Start Nginx? (Y/N) 
+ y 
+ Starting Nginx... 
+ ****************************** 
+
+ 1Nginx Controller Finished 
+ ****************************** 
+
+
+
 Deténgase
 ----------------
 
@@ -68,6 +83,20 @@ Cuando el usuario necesita para detener el servidor Nginx , el comando a continu
 	ptdeploy nginxcontrol stop	
 
 Antes de la ejecución , el sistema pide la confirmación para continuar , si desea continuar enter ' Y', si no entran en 'N'.
+
+.. code-block:: bash
+
+ kevell@corp:/# ptdeploy nginxcontrol stop 
+
+ Do you want to Stop Nginx? (Y/N) 
+ y 
+ Stopping Nginx... 
+ ****************************** 
+
+ 1Nginx Controller Finished 
+ ****************************** 
+
+
 
 reanudar
 ----------------
@@ -80,6 +109,23 @@ Cuando el usuario necesita para reiniciar el servidor Nginx ( cuando haya cambio
 
 Antes de la ejecución , el sistema pide la confirmación para continuar , si desea continuar enter ' Y', si no entran en 'N'.
 
+
+.. code-block:: bash
+
+ kevell@corp:/# ptdeploy nginxcontrol restart 
+
+ Do you want to Restart Nginx? (Y/N) 
+ y 
+ Restarting Nginx... 
+ * Restarting nginx nginx 
+   ...fail! 
+ ****************************** 
+
+ 1Nginx Controller Finished 
+ ****************************** 
+
+
+
 recargar
 ----------------
 
@@ -90,6 +136,23 @@ Cuando el usuario necesita para Actualizar el servidor Nginx sin reiniciar , el 
 	ptdeploy nginxcontrol reload
 
 Antes de la ejecución , el sistema pide la confirmación para continuar , si desea continuar enter ' Y', si no entran en 'N'.
+
+
+.. code-block:: bash
+
+ kevell@corp:/# ptdeploy nginxcontrol reload
+
+ Do you want to Reload Nginx? (Y/N) 
+ y
+ Reloading Nginx...
+ * Reloading nginx configuration nginx
+   ...done.
+ ******************************
+
+ 1Nginx Controller Finished
+ ******************************
+
+
 
 
 Parámetro Alternativa
@@ -111,7 +174,7 @@ Beneficios
 * La tolerancia a fallos
 * TLS / SSL con SNI y OCSP grapado apoyo , a través de OpenSSL .
 * FastCGI , SCGI , apoyo uWSGI con el almacenamiento en caché
-* Servidores virtuales nombre- e IP basados ​​en las direcciones
+* Servidores virtuales nombre- e IP basados en las direcciones
 * Compatible con IPv6
 * Soporte para el protocolo SPDY
 * WebSockets y HTTP / 1.1 Upgrade ( 101 Protocolos de conmutación ) 

@@ -72,6 +72,37 @@ El servidor se puede iniciar el uso de un simple comando con la opción de conec
 
 después de escribir el comando, que permite al usuario iniciar el funcionamiento del servidor lighttpd.
 
+
+.. code-block:: bash
+
+ kevell@corp:/# ptdeploy lighttpdcontrol start 
+
+ Do you want to Start Lighttpd? (Y/N) 
+ y 
+ Starting Lighttpd... 
+ * Starting web server lighttpd 
+   ...done. 
+ ****************************** 
+
+ 1Lighttpd Controller Finished 
+ ****************************** 
+
+.. code-block:: bash
+
+
+ kevell@corp:/# ptdeploy lighttpdcontrol start --yes 
+
+ Starting Lighttpd... 
+ * Starting web server lighttpd 
+   ...done. 
+ ****************************** 
+
+ 1Lighttpd Controller Finished 
+ ****************************** 
+
+
+
+
 Deténgase
 -------------
 
@@ -82,6 +113,36 @@ Esta opción de parada se utiliza para detener el servicio lighttpd. Específica
                ptdeploy lighttpdcontrol stop
 
 Después de la entrada como el comando anterior, el servicio se detiene la función.
+
+
+.. code-block:: bash
+
+ kevell@corp:/# ptdeploy lighttpdcontrol stop 
+
+ Do you want to Stop Lighttpd? (Y/N) 
+ y 
+ Stopping Lighttpd... 
+ * Stopping web server lighttpd 
+   ...done. 
+ ****************************** 
+
+ 1Lighttpd Controller Finished 
+ ****************************** 
+
+
+.. code-block:: bash
+
+ 
+ kevell@corp:/# ptdeploy lighttpdcontrol stop --yes 
+
+ Stopping Lighttpd... 
+ * Stopping web server lighttpd 
+   ...done. 
+ ****************************** 
+
+ 1Lighttpd Controller Finished 
+ ****************************** 
+
 
 reanudar
 ------------
@@ -95,6 +156,40 @@ El término se refiere a un reinicio del sistema operativo de cerrar todos los p
 Después de la entrada como el comando anterior, el servicio, reinicie el servicio lighttpd.
 
 
+.. code-block:: bash
+
+ kevell@corp:/# ptdeploy lighttpdcontrol restart 
+
+ Do you want to Restart Lighttpd? (Y/N) 
+ y 
+ Restarting Lighttpd... 
+ * Stopping web server lighttpd 
+   ...done. 
+ * Starting web server lighttpd 
+   ...done. 
+ ****************************** 
+
+ 1Lighttpd Controller Finished 
+ ****************************** 
+
+
+.. code-block:: bash
+
+
+ kevell@corp:/# ptdeploy lighttpdcontrol restart --yes 
+
+ Restarting Lighttpd... 
+ * Stopping web server lighttpd 
+   ...done. 
+ * Starting web server lighttpd 
+   ...done. 
+ ****************************** 
+
+ 1Lighttpd Controller Finished 
+ ****************************** 
+
+
+
 recargar
 ------------
 
@@ -103,6 +198,37 @@ Recargar significa que las cosas están cambiando. El lighttpd está experimenta
 .. code-block:: bash
    
                ptdeploy lighttpdcontrol reload
+
+.. code-block:: bash
+
+ kevell@corp:/# ptdeploy lighttpdcontrol reload 
+ 
+ Do you want to Reload Lighttpd? (Y/N) 
+ y 
+ Reloading Lighttpd... 
+ * Reloading web server configuration lighttpd 
+   ...done. 
+ ****************************** 
+
+ 1Lighttpd Controller Finished 
+ ****************************** 
+
+.. code-block:: bash
+
+
+
+ kevell@corp:/# ptdeploy lighttpdcontrol reload --yes 
+
+ Reloading Lighttpd... 
+ * Reloading web server configuration lighttpd 
+   ...done. 
+ ****************************** 
+
+ 1Lighttpd Controller Finished 
+ ****************************** 
+
+
+
 
 Beneficios
 --------------
