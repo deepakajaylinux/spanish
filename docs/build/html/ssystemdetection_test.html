@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>SystemDetection &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="systemdetection">
+<h1>SystemDetection<a class="headerlink" href="#systemdetection" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Este módulo tiene como objetivo detectar la máquina del usuario y en la mano les proporciona la información necesaria para ellos con respecto al sistema de los usuarios. También proporciona un servicio a los usuarios configurar sus ajustes de aplicaciones. Los pocos ejemplos de configuración de aplicaciones incluye mysql admin, arquitectura, admin usuario, host, versión, tipo de linux, Distro. Es cómodo con Ubuntu y ciento OS.</p>
+</div>
+<div class="section" id="comando-ayuda">
+<h2>comando Ayuda<a class="headerlink" href="#comando-ayuda" title="Permalink to this headline">¶</a></h2>
+<p>El comando help conduce a los usuarios sobre la finalidad y así como sobre las opciones que están incluidas en los módulos de detección del sistema. El comando ayuda enumera los parámetros alternativos de detección de sistemas debajo del módulo pttest. También describe la sintaxis para la detección de la máquina del usuario. A continuación se muestra el comando de ayuda para la detección de sistemas.</p>
+<div class="highlight-bash"><div class="highlight"><pre>pttest systemdetection <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La sintaxis para el comando help es sensible al caso no que añade una ventaja para este módulo. La siguiente captura de pantalla visualizar sobre el comando de ayuda en la detección de sistemas.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# pttest systemdetection <span class="nb">help</span>
+******************************
+
+
+ This is a default Module and provides you with a method by which you can configure Application Settings.
+ You can configure default application settings, ie: mysql admin user, host, pass
+
+ SystemDetection, system-detection, systemdetection
+
+       - detect
+       Detects the Operating System
+       example: ptconfigure system-detection detect
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="detect">
+<h2>Detect<a class="headerlink" href="#detect" title="Permalink to this headline">¶</a></h2>
+<p>Cuando el usuario necesita detectar la configuración del sistema, el siguiente dado comando obtendrá toda la información sobre la aplicación del sistema.</p>
+<div class="highlight-bash"><div class="highlight"><pre>pttest systemdetection detect
+</pre></div>
+</div>
+<p>Sistema termina con el abastecimiento de la continuación dado detalles:</p>
+<ul class="simple">
+<li>Operating System</li>
+<li>Linux Type</li>
+<li>Distro</li>
+<li>Version</li>
+<li>Architecture</li>
+<li>Host Name</li>
+<li>IP Address 0.</li>
+</ul>
+<p>La siguiente captura de pantalla te muestra sobre el proceso de detección de sistemas.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# pttest system-detection detect
+******************************
+
+
+Systems Detection:
+--------------------------------------------
+
+Operating System: Linux
+Linux Type: Debian
+Distro: Ubuntu
+Version: 14.04
+Architecture: 64
+Host Name: kevells
+IP Address 0: 172.16.201.1
+IP Address 1: 172.16.39.1
+IP Address 2: 192.168.1.16
+
+------------------------------
+Detection Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="parametros-alternativos">
+<h2>parámetros alternativos<a class="headerlink" href="#parametros-alternativos" title="Permalink to this headline">¶</a></h2>
+<p>En lugar de detección del sistema, pueden utilizar los siguientes parámetros:</p>
+<ul class="simple">
+<li>SystemDetection</li>
+<li>system-detection</li>
+<li>systemdetection</li>
+</ul>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Los usuarios pueden configurar la configuración de la aplicación mediante la detección de este sistema.</li>
+<li>Los parámetros utilizados para declarar el comando help, detección de sistemas no son mayúsculas y minúsculas que es una ventaja añadida
+mientras que comparado con otros.</li>
+<li>Es acomodada en ambos OS ciento y así como en Ubuntu.</li>
+<li>Protección y seguridad es posible. Previniendo daños al sistema y a los recursos, a través de los procesos internos o forasteros maliciosos.
+Authntication, la propiedad y acceso restringido son partes obvias de este sistema.</li>
+<li>Los administradores de sistemas generalmente determinan interfaz que un usuario inicia con cuando inician sesión primero pulg.</li>
+<li>generalmente escrito en PHP, aunque algunas están escritas en conjunto para un rendimiento óptimo.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">SystemDetection</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#comando-ayuda">comando Ayuda</a></li>
+<li><a class="reference internal" href="#detect">Detect</a></li>
+<li><a class="reference internal" href="#parametros-alternativos">parámetros alternativos</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/ssystemdetection_test.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>

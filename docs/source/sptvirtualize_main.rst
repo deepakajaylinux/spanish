@@ -14,3 +14,12 @@ PTVirtualize
  shalt_virtualize
  sinvoke_virtualize
  spharaohtools_virtualize
+ sresume_virtualize
+ ssftp_virtualize
+ sshell_virtualize
+ sstatus_virtualize
+ ssystemdetection_virtualize
+ sup_virtualize
+ svirtualbox_virtualize
+
+

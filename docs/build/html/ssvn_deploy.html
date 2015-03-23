@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>SVN &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="PTDeploy" href="sptdeploy_main.html" />
+    <link rel="next" title="System Detection" href="ssystemdetection_deploy.html" />
+    <link rel="prev" title="SFTP" href="ssftp_deploy.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="ssystemdetection_deploy.html" title="System Detection"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="ssftp_deploy.html" title="SFTP"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptdeploy_main.html" accesskey="U">PTDeploy</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="svn">
+<h1>SVN<a class="headerlink" href="#svn" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Este módulo ayuda a los usuarios en el manejo de las funciones de comprobación. Apache Subversion (SVN a menudo abreviado, después el comando nombre svn) es un software versionado y revisión sistema de control distribuido como software libre bajo la licencia Apache.[1] los desarrolladores usar Subversion para mantener versiones actuales e históricas de los archivos como código fuente, documentación y páginas web. Su objetivo es ser un sucesor en su mayoría compatible para el sistema ampliamente utilizado de versiones concurrentes (CVS). Veamos cómo este módulo facilita en el manejo de las funciones de comprobación.</p>
+</div>
+<div class="section" id="comando-ayuda">
+<h2>comando Ayuda<a class="headerlink" href="#comando-ayuda" title="Permalink to this headline">¶</a></h2>
+<p>El comando ayuda guía a los usuarios sobre la finalidad y así como sobre las opciones que se incluyen en el SVN. Enumera los parámetros alternativos de SVN. También describe la sintaxis para utilizar las funciones de comprobación. El comando de ayuda para el módulo SVN se muestra a continuación.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy svn <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La sintaxis para declarar el comando help no es sensible a mayúsculas que es una ventaja añadida. La siguiente pantalla te visualizar sobre el comando ayuda bajo SVN.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy svn help
+******************************
+
+
+ This command is part of Default Modules and handles Checkout Functions.
+
+ Checkout, checkout, co
+
+         - perform a checkout into configured projects folder. If you don&#39;t want to specify target dir but do want
+         to specify a branch, then enter the text &quot;none&quot; as that parameter.
+         example: ptdeploy svn co https://svnhub.com/phpengine/yourmum {optional target dir} {optional branch}
+         example: ptdeploy svn co https://svnhub.com/phpengine/yourmum none {optional branch}
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="como-utilizar-las-funciones-de-pago-y-envio">
+<h2>Cómo utilizar las funciones de pago y envío<a class="headerlink" href="#como-utilizar-las-funciones-de-pago-y-envio" title="Permalink to this headline">¶</a></h2>
+<p>La sintaxis para utilizar el check-out funciones bajo svn se expone a continuación.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy svn co https: // svnhub.com/ phpengine/yourmum
+</pre></div>
+</div>
+<p>Después de introducir el mandato dado por encima, la ejecución de la función de comprobación comienza como se describe en la tabla, abajo</p>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="22%" />
+<col width="31%" />
+<col width="14%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">parámetros</th>
+<th class="head">parámetros alternativos</th>
+<th class="head">opciones</th>
+<th class="head">comentarios</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Perform a clone/download
+of files? (Y/N)</td>
+<td>En lugar de co , podemos utilizar la
+salida, Checkout también .</td>
+<td>Y(Yes)</td>
+<td>Si el usuario necesita para llevar a cabo
+un clon / descarga de los archivos
+se puede introducir como Y.</td>
+</tr>
+<tr class="row-odd"><td>Perform a clone/download
+of files? (Y/N)</td>
+<td>En lugar de co , podemos utilizar la
+salida, Checkout también .</td>
+<td>N(No)</td>
+<td>Si el usuario no está en la necesidad de
+realizar un clon / descarga de los
+archivos se puede introducir como N.|</td>
+</tr>
+</tbody>
+</table>
+<p>Si el usuario procede la función de verificación de entrada y, están involucrados los siguientes pasos como se describe a continuación.</p>
+<p>Step 1:</p>
+<p>Also change permissions/owner? (Y/N)</p>
+<p>El usuario tiene que entrar como Y o N dependiendo de su voluntad de cambiar permisos y propietario.</p>
+<p>Step 2:</p>
+<p>What user is Apache Web Server running as?</p>
+<p>El usuario tiene que introducir el nombre del usuario que ejecuta el servidor web apache.</p>
+<p>Step 3:</p>
+<p>Involucra el proceso de cambiar los permisos de la carpeta y propietario de la carpeta.</p>
+<p>La captura de pantalla siguiente muestra gráficamente acerca del proceso y el trabajo de revisar las funciones.</p>
+<div class="highlight-bash"><div class="highlight"><pre>
+</pre></div>
+</div>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Es acomodada en ambos ubuntu y así como ciento OS.</li>
+<li>Los parámetros utilizados en la declaración no es sensible a mayúsculas.</li>
+<li>El usuario puede realizar y supervisar las funciones de comprobación utilizando este SVN.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">SVN</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#comando-ayuda">comando Ayuda</a></li>
+<li><a class="reference internal" href="#como-utilizar-las-funciones-de-pago-y-envio">Cómo utilizar las funciones de pago y envío</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="ssftp_deploy.html"
+                        title="previous chapter">SFTP</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="ssystemdetection_deploy.html"
+                        title="next chapter">System Detection</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/ssvn_deploy.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="ssystemdetection_deploy.html" title="System Detection"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="ssftp_deploy.html" title="SFTP"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sptdeploy_main.html" >PTDeploy</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>

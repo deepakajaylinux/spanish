@@ -239,6 +239,10 @@ aquí, la pantalla indica la pantalla de todos los módulos disponibles bajo ptc
  snginxcontrol_deploy
  snginxsbeditor_deploy
  sproject_deploy
+ sruncommand_deploy
+ ssftp_deploy
+ ssvn_deploy
+ ssystemdetection_deploy
  stemplating_deploy
  sversion_deploy 
 

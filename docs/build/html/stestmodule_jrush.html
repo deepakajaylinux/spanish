@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Test module &mdash; spanishkevell 1.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="spanishkevell 1.0.1 documentation" href="index.html" />
+    <link rel="up" title="Jrush" href="sjrush_main.html" />
+    <link rel="next" title="Version" href="sversion_jrush.html" />
+    <link rel="prev" title="SystemDetection" href="ssystemdetection_jrush.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="sversion_jrush.html" title="Version"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="ssystemdetection_jrush.html" title="SystemDetection"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sjrush_main.html" accesskey="U">Jrush</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="test-module">
+<h1>Test module<a class="headerlink" href="#test-module" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Testmodule es el jrush más popular pruebas de módulo, a partir de esta revisión sobre la extensión de archivo y hacen uso de ella. Testmodule es un marco pero puede ser utilizado en conjunto con otro artículo de prueba. Como resultado, TestModule proporciona sólo la línea de base pruebas funciones dejando otras bibliotecas para implementar la funcionalidad más específica y sofisticada. Muestra las actuales acciones. Esto es cómodo con Ubuntu y centOS.</p>
+</div>
+<div class="section" id="comando-ayuda">
+<h2>comando Ayuda<a class="headerlink" href="#comando-ayuda" title="Permalink to this headline">¶</a></h2>
+<p>El comando ayuda guía a los usuarios sobre la finalidad y así como sobre las opciones que están incluidas en el testmodule. Enumera los parámetros alternativos de testmodule. También describe la sintaxis para el funcionamiento del módulo de Jrush. El comando de ayuda para testmodule se muestra a continuación.</p>
+<div class="highlight-bash"><div class="highlight"><pre>jrush testmodules <span class="nb">help</span>
+</pre></div>
+</div>
+<p>Después de escribir el comando enumera las opciones de acción. La siguiente imagen visualizarlo obviamente.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# jrush TestModule <span class="nb">help</span>
+****************************************
+GC JRush - The Joomla Command Line Shell
+****************************************
+
+ This <span class="nb">command </span>allows you to update TestModule.
+
+ TestModule, testmodule, <span class="nb">test</span>-module
+
+       - action-one
+       An example action. Currently, we get all titles of articles
+       example: jrush <span class="nb">test</span>-module action-one
+
+       - action-two
+       An example action. Currently, we get all titles of articles
+       example: jrush <span class="nb">test</span>-module action-two
+
+------------------------------
+End Help
+****************************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="parametros-alternativos">
+<h2>parámetros alternativos<a class="headerlink" href="#parametros-alternativos" title="Permalink to this headline">¶</a></h2>
+<p>Alternativamente usando Testmodule el usuario puede utilizar las siguientes opciones.</p>
+<p>Test Module, testmodule, test-module.</p>
+</div>
+<div class="section" id="opciones">
+<h2>Opciones<a class="headerlink" href="#opciones" title="Permalink to this headline">¶</a></h2>
+<p>Hay dos opciones están disponibles. Son los siguientes.</p>
+<ul class="simple">
+<li>Action-one</li>
+<li>Action-two</li>
+</ul>
+</div>
+<div class="section" id="action-one">
+<h2>Action-one<a class="headerlink" href="#action-one" title="Permalink to this headline">¶</a></h2>
+<p>Muestra los actuales títulos de artículos. El comando utilizado para hacer una acción es como sigue:</p>
+<div class="highlight-bash"><div class="highlight"><pre>jrush <span class="nb">test</span>-module action-one
+</pre></div>
+</div>
+<p>Después da el comando muestra los detalles del actual y títulos de los artículos. La imagen representa el mismo.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# jrush <span class="nb">test</span>-module action-one --config-file<span class="o">=</span><span class="s2">&quot;/var/www/html/joomla/configuration.php&quot;</span>
+****************************************
+GC JRush - The Joomla Command Line Shell
+****************************************
+
+TestModule Action One:
+-------------------------
+array<span class="o">(</span>6<span class="o">)</span> <span class="o">{</span>
+ <span class="o">[</span>0<span class="o">]=</span>&gt;
+ string<span class="o">(</span>8<span class="o">)</span> <span class="s2">&quot;About Us&quot;</span>
+ <span class="o">[</span>1<span class="o">]=</span>&gt;
+ string<span class="o">(</span>15<span class="o">)</span> <span class="s2">&quot;Article 1 Title&quot;</span>
+ <span class="o">[</span>2<span class="o">]=</span>&gt;
+ string<span class="o">(</span>18<span class="o">)</span> <span class="s2">&quot;Creating Your Site&quot;</span>
+ <span class="o">[</span>3<span class="o">]=</span>&gt;
+ string<span class="o">(</span>9<span class="o">)</span> <span class="s2">&quot;article-1&quot;</span>
+ <span class="o">[</span>4<span class="o">]=</span>&gt;
+ string<span class="o">(</span>9<span class="o">)</span> <span class="s2">&quot;article-2&quot;</span>
+ <span class="o">[</span>5<span class="o">]=</span>&gt;
+ string<span class="o">(</span>9<span class="o">)</span> <span class="s2">&quot;article-3&quot;</span>
+<span class="o">}</span>
+
+------------------------------
+TestModule Action One Finished
+****************************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="action-two">
+<h2>Action-two<a class="headerlink" href="#action-two" title="Permalink to this headline">¶</a></h2>
+<p>Muestra los actuales títulos de artículos. El comando utilizado para hacer una acción es como sigue:</p>
+<div class="highlight-bash"><div class="highlight"><pre>jrush testmodule action-two
+</pre></div>
+</div>
+<p>Después da el comando muestra los detalles del actual y títulos de los artículos.</p>
+</div>
+<div class="section" id="beneficios">
+<h2>beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Consultar los módulos de forma correcta.</li>
+<li>No caso sensible.</li>
+<li>Menos desperdiciador de tiempo.</li>
+<li>Más barato para actualizar en sitio simple.</li>
+<li>Última actualización está disponible</li>
+<li>apto para trabajar con Ubuntu y centOS.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Test module</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#comando-ayuda">comando Ayuda</a></li>
+<li><a class="reference internal" href="#parametros-alternativos">parámetros alternativos</a></li>
+<li><a class="reference internal" href="#opciones">Opciones</a></li>
+<li><a class="reference internal" href="#action-one">Action-one</a></li>
+<li><a class="reference internal" href="#action-two">Action-two</a></li>
+<li><a class="reference internal" href="#beneficios">beneficios</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="ssystemdetection_jrush.html"
+                        title="previous chapter">SystemDetection</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sversion_jrush.html"
+                        title="next chapter">Version</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/stestmodule_jrush.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="sversion_jrush.html" title="Version"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="ssystemdetection_jrush.html" title="SystemDetection"
+             >previous</a> |</li>
+        <li><a href="index.html">spanishkevell 1.0.1 documentation</a> &raquo;</li>
+          <li><a href="sjrush_main.html" >Jrush</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, 1.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>

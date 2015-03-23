@@ -12,3 +12,6 @@ Jrush
  sjconfiguration_jrush
  sjfeature_jrush
  sjuser_jrush
+ ssystemdetection_jrush
+ stestmodule_jrush
+ sversion_jrush
