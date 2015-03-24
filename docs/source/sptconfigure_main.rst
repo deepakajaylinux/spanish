@@ -665,6 +665,7 @@ Jugando con módulos PTConfigure
    ssshkeyinstall
    ssshkeystore
    sstandardtools
+   sstoryplayer
    ssudonopass
    ssvn
    ssystemdetection
