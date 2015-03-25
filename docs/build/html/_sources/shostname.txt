@@ -4,6 +4,7 @@ Hostname
 
 sinopsis
 ---------------
+
 Dado que las direcciones IP son bastante difíciles de recordar (y no son particularmente descriptiva), el Internet también permite al usuario especificar un ordenador por un nombre en lugar de una serie de números. Toda esta cadena se conoce como nombre de host del er comput. Hay dos opciones disponibles. Mostrar y Cambio. Mediante el uso de este módulo el usuario puede ver o modificar el nombre de host.
 
 comando Ayuda
@@ -83,6 +84,23 @@ Este módulo es un proceso perceptible para ver el nombre de host en ptconfigure
 
 Después de clave en el comando, se muestra el nombre de host.
 
+.. code-block:: bash
+
+ kevell@corp:/# ptconfigure hostname show
+
+ ******************************
+
+
+ Hostname Modifications:
+ --------------------------------------------
+
+ Hostname: Success
+ my-laptop
+
+
+ ------------------------------
+ Hostname Mods Finished
+ ******************************
 
 
 
