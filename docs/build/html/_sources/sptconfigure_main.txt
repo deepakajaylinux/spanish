@@ -570,6 +570,7 @@ Jugando con módulos PTConfigure
    sdevelopertools
    sdigitalocean
    sdnsify
+   sdocker
    sencryption
    senvironmentconfig
    sfile
@@ -592,6 +593,7 @@ Jugando con módulos PTConfigure
    sinstallpackage
    sintellij
    sinvoke
+   sjasmine
    sjava
    sjenkins
    sjenkinsplugins
@@ -658,6 +660,7 @@ Jugando con módulos PTConfigure
    sseleniumserver
    sservice
    ssftp
+   ssimpletest
    sskipfish
    ssshencrypt
    ssshharden
@@ -681,6 +684,7 @@ Jugando con módulos PTConfigure
    svnc
    svncpassword
    swireframesketcher
+   sxcache
    sxvfb
    szendserver
 

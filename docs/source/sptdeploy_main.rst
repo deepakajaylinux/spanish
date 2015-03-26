@@ -233,6 +233,7 @@ aquí, la pantalla indica la pantalla de todos los módulos disponibles bajo ptc
  sgitclone_deploy
  sgrafana_deploy
  shosteditor_deploy
+ sinvoke_deploy
  sjoomla_deploy
  slighttpdcontrol_deploy
  slogging_deploy
