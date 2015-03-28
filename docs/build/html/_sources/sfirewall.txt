@@ -115,6 +115,93 @@ Reglas Firewalls se pueden personalizar según sus necesidades, requisitos y niv
  |                      | rechazar.                                                 | policy=”deny”|                         |
  +----------------------+-----------------------------------------------------------+----------------------------------------+
 
+La representación gráfica para el comando allow, deny , rechazar y restablecimiento se enumeran a continuación ,
+
+
+.. code-block:: bash
+
+ kevell@corp:/# ptconfigure firewall allow --firewall-rule="ssh/tcp"
+
+ Rules updated
+ Rules updated (v6)
+ ******************************
+
+
+ Firewall Modifications:
+ --------------------------------------------
+
+ Firewall: Success
+
+ ------------------------------
+ Firewall Mods Finished
+ ******************************
+
+.. code-block:: bash
+
+
+ kevell@corp:/# ptconfigure firewall deny --firewall-rule="ssh/tcp"
+
+
+ Skipping adding existing rule
+ Skipping adding existing rule (v6)
+ ******************************
+
+
+ Firewall Modifications:
+ --------------------------------------------
+
+ Firewall: Success
+
+ ------------------------------
+ Firewall Mods Finished
+ ******************************
+
+.. code-block:: bash
+
+
+ kevell@corp:/# ptconfigure firewall reject --firewall-rule="ssh/tcp"
+
+ Rules updated
+ Rules updated (v6)
+ ******************************
+
+
+ Firewall Modifications:
+ --------------------------------------------
+
+ Firewall: Success
+
+ ------------------------------
+ Firewall Mods Finished
+ ******************************
+
+
+.. code-block:: bash
+
+
+ kevell@corp:/# ptconfigure firewall reset --firewall-rule="ssh/tcp"
+
+ Resetting all rules to installed defaults. Proceed with operation (y|n)? Backing up 'user.rules' to '/lib/ufw/user.rules.20150324_190113'
+ Backing up 'after.rules' to '/etc/ufw/after.rules.20150324_190113'
+ Backing up 'after6.rules' to '/etc/ufw/after6.rules.20150324_190113'
+ Backing up 'before6.rules' to '/etc/ufw/before6.rules.20150324_190113'
+ Backing up 'user6.rules' to '/lib/ufw/user6.rules.20150324_190113'
+ Backing up 'before.rules' to '/etc/ufw/before.rules.20150324_190113'
+ 
+ ******************************
+
+
+ Firewall Modifications:
+ --------------------------------------------
+
+ Firewall: Success
+
+ ------------------------------
+ Firewall Mods Finished
+ ******************************
+
+
+
 
 Beneficios
 --------------

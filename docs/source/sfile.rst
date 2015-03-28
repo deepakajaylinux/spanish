@@ -17,9 +17,47 @@ Ayuda Comando
 ----------------------
 
 Este comando ayuda a determinar el uso del módulo de archivo. El usuario se llega a saber acerca de las diferentes formas / formato para ejecutar este módulo. Este comando guía al usuario final a conocer el propósito de este comando. A continuación dado son el mando y la pantalla del mismo.
+
 .. code-block:: bash
         
 	ptconfigure file help
+
+
+.. code-block:: bash
+
+ kevell@corp:/# ptconfigure File help
+ ******************************
+
+
+  This command allows you to modify files or check their existence
+
+  File, file
+
+        - create
+        Create a new system file
+        example: ptconfigure file create --file="somename"
+
+        - delete
+        Delete a system file
+        example: ptconfigure file delete --file="somename"
+
+        - exists
+        Check the existence of a file
+        example: ptconfigure file exists --filename="somename"
+
+        - append
+        Append a line to a file
+        example: ptconfigure file append --filename="somename" --line="a line"
+
+        - should-have-line
+        Ensure that a file contains a particular line
+        example: ptconfigure file should-have-line --filename="somename" --line="a line"
+
+ ------------------------------
+ End Help
+ ******************************
+
+
 
 crear
 ------------
@@ -42,6 +80,26 @@ El siguiente comando dado para escribir los datos en el archive
            
 	ptconfigure file create –file="somename” --data="things to put in the file" 
 
+
+.. code-block:: bash
+
+ kevell@corp:/# ptconfigure file create --file="somename"
+
+ [Pharaoh Logging] [File] Creating File somename
+ File somename exists 
+ ******************************
+
+
+ File Modifications:
+ --------------------------------------------
+
+ File: Success
+
+ ------------------------------
+ File Mods Finished
+ ******************************
+
+
 borrar
 ----------
 
@@ -51,6 +109,29 @@ Cuando el usuario necesita para eliminar un archivo del sistema, el comando a co
 	
 		ptconfigure file delete --file="somename"
 
+.. code-block:: bash
+
+ kevell@corp:/# ptconfigure file delete --file="somename"
+
+ [Pharaoh Logging] [File] Deleting File somename
+ somename Deleted
+ File somename not exists 
+ ******************************
+
+
+ File Modifications:
+ --------------------------------------------
+
+ File: Success
+
+ ------------------------------
+ File Mods Finished
+ ******************************
+
+
+
+
+
 existe
 -----------
 
@@ -59,6 +140,28 @@ Cuando el usuario necesita para comprobar la existencia de un archivo, el siguie
 .. code-block:: bash
 
 		ptconfigure file exists --filename="somename"
+
+.. code-block:: bash
+
+ kevell@corp:/# ptconfigure file exists --filename="somename"
+
+ Enter File Path:
+ /home/kevells/Desktop/somename
+ File /home/kevells/Desktop/somename exists 
+ ******************************
+
+
+ File Modifications:
+ --------------------------------------------
+
+ File: Success
+
+ ------------------------------
+ File Mods Finished
+ ******************************
+
+
+
 
 anexar
 ------------
@@ -70,6 +173,31 @@ Cuando el usuario necesita para añadir una línea en un archivo, el comando a c
 		ptconfigure file append --filename="somename" --line="a line"
 
 * La opción de línea - puede insertar una línea que se adjunta
+
+.. code-block:: bash
+
+ kevell@corp:/# ptconfigure file append --filename="somename" --line="a line"
+
+ Enter File Path:
+ /home/kevells/Desktop/somename                             
+ Enter the input for append:
+ this is for test
+ [Pharaoh Logging] [File] Reading File /home/kevells/Desktop/somename
+ [Pharaoh Logging] [File] Writing File /home/kevells/Desktop/somename
+ ******************************
+
+
+ File Modifications:
+ --------------------------------------------
+
+ File: Success
+
+ ------------------------------
+ File Mods Finished
+ ******************************
+
+
+
 
 En caso de-tener-line
 ----------------------------

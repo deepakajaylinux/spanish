@@ -70,6 +70,31 @@ Para implementar esta función, el usuario tiene que especificar los siguientes 
 * Propietario del archivo cifrado
 * Grupo de archivos de cifrado
 
+
+.. code-block:: bash
+
+ kevell@corp:/# sudo ptconfigure encryption install --yes --unencrypted-data="/home/kevells/Desktop/graphs" --encryption-target-file="/home/kevells/Desktop/graphs" --encryption-key=/root/.ptconfigure/SSH/key --encryption-file-permissions="755" --encryption-file-owner="kevells" --encryption-file-group="kevells"
+
+ *******************************
+ *        Pharaoh Tools        *
+ *         Encryption !        *
+ *******************************
+ [Pharaoh Logging] Package php5-mcrypt from the Packager Apt is already installed, so not installing
+ ... All done!
+ *******************************
+ Thanks for installing , visit www.pharaohtools.com for more
+ ******************************
+
+
+ Single App Installer:
+ --------------------------------------------
+ Encryption: Success
+ ------------------------------
+ Installer Finished
+ ******************************
+
+
+
 Desinstalar
 ---------------
 

@@ -62,7 +62,7 @@ La captura de pantalla que figura a continuación explica visualmente sobre los 
 .. code-block:: bash
 
 
- kevell@corp:/# ptconfigure apacheconf install
+ kevell@corp:/# ptconfigure ApacheConf install
  Install Apache Conf? (Y/N) 
  y
  *******************************
@@ -70,29 +70,34 @@ La captura de pantalla que figura a continuación explica visualmente sobre los 
  *         Apache Conf!        *
  *******************************
  Set non-default value for LockFile? Default is ${APACHE_LOCK_DIR}/accept.lock (Y/N) 
-
+ y
+ What value for LockFile?
+ ${APACHE_LOCK_DIR}/accept.lock
  Set non-default value for PidFile? Default is ${APACHE_PID_FILE} (Y/N) 
-
+ y
+ What value for PidFile?
+ ${APACHE_PID_FILE}
  Set non-default value for Timeout? Default is 300 (Y/N) 
-
+ y
+ What value for Timeout?
+ 300
  Set non-default value for KeepAlive? Default is On (Y/N) 
-
+ y
+ What value for KeepAlive?
+ On
  Set non-default value for MaxKeepAliveRequests? Default is 100 (Y/N) 
-
+ y
+ What value for MaxKeepAliveRequests?
+ 100
  Set non-default value for KeepAliveTimeout? Default is 5 (Y/N) 
-
+ y
+ What value for KeepAliveTimeout?
+ 5
  ... All done!
  *******************************
  Thanks for installing , visit www.pharaohtools.com for more
  ******************************
-
-
- Single App Installer:
- --------------------------------------------
- ApacheConf: Success
- ------------------------------
- Installer Finished
- ******************************
+ 
 
 Opciones
 ------------

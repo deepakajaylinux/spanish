@@ -207,7 +207,7 @@ End Help
 <p>si se le da una entrada como Y, el módulo se instalan correctamente.</p>
 <p>También lanzará algunos comandos para especificar los valores no predeterminados para LockFile, PidFile, tiempo de espera, KeepAlive, MaxKeepAliveRequest, KeepAliveTimeout. Si el usuario da entrada como Y (Sí) se fijará automáticamente el valor predeterminado. Si el usuario da entrada como N (No), entonces se indagará acerca de los valores de usuario.</p>
 <p>La captura de pantalla que figura a continuación explica visualmente sobre los pasos y comandos consiste en la instalación.</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure apacheconf install
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure ApacheConf install
 Install Apache Conf? <span class="o">(</span>Y/N<span class="o">)</span>
 y
 *******************************
@@ -215,28 +215,32 @@ y
 *         Apache Conf!        *
 *******************************
 Set non-default value <span class="k">for </span>LockFile? Default is <span class="k">${</span><span class="nv">APACHE_LOCK_DIR</span><span class="k">}</span>/accept.lock <span class="o">(</span>Y/N<span class="o">)</span>
-
+y
+What value <span class="k">for </span>LockFile?
+<span class="k">${</span><span class="nv">APACHE_LOCK_DIR</span><span class="k">}</span>/accept.lock
 Set non-default value <span class="k">for </span>PidFile? Default is <span class="k">${</span><span class="nv">APACHE_PID_FILE</span><span class="k">}</span> <span class="o">(</span>Y/N<span class="o">)</span>
-
+y
+What value <span class="k">for </span>PidFile?
+<span class="k">${</span><span class="nv">APACHE_PID_FILE</span><span class="k">}</span>
 Set non-default value <span class="k">for </span>Timeout? Default is 300 <span class="o">(</span>Y/N<span class="o">)</span>
-
+y
+What value <span class="k">for </span>Timeout?
+300
 Set non-default value <span class="k">for </span>KeepAlive? Default is On <span class="o">(</span>Y/N<span class="o">)</span>
-
+y
+What value <span class="k">for </span>KeepAlive?
+On
 Set non-default value <span class="k">for </span>MaxKeepAliveRequests? Default is 100 <span class="o">(</span>Y/N<span class="o">)</span>
-
+y
+What value <span class="k">for </span>MaxKeepAliveRequests?
+100
 Set non-default value <span class="k">for </span>KeepAliveTimeout? Default is 5 <span class="o">(</span>Y/N<span class="o">)</span>
-
+y
+What value <span class="k">for </span>KeepAliveTimeout?
+5
 ... All <span class="k">done</span>!
 *******************************
 Thanks <span class="k">for </span>installing , visit www.pharaohtools.com <span class="k">for </span>more
-******************************
-
-
-Single App Installer:
---------------------------------------------
-ApacheConf: Success
-------------------------------
-Installer Finished
 ******************************
 </pre></div>
 </div>
