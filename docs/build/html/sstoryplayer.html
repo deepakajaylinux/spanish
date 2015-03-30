@@ -96,6 +96,7 @@
 <li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
 <li><a class="reference internal" href="#comando-ayuda">comando Ayuda</a></li>
 <li><a class="reference internal" href="#instalacion">Instalación</a></li>
+<li><a class="reference internal" href="#desinstalacion">desinstalación</a></li>
 <li><a class="reference internal" href="#beneficios">Beneficios</a></li>
 </ul>
 </li>
@@ -180,8 +181,7 @@
 <div class="highlight-bash"><div class="highlight"><pre>ptconfigure Storyplayer <span class="nb">help</span>
 </pre></div>
 </div>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure Storyplayer <span class="nb">help</span>
-
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure storyplayer <span class="nb">help</span>
 ******************************
 
 
@@ -190,8 +190,12 @@
  Storyplayer
 
        - install
-       Installs the latest GC Repo version of PHPUnit
-       example: ptconfigure storyplayer install
+       Install Storyplayer
+       example: cleopatra storyplayer install
+
+       - remove
+       Remove Storyplayer
+       example: cleopatra storyplayer uninstall
 
 ------------------------------
 End Help
@@ -574,6 +578,37 @@ Single App Installer:
 Storyplayer: Success
 ------------------------------
 Installer Finished
+</pre></div>
+</div>
+</div>
+<div class="section" id="desinstalacion">
+<h2>desinstalación<a class="headerlink" href="#desinstalacion" title="Permalink to this headline">¶</a></h2>
+<p>Si el usuario necesita para desinstalar módulo storyplayer en la máquina, el siguiente comando dado se ejecutará el proceso de desinstalación.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure storyplayer uninstall
+
+Uninstall Storyplayer? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+*******************************
+*        Pharaoh Tools        *
+*          Storyplayer         *
+*******************************
+Creating /tmp/ptconfigure-temp-script-32245879129.sh
+chmod 755 /tmp/ptconfigure-temp-script-32245879129.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-32245879129.sh Permissions
+Executing /tmp/ptconfigure-temp-script-32245879129.sh
+Temp File /tmp/ptconfigure-temp-script-32245879129.sh Removed
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for </span>installing , visit www.pharaohtools.com <span class="k">for </span>more
+******************************
+
+
+Single App Uninstaller:
+------------------------------
+Storyplayer: Success
+------------------------------
+Installer Finished
+******************************
 </pre></div>
 </div>
 </div>

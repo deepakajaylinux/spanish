@@ -601,7 +601,9 @@ Jugando con módulos PTConfigure
    sjetty
    sjmeter
    sjrush
+   skvm
    slighttpdserver
+   sloadrunner
    slogging 
    smediatools
    smemcached
@@ -611,6 +613,7 @@ Jugando con módulos PTConfigure
    smongodb
    smysqladmins
    smysqlserver
+   smysqlservergalera
    smysqltools
    snagiosserver
    snetbeans

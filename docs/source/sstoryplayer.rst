@@ -31,8 +31,8 @@ Este comando ayuda a determinar el uso de Storyplayer. El usuario llegará a sab
 
 .. code-block:: bash
 
- kevell@corp:/# ptconfigure Storyplayer help
 
+ kevell@corp:/# ptconfigure storyplayer help
  ******************************
 
 
@@ -41,12 +41,17 @@ Este comando ayuda a determinar el uso de Storyplayer. El usuario llegará a sab
   Storyplayer
 
         - install
-        Installs the latest GC Repo version of PHPUnit
-        example: ptconfigure storyplayer install
+        Install Storyplayer
+        example: cleopatra storyplayer install
+ 
+        - remove
+        Remove Storyplayer
+        example: cleopatra storyplayer uninstall
 
  ------------------------------
  End Help
  ******************************
+
 
 Instalación
 ----------------
@@ -430,6 +435,40 @@ Si el usuario necesita instalar el módulo storyplayer en la máquina, la contin
  Storyplayer: Success
  ------------------------------
  Installer Finished
+
+
+desinstalación
+----------------
+
+Si el usuario necesita para desinstalar módulo storyplayer en la máquina, el siguiente comando dado se ejecutará el proceso de desinstalación.
+
+.. code-block:: bash
+
+ kevell@corp:/# ptconfigure storyplayer uninstall
+
+ Uninstall Storyplayer? (Y/N) 
+ y
+ *******************************
+ *        Pharaoh Tools        *
+ *          Storyplayer         *
+ *******************************
+ Creating /tmp/ptconfigure-temp-script-32245879129.sh
+ chmod 755 /tmp/ptconfigure-temp-script-32245879129.sh 2>/dev/null
+ Changing /tmp/ptconfigure-temp-script-32245879129.sh Permissions
+ Executing /tmp/ptconfigure-temp-script-32245879129.sh
+ Temp File /tmp/ptconfigure-temp-script-32245879129.sh Removed
+ ... All done!
+ *******************************
+ Thanks for installing , visit www.pharaohtools.com for more
+ ******************************
+
+
+ Single App Uninstaller:
+ ------------------------------
+ Storyplayer: Success
+ ------------------------------
+ Installer Finished
+ ******************************
 
 
 
