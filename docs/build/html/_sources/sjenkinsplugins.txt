@@ -52,25 +52,26 @@ La captura de pantalla de la orden anterior se enumeran a continuación,
 
 .. code-block:: bash
 
- kevell@corp:/# ptconfigure JenkinsPlugins install
+
+ kevell@corp:/# ptconfigure jenkins-plugins install
  Install Jenkins Plugins? (Y/N) 
- Y
+ y
  *******************************
  *        Pharaoh Tools        *
  *         Jenkns Plgs!        *
  *******************************
- Creating /tmp/ptconfigure-temp-script-80223312434.sh
- chmod 755 /tmp/ptconfigure-temp-script-80223312434.sh 2>/dev/null
- Changing /tmp/ptconfigure-temp-script-80223312434.sh Permissions
- Executing /tmp/ptconfigure-temp-script-80223312434.sh
+ Creating /tmp/ptconfigure-temp-script-71115535759.sh
+ chmod 755 /tmp/ptconfigure-temp-script-71115535759.sh 2>/dev/null
+ Changing /tmp/ptconfigure-temp-script-71115535759.sh Permissions
+ Executing /tmp/ptconfigure-temp-script-71115535759.sh
  Cloning into 'jplugins'...
  remote: Counting objects: 39, done.
- remote: Total 39 (delta 0), reused 0 (delta 0)
+ remote: Total 39 (delta 0), reused 0 (delta 0), pack-reused 39
  Unpacking objects: 100% (39/39), done.
  Checking connectivity... done.
- chown: invalid user: â€˜jenkinsâ€™
- jenkins: unrecognized service
- Temp File /tmp/ptconfigure-temp-script-80223312434.sh Removed
+ * Restarting Jenkins Continuous Integration Server jenkins
+   ...done.
+ Temp File /tmp/ptconfigure-temp-script-71115535759.sh Removed
  ... All done!
  *******************************
  Thanks for installing , visit www.pharaohtools.com for more
@@ -83,6 +84,7 @@ La captura de pantalla de la orden anterior se enumeran a continuación,
  ------------------------------
  Installer Finished
  ******************************
+
 
 Opciones
 -----------

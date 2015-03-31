@@ -588,6 +588,7 @@ Jugando con módulos PTConfigure
    sgitlab
    sgittools
    shaproxy
+   shardycssregression
    shhvm
    shostname
    sinstallpackage
@@ -601,6 +602,7 @@ Jugando con módulos PTConfigure
    sjetty
    sjmeter
    sjrush
+   sjsunit
    skvm
    slighttpdserver
    sloadrunner
@@ -660,6 +662,7 @@ Jugando con módulos PTConfigure
    srubyrvm
    srubysystem
    sruncommand
+   ssaucelab
    sseleniumserver
    sservice
    ssftp
