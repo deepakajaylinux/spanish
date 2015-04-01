@@ -587,6 +587,7 @@ Jugando con módulos PTConfigure
    sgitkeysafe
    sgitlab
    sgittools
+   sgo
    shaproxy
    shardycssregression
    shhvm
@@ -641,6 +642,7 @@ Jugando con módulos PTConfigure
    sphpedit
    sphpmodules
    sphpmd 
+   sphpspec
    sphpssh
    sphpstrom
    sphpunit
@@ -693,7 +695,7 @@ Jugando con módulos PTConfigure
    sxcache
    sxvfb
    szendserver
-
+   szendstudio
 
 
 

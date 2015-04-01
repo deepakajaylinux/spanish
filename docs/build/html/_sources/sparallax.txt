@@ -95,7 +95,7 @@ El comando utilizado para declarar las tareas múltiples en tiempo de ejecución
 
 .. code-block:: bash
 
-	ptconfigure parallax cli
+	ptconfigure parallax cli child
 
 Después de introducir el comando anterior se produce el siguiente proceso:
 
@@ -119,7 +119,7 @@ Por último, los resultados de las tareas realizadas, junto con su estado se def
 .. code-block:: bash
 
    
-	kevell@corp:/# ptconfigure parallax cli 
+	kevell@corp:/# ptconfigure parallax cli child
 	
 	Run Commands in Parallel? (Y/N) 
 	y
