@@ -21,12 +21,31 @@ Después de entradas el comando anterior, comienza a funcionar para actualizar o
 
 .. code-block:: bash
 
+
+ kevell@corp:/# ptconfigure oracle help
+
+ ******************************
+
+
+  This command allows you to update Oracle.
+
+  oracle, Ora-cle, Oracle
+
+        - install
+        Installs the latest version of Zephir
+        example: ptconfigure oracle install
+
+ ------------------------------
+ End Help
+ ******************************
+
+
 instalación
 ------------------
 
 La instalación incluye la instalación de Oracle requiere para hacer la instalación en una versión actualizada. Es un proceso de manifiesto para instalar el módulo de Oracle bajo ptconfigure Oracle con sólo usar la orden dada a continuación,
 
-.. Code-block:: bash
+.. code-block:: bash
 
 	ptconfigure Oracle Install
 

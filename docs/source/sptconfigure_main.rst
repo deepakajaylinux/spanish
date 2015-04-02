@@ -584,6 +584,7 @@ Jugando con módulos PTConfigure
    sgenerator
    sgimp
    sgitbucket
+   sgitcommand
    sgitkeysafe
    sgitlab
    sgittools
@@ -696,7 +697,7 @@ Jugando con módulos PTConfigure
    sxvfb
    szendserver
    szendstudio
-
+   szephir
 
 
    

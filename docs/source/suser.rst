@@ -29,6 +29,7 @@ La captura de pantalla para el comando anterior se enumeran a continuación,
  kevell@corp:/# ptconfigure user help
  ******************************
  This command allows you to modify create or modify users
+
  User, user
 
        - create
@@ -64,7 +65,7 @@ La captura de pantalla para el comando anterior se enumeran a continuación,
  ******************************
 
 
-crear
+Create
 ---------
 
 Cuando el usuario necesita para crear una nueva cuenta de usuario del sistema, el comando a continuación se indica se ejecutará el proceso.
@@ -73,7 +74,25 @@ Cuando el usuario necesita para crear una nueva cuenta de usuario del sistema, e
 
 	ptconfigure user create --username="somename"
 
-quitar
+.. code-block:: bash
+
+ kevell@corp:/# ptconfigure user create
+ 
+ Enter Username:
+ kevell
+ ******************************
+
+
+ User Modifications:
+ --------------------------------------------
+
+ User: 1
+
+ ------------------------------
+ User Mods Finished
+ ******************************
+
+Remove
 -------------
 
 Cuando el usuario necesita eliminar una cuenta de usuario del sistema, el comando a continuación se indica se ejecutará el proceso.
@@ -82,7 +101,28 @@ Cuando el usuario necesita eliminar una cuenta de usuario del sistema, el comand
 
 	ptconfigure user remove --username="somename"
 
-Set-contraseña
+.. code-block:: bash
+
+
+ kevell@corp:/# ptconfigure user remove
+
+ Enter Username:
+ kevell
+ ******************************
+
+
+ User Modifications:
+ --------------------------------------------
+
+ User: 1
+
+ ------------------------------
+ User Mods Finished
+ ******************************
+
+
+
+Set-Password
 ------------------
 
 Cuando el usuario necesita para establecer la contraseña de un usuario del sistema, el comando a continuación se indica se ejecutará el proceso.
@@ -91,7 +131,28 @@ Cuando el usuario necesita para establecer la contraseña de un usuario del sist
 
 	ptconfigure user set-password --username="somename" --new-password="somepassword"
 
-existe
+.. code-block:: bash
+
+ kevell@corp:/# ptconfigure user set-password
+
+ Enter Username:
+ kevell
+ Enter New Password:
+ kevell
+ ******************************
+
+
+ User Modifications:
+ --------------------------------------------
+
+ User: 
+
+ ------------------------------
+ User Mods Finished
+ ******************************
+
+
+Exists
 --------
 
 Cuando el usuario necesita para comprobar la existencia de un usuario, el comando a continuación se indica se ejecutará el proceso.
@@ -100,7 +161,47 @@ Cuando el usuario necesita para comprobar la existencia de un usuario, el comand
 
 	ptconfigure user exists --username="somename"
 
-Mostrar grupos
+.. code-block:: bash
+
+
+ kevell@corp:/# ptconfigure user exists
+
+ Enter Username:
+ kevell
+ ****************************** 
+
+
+ User Modifications:
+ --------------------------------------------
+
+ User: Success = User Exists
+ User Name: 
+
+ ------------------------------
+ User Mods Finished
+ ******************************
+
+.. code-block:: bash
+
+
+ kevell@corp:/# ptconfigure user exists
+
+ Enter Username:
+ karuna
+ ******************************
+
+
+ User Modifications:
+ --------------------------------------------
+
+ User: Failure - User Does Not Exist
+ User Name: 
+
+ ------------------------------
+ User Mods Finished
+ ******************************
+
+Show Groups
 ------------------
 
 Cuando el usuario necesita para mostrar grupos a los que pertenece un usuario, el comando a continuación se indica se ejecutará el proceso.
@@ -109,7 +210,28 @@ Cuando el usuario necesita para mostrar grupos a los que pertenece un usuario, e
 
 	ptconfigure user show-groups --username="somename"
 
-Add-a grupo
+.. code-block:: bash
+
+ kevell@corp:/# ptconfigure user show-groups
+
+ Enter Username:
+ kevell
+ ******************************
+
+
+ User Modifications:
+ --------------------------------------------
+
+ User: kevell
+
+
+ ------------------------------
+ User Mods Finished
+ ******************************
+
+
+
+Add to group
 ---------------
 
 Cuando el usuario necesita añadir usuario a un grupo, el siguiente comando dado se ejecutará el proceso.
@@ -118,7 +240,26 @@ Cuando el usuario necesita añadir usuario a un grupo, el siguiente comando dado
 
 	ptconfigure user add-to-group --username="somename" --groupname="somegroupname"
 
-Remove-de-grupo
+.. code-block:: bash
+
+ kevell@corp:/# ptconfigure user add-to-group --username="kevell" --groupname="kumar"
+
+ Enter New Password:
+ kevell
+ ******************************
+
+
+ User Modifications:
+ --------------------------------------------
+
+ User: 1
+
+ ------------------------------
+ User Mods Finished
+ ******************************
+
+
+Remove from Group
 --------------------------
 
 Cuando el usuario necesita para eliminar el usuario de un grupo, el siguiente comando dado se ejecutará el proceso.
@@ -126,6 +267,29 @@ Cuando el usuario necesita para eliminar el usuario de un grupo, el siguiente co
 .. code-block:: bash
 
 	ptconfigure user remove-from-group --username="somename" --groupname="somegroupname"
+
+.. code-block:: bash
+
+
+ kevell@corp:/# ptconfigure user remove-from-group --username="kevell" --groupname="kumar"
+
+ Enter New Password:
+ kevell
+
+ /usr/sbin/deluser: You may not remove the user from their primary group.
+ [Pharaoh Logging] [User] Removing User kevell from the Group kevell did not execute correctly
+ ******************************
+
+
+ User Modifications:
+ --------------------------------------------
+
+ User: 
+
+ ------------------------------
+ User Mods Finished
+ ******************************
+
 
 Parámetro Alternativa
 -----------------------------
