@@ -684,6 +684,7 @@ Jugando con módulos PTConfigure
    steamcity
    stemplating
    stomcat
+   stracelytics
    subuntucompiler
    suser
    svarnish
