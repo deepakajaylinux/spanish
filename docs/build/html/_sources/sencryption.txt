@@ -73,13 +73,26 @@ Para implementar esta función, el usuario tiene que especificar los siguientes 
 
 .. code-block:: bash
 
- kevell@corp:/# sudo ptconfigure encryption install --yes --unencrypted-data="/home/kevells/Desktop/graphs" --encryption-target-file="/home/kevells/Desktop/graphs" --encryption-key=/root/.ptconfigure/SSH/key --encryption-file-permissions="755" --encryption-file-owner="kevells" --encryption-file-group="kevells"
-
+ kevell@corp# ptconfigure encryption install
+ Install Encryption Functionality? (Y/N) 
+ y
  *******************************
  *        Pharaoh Tools        *
  *         Encryption !        *
  *******************************
  [Pharaoh Logging] Package php5-mcrypt from the Packager Apt is already installed, so not installing
+ Enter either a filepath or raw data to encrypt
+ /home/kevell/Desktop/test
+ Enter output file path:
+ /home/kevell/Desktop/tester
+ Enter Encryption Key
+ 123
+ Enter permissions for output file (Empty is okay):
+ 
+ Enter Owner for output file (Empty is okay):
+
+ Enter Group for output file (Empty is okay):
+
  ... All done!
  *******************************
  Thanks for installing , visit www.pharaohtools.com for more
@@ -92,7 +105,6 @@ Para implementar esta función, el usuario tiene que especificar los siguientes 
  ------------------------------
  Installer Finished
  ******************************
-
 
 
 Desinstalar
@@ -113,6 +125,42 @@ Para implementar esta función, el usuario tiene que especificar los siguientes 
 * Permiso de archivo cifrado
 * Propietario del archivo cifrado
 * Grupo de archivos de cifrado
+
+
+.. code-block:: bash
+
+ kevell@corp:/# ptconfigure encryption uninstall
+ Uninstall Encryption Functionality? (Y/N) 
+ y
+ *******************************
+ *        Pharaoh Tools        *
+ *         Encryption !        *
+ *******************************
+ [Pharaoh Logging] Package php5-mcrypt from the Packager Apt is already installed, so not installing
+ Enter either a filepath or raw data to decrypt
+ /home/kevell/Desktop/tester
+ Enter output file path:
+ /home/kevell/Desktop/testing
+ Enter Encryption Key
+ 123
+ Enter permissions for output file (Empty is okay):
+ 
+ Enter Owner for output file (Empty is okay):
+
+ Enter Group for output file (Empty is okay):
+
+ ... All done!
+ *******************************
+ Thanks for installing , visit www.pharaohtools.com for more
+ ******************************
+
+
+ Single App Uninstaller:
+ ------------------------------
+ Encryption: Success
+ ------------------------------
+ Installer Finished
+ ******************************
 
 
 parámetros alternativos
