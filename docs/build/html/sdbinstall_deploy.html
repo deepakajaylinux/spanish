@@ -95,8 +95,9 @@
 <li><a class="reference internal" href="#">DBInstall</a><ul>
 <li><a class="reference internal" href="#sinopsis">Sinopsis</a></li>
 <li><a class="reference internal" href="#ayuda-comando">Ayuda Comando</a></li>
-<li><a class="reference internal" href="#instalacion">instalación</a></li>
-<li><a class="reference internal" href="#gota">gota</a></li>
+<li><a class="reference internal" href="#instalation">Instalation</a></li>
+<li><a class="reference internal" href="#save">Save</a></li>
+<li><a class="reference internal" href="#drop">Drop</a></li>
 <li><a class="reference internal" href="#parametro-alternativa">Parámetro Alternativa</a></li>
 <li><a class="reference internal" href="#beneficios">Beneficios</a></li>
 </ul>
@@ -214,49 +215,109 @@ End Help
 </pre></div>
 </div>
 </div>
-<div class="section" id="instalacion">
-<h2>instalación<a class="headerlink" href="#instalacion" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="instalation">
+<h2>Instalation<a class="headerlink" href="#instalation" title="Permalink to this headline">¶</a></h2>
 <p>Cuando el usuario tiene que instalar, el usuario puede ejecutar los siguientes comandos para DBIstall. El sistema ejecutará el proceso de instalación.</p>
 <div class="highlight-bash"><div class="highlight"><pre>ptdeploy dbinstall install
 </pre></div>
 </div>
-<p>El sistema pide el anfitrión Mysql, Pulse Intro para utilizar el host predeterminado.</p>
-<div class="highlight-bash"><div class="highlight"><pre>What&#39;s the Mysql Host? Enter for 127.0.0.1
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy DBInstall install
+Do you want to install a database? (Y/N)
+y
+What&#39;s the Mysql Host? Enter for 127.0.0.1
+
+What&#39;s the MySQL Admin User?
+
+You must enter a value. Please try again.
+What&#39;s the MySQL Admin User?
+
+You must enter a value. Please try again.
+What&#39;s the MySQL Admin User?
+root
+What&#39;s the MySQL Admin Password?
+root
+What&#39;s the application DB User?
+(0) **CREATE NEW USER**
+(1) phpci
+(2) debian-sys-maint
+(3) phpci
+(4) phpmyadmin
+1
+What&#39;s the application DB Password?
+phpci_pass
+What&#39;s the application DB Name?
+Current Db&#39;s are:
+hps
+phpci
+phpmyadmin
+
+phpci
+Database script executed
+**************************************
+Seems Fine...Database Actions Finished
+**************************************
 </pre></div>
 </div>
-<p>A continuación, el sistema pedirá usuario Mysql administración, el nombre de usuario será &#8220;root&#8221; ?? y la contraseña del administrador de MySQL.</p>
-<div class="highlight-bash"><div class="highlight"><pre>What<span class="s1">&#39;s the MySQL Admin User?</span>
-<span class="s1">root</span>
-<span class="s1">What&#39;</span>s the MySQL Admin Password?
-123456
+</div>
+<div class="section" id="save">
+<h2>Save<a class="headerlink" href="#save" title="Permalink to this headline">¶</a></h2>
+<p>Cuando el usuario necesita para salvar a la base de datos para un proyecto, el siguiente comando dado se ejecutará el proceso.</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy DBInstall save
 </pre></div>
 </div>
-<p>A continuación, el sistema pide el usuario de la aplicación DB.
-.. code-block:: bash</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy DBInstall save
+Do you want to save a database? (Y/N)
+y
+What&#39;s the Mysql Host? Enter for 127.0.0.1
+
+What&#39;s the MySQL Admin User?
+root
+What&#39;s the MySQL Admin Password?
+root
+What&#39;s the application DB Name?
+Current Db&#39;s are:
+asdf
+hps
+phpci
+
+asdf
+Cannot connect with these details. Sure you want to continue? (Y/N)
+y
+Exporting DB to /opt/db/database.sql
+Database Dumping...
+**************************************
+Seems Fine...Database Actions Finished
+**************************************
+</pre></div>
 </div>
-<div class="section" id="gota">
-<h2>gota<a class="headerlink" href="#gota" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="drop">
+<h2>Drop<a class="headerlink" href="#drop" title="Permalink to this headline">¶</a></h2>
 <p>Cuando el usuario necesita para dejar la base de datos para un proyecto, el siguiente comando dado se ejecutará el proceso.</p>
 <div class="highlight-bash"><div class="highlight"><pre>ptdeploy dbinstall drop
 </pre></div>
 </div>
-<p>Antes de la ejecución, el sistema pide la confirmación para continuar, si desea continuar enter &#8216;Y&#8217;, si no entran en &#8216;N&#8217;.</p>
-<div class="highlight-bash"><div class="highlight"><pre>
-</pre></div>
-</div>
-<p>El sistema pide el anfitrión Mysql, Pulse Intro para utilizar el host predeterminado.</p>
-<div class="highlight-bash"><div class="highlight"><pre>What&#39;s the Mysql Host? Enter for 127.0.0.1
-</pre></div>
-</div>
-<p>A continuación, el sistema pedirá usuario Mysql administración, el nombre de usuario será &#8220;root&#8221; ?? y la contraseña del administrador de MySQL.</p>
-<div class="highlight-bash"><div class="highlight"><pre>What<span class="s1">&#39;s the MySQL Admin User?</span>
-<span class="s1">root</span>
-<span class="s1">What&#39;</span>s the MySQL Admin Password?
-123456
-</pre></div>
-</div>
-<p>A continuación, el sistema pide el usuario de la aplicación DB.</p>
-<div class="highlight-bash"><div class="highlight"><pre>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy db-install drop
+
+Do you want to perform drop actions <span class="o">(</span>user/db<span class="o">)</span>? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+Do you want to drop a database? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+What<span class="s1">&#39;s the Mysql Host? Enter for 127.0.0.1</span>
+
+<span class="s1">What&#39;</span>s the MySQL Admin User?
+root
+What<span class="s1">&#39;s the MySQL Admin Password?</span>
+<span class="s1">root123</span>
+<span class="s1">What&#39;</span>s the application DB Name?
+<span class="o">(</span>0<span class="o">)</span> karuna
+<span class="o">(</span>1<span class="o">)</span> test1
+<span class="o">(</span>2<span class="o">)</span> test2
+2
+Database test2 dropped
+**************************************
+Seems Fine...Database Actions Finished
+**************************************
 </pre></div>
 </div>
 </div>
