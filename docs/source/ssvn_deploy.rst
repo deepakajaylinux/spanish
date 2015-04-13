@@ -99,6 +99,13 @@ La captura de pantalla siguiente muestra gráficamente acerca del proceso y el t
 .. code-block:: bash
 
 
+ kevell@corp:/# ptdeploy  svn co --repository-url="http://core.svn.wordpress.org/trunk" --custom-clone-dir="/opt/"
+ Perform a clone/download of files? (Y/N) 
+ y
+ Also change permissions/owner? (Y/N) 
+ n
+ View Template SvnView.tpl.php for  Not Found
+
 
 
 Beneficios
