@@ -226,6 +226,7 @@ aquí, la pantalla indica la pantalla de todos los módulos disponibles bajo ptc
  sapachevhosteditor_deploy
  sappsettings_deploy
  sautopilot_deploy
+ sbuilderfyer_deploy
  sdapperfy_deploy
  sdbconfigure_deploy
  sdbinstall_deploy

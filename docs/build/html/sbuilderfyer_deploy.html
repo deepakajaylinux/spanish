@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Builderfyer &mdash; KEVELL 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="KEVELL 0.1 documentation" href="index.html" />
+    <link rel="up" title="PTDeploy" href="sptdeploy_main.html" />
+    <link rel="next" title="Dapperfy" href="sdapperfy_deploy.html" />
+    <link rel="prev" title="Autopilot" href="sautopilot_deploy.html" />
+
+
+<script src="_static/labibi.js"></script>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16853172-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">KEVELL</a>
+<!--        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>-->
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="sjrush_main.html">Jrush</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sptconfigure_main.html">PTConfigure</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="sptdeploy_main.html">PTDeploy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spttest_main.html">PTTest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sptvirtualize_main.html">PTVirtualize</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Builderfyer</a><ul>
+<li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
+<li><a class="reference internal" href="#ayuda-comando">Ayuda Comando</a></li>
+<li><a class="reference internal" href="#manual-production">manual-production</a></li>
+<li><a class="reference internal" href="#continuos-staging-wordpress">Continuos-staging Wordpress</a></li>
+<li><a class="reference internal" href="#continuous-staging-drupal">Continuous-staging Drupal</a></li>
+<li><a class="reference internal" href="#continuous-staging-joomla">Continuous-staging Joomla</a></li>
+<li><a class="reference internal" href="#parametros-alternativos">parámetros alternativos</a></li>
+<li><a class="reference internal" href="#beneficios">Beneficios</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li><a href="sautopilot_deploy.html"
+         title="Previous Chapter: Autopilot">&laquo; Autopilot</a></li>
+  <li><a href="sdapperfy_deploy.html"
+         title="Next Chapter: Dapperfy">Dapperfy &raquo;</a></li>
+              
+            
+            
+            
+            
+<!--              <li>
+<div id="sourcelink">
+  <a href="_sources/sbuilderfyer_deploy.txt"
+     rel="nofollow">Source</a>
+</div></li>-->
+            
+  <li><a href="http://testpage.readthedocs.org">English</a></li>
+   <li><a href="http://kevellgerman.readthedocs.org">Deutsch</a></li>
+    <li><a href="http://kevelljapanese.readthedocs.org">日本人</a></li>
+    <li><a href="http://kevellfrench.readthedocs.org">français</a></li>
+     <li><a href="http://kevellfrench.readthedocs.org">spanish</a></li>
+      </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="sjrush_main.html">Jrush</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sptconfigure_main.html">PTConfigure</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="sptdeploy_main.html">PTDeploy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spttest_main.html">PTTest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sptvirtualize_main.html">PTVirtualize</a></li>
+</ul>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  
+  <div class="section" id="builderfyer">
+<h1>Builderfyer<a class="headerlink" href="#builderfyer" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sinopsis">
+<h2>sinopsis<a class="headerlink" href="#sinopsis" title="Permalink to this headline">¶</a></h2>
+<p>Builderfyer ofrece al usuario crear algunos pilotos automáticos estándar para su proyecto. En otras palabras builderfy le proporciona una manera de implementar los trabajos de construcción a Jenkins que están configuradas para su proyecto.</p>
+</div>
+<div class="section" id="ayuda-comando">
+<h2>Ayuda Comando<a class="headerlink" href="#ayuda-comando" title="Permalink to this headline">¶</a></h2>
+<p>El comando de ayuda es una breve y así como abstracto interesante para el usuario. Proporciona información sobre su principal papel , los detalles de parámetros alternativos que pueden ser utilizados en las declaraciones. La sintaxis utilizada para la declaración de opción de ayuda se da a continuación ,</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy builderfy <span class="nb">help</span>
+</pre></div>
+</div>
+<p>La representación gráfica de la orden anterior se enumeran a continuación ,</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy builderfy help
+******************************
+
+
+ This is a default Module and provides you a way to deploy build jobs to jenkins that are configured for your project.
+
+ Builderfy, builderfy
+
+       - developer
+       Create a developers build for this project
+       example: ptdeploy builderfy developer
+       example: ptdeploy builderfy developer
+                   --yes
+                   --guess (optional)
+                   --project-description=&quot;A description for the project&quot;
+                   --github-url=&quot;http://www.github.com/phpengine/ptdeploy&quot;
+                   --source-branch-spec=&quot;origin/master&quot; # guess will assume origin/master
+                   --source-scm-url=&quot;/var/www/application&quot; # guess will assume the current directory
+                   --days-to-keep=&quot;10&quot; # guess will assume -1 (to ignore this value)
+                   --num-to-keep=&quot;100&quot; # guess will assume 15
+                   --autopilot-install=&quot;/path/to/installer/autopilot&quot; # guess will assume &quot;build/config/ptdeploy/autopilots/autopilot-dev-
+jenkins-install.php&quot;
+                   --autopilot-uninstall=&quot;/path/to/uninstaller/autopilot&quot; # guess will assume &quot;build/config/ptdeploy/autopilots/autopilot-dev-
+jenkins-uninstall.php&quot;
+                   --target-scm-url=&quot;http://www.github.com/phpengine/ptdeploy&quot; #  guess will use your github url
+                   --target-branch=&quot;master&quot; # guess will default to master
+
+       - manual-staging
+       Create a build which will manually deploy to staging and optionally test this project.
+       example: ptdeploy builderfy manual-staging
+
+       - continuous-staging
+       Create a build which will test and automatically deploy to staging for this project, triggered by SCM Changes.
+       example: ptdeploy builderfy continuous-staging
+
+       - manual-production
+       Create a build which will manually deploy to production for this project. It deploys straight to production, so
+       will not test first.
+       example: ptdeploy builderfy manual-staging
+
+       - continuous-staging-to-production
+       Create a continuous build job for this project, which will automatically deploy and test SCM Changes to the
+       staging server, and upon successful testing will also deploy those changes to production.
+       example: ptdeploy builderfy continuous-staging-to-production
+       ptdeploy builderfy continuous --yes --jenkins-home=&quot;/var/lib/jenkins&quot; --target-job-name=&quot;my-project-continuous&quot; --project-
+description=&quot;This is the Continuous Delivery build for My Project&quot; --primary-scm-url=&quot;http://146.185.129.66:8080/git/root/first-pharaoh-
+cd.git&quot; --source-branch-spec=&quot;origin/master&quot; --source-scm-url=&quot;http://146.185.129.66:8080/git/root/first-pharaoh-cd.git&quot; --days-to-keep=&quot;-1&quot;
+--amount-to-keep=&quot;10&quot; --autopilot-test-invoke-install-file=&quot;build/config/ptdeploy/autopilots/tiny-staging-invoke-code-no-dbconf.php&quot; --
+autopilot-prod-invoke-install-file=&quot;build/config/ptdeploy/autopilots/tiny-prod-invoke-code-no-dbconf.php&quot; --error-
+email=&quot;phpengine@hotmail.co.uk&quot; --only-autopilots
+
+       also --no-autopilots to just install the build
+
+
+--------------
+ Drupal Module:
+
+ The Drupal module extends Builderfy by providing Templates for both the build and the autopilot to execute them from
+
+ This module adds the &#39;drupal&#39; action to builderfy and will let you produce autopilots for it are tailored to Drupal.
+
+ // builderfy - create templates to install build
+ sudo ptdeploy builderfy drupal --yes --jenkins-home=&quot;/var/lib/jenkins&quot; --target-job-name=&quot;my-project-continuous&quot; --project-description=&quot;This
+is the Continuous Delivery build for My Project&quot; --primary-scm-url=&quot;http://146.185.129.66:8080/git/root/first-pharaoh-cd.git&quot; --source-branch-
+spec=&quot;origin/master&quot; --source-scm-url=&quot;http://146.185.129.66:8080/git/root/first-pharaoh-cd.git&quot; --days-to-keep=&quot;-1&quot; --amount-to-keep=&quot;10&quot; --
+autopilot-test-invoke-install-file=&quot;build/config/ptdeploy/autopilots/tiny-staging-invoke-code-no-dbconf.php&quot; --autopilot-prod-invoke-install-
+file=&quot;build/config/ptdeploy/autopilots/tiny-prod-invoke-code-no-dbconf.php&quot; --error-email=&quot;phpengine@hotmail.co.uk&quot; --only-autopilots
+
+ // execute the build creator - you&#39;ll be using your jenkins/build environment here
+ ptdeploy autopilot execute build/config/ptdeploy/builderfy/autopilots/*environment-name*-drupal-invoke-continuous.php
+
+--------------
+ Joomla Module:
+
+ The Joomla module extends Builderfy by providing Templates for both the build and the autopilot to execute them from
+
+ This module adds the &#39;joomla&#39; action to builderfy and will let you produce autopilots for it are tailored to Joomla.
+
+ // builderfy - create templates to install build
+ sudo ptdeploy builderfy joomla --yes --jenkins-home=&quot;/var/lib/jenkins&quot; --target-job-name=&quot;my-project-continuous&quot; --project-description=&quot;This
+is the Continuous Delivery build for My Project&quot; --primary-scm-url=&quot;http://146.185.129.66:8080/git/root/first-pharaoh-cd.git&quot; --source-branch-
+spec=&quot;origin/master&quot; --source-scm-url=&quot;http://146.185.129.66:8080/git/root/first-pharaoh-cd.git&quot; --days-to-keep=&quot;-1&quot; --amount-to-keep=&quot;10&quot; --
+autopilot-test-invoke-install-file=&quot;build/config/ptdeploy/autopilots/tiny-staging-invoke-code-no-dbconf.php&quot; --autopilot-prod-invoke-install-
+file=&quot;build/config/ptdeploy/autopilots/tiny-prod-invoke-code-no-dbconf.php&quot; --error-email=&quot;phpengine@hotmail.co.uk&quot; --only-autopilots
+
+ // execute the build creator - you&#39;ll be using your jenkins/build environment here
+ ptdeploy autopilot execute build/config/ptdeploy/builderfy/autopilots/*environment-name*-joomla-invoke-continuous.php
+
+--------------
+ Wordpress Module:
+
+ The Wordpress module extends Builderfy by providing Templates for both the build and the autopilot to execute them from
+
+ This module adds the &#39;wordpress&#39; action to builderfy and will let you produce autopilots for it are tailored to Wordpress.
+
+ // builderfy - create templates to install build
+ sudo ptdeploy builderfy wordpress --yes --jenkins-home=&quot;/var/lib/jenkins&quot; --target-job-name=&quot;my-project-continuous&quot; --project-
+description=&quot;This is the Continuous Delivery build for My Project&quot; --primary-scm-url=&quot;http://146.185.129.66:8080/git/root/first-pharaoh-
+cd.git&quot; --source-branch-spec=&quot;origin/master&quot; --source-scm-url=&quot;http://146.185.129.66:8080/git/root/first-pharaoh-cd.git&quot; --days-to-keep=&quot;-1&quot;
+--amount-to-keep=&quot;10&quot; --autopilot-test-invoke-install-file=&quot;build/config/ptdeploy/autopilots/tiny-staging-invoke-code-no-dbconf.php&quot; --
+autopilot-prod-invoke-install-file=&quot;build/config/ptdeploy/autopilots/tiny-prod-invoke-code-no-dbconf.php&quot; --error-
+email=&quot;phpengine@hotmail.co.uk&quot; --only-autopilots
+
+ // execute the build creator - you&#39;ll be using your jenkins/build environment here
+ ptdeploy autopilot execute build/config/ptdeploy/builderfy/autopilots/*environment-name*-wordpress-invoke-continuous.php
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="manual-production">
+<h2>manual-production<a class="headerlink" href="#manual-production" title="Permalink to this headline">¶</a></h2>
+<p>La opción manual builderfy producción se utiliza para crear una versión que se desplegará de forma manual a la producción para este proyecto. Se despliega directamente a la producción , por lo que no pondrá a prueba primero . La orden para la producción manual se da a continuación ,</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy builderfy manual-production
+</pre></div>
+</div>
+<p>La representación gráfica de la orden anterior se enumeran a continuación ,</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevellcorp:/# ptdeploy builderfy manual-production
+Install Builderfy? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+*******************************
+*   Golden Contact Computing  *
+*           Builderfy!          *
+*******************************
+Enter the data handling <span class="nb">type</span>
+<span class="o">(</span>0<span class="o">)</span> code
+<span class="o">(</span>1<span class="o">)</span> replication
+<span class="o">(</span>2<span class="o">)</span> capture
+0
+checkWhat is your Jenkins home? Found <span class="s2">&quot;/var/lib/jenkins&quot;</span> - use this?
+
+What is the target Job Name?
+my-project-continuous
+Enter a description <span class="k">for </span>your project
+This is the continuous delivery <span class="k">for </span>my project
+Enter a Primary SCM URL <span class="k">for </span>your project
+http://146.185.129.66:8080/git/root/first-pharaoh-cd.git
+Enter a Source Branch Spec <span class="k">for </span>your project
+origin/master
+Enter a Source SCM URL <span class="k">for </span>your project
+http://146.185.129.66:8080/git/root/first-pharaoh-cd.git
+Enter the number of days to keep builds <span class="k">for</span>
+1
+Enter the max number of builds results to keep
+10
+Enter the path of the autopilot prod environment invoke install file <span class="o">(</span>Relative to project root<span class="o">)</span>
+build/config/ptdeploy/autopilots/tiny-staging-invoke-code-no-dbconf.php
+Enter the path of the autopilot prod environment invoke with DB Config install file <span class="o">(</span>Relative to project root<span class="o">)</span>
+build/config/ptdeploy/autopilots/tiny-staging-invoke-code-no-dbconf.php
+Enter the path of the autopilot prod environment invoke with DB Install file <span class="o">(</span>Relative to project root<span class="o">)</span>
+build/config/ptdeploy/autopilots/tiny-staging-invoke-code-no-dbconf.php
+Enter the data handling <span class="nb">type</span>
+<span class="o">(</span>0<span class="o">)</span> code
+<span class="o">(</span>1<span class="o">)</span> replication
+<span class="o">(</span>2<span class="o">)</span> capture
+0
+Enter build failure Email address. Whitespace-separated list of recipient addresses
+phpengine@hotmail.co.uk
+Copying Files...
+Enter the data handling <span class="nb">type</span>
+<span class="o">(</span>0<span class="o">)</span> code
+<span class="o">(</span>1<span class="o">)</span> replication
+<span class="o">(</span>2<span class="o">)</span> capture
+0
+Changing Folder Permissions...
+Changing Folder Owner...
+Changing Folder Group...
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for </span>installing , visit www.gcsoftshop.co.uk <span class="k">for </span>more
+******************************
+
+
+Success
+In Builderfy
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="continuos-staging-wordpress">
+<h2>Continuos-staging Wordpress<a class="headerlink" href="#continuos-staging-wordpress" title="Permalink to this headline">¶</a></h2>
+<p>La puesta en escena continua se utiliza para crear una versión que pondrá a prueba y desplegar automáticamente a puesta en escena de este proyecto , provocada por cambios de SCM . El comando siguiente muestra cómo agregar la acción &#8216; wordpress &#8216; a builderfy y le permitirá producir pilotos automáticos para que se adapte a Wordpress .</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy builderfy continuous-wordpress
+</pre></div>
+</div>
+<p>La representación gráfica de la orden anterior se enumeran a continuación ,</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevellcorp:/# ptdeploy builderfy continuous-wordpress
+Install Builderfy? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+*******************************
+*   Golden Contact Computing  *
+*           Builderfy!          *
+*******************************
+Enter the data handling <span class="nb">type</span>
+<span class="o">(</span>0<span class="o">)</span> code
+<span class="o">(</span>1<span class="o">)</span> replication
+<span class="o">(</span>2<span class="o">)</span> capture
+0
+checkWhat is your Jenkins home? Found <span class="s2">&quot;/var/lib/jenkins&quot;</span> - use this?
+
+What is the target Job Name?
+my-project-continuous
+Enter a description <span class="k">for </span>your project
+This is the Continuous Delivery build <span class="k">for </span>My Project
+Enter a Primary SCM URL <span class="k">for </span>your project
+http://146.185.129.66:8080/git/root/first-pharaoh-cd.git
+Enter a Source Branch Spec <span class="k">for </span>your project
+origin/master
+Enter a Source SCM URL <span class="k">for </span>your project
+http://146.185.129.66:8080/git/root/first-pharaoh-cd.git
+Enter the number of days to keep builds <span class="k">for</span>
+1
+Enter the max number of builds results to keep
+10
+Enter the path of the autopilot <span class="nb">test </span>environment invoke install file <span class="o">(</span>Relative to project root<span class="o">)</span>
+build/config/ptdeploy/autopilots/tiny-staging-invoke-code-no-dbconf.php
+Enter the path of the autopilot prod environment invoke install file <span class="o">(</span>Relative to project root<span class="o">)</span>
+build/config/ptdeploy/autopilots/tiny-staging-invoke-code-no-dbconf.php
+Enter the data handling <span class="nb">type</span>
+<span class="o">(</span>0<span class="o">)</span> code
+<span class="o">(</span>1<span class="o">)</span> replication
+<span class="o">(</span>2<span class="o">)</span> capture
+0
+Enter build failure Email address. Whitespace-separated list of recipient addresses
+phpengine@hotmail.co.uk
+Copying Files...
+Enter the data handling <span class="nb">type</span>
+<span class="o">(</span>0<span class="o">)</span> code
+<span class="o">(</span>1<span class="o">)</span> replication
+<span class="o">(</span>2<span class="o">)</span> capture
+0
+Changing Folder Permissions...
+Changing Folder Owner...
+Changing Folder Group...
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for </span>installing , visit www.gcsoftshop.co.uk <span class="k">for </span>more
+******************************
+
+
+Success
+In Builderfy
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="continuous-staging-drupal">
+<h2>Continuous-staging Drupal<a class="headerlink" href="#continuous-staging-drupal" title="Permalink to this headline">¶</a></h2>
+<p>La puesta en escena continua se utiliza para crear una versión que pondrá a prueba y desplegar automáticamente a puesta en escena de este proyecto , provocada por cambios de SCM . El comando siguiente muestra cómo agregar la acción &#8216; drupal &#8216; a builderfy y le permitirá producir pilotos automáticos para que se adapte a Drupal .</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy builderfy continuous-wordpress
+</pre></div>
+</div>
+<p>La representación gráfica de la orden anterior se enumeran a continuación ,</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevellcorp:/# ptdeploy builderfy continuous-drupal
+Install Builderfy? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+*******************************
+*   Golden Contact Computing  *
+*           Builderfy!          *
+*******************************
+Enter the data handling <span class="nb">type</span>
+<span class="o">(</span>0<span class="o">)</span> code
+<span class="o">(</span>1<span class="o">)</span> replication
+<span class="o">(</span>2<span class="o">)</span> capture
+0
+checkWhat is your Jenkins home? Found <span class="s2">&quot;/var/lib/jenkins&quot;</span> - use this?
+
+What is the target Job Name?
+my-project-continuous
+Enter a description <span class="k">for </span>your project
+This is the Continuous Delivery build <span class="k">for </span>My Project
+Enter a Primary SCM URL <span class="k">for </span>your project
+http://146.185.129.66:8080/git/root/first-pharaoh-cd.git
+Enter a Source Branch Spec <span class="k">for </span>your project
+origin/master
+Enter a Source SCM URL <span class="k">for </span>your project
+http://146.185.129.66:8080/git/root/first-pharaoh-cd.git
+Enter the number of days to keep builds <span class="k">for</span>
+1
+Enter the max number of builds results to keep
+10
+Enter the path of the autopilot <span class="nb">test </span>environment invoke install file <span class="o">(</span>Relative to project root<span class="o">)</span>
+build/config/ptdeploy/autopilots/tiny-staging-invoke-code-no-dbconf.php
+Enter the path of the autopilot prod environment invoke install file <span class="o">(</span>Relative to project root<span class="o">)</span>
+build/config/ptdeploy/autopilots/tiny-staging-invoke-code-no-dbconf.php
+Enter the data handling <span class="nb">type</span>
+<span class="o">(</span>0<span class="o">)</span> code
+<span class="o">(</span>1<span class="o">)</span> replication
+<span class="o">(</span>2<span class="o">)</span> capture
+0
+Enter build failure Email address. Whitespace-separated list of recipient addresses
+phpengine@hotmail.co.uk
+Copying Files...
+Enter the data handling <span class="nb">type</span>
+<span class="o">(</span>0<span class="o">)</span> code
+<span class="o">(</span>1<span class="o">)</span> replication
+<span class="o">(</span>2<span class="o">)</span> capture
+0
+Changing Folder Permissions...
+Changing Folder Owner...
+Changing Folder Group...
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for </span>installing , visit www.gcsoftshop.co.uk <span class="k">for </span>more
+******************************
+
+
+Success
+In Builderfy
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="continuous-staging-joomla">
+<h2>Continuous-staging Joomla<a class="headerlink" href="#continuous-staging-joomla" title="Permalink to this headline">¶</a></h2>
+<p>La puesta en escena continua se utiliza para crear una versión que pondrá a prueba y desplegar automáticamente a puesta en escena de este proyecto , provocada por cambios de SCM . El comando siguiente muestra cómo agregar la acción &#8216; joomla &#8216; a ​​builderfy y le permitirá producir pilotos automáticos para que se adapte a joomla .</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy builderfy continuous-joomla
+</pre></div>
+</div>
+<p>La representación gráfica de la orden anterior se enumeran a continuación ,</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy builderfy continuous-joomla
+Install Builderfy? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+*******************************
+*   Golden Contact Computing  *
+*           Builderfy!          *
+*******************************
+Enter the data handling <span class="nb">type</span>
+<span class="o">(</span>0<span class="o">)</span> code
+<span class="o">(</span>1<span class="o">)</span> replication
+<span class="o">(</span>2<span class="o">)</span> capture
+0
+checkWhat is your Jenkins home? Found <span class="s2">&quot;/var/lib/jenkins&quot;</span> - use this?
+
+What is the target Job Name?
+my-project-continuous
+Enter a description <span class="k">for </span>your project
+This is the Continuous Delivery build <span class="k">for </span>My Project
+Enter a Primary SCM URL <span class="k">for </span>your project
+http://146.185.129.66:8080/git/root/first-pharaoh-cd.git
+Enter a Source Branch Spec <span class="k">for </span>your project
+origin/master
+Enter a Source SCM URL <span class="k">for </span>your project
+http://146.185.129.66:8080/git/root/first-pharaoh-cd.git
+Enter the number of days to keep builds <span class="k">for</span>
+1
+Enter the max number of builds results to keep
+10
+Enter the path of the autopilot <span class="nb">test </span>environment invoke install file <span class="o">(</span>Relative to project root<span class="o">)</span>
+build/config/ptdeploy/autopilots/tiny-staging-invoke-code-no-dbconf.php
+Enter the path of the autopilot prod environment invoke install file <span class="o">(</span>Relative to project root<span class="o">)</span>
+build/config/ptdeploy/autopilots/tiny-staging-invoke-code-no-dbconf.php
+Enter the data handling <span class="nb">type</span>
+<span class="o">(</span>0<span class="o">)</span> code
+<span class="o">(</span>1<span class="o">)</span> replication
+<span class="o">(</span>2<span class="o">)</span> capture
+0
+Enter build failure Email address. Whitespace-separated list of recipient addresses
+phpengine@hotmail.co.uk
+Copying Files...
+Enter the data handling <span class="nb">type</span>
+<span class="o">(</span>0<span class="o">)</span> code
+<span class="o">(</span>1<span class="o">)</span> replication
+<span class="o">(</span>2<span class="o">)</span> capture
+0
+Changing Folder Permissions...
+Changing Folder Owner...
+Changing Folder Group...
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for </span>installing , visit www.gcsoftshop.co.uk <span class="k">for </span>more
+******************************
+
+
+Success
+In Builderfy
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="parametros-alternativos">
+<h2>parámetros alternativos<a class="headerlink" href="#parametros-alternativos" title="Permalink to this headline">¶</a></h2>
+<p>Hay dos parámetros alternativos pueden ser utilizados ,</p>
+<p>Builderfy, builderfy</p>
+</div>
+<div class="section" id="beneficios">
+<h2>Beneficios<a class="headerlink" href="#beneficios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>A principios de retorno de la inversión para cada característica después de que se desarrolla , lo que reduce la necesidad de grandes
+inversiones de capital</li>
+<li>A principios de retroalimentación de los usuarios en cada nueva característica, ya que se libera a la producción , que ofrece técnicas como
+el paralelo ( o A / B ) pruebas para determinar cuál de las dos posibles aplicación es el preferido por los usuarios</li>
+<li>Minimiza tiempo de entrega.</li>
+</ul>
+</div>
+</div>
+
+
+
+
+  
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'kevellsrdoc'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+    </div>
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, kevell.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.2.<br/>
+    </p>
+  </div>
+</footer>
+
+
+
+<!--
+<div id="editor-trap">
+      <h3>Edit this document!</h3>
+
+      <p>
+        This file can be edited directly through the Web. Anyone can
+        update and fix errors in this document with few clicks --
+        no downloads needed.
+      </p>
+
+<!--      <ol>
+
+        <li>
+          Go to
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/sbuilderfyer_deploy.rst">
+          Builderfyer
+        </a> on GitHub.
+      </li>
+
+        <li>
+        <b>Edit</b> files using GitHub's text editor in your web browser (see the 'Edit' tab on the top right of the file)
+      </li>
+
+      <li>
+        Fill in the <b>Commit message</b> text box at the bottom of the page describing <i>why</i>
+        you made the changes. Press the <b>Propose file change</b> button next to it when done.
+      </li>
+
+      <li>
+        Then click <b>Send a pull request</b>.
+      </li>
+
+      <li>
+        Your changes are now queued for review under the project's <a href="https://github.com/deepakajaylinux/kevellphara/pulls">Pull requests</a> tab on GitHub!
+      </li>
+      </ol>
+
+      <p>
+        For an introduction to the documentation format please see <a href="http://docutils.sourceforge.net/docs/user/rst/quickstart.html">the reST primer</a>.
+      </p>
+
+  </div> -->
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', UA-58804904-1]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+  </body>
+</html>
