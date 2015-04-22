@@ -173,10 +173,10 @@
 <div class="section" id="comando-ayuda">
 <h2>comando Ayuda<a class="headerlink" href="#comando-ayuda" title="Permalink to this headline">¶</a></h2>
 <p>Este comando permite para determinar el uso del módulo de proyecto. El usuario llegará a conocer el diferente formas/formato para ejecutar este módulo. Este comando guía al usuario final para conocer el propósito de este comando. A continuación dado son el comando y la captura de pantalla del mismo.</p>
-<div class="highlight-bash"><div class="highlight"><pre>       ptdeploy project <span class="nb">help</span>
-
-
-kevell@corp:/# ptdeploy Project <span class="nb">help</span>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy project <span class="nb">help</span>
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy Project <span class="nb">help</span>
 ******************************
 
 
@@ -215,18 +215,19 @@ End Help
 <h2>Container<a class="headerlink" href="#container" title="Permalink to this headline">¶</a></h2>
 <p>Este comando le ayuda a crear una carpeta de contenedor para las revisiones (como /var/www/applications/<em>APP NAME</em>).</p>
 <p>Cuando el usuario necesita instalar, el usuario puede ejecutar los siguientes comandos para DBIstall. El sistema ejecutará el proceso de instalación.</p>
-<div class="highlight-bash"><div class="highlight"><pre>       ptdeploy proj container
-
-kevell@corp:/# ptdeploy proj container
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy proj container
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy proj container
 Do you want to Modify Project Container Settings? <span class="o">(</span>Y/N<span class="o">)</span>
-Y
+y
 Do you want to initialize this as a ptdeploy project Container? <span class="o">(</span>Y/N<span class="o">)</span>
-Y
+y
 What is your Project Container directory?
-/root/gg
+/var/www/applications/the-app
 Project Container directory created
-/root/gg space /root/ggMoving to Container
-/root/gg
+/var/www/applications/the-app space /var/www/applications/the-appMoving to Container
+/var/www/applications/the-app
 Showing Container Directory
 Project Container file created
 ******************************

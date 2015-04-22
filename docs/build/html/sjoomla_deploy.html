@@ -95,10 +95,9 @@
 <li><a class="reference internal" href="#">Joomla</a><ul>
 <li><a class="reference internal" href="#sinopsis">sinopsis</a></li>
 <li><a class="reference internal" href="#comando-ayuda">comando Ayuda</a></li>
-<li><a class="reference internal" href="#instalacion">instalación</a></li>
 <li><a class="reference internal" href="#dapperfy">Dapperfy</a></li>
 <li><a class="reference internal" href="#builderfy">Builderfy</a></li>
-<li><a class="reference internal" href="#ejecutar">ejecutar</a></li>
+<li><a class="reference internal" href="#execute">Execute</a></li>
 <li><a class="reference internal" href="#opciones">Opciones</a></li>
 <li><a class="reference internal" href="#beneficios">Beneficios</a></li>
 </ul>
@@ -206,15 +205,6 @@ End Help
 </pre></div>
 </div>
 </div>
-<div class="section" id="instalacion">
-<h2>instalación<a class="headerlink" href="#instalacion" title="Permalink to this headline">¶</a></h2>
-<p>Este módulo añade múltiples acciones a ambos builderfy y dapperfy. Esto es fácil de instalar y configurar, incluso si el usuario no es un user.Since avanzada Joomla es tan fácil de usar, como diseñador web o programador, el usuario puede crear rápidamente sitios para sus clientes. El comando utilizado para instalar joomla es el siguiente,</p>
-<div class="highlight-bash"><div class="highlight"><pre>ptdeploy joomla install
-</pre></div>
-</div>
-<p>Después de vitalizar el comando se catequizar entrada.</p>
-<p>Cuando la entrada de usuario como si automáticamente se instalará joomla del sistema. Si no salir de la instalación. La siguiente captura de pantalla de demostrar Joomla y sus funciones.</p>
-</div>
 <div class="section" id="dapperfy">
 <h2>Dapperfy<a class="headerlink" href="#dapperfy" title="Permalink to this headline">¶</a></h2>
 <p>Este dapperfy utiliza para crear el auto usuario desplegar archivos. Dapperfy puede trabajar para una gran cantidad de proyectos sin configuraciones complejas con un par de minutos por valor de establecer. Utilizando Dapperfy es muy rápido, y es probablemente el mejor punto de partida, incluso para configuraciones complejas como el usuario siempre puede simplemente modificar los archivos después con sus propias personalizaciones. El siguiente comando utiliza para dapperfy.</p>
@@ -289,16 +279,74 @@ In Dapperfy
 <div class="section" id="builderfy">
 <h2>Builderfy<a class="headerlink" href="#builderfy" title="Permalink to this headline">¶</a></h2>
 <p>Crea plantillas para instalar build. El usuario puede añadir más plantillas. Cuando hacemos cambios en el repositorio de usuarios, la implementación de una nueva versión de la Producción destino para el usuario. El comando utilizado para builderfy es como sigue,</p>
-<div class="highlight-bash"><div class="highlight"><pre>ptdeploy builderfy joomla
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy builderfy continuous-joomla
 </pre></div>
 </div>
 <p>La siguiente captura de pantalla explica su función.</p>
-<div class="highlight-bash"><div class="highlight"><pre>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy builderfy continuous-joomla
+Install Builderfy? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+*******************************
+*   Golden Contact Computing  *
+*           Builderfy!          *
+*******************************
+Enter the data handling <span class="nb">type</span>
+<span class="o">(</span>0<span class="o">)</span> code
+<span class="o">(</span>1<span class="o">)</span> replication
+<span class="o">(</span>2<span class="o">)</span> capture
+0
+checkWhat is your Jenkins home? Found <span class="s2">&quot;/var/lib/jenkins&quot;</span> - use this?
+
+What is the target Job Name?
+my-project-continuous
+Enter a description <span class="k">for </span>your project
+This is the Continuous Delivery build <span class="k">for </span>My Project
+Enter a Primary SCM URL <span class="k">for </span>your project
+http://146.185.129.66:8080/git/root/first-pharaoh-cd.git
+Enter a Source Branch Spec <span class="k">for </span>your project
+origin/master
+Enter a Source SCM URL <span class="k">for </span>your project
+http://146.185.129.66:8080/git/root/first-pharaoh-cd.git
+Enter the number of days to keep builds <span class="k">for</span>
+1
+Enter the max number of builds results to keep
+10
+Enter the path of the autopilot <span class="nb">test </span>environment invoke install file <span class="o">(</span>Relative to project root<span class="o">)</span>
+build/config/ptdeploy/autopilots/tiny-staging-invoke-code-no-dbconf.php
+Enter the path of the autopilot prod environment invoke install file <span class="o">(</span>Relative to project root<span class="o">)</span>
+build/config/ptdeploy/autopilots/tiny-staging-invoke-code-no-dbconf.php
+Enter the data handling <span class="nb">type</span>
+<span class="o">(</span>0<span class="o">)</span> code
+<span class="o">(</span>1<span class="o">)</span> replication
+<span class="o">(</span>2<span class="o">)</span> capture
+0
+Enter build failure Email address. Whitespace-separated list of recipient addresses
+phpengine@hotmail.co.uk
+Copying Files...
+Enter the data handling <span class="nb">type</span>
+<span class="o">(</span>0<span class="o">)</span> code
+<span class="o">(</span>1<span class="o">)</span> replication
+<span class="o">(</span>2<span class="o">)</span> capture
+0
+Changing Folder Permissions...
+Changing Folder Owner...
+Changing Folder Group...
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for </span>installing , visit www.gcsoftshop.co.uk <span class="k">for </span>more
+******************************
+
+
+Success
+In Builderfy
+******************************
+
+                                                                                                                            141,0-1       64%
 </pre></div>
 </div>
 </div>
-<div class="section" id="ejecutar">
-<h2>ejecutar<a class="headerlink" href="#ejecutar" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="execute">
+<h2>Execute<a class="headerlink" href="#execute" title="Permalink to this headline">¶</a></h2>
 <p>Este proceso ejecuta piloto automático creador de construcción. Acceso rápido es posible. La orden para la ejecución de la siguiente manera,</p>
 <div class="highlight-bash"><div class="highlight"><pre>ptdeploy autopilot execute
 </pre></div>

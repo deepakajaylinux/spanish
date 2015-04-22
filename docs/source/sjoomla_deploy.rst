@@ -48,19 +48,6 @@ Después de entradas el comando anterior, comienza a funcionar para integrar sit
  End Help
  ******************************
 
-instalación
--------------------
-
-Este módulo añade múltiples acciones a ambos builderfy y dapperfy. Esto es fácil de instalar y configurar, incluso si el usuario no es un user.Since avanzada Joomla es tan fácil de usar, como diseñador web o programador, el usuario puede crear rápidamente sitios para sus clientes. El comando utilizado para instalar joomla es el siguiente,
-
-.. code-block:: bash
-
-		ptdeploy joomla install
-
-Después de vitalizar el comando se catequizar entrada.
-
-Cuando la entrada de usuario como si automáticamente se instalará joomla del sistema. Si no salir de la instalación. La siguiente captura de pantalla de demostrar Joomla y sus funciones.
-
 Dapperfy
 ---------------
 
@@ -141,15 +128,77 @@ Builderfy
 
 Crea plantillas para instalar build. El usuario puede añadir más plantillas. Cuando hacemos cambios en el repositorio de usuarios, la implementación de una nueva versión de la Producción destino para el usuario. El comando utilizado para builderfy es como sigue,
 
+
 .. code-block:: bash
 
-		ptdeploy builderfy joomla
+        ptdeploy builderfy continuous-joomla
+
 
 La siguiente captura de pantalla explica su función.
 
 .. code-block:: bash
 
-ejecutar
+ kevell@corp:/# ptdeploy builderfy continuous-joomla
+ Install Builderfy? (Y/N) 
+ y
+ *******************************
+ *   Golden Contact Computing  *
+ *           Builderfy!          *
+ *******************************
+ Enter the data handling type
+ (0) code 
+ (1) replication 
+ (2) capture 
+ 0
+ checkWhat is your Jenkins home? Found "/var/lib/jenkins" - use this?
+
+ What is the target Job Name?
+ my-project-continuous
+ Enter a description for your project
+ This is the Continuous Delivery build for My Project
+ Enter a Primary SCM URL for your project
+ http://146.185.129.66:8080/git/root/first-pharaoh-cd.git
+ Enter a Source Branch Spec for your project
+ origin/master
+ Enter a Source SCM URL for your project
+ http://146.185.129.66:8080/git/root/first-pharaoh-cd.git
+ Enter the number of days to keep builds for
+ 1
+ Enter the max number of builds results to keep
+ 10
+ Enter the path of the autopilot test environment invoke install file (Relative to project root)
+ build/config/ptdeploy/autopilots/tiny-staging-invoke-code-no-dbconf.php
+ Enter the path of the autopilot prod environment invoke install file (Relative to project root)
+ build/config/ptdeploy/autopilots/tiny-staging-invoke-code-no-dbconf.php
+ Enter the data handling type
+ (0) code 
+ (1) replication 
+ (2) capture 
+ 0
+ Enter build failure Email address. Whitespace-separated list of recipient addresses
+ phpengine@hotmail.co.uk
+ Copying Files...
+ Enter the data handling type
+ (0) code 
+ (1) replication 
+ (2) capture 
+ 0
+ Changing Folder Permissions...
+ Changing Folder Owner...
+ Changing Folder Group...
+ ... All done!
+ *******************************
+ Thanks for installing , visit www.gcsoftshop.co.uk for more
+ ******************************
+
+
+ Success
+ In Builderfy
+ ******************************
+
+                                                                                                                             141,0-1       64%
+
+Execute
 ------------
 
 Este proceso ejecuta piloto automático creador de construcción. Acceso rápido es posible. La orden para la ejecución de la siguiente manera,
